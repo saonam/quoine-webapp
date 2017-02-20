@@ -167,8 +167,11 @@ export default {
     // ===
     "document-id": "ID Document",
     "document-address": "Proof of Address",
+    "document-id-help": "",
     "document-bank": "Bank Statement",
+    "document-address-help": "",
     "document-action": "Submit Documents",
+    "document-bank-help": "",
     // ===
     "id": "User ID",
     "first-name": "First Name",
