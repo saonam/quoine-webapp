@@ -25,11 +25,13 @@ const Application = () => (
         </Carousel>
       </Row>
     </div>
-    <div>
-      <Row label={translate('daily-report:title')}>
-        <DailyReport />
-      </Row>
-    </div>
+    {process.env.REACT_APP_VENDOR !== 'traders' ? (
+      <div>
+        <Row label={translate('daily-report:title')}>
+          <DailyReport />
+        </Row>
+      </div>
+    ) : null}
     <div>
       <Row label={translate('confirmation:title')}>
         <ConfirmationManage />

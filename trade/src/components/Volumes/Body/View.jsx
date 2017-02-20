@@ -11,9 +11,11 @@ const VolumesBodyView = ({ frm, to, onFrmChange, onToChange }) => (
     <div className={styles.child}>
       <Filter {...{ frm, to, onFrmChange, onToChange }} />
     </div>
-    <div className={styles.child}>
-      <Report {...{ frm, to }} />
-    </div>
+    {process.env.REACT_APP_VENDOR !== 'traders' ? (
+      <div className={styles.child}>
+        <Report {...{ frm, to }} />
+      </div>
+    ) : null}
     <div className={styles.child}>
       <List {...{ frm, to }} />
     </div>
