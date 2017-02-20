@@ -1,0 +1,19 @@
+.main {
+  composes: medium from "@quoine/styles/padding.css";
+}
+
+.item {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin-top: 0;
+}
+
+.help {
+  composes: item;
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+
+.error {
+  composes: negative from "@quoine/styles/color.css";
+}

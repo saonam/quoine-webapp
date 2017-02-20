@@ -1,0 +1,12 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: height-full from "@quoine/styles/size.css";
+}
+.account {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}
+.list {
+  composes: top color-primary-1 size-2 from "@quoine/styles/border.css";
+  height: calc(100% - $base * 3);
+}

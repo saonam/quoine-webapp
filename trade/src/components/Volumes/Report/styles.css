@@ -1,0 +1,5 @@
+.success {
+  composes: top-small from "@quoine/styles/padding.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: hor-medium from "@quoine/styles/padding.css";
+}

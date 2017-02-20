@@ -1,0 +1,7 @@
+.highlight {
+  composes: all size-4 from "@quoine/styles/border.css";
+}
+.normal {
+  composes: highlight;
+  border-color: transparent !important;
+}

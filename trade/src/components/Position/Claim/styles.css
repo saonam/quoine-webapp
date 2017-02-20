@@ -1,0 +1,11 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: relative from "@quoine/styles/position.css";
+}
+.box {
+  composes: nowrap from "@quoine/styles/text.css";
+  composes: absolute right from "@quoine/styles/position.css";
+  top: calc($base / -2);
+  z-index: 1;
+}

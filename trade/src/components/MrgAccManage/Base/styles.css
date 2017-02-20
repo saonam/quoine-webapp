@@ -1,0 +1,12 @@
+.main {
+  composes: flex jc-space-between ai-center from "@quoine/styles/flex.css";
+  composes: ver-medium-large hor-large from "@quoine/styles/padding.css";
+}
+.summary {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.mrg-acc {
+  composes: left color-primary-1 size-2 from "@quoine/styles/border.css";
+  composes: left-medium from "@quoine/styles/margin.css";
+  composes: left-medium from "@quoine/styles/padding.css";
+}

@@ -1,0 +1,30 @@
+.main {
+  composes: medium from "@quoine/styles/padding.css";
+  composes: center from "@quoine/styles/text.css";
+}
+
+.item {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin: 0;
+}
+
+.help {
+  composes: item;
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.code {
+  composes: item;
+  composes: flex jc-center from "@quoine/styles/flex.css";
+}
+.code canvas {
+  display: block; /* fix qr code height */
+}
+.address {
+  composes: item;
+  composes: primary-1 from "@quoine/styles/bg-color.css";
+  composes: small from "@quoine/styles/padding.css";
+  composes: mono line-1-5 from "@quoine/styles/text.css";
+  composes: width-full from "@quoine/styles/size.css";
+}

@@ -1,0 +1,17 @@
+.item {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin-top: 0;
+}
+.buttons {
+  composes: item;
+  composes: flex from "@quoine/styles/flex.css";
+}
+.button {
+  composes: left-medium from "@quoine/styles/margin.css";
+  composes: auto from "@quoine/styles/flex.css";
+}
+.button:first-child {
+  margin-left: 0;
+}

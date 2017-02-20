@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Accounts Check</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // Response the id and token from sessionStorage when being asked by host
+    // Note: don't redirect the host, only return values. Host should
+    // decide what to do with the returned data then
+    'use strict';
+
+    window.addEventListener('message', function (event) {
+      var origin = event.origin || event.originalEvent.origin;
+      if (
+        origin !== 'http://localhost:3000' &&
+        origin.indexOf('quoine.com') === -1
+      ) {
+        return;
+      }
+
+      // Trusted source!
+      event.source.postMessage({
+        // id is legacy
+        id: sessionStorage.getItem('tokenId'),
+        tokenId: sessionStorage.getItem('tokenId'),
+        token: sessionStorage.getItem('token')
+      }, origin);
+    });
+  </script>
+</body>
+</html>

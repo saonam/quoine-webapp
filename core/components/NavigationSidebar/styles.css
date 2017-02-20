@@ -1,0 +1,23 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: medium from "@quoine/styles/padding.css";
+  composes: flex column jc-space-between from "@quoine/styles/flex.css";
+
+  composes: full from "@quoine/styles/size.css";
+  height: calc($base * 56);
+}
+.section {
+  composes: top-large from "@quoine/styles/margin.css";
+}
+.section:first-child {
+  margin-top: 0;
+}
+.logo {
+  composes: flex jc-center from "@quoine/styles/flex.css";
+  composes: ver-large from "@quoine/styles/padding.css";
+}
+.languageSelect {
+  composes: left-large from "@quoine/styles/padding.css";
+  margin-left: calc(-$base / 2);
+}

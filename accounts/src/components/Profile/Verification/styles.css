@@ -1,0 +1,4 @@
+.help {
+  composes: line-2 from "@quoine/styles/text.css";
+  composes: bottom-small from "@quoine/styles/padding.css";
+}

@@ -1,0 +1,25 @@
+@import url('@quoine/core/styles/_size.css');
+
+.main-normal {
+  composes: border-bottom-accent from "@quoine/styles/box-shadow.css";
+  composes: large line-2-5 from "@quoine/styles/text.css";
+}
+.main-large {
+  composes: border-bottom-accent-size-2 from "@quoine/styles/box-shadow.css";
+  composes: x-large line-4 from "@quoine/styles/text.css";
+}
+
+/* fix input height for IE */
+/* TODO */
+.main-normal input {
+  height: calc($base * 2.5);
+}
+.main-large input {
+  height: calc($base * 4);
+}
+
+/* ugly fix */
+/* TODO */
+.main-large input {
+  text-align: left;
+}

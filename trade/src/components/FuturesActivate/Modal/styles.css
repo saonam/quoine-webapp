@@ -1,0 +1,4 @@
+.description {
+  composes: large from "@quoine/styles/padding.css";
+  composes: large from "@quoine/styles/text.css";
+}

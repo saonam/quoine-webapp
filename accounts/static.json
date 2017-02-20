@@ -1,0 +1,14 @@
+{
+  "root": "build/",
+  "clean_urls": false,
+  "routes": {
+    "/check": "check/index.html",
+    "/**": "index.html"
+  },
+  "headers": {
+    "/": {
+      "Cache-Control": "no-store, must-revalidate"
+    }
+  },
+  "https_only": true
+}

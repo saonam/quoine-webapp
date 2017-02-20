@@ -1,0 +1,21 @@
+.default {
+  composes: inline-block from "@quoine/styles/display.css";
+}
+.inline {
+  composes: inline from "../Button/styles.css";
+}
+.text {
+  composes: text from "../Button/styles.css";
+}
+.accent {
+  composes: accent from "../Button/styles.css";
+}
+.inverse-light {
+  composes: inverse-light from "../Button/styles.css";
+}
+.negative {
+  composes: negative from "../Button/styles.css";
+}
+.disabled {
+  composes: disabled from "../Button/styles.css";
+}

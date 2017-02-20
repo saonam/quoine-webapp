@@ -1,0 +1,55 @@
+@import "@quoine/core/styles/_size.css";
+@import "@quoine/core/styles/_colors.css";
+
+.input {
+  composes: top-x-large from "@quoine/styles/margin.css";
+}
+
+.input:first-child {
+  margin-top: 0;
+}
+
+.main {
+  composes: top-x-large from "@quoine/styles/padding.css";
+  composes: relative from "@quoine/styles/position.css";
+}
+
+.body {
+  composes: hor-xx-large from "@quoine/styles/padding.css";
+}
+
+.body1Content {
+  composes: bottom-x-large from "@quoine/styles/padding.css";
+}
+
+.submit {
+  composes: top-large from "@quoine/styles/margin.css";
+}
+
+.steps {
+  composes: fixed from "@quoine/styles/position.css";
+  top: calc($base * 5);
+  left: calc(50% - calc($base * 42));
+}
+
+.error {
+  composes: negative from "@quoine/styles/color.css";
+  composes: top-large from "@quoine/styles/margin.css";
+}
+
+@theme {
+  .termsText a {
+    color: $accent;
+  }
+}
+
+.successMessage {
+  composes: large from "@quoine/styles/text.css";
+  composes: bottom-x-large from "@quoine/styles/padding.css";
+}
+
+.hint {
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+  composes: top-medium from "@quoine/styles/margin.css";
+}

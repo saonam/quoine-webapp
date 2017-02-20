@@ -1,0 +1,11 @@
+.main {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.current {
+  composes: fix from "@quoine/styles/flex.css";
+  composes: hor-x-small from "@quoine/styles/padding.css";
+}
+.select {
+  composes: auto from "@quoine/styles/flex.css";
+  composes: hidden from "@quoine/styles/overflow.css";
+}

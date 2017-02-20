@@ -1,0 +1,5 @@
+@import "@quoine/core/styles/_size.css";
+
+.input {
+  width: calc($base * $base * 1.2);
+}

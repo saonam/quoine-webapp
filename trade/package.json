@@ -1,0 +1,28 @@
+{
+  "name": "@quoine/trade",
+  "version": "3.0.6",
+  "private": true,
+  "dependencies": {
+    "@quoine/core": "^3.2.18",
+    "@quoine/react-scripts": "5.3.6",
+    "cryptowatch-embed": "^0.3.1",
+    "lodash.throttle": "^4.1.1",
+    "qrcode.react": "^0.6.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
+    "redux": "^3.6.0",
+    "redux-saga": "^0.14.0",
+    "reselect": "^2.5.4"
+  },
+  "devDependencies": {
+    "react-addons-perf": "^15.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

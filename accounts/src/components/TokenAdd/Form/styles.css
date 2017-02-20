@@ -1,0 +1,21 @@
+.main {
+  composes: ver-medium hor-large from "@quoine/styles/padding.css";
+}
+.name {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.action {
+  composes: left-large from "@quoine/styles/margin.css";
+}
+.action:first-child {
+  margin: 0;
+}
+.buttons {
+  composes: top-small from "@quoine/styles/padding.css";
+}
+.button {
+  composes: left-small from "@quoine/styles/margin.css";
+}
+.button:first-child {
+  margin: 0;
+}

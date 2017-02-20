@@ -1,0 +1,16 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: primary-0-accent from "@quoine/styles/bg-color.css";
+  composes: relative from "@quoine/styles/position.css";
+  width: calc($base * 12); height: calc($base * 9);
+}
+.bg, .icon {
+  composes: absolute all from "@quoine/styles/position.css";
+}
+.bg {
+  composes: primary-0 from "@quoine/styles/color.css";
+}
+.icon {
+  composes: accent from "@quoine/styles/color.css";
+}

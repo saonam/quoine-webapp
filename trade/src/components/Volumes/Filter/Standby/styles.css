@@ -1,0 +1,16 @@
+.main {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}
+.button {
+  composes: left-small from "@quoine/styles/margin.css";
+  composes: auto from "@quoine/styles/flex.css";
+}
+.content {
+  composes: left from "@quoine/styles/text.css";
+  composes: relative from "@quoine/styles/position.css";
+}
+.icon {
+  /* composes: icon from "@quoine/styles/size.css"; */
+  composes: absolute top right from "@quoine/styles/position.css";
+  composes: primary-2 from "@quoine/styles/color.css";
+}

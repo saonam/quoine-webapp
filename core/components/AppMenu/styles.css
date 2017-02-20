@@ -1,0 +1,19 @@
+.main {
+  composes: flex wrap from "@quoine/styles/flex.css";
+  composes: x-small from "@quoine/styles/padding.css";
+  composes: primary-0 from "@quoine/styles/bg-color.css";
+}
+.children {
+  composes: auto from "@quoine/styles/flex.css";
+  composes: hor-medium from "@quoine/styles/padding.css";
+}
+
+.icons {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.icon {
+  composes: left-medium from "@quoine/styles/margin.css";
+}
+.icon:first-child {
+  margin-left: 0;
+}

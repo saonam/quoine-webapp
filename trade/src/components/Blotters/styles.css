@@ -1,0 +1,21 @@
+@import url("@quoine/core/styles/_size.css");
+
+.horizontal {
+  composes: full from "@quoine/styles/size.css";
+  min-width: calc($base * 24);
+}
+
+.vertical {
+  composes: height-full from "@quoine/styles/size.css";
+  width: calc($base * 27);
+}
+
+.child {
+  height: 50%;
+}
+.child {
+  composes: top size-3 color-primary-0-accent from "@quoine/styles/border.css";
+}
+.child:first-child {
+  border-top: none;
+}

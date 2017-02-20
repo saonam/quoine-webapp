@@ -1,0 +1,18 @@
+._main {
+  composes: small line-1-5 from "@quoine/styles/text.css";
+  composes: full from "@quoine/styles/opacity.css";
+  composes: linear opacity from "@quoine/styles/transition.css";
+}
+.main-normal {
+  composes: _main;
+  composes: none from "@quoine/styles/opacity.css";
+  composes: delay-slow fast from "@quoine/styles/transition.css";
+}
+.main-hover {
+  composes: _main;
+  composes: full from "@quoine/styles/opacity.css";
+  composes: immediate from "@quoine/styles/transition.css";
+}
+.label {
+  composes: hor-x-small from "@quoine/styles/padding.css";
+}

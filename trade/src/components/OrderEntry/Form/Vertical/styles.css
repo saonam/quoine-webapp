@@ -1,0 +1,21 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  /* negative margin to avoid top medium of item */
+  margin-top: calc(-1 * $base);
+}
+.row {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.item {
+  composes: auto from "@quoine/styles/flex.css";
+  composes: top-medium from "@quoine/styles/margin.css";
+  composes: left-medium from "@quoine/styles/margin.css";
+}
+.big-item {
+  composes: item;
+  flex-grow: 2;
+}
+.item:first-child {
+  margin-left: 0;
+}

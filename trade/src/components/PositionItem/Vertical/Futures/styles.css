@@ -1,0 +1,17 @@
+.main {
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.row {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+  composes: flex from "@quoine/styles/flex.css";
+  /* composes: bottom color-primary-1 from "@quoine/styles/border.css"; */
+}
+.column {
+  composes: auto from "@quoine/styles/flex.css";
+}
+.child {
+}
+.label {
+  composes: half from "@quoine/styles/opacity.css";
+  composes: nowrap from "@quoine/styles/text.css";
+}

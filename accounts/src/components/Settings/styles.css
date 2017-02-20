@@ -1,0 +1,6 @@
+@import "@quoine/core/styles/_size.css";
+
+.main {
+  composes: large line-3 from "@quoine/styles/text.css";
+  min-height: calc($base * $base);
+}

@@ -1,0 +1,14 @@
+.item {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin: 0;
+}
+.help {
+  composes: item;
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.help-light {
+  composes: help;
+  composes: primary-3 from "@quoine/styles/color.css";
+}

@@ -1,0 +1,39 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: height-full from "@quoine/styles/size.css";
+  composes: flex from "@quoine/styles/flex.css";
+  composes: hor-xx-small bottom-x-small from "@quoine/styles/padding.css";
+}
+._child {
+  composes: hor-xx-small from "@quoine/styles/margin.css";
+  /* safari need explicit height */
+  composes: height-full from "@quoine/styles/size.css";
+}
+.auto {
+  composes: _child;
+  composes: auto from "@quoine/styles/flex.css";
+  composes: hidden from "@quoine/styles/overflow.css";
+}
+.fix {
+  composes: _child;
+  composes: fix from "@quoine/styles/flex.css";
+}
+.element {
+  composes: top-x-small from "@quoine/styles/margin.css";
+  composes: primary-0 from "@quoine/styles/bg-color.css";
+  /* 1.5 is buttons, 1/4 is margin */
+  height: calc(100% - calc($base * 1.5) - calc($base / 4));
+}
+.buttons {
+  composes: flex jc-space-between from "@quoine/styles/flex.css";
+  composes: primary-0 from "@quoine/styles/bg-color.css";
+}
+/* === */
+
+.transparent .element {
+  background: transparent;
+}
+.transparent .buttons {
+  background: transparent;
+}

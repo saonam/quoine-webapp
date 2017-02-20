@@ -1,0 +1,11 @@
+.fund {
+  composes: top color-primary-1 size-1 from "@quoine/styles/border.css";
+  composes: enter-accent from "@quoine/styles/transition.css";
+}
+.fund:first-child {
+  border: none;
+}
+.empty {
+  composes: primary-3 from "@quoine/styles/color.css";
+  composes: center from "@quoine/styles/text.css";
+}

@@ -1,0 +1,12 @@
+.loading {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}
+.item {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+  composes: bottom color-primary-1 from "@quoine/styles/border.css";
+}
+.empty {
+  composes: line-1-5 center from "@quoine/styles/text.css";
+  composes: medium from "@quoine/styles/padding.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+}

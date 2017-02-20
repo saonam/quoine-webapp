@@ -1,0 +1,16 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: relative from "@quoine/styles/position.css";
+  composes: center line-3 small bold from "@quoine/styles/text.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+
+  /* ensure image display correctly */
+  min-width: calc($base * 3);
+}
+.image {
+  composes: absolute all from "@quoine/styles/position.css";
+}
+.reverse {
+  transform: rotate(180deg);
+}

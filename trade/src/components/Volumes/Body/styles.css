@@ -1,0 +1,6 @@
+.child {
+  composes: top color-primary-1 size-2 from "@quoine/styles/border.css";
+}
+.child:first-child {
+  border-top: none;
+}

@@ -1,0 +1,9 @@
+.light {
+  composes: primary-3 from "@quoine/styles/color.css";
+}
+.normal {
+  composes: accent from "@quoine/styles/color.css";
+}
+.warning {
+  composes: negative from "@quoine/styles/color.css";
+}

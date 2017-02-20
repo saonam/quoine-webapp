@@ -1,0 +1,3 @@
+.remove {
+  composes: top-medium from "@quoine/styles/margin.css";
+}

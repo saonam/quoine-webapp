@@ -1,0 +1,4 @@
+.main {
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: negative from "@quoine/styles/color.css";
+}

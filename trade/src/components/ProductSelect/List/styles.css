@@ -1,0 +1,13 @@
+.main {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.button {
+  composes: left color-primary-2 size-2 from "@quoine/styles/border.css";
+  composes: left-x-small from "@quoine/styles/margin.css";
+  composes: left-x-small from "@quoine/styles/padding.css";
+}
+.button:first-child {
+  border-left: none;
+  margin-left: 0;
+  padding-left: 0;
+}

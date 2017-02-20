@@ -1,0 +1,28 @@
+@import "@quoine/core/styles/_size.css";
+
+.main {
+  composes: flex from "@quoine/styles/flex.css";
+  /* reset setting mostly for use inside button */
+  composes: left from "@quoine/styles/text.css";
+  composes: primary-4 from "@quoine/styles/color.css";
+}
+.symbol {
+  composes: xxx-large light line-3 from "@quoine/styles/text.css";
+  composes: accent from "@quoine/styles/color.css";
+}
+.change, .bid, .ask, .volume {
+  composes: left-medium from "@quoine/styles/margin.css";
+}
+
+.fixed .symbol {
+  width: calc($base * $base);
+}
+.fixed .change {
+  width: calc($base * 4);
+  margin-left: 0;
+}
+.fixed .bid,
+.fixed .ask,
+.fixed .volume {
+  width: calc($base * 9);
+}

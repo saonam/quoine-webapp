@@ -1,0 +1,21 @@
+.main {
+  composes: ver-medium from "@quoine/styles/padding.css";
+}
+.button {
+  composes: top-small from "@quoine/styles/margin.css";
+}
+.text {
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.item,
+.cancelButton {
+  composes: top-small from "@quoine/styles/margin.css";
+}
+.confirmButton {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.output {
+  composes: top color-primary-1 size-2 from "@quoine/styles/border.css";
+  composes: top-small from "@quoine/styles/margin.css";
+  composes: top-small from "@quoine/styles/padding.css";
+}

@@ -1,0 +1,8 @@
+.main {
+	composes: full-height from "@quoine/styles/size.css";
+	composes: primary-0 from "@quoine/styles/bg-color.css";
+}
+.message {
+  composes: center from "@quoine/styles/text.css";
+  composes: top-large from "@quoine/styles/padding.css";
+}

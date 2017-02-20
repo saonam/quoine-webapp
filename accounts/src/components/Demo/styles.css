@@ -1,0 +1,42 @@
+/* step 1 */
+
+.step1 {
+  composes: ver-x-large from "@quoine/styles/padding.css";
+  composes: hor-xx-large from "@quoine/styles/padding.css";
+}
+
+.typeButton {
+  composes: top-x-large from "@quoine/styles/margin.css";
+}
+
+.typeButton:first-child {
+  margin-top: 0;
+}
+
+/* step 2 */
+
+.main {
+  composes: top-x-large from "@quoine/styles/padding.css";
+}
+
+.body {
+  composes: hor-xx-large from "@quoine/styles/padding.css";
+}
+
+.description {
+  composes: large from "@quoine/styles/text.css";
+}
+
+.email {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+
+.error {
+  composes: top-medium from "@quoine/styles/margin.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: negative from "@quoine/styles/color.css";
+}
+
+.submit {
+  composes: top-large from "@quoine/styles/margin.css";
+}

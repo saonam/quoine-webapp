@@ -1,0 +1,39 @@
+@import "@quoine/core/styles/_size.css";
+
+.main {
+  composes: left from "@quoine/styles/text.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+
+  composes: bottom from "@quoine/styles/border.css";
+  composes: size-2 color-primary-1 from "@quoine/styles/border.css";
+
+  composes: ver-large hor-x-large from "@quoine/styles/padding.css";
+  composes: width-full from "@quoine/styles/size.css";
+  composes: relative from "@quoine/styles/position.css";
+
+  composes: active-accent from "@quoine/styles/color.css";
+  composes: active-accent-2 from "@quoine/styles/bg-color.css";
+  composes: active-color-accent from "@quoine/styles/border.css";
+}
+
+.title {
+  composes: block from "@quoine/styles/display.css";
+  composes: xx-large from "@quoine/styles/text.css";
+  composes: accent from "@quoine/styles/color.css";
+}
+
+.description {
+  composes: block from "@quoine/styles/display.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: top-medium from "@quoine/styles/margin.css";
+  width: 70%;
+}
+
+.icon {
+  composes: block from "@quoine/styles/display.css";
+  composes: accent from "@quoine/styles/color.css";
+  composes: auto from "@quoine/styles/margin.css";
+  composes: icon from "@quoine/styles/size.css";
+  composes: absolute top bottom from "@quoine/styles/position.css";
+  right: calc($base * 3);
+}

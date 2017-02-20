@@ -1,0 +1,8 @@
+.main {
+  composes: flex jc-center from "@quoine/styles/flex.css";
+  padding-left: 0;
+  padding-right: 0;
+}
+.buttons {
+  composes: flex from "@quoine/styles/flex.css";
+}

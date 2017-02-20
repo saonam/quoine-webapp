@@ -1,0 +1,40 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}
+.row {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.box {
+  composes: auto from "@quoine/styles/cursor.css";
+}
+.left {
+  composes: fix from "@quoine/styles/flex.css";
+  width: calc($base * 5);
+}
+.right {
+  composes: auto flex from "@quoine/styles/flex.css";
+}
+/* === */
+.price,
+.quantity {
+  composes: auto from "@quoine/styles/flex.css";
+}
+.quantity {
+  composes: right from "@quoine/styles/text.css";
+}
+/* === */
+.leverage {
+  composes: left-small from "@quoine/styles/margin.css";
+  composes: half from "@quoine/styles/opacity.css";
+}
+/* === */
+.progress {
+  composes: auto from "@quoine/styles/flex.css";
+}
+.cancel {
+  composes: fix from "@quoine/styles/flex.css";
+  composes: right from "@quoine/styles/text.css";
+  width: calc($base * 5.5);
+}

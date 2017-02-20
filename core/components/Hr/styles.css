@@ -1,0 +1,4 @@
+.main {
+  composes: top color-primary-1 size-2 from "@quoine/styles/border.css";
+  composes: ver-small from "@quoine/styles/margin.css";
+}

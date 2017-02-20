@@ -1,0 +1,4 @@
+.main {
+  composes: accent from "@quoine/styles/color.css";
+  word-break: break-all;
+}

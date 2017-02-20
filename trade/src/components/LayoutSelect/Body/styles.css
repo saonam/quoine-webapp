@@ -1,0 +1,10 @@
+.main {
+  composes: flex column ai-center from "@quoine/styles/flex.css";
+  composes: ver-large from "@quoine/styles/padding.css";
+}
+.button {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.button:first-child {
+  margin-top: 0;
+}

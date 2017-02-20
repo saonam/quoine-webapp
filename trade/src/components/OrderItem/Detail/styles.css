@@ -1,0 +1,8 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: main from "@quoine/components/BlotterItem/Detail/styles.css";
+}
+.col {
+  composes: col from "@quoine/components/BlotterItem/Detail/styles.css";
+}

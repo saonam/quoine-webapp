@@ -1,0 +1,6 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: height-full from "@quoine/styles/size.css";
+  width: calc($base * 20);
+}

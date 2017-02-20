@@ -1,0 +1,8 @@
+.left {
+  composes: primary-3 from "@quoine/styles/color.css";
+}
+
+.main,
+.right {
+  composes: accent from "@quoine/styles/color.css";
+}

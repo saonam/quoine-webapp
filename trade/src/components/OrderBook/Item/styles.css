@@ -1,0 +1,3 @@
+.light {
+  composes: half from "@quoine/styles/opacity.css";
+}

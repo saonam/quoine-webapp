@@ -1,0 +1,16 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: height-full from "@quoine/styles/size.css";
+  width: calc($base * 20);
+}
+.futures .book {
+  height: 100%;
+}
+.book {
+  height: 75%;
+}
+.feed {
+  composes: top size-3 color-primary-0-accent from "@quoine/styles/border.css";
+  height: 25%;
+}

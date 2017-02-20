@@ -1,0 +1,35 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: height-full from "@quoine/styles/size.css";
+}
+.body {
+  $header-height: calc(3 * $base + 2px);
+  height: calc(100% - calc(2 * $header-height ));
+}
+.header-sells {
+  composes: bottom size-2 color-primary-1 from "@quoine/styles/border.css";
+}
+.header-buys {
+  composes: top size-2 color-primary-1 from "@quoine/styles/border.css";
+}
+.spread {
+  /* 36 = 3 */
+}
+.listWrapper {
+  height: calc(50% - calc($base * 3 / 2));
+  composes: relative from "@quoine/styles/position.css";
+  composes: hidden from "@quoine/styles/overflow.css";
+}
+._list {
+  composes: width-full from "@quoine/styles/size.css";
+  composes: absolute from "@quoine/styles/position.css";
+}
+.list-sells {
+  composes: _list;
+  composes: bottom from "@quoine/styles/position.css";
+}
+.list-buys {
+  composes: _list;
+  composes: top from "@quoine/styles/position.css";
+}

@@ -1,0 +1,4 @@
+.main {
+  composes: ver-small from "@quoine/styles/padding.css";
+  composes: line-2 from "@quoine/styles/text.css";
+}

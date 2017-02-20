@@ -1,0 +1,48 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: main from
+    "@quoine/components/BlotterItem/Horizontal/styles.css";
+}
+.labels {
+  composes: labels from
+    "@quoine/components/BlotterItem/Horizontal/styles.css";
+}
+.item {
+  composes: item from
+    "@quoine/components/BlotterItem/Horizontal/styles.css";
+}
+.item-num {
+  composes: item-num from
+    "@quoine/components/BlotterItem/Horizontal/styles.css";
+}
+.item-num-w-edit {
+  composes: item-num-w-edit from
+    "@quoine/components/BlotterItem/Horizontal/styles.css";
+}
+.button {
+  composes: button from
+    "@quoine/components/BlotterItem/Horizontal/styles.css";
+}
+.button-w-edit {
+  composes: button-w-edit from
+    "@quoine/components/BlotterItem/Horizontal/styles.css";
+}
+
+/* === */
+
+.main,
+.labels {
+  min-width: calc($base * $base * 12);
+}
+
+.id {
+  composes: item;
+  composes: center from "@quoine/styles/text.css";
+}
+
+.leverage {
+  composes: left-small from "@quoine/styles/margin.css";
+  composes: half from "@quoine/styles/opacity.css";
+}
+

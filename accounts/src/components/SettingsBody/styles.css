@@ -1,0 +1,9 @@
+.main {
+}
+.section {
+  composes: ver-medium hor-large from "@quoine/styles/padding.css";
+  composes: top color-primary-1 size-2 from "@quoine/styles/border.css";
+}
+.section:first-child {
+  border: none;
+}

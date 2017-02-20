@@ -1,0 +1,10 @@
+.main {
+  composes: primary-1 from "@quoine/styles/bg-color.css";
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}
+.item {
+  composes: top-small from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin: 0;
+}

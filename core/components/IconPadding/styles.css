@@ -1,0 +1,6 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: inline-block from "@quoine/styles/display.css";
+  width: calc($base * 2);
+}

@@ -1,0 +1,3 @@
+.main {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}

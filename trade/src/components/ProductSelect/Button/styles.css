@@ -1,0 +1,3 @@
+.content {
+  composes: hor-x-small from "@quoine/styles/padding.css";
+}

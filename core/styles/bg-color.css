@@ -1,0 +1,102 @@
+@import url('./_colors.css');
+
+@theme {
+  .primary-0 {
+    background-color: $primary-0;
+  }
+  .primary-0-0 {
+    background-color: $primary-0-0;
+  }
+  .primary-0-accent {
+    background-color: $primary-0-accent;
+  }
+  .primary-0-overlay {
+    background-color: $primary-0-overlay;
+  }
+  .primary-1 {
+    background-color: $primary-1;
+  }
+  .primary-2 {
+    background-color: $primary-2;
+  }
+  .accent {
+    background-color: $accent;
+  }
+}
+
+@theme {
+  .primary-0-1,
+  .hover-primary-0-1:hover,
+  .focus-primary-0-1:focus,
+  .active-primary-0-1:active {
+    background-color: $primary-0-1;
+  }
+
+  .accent-1,
+  .hover-accent-1:hover,
+  .focus-accent-1:focus,
+  .active-accent-1:active {
+    background-color: $accent-1;
+  }
+
+  .accent-2,
+  .hover-accent-2:hover,
+  .focus-accent-2:focus,
+  .active-accent-2:active {
+    background-color: $accent-2;
+  }
+
+  .negative,
+  .hover-negative:hover,
+  .focus-negative:focus,
+  .active-negative:active {
+    background-color: $negative;
+  }
+
+  .negative-1,
+  .hover-negative-1:hover,
+  .focus-negative-1:focus,
+  .active-negative-1:active {
+    background-color: $negative-1;
+  }
+
+  .positive,
+  .hover-positive:hover,
+  .focus-positive:focus,
+  .active-positive:active {
+    background-color: $positive;
+  }
+
+  .positive-1,
+  .hover-positive-1:hover,
+  .focus-positive-1:focus,
+  .active-positive-1:active {
+    background-color: $positive-1;
+  }
+}
+
+@theme {
+  .primary-0-2,
+  .active-primary-0-2:active {
+    background-color: $primary-0-2;
+  }
+  .negative-2,
+  .active-negative-2:active {
+    background-color: $negative-2;
+  }
+  .positive-2,
+  .active-positive-2:active {
+    background-color: $positive-2;
+  }
+}
+
+@theme {
+  .primary-1,
+  .disabled-primary-1:disabled {
+    background-color: $primary-1;
+  }
+}
+
+.disabled-transparent:disabled {
+  background-color: transparent;
+}

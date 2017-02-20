@@ -1,0 +1,44 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}
+.row {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.box {
+  composes: auto from "@quoine/styles/cursor.css";
+}
+.left,
+.right {
+  flex: 1 0 0px;
+}
+.middle {
+  flex: 1.5 0 0px;
+}
+.middle,
+.right {
+  composes: right from "@quoine/styles/text.css";
+}
+/* === */
+.leverage {
+  composes: left-small from "@quoine/styles/margin.css";
+  composes: half from "@quoine/styles/opacity.css";
+}
+.close-price {
+  composes: flex jc-space-between from "@quoine/styles/flex.css";
+  composes: right-large from "@quoine/styles/padding.css";
+}
+.take-profit-w-label,
+.stop-loss-w-label {
+  composes: middle;
+  composes: flex jc-end from "@quoine/styles/flex.css";
+}
+.take-profit,
+.stop-loss {
+  composes: left-small from "@quoine/styles/margin.css";
+}
+.padding {
+  composes: inline-block from "@quoine/styles/display.css";
+  width: calc($base * 2);
+}

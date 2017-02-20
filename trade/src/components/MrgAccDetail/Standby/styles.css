@@ -1,0 +1,5 @@
+.main {
+}
+.button {
+  composes: top-small from "@quoine/styles/margin.css";
+}

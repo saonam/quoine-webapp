@@ -1,0 +1,7 @@
+.value {
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.label {
+  composes: primary-3 from "@quoine/styles/color.css";
+  composes: small line-1-5 from "@quoine/styles/text.css";
+}

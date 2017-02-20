@@ -1,0 +1,3 @@
+.side {
+  composes: line-1-5 from "@quoine/styles/text.css";
+}

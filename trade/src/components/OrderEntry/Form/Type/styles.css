@@ -1,0 +1,3 @@
+.main {
+  composes: nowrap from "@quoine/styles/text.css";
+}

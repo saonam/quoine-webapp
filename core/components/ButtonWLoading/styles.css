@@ -1,0 +1,11 @@
+.main {
+  composes: relative from "@quoine/styles/position.css";
+}
+.hide {
+  composes: none from "@quoine/styles/opacity.css";
+}
+.icon {
+  composes: absolute all from "@quoine/styles/position.css";
+  composes: icon from "@quoine/styles/size.css";
+  composes: auto from "@quoine/styles/margin.css";
+}

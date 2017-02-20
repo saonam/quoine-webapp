@@ -1,0 +1,25 @@
+.main {
+  composes: top-x-large from "@quoine/styles/padding.css";
+}
+
+.body {
+  composes: hor-xx-large from "@quoine/styles/padding.css";
+}
+
+.password {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+
+.description {
+  composes: large from "@quoine/styles/text.css";
+}
+
+.error {
+  composes: top-medium from "@quoine/styles/margin.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: negative from "@quoine/styles/color.css";
+}
+
+.submit {
+  composes: top-large from "@quoine/styles/margin.css";
+}

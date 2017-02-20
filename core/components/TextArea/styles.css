@@ -1,0 +1,10 @@
+.main {
+  composes: block from "@quoine/styles/display.css";
+  composes: width-full from "@quoine/styles/size.css";
+
+  composes: focus-accent from "@quoine/styles/color.css";
+  composes: focus-accent-1 from "@quoine/styles/bg-color.css";
+
+  /* composes: line-2 from "@quoine/styles/text.css"; */
+  /* composes: ver-x-small from "@quoine/styles/padding.css"; */
+}

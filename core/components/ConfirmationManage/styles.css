@@ -1,0 +1,23 @@
+@import "@quoine/core/styles/_size.css";
+
+.item {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.task {
+  width: calc($base * 14);
+}
+.report {
+  composes: left-large from "@quoine/styles/margin.css";
+}
+.seperator {
+  composes: top-small from "@quoine/styles/margin.css";
+  composes: top-small from "@quoine/styles/padding.css";
+  composes: top color-primary-1 from "@quoine/styles/border.css";
+}
+.items {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.description {
+  composes: primary-3 from "@quoine/styles/color.css";
+  composes: line-2 from "@quoine/styles/text.css";
+}

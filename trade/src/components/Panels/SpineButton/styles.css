@@ -1,0 +1,11 @@
+.main {
+  composes: full from "@quoine/styles/size.css";
+  composes: relative from "@quoine/styles/position.css";
+}
+.text {
+  composes: absolute top from "@quoine/styles/position.css";
+  composes: nowrap small line-2 from "@quoine/styles/text.css";
+  /* composes: half from "@quoine/styles/opacity.css"; */
+  transform: rotate(90deg);
+  transform-origin: left;
+}

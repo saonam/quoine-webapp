@@ -1,0 +1,31 @@
+// transacted volumes
+{  
+  "currencies":[  
+    "PHP",
+    "AUD",
+    "CNY",
+    "USD",
+    "IDR",
+    "JPY",
+    "INR",
+    "EUR",
+    "HKD",
+    "SGD",
+    "ETH",
+    "BTC"
+  ],
+  "transacted_volumes":[  
+    0.0,
+    0.0,
+    0.0,
+    36504.95126,
+    0.0,
+    1467274.39618,
+    0.0,
+    21.886,
+    0.0,
+    0.0,
+    0.0,
+    90.56017196
+  ]
+}

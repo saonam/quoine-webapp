@@ -1,0 +1,11 @@
+@import url("@quoine/core/styles/_size.css");
+@import url("@quoine/core/styles/_colors.css");
+
+.main {
+  composes: full from "@quoine/styles/size.css";
+}
+.body {
+  /* 12 * 3 = 36 is header height */
+  height: calc(100% - $base * 3);
+  composes: hidden from "@quoine/styles/overflow.css";
+}

@@ -1,0 +1,20 @@
+._button:first-child {
+  margin: 0;
+}
+
+.main-row {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.button-row {
+  composes: left-small from "@quoine/styles/margin.css";
+  composes: _button;
+}
+
+.main-column {
+  composes: flex column ai-center from "@quoine/styles/flex.css";
+}
+.button-column {
+  composes: top-medium from "@quoine/styles/margin.css";
+  composes: _button;
+}
+

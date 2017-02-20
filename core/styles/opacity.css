@@ -1,0 +1,9 @@
+.full {
+  opacity: 1;
+}
+.half {
+  opacity: 0.5;
+}
+.none {
+  opacity: 0;
+}

@@ -1,0 +1,28 @@
+{  
+  "models":[  
+    {  
+      "id":"40457",
+      "bidask_type":"limit",
+      "quantity":300.0,
+      "currency":"USD",
+      "side":"bid",
+      "filled_quantity":0.0,
+      "status":"live",
+      "rate":0.0006,
+      "user_id":10171
+    },
+    {  
+      "id":"40456",
+      "bidask_type":"limit",
+      "quantity":100.0,
+      "currency":"USD",
+      "side":"bid",
+      "filled_quantity":0.0,
+      "status":"live",
+      "rate":0.0007,
+      "user_id":10171
+    }
+  ],
+  "current_page":"1",
+  "total_pages":1
+}

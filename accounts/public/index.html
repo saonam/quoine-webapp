@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon-%REACT_APP_VENDOR%.ico">
+    <title>%REACT_APP_VENDOR_NAME% Accounts</title>
+    <!-- 1. Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-82082782-4', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- 2. Legacy Authentication -->
+    <!-- This is similar with check/index.html -->
+    <!-- However, it is modified and keep here to support v2 -->
+    <script type="text/javascript">
+      // Response the id and token from sessionStorage when being asked by host
+      // Note: don't redirect the host, only return values. Host should
+      // decide what to do with the returned data then
+      'use strict';
+
+      window.addEventListener('message', function (event) {
+        var origin = event.origin || event.originalEvent.origin;
+        if (
+          origin !== 'http://localhost:3000' &&
+          origin.indexOf('quoine.com') === -1
+        ) {
+          return;
+        }
+
+        // Trusted source!
+        event.source.postMessage({
+          // id is legacy
+          id: sessionStorage.getItem('tokenId'),
+          tokenId: sessionStorage.getItem('tokenId'),
+          token: sessionStorage.getItem('token')
+        }, origin);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- 3. Self Authentication -->
+    <!-- Not that even Accounts has authentication (so can sign out) -->
+    <script type="text/javascript">
+      'use strict';
+      window.quoine = window.quoine || {};
+      window.quoine.auth = {
+        ready: true,
+        // token value must different than empty string (!== '')
+        token: window.sessionStorage.getItem('token') || 'a',
+        tokenId: window.sessionStorage.getItem('tokenId') || 1
+      };
+    </script>
+    <!-- 4. Zendesk Widget -->
+    <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","%REACT_APP_VENDOR_ZENDESK%.zendesk.com");
+    /*]]>*/</script>
+    <script>zE(function() { zE.hide(); });</script>
+    <!-- bundled script will be placed here -->
+  </body>
+</html>

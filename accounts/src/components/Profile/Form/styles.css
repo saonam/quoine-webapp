@@ -1,0 +1,5 @@
+.error {
+  composes: negative from "@quoine/styles/color.css";
+  composes: line-2 from "@quoine/styles/text.css";
+  composes: ver-small from "@quoine/styles/padding.css";
+}

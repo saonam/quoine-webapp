@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon-%REACT_APP_VENDOR%.ico">
+    <title>%REACT_APP_VENDOR_NAME% Trade</title>
+    <!-- 1. Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-82082782-4', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- 2. Redirect legacy url -->
+    <script type="text/javascript">
+      'use strict';
+      if (window.location.pathname.indexOf('reset-password') !== -1) {
+        var strings = window.location.pathname.split('/');
+        var token = strings[strings.length - 1];
+        var nextHref = '%REACT_APP_ACCOUNTS_HOST%' + '/reset-password' + '?token=' + token + '&continue=' + window.location.origin;
+        window.location.href = nextHref;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <iframe
+      id="accounts-frame"
+      src="%REACT_APP_ACCOUNTS_HOST%/check"
+      style="display: none;"
+    ></iframe>
+    <!-- 3. Authentication -->
+    <script type="text/javascript">
+      // we will try to do authentication at very first so
+      // we might redirect if neccessary without waiting to
+      // load the bundle.js
+      'use strict';
+
+      window.quoine = window.quoine || {};
+      window.quoine.auth = { ready: false };
+
+      var frame = document.getElementById('accounts-frame');
+      frame.onload = function () {
+        frame.contentWindow.postMessage('Hi', '%REACT_APP_ACCOUNTS_HOST%');
+      };
+      window.addEventListener('message', function (event) {
+        // check origin
+        var origin = event.origin || event.originalEvent.origin;
+        if (origin !== '%REACT_APP_ACCOUNTS_HOST%') {
+          return;
+        }
+        // check data
+        var tokenId = event.data.tokenId || event.data.id,
+            token = event.data.token;
+        if (!tokenId || !token) {
+          window.location.href = '%REACT_APP_ACCOUNTS_HOST%' +
+            '?continue=' + window.location.href;
+        }
+        // all ok
+        window.quoine.auth = {
+          ready: true, token: token, tokenId: tokenId
+        };
+      });
+    </script>
+    <!-- 4. Zendesk Widget -->
+    <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","%REACT_APP_VENDOR_ZENDESK%.zendesk.com");
+    /*]]>*/</script>
+    <script>zE(function() { zE.hide(); });</script>
+    <!-- bundled script will be placed here -->
+  </body>
+</html>

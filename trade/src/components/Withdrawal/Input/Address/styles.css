@@ -1,0 +1,4 @@
+.input,
+.recents {
+  composes: mono from "@quoine/styles/text.css";
+}

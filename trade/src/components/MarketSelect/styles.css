@@ -1,0 +1,3 @@
+.main {
+  composes: flex from "@quoine/styles/flex.css";
+}

@@ -1,0 +1,24 @@
+.main {
+  padding-bottom: 4px;
+}
+.symbol {
+  composes: semi-bold from "@quoine/styles/text.css";
+  composes: accent from "@quoine/styles/color.css";
+}
+.top, .bottom {
+  composes: flex from "@quoine/styles/flex.css";
+}
+/* match with InfoVertical */
+.top {
+  line-height: 22px;
+}
+.bottom {
+  composes: small from "@quoine/styles/text.css";
+  line-height: 10px;
+}
+.bid, .ask, .volume {
+  composes: left-small from "@quoine/styles/margin.css";
+}
+.label {
+  composes: half from "@quoine/styles/opacity.css";
+}

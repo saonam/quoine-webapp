@@ -1,0 +1,25 @@
+@import url("@quoine/core/styles/_size.css");
+
+._base {
+  composes: center from "@quoine/styles/text.css";
+  composes: width-full from "@quoine/styles/size.css";
+  composes: line-3 from "@quoine/styles/text.css";
+}
+.main {
+  composes: _base;
+  composes: semi-bold from "@quoine/styles/text.css";
+  composes: relative from "@quoine/styles/position.css";
+  /* default color if nothing change */
+  composes: accent from "@quoine/styles/color.css";
+}
+.background {
+  composes: absolute all from "@quoine/styles/position.css";
+  composes: auto from "@quoine/styles/margin.css";
+}
+.empty {
+  composes: _base;
+  composes: primary-3 from "@quoine/styles/color.css";
+}
+.loading {
+  height: calc($base * 3);
+}

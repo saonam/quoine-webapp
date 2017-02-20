@@ -1,0 +1,3 @@
+.overview {
+  composes: pointer from "@quoine/styles/cursor.css";
+}

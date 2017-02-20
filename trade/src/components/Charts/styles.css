@@ -1,0 +1,42 @@
+@import url("@quoine/core/styles/_size.css");
+
+$header: calc($base * 3 + 2px);
+
+.main {
+  composes: height-full from "@quoine/styles/size.css";
+  composes: relative from "@quoine/styles/position.css";
+  min-width: calc($base * 24);
+}
+.header {
+  composes: bottom size-2 color-primary-1 from "@quoine/styles/border.css";
+}
+
+/* === */
+
+.single > .primary {
+  height: calc(100% - calc($header));
+}
+.double > .primary,
+.double > .secondary {
+  height: calc(50% - calc($header / 2));
+}
+.secondary {
+  composes: top size-2 color-primary-1 from "@quoine/styles/border.css";
+}
+.primary,
+.secondary {
+  composes: hidden from "@quoine/styles/overflow.css";
+}
+
+/* === */
+
+.node {
+  width: calc(100% + 2px);
+  height: calc(100% + 31px);
+  margin: -1px;
+}
+
+/* .overlay {
+  composes: absolute top left right bottom from "@quoine/styles/position.css";
+}
+ */

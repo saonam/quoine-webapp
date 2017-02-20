@@ -1,0 +1,6 @@
+.text {
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.input {
+  composes: top-small from "@quoine/styles/padding.css";
+}

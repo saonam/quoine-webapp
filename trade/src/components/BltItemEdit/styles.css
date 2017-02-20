@@ -1,0 +1,12 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: relative from "@quoine/styles/position.css";
+  composes: inline-block from "@quoine/styles/display.css";
+}
+.box {
+  composes: nowrap from "@quoine/styles/text.css";
+  composes: absolute from "@quoine/styles/position.css";
+  top: calc($base / -2);
+  z-index: 1;
+}

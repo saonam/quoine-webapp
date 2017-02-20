@@ -1,0 +1,34 @@
+// pusher update and API
+{  
+  "id":11288,
+  "currency_pair_code":"BTCUSD",
+  "status":"closed",
+  "side":"long",
+  "margin_used":"0.0",
+  "open_quantity":"0.0",
+  "close_quantity":"1.0",
+  "quantity":"1.0",
+  "leverage_level":2,
+  "product_id":1,
+  "open_price":"609.86",
+  "close_price":"604.22",
+  "trader_id":7692,
+  "open_pnl":"0.0",
+  "close_pnl":"-5.64",
+  "pnl":"-5.64",
+  "stop_loss":"0.0",
+  "take_profit":"0.0",
+  "funding_currency":"USD",
+  "total_interest":"0.12197",
+  "created_at":1473231912,
+  "updated_at":1473231952,
+  "total_fee":"0.0",
+  "close_fee":"0.0",
+  "daily_interest":"0.0"
+}
+// pnl update
+{
+  "id":11388,
+  "open_pnl":"0.66",
+  "close_price":"601.66"
+}

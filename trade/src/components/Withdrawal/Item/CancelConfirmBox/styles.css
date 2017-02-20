@@ -1,0 +1,4 @@
+.main {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+  composes: primary-1 from "@quoine/styles/bg-color.css";
+}

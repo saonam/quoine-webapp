@@ -1,0 +1,4 @@
+1. If vendor is quoine then show quoine-exchange logo:
+  1.1. half left is primary-3 (gray in light theme)
+  1.2. half right is accent (blue in light theme)
+2. If vendor is not quoine then show that vendor's logo

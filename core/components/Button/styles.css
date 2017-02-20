@@ -1,0 +1,120 @@
+/* === */
+.text {
+  composes: uppercase semi-bold from "@quoine/styles/text.css";
+}
+.left {
+  composes: left from "@quoine/styles/text.css";
+}
+.icon > svg {
+  display: block;
+}
+/* === */
+.full {
+  composes: width-full from "@quoine/styles/size.css";
+}
+.large {
+  composes: ver-small from "@quoine/styles/padding.css";
+}
+.inline {
+  composes: hor-small from "@quoine/styles/padding.css";
+}
+.block {
+  composes: block from "@quoine/styles/display.css";
+}
+/* === */
+.hero {
+  composes: full text;
+  composes: x-large line-4 from "@quoine/styles/text.css";
+}
+/* === */
+.modal {
+  composes: full text;
+  composes: x-large line-5 from "@quoine/styles/text.css";
+}
+/* === */
+._accent-interactive {
+  composes: active-accent from "@quoine/styles/color.css";
+  composes: active-accent-2 from "@quoine/styles/bg-color.css";
+  composes: focus-border-all-accent from "@quoine/styles/box-shadow.css";
+}
+.accent {
+  composes: accent from "@quoine/styles/color.css";
+  composes: _accent-interactive;
+}
+.accent-bg {
+  composes: accent;
+  composes: accent-1 from "@quoine/styles/bg-color.css";
+}
+.dark,
+.primary-4 {
+  composes: primary-4 from "@quoine/styles/color.css";
+  composes: _accent-interactive;
+}
+.light,
+.primary-3 {
+  composes: primary-3 from "@quoine/styles/color.css";
+  composes: _accent-interactive;
+}
+.primary-3-bg {
+  composes: primary-3;
+  composes: primary-1 from "@quoine/styles/bg-color.css";
+}
+.lighter,
+.primary-2 {
+  composes: primary-2 from "@quoine/styles/color.css";
+  composes: _accent-interactive;
+}
+/* === */
+.negative {
+  composes: negative from "@quoine/styles/color.css";
+  composes: active-negative from "@quoine/styles/color.css";
+  composes: active-negative-2 from "@quoine/styles/bg-color.css";
+  composes: focus-border-all-negative from "@quoine/styles/box-shadow.css";
+}
+.negative-bg {
+  composes: negative;
+  composes: negative-1 from "@quoine/styles/bg-color.css";
+}
+/* === */
+.positive {
+  composes: positive from "@quoine/styles/color.css";
+  composes: active-positive from "@quoine/styles/color.css";
+  composes: active-positive-2 from "@quoine/styles/bg-color.css";
+  composes: focus-border-all-positive from "@quoine/styles/box-shadow.css";
+}
+.positive-bg {
+  composes: positive;
+  composes: positive-1 from "@quoine/styles/bg-color.css";
+}
+/* === */
+._inverse-interactive {
+  composes: active-primary-0 from "@quoine/styles/color.css";
+  composes: active-primary-0-2 from "@quoine/styles/bg-color.css";
+  composes: focus-border-all-primary-0-5 from "@quoine/styles/box-shadow.css";
+}
+.inverse {
+  composes: primary-0 from "@quoine/styles/color.css";
+  composes: _inverse-interactive;
+}
+.inverse-light {
+  composes: primary-0-5 from "@quoine/styles/color.css";
+  composes: _inverse-interactive;
+}
+.disabled {
+  composes: primary-2 from "@quoine/styles/color.css";
+  composes: none from "@quoine/styles/pointer-events.css";
+}
+.disabled-primary-2 {
+  composes: disabled-primary-2 from "@quoine/styles/color.css";
+}
+.disabled-primary-2-bg {
+  composes: disabled-primary-2 from "@quoine/styles/color.css";
+  composes: disabled-primary-1 from "@quoine/styles/bg-color.css";
+}
+/* === */
+.focus-none:focus {
+  color: inherit !important;
+  background-color: inherit !important;
+  border-color: inherit !important;
+  box-shadow: none !important;
+}

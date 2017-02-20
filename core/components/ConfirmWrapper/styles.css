@@ -1,0 +1,26 @@
+@import url("@quoine/core/styles/_size.css");
+
+.top-medium {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.top-small {
+  composes: top-small from "@quoine/styles/margin.css";
+}
+
+.flex {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.wrap {
+  composes: wrap from "@quoine/styles/flex.css";
+}
+.left-checkbox {
+  composes: right color-primary-1 size-2 from "@quoine/styles/border.css";
+  composes: right-medium from "@quoine/styles/margin.css";
+  composes: right-medium from "@quoine/styles/padding.css";
+}
+.left-small {
+  composes: left-small from "@quoine/styles/margin.css";
+}
+.auto {
+  composes: auto from "@quoine/styles/flex.css";
+}

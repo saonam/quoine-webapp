@@ -1,0 +1,15 @@
+.main {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}
+
+.item {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin: 0;
+}
+
+.help {
+  composes: item;
+  composes: line-1-5 from "@quoine/styles/text.css";
+}

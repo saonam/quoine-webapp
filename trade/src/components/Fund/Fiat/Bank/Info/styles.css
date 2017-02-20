@@ -1,0 +1,13 @@
+.help {
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.banks {
+  composes: top color-primary-1 from "@quoine/styles/border.css";
+}
+.bank {
+  composes: bottom color-primary-1 from "@quoine/styles/border.css";
+}
+.warning {
+  composes: help;
+  composes: negative from "@quoine/styles/color.css";
+}

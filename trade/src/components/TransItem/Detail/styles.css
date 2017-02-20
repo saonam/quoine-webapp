@@ -1,0 +1,5 @@
+.main {
+  composes: primary-1 from "@quoine/styles/bg-color.css";
+  composes: small line-1-5 from "@quoine/styles/text.css";
+  composes: hor-medium ver-small from "@quoine/styles/padding.css";
+}

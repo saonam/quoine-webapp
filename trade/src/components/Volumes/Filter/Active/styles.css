@@ -1,0 +1,24 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: top-small from "@quoine/styles/padding.css";
+}
+.row {
+  composes: top-small from "@quoine/styles/margin.css";
+}
+.row:first-child {
+  margin-top: 0;
+}
+.input {
+  composes: row;
+  composes: hor-medium from "@quoine/styles/padding.css";
+  composes: flex from "@quoine/styles/flex.css";
+}
+.label {
+  composes: fix from "@quoine/styles/flex.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+  width: calc($base * 3);
+}
+.select {
+  composes: auto from "@quoine/styles/flex.css";
+}

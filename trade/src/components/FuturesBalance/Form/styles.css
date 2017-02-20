@@ -1,0 +1,13 @@
+.item {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin: 0;
+}
+.success,
+.error {
+  composes: item;
+}
+.error {
+  composes: negative from "@quoine/styles/color.css";
+}

@@ -1,0 +1,13 @@
+.main {
+  composes: x-small from "@quoine/styles/padding.css";
+  composes: flex from "@quoine/styles/flex.css";
+  composes: height-full from "@quoine/styles/size.css";
+}
+.panel {
+  composes: fix from "@quoine/styles/flex.css";
+  composes: primary-0 from "@quoine/styles/bg-color.css";
+  composes: left-x-small from "@quoine/styles/margin.css";
+}
+.panel:first-child {
+  margin: 0;
+}

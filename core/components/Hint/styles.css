@@ -1,0 +1,22 @@
+.main {
+  composes: relative from "@quoine/styles/position.css";
+  composes: inline-block from "@quoine/styles/display.css";
+}
+.hint {
+  composes: absolute right from "@quoine/styles/position.css";
+  composes: none from "@quoine/styles/display.css";
+  composes: primary-0-accent from "@quoine/styles/bg-color.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: small from "@quoine/styles/padding.css";
+  bottom: 100%;
+}
+.label {
+  composes: pointer from "@quoine/styles/cursor.css";
+}
+.default {
+  composes: accent from "@quoine/styles/color.css";
+  composes: semi-bold from "@quoine/styles/text.css";
+}
+.main:hover .hint {
+  display: block;
+}

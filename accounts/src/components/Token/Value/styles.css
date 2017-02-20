@@ -1,0 +1,9 @@
+.main {
+  composes: flex from "@quoine/styles/flex.css";
+  composes: primary-1 from "@quoine/styles/bg-color.css";
+}
+.value {
+  composes: hor-medium ver-small from "@quoine/styles/padding.css";
+  composes: mono line-2 from "@quoine/styles/text.css";
+  composes: width-full from "@quoine/styles/size.css";
+}

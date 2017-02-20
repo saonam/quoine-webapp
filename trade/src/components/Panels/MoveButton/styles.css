@@ -1,0 +1,5 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  min-width: calc($base * 1.5);
+}

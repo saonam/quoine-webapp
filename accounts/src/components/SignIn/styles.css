@@ -1,0 +1,39 @@
+.main {
+  composes: top-x-large from "@quoine/styles/padding.css";
+}
+
+.body {
+  composes: hor-xx-large from "@quoine/styles/padding.css";
+}
+
+.input {
+  composes: top-x-large from "@quoine/styles/margin.css";
+}
+.input:first-child {
+  margin-top: 0;
+}
+
+.tfaText {
+  composes: large from "@quoine/styles/text.css";
+}
+.tfaInput,
+.tfaRequest {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+
+.error {
+  composes: negative from "@quoine/styles/color.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+
+.submit {
+  composes: top-large from "@quoine/styles/margin.css";
+}
+
+.subInput {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+
+.message {
+  composes: large from "@quoine/styles/text.css";
+}

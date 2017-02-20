@@ -1,0 +1,27 @@
+.item {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin-top: 0;
+}
+
+.help {
+  composes: item;
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.help-light {
+  composes: help;
+  composes: primary-3 from "@quoine/styles/color.css";
+}
+
+.buttons {
+  composes: item;
+  composes: flex from "@quoine/styles/flex.css";
+}
+.button {
+  composes: auto from "@quoine/styles/flex.css";
+  composes: left-small from "@quoine/styles/margin.css";
+}
+.button:first-child {
+  margin: 0;
+}

@@ -1,0 +1,14 @@
+/* manually value here to match with line-height 36px */
+.main {
+  padding-bottom: 4px;
+}
+/* match with ProductOverviewSmall */
+.value {
+  composes: large from "@quoine/styles/text.css";
+  line-height: 22px;
+}
+.label {
+  composes: primary-3 from "@quoine/styles/color.css";
+  composes: small from "@quoine/styles/text.css";
+  line-height: 10px;
+}

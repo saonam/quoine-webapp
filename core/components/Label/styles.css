@@ -1,0 +1,6 @@
+.main {
+  composes: block from "@quoine/styles/display.css";
+
+  composes: primary-3 from "@quoine/styles/color.css";
+  composes: line-1 uppercase small semi-bold from "@quoine/styles/text.css";
+}

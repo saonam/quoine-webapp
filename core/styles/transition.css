@@ -1,0 +1,73 @@
+@import "./_colors.css";
+
+.linear {
+  transition-timing-function: linear;
+}
+.ease-out-cubic {
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* === */
+
+.fast {
+  transition-duration: 0.1s;
+}
+.delay-fast {
+  transition-delay: 0.1s;
+}
+.medium {
+  transition-duration: 0.2s;
+}
+.delay-medium {
+  transition-delay: 0.2s;
+}
+.slow {
+  transition-duration: 0.4s;
+}
+.delay-slow {
+  transition-delay: 0.4s;
+}
+.immediate {
+  transition-duration: 0s;
+}
+.hover-immediate:hover {
+  transition-duration: 0s;
+}
+.hover-delay-immediate:hover {
+  transition-delay: 0s;
+}
+
+/* === */
+
+.color {
+  transition-property: color;
+}
+.background-color {
+  transition-property: background-color;
+}
+.color-background-color,
+.all-color {
+  transition-property: color, background-color;
+}
+.transform {
+  transition-property: transform;
+}
+.opacity {
+  transition-property: opacity;
+}
+
+/* pre defined */
+
+._transition-base {
+  composes: delay-fast linear fast all-color;
+}
+.enter-accent {
+  composes: _transition-base;
+}
+
+@theme {
+  .enter-accent:global(.transition-enter) {
+    color: $accent;
+    background-color: $accent-1;
+  }
+}

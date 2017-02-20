@@ -1,0 +1,13 @@
+@import url("@quoine/core/styles/_size.css");
+
+.wrapper {
+  composes: full from "@quoine/styles/size.css";
+}
+.header {
+  /* 42px - 3.5 - explicit set for loading */
+  height: calc($base * 3.5);
+}
+.main {
+  composes: x-auto y-hidden from "@quoine/styles/overflow.css";
+  height: calc(100% - calc($base * 3.5));
+}

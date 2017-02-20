@@ -1,0 +1,58 @@
+@import "@quoine/core/styles/_colors.css";
+
+._main {
+  composes: flex from "@quoine/styles/flex.css";
+  composes: hor-medium from "@quoine/styles/padding.css";
+  composes: pointer from "@quoine/styles/cursor.css";
+  composes: delay-fast linear fast all-color from
+    "@quoine/styles/transition.css";
+  composes: hover-delay-immediate hover-immediate from
+    "@quoine/styles/transition.css";
+}
+
+/* cannot use compose here as React Transition Group
+ * require 1 class name only
+ */
+@theme {
+  .main-buy:global(.transition-enter) {
+    color: $positive;
+    background-color: $positive-1;
+  }
+  .main-sell:global(.transition-enter) {
+    color: $negative;
+    background-color: $negative-1;
+  }
+}
+
+.main-sell {
+  composes: _main;
+  composes: hover-negative from "@quoine/styles/color.css";
+  composes: hover-negative-1 from "@quoine/styles/bg-color.css";
+  composes: active-negative-2 from "@quoine/styles/bg-color.css";
+}
+
+.main-buy {
+  composes: _main;
+  composes: hover-positive from "@quoine/styles/color.css";
+  composes: hover-positive-1 from "@quoine/styles/bg-color.css";
+  composes: active-positive-2 from "@quoine/styles/bg-color.css";
+}
+
+/* === */
+
+.child {
+  composes: auto from "@quoine/styles/flex.css";
+}
+.left {
+  composes: child;
+  composes: left from "@quoine/styles/text.css";
+}
+.center {
+  composes: child;
+  composes: center from "@quoine/styles/text.css";
+}
+.right {
+  composes: child;
+  composes: right from "@quoine/styles/text.css";
+}
+

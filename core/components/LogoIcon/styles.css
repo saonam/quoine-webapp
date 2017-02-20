@@ -1,0 +1,3 @@
+.main {
+  composes: accent from "@quoine/styles/color.css";
+}
