@@ -9,10 +9,10 @@ import styles from './styles.css';
 // Hide `Body` by `css` to keep Withdrawal Data
 const Withdrawal = ({ inputting }) => (
   <div className={styles.main}>
-    <div className={inputting ? styles.none : ''}>
+    <div className={inputting ? styles.none : styles.body}>
       <Body />
     </div>
-    {inputting ? (<Add />) : null}
+    {inputting ? <Add /> : null}
   </div>
 );
 

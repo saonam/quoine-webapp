@@ -1,6 +1,9 @@
 .main {
   composes: height-full from "@quoine/styles/size.css";
 }
+.body {
+  composes: height-full from "@quoine/styles/size.css";
+}
 .none {
   composes: none from "@quoine/styles/display.css";
 }
