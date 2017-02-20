@@ -15,7 +15,7 @@ const WdrInputCode = ({ form, onChange }) => (
         type="password"
       />
     </Input>
-    <TFARequest skipFirst />
+    <TFARequest skipFirst useEmail />
   </div>
 );
 

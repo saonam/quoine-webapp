@@ -1,7 +1,13 @@
 import { quoine } from '@quoine/resources';
 
-// eslint-disable-next-line import/prefer-default-export
-export const request = ({ force, payload }) => (
+const emailRequest = ({ userId }) => (
+  quoine.get(`/users/${userId}/auth_code`, {
+    useCache: false,
+    errorPrefix: 'tfa',
+  })
+);
+
+const authyRequest = ({ force, payload }) => (
   quoine.post('/authy/auth_token', {
     body: {
       ...payload,
@@ -10,3 +16,9 @@ export const request = ({ force, payload }) => (
     errorPrefix: 'tfa',
   })
 );
+
+const request = (options) => (
+  (options.useEmail ? emailRequest : authyRequest)(options)
+);
+
+export default { request };

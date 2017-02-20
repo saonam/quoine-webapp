@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as resources from './resources';
+import resources from './resources';
 
 import View from './View';
 
@@ -25,8 +25,8 @@ class TFARequestContainer extends React.PureComponent {
     if (this.state.busy) { return; }
     this.setState({ busy: true, message: '', error: '' });
 
-    const { payload } = this.props;
-    resources.request({ force, payload })
+    const { payload, useEmail } = this.props;
+    resources.request({ useEmail, force, payload })
     .then((response) => {
       const message = response.ignored ?
         'tfa:sent-authy' :
@@ -50,6 +50,7 @@ class TFARequestContainer extends React.PureComponent {
 TFARequestContainer.propTypes = {
   payload: React.PropTypes.shape({}),
   skipFirst: React.PropTypes.bool,
+  useEmail: React.PropTypes.bool,
 };
 
 export default TFARequestContainer;
