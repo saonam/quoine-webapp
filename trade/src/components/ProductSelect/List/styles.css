@@ -5,6 +5,7 @@
   composes: left color-primary-2 size-2 from "@quoine/styles/border.css";
   composes: left-x-small from "@quoine/styles/margin.css";
   composes: left-x-small from "@quoine/styles/padding.css";
+  composes: nowrap from "@quoine/styles/text.css";
 }
 .button:first-child {
   border-left: none;
