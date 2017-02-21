@@ -6,7 +6,7 @@ import Button from '../ButtonWLoading';
 
 import styles from './styles.css';
 
-const TFARequest = ({ onRequest, sent, busy, error, message, layout }) => (
+const TFARequestView = ({ onRequest, sent, busy, error, message, layout }) => (
   <div className={styles[layout || 'main']}>
     <div className={styles.form}>
       <p className={styles.message}>
@@ -26,7 +26,7 @@ const TFARequest = ({ onRequest, sent, busy, error, message, layout }) => (
   </div>
 );
 
-TFARequest.propTypes = {
+TFARequestView.propTypes = {
   onRequest: React.PropTypes.func.isRequired,
   busy: React.PropTypes.bool.isRequired,
   error: React.PropTypes.string.isRequired,
@@ -35,4 +35,4 @@ TFARequest.propTypes = {
   sent: React.PropTypes.bool.isRequired,
 };
 
-export default TFARequest;
+export default TFARequestView;
