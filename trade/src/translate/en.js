@@ -102,6 +102,8 @@ export default {
     "direction-net-out": "Net-Out",
     "direction-netout": "Net-Out",
     "direction-one-direction": "One-Direction",
+    // ===
+    "leverage-help": "Leverage help...",
   },
   "order-cancel": {
     "title": "Cancel",
