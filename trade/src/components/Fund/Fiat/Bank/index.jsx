@@ -11,9 +11,8 @@ import Standby from './Standby';
 
 import styles from './styles.css';
 
-
 const FundFiatBank = ({
-  form, onChange, busy, onSubmit, success, onSuccessDismiss,
+  form, onChange, busy, onSubmit, success, onSuccessDismiss, error,
 }) => (
   <div>
     <div className={styles.item}>
@@ -22,7 +21,7 @@ const FundFiatBank = ({
       ) : (
         <Toggler
           Standby={Standby} Active={Form}
-          {...{ form, onChange, busy, onSubmit }}
+          {...{ form, onChange, busy, onSubmit, error }}
         />
       )}
     </div>

@@ -14,6 +14,11 @@
   composes: primary-3 from "@quoine/styles/color.css";
 }
 
+.error {
+  composes: help;
+  composes: negative from "@quoine/styles/color.css";
+}
+
 .buttons {
   composes: item;
   composes: flex from "@quoine/styles/flex.css";

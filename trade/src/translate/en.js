@@ -297,6 +297,9 @@ export default {
     "help": "Please deposit to the address below:",
     "copy": "Copy Address",
   },
+  "fund-error": {
+    "you-are-not-approved": "You are not approved",
+  },
   // ===
   "withdrawal": {
     "title": "Withdrawal",
@@ -331,6 +334,9 @@ export default {
     "can-not-cancel-withdrawal": "This withdrawal cannot be cancelled. Please contact us to receive support.",
     "withdrawal-cannot-be-canceled": "This withdrawal cannot be cancelled.",
     "quantity-must-be-larger-than-minimum": "Quantity must be larger than minimum.",
+    "user-bitcoin-address-invalid": "Address is invalid",
+    "user-not-enough-fund": "User does not have enough fund",
+    "token-is-invalid": "Token is invalid",
   },
   // ===
   "futures-balance": {
@@ -349,9 +355,9 @@ export default {
   },
   // ===
   "asset-transfer": {
-    "declined": "Your account verification request has been declined.<br/>Please reupload documents in Menu > Settings according to email instructions.",
-    "submitted": "You have submitted documents for account verification. Your documents are being reviewed by our staff. Once your account is verified and approved, you will be able to submit fiat deposit/withdrawal requests.",
-    "pending": "Your account must be verified and approved before you can submit fiat deposit/withdrawal requests.<br/>Please upload ID documents for account verification in Menu > Settings.",
+    "declined": "Your account verification request has been declined. Please reupload documents in Menu > Settings according to email instructions.",
+    "documents-submitted": "You have submitted documents for account verification. Your documents are being reviewed by our staff. Once your account is verified and approved, you will be able to submit fiat deposit/withdrawal requests.",
+    "pending": "Your account must be verified and approved before you can submit fiat deposit/withdrawal requests. Please upload ID documents for account verification in Menu > Settings.",
     "go-to-settings": "Go to Settings",
   },
   // ===

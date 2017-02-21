@@ -16,6 +16,7 @@ const getUrl = (form) => (
 const submit = (form) => (
   quoine.post(getUrl(form), {
     body: normalize.body(form),
+    errorPrefix: 'fund',
   }).then(raw =>
     normalize.response(raw, form)
   )

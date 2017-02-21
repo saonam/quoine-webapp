@@ -32,6 +32,8 @@ const FundFiatView = (props) => {
           // ===
           success={props.success}
           onSuccessDismiss={props.onSuccessDismiss}
+          // ===
+          error={props.error}
         />
       </div>
       <div>

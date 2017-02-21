@@ -6,10 +6,12 @@ import Body from './Body';
 
 import styles from './styles.css';
 
-// Hide `Body` by `css` to keep Withdrawal Data
 const Withdrawal = ({ inputting }) => (
   <div className={styles.main}>
-    <div className={inputting ? styles.none : styles.body}>
+    <div
+      // Hide `Body` by `css` to keep Withdrawal Data
+      className={inputting ? styles.none : styles.body}
+    >
       <Body />
     </div>
     {inputting ? <Add /> : null}

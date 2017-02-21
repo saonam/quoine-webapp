@@ -9,7 +9,9 @@ import { Amount, Bank, Notes, INRTransfer } from 'components/Fund/Input';
 
 import styles from './styles.css';
 
-const FundFiatBankForm = ({ form, onChange, busy, onSubmit, onClose }) => (
+const FundFiatBankForm = ({
+  form, onChange, busy, onSubmit, onClose, error,
+}) => (
   <form onSubmit={onSubmit}>
 
     <p className={styles.item}>
@@ -37,6 +39,12 @@ const FundFiatBankForm = ({ form, onChange, busy, onSubmit, onClose }) => (
       <Notes form={form} onChange={onChange} />
     </div>
 
+    {error ? (
+      <p className={styles.error}>
+        {translate(error.message)}
+      </p>
+    ) : null}
+
     <div className={styles.buttons}>
       <div className={styles.button}>
         <ButtonWLoading
@@ -63,6 +71,11 @@ FundFiatBankForm.propTypes = {
   onSubmit: React.PropTypes.func.isRequired,
   // ===
   onClose: React.PropTypes.func.isRequired,
+  // ===
+  error: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.shape({}),
+  ]).isRequired,
 };
 
 export default FundFiatBankForm;

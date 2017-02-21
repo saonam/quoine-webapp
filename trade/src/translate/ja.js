@@ -297,6 +297,9 @@ export default {
     "help": "Please deposit to the address below:",
     "copy": "Copy Address",
   },
+  "fund-error": {
+    "you-are-not-approved": "You are not approved",
+  },
   // ===
   "withdrawal": {
     "title": "出金",
@@ -331,6 +334,9 @@ export default {
     "can-not-cancel-withdrawal": "この出金依頼はキャンセルできません。サポート（support@quoine.com）までご連絡ください。",
     "withdrawal-cannot-be-canceled": "この出金依頼はキャンセルできません。",
     "quantity-must-be-larger-than-minimum": "Quantity must be larger than minimum.",
+    "user-bitcoin-address-invalid": "Address is invalid",
+    "user-not-enough-fund": "User does not have enough fund",
+    "token-is-invalid": "Token is invalid",
   },
   // ===
   "futures-balance": {

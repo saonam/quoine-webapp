@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@quoine/core@^3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@quoine/core/-/core-3.2.22.tgz#5967b19fb3cfd00e01f0a4ba38527707da19ffee"
+"@quoine/core@^3.2.24":
+  version "3.2.24"
+  resolved "https://registry.yarnpkg.com/@quoine/core/-/core-3.2.24.tgz#3dda4e89daec281a3d42ae45c7205cfac1fb7bf7"
   dependencies:
     i18next "^4.1.1"
     pusher-js "^4.0.0"
