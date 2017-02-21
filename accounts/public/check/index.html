@@ -11,11 +11,16 @@
     // decide what to do with the returned data then
     'use strict';
 
-    var validOrigins = ['%REACT_APP_TRADE_HOST%'];
+    function isValidOrigin(origin) {
+      return origin === 'http://localhost:3000' ||
+        origin.slice(-10) === 'quoine.com' ||
+        origin.slice(-11) === 'min-btc.com';
+    }
+
     function receiveMessage(event) {
       var origin = event.origin || event.originalEvent.origin;
 
-      if (validOrigins.indexOf(origin) === -1) {
+      if (!isValidOrigin(origin)) {
         return;
       }
 
