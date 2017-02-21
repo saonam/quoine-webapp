@@ -13,20 +13,18 @@
     </script>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <!-- 2. Legacy Authentication -->
-    <!-- This is similar with check/index.html -->
-    <!-- However, it is modified and keep here to support v2 -->
+    <!-- This is the same with check/index.html -->
     <script type="text/javascript">
       // Response the id and token from sessionStorage when being asked by host
       // Note: don't redirect the host, only return values. Host should
       // decide what to do with the returned data then
       'use strict';
 
-      window.addEventListener('message', function (event) {
+      var validOrigins = ['%REACT_APP_TRADE_HOST%'];
+      function receiveMessage(event) {
         var origin = event.origin || event.originalEvent.origin;
-        if (
-          origin !== 'http://localhost:3000' &&
-          origin.indexOf('quoine.com') === -1
-        ) {
+
+        if (validOrigins.indexOf(origin) === -1) {
           return;
         }
 
@@ -37,7 +35,9 @@
           tokenId: sessionStorage.getItem('tokenId'),
           token: sessionStorage.getItem('token')
         }, origin);
-      });
+      }
+
+      window.addEventListener('message', receiveMessage);
     </script>
   </head>
   <body>
