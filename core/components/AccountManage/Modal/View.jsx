@@ -19,11 +19,11 @@ const AccountManageModal = ({ all, addeds, hiddens, onClose }) => (
         {t('account-manage:action-done')}
       </Button>
     )}
-    leftButton={(
-      <Button styleName="inverse-light inline">
-        {t('account-manage:action-fund')}
-      </Button>
-    )}
+    // leftButton={(
+    //   <Button styleName="inverse-light inline">
+    //     {t('account-manage:action-fund')}
+    //   </Button>
+    // )}
   >
     <ModalList
       // trading (actually it is more than just trading)
