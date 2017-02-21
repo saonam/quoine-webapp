@@ -4,6 +4,7 @@ import translate from '@quoine/translate';
 
 import Loading from '@quoine/components/LoadingIconWrapper';
 import Button from '@quoine/components/Button';
+import Input from '@quoine/components/Input';
 
 import BankDetail from 'components/BankDetail';
 
@@ -16,6 +17,19 @@ import styles from './styles.css';
 
 const WdrBank = ({ busy, current, all, open, onToggle, onAdd }) => {
   if (busy) { return <Loading />; }
+
+  if (all.length === 0) {
+    return (
+      <Input id="withdrawal-bank" label={translate('withdrawal:bank')}>
+        <div className={styles.aloneButton}>
+          <Button styleName="accent text full" onClick={onAdd}>
+            {translate('bank:add-action')}
+          </Button>
+        </div>
+      </Input>
+    );
+  }
+
   const bank = all.filter(b => b.id === current)[0];
   return (
     <div>

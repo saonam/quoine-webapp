@@ -4,3 +4,6 @@
 .buttons {
   composes: flex from "@quoine/styles/flex.css";
 }
+.alone-button {
+  composes: medium from "@quoine/styles/text.css";
+}
