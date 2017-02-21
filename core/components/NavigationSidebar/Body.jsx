@@ -27,8 +27,20 @@ const NavigationSidebarBody = ({ onClose }) => (
         </div>
       </div>
       <div className={styles.section} onClick={onClose}>
-        <Link pathname={`${tradeHost}/`}>{t('menu:dashboard')}</Link>
-        <Link pathname={`${tradeHost}/accounts`}>{t('menu:accounts')}</Link>
+        <Link
+          pathname={`${tradeHost}/`}
+          target="_self"
+        >
+          {t('menu:dashboard')}
+        </Link>
+        {/*
+          <Link
+            pathname={`${tradeHost}/accounts`}
+            target="_self"
+          >
+            {t('menu:accounts')}
+          </Link>
+        */}
         <Link
           pathname={`${accountsHost}/settings`}
           target="_self"
