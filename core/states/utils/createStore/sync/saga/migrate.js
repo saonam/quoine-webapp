@@ -13,6 +13,7 @@ const confirmations = (state) => {
 
 const panels = (state) => {
   if (state.panels.prefs.length !== 8) {
+    // eslint-disable-next-line no-param-reassign
     delete state.panels;
   }
   return state;
