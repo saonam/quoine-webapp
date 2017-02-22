@@ -31,7 +31,12 @@ const calculate = (form, orderBook, interestBook, fees, fxRates) => {
   const rate = getRate({ frm: quote, to: fund, fxRates, orderBook });
   const feeInFund = fee * rate;
   const costInFund = cost * rate;
-  const margin = costInFund / form.leverage;
+  let margin = costInFund / form.leverage;
+  // TODO
+  // check is crypto account by selector
+  if (form.account === 'BTC') {
+    margin *= 2;
+  }
   // interest is calculated in quote or base
   // and already converted to fund there
   const interestInFund = getInterestInFund({
