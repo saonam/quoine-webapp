@@ -18,6 +18,7 @@ const Router = () => (
     <Route path="/" component={AppFrame} >
       <IndexRoute components={Dashboard} />
       <Route path="/accounts" components={Accounts} />
+      <Redirect from="*" to="/" />
     </Route>
   </RouterRaw>
 );
