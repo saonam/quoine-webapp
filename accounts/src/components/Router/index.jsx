@@ -40,7 +40,7 @@ const Router = () => (
 
       <Route path="/settings" components={Settings} />
 
-      <Redirect from="*" to="/sign-in" />
+      <Redirect from="*" to="/" />
     </Route>
   </RouterRaw>
 );
