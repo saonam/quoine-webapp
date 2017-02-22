@@ -54,6 +54,7 @@ export default {
     "id": "ID",
     "interest": "Daily Interest",
     "leverage": "Leverage",
+    "leverage-help": "With great leverage level come great risks. Please ensure that you fully understand the risk before trading at this level.",
     "product": "Product",
     "slippage": "Slippage",
     "spot": "Spot",
@@ -102,8 +103,6 @@ export default {
     "direction-net-out": "Net-Out",
     "direction-netout": "Net-Out",
     "direction-one-direction": "One-Direction",
-    // ===
-    "leverage-help": "Leverage help...",
   },
   "order-cancel": {
     "title": "Cancel",
