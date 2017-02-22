@@ -26,7 +26,7 @@ const ForgotPassword = ({
         </p>
         <div className={styles.email}>
           <Input large id="email" label={translate('forgot-password:email')}>
-            <TextBox type="email" value={email} onChange={onEmailChange} />
+            <TextBox type="email" value={email} onChange={onEmailChange} required />
           </Input>
         </div>
         <div className={styles.message}>
@@ -35,7 +35,9 @@ const ForgotPassword = ({
               {translate('forgot-password:message-sent')}
             </p>
           ) : null}
-          <p className={styles.error}>{translate(error)}</p>
+          {error ? (
+            <p className={styles.error}>{translate(error)}</p>
+          ) : null}
         </div>
       </div>
       <div className={styles.submit}>

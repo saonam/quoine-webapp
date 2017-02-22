@@ -15,12 +15,17 @@ export default {
     "message-account-confirmed": "アカウント承認に成功しました。",
     "message-password-updated": "パスワード再設定に成功しました。新しいパスワードでログインしてください。",
     "message-signed-out": "ログアウトしました。",
+    // Need review
+    "message-need-sign-in": "You need to sign in first.",
   },
   "sign-in-error": {
     "you-have-to-confirm-your-account-before-continuing": "新規登録の口座承認が必要です。承認リンクのメールをご確認ください。",
+    // Need review
     "your-password-is-incorrect": "パスワードが正しくありません。",
     "token-is-invalid": "無効なトークンです。",
     "invalid-email-or-password": "メールアドレスまたはパスワードをもう一度確認してください。",
+    // Need review
+    "verification-failed": "Authentication code is not valid.",
   },
   "forgot-password": {
     "action-resend": "パスワード再設定用メールを再送信",
@@ -32,6 +37,8 @@ export default {
   },
   "forgot-password-error": {
     "email-not-found": "このメールアドレスはまだ登録されていません。",
+    // Need review
+    "email-can-t-be-blank": "Email is required.",
   },
   "reset-password": {
     "description": "新しいパスワードを入力してください。",
@@ -208,6 +215,11 @@ export default {
     // ===
     "action-cancel": "キャンセル",
     "action-done": "確認",
+  },
+  "tfa-manage-error": {
+    // Need review
+    "en-authy-token-is-blank": "Authentication code is required.",
+    "token-is-invalid": "無効なトークンです",
   },
   "token": {
     "id": "ID",
