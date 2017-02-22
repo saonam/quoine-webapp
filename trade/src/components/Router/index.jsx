@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Router as RouterRaw, Route, browserHistory, IndexRoute,
+  Router as RouterRaw, Route, browserHistory, IndexRoute, Redirect,
 } from 'react-router';
 
 import AppFrame from '@quoine/components/AppFrame';
