@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
-import { TYPES } from '@quoine/states/confirmations';
+import { TYPES, TASKS, REPORTS } from '@quoine/states/confirmations';
 
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  result: state.confirmations.activities['mrg-acc-close-report'],
+  result: state.confirmations.activities[REPORTS.MRG_ACC_CLOSE],
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onSet: (payload) => dispatch({
     type: TYPES.SET_REPORTING,
-    payload: { task: 'mrg-acc-close', ...payload },
+    payload: { task: TASKS.MRG_ACC_CLOSE, ...payload },
   }),
 });
 

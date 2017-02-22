@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
-import { TYPES } from '@quoine/states/confirmations';
+import { TYPES, TASKS, CONFIRMS } from '@quoine/states/confirmations';
 
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  confirming: state.confirmations.activities['position-close-confirm'],
+  confirming: state.confirmations.activities[CONFIRMS.POSITION_CLOSE],
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onSet: (payload) => dispatch({
     type: TYPES.SET_CONFIRMING,
-    payload: { task: 'position-close', ...payload },
+    payload: { task: TASKS.POSITION_CLOSE, ...payload },
   }),
 });
 

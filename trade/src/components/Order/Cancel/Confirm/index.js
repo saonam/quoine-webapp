@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import { TYPES } from '@quoine/states/confirmations';
+import { TYPES, TASKS } from '@quoine/states/confirmations';
 
 import View from './View';
 
 const mapDispatchToProps = (dispatch) => ({
   onSet: (payload) => dispatch({
     type: TYPES.SET_CONFIRMING,
-    payload: { task: 'order-cancel', ...payload },
+    payload: { task: TASKS.ORDER_CANCEL, ...payload },
   }),
 });
 

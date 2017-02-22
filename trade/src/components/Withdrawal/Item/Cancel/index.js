@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import { TYPES } from 'states/withdrawal';
+import { TYPES, CONFIRMS } from 'states/withdrawal';
 
 import View from './View';
 
 const mapStateToProps = (state) => ({
   submitting: state.withdrawal.submitting,
-  confirming: state.confirmations.activities['withdrawal-cancel-confirm'],
+  confirming: state.confirmations.activities[CONFIRMS.WITHDRAWAL_CANCEL],
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

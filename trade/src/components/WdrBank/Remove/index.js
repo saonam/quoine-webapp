@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import { TYPES } from 'states/wdrBank';
+import { TYPES, CONFIRMS } from 'states/wdrBank';
 
 import View from './View';
 
 const mapStateToProps = (state) => ({
   removing: state.wdrBank.removing,
-  confirming: state.confirmations.activities['wdr-bank-remove-confirm'],
+  confirming: state.confirmations.activities[CONFIRMS.WDR_BANK_REMOVE],
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
