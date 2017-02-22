@@ -38,7 +38,7 @@ OrderEditConfirmBoxView.propTypes = {
   confirming: React.PropTypes.oneOfType([
     React.PropTypes.shape({}),
     React.PropTypes.bool,
-  ]).isRequired,
+  ]),
   order: React.PropTypes.shape({
     id: React.PropTypes.oneOfType([
       React.PropTypes.number.isRequired,

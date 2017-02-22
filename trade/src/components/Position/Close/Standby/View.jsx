@@ -9,7 +9,7 @@ const PositionCloseStandby = ({ confirming, position, onOpen, close }) => (
     styleName="negative inline text disabled-primary-2"
     onClick={onOpen}
     busy={close.id === position.id}
-    disabled={confirming}
+    disabled={!!confirming}
   >
     {translate('position-close:title')}
   </Button>
@@ -22,7 +22,7 @@ PositionCloseStandby.propTypes = {
     React.PropTypes.shape({}),
     React.PropTypes.bool,
   ]).isRequired,
-  confirming: React.PropTypes.bool.isRequired,
+  confirming: React.PropTypes.bool,
 };
 
 export default PositionCloseStandby;

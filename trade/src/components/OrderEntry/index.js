@@ -5,7 +5,8 @@ import getForm from 'selectors/getOrderEntryForm';
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  activity: state.confirmations.activities['order-add'],
+  confirming: state.confirmations.activities['order-add-confirm'],
+  reporting: state.confirmations.activities['order-add-report'],
   form: getForm(state),
 });
 

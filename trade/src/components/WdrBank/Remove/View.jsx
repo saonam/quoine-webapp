@@ -9,7 +9,7 @@ const WdrBankRemove = ({ bank, removing, confirming, onRemove }) => (
     styleName="negative text full disabled-primary-2"
     busy={bank.id === removing.id}
     onClick={onRemove}
-    disabled={bank.id === confirming.id}
+    disabled={confirming && confirming.id === bank.id}
   >
     {translate('bank:remove-action')}
   </Button>
@@ -31,7 +31,7 @@ WdrBankRemove.propTypes = {
     React.PropTypes.shape({
       id: React.PropTypes.number.isRequired,
     }),
-  ]).isRequired,
+  ]),
   onRemove: React.PropTypes.func.isRequired,
 };
 

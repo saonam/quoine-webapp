@@ -4,7 +4,7 @@ import { TYPES } from '@quoine/states/confirmations';
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  confirming: state.confirmations.activities['position-edit'].confirming,
+  confirming: state.confirmations.activities['position-edit-confirm'],
 });
 
 const mapDispatchToProps = (dispatch) => ({

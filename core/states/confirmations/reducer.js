@@ -2,37 +2,20 @@ import { createReducer, registerSyncShape } from '@quoine/states/utils';
 
 import TYPES from './TYPES';
 
-const TASKS = [
-  'order-add',
-  // ===
-  'order-cancel',
-  'order-edit',
-  // ===
-  'position-claim',
-  'position-close',
-  'position-edit',
-  // ===
-  'mrg-acc-close',
-  // ===
-  'tokens-remove',
-  // ===
-  'wdr-bank-remove',
-  'withdrawal-cancel',
-];
+// Shape
+// const initialState = {
+//   prefs: ['order-add-confirm', 'order-add-report'],
+//   activities: {
+//     'order-add-confirm': {},
+//     'order-add-report': {},
+//   },
+// };
 
-const initialState = TASKS.reduce((prev, task) => ({
-  prefs: {
-    ...prev.prefs,
-    [task]: { confirm: true, report: true },
-  },
-  activities: {
-    ...prev.activities,
-    [task]: { confirming: false, reporting: false },
-  },
-}), {
-  prefs: {}, activities: {},
-});
+const initialState = {
+  skips: [],
+  activities: {},
+};
 
-registerSyncShape('confirmations', ['prefs']);
+registerSyncShape('confirmations', ['skips']);
 
 export default createReducer(TYPES, initialState);

@@ -6,7 +6,7 @@ import getTradingMrgAcc from 'selectors/getTradingMrgAcc';
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  side: state.confirmations.activities['mrg-acc-close'].confirming,
+  side: state.confirmations.activities['mrg-acc-close-confirm'],
   mrgAcc: getTradingMrgAcc(state),
 });
 

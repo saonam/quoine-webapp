@@ -4,7 +4,7 @@ import { TYPES } from '@quoine/states/confirmations';
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  side: state.confirmations.activities['order-add'].confirming,
+  side: state.confirmations.activities['order-add-confirm'],
 });
 
 const mapDispatchToProps = (dispatch) => ({

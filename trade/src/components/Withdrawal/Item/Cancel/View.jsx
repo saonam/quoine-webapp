@@ -7,7 +7,7 @@ const WdrItemCancel = ({ withdrawal, confirming, submitting, onCancel }) => (
   <Button
     styleName="icon negative disabled-primary-2"
     busy={submitting.id === withdrawal.id}
-    disabled={confirming.id === withdrawal.id}
+    disabled={confirming && confirming.id === withdrawal.id}
     onClick={onCancel}
   >
     <Icon glyph="cancel" />
@@ -20,7 +20,7 @@ WdrItemCancel.propTypes = {
   confirming: React.PropTypes.oneOfType([
     React.PropTypes.shape({}),
     React.PropTypes.bool,
-  ]).isRequired,
+  ]),
   submitting: React.PropTypes.oneOfType([
     React.PropTypes.shape({}),
     React.PropTypes.bool,

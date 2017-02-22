@@ -1,7 +1,7 @@
 import { createTYPES } from '@quoine/states/utils';
 
 export default createTYPES('CONFIRMATIONS', [
-  'TOGGLE',
+  'REMOVE_SKIP',
   'SET_CONFIRMING',
   'SET_REPORTING',
 ]);

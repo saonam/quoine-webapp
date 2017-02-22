@@ -3,26 +3,20 @@ import { apply } from '@quoine/states/utils';
 
 import TYPES from './TYPES';
 
-function* watchToggle() {
+function* watchRemoveSkip() {
   while (true) {
-    const action = yield take(TYPES.TOGGLE);
-    const { task, side } = action.payload;
-    const prefs = yield select(state => state.confirmations.prefs);
+    const action = yield take(TYPES.REMOVE_SKIP);
+    const task = action.payload;
+    const skips = yield select(state => state.confirmations.skips);
     yield apply(TYPES, {
-      prefs: {
-        ...prefs,
-        [task]: {
-          ...prefs[task],
-          [side]: !prefs[task][side],
-        },
-      },
+      skips: skips.filter(item => item !== task),
     });
   }
 }
 
 function* confirmationsSaga() {
   yield [
-    spawn(watchToggle),
+    spawn(watchRemoveSkip),
   ];
 }
 

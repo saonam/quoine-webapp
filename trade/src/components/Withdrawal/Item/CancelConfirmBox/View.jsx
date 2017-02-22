@@ -26,7 +26,7 @@ WdrCancelConfirmBox.propTypes = {
   confirming: React.PropTypes.oneOfType([
     React.PropTypes.shape({}),
     React.PropTypes.bool,
-  ]).isRequired,
+  ]),
   withdrawal: React.PropTypes.shape({
     id: React.PropTypes.number.isRequired,
   }).isRequired,

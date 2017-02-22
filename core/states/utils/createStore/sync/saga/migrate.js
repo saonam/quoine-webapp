@@ -1,13 +1,13 @@
 const confirmations = (state) => {
-  const prefs = state.confirmations.prefs;
-  // bad names
-  ['withdrawal-account-remove', 'wd-bank-remove']
-    .forEach((key) => {
-      if (prefs[key]) {
-        prefs['wdr-bank-remove'] = prefs[key];
-        delete prefs[key];
-      }
-    });
+  // const prefs = state.confirmations.prefs;
+  // // bad names
+  // ['withdrawal-account-remove', 'wd-bank-remove']
+  //   .forEach((key) => {
+  //     if (prefs[key]) {
+  //       prefs['wdr-bank-remove'] = prefs[key];
+  //       delete prefs[key];
+  //     }
+  //   });
   return state;
 };
 

@@ -12,7 +12,7 @@ const stop = (e) => {
 };
 
 const OrderCancelView = ({ activity, order, layout }) => {
-  const confirming = activity.confirming.id === order.id;
+  const confirming = !!(activity && activity.id === order.id);
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div className={styles.main} onClick={stop}>
@@ -27,7 +27,7 @@ const OrderCancelView = ({ activity, order, layout }) => {
 };
 
 OrderCancelView.propTypes = {
-  activity: React.PropTypes.shape({}).isRequired,
+  activity: React.PropTypes.shape({}),
   order: React.PropTypes.shape({
     id: React.PropTypes.oneOfType([
       React.PropTypes.number.isRequired,

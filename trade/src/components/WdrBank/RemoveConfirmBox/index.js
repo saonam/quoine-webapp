@@ -4,7 +4,7 @@ import { TYPES } from '@quoine/states/confirmations';
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  confirming: state.confirmations.activities['wdr-bank-remove'].confirming,
+  confirming: state.confirmations.activities['wdr-bank-remove-confirm'],
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -7,7 +7,7 @@ import ConfirmWrapper from '@quoine/components/ConfirmWrapper';
 import styles from './styles.css';
 
 const WdrBankRemoveConfirmBox = ({ confirming, onSet, bank }) => (
-  confirming.id === bank.id ? (
+  confirming && confirming.id === bank.id ? (
     <div className={styles.main}>
       <ConfirmWrapper
         onSet={onSet} id="withdrawal-cancel" layout="box"
@@ -29,7 +29,7 @@ WdrBankRemoveConfirmBox.propTypes = {
     React.PropTypes.shape({
       id: React.PropTypes.number.isRequired,
     }),
-  ]).isRequired,
+  ]),
 };
 
 export default WdrBankRemoveConfirmBox;

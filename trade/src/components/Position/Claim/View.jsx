@@ -13,7 +13,7 @@ const stop = (e) => {
 };
 
 const PositionClaimView = ({ activity, error, position, layout }) => {
-  const confirming = activity.confirming.id === position.id;
+  const confirming = !!(activity && activity.id === position.id);
   const message = (
     error.id === position.id && error.target === 'claim'
   ) ? error.message : false;
@@ -38,7 +38,7 @@ const PositionClaimView = ({ activity, error, position, layout }) => {
 };
 
 PositionClaimView.propTypes = {
-  activity: React.PropTypes.shape({}).isRequired,
+  activity: React.PropTypes.shape({}),
   position: React.PropTypes.shape({
     id: React.PropTypes.number.isRequired,
   }).isRequired,

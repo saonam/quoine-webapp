@@ -7,7 +7,7 @@ import ConfirmWrapper from '@quoine/components/ConfirmWrapper';
 import styles from './styles.css';
 
 const OrderCancelConfirmBoxView = ({ onSet, confirming, order }) => (
-  confirming.id === order.id ? (
+  confirming && confirming.id === order.id ? (
     <div className={styles.main}>
       <ConfirmWrapper
         onSet={onSet}
@@ -28,7 +28,7 @@ OrderCancelConfirmBoxView.propTypes = {
   confirming: React.PropTypes.oneOfType([
     React.PropTypes.shape({}),
     React.PropTypes.bool,
-  ]).isRequired,
+  ]),
   order: React.PropTypes.shape({
     id: React.PropTypes.oneOfType([
       React.PropTypes.number.isRequired,

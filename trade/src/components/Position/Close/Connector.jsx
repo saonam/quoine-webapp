@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  activity: state.confirmations.activities['position-close'],
+  activity: state.confirmations.activities['position-close-confirm'],
   error: state.positionItem.error,
 });
 

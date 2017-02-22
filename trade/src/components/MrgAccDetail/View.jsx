@@ -7,25 +7,34 @@ import Report from './Report';
 
 import styles from './styles.css';
 
-const MrgAccDetail = ({ activity }) => {
-  let Element = Standby;
-  if (activity.confirming) { Element = Confirm; }
-  if (activity.reporting) { Element = Report; }
+const bodies = {
+  standby: Standby,
+  confirm: Confirm,
+  report: Report,
+};
+
+const MrgAccDetail = ({ confirming, reporting }) => {
+  let status = 'standby';
+  if (confirming) { status = 'confirm'; }
+  if (reporting) { status = 'report'; }
+
+  const Body = bodies[status];
 
   return (
     <div className={styles.main}>
       <div className={styles.header}>
-        <Header activity={activity} />
+        <Header status={status} />
       </div>
       <div className={styles.body}>
-        <Element />
+        <Body />
       </div>
     </div>
   );
 };
 
 MrgAccDetail.propTypes = {
-  activity: React.PropTypes.shape({}).isRequired,
+  confirming: React.PropTypes.string,
+  reporting: React.PropTypes.string,
 };
 
 export default MrgAccDetail;

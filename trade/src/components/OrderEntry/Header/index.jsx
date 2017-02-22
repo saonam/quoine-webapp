@@ -9,12 +9,11 @@ import translate from '@quoine/translate';
 
 import styles from './styles.css';
 
-const OrderEntryHeader = ({ form, activity }) => {
-  const { confirming, reporting } = activity;
-  if (confirming || reporting) {
+const OrderEntryHeader = ({ form, status }) => {
+  if (status !== 'standby') {
     return (
       <Header styleName="text center accent">
-        {translate(`order-add:${confirming ? 'confirm' : 'report'}-title`)}
+        {translate(`order-add:${status}-title`)}
       </Header>
     );
   }
@@ -41,7 +40,7 @@ OrderEntryHeader.propTypes = {
     market: React.PropTypes.string.isRequired,
     type: React.PropTypes.string.isRequired,
   }).isRequired,
-  activity: React.PropTypes.shape({}).isRequired,
+  status: React.PropTypes.oneOf(['standby', 'confirm', 'report']).isRequired,
 };
 
 export default OrderEntryHeader;

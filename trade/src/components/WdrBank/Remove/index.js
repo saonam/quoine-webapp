@@ -5,7 +5,7 @@ import View from './View';
 
 const mapStateToProps = (state) => ({
   removing: state.wdrBank.removing,
-  confirming: state.confirmations.activities['wdr-bank-remove'].confirming,
+  confirming: state.confirmations.activities['wdr-bank-remove-confirm'],
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

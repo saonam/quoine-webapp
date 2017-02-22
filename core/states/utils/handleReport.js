@@ -4,14 +4,16 @@ import { apply } from '@quoine/states/utils';
 import { TYPES } from '@quoine/states/confirmations';
 
 export default function* handleReport({ task, body }) {
-  const { prefs, activities } = yield select(states => states.confirmations);
-  if (!prefs[task].report) { return; }
+  const { skips, activities } = yield select(states => states.confirmations);
+  
+  const activity = `${task}-report`;
+  if (skips.indexOf(activity) !== -1) { return; }
 
   // showing report
   yield apply(TYPES, {
     activities: {
       ...activities,
-      [task]: { ...activities[task], reporting: body },
+      [activity]: body,
     },
   });
   const action = yield take(({ type, payload }) => (
@@ -20,15 +22,11 @@ export default function* handleReport({ task, body }) {
   const { skipChecked } = action.payload;
 
   // done
-  const nextReport = !skipChecked;
   yield apply(TYPES, {
+    skips: skipChecked ? skips.concat(activity) : skips,
     activities: {
       ...activities,
-      [task]: { ...activities[task], reporting: false },
-    },
-    prefs: {
-      ...prefs,
-      [task]: { ...prefs[task], report: nextReport },
+      [activity]: false,
     },
   });
 }

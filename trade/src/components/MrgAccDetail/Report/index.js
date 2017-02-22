@@ -4,7 +4,7 @@ import { TYPES } from '@quoine/states/confirmations';
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  result: state.confirmations.activities['mrg-acc-close'].reporting,
+  result: state.confirmations.activities['mrg-acc-close-report'],
 });
 
 const mapDispatchToProps = (dispatch) => ({

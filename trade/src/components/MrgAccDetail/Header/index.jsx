@@ -6,12 +6,11 @@ import translate from '@quoine/translate';
 
 import styles from './styles.css';
 
-const MrgAccDetailHeader = ({ activity }) => {
-  const { confirming, reporting } = activity;
-  if (confirming || reporting) {
+const MrgAccDetailHeader = ({ status }) => {
+  if (status !== 'standby') {
     return (
-      <Header styleName={`text center ${confirming ? 'negative' : 'accent'}`}>
-        {translate(`mrg-acc-close:${confirming ? 'confirm' : 'report'}-title`)}
+      <Header styleName={`text center ${status === 'confirm' ? 'negative' : 'accent'}`}>
+        {translate(`mrg-acc-close:${status}-title`)}
       </Header>
     );
   }
@@ -27,7 +26,7 @@ const MrgAccDetailHeader = ({ activity }) => {
 };
 
 MrgAccDetailHeader.propTypes = {
-  activity: React.PropTypes.shape({}).isRequired,
+  status: React.PropTypes.oneOf(['standby', 'confirm', 'report']).isRequired,
 };
 
 export default MrgAccDetailHeader;

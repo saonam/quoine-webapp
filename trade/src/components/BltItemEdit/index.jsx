@@ -14,8 +14,9 @@ const BltItemEdit = (props) => {
 
   const { activity, target, error } = props;
   const confirming = (
-    activity.confirming.id === model.id &&
-    activity.confirming.target === target
+    activity &&
+    activity.id === model.id &&
+    activity.target === target
   );
   const message = (
     error.id === model.id &&
@@ -55,7 +56,7 @@ const BltItemEdit = (props) => {
 };
 
 BltItemEdit.propTypes = {
-  activity: React.PropTypes.shape({}).isRequired,
+  activity: React.PropTypes.shape({}),
   error: React.PropTypes.oneOfType([
     React.PropTypes.shape({}),
     React.PropTypes.bool,
