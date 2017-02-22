@@ -54,6 +54,7 @@ export default {
     "id": "注文番号",
     "interest": "日歩",
     "leverage": "レバ倍率",
+    "leverage-help": "レバレッジを大きくとることで、損失も増大する可能性があります。本リスクを十分理解のうえ、レバレッジ取引を実施ください。",
     "product": "通貨ペア",
     "slippage": "スリッページ",
     "spot": "現物",
