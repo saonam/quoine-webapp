@@ -30,8 +30,12 @@ const SignInBody1 = ({ form, onChange, message }) => (
     <div className={styles.subInput}>
       <span>{translate('sign-in:new-text')} </span>
       <SignUpLink tabIndex="-1" />
-      <span> {translate('sign-in:new-or')} </span>
-      <DemoLink tabIndex="-1" />
+      {process.env.REACT_APP_VENDOR !== 'traders' ? (
+        <span>
+          <span> {translate('sign-in:new-or')} </span>
+          <DemoLink tabIndex="-1" />
+        </span>
+      ) : null}
     </div>
     <div className={styles.input}>
       <Input large id="password" label={translate('sign-in:password')}>
