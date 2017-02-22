@@ -79,7 +79,6 @@ export default {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "トークン依頼回の期限を越えました。",
     "en-authy-sms-token-was-not-sent": "送信が失敗です。もう一度ご実行下さい。",
     "en-authy-token-is-invalid-token-was-used-recently": "使用済みトークンにより無効です。",
-    "token-is-invalid": "無効なトークンです",
   },
   "test": {
     "basic": "english",
