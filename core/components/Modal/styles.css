@@ -2,16 +2,17 @@
 
 ._overlay {
   composes: fixed all from "@quoine/styles/position.css";
-  z-index: 3;
 }
 
 .overlay-no {
   composes: _overlay;
   composes: none from "@quoine/styles/pointer-events.css";
+  z-index: 2;
 }
 .overlay-default {
   composes: _overlay;
   composes: primary-0-overlay from "@quoine/styles/bg-color.css";
+  z-index: 4;
 }
 
 ._modal {

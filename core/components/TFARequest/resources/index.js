@@ -1,4 +1,5 @@
 import { quoine } from '@quoine/resources';
+import normalize from './normalize';
 
 const emailRequest = ({ userId }) => (
   quoine.get(`/users/${userId}/auth_code`, {
@@ -19,6 +20,7 @@ const authyRequest = ({ force, payload }) => (
 
 const request = (options) => (
   (options.useEmail ? emailRequest : authyRequest)(options)
+    .then(normalize)
 );
 
 export default { request };

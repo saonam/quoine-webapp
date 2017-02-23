@@ -338,6 +338,8 @@ export default {
     "user-bitcoin-address-invalid": "Address is invalid",
     "user-not-enough-fund": "User does not have enough fund",
     "token-is-invalid": "Token is invalid",
+    // Need review
+    "verification-failed": "Authentication code is invalid",
   },
   // ===
   "futures-balance": {
