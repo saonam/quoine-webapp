@@ -1,0 +1,19 @@
+.description {
+  composes: large from "@quoine/styles/text.css";
+  composes: top-x-large from "@quoine/styles/padding.css";
+  composes: hor-xx-large from "@quoine/styles/padding.css";
+}
+.submit {
+  composes: top-large from "@quoine/styles/margin.css";
+  composes: center from "@quoine/styles/text.css";
+}
+.submitButton {
+  composes: line-5 from "@quoine/styles/text.css";
+  composes: x-large from "@quoine/styles/text.css";
+}
+.xlarge {
+  composes: x-large from "@quoine/styles/text.css";
+}
+.center {
+  composes: center from "@quoine/styles/text.css";
+}

@@ -7,6 +7,9 @@ import UserOverview from '@quoine/components/UserOverview';
 import HelpButton from '@quoine/components/HelpButton';
 import LanguageSelect from '@quoine/components/LanguageSelect';
 import Link from '@quoine/components/NavigationLink';
+// import Modal from '@quoine/components/Modal';
+
+import AccountLink from './AccountLink';
 
 import styles from './styles.css';
 
@@ -26,24 +29,19 @@ const NavigationSidebarBody = ({ onClose }) => (
           <LogoIcon />
         </div>
       </div>
-      <div className={styles.section} onClick={onClose}>
+      <div className={styles.section} >
         <Link
-          pathname={`${tradeHost}`}
+          pathname={`${tradeHost}/`}
           target="_self"
+          onClick={onClose}
         >
           {t('menu:dashboard')}
         </Link>
-        {/*
-          <Link
-            pathname={`${tradeHost}/accounts`}
-            target="_self"
-          >
-            {t('menu:accounts')}
-          </Link>
-        */}
+        <AccountLink />
         <Link
           pathname={`${accountsHost}/settings`}
           target="_self"
+          onClick={onClose}
         >
           {t('menu:settings')}
         </Link>
@@ -69,11 +67,7 @@ const NavigationSidebarBody = ({ onClose }) => (
       </div>
     </div>
     <div onClick={onClose}>
-      <Link
-        pathname={`${accountsHost}/sign-out`}
-        styleName="negative"
-        target="_self"
-      >
+      <Link pathname={`${accountsHost}/sign-out`} styleName="negative" target="_self">
         {t('menu:sign-out')}
       </Link>
     </div>
