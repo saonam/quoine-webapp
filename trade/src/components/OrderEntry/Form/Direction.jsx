@@ -6,6 +6,7 @@ import translate from '@quoine/translate';
 
 import Select from '@quoine/components/Select';
 import Input from '@quoine/components/Input';
+import Hint from '@quoine/components/Hint';
 
 const rawOptions = ['one-direction', 'two-direction', 'netout'];
 
@@ -16,7 +17,16 @@ const getOptions = () => (
 );
 
 const OrderEntryFormDirection = ({ form, onChange }) => (
-  <Input id="order-entry-direction" label={translate('order:direction')}>
+  <Input
+    id="order-entry-direction"
+    label={
+      <span>
+        {translate('order:direction')}
+        <span>&nbsp;</span>
+        <Hint style={{ width: 200, left: -100 }}>{translate('order:direction-help')}</Hint>
+      </span>
+    }
+  >
     <Select
       onChange={onChange} value={form.direction} options={getOptions()}
     />

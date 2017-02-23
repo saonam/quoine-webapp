@@ -10,7 +10,7 @@ const Label = ({ id, label }) => (
 
 Label.propTypes = {
   id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
+  label: React.PropTypes.node.isRequired,
 };
 
 export default Label;

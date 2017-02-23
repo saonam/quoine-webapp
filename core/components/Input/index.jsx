@@ -17,7 +17,7 @@ const Input = ({ id, label, children, large }) => (
 
 Input.propTypes = {
   id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
+  label: React.PropTypes.node.isRequired,
   children: React.PropTypes.element.isRequired,
   large: React.PropTypes.bool,
 };
