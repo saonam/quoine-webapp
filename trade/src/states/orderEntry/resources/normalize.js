@@ -55,8 +55,8 @@ export const cashBody = (raw) => {
 
   // trailing stop
   if (raw.type === 'trailing-stop') {
-    order.trailing_stop_type = raw.trailingStopType;
-    order.trailing_stop_value = raw.trailingStopValue;
+    order.trailing_stop_type = raw.distanceType;
+    order.trailing_stop_value = raw.distance;
   }
 
   return { order };
