@@ -4,18 +4,16 @@ import Button from '../Button';
 
 import styles from './styles.css';
 
-const LayoutSelectBody = ({ all }) => (
+const layouts = ['alpha', 'beta', 'gamma'];
+
+const LayoutSelectBody = () => (
   <div className={styles.main}>
-    {all.map(name => (
+    {layouts.map(name => (
       <div className={styles.button} key={name}>
         <Button name={name} />
       </div>
     ))}
   </div>
 );
-
-LayoutSelectBody.propTypes = {
-  all: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-};
 
 export default LayoutSelectBody;
