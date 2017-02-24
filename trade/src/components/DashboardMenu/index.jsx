@@ -3,7 +3,7 @@ import React from 'react';
 import AccountManage from '@quoine/components/AccountManage';
 import AccountSelect from 'components/AccountSelect';
 import MarketSelect from 'components/MarketSelect';
-// import LayoutSelect from 'components/LayoutSelect';
+import LayoutSelect from 'components/LayoutSelect';
 
 import styles from './styles.css';
 
@@ -19,6 +19,9 @@ const DashboardMenu = () => (
     </div>
     <div>
       <MarketSelect />
+    </div>
+    <div>
+      <LayoutSelect />
     </div>
   </div>
 );
