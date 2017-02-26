@@ -50,11 +50,13 @@ export default {
     "action-hide": "Hide",
     "action-show": "Show",
   },
+  "accounts-warning": {
+    "title": "You don't need accounts anymore",
+    "description": "New features are there",
+    "dismiss": "Dismiss",
+  },
   "menu": {
     "accounts": "Accounts",
-    // Need review
-    "accounts-help": "accounts-help",
-    "accounts-help-title": "accounts-help-title",
     "dashboard": "Dashboard",
     "lending": "Lending",
     "settings": "Settings",

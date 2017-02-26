@@ -7,9 +7,8 @@ import UserOverview from '@quoine/components/UserOverview';
 import HelpButton from '@quoine/components/HelpButton';
 import LanguageSelect from '@quoine/components/LanguageSelect';
 import Link from '@quoine/components/NavigationLink';
-// import Modal from '@quoine/components/Modal';
 
-import AccountLink from './AccountLink';
+import AccountsWarning from '@quoine/components/AccountsWarning';
 
 import styles from './styles.css';
 
@@ -30,21 +29,17 @@ const NavigationSidebarBody = ({ onClose }) => (
         </div>
       </div>
       <div className={styles.section} >
-        <Link
-          pathname={`${tradeHost}/`}
-          target="_self"
-          onClick={onClose}
-        >
-          {t('menu:dashboard')}
-        </Link>
-        <AccountLink />
-        <Link
-          pathname={`${accountsHost}/settings`}
-          target="_self"
-          onClick={onClose}
-        >
-          {t('menu:settings')}
-        </Link>
+        <div onClick={onClose}>
+          <Link pathname={`${tradeHost}`} target="_self">
+            {t('menu:dashboard')}
+          </Link>
+        </div>
+        <AccountsWarning />
+        <div onClick={onClose}>
+          <Link pathname={`${accountsHost}/settings`} target="_self">
+            {t('menu:settings')}
+          </Link>
+        </div>
       </div>
     </div>
     <div onClick={onClose}>

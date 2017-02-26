@@ -5,7 +5,7 @@ import Modal from './Modal';
 
 const AccountLinkView = ({ open, onToggle }) => (
   <div>
-    <Link onClick={onToggle}>account</Link>
+    <Link onClick={onToggle}>{translate('menu:accounts')}</Link>
     {open ? <Modal onClose={onToggle} /> : null}
   </div>
 );
