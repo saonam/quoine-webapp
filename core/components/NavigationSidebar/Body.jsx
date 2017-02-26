@@ -8,6 +8,8 @@ import HelpButton from '@quoine/components/HelpButton';
 import LanguageSelect from '@quoine/components/LanguageSelect';
 import Link from '@quoine/components/NavigationLink';
 
+import AccountsWarning from '@quoine/components/AccountsWarning';
+
 import styles from './styles.css';
 
 /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -26,27 +28,18 @@ const NavigationSidebarBody = ({ onClose }) => (
           <LogoIcon />
         </div>
       </div>
-      <div className={styles.section} onClick={onClose}>
-        <Link
-          pathname={`${tradeHost}`}
-          target="_self"
-        >
-          {t('menu:dashboard')}
-        </Link>
-        {/*
-          <Link
-            pathname={`${tradeHost}/accounts`}
-            target="_self"
-          >
-            {t('menu:accounts')}
+      <div className={styles.section} >
+        <div onClick={onClose}>
+          <Link pathname={`${tradeHost}`} target="_self">
+            {t('menu:dashboard')}
           </Link>
-        */}
-        <Link
-          pathname={`${accountsHost}/settings`}
-          target="_self"
-        >
-          {t('menu:settings')}
-        </Link>
+        </div>
+        <AccountsWarning />
+        <div onClick={onClose}>
+          <Link pathname={`${accountsHost}/settings`} target="_self">
+            {t('menu:settings')}
+          </Link>
+        </div>
       </div>
     </div>
     <div onClick={onClose}>
