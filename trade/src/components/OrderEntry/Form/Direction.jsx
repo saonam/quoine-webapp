@@ -23,7 +23,14 @@ const OrderEntryFormDirection = ({ form, onChange }) => (
       <span>
         {translate('order:direction')}
         <span>&nbsp;</span>
-        <Hint style={{ width: 200, left: -100 }}>{translate('order:direction-help')}</Hint>
+        <Hint style={{ width: 200, left: -100 }}>
+          <p
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: translate('order:direction-help'),
+            }}
+          />
+        </Hint>
       </span>
     }
   >
