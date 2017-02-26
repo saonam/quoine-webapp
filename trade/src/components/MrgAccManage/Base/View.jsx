@@ -14,16 +14,16 @@ const shouldShow = (mrgAcc, type) => {
   return false;
 };
 
-const MrgAccManageBase = ({ mrgAcc, onToggle, type }) => (
+const MrgAccManageBase = ({ mrgAcc, onToggle, onClick, type }) => (
   <div className={styles.main}>
-    <div className={styles.summary}>
+    <button className={styles.summary} onClick={onClick}>
       <div className={styles.product}>
         <ProductSummary symbol={mrgAcc.product} />
       </div>
       <div className={styles.mrgAcc}>
         <MrgAccSummary name={mrgAcc.name} />
       </div>
-    </div>
+    </button>
     {shouldShow(mrgAcc, type) ? (
       <Button styleName="accent text inline" onClick={onToggle}>
         {type === 'visible' ? (
@@ -43,6 +43,7 @@ MrgAccManageBase.propTypes = {
     quoteCurrency: React.PropTypes.string.isRequired,
   }).isRequired,
   onToggle: React.PropTypes.func.isRequired,
+  onClick: React.PropTypes.func.isRequired,
   type: React.PropTypes.oneOf(['visible', 'hidden']).isRequired,
 };
 
