@@ -86,7 +86,6 @@ export default {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "You have requested too many times in the last hour. Please wait a moment before trying again.",
     "en-authy-sms-token-was-not-sent": "The code was unable to reach your phone. Please try again.",
     "en-authy-token-is-invalid-token-was-used-recently": "This code is invalid because it has been used recently.",
-    "token-is-invalid": "Token is invalid.",
   },
   "test": {
     "basic": "english",
@@ -122,79 +121,30 @@ export default {
     "dismiss": "Dismiss",
     "title": "Confirmation",
     "description": "Confirmation popups help you avoid accidents when making important trading decisions such as creating an order or closing a position. You can choose to receive them before and/or after the action. Check the list below to customize the popups to your needs.",
-    // ===
-    "task-order-add": "Create Order",
-    "task-order-cancel": "Cancel Order",
-    "task-order-edit": "Edit Order",
-    "task-position-claim": "Claim Position",
-    "task-position-close": "Close Position",
-    "task-position-edit": "Edit Position",
-    "task-mrg-acc-close": "Close All Positions",
-    "task-tokens-remove": "Delete API Token",
-    "task-wdr-bank-remove": "Delete Bank Account",
-    "task-withdrawal-cancel": "Cancel Withdrawal",
-    // ===
-    "toggle-confirm": "Before action",
-    "toggle-report": "After action",
+    // Need review
+    "task-order-add-confirm": "Before Create Order",
+    "task-order-add-report": "After Create Order",
+    "task-order-cancel-confirm": "Before Cancel Order",
+    "task-order-cancel-report": "After Cancel Order",
+    "task-order-edit-confirm": "Before Edit Order",
+    "task-order-edit-report": "After Edit Order",
+    "task-position-claim-confirm": "Before Claim Position",
+    "task-position-claim-report": "After Claim Position",
+    "task-position-close-confirm": "Before Close Position",
+    "task-position-close-report": "After Close Position",
+    "task-position-edit-confirm": "Before Edit Position",
+    "task-position-edit-report": "After Edit Position",
+    "task-mrg-acc-close-confirm": "Before Close All Positions",
+    "task-mrg-acc-close-report": "After Close All Positions",
+    "task-tokens-remove-confirm": "Before Delete API Token",
+    "task-tokens-remove-report": "After Delete API Token",
+    "task-wdr-bank-remove-confirm": "Before Delete Bank Account",
+    "task-wdr-bank-remove-report": "After Delete Bank Account",
+    "task-withdrawal-cancel-confirm": "Before Cancel Withdrawal",
+    "task-withdrawal-cancel-report": "After Cancel Withdrawal",
   },
   "form": {
     "cancel": "Cancel",
     "done": "Done",
   },
 };
-
-// lending
-
-// "__loan": {
-//   "date": "Date",
-//   "id": "ID",
-//   "interest-earned": "Interest Earned",
-//   "open": "Open",
-//   "quantity": "Amount",
-//   "rate": "Rate",
-//   "reinvest": "Reinvest",
-//   "status": "Status",
-//   "title": "My Loan"
-// },
-// "__market-offer": {
-//   "quantity": "Amount",
-//   "rate": "Interest Rates (%)",
-//   "title": "Market Loan Offers"
-// },
-// "__offer": {
-//   "created-at": "Created At",
-//   "loaned-out": "Loaned Out",
-//   "quantity": "Amount",
-//   "rate": "Rate",
-//   "status": "Status",
-//   "title": "Offers"
-// },
-// "__offer-form": {
-//   "finish-message": "Create Offer Successfully",
-//   "finish-title": "Create Offer",
-//   "highest": "Offered Rates Highest",
-//   "lowest": "Offered Rates Lowest",
-//   "quantity": "Amount you Wish To Lend",
-//   "rate": "Your Daily Interest Rate (%)"
-// },
-// "__validation": {
-//   "BadInputNumber": "Please enter a number.",
-//   "CheckboxMissing": "Please check this box if you want to proceed.",
-//   "DateRangeOverflow": "Please select a value that is no later than %l.",
-//   "DateRangeUnderflow": "Please select a value that is no earlier than %l.",
-//   "FileMissing": "Please select a file.",
-//   "InvalidEmail": "Please enter an email address.",
-//   "InvalidURL": "Please enter a URL.",
-//   "NumberRangeOverflow": "Please select a value that is no more than %l.",
-//   "NumberRangeUnderflow": "Please select a value that is no less than %l.",
-//   "PatternMismatch": "Please match the requested format.",
-//   "PatternMismatchWithTitle": "Please match the requested format: %l.",
-//   "RadioMissing": "Please select one of these options.",
-//   "SelectMissing": "Please select an item in the list.",
-//   "StepMismatch": "Please select a valid value. The two nearest valid values are %l and %l.",
-//   "StepMismatchOneValue": "Please select a valid value. The nearest valid value is %l.",
-//   "TextTooLong": "Please shorten this text to %l characters or less (you are currently using %l characters).",
-//   "TimeRangeOverflow": "Please select a value that is no later than %l.",
-//   "TimeRangeUnderflow": "Please select a value that is no earlier than %l.",
-//   "ValueMissing": "Please fill out this field."
-// },

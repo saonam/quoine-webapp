@@ -62,7 +62,11 @@ const NavigationSidebarBody = ({ onClose }) => (
       </div>
     </div>
     <div onClick={onClose}>
-      <Link pathname={`${accountsHost}/sign-out`} styleName="negative" target="_self">
+      <Link
+        pathname={`${accountsHost}/sign-out`}
+        styleName="negative"
+        target="_self"
+      >
         {t('menu:sign-out')}
       </Link>
     </div>

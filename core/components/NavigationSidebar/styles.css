@@ -21,6 +21,3 @@
   composes: left-large from "@quoine/styles/padding.css";
   margin-left: calc(-$base / 2);
 }
-.description {
-  composes: large from "@quoine/styles/text.css";
-}
