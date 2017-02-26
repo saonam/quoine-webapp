@@ -1,19 +1,12 @@
 import { connect } from 'react-redux';
-import { TYPES } from 'states/layouts';
+import { TYPES } from 'states/panels';
 
 import View from './View';
 
-const mapStateToProps = state => ({
-  current: state.layouts.current,
-});
-
 const mapDispatchToProps = (dispatch, props) => ({
   onSet: () => dispatch({
-    type: TYPES.SET_CURRENT, payload: props.name,
+    type: TYPES.SET_LAYOUT, payload: props.name,
   }),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(View);
+export default connect(null, mapDispatchToProps)(View);

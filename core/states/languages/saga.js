@@ -30,7 +30,7 @@ function* setLanguage() {
 function* watchSyncApply() {
   while (1) {
     yield take(SYNC_TYPES.APPLY);
-    yield setLanguage();
+    yield spawn(setLanguage);
   }
 }
 

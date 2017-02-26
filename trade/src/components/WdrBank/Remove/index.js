@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { TYPES, CONFIRMS } from 'states/wdrBank';
+import { TYPES } from 'states/wdrBank';
+import { CONFIRMS } from '@quoine/states/confirmations';
 
 import View from './View';
 

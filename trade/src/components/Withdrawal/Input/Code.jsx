@@ -12,7 +12,7 @@ const WdrInputCode = ({ form, onChange }) => (
         value={form.code}
         onChange={onChange.code}
         required
-        type="password"
+        type="text"
       />
     </Input>
     <TFARequest skipFirst useEmail />

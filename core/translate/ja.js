@@ -75,6 +75,8 @@ export default {
   "tfa": {
     "sent-sms": "Code has been sent via SMS.",
     "sent-authy": "Code has been sent via Authy.",
+    // Need review
+    "sent-email": "Code has been sent via Email.",
     "resend-sms": "SMS経由でコードを再送",
     "send": "Request",
   },

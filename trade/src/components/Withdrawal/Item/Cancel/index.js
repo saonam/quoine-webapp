@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { TYPES, CONFIRMS } from 'states/withdrawal';
+import { TYPES } from 'states/withdrawal';
+import { CONFIRMS } from '@quoine/states/confirmations';
 
 import View from './View';
 

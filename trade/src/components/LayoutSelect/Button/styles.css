@@ -1,7 +1,8 @@
-.highlight {
-  composes: all size-4 from "@quoine/styles/border.css";
-}
+@import url('@quoine/core/styles/_colors.css');
+
 .normal {
-  composes: highlight;
-  border-color: transparent !important;
+  border: solid 4px transparent;
+}
+.normal:focus {
+  border-color: $accent;
 }
