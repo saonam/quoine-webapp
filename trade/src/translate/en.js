@@ -299,7 +299,7 @@ export default {
     "copy": "Copy Address",
   },
   "fund-error": {
-    "you-are-not-approved": "You are not approved",
+    "you-are-not-approved": "Your account has to be approved before you can create a Funding Request.",
   },
   // ===
   "withdrawal": {
@@ -335,11 +335,10 @@ export default {
     "can-not-cancel-withdrawal": "This withdrawal cannot be cancelled. Please contact us to receive support.",
     "withdrawal-cannot-be-canceled": "This withdrawal cannot be cancelled.",
     "quantity-must-be-larger-than-minimum": "Quantity must be larger than minimum.",
-    "user-bitcoin-address-invalid": "Address is invalid",
-    "user-not-enough-fund": "User does not have enough fund",
-    "token-is-invalid": "Token is invalid",
-    // Need review
-    "verification-failed": "Authentication code is invalid",
+    "user-bitcoin-address-invalid": "This Bitcoin address is invalid. Please check again.",
+    "user-not-enough-fund": "Balance is not enough.",
+    "token-is-invalid": "This token is invalid.",
+    "verification-failed": "This authentication code is invalid.",
   },
   // ===
   "futures-balance": {
