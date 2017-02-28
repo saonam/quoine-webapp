@@ -14,11 +14,13 @@ const SecurityView = () => (
         <ChangePassword />
       </Row>
     </div>
-    <div>
-      <Row label={translate('settings:sign-in-title')}>
-        <TFAManage />
-      </Row>
-    </div>
+    {process.env.REACT_APP_VENDOR !== 'traders' ? (
+      <div>
+        <Row label={translate('settings:sign-in-title')}>
+          <TFAManage />
+        </Row>
+      </div>
+    ) : null}
   </Body>
 );
 
