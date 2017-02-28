@@ -16,6 +16,7 @@ import styles from './styles.css';
 
 const accountsHost = process.env.REACT_APP_ACCOUNTS_HOST;
 const tradeHost = process.env.REACT_APP_TRADE_HOST;
+const feeLink = tradeHost === 'https://bttrader.min-btc.com/' ? 'https://min-btc.com/service' : 'https://www.quoine.com/fees/';
 
 const NavigationSidebarBody = ({ onClose }) => (
   <div className={styles.main}>
@@ -43,7 +44,7 @@ const NavigationSidebarBody = ({ onClose }) => (
       </div>
     </div>
     <div onClick={onClose}>
-      <Link pathname="https://www.quoine.com/fees/">
+      <Link pathname={feeLink}>
         {t('menu:fee')}&nbsp;↗
       </Link>
       <Link pathname="https://quoine.zendesk.com/hc">
