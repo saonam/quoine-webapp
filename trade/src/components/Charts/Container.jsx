@@ -47,6 +47,9 @@ class Charts extends React.PureComponent {
       height: '100%',
       width: '100%',
       customColorScheme: schemes[theme],
+      query: {
+        branding: process.env.REACT_APP_VENDOR,
+      },
     };
     try {
       const chart = new Cryptowatch(origin, name, options);
