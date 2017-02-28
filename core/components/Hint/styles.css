@@ -9,6 +9,10 @@
   composes: line-1-5 from "@quoine/styles/text.css";
   composes: small from "@quoine/styles/padding.css";
   bottom: 100%;
+  composes: no-transform from "@quoine/styles/text.css";
+  composes: normal from "@quoine/styles/text.css";
+  composes: dark-2-primary-4 from "@quoine/styles/color.css";
+  composes: medium from "@quoine/styles/text.css";
 }
 .label {
   composes: pointer from "@quoine/styles/cursor.css";
