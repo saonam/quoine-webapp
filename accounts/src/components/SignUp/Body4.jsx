@@ -22,7 +22,7 @@ const AffiliateCode = ({ form, onChange }) => (
 );
 
 const tradeHost = process.env.REACT_APP_TRADE_HOST;
-const signupLink = tradeHost === 'https://bttrader.min-btc.com/' ? translate('sign-up:input-accept-terms-traders') : translate('sign-up:input-accept-terms');
+const signupLink = tradeHost === 'https://bttrader.min-btc.com/' ? 'sign-up:input-accept-terms-traders' : 'sign-up:input-accept-terms';
 
 const AcceptTerms = ({ form, onChange }) => (
   <div className={styles.input}>
@@ -31,7 +31,7 @@ const AcceptTerms = ({ form, onChange }) => (
         className={styles.termsText}
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
-          __html: signupLink,
+          __html: translate(signupLink),
         }}
       />
     </Checkbox>
