@@ -42,7 +42,9 @@ const NavigationSidebarBody = ({ onClose }) => (
             {t('menu:dashboard')}
           </Link>
         </div>
-        <AccountsWarning />
+        {process.env.REACT_APP_VENDOR !== 'traders' ? (
+          <AccountsWarning />
+        ) : null}
         <div onClick={onClose}>
           <Link pathname={`${process.env.REACT_APP_ACCOUNTS_HOST}/settings`}>
             {t('menu:settings')}
