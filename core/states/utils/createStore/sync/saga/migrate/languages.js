@@ -1,9 +1,9 @@
-const languages = (state) => {
+const migrate = (state) => {
   if (state.languages) {
     return state;
   }
 
-  let languages = {};
+  const languages = {};
   const oldLanguage = state.language;
   if (oldLanguage) {
     languages.current = oldLanguage;
@@ -15,4 +15,4 @@ const languages = (state) => {
   };
 };
 
-export default languages;
+export default migrate;

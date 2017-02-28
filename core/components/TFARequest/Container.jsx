@@ -4,14 +4,6 @@ import resources from './resources';
 
 import View from './View';
 
-const getMessage = (response) => {
-  switch (response.sent) {
-    case 'sms': { return 'tfa:sent-sms' }
-    case 'authy': { return 'tfa:sent-authy' }
-    case 'email': { return 'tfa:sent-email' }
-  }
-};
-
 class TFARequest extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -36,7 +28,7 @@ class TFARequest extends React.PureComponent {
     const { payload, useEmail, userId } = this.props;
     resources.request({ useEmail, force, payload, userId })
     .then((response) => {
-      const message = getMessage(response);
+      const message = `tfa:sent-${response.sent}`;
       this.setState({ message });
     })
     .catch((error) => {

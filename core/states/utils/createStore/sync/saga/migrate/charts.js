@@ -3,15 +3,15 @@ const charts = (state) => {
     return state;
   }
 
-  const charts = {};
+  const nextCharts = {};
   const oldCharts = state.charts;
   if (typeof oldCharts === 'number') {
-    charts.double = oldCharts === 2 ? true : false;
+    nextCharts.double = oldCharts === 2;
   }
 
   return {
     ...state,
-    charts,
+    nextCharts,
   };
 };
 

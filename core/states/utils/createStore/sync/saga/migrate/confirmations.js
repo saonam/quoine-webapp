@@ -70,23 +70,19 @@ const confirmations = (state) => {
     const oldSkipsConfirm = oldSkips.confirm;
     const oldSkipsReport = oldSkips.finish;
 
-    oldSkipsConfirm && (
-      Object.keys(oldSkipsConfirm).forEach(key => {
-        if (oldSkipsConfirm[key] === true) {
-          const mapKey = map[key];
-          skips = add(skips, CONFIRMS[mapKey]);
-        }
-      })
-    )
+    Object.keys(oldSkipsConfirm).forEach(key => {
+      if (oldSkipsConfirm[key] === true) {
+        const mapKey = map[key];
+        skips = add(skips, CONFIRMS[mapKey]);
+      }
+    });
 
-    oldSkipsReport && (
-      Object.keys(oldSkipsReport).forEach(key => {
-        if (oldSkipsReport[key] === true) {
-          const mapKey = map[key];
-          skips = add(skips, REPORTS[mapKey]);
-        }
-      })
-    )
+    Object.keys(oldSkipsReport).forEach(key => {
+      if (oldSkipsReport[key] === true) {
+        const mapKey = map[key];
+        skips = add(skips, REPORTS[mapKey]);
+      }
+    });
   }
 
   return {

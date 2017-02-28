@@ -3,17 +3,17 @@ const trading = (state) => {
     return state;
   }
 
-  let trading = {};
+  let next = {};
   const oldCurrent = state.current || {};
   const { account, market, product } = oldCurrent;
   if (account && market && product) {
-    trading = { account, product, market };
+    next = { account, product, market };
   }
-  
+
   return {
     ...state,
-    trading,
+    next,
   };
-}
+};
 
 export default trading;
