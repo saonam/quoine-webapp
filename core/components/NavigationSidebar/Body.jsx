@@ -14,9 +14,16 @@ import styles from './styles.css';
 
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-const accountsHost = process.env.REACT_APP_ACCOUNTS_HOST;
-const tradeHost = process.env.REACT_APP_TRADE_HOST;
-const feeLink = tradeHost === 'https://bttrader.min-btc.com/' ? 'https://min-btc.com/service' : 'https://www.quoine.com/fees/';
+const links = ({
+  traders: {
+    fee: 'https://min-btc.com/service',
+    faq: 'https://min-btchelp.zendesk.com',
+  },
+  quoine: {
+    fee: 'https://www.quoine.com/fees',
+    faq: 'https://quoine.zendesk.com/hc/en-us',
+  },
+})[process.env.REACT_APP_VENDOR];
 
 const NavigationSidebarBody = ({ onClose }) => (
   <div className={styles.main}>
@@ -31,23 +38,23 @@ const NavigationSidebarBody = ({ onClose }) => (
       </div>
       <div className={styles.section} >
         <div onClick={onClose}>
-          <Link pathname={`${tradeHost}`} target="_self">
+          <Link pathname={`${process.env.REACT_APP_TRADE_HOST}`}>
             {t('menu:dashboard')}
           </Link>
         </div>
         <AccountsWarning />
         <div onClick={onClose}>
-          <Link pathname={`${accountsHost}/settings`} target="_self">
+          <Link pathname={`${process.env.REACT_APP_ACCOUNTS_HOST}/settings`}>
             {t('menu:settings')}
           </Link>
         </div>
       </div>
     </div>
     <div onClick={onClose}>
-      <Link pathname={feeLink}>
+      <Link pathname={links.fee} target="_blank">
         {t('menu:fee')}&nbsp;↗
       </Link>
-      <Link pathname="https://quoine.zendesk.com/hc">
+      <Link pathname={links.faq} target="_blank">
         {t('menu:faq')}&nbsp;↗
       </Link>
       <Link>
@@ -64,7 +71,7 @@ const NavigationSidebarBody = ({ onClose }) => (
     </div>
     <div onClick={onClose}>
       <Link
-        pathname={`${accountsHost}/sign-out`}
+        pathname={`${process.env.REACT_APP_ACCOUNTS_HOST}/sign-out`}
         styleName="negative"
         target="_self"
       >

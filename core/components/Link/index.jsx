@@ -55,7 +55,7 @@ Link.propTypes = {
 Link.defaultProps = {
   styleName: '',
   className: '',
-  target: '_blank',
+  target: '_self',
 };
 
 export default withRouter(Link);
