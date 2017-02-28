@@ -43,6 +43,7 @@ class Charts extends React.PureComponent {
     const origin = market === 'futures' ? 'bitmex' : 'quoine';
     const name = getChartName(product);
     const options = {
+      host: 'quoine.embed.cryptowat.ch',
       locale: getLanguage(language),
       height: '100%',
       width: '100%',
