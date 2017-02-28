@@ -5,7 +5,7 @@ import { TYPES } from '@quoine/states/confirmations';
 
 export default function* handleConfirm({ task, body }) {
   const { skips, activities } = yield select(states => states.confirmations);
-  
+
   const activity = `${task}-confirm`;
   if (skips.indexOf(activity) !== -1) { return true; }
 

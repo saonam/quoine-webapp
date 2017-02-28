@@ -5,5 +5,5 @@ export default (raw) => {
   } else {
     sent = raw.ignored ? 'authy' : 'sms';
   }
-  return { sent }
+  return { sent };
 };

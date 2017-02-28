@@ -1,9 +1,9 @@
-const orderEntry = (state) => {
+const migrate = (state) => {
   if (state.orderEntry) {
     return state;
   }
 
-  let orderEntry = {};
+  const orderEntry = {};
   const oldForm = state.orderForm;
   if (oldForm) {
     orderEntry.form = {
@@ -30,4 +30,4 @@ const orderEntry = (state) => {
   };
 };
 
-export default orderEntry;
+export default migrate;

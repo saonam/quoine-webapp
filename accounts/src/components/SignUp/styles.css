@@ -35,6 +35,7 @@
 .error {
   composes: negative from "@quoine/styles/color.css";
   composes: top-large from "@quoine/styles/margin.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
 }
 
 @theme {

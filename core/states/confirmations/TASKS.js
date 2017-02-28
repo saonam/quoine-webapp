@@ -22,7 +22,7 @@ const CONFIRMS = (
   Object.keys(TASKS).reduce(
     (prev, key) => ({
       ...prev,
-      [key]: `${TASKS[key]}-confirm`
+      [key]: `${TASKS[key]}-confirm`,
     }), {}
   )
 );
@@ -32,7 +32,7 @@ const REPORTS = (
   Object.keys(TASKS).reduce(
     (prev, key) => ({
       ...prev,
-      [key]: `${TASKS[key]}-report`
+      [key]: `${TASKS[key]}-report`,
     }), {}
   )
 );

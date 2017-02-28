@@ -104,7 +104,8 @@ export default {
     "input-vat-id": "VAT",
     // step 4
     "input-affiliate-code": "プロモコード（任意）",
-    "input-accept-terms": "下記の<a href=\"https://www.quoine.com/terms\" target=\"_blank\">利用規約</a>に同意します。",
+    "input-accept-terms-quoine": "下記の<a href=\"https://www.quoine.com/terms\" target=\"_blank\">利用規約</a>に同意します。",
+    "input-accept-terms-traders": "下記の<a href=\"https://min-btc.com/terms\" target=\"_blank\">利用規約</a>に同意します。",
     // ===
     "success-message": "ご登録頂きまして、誠にありがとうございます。あと少しで完了です。詳しい説明を記載したメールを送信いたしましたので、ご確認ください。",
   },

@@ -1,9 +1,9 @@
-const themes = (state) => {
+const migrateThemes = (state) => {
   if (state.themes) {
     return state;
   }
 
-  let themes = {};
+  const themes = {};
   const oldTheme = state.theme;
   if (oldTheme) {
     themes.current = oldTheme;
@@ -15,4 +15,4 @@ const themes = (state) => {
   };
 };
 
-export default themes;
+export default migrateThemes;
