@@ -6,7 +6,7 @@ import Money from '@quoine/components/Money';
 
 const ProductPriceLabel = ({ product, type }) => (
   <span>
-    <span>{t('product:low')} </span>
+    <span>{t(`product:${type === 'bid' ? 'low' : 'high'}`)} </span>
     <Money
       value={type === 'bid' ? product.lowBid : product.highAsk}
       currency={product.quoteCurrency}
