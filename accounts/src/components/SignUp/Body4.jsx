@@ -1,8 +1,3 @@
-/*
-  Note: this file is wide (line lenght is long) and long (many lines)
-  but it's okay to keep the simple of this file
- */
-
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -15,23 +10,35 @@ import styles from './styles.css';
 
 const AffiliateCode = ({ form, onChange }) => (
   <div className={styles.input}>
-    <Input large id="affiliate-code" label={translate('sign-up:input-affiliate-code')}>
-      <TextBox autoFocus type="text" value={form.affiliateCode} onChange={onChange.affiliateCode} />
+    <Input
+      large
+      id="affiliate-code"
+      label={translate('sign-up:input-affiliate-code')}
+    >
+      <TextBox
+        autoFocus
+        type="text"
+        value={form.affiliateCode}
+        onChange={onChange.affiliateCode}
+      />
     </Input>
   </div>
 );
 
-const tradeHost = process.env.REACT_APP_TRADE_HOST;
-const signupLink = tradeHost === 'https://bttrader.min-btc.com/' ? 'sign-up:input-accept-terms-traders' : 'sign-up:input-accept-terms';
-
 const AcceptTerms = ({ form, onChange }) => (
   <div className={styles.input}>
-    <Checkbox id="accept-terms" value={form.acceptTerms} onChange={onChange.acceptTerms}>
+    <Checkbox
+      id="accept-terms"
+      value={form.acceptTerms}
+      onChange={onChange.acceptTerms}
+    >
       <span
         className={styles.termsText}
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
-          __html: translate(signupLink),
+          __html: translate(`sign-up:input-accept-terms-${
+            process.env.REACT_APP_VENDOR
+          }`),
         }}
       />
     </Checkbox>

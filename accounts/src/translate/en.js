@@ -104,7 +104,7 @@ export default {
     "input-vat-id": "VAT",
     // step 4
     "input-affiliate-code": "Promotion Code (optional)",
-    "input-accept-terms": "I agree with <a href=\"https://www.quoine.com/terms\" target=\"_blank\">Terms &amp Conditions</a>.",
+    "input-accept-terms-quoine": "I agree with <a href=\"https://www.quoine.com/terms\" target=\"_blank\">Terms &amp Conditions</a>.",
     "input-accept-terms-traders": "I agree with <a href=\"https://min-btc.com/terms\" target=\"_blank\">Terms &amp Conditions</a>.",
     // ===
     "success-message": "Thank you for registering. The process is almost done! Further instructions have been sent to your email address.",
