@@ -3,7 +3,6 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Link from '@quoine/components/NavigationLink';
-import translate from '@quoine/translate';
 
 import Modal from './Modal';
 
