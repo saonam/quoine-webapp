@@ -1,4 +1,7 @@
 import React from 'react';
+
+import translate from '@quoine/translate';
+
 import Link from '@quoine/components/NavigationLink';
 
 import Modal from './Modal';
