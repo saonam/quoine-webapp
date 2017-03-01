@@ -120,7 +120,9 @@ export default {
     "yes": "Yes",
     "dismiss": "Dismiss",
     "title": "Confirmation",
-    "description": "確認ポップアップにて取引に関する重要な決定を実行前後に確認できます。<br/>下記チェックボックスより確認ポップアップの表示設定をカスタマイズして下さい。",
+    "help": "確認ポップアップにて取引に関する重要な決定を実行前後に確認できます。",
+    "help-none": "現在、スキップ設定にしている確認ポップアップはありません。スキップ設定後はこちらの画面から解除可能です。",
+    "help-some": "以下に表示されている確認ポップアップがスキップ設定になっています。再度ポップアップを表示させる場合は、\"x\"ボタンを押してリストから削除してください。",
     // Need review
     "task-order-add-confirm": "Before Create Order",
     "task-order-add-report": "After Create Order",

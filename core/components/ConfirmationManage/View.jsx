@@ -8,8 +8,13 @@ import styles from './styles.css';
 
 const ConfirmationManage = ({ skips }) => (
   <div>
-    <p className={styles.description}>
-      {translate('confirmation:description')}
+    <p className={styles.help}>
+      {translate('confirmation:help')}
+    </p>
+    <p className={styles.help}>
+      {translate(`confirmation:help-${
+        skips.length === 0 ? 'none' : 'some'
+      }`)}
     </p>
     <div className={styles.items}>
       {skips.map(task => (

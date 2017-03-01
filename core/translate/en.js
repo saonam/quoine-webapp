@@ -120,7 +120,9 @@ export default {
     "yes": "Yes",
     "dismiss": "Dismiss",
     "title": "Confirmation",
-    "description": "Confirmation popups help you avoid accidents when making important trading decisions such as creating an order or closing a position. You can choose to receive them before and/or after the action. Check the list below to customize the popups to your needs.",
+    "help": "Confirmation popups help you avoid accidents when making important trading decisions such as creating an order or closing a position.",
+    "help-none": "You don't currently have skipped any confirmations yet. When you skip one, you can turn it back on here.",
+    "help-some": "Below are your skipped confirmations. To turn one back on, click on the \"X\" button to remove it from the list.",
     // Need review
     "task-order-add-confirm": "Before Create Order",
     "task-order-add-report": "After Create Order",
