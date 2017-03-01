@@ -14,7 +14,7 @@ TokenRemoveView.propTypes = {
   confirming: React.PropTypes.oneOfType([
     React.PropTypes.bool,
     React.PropTypes.number,
-  ]).isRequired,
+  ]),
   token: React.PropTypes.shape({}).isRequired,
 };
 
