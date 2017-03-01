@@ -30,7 +30,13 @@ const getInterestInFund = ({
 
   // convert
   const fund = form.account;
-  const rate = getRate({ frm: currency, to: fund, fxRates, orderBook });
+  const rate = getRate({
+    frm: currency,
+    to: fund,
+    fxRates,
+    orderBook,
+    mid: form.quoteCurrency,
+  });
   const interestInFund = interest * rate;
 
   return interestInFund;
