@@ -40,6 +40,7 @@ export default function* syncSagaInit() {
     const remote = yield call(resources.get);
     yield syncSagaApply(remote);
   } catch (e) {
-    // do nothing
+    // let's say it null because we don't have local sync anymore
+    yield syncSagaApply(null);
   }
 }
