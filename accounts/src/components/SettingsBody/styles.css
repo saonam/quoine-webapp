@@ -1,4 +1,5 @@
 .main {
+  composes: height-full from "@quoine/styles/size.css";
 }
 .section {
   composes: ver-medium hor-large from "@quoine/styles/padding.css";

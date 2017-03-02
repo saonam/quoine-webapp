@@ -1,0 +1,13 @@
+.main {
+  composes: top-small from "@quoine/styles/padding.css";
+}
+.link {
+  composes: ver-small right-large from "@quoine/styles/padding.css";
+  composes: uppercase semi-bold right from "@quoine/styles/text.css";
+  composes: block from "@quoine/styles/display.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+}
+.active {
+  composes: link;
+  composes: accent from "@quoine/styles/color.css";
+}
