@@ -38,7 +38,7 @@ const Router = () => (
       <Route path="/sign-up" components={SignUp} />
       <Route path="/demo" components={Demo} />
 
-      <Route path="/settings" components={Settings} />
+      <Route path="/settings/:tab" components={Settings} />
 
       <Redirect from="*" to="/" />
     </Route>

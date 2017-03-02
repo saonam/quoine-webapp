@@ -251,6 +251,15 @@ export default {
     "type-withdraw": "Withdrawal",
   },
   // ===
+  "fund-withdrawal": {
+    "status-documents-submitted": "You have submitted documents for account verification. Your documents are being reviewed by our staff. Once your account is verified and approved, you will be able to fund/withdraw.",
+    "status-declined": "Your account verification request has been declined.",
+    "help-declined": "Please reupload documents in Menu > Settings > Profile according to email instructions.",
+    "status-pending": "Your account must be verified and approved before you can fund/withdraw.",
+    "help-pending": "Please upload ID documents for account verification in Menu > Settings > Profile.",
+    "action": "Go to Settings",
+  },
+  // ===
   "fund": {
     "title": "Fund",
     // ===
@@ -354,13 +363,6 @@ export default {
   "futures-balance-error": {
     "transfer-failed": "Fund transfer has failed. Please try again.",
     "quantity-too-large": "Quantity must be less than balance.",
-  },
-  // ===
-  "asset-transfer": {
-    "declined": "Your account verification request has been declined. Please reupload documents in Menu > Settings according to email instructions.",
-    "documents-submitted": "You have submitted documents for account verification. Your documents are being reviewed by our staff. Once your account is verified and approved, you will be able to submit fiat deposit/withdrawal requests.",
-    "pending": "Your account must be verified and approved before you can submit fiat deposit/withdrawal requests. Please upload ID documents for account verification in Menu > Settings.",
-    "go-to-settings": "Go to Settings",
   },
   // ===
   "bank": {

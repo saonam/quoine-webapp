@@ -1,0 +1,24 @@
+@import url('@quoine/core/styles/_size.css');
+
+._main {
+  composes: x-small from "@quoine/styles/padding.css";
+  composes: semi-bold center from "@quoine/styles/text.css";
+  composes: relative from "@quoine/styles/position.css";
+}
+.button {
+  composes: absolute top bottom from "@quoine/styles/position.css";
+  composes: auto from "@quoine/styles/margin.css";
+  height: calc($base * 2);
+  right: calc($base / 4);
+}
+
+.accent {
+  composes: _main;
+  composes: accent from "@quoine/styles/bg-color.css";
+  composes: primary-0 from "@quoine/styles/color.css";
+}
+.negative {
+  composes: _main;
+  composes: negative from "@quoine/styles/bg-color.css";
+  composes: primary-0 from "@quoine/styles/color.css";
+}

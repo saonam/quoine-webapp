@@ -1,11 +1,10 @@
 import React from 'react';
 
-import AccountWrapper from 'components/AccountWrapper';
-
-import Body from './Body';
+import TransferWrapper from 'components/TransferWrapper';
+import Main from './Main';
 
 const Fund = () => (
-  <AccountWrapper Body={Body} />
+  <TransferWrapper Main={Main} />
 );
 
 export default Fund;

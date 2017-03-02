@@ -1,9 +1,10 @@
-import { connect } from 'react-redux';
+import React from 'react';
 
-import View from './View';
+import TransferWrapper from 'components/TransferWrapper';
+import Main from './Main';
 
-const mapStateToProps = (state) => ({
-  inputting: state.wdrBank.inputting,
-});
+const Withdrawal = () => (
+  <TransferWrapper Main={Main} />
+);
 
-export default connect(mapStateToProps)(View);
+export default Withdrawal;

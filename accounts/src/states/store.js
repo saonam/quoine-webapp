@@ -5,6 +5,7 @@ import themes from '@quoine/states/themes';
 import tabs from '@quoine/states/tabs';
 import user from '@quoine/states/user';
 import confirmations from '@quoine/states/confirmations';
+import notifications from '@quoine/states/notifications';
 
 import session from 'states/session';
 import tokens from 'states/tokens';
@@ -15,6 +16,7 @@ const states = {
   tabs,
   user,
   confirmations,
+  notifications,
 
   session,
   tokens,

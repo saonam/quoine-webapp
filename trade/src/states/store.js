@@ -8,6 +8,7 @@ import currencies from '@quoine/states/currencies';
 import interestBook from '@quoine/states/interestBook';
 import tabs from '@quoine/states/tabs';
 import confirmations from '@quoine/states/confirmations';
+import notifications from '@quoine/states/notifications';
 
 import trading from 'states/trading';
 import products from 'states/products';
@@ -39,6 +40,7 @@ const states = {
   interestBook,
   tabs,
   confirmations,
+  notifications,
 
   trading,
   products,

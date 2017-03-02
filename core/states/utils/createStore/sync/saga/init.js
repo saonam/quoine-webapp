@@ -29,8 +29,11 @@ function* syncSagaApply(orgSync) {
 
 export default function* syncSagaInit() {
   // 1. find state from local storage first
-  const local = JSON.parse(window.localStorage.getItem('sync-state'));
-  yield syncSagaApply(local);
+  // WARNING: temporary disable localStorage to avoid sync between
+  // different user
+  // TODO: find a better way
+  // const local = JSON.parse(window.localStorage.getItem('sync-state'));
+  // yield syncSagaApply(local);
   // 2. then load settings from remote
   try {
     // this might failed because of 401

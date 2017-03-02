@@ -251,6 +251,15 @@ export default {
     "type-withdraw": "出金",
   },
   // ===
+  "fund-withdrawal": {
+    "status-documents-submitted": "送信していただいた本人確認書類を現在認証しております。",
+    "status-declined": "口座を認証できませんでした。",
+    "help-declined": "本人確認書類をもう一度確認して 設定 で再アップロードしてください。",
+    "status-pending": "口座を認証するまで入出金はできません。",
+    "help-pending": "口座を認証するためには本人確認書類のアップロードが必要となります。「設定」に移動してください。",
+    "action": "「設定」に移動する",
+  },
+  // ===
   "fund": {
     "title": "入金",
     // ===
@@ -354,13 +363,6 @@ export default {
   "futures-balance-error": {
     "transfer-failed": "振込に失敗しました。もう一度ご実行ください。",
     "quantity-too-large": "振込の金額は残高より小さいとなっております。",
-  },
-  // ===
-  "asset-transfer": {
-    "declined": "口座を認証できませんでした。<br/>本人確認書類をもう一度確認して<strong>設定</strong>で再アップロードしてください。",
-    "submitted": "送信していただいた本人確認書類を現在認証しております。",
-    "pending": "口座を認証するまで入出金はできません。口座を認証するためには本人確認書類のアップロードが必要となります。<br/>「設定」に移動してください。",
-    "go-to-settings": "「設定」に移動する",
   },
   // ===
   "bank": {

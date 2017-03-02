@@ -149,4 +149,8 @@ export default {
     "cancel": "Cancel",
     "done": "Done",
   },
+  "notifications": {
+    // Need review
+    "disable-trading": "Disable Trading .....",
+  },
 };

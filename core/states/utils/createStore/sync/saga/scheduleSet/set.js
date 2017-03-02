@@ -19,7 +19,9 @@ const set = (thisStates) => {
   lastStates = thisStates;
 
   // set local
-  window.localStorage.setItem('sync-state', JSON.stringify(thisStates));
+  // WARNING: temporary disable
+  // see init.js for more information
+  // window.localStorage.setItem('sync-state', JSON.stringify(thisStates));
 
   // set remote
   resources.set(thisStates)

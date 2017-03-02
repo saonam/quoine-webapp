@@ -1,0 +1,21 @@
+.main {
+  composes: medium from "@quoine/styles/padding.css";
+}
+.status-negative {
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: negative from "@quoine/styles/color.css";
+}
+.status-positive {
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.help {
+  composes: top-medium from "@quoine/styles/margin.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+}
+.link {
+  composes: accent-bg full large text block
+    from "@quoine/components/Button/styles.css";
+  composes: center from "@quoine/styles/text.css";
+  composes: top-medium from "@quoine/styles/margin.css";
+}

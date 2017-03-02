@@ -149,4 +149,9 @@ export default {
     "cancel": "Cancel",
     "done": "Done",
   },
+  "notifications": {
+    // Need review
+    "disable-trading": "Trading is currently disabled until your account is approved. Please go to Menu > Settings > Profile to verify your account.",
+    "dismiss": "Dismiss",
+  },
 };
