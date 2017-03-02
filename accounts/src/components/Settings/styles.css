@@ -1,6 +1,19 @@
 @import "@quoine/core/styles/_size.css";
 
 .main {
+  composes: height-full from "@quoine/styles/size.css";
+  composes: flex jc-center from "@quoine/styles/flex.css";
+  composes: x-small from "@quoine/styles/padding.css";
   composes: large line-3 from "@quoine/styles/text.css";
-  min-height: calc($base * $base);
+}
+.menu,
+.space {
+  width: calc($base * 12);
+  composes: fix from "@quoine/styles/flex.css";
+}
+.children {
+  width: calc($base * 60);
+  composes: height-full from "@quoine/styles/size.css";
+  composes: x-hidden from "@quoine/styles/overflow.css";
+  composes: primary-0 from "@quoine/styles/bg-color.css";
 }

@@ -16,6 +16,12 @@ import SettingsBody from 'components/Settings';
 
 import Menu from 'components/Menu';
 
+// Settings Body
+import Application from 'components/Application';
+import Profile from 'components/Profile';
+import Security from 'components/Security';
+import TokenManage from 'components/TokenManage';
+
 const SignIn = { body: SignInBody, menu: Menu };
 const SignUp = { body: SignUpBody, menu: Menu };
 const SignOut = { body: SignOutBody, menu: Menu };
@@ -38,8 +44,13 @@ const Router = () => (
       <Route path="/sign-up" components={SignUp} />
       <Route path="/demo" components={Demo} />
 
-      <Route path="/settings" components={Settings} />
-      <Route path="/settings/:category" components={Settings} />
+      <Route path="/settings" components={Settings}>
+        <IndexRoute components={Application} />
+        <Route path="application" components={Application} />
+        <Route path="profile" components={Profile} />
+        <Route path="security" components={Security} />
+        <Route path="api" components={TokenManage} />
+      </Route>
 
       <Redirect from="*" to="/" />
     </Route>

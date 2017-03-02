@@ -2,7 +2,6 @@
 
 .main {
   composes: full from "@quoine/styles/size.css";
-  composes: primary-0-accent from "@quoine/styles/bg-color.css";
   composes: primary-4 from "@quoine/styles/color.css";
 }
 .wrapper {
@@ -14,5 +13,6 @@
 }
 .body {
   /* 100% - menu */
-  height: calc(100% - calc($base * 2.5))
+  height: calc(100% - calc($base * 2.5));
+  composes: primary-0-accent from "@quoine/styles/bg-color.css";
 }
