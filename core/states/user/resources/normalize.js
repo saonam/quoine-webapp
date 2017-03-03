@@ -5,4 +5,5 @@ export default raw => ({
   status: raw.status.replace(/_/g, '-'),
   // ===
   fees: raw.custom_fees,
+  vendorId: raw.app_vendor_id,
 });

@@ -4,9 +4,8 @@ import translate from '@quoine/translate';
 
 import styles from './styles.css';
 
-const TransferWrapperNotice = ({ status }) => (
+const TransferMessage = ({ status }) => (
   <div className={styles.main}>
-
     <p
       className={styles[`status-${
         status === 'documents-submitted' ? 'positive' : 'negative'
@@ -31,10 +30,10 @@ const TransferWrapperNotice = ({ status }) => (
   </div>
 );
 
-TransferWrapperNotice.propTypes = {
+TransferMessage.propTypes = {
   status: React.PropTypes.oneOf([
     'pending', 'declined', 'documents-submitted',
   ]).isRequired,
 };
 
-export default TransferWrapperNotice;
+export default TransferMessage;
