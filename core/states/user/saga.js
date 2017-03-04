@@ -5,6 +5,11 @@ import TYPES from './TYPES';
 import resources from './resources';
 
 export default function* saga() {
-  const user = yield call(resources.load);
-  yield apply(TYPES, user);
+  try {
+    const user = yield call(resources.load);
+    yield apply(TYPES, user);
+  } catch (e) {
+    // do nothing since user might failed in case of 401
+    // (accounts page)
+  }
 }
