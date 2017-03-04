@@ -30,7 +30,7 @@ class FormWrapper extends React.Component {
     });
   }
   onSubmit(event) {
-    event.preventDefault();
+    if (event) { event.preventDefault(); }
 
     this.setState({ busy: true });
     this.props.onSubmit(this.state.form)
@@ -69,5 +69,22 @@ FormWrapper.propTypes = {
   initialForm: React.PropTypes.shape({}).isRequired,
   Element: React.PropTypes.func.isRequired,
 };
+
+const FormWrapperPropTypes = {
+  error: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.string,
+  ]).isRequired,
+  busy: React.PropTypes.bool.isRequired,
+  success: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.string,
+  ]).isRequired,
+  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
+  onSubmit: React.PropTypes.func.isRequired,
+  form: React.PropTypes.shape({}).isRequired,
+};
+
+export { FormWrapperPropTypes };
 
 export default FormWrapper;
