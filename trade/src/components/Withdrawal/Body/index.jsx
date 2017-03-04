@@ -1,11 +1,10 @@
 import React from 'react';
 
 import AccountWrapper from 'components/AccountWrapper';
-
-import View from './View';
+import MsgWrapper from './MsgWrapper';
 
 const Withdrawal = () => (
-  <AccountWrapper Body={View} />
+  <AccountWrapper Body={MsgWrapper} />
 );
 
 export default Withdrawal;

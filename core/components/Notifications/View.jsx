@@ -4,6 +4,10 @@ import Item from './Item';
 
 import styles from './styles.css';
 
+const isJapanUser = (user) => (
+  user.vendorId === process.env.REACT_APP_QUOINEJP_ID
+);
+
 const Notifications = ({ user, state }) => {
   // don't show notifications if not signed in
   if (!user.id) { return null; }
@@ -15,13 +19,18 @@ const Notifications = ({ user, state }) => {
         if (state.dismissed.indexOf(notification.id) !== -1) {
           return null;
         }
-        // special: disable trading but approved
+        
+        // special: don't show disable-trading notification when
         if (
-          notification.id === 'disable-trading' &&
-          user.status === 'approved'
+          (
+            notification.id === 'disable-trading' && !isJapanUser(user)
+          ) || (
+            notification.id === 'disable-trading' && isJapanUser(user) && user.status === 'approved'
+          )
         ) {
           return null;
         }
+
         // others
         return (
           <div key={notification.id} className={styles.item}>
