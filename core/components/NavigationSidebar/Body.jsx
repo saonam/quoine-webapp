@@ -19,6 +19,10 @@ const links = ({
     fee: 'https://min-btc.com/service',
     faq: 'https://min-btchelp.zendesk.com',
   },
+  qryptos: {
+    fee: 'https://www.quoine.com/fees',
+    faq: 'https://quoine.zendesk.com/hc/en-us',
+  },
   quoine: {
     fee: 'https://www.quoine.com/fees',
     faq: 'https://quoine.zendesk.com/hc/en-us',
