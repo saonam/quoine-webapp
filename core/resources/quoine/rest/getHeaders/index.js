@@ -9,6 +9,7 @@ const base = {
   // might be override in getHeaders
   // 3 is QUOINE Pte
   'X-Quoine-Vendor-ID': process.env.REACT_APP_VENDOR_ID || 3,
+  'X-Quoine-Preferred-Language': 'en',
 };
 
 const getHeaders = ({ path, isForm, vendorId }) => (
