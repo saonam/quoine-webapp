@@ -1,23 +1,29 @@
-REACT_APP_APP=accounts
+# traders
 
+# REACT_APP_ACCOUNTS_HOST        = https://traders-accounts-sandbox.quoine.com
+# REACT_APP_APP                  = accounts
+# REACT_APP_DEFAULT_CONTINUE_URL = http://localhost:3000
+# REACT_APP_LOCAL_IDENT_NAME     = full
+# REACT_APP_QUOINE_HOST          = https://sandbox.quoine.com
+# REACT_APP_TRADE_HOST           = https://traders-wa-sandbox.quoine.com
+# REACT_APP_VENDOR               = traders
+# REACT_APP_VENDOR_ID            = 15772
+# REACT_APP_VENDOR_NAME          = Min-BTC
+# REACT_APP_VENDOR_ZENDESK       = min-btchelp
+# PORT                           = 3300
 
-REACT_APP_VENDOR=quoine
-REACT_APP_VENDOR_NAME=QUOINE
-REACT_APP_VENDOR_ZENDESK=quoine
-REACT_APP_VENDOR_ID=3
+# ================================================================== #
 
-REACT_APP_VENDOR=traders
-REACT_APP_VENDOR_NAME=Min-BTC
-REACT_APP_VENDOR_ZENDESK=min-btchelp
-REACT_APP_VENDOR_ID=29192
+# quoine
 
-
-REACT_APP_TRADE_HOST=http://localhost:3000
-REACT_APP_ACCOUNTS_HOST=http://localhost:3300
-REACT_APP_QUOINE_HOST=https://traders-api.quoine.com
-
-REACT_APP_QUOINE_HOST=https://api.quoine.com
-
-
-REACT_APP_LOCAL_IDENT_NAME=hashed
-PORT=3300
+REACT_APP_ACCOUNTS_HOST        = https://accounts-stag.quoine.com
+REACT_APP_APP                  = trade
+REACT_APP_DEFAULT_CONTINUE_URL = https://trade-stag.quoine.com
+REACT_APP_LOCAL_IDENT_NAME     = full
+REACT_APP_QUOINE_HOST          = https://staging1.quoine.com
+REACT_APP_TRADE_HOST           = https://trade-stag.quoine.com/
+REACT_APP_VENDOR               = quoine
+REACT_APP_VENDOR_ID            = 3
+REACT_APP_VENDOR_NAME          = QUOINE
+REACT_APP_VENDOR_ZENDESK       = quoine
+PORT                           = 3300
