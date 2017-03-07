@@ -258,6 +258,7 @@ export default {
     "status-pending": "Your account must be verified and approved before you can fund/withdraw.",
     "help-pending": "Please upload ID documents for account verification in Menu > Settings > Profile.",
     "action": "Go to Settings",
+    "status-not-allow-in-traders": "Right now we only support JPY, BTC, and ETH deposits/withdrawals.",
   },
   // ===
   "fund": {

@@ -5,7 +5,7 @@ import Futures from 'components/FuturesBalance';
 import Form from 'components/Withdrawal/Form';
 import List from 'components/Withdrawal/List';
 
-const WdrBodyContent = ({ account }) => (
+const WithdrawalStandbyBody = ({ account }) => (
   account.isFutures ? (
     <Futures type="withdrawal" />
   ) : (
@@ -16,10 +16,10 @@ const WdrBodyContent = ({ account }) => (
   )
 );
 
-WdrBodyContent.propTypes = {
+WithdrawalStandbyBody.propTypes = {
   account: React.PropTypes.shape({
     isFutures: React.PropTypes.bool.isRequired,
   }).isRequired,
 };
 
-export default WdrBodyContent;
+export default WithdrawalStandbyBody;

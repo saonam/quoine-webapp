@@ -14,7 +14,7 @@ const TransferMessage = ({ status }) => (
       {translate(`fund-withdrawal:status-${status}`)}
     </p>
 
-    {status !== 'documents-submitted' ? (
+    {status !== 'documents-submitted' && status !== 'not-allow-in-traders' ? (
       <div>
         <p className={styles.help}>
           {translate(`fund-withdrawal:help-${status}`)}
@@ -32,7 +32,7 @@ const TransferMessage = ({ status }) => (
 
 TransferMessage.propTypes = {
   status: React.PropTypes.oneOf([
-    'pending', 'declined', 'documents-submitted',
+    'pending', 'declined', 'documents-submitted', 'not-allow-in-traders',
   ]).isRequired,
 };
 

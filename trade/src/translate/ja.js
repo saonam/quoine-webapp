@@ -258,6 +258,7 @@ export default {
     "status-pending": "口座を認証するまで入出金はできません。",
     "help-pending": "口座を認証するためには本人確認書類のアップロードが必要となります。「設定」に移動してください。",
     "action": "「設定」に移動する",
+    "status-not-allow-in-traders": "現在、入出金は日本円・BTC・ETHでのみ受け付けております。",
   },
   // ===
   "fund": {

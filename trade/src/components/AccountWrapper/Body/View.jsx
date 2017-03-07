@@ -6,14 +6,14 @@ import Select from '../Select';
 
 import styles from './styles.css';
 
-const AccountWrapperBodyView = ({ Body, account, onChange }) => (
+const AccountWrapperBodyView = ({ Body, account, onChange, ...others }) => (
   account ? (
     <div className={styles.main}>
       <div className={styles.input}>
         <Select account={account} onChange={onChange} />
       </div>
       <div className={styles.body}>
-        <Body account={account} />
+        <Body account={account} {...others} />
       </div>
     </div>
   ) : <LoadingIconWrapper />

@@ -17,8 +17,8 @@ import ProductBookSpine from 'components/ProductBook/Spine';
 // import News from 'components/News';
 // import NewsSpine from 'components/News/Spine';
 
-import Transfer from 'components/Transfer';
-import TransferSpine from 'components/Transfer/Spine';
+import TransferPanels from 'components/TransferPanels';
+import TransferPanelsSpine from 'components/TransferPanels/Spine';
 
 import TransPanel from 'components/TransPanel';
 import TransPanelSpine from 'components/TransPanel/Spine';
@@ -37,7 +37,7 @@ const DashboardMain = () => (
         { Cover: Charts, Spine: ChartsSpine, transparent: true },
         { Cover: Blotters, Spine: BlottersSpine },
         // { Cover: News, Spine: NewsSpine },
-        { Cover: Transfer, Spine: TransferSpine },
+        { Cover: TransferPanels, Spine: TransferPanelsSpine },
         { Cover: TransPanel, Spine: TransPanelSpine },
         { Cover: BalancePanel, Spine: BalancePanelSpine },
       ]}

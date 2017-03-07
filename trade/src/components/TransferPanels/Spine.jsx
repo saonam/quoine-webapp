@@ -4,8 +4,8 @@ import translate from '@quoine/translate';
 
 import Spine from '@quoine/components/Spine';
 
-const TransferSpine = () => (
+const TransferPanelsSpine = () => (
   <Spine title={translate('transfer:spine-title')} />
 );
 
-export default TransferSpine;
+export default TransferPanelsSpine;

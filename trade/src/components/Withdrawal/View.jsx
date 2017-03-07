@@ -2,17 +2,17 @@ import React from 'react';
 
 import Add from 'components/WdrBank/Add';
 
-import Body from './Body';
+import Standby from './Standby';
 
 import styles from './styles.css';
 
 const Withdrawal = ({ inputting }) => (
   <div className={styles.main}>
     <div
-      // Hide `Body` by `css` to keep Withdrawal Data
+      // Hide `Standby` by `css` to keep Withdrawal Data
       className={inputting ? styles.none : styles.body}
     >
-      <Body />
+      <Standby />
     </div>
     {inputting ? <Add /> : null}
   </div>
