@@ -3,25 +3,20 @@ import React from 'react';
 import Loading from '@quoine/components/LoadingIconWrapper';
 import Message from '../Message';
 
-const acceptableTradersAccs = ['BTC', 'ETH', 'JPY'];
-const isLimitInTraders = (account) => (
-  process.env.REACT_APP_VENDOR === 'traders' &&
-  acceptableTradersAccs.indexOf(account.currency) === -1
-);
+import validate from './validate';
 
-const TransferBody = ({ user, account, Element }) => {
+const TransferBody = ({ user, account, type, Element }) => {
   if (!user.id) {
     return (<Loading />);
   }
-  if (isLimitInTraders(account)) {
-    return (<Message status="not-allow-in-traders" />);
+
+  // ===
+  const message = validate({ user, account, type });
+  if (message) {
+    return (<Message message={message} />);
   }
-  if (
-    (user.status !== 'approved' && account.fundType === 'fiat')
-    || (user.status !== 'approved' && user.vendorId === process.env.REACT_APP_QUOINEJP_ID)
-  ) {
-    return (<Message status={user.status} />);
-  }
+
+  // ===
   return (
     <Element account={account} />
   );
@@ -33,6 +28,8 @@ TransferBody.propTypes = {
     currency: React.PropTypes.string.isRequired,
     fundType: React.PropTypes.string.isRequired,
   }).isRequired,
+  // ===
+  type: React.PropTypes.oneOf(['fund', 'withdrawal']).isRequired,
   Element: React.PropTypes.func.isRequired,
 };
 

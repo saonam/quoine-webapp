@@ -4,26 +4,24 @@ import translate from '@quoine/translate';
 
 import styles from './styles.css';
 
-const TransferMessage = ({ status }) => (
+const TransferMessage = ({ message }) => (
   <div className={styles.main}>
     <p
-      className={styles[`status-${
-        status === 'documents-submitted' ? 'positive' : 'negative'
-      }`]}
+      className={styles[message.style]}
     >
-      {translate(`fund-withdrawal:status-${status}`)}
+      {translate(`fund-withdrawal:message-${message.key}`)}
     </p>
 
-    {status !== 'documents-submitted' && status !== 'not-allow-in-traders' ? (
+    {message.goto ? (
       <div>
         <p className={styles.help}>
-          {translate(`fund-withdrawal:help-${status}`)}
+          {translate(`fund-withdrawal:help-${message.key}`)}
         </p>
         <a
           className={styles.link}
-          href={`${process.env.REACT_APP_ACCOUNTS_HOST}/settings/profile`}
+          href={`${process.env.REACT_APP_ACCOUNTS_HOST}/settings/${message.goto}`}
         >
-          {translate('fund-withdrawal:action')}
+          {translate('fund-withdrawal:goto-settings')}
         </a>
       </div>
     ) : null}
@@ -31,9 +29,21 @@ const TransferMessage = ({ status }) => (
 );
 
 TransferMessage.propTypes = {
-  status: React.PropTypes.oneOf([
-    'pending', 'declined', 'documents-submitted', 'not-allow-in-traders',
-  ]).isRequired,
+  message: React.PropTypes.shape({
+    key: React.PropTypes.oneOf([
+      'pending',
+      'declined',
+      'documents-submitted',
+      // ===
+      'limit-accounts',
+      'need-tfa',
+    ]).isRequired,
+    style: React.PropTypes.oneOf(['positive', 'negative']).isRequired,
+    goto: React.PropTypes.oneOfType([
+      React.PropTypes.string.isRequired,
+      React.PropTypes.bool.isRequired,
+    ]).isRequired,
+  }).isRequired,
 };
 
 export default TransferMessage;

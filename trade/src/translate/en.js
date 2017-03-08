@@ -251,13 +251,20 @@ export default {
   },
   // ===
   "fund-withdrawal": {
-    "status-documents-submitted": "You have submitted documents for account verification. Your documents are being reviewed by our staff. Once your account is verified and approved, you will be able to fund/withdraw.",
-    "status-declined": "Your account verification request has been declined.",
+    "message-documents-submitted": "You have submitted documents for account verification. Your documents are being reviewed by our staff. Once your account is verified and approved, you will be able to fund/withdraw.",
+    // ===
+    "message-declined": "Your account verification request has been declined.",
     "help-declined": "Please reupload documents in Menu > Settings > Profile according to email instructions.",
-    "status-pending": "Your account must be verified and approved before you can fund/withdraw.",
+    // ===
+    "message-pending": "Your account must be verified and approved before you can fund/withdraw.",
     "help-pending": "Please upload ID documents for account verification in Menu > Settings > Profile.",
-    "action": "Go to Settings",
-    "status-not-allow-in-traders": "Right now we only support JPY, BTC, and ETH deposits/withdrawals.",
+    // ===
+    "message-limit-accounts": "Right now we only support JPY, BTC, and ETH deposits/withdrawals.",
+    // ===
+    "message-need-tfa": "For security reason, withdrawal not allow without two factor authen.",
+    "help-need-tfa": "Please enabel two factor authen for account in Menu > Settings > Security.",
+    // ===
+    "goto-settings": "Go to Settings",
   },
   // ===
   "fund": {

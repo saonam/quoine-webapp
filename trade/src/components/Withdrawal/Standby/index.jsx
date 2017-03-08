@@ -4,7 +4,7 @@ import Transfer from 'components/Transfer';
 import Body from './Body';
 
 const WithdrawalStandby = () => (
-  <Transfer Body={Body} />
+  <Transfer type="withdrawal" Body={Body} />
 );
 
 export default WithdrawalStandby;

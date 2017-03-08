@@ -251,13 +251,20 @@ export default {
   },
   // ===
   "fund-withdrawal": {
-    "status-documents-submitted": "送信していただいた本人確認書類を現在認証しております。",
-    "status-declined": "口座を認証できませんでした。",
+    "message-documents-submitted": "送信していただいた本人確認書類を現在認証しております。",
+    // ===
+    "message-declined": "口座を認証できませんでした。",
     "help-declined": "本人確認書類をもう一度確認して 設定 で再アップロードしてください。",
-    "status-pending": "口座を認証するまで入出金はできません。",
+    // ===
+    "message-pending": "口座を認証するまで入出金はできません。",
     "help-pending": "口座を認証するためには本人確認書類のアップロードが必要となります。「設定」に移動してください。",
-    "action": "「設定」に移動する",
-    "status-not-allow-in-traders": "現在、入出金は日本円・BTC・ETHでのみ受け付けております。",
+    // ===
+    "message-limit-accounts": "現在、入出金は日本円・BTC・ETHでのみ受け付けております。",
+    // ===
+    "message-need-tfa": "For security reason, withdrawal not allow without two factor authen.",
+    "help-need-tfa": "Please enabel two factor authen for account in Menu > Settings > Security.",
+    // ===
+    "goto-settings": "「設定」に移動する",
   },
   // ===
   "fund": {

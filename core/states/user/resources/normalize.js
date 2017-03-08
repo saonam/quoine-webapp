@@ -6,4 +6,5 @@ export default raw => ({
   // ===
   fees: raw.custom_fees,
   vendorId: raw.app_vendor_id,
+  tfa: raw.phone_verified,
 });

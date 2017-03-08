@@ -1,11 +1,11 @@
 .main {
   composes: medium from "@quoine/styles/padding.css";
 }
-.status-negative {
+.negative {
   composes: line-1-5 from "@quoine/styles/text.css";
   composes: negative from "@quoine/styles/color.css";
 }
-.status-positive {
+.positive {
   composes: line-1-5 from "@quoine/styles/text.css";
 }
 .help {
