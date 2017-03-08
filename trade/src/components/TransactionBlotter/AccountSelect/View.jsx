@@ -6,7 +6,7 @@ import AccountSelect from '@quoine/components/AccountSelect';
 
 import styles from './styles.css';
 
-const TransBlotterAccountSelect = ({ account, onChange }) => (
+const TransactionBlotterAccountSelect = ({ account, onChange }) => (
   <div className={styles.main}>
     <div className={styles.label}>
       {translate('trans:account')}
@@ -18,9 +18,9 @@ const TransBlotterAccountSelect = ({ account, onChange }) => (
   </div>
 );
 
-TransBlotterAccountSelect.propTypes = {
+TransactionBlotterAccountSelect.propTypes = {
   account: React.PropTypes.string.isRequired,
   onChange: React.PropTypes.func.isRequired,
 };
 
-export default TransBlotterAccountSelect;
+export default TransactionBlotterAccountSelect;

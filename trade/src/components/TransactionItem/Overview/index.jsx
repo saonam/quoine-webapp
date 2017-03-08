@@ -8,7 +8,7 @@ import Money from '@quoine/components/Money';
 
 import styles from './styles.css';
 
-const TransItemOverview = ({ trans }) => (
+const TransactionItemOverview = ({ trans }) => (
   <div className={styles.main}>
     <div className={styles.created}>
       <Time value={trans.createdAt} type="time" />
@@ -26,8 +26,8 @@ const TransItemOverview = ({ trans }) => (
   </div>
 );
 
-TransItemOverview.propTypes = {
+TransactionItemOverview.propTypes = {
   trans: React.PropTypes.shape({}).isRequired,
 };
 
-export default TransItemOverview;
+export default TransactionItemOverview;

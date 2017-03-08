@@ -9,21 +9,21 @@ import resources from './resources';
 import TYPES from '../TYPES';
 
 function* getPayload() {
-  const account = yield select(state => state.transBlotter.account);
+  const account = yield select(state => state.transactionBlotter.account);
   return account;
 }
 
 const applyKeysModels = createApplyKeysModels({
   TYPES,
   getKey: trans => trans.id,
-  getState: state => state.transBlotter,
+  getState: state => state.transactionBlotter,
   sort: true,
 });
 
 const blotterWatch = createBlotterWatch({
   watchPattern: createApplyPattern(TYPES, 'account'),
   TYPES,
-  stateName: 'transBlotter',
+  stateName: 'transactionBlotter',
   // ===
   getPayload,
   applyKeysModels,

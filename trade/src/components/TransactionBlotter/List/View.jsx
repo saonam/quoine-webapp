@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Blotter from '@quoine/components/Blotter';
-import Item from 'components/TransItem';
+import Item from 'components/TransactionItem';
 
 const TransList = (props) => (
   <Blotter

@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
-import { TYPES } from 'states/transBlotter';
+import { TYPES } from 'states/transactionBlotter';
 
-import getCollection from 'selectors/getTransBlotterCollection';
+import getCollection from 'selectors/getTransactionBlotterCollection';
 
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  filters: state.transBlotter.filters,
-  filtersSelects: state.transBlotter.filtersSelects,
+  filters: state.transactionBlotter.filters,
+  filtersSelects: state.transactionBlotter.filtersSelects,
   // ===
   collection: getCollection(state),
   // ===
-  busy: state.transBlotter.busy,
-  page: state.transBlotter.page,
+  busy: state.transactionBlotter.busy,
+  page: state.transactionBlotter.page,
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -20,8 +20,8 @@ import ProductBookSpine from 'components/ProductBook/Spine';
 import TransferPanels from 'components/TransferPanels';
 import TransferPanelsSpine from 'components/TransferPanels/Spine';
 
-import TransPanel from 'components/TransPanel';
-import TransPanelSpine from 'components/TransPanel/Spine';
+import TransactionPanel from 'components/TransactionPanel';
+import TransactionPanelSpine from 'components/TransactionPanel/Spine';
 
 import BalancePanel from 'components/BalancePanel';
 import BalancePanelSpine from 'components/BalancePanel/Spine';
@@ -38,7 +38,7 @@ const DashboardMain = () => (
         { Cover: Blotters, Spine: BlottersSpine },
         // { Cover: News, Spine: NewsSpine },
         { Cover: TransferPanels, Spine: TransferPanelsSpine },
-        { Cover: TransPanel, Spine: TransPanelSpine },
+        { Cover: TransactionPanel, Spine: TransactionPanelSpine },
         { Cover: BalancePanel, Spine: BalancePanelSpine },
       ]}
     />

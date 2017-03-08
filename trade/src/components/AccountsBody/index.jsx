@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BalancePanel from 'components/BalancePanel';
-import TransPanel from 'components/TransPanel';
+import TransactionPanel from 'components/TransactionPanel';
 import FundPanel from 'components/FundPanel';
 import WithdrawalPanel from 'components/WithdrawalPanel';
 
@@ -19,7 +19,7 @@ const AccountsBody = () => (
       <WithdrawalPanel />
     </div>
     <div className={styles.panel}>
-      <TransPanel />
+      <TransactionPanel />
     </div>
   </div>
 );

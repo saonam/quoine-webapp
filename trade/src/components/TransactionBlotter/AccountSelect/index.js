@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import { TYPES } from 'states/transBlotter';
+import { TYPES } from 'states/transactionBlotter';
 
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  account: state.transBlotter.account,
+  account: state.transactionBlotter.account,
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -10,7 +10,7 @@ import Hr from '@quoine/components/Hr';
 
 import styles from './styles.css';
 
-const TransItemDetail = ({ trans }) => (
+const TransactionItemDetail = ({ trans }) => (
   <div className={styles.main}>
 
     <div>
@@ -119,8 +119,8 @@ const TransItemDetail = ({ trans }) => (
   </div>
 );
 
-TransItemDetail.propTypes = {
+TransactionItemDetail.propTypes = {
   trans: React.PropTypes.shape({}).isRequired,
 };
 
-export default TransItemDetail;
+export default TransactionItemDetail;

@@ -5,7 +5,7 @@ import List from '../List';
 
 import styles from './styles.css';
 
-const TransBlotterBody = () => (
+const TransactionBlotterBody = () => (
   <div className={styles.main}>
     <div className={styles.account}>
       <AccountSelect />
@@ -16,4 +16,4 @@ const TransBlotterBody = () => (
   </div>
 );
 
-export default TransBlotterBody;
+export default TransactionBlotterBody;

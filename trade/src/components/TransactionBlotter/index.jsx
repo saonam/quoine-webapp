@@ -5,7 +5,7 @@ import Body from './Body';
 
 import styles from './styles.css';
 
-const TransBlotter = () => (
+const TransactionBlotter = () => (
   <div className={styles.main}>
     <div className={styles.header}>
       <Header />
@@ -16,4 +16,4 @@ const TransBlotter = () => (
   </div>
 );
 
-export default TransBlotter;
+export default TransactionBlotter;

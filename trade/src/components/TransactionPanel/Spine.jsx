@@ -4,8 +4,8 @@ import translate from '@quoine/translate';
 
 import Spine from '@quoine/components/Spine';
 
-const TransPanelSpine = () => (
+const TransactionPanelSpine = () => (
   <Spine title={translate('trans:title-spine')} />
 );
 
-export default TransPanelSpine;
+export default TransactionPanelSpine;

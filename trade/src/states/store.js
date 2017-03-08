@@ -26,7 +26,7 @@ import withdrawal from 'states/withdrawal';
 import orderBlotter from 'states/orderBlotter';
 import positionBlotter from 'states/positionBlotter';
 import executionBlotter from 'states/executionBlotter';
-import transBlotter from 'states/transBlotter';
+import transactionBlotter from 'states/transactionBlotter';
 
 import orderItem from 'states/orderItem';
 import positionItem from 'states/positionItem';
@@ -58,7 +58,7 @@ const states = {
   orderBlotter,
   positionBlotter,
   executionBlotter,
-  transBlotter,
+  transactionBlotter,
 
   orderItem,
   positionItem,
