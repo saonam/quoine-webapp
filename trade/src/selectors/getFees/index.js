@@ -10,7 +10,7 @@ export default createSelector(
       const product = products.models[key];
       return {
         ...fees,
-        [key]: (!product || !user) ? {
+        [key]: (product && user) ? {
           taker: user.fees[`taker:CASH:${key}`] || product.feeTaker,
           maker: user.fees[`maker:CASH:${key}`] || product.feeMaker,
         } : { taker: 0, maker: 0 },
