@@ -16,9 +16,15 @@ const FundFiatView = (props) => {
   const Body = (
     form.account === 'JPY' && form.method === 'cash'
   ) ? Cash : Bank;
+  const multipleMethod = (
+    form.account === 'JPY' &&
+    props.cash &&
+    process.env.REACT_APP_VENDOR === 'quoine'
+  );
+
   return (
     <div className={styles.main}>
-      {form.account === 'JPY' && props.cash ? (
+      {multipleMethod ? (
         <div className={styles.section}>
           <Method form={props.form} onChange={props.onChange} />
         </div>
