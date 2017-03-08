@@ -23,8 +23,8 @@ import TransferPanelsSpine from 'components/TransferPanels/Spine';
 import TransactionPanel from 'components/TransactionPanel';
 import TransactionPanelSpine from 'components/TransactionPanel/Spine';
 
-import BalancePanel from 'components/BalancePanel';
-import BalancePanelSpine from 'components/BalancePanel/Spine';
+import VolumePanel from 'components/VolumePanel';
+import VolumePanelSpine from 'components/VolumePanel/Spine';
 
 import styles from './styles.css';
 
@@ -39,7 +39,7 @@ const DashboardMain = () => (
         // { Cover: News, Spine: NewsSpine },
         { Cover: TransferPanels, Spine: TransferPanelsSpine },
         { Cover: TransactionPanel, Spine: TransactionPanelSpine },
-        { Cover: BalancePanel, Spine: BalancePanelSpine },
+        { Cover: VolumePanel, Spine: VolumePanelSpine },
       ]}
     />
   </div>

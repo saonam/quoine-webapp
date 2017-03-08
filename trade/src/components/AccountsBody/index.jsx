@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BalancePanel from 'components/BalancePanel';
+import VolumePanel from 'components/VolumePanel';
 import TransactionPanel from 'components/TransactionPanel';
 import FundPanel from 'components/FundPanel';
 import WithdrawalPanel from 'components/WithdrawalPanel';
@@ -10,7 +10,7 @@ import styles from './styles.css';
 const AccountsBody = () => (
   <div className={styles.main}>
     <div className={styles.panel}>
-      <BalancePanel />
+      <VolumePanel />
     </div>
     <div className={styles.panel}>
       <FundPanel />

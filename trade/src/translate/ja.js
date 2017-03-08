@@ -10,9 +10,8 @@ export default {
   "transfer": {
     "spine-title": "入出金",
   },
-  "balance": {
-    "title": "残高",
-    "title-spine": "残高の詳細と取引高",
+  "volume-panel": {
+    "title-spine": "取引高",
   },
   "blotters": {
     "spine-title": "注文、建玉、約定",
