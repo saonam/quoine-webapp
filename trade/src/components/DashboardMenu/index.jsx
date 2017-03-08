@@ -20,9 +20,11 @@ const DashboardMenu = () => (
     <div>
       <MarketSelect />
     </div>
-    <div>
-      <LayoutSelect />
-    </div>
+    {process.env.REACT_APP_VENDOR === 'quoine' ? (
+      <div>
+        <LayoutSelect />
+      </div>
+    ) : null}
   </div>
 );
 
