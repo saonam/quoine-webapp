@@ -261,8 +261,8 @@ export default {
     // ===
     "message-limit-accounts": "Right now we only support JPY, BTC, and ETH deposits/withdrawals.",
     // ===
-    "message-need-tfa": "For security reason, withdrawal not allow without two factor authen.",
-    "help-need-tfa": "Please enabel two factor authen for account in Menu > Settings > Security.",
+    "message-need-tfa": "For security reasons, withdrawals are not allowed without 2-factor authentication.",
+    "help-need-tfa": "Please enable 2-factor authentication for your account in Menu > Settings > Security.",
     // ===
     "goto-settings": "Go to Settings",
   },

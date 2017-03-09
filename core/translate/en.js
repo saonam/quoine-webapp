@@ -51,8 +51,8 @@ export default {
     "action-show": "Show",
   },
   "accounts-warning": {
-    "title": "You don't need accounts anymore",
-    "description": "New features are there",
+    "title": "Accounts page has moved.",
+    "description": "Accounts Page is now on the same page as the Dashboard, on the far right. Now you can see every detail of your QUOINE account (deposits/withdrawals, balance, volume, and transactions) without moving anywhere.",
     "dismiss": "Dismiss",
   },
   "menu": {
@@ -151,7 +151,7 @@ export default {
   },
   "notifications": {
     // Need review
-    "disable-trading": "Trading is currently disabled until your account is approved. Please go to Menu > Settings > Profile to verify your account.",
+    "disable-trading": "Trading is disabled until your account is approved. Please go to Menu > Settings > Profile to verify your account.",
     "dismiss": "Dismiss",
   },
 };

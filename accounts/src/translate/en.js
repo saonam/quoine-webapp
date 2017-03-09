@@ -16,20 +16,20 @@ export default {
     "message-password-updated": "Your password has been updated. You can now sign in with the new password.",
     "message-signed-out": "You have been signed out.",
     // Need review
-    "message-need-sign-in": "You need to sign in first.",
+    "message-need-sign-in": "Please sign in first.",
   },
   "sign-in-error": {
     "you-have-to-confirm-your-account-before-continuing": "Please confirm your account before continuing.",
     // Need review
-    "your-password-is-incorrect": "Your password is incorrect",
+    "your-password-is-incorrect": "Your password is incorrect.",
     "token-is-invalid": "This code is invalid.",
     "invalid-email-or-password": "Email address or password is invalid.",
     // Need review
     "verification-failed": "Authentication code is not valid.",
   },
   "forgot-password": {
-    "action-resend": "resend password reset link",
-    "action-send": "send password reset link",
+    "action-resend": "Resend password reset link",
+    "action-send": "Send password reset link",
     "description": "Please enter your email address to receive password reset link.",
     "title": "Forgot Password?",
     "message-sent": "Password reset link has been sent. Please check your Inbox and/or Spam box for the link to proceed. If you don't see our email after 10 minutes, please click Resend.",
@@ -38,7 +38,7 @@ export default {
   "forgot-password-error": {
     "email-not-found": "Email address not found.",
     // Need review
-    "email-can-t-be-blank": "Email is required.",
+    "email-can-t-be-blank": "Email address is required.",
   },
   "reset-password": {
     "description": "Please choose a new password.",
@@ -86,7 +86,7 @@ export default {
     "input-nationality": "Nationality",
     "input-birthdate": "Date of Birth",
     // individual / income
-    "input-income": "Primary Source Of Income",
+    "input-income": "Primary Source of Income",
     "income-type-employed": "Employed",
     "income-type-retired": "Retired",
     "income-type-self-employed": "Self-Employed",
@@ -97,7 +97,7 @@ export default {
     "input-income-business-name": "Business Name",
     "input-income-business-type": "Business Type",
     // - individual / income / other
-    "input-income-detail": "Source Of Income Detail",
+    "input-income-detail": "Source Of Income",
     // corporate
     "input-business-website": "Business Website",
     "input-tax-id": "TAX",
@@ -107,7 +107,7 @@ export default {
     "input-accept-terms-quoine": "I agree with <a href=\"https://www.quoine.com/terms\" target=\"_blank\">Terms &amp Conditions</a>.",
     "input-accept-terms-traders": "I agree with <a href=\"https://min-btc.com/terms\" target=\"_blank\">Terms &amp Conditions</a>.",
     // ===
-    "success-message": "Thank you for registering. The process is almost done! Further instructions have been sent to your email address.",
+    "success-message": "Thank you for registering. Everything is almost done! Further instructions have been sent to your email address.",
   },
   "sign-up-error": {
     "email-has-already-been-taken": "This email address has been taken.",
@@ -117,8 +117,8 @@ export default {
     "reset-password-token-can-t-be-blank": "Reset Password attempt has expired. Please return to Home Page and try again.",
     "reset-password-token-is-invalid": "Reset Password attempt has expired. Please return to Home Page and try again.",
     "reset-password-token-expired": "Reset Password attempt has expired. Please return to Home Page and try again.",
-    "password-update-failed": "Password update failed",
-    "your-password-is-incorrect": "Your password is incorrect",
+    "password-update-failed": "Password update has failed.",
+    "your-password-is-incorrect": "Your password is incorrect.",
   },
   "demo": {
     "title": "Use a demo account",
@@ -132,12 +132,12 @@ export default {
     // ===
     "new-title": "Start a New Demo",
     "new-overview": "Create a new demo account to try our app and its features to your heart's content!",
-    "new-description": "The email address below will be used to create a demo account for you. This demo account can be accessed on all supported systems and browsers, as long as you use this address to resume Demo.",
+    "new-description": "The email address below will be used to create a demo account for you. This demo account can be accessed on all supported systems and browsers, as long as you use this address to resume.",
   },
   "sign-out": {
     "action": "Sign Out",
     "description": "Click SIGN OUT to end your session in this tab. You will also be signed out automatically when you close the tab.<br /><br />To end your session on all devices and browsers, check the box below.",
-    "all": "End all sessions",
+    "all": "End All Sessions",
     "title": "Sign Out",
   },
   "settings": {
@@ -168,10 +168,10 @@ export default {
     "status-declined": "Declined",
     "status-pending": "Pending",
     // ===
-    "help-documents-submitted": "Your documents have been uploaded. Our staff will be reviewing and approving your account shortly. Note that account verification process will take 1-2 working days to be complete.",
+    "help-documents-submitted": "Your documents have been uploaded. Our staff will be reviewing and approving your account shortly. Note that account verification process will take 1-2 working days to complete.",
     "help-approved": "Your account has been approved. No further action is required.",
-    "help-declined": "Your documents have been rejected with the following reason: {{ reason }}. You can upload again:",
-    "help-pending": "Your account is not verified. Please upload the following documents for account verification:",
+    "help-declined": "Your account verification request has been declined. Please note the following instructions and update your documents: {{ reason }}.",
+    "help-pending": "Your account is not verified yet. Please upload the following documents for account verification:",
     // ===
     "document-id": "ID Document",
     "document-id-help": "",
@@ -189,7 +189,7 @@ export default {
     "affiliate-code": "Affiliate code",
   },
   "user-error": {
-    "invalid-types": "Please check your file types. Allowed types are: pdf, xps, jpg, jpeg, png, gif.",
+    "invalid-types": "Please check your file types. Allowed types are: pdf, xps, jpg, jpeg, png, and gif.",
   },
   "tfa-manage": {
     "phone": "Phone",
@@ -198,14 +198,14 @@ export default {
     "status-added": "Not Enabled Yet",
     "status-enabled": "Enabled",
     // ===
-    "help-enabled": "To change your phone, please disable TFA first.",
+    "help-enabled": "To change your phone, please disable 2FA first.",
     // ===
     "change-title-change": "Change Phone",
     "change-title-add": "Add Phone",
     "change-action": "Change",
     "change-label": "Phone",
-    "change-description": "Please enter the new phone number",
-    "change-success": "Your phone has been successfully updated.",
+    "change-description": "Please enter the new phone number.",
+    "change-success": "Your phone number has been successfully updated.",
     // ===
     "toggle-title-enable": "Enable",
     "toggle-title-disable": "Disable",
