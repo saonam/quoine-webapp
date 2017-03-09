@@ -12,10 +12,6 @@
   composes: top-medium from "@quoine/styles/margin.css";
   composes: left-medium from "@quoine/styles/margin.css";
 }
-.big-item {
-  composes: item;
-  flex-grow: 2;
-}
 .item:first-child {
   margin-left: 0;
 }

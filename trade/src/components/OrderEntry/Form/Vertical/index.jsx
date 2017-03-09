@@ -20,12 +20,9 @@ const OrderEntryFormVertical = ({ form }) => (
   <div className={styles.main}>
     {layout.map((row, i1) => (
       <div key={i1} className={styles.row}>
-        {row.map((Element, i2) => {
-          const className = styles[Element === Direction ? 'bigItem' : 'item'];
-          return (
-            <Element key={i2} className={className} form={form} />
-          );
-        })}
+        {row.map((Element, i2) => (
+          <Element key={i2} className={styles.item} form={form} />
+        ))}
       </div>
     ))}
   </div>

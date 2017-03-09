@@ -522,6 +522,6 @@ export default {
   },
   "panels": {
     "expand": "拡大表示",
-    "collapse": "分割表示"
+    "collapse": "分割表示",
   },
 };
