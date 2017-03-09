@@ -5,7 +5,10 @@ import translate from '@quoine/translate';
 
 import styles from './styles.css';
 
-const menu = ['application', 'profile', 'security', 'api'];
+const menu = ['application', 'profile', 'security'];
+if (process.env.REACT_APP_VENDOR === 'quoine') {
+  menu.push('api');
+}
 
 const SettingsMenu = () => (
   <ul className={styles.main}>
