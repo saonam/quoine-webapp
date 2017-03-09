@@ -88,9 +88,9 @@ export default {
     // individual / income
     "input-income": "Primary Source Of Income",
     "income-type-employed": "Employed",
-    "income-type-other": "Other",
     "income-type-retired": "Retired",
     "income-type-self-employed": "Self-Employed",
+    "income-type-other": "Other",
     // - individual / income / employed
     "input-income-job": "Job Title",
     // - individual / income / self business
@@ -174,12 +174,12 @@ export default {
     "help-pending": "Your account is not verified. Please upload the following documents for account verification:",
     // ===
     "document-id": "ID Document",
-    "document-address": "Proof of Address",
     "document-id-help": "",
-    "document-bank": "Bank Statement",
+    "document-address": "Proof of Address",
     "document-address-help": "",
-    "document-action": "Submit Documents",
+    "document-bank": "Bank Statement",
     "document-bank-help": "",
+    "document-action": "Submit Documents",
     // ===
     "id": "User ID",
     "first-name": "First Name",

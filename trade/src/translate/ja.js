@@ -374,15 +374,15 @@ export default {
   // ===
   "bank": {
     "account-name": "口座名義",
-    "acccount-number": "口座番号",
-    "acccount-type": "口座タイプ",
+    "account-number": "口座番号",
+    "account-type": "口座タイプ",
     "bank-address": "銀行住所",
     "bank-name": "銀行名",
     "bank-branch": "支店名",
     "bank-swift": "SWIFT",
     "country": "国",
     "joint-account": "共有口座",
-    "joint-acccount-name": "共有口座共有者名",
+    "joint-account-name": "共有口座共有者名",
     "joint-address": "共有口座共有者の住所",
     "joint-city": "共有口座共有者の都市",
     "joint-country": "共有口座共有者の国",

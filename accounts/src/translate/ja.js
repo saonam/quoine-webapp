@@ -89,8 +89,8 @@ export default {
     "input-income": "収入源",
     "income-type-employed": "会社員",
     "income-type-retired": "退職",
-    "income-type-other": "その他",
     "income-type-self-employed": "自営業",
+    "income-type-other": "その他",
     // - individual / income / employed
     "input-income-job": "役職",
     // - individual / income / self business
