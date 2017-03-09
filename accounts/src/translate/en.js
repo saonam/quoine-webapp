@@ -15,16 +15,13 @@ export default {
     "message-account-confirmed": "Your account has been confirmed. You can now sign in.",
     "message-password-updated": "Your password has been updated. You can now sign in with the new password.",
     "message-signed-out": "You have been signed out.",
-    // Need review
     "message-need-sign-in": "Please sign in first.",
   },
   "sign-in-error": {
     "you-have-to-confirm-your-account-before-continuing": "Please confirm your account before continuing.",
-    // Need review
     "your-password-is-incorrect": "Your password is incorrect.",
     "token-is-invalid": "This code is invalid.",
     "invalid-email-or-password": "Email address or password is invalid.",
-    // Need review
     "verification-failed": "Authentication code is not valid.",
   },
   "forgot-password": {
@@ -37,7 +34,6 @@ export default {
   },
   "forgot-password-error": {
     "email-not-found": "Email address not found.",
-    // Need review
     "email-can-t-be-blank": "Email address is required.",
   },
   "reset-password": {
@@ -218,7 +214,6 @@ export default {
     "action-done": "Done",
   },
   "tfa-manage-error": {
-    // Need review
     "en-authy-token-is-blank": "Authentication code is required.",
     "token-is-invalid": "Token is invalid.",
   },
