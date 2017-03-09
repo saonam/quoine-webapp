@@ -7,25 +7,22 @@ export default {
     "email": "メールアドレス",
     "password": "パスワード",
     "code": "コード",
-    "code-description": "2要素認証が有効になっています。下の欄にAuthy若しくはSMSから取得した認証コードを入力してください。",
+    "code-description": "2段階認証が有効になっています。SMSから取得した認証コードを入力してください。",
     "back": "戻る",
-    "new-text": "アカウントをまだ登録しません",
+    "new-text": "新規口座申込はこちら",
     "new-or": "または",
     // message
     "message-account-confirmed": "アカウント承認に成功しました。",
     "message-password-updated": "パスワード再設定に成功しました。新しいパスワードでログインしてください。",
     "message-signed-out": "ログアウトしました。",
-    // Need review
-    "message-need-sign-in": "You need to sign in first.",
+    "message-need-sign-in": "ログインしてください。",
   },
   "sign-in-error": {
-    "you-have-to-confirm-your-account-before-continuing": "新規登録の口座承認が必要です。承認リンクのメールをご確認ください。",
-    // Need review
+    "you-have-to-confirm-your-account-before-continuing": "登録いただいたメールアドレスに確認メールを送信いたしました。メールをご確認ください。",
     "your-password-is-incorrect": "パスワードが正しくありません。",
-    "token-is-invalid": "無効なトークンです。",
+    "token-is-invalid": "無効な認証コードです。",
     "invalid-email-or-password": "メールアドレスまたはパスワードをもう一度確認してください。",
-    // Need review
-    "verification-failed": "Authentication code is not valid.",
+    "verification-failed": "無効な認証コードです。",
   },
   "forgot-password": {
     "action-resend": "パスワード再設定用メールを再送信",
@@ -37,8 +34,7 @@ export default {
   },
   "forgot-password-error": {
     "email-not-found": "このメールアドレスはまだ登録されていません。",
-    // Need review
-    "email-can-t-be-blank": "Email is required.",
+    "email-can-t-be-blank": "メールアドレスが必要です",
   },
   "reset-password": {
     "description": "新しいパスワードを入力してください。",
@@ -57,38 +53,38 @@ export default {
   },
   "sign-up": {
     "title": "新規登録",
-    "action-next": "次",
-    "action-done": "新規登録",
+    "action-next": "次へ",
+    "action-done": "送信",
     "back": "戻る",
-    "reset": "元に戻る",
+    "reset": "リセット",
     // ===
-    "step-2": "1. アカウント情報",
-    "step-3-individual": "2. 個人情報",
-    "step-3-corporate": "2. 法人情報",
-    "step-4": "3. 終了",
+    "step-2": "2.情報",
+    "step-3-individual": "3. 終了",
+    "step-3-corporate": "3. 終了",
+    "step-4": "完了（メール確認）",
     // ===
     "type-corporate-title": "法人",
-    "type-corporate-description": "法人の代表者としてアカウントを開設します。仮想通貨トレードのため、本アカウントは複数人で使われます。",
+    "type-corporate-description": "法人口座をお申込みの方はこちら",
     "type-individual-title": "個人",
-    "type-individual-description": "個人ユーザーとしてアカウントを開設します。仮想通貨トレードのため、本アカウントは本人のみに使われます。",
+    "type-individual-description": "個人口座をお申込みの方はこちら",
     // ===
     // step 2
     "input-email": "メールアドレス",
     "input-password": "パスワード",
-    "input-password-hint": "8文字以上、大文字・小文字・数字が必要",
+    "input-password-hint": "8文字以上で、大文字・小文字・数字のすべてを含む必要があります。",
     "input-first-name": "名",
     "input-last-name": "姓",
     "input-business-name": "会社名",
-    "input-business-type": "業務形態",
+    "input-business-type": "業種",
     // step 3
     "input-country": "居住国",
     "input-address": "住所",
     "input-nationality": "国籍",
     "input-birthdate": "生年月日",
     // individual / income
-    "input-income": "収入源",
+    "input-income": "ご職業",
     "income-type-employed": "会社員",
-    "income-type-retired": "退職",
+    "income-type-retired": "無職",
     "income-type-self-employed": "自営業",
     "income-type-other": "その他",
     // - individual / income / employed
@@ -114,11 +110,11 @@ export default {
     "password-too-weak": "パスワードは最低8文字で、かつ1文字以上の大文字、小文字、数字を含む必要があります。",
     "all-is-required": "全てのフィールドに入力する必要があります。",
     "terms": "利用規約に同意する必要があります。",
-    "reset-password-token-can-t-be-blank": "トークンを入力しませんでした。ホームページに戻り、もう一度ご実行ください。",
+    "reset-password-token-can-t-be-blank": "トークンを入力してください。ホームページに戻り、もう一度ご実行ください。",
     "reset-password-token-is-invalid": "トークンは無効になりました。ホームページに戻り、もう一度ご実行ください。",
-    "reset-password-token-expired": "トークンは無効になりました。ホームページに戻り、もう一度ご実行してください。",
+    "reset-password-token-expired": "トークンは無効になりました。ホームページに戻り、もう一度実行してください。",
     "password-update-failed": "パスワード更新に失敗しました。",
-    "your-password-is-incorrect": "パスワードが不正解です。",
+    "your-password-is-incorrect": "パスワードが正しくありません。",
   },
   "demo": {
     "title": "デモアカウントを利用する",
@@ -131,25 +127,25 @@ export default {
     "continue-found": "下記は以前のデモアカウントのメールアドレスです。",
     // ===
     "new-title": "新規デモアカウントで進む",
-    "new-overview": "デモアカウントでQUOINEアプリの機能をテストできます。",
+    "new-overview": "デモアカウントでアプリの機能をテストできます。",
     "new-description": "下記のメールアドレスで新規デモアカウントを作成します。将来にはこのデモアカウントを利用し続ける場合、このメールアドレスをメモしてください。",
   },
   "sign-out": {
     "action": "ログアウト",
-    "description": "このブラウザーからログアウトするためこのボタンをクリックしてください。全てのディバイス／ブラウザーからログアウトには下のボックスをチェックしてください。",
-    "all": "全てのデバイス、ブラウザからログアウトしても宜しいですか？",
+    "description": "このブラウザからログアウトするにはログアウトボタンをクリックしてください。",
+    "all": "全てのデバイス、ブラウザからログアウトする。",
     "title": "ログアウトしますか？",
   },
   "settings": {
     "title": "設定",
-    "back-to-trading": "取引に戻る",
+    "back-to-trading": "ダッシュボードに戻る",
     // ===
-    "application-title": "アプリケーション",
+    "application-title": "お客様情報",
     "theme-title": "テーマ",
     // ===
-    "profile-title": "プロファイル",
+    "profile-title": "プロフィール",
     // ===
-    "security-title": "安全性",
+    "security-title": "セキュリティ",
     "password-title": "パスワード",
     "sign-in-title": "ログイン",
     // ===
@@ -157,36 +153,36 @@ export default {
   },
   "daily-report": {
     "title": "取引レポート",
-    "label": "毎日の取引レポートを登録する",
+    "label": "取引レポートを受信する。",
   },
   "user": {
-    "verification": "アカウント認証",
+    "verification": "審査中",
     // ===
-    "status": "Status",
-    "status-documents-submitted": "認証中",
-    "status-approved": "認証済み",
-    "status-declined": "認証不合格",
-    "status-pending": "未認証",
+    "status": "ステータス",
+    "status-documents-submitted": "書類審査中",
+    "status-approved": "審査完了",
+    "status-declined": "書類不備",
+    "status-pending": "審査中",
     // ===
-    "help-documents-submitted": "本人確認書類をご送付いただきありがとうございます。認証手続きは1-2営業日かかりますので、ご了解のほどよろしくお願いいたします。",
-    "help-approved": "このアカウントは認証済みです。",
-    "help-declined": "アカウント認証に失敗しました。下記の追加書類をご送付お願いいたします：{{ reason }}。",
-    "help-pending": "このアカウントは未認証です。下記の本人確認書類をアップロードしてください。 ",
+    "help-documents-submitted": "本人確認書類をご送付いただきありがとうございます。弊社スタッフにより審査を進めさせていただきます。",
+    "help-approved": "このアカウントは審査完了済みです。入出金・トレードが可能です。",
+    "help-declined": "アカウント認証に失敗しました。下記の書類の再送付をお願いいたします。",
+    "help-pending": "取引いただくには下記書類を送付お願いいたします。",
     // ===
-    "document-id": "IDドキュメント",
+    "document-id": "本人確認書類（顔写真付）",
     "document-id-help": "運転免許書、パスポートなど",
     "document-address": "住所証明書",
-    "document-address-help": "住民票、公共料金領収書など（発行日から3ヶ月以内のもの）",
+    "document-address-help": "住民票、公共料金領収書など（本人確認書類とは別の書類が必要です。）",
     "document-bank": "銀行口座照会の明細",
-    "document-bank-help": "バンクブック、口座取引明細、口座照会明細、ネットバンクのスクリーンショットなど",
+    "document-bank-help": "口座取引明細、口座照会明細、ネットバンクのスクリーンショットなど",
     "document-action": "本人確認書類をアップロードする",
     // ===
     "id": "ユーザーID",
     "first-name": "名",
     "last-name": "姓",
     "email": "メールアドレス",
-    "since": "入会日",
-    "affiliate-code": "アフリェイトコード",
+    "since": "申込日",
+    "affiliate-code": "アフィリエイトコード",
   },
   "user-error": {
     "invalid-types": "無効なファイルタイプです。PDF／XPS／JPG／JPEG／PNG／GIFのファイルをアップロードしてください。",
@@ -218,16 +214,15 @@ export default {
     "action-done": "確認",
   },
   "tfa-manage-error": {
-    // Need review
-    "en-authy-token-is-blank": "Authentication code is required.",
+    "en-authy-token-is-blank": "トークンの入力が必要です。",
     "token-is-invalid": "無効なトークンです",
   },
   "token": {
     "id": "ID",
-    "value": "トークン",
-    "value-copy": "コピーする",
+    "value": "値",
+    "value-copy": "コピー",
     "permissions": "許可",
-    "none": "無い",
+    "none": "なし",
     // ===
     "remove-title": "トークンを削除する",
     "remove-action": "削除する",

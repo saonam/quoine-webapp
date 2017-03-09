@@ -1,0 +1,6 @@
+
+no need 居住地国
+2 buttons for US
+
+trader
+if same as rep => copy info
