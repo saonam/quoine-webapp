@@ -16,8 +16,8 @@ import styles from './styles.css';
 
 const links = ({
   traders: {
-    fee: 'https://min-btc.com/service',
-    faq: 'https://min-btchelp.zendesk.com',
+    fee: 'https://www.min-btc.com/service',
+    faq: 'https://www.min-btc.com/support/faq',
   },
   qryptos: {
     fee: 'https://www.quoine.com/fees',
