@@ -5,6 +5,8 @@ import Item from './Item';
 import styles from './styles.css';
 
 const isJapanUser = (user) => (
+  user.vendorId &&
+  process.env.REACT_APP_QUOINEJP_ID &&
   user.vendorId === process.env.REACT_APP_QUOINEJP_ID
 );
 
@@ -19,7 +21,7 @@ const Notifications = ({ user, state }) => {
         if (state.dismissed.indexOf(notification.id) !== -1) {
           return null;
         }
-        
+
         // special: don't show disable-trading notification when
         if (
           (
