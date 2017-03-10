@@ -9,42 +9,42 @@ const updateRaw = (raw) => {
   if (typeof raw.crossMargin === 'boolean') {
     position.cross = raw.crossMargin;
   }
-  if (raw.leverage) {
+  if (raw.leverage !== undefined) {
     position.leverage = raw.leverage;
   }
   // ===
-  if (raw.currentQty) {
+  if (raw.currentQty !== undefined) {
     position.quantity = raw.currentQty;
     position.quantityOpen = raw.currentQty;
   }
   // ===
-  if (raw.avgEntryPrice) {
+  if (raw.avgEntryPrice !== undefined) {
     position.priceOpen = raw.avgEntryPrice;
   }
-  if (raw.markPrice) {
+  if (raw.markPrice !== undefined) {
     position.priceMark = raw.markPrice;
   }
-  if (raw.liquidationPrice) {
+  if (raw.liquidationPrice !== undefined) {
     position.priceLiquidation = raw.liquidationPrice;
   }
   // ===
-  if (raw.posMargin) {
+  if (raw.posMargin !== undefined) {
     position.margin = raw.posMargin / 1e8;
   }
-  if (raw.homeNotional) {
+  if (raw.homeNotional !== undefined) {
     position.value = raw.homeNotional;
   }
-  if (raw.unrealisedPnl) {
+  if (raw.unrealisedPnl !== undefined) {
     position.pnlClose = raw.unrealisedPnl / 1e8;
   }
-  if (raw.realisedPnl) {
+  if (raw.realisedPnl !== undefined) {
     position.pnlOpen = raw.realisedPnl / 1e8;
   }
   // ===
-  if (raw.openingTimestamp) {
+  if (raw.openingTimestamp !== undefined) {
     position.createdAt = getTimestamp(raw.openingTimestamp);
   }
-  if (raw.timestamp) {
+  if (raw.timestamp !== undefined) {
     position.updatedAt = getTimestamp(raw.timestamp);
   }
   // ===

@@ -4,7 +4,7 @@ import * as normalize from './normalize';
 
 export const load = () => bitmex.getReady()
   .then(() => [
-    { symbol: 'XBJ24H', isFutures: true },
+    { symbol: 'XBJH17', isFutures: true },
     { symbol: 'XBJ48H', isFutures: true },
     { symbol: 'XBJ7D', isFutures: true },
     { symbol: 'XBJ14D', isFutures: true },

@@ -129,6 +129,7 @@ export default {
     "quantity-max-ETH": "Order quantity must be smaller than 1000 ETH.",
     "quantity-min-BTC": "Order quantity must be greater than 0.01 BTC.",
     "quantity-min-ETH": "Order quantity must be greater than 0.5 ETH.",
+    "quantity-integer": "Order quantity must be an integer.",
   },
   // ===
   "position": {

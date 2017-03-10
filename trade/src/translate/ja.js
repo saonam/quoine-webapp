@@ -129,6 +129,7 @@ export default {
     "quantity-max-ETH": "最大発注量は1000ETHです。",
     "quantity-min-BTC": "最低発注量は0.01BTCです。",
     "quantity-min-ETH": "最低発注量は0.5ETHです。",
+    "quantity-integer": "注文数量は整数を入力してください。",
   },
   // ===
   "position": {

@@ -7,7 +7,7 @@ import schemes from './schemes';
 const getChartName = (product) => {
   switch (product) {
     // Bitmex products
-    case 'XBJ24H': return 'xbj-daily-futures';
+    case 'XBJH17': return '';
     // QUOINE products
     // BTCUSD => btcusd
     default: return product.toLowerCase();

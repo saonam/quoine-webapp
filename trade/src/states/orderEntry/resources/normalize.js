@@ -12,7 +12,7 @@ export const futuresBody = (order) => ({
   },
 });
 
-export const futuresResponse = futuresNormalize.one;
+export const futuresResponse = (raw) => futuresNormalize.one(raw.order);
 
 export const cashBody = (raw) => {
   // common
