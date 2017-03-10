@@ -394,10 +394,6 @@ export default {
     "reason": "Reason",
     "swift-check": "Check this if your bank account is located in Japan.",
     // ===
-    "action-add": "New Account",
-    "action-submit": "Submit",
-    "action-cancel": "Cancel",
-    // ===
     "status": "Status",
     "status-pending": "Pending",
     "status-pending-help": "You can still submit withdrawal requests with a pending bank account.",
@@ -405,11 +401,17 @@ export default {
     "add-action": "Add Bank Account",
     "add-submit": "Add Bank Account",
     "add-dismiss": "Back to Withdrawal",
-    "add-success": "Add new bank successfully. You can now go back to withdrawal.",
+    "add-success": "Add new bank successfully. You can now go back to Withdrawal.",
+    // ===
+    "edit-action": "Edit",
+    "edit-submit": "Edit Bank Account",
+    "edit-dismiss": "Back to Withdrawal",
+    "edit-success": "Bank account details have been edited successfully. You can now go back to Withdrawal.",
+    // ===
     "remove-confirm": "Remove this bank account?",
     "remove-action": "Remove",
-    "detail-show": "Show Detail",
-    "detail-hide": "Hide Detail",
+    "detail-show": "Detail",
+    "detail-hide": "Hide",
   },
   "bank-error": {
     "acc-number-already-in-use-for-you": "This account number has been taken.",

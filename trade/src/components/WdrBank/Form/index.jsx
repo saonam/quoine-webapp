@@ -4,20 +4,26 @@ import { TYPES } from 'states/wdrBank';
 import Container from './Container';
 
 const mapStateToProps = (state) => ({
-  busy: !!state.wdrBank.adding,
+  editting: state.wdrBank.editting,
+  submitting: state.wdrBank.submitting,
   success: state.wdrBank.success,
   error: state.wdrBank.error,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch, props) => ({
   onSubmit: (form) => {
-    dispatch({ type: TYPES.ADD, payload: form });
+    dispatch({
+      type: TYPES[props.action.toUpperCase()],
+      payload: form,
+    });
     // for FormWrapper
     return Promise.resolve();
   },
   onDismiss: () => dispatch({
     type: TYPES.APPLY,
-    payload: { inputting: false, error: false, success: false },
+    payload: {
+      adding: false, editting: false, error: false, success: false,
+    },
   }),
 });
 

@@ -6,8 +6,8 @@ import resources from '../resources';
 
 function* onEdit(action) {
   const bank = action.payload;
-  const submitting = { id: bank.id, action: 'edit' };
-  yield apply(TYPES, { submitting });
+  const submitting = 'edit';
+  yield apply(TYPES, { submitting, error: false, success: false });
   try {
     // Update in this case is
     // + remove old bank account,

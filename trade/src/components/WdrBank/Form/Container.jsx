@@ -23,25 +23,39 @@ const initialForm = {
   'joint-document-id': null,
 };
 
-const WdrBankAdd = ({ busy, success, error, onSubmit, onDismiss }) => (
+const WdrBankForm = ({
+  editting, submitting, success, error,
+  action, onSubmit, onDismiss,
+}) => (
   <FormWrapper
     Element={View}
-    initialForm={initialForm}
+    initialForm={action === 'edit' ? editting.form : initialForm}
     onSubmit={onSubmit}
     // pass along ===
-    busy={busy}
+    action={action}
+    busy={submitting === action}
     success={success}
     error={error}
     onDismiss={onDismiss}
   />
 );
 
-WdrBankAdd.propTypes = {
-  busy: View.propTypes.busy,
+WdrBankForm.propTypes = {
+  action: View.propTypes.action,
+  // ===
+  editting: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.shape({}),
+  ]).isRequired,
+  submitting: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.string,
+  ]).isRequired,
   success: View.propTypes.success,
   error: View.propTypes.error,
+  // ===
   onSubmit: View.propTypes.onSubmit,
   onDismiss: React.PropTypes.func.isRequired,
 };
 
-export default WdrBankAdd;
+export default WdrBankForm;

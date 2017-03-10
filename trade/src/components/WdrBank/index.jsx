@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   onAdd: () => dispatch({
-    type: TYPES.APPLY, payload: { inputting: true },
+    type: TYPES.APPLY, payload: { adding: true },
   }),
 });
 

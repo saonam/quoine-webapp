@@ -6,8 +6,8 @@ import resources from '../resources';
 
 function* onAdd(action) {
   const bank = action.payload;
-  const adding = { id: bank.id, action: 'add' };
-  yield apply(TYPES, { adding, error: false, success: false });
+  const submitting = 'add';
+  yield apply(TYPES, { submitting, error: false, success: false });
   try {
     const newBank = yield call(resources.add, bank);
     const prevAll = yield select(state => state.wdrBank.all);
@@ -16,7 +16,7 @@ function* onAdd(action) {
   } catch (error) {
     yield apply(TYPES, { error });
   }
-  yield apply(TYPES, { adding: false });
+  yield apply(TYPES, { submitting: false });
 }
 
 export default function* watchAdd() {

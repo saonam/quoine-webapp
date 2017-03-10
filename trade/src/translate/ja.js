@@ -394,10 +394,6 @@ export default {
     "reason": "備考",
     "swift-check": "日本銀行口座の場合はこれをチェックしてください。",
     // ===
-    "action-add": "銀行口座を設定する",
-    "action-submit": "出金を依頼を送信する",
-    "action-cancel": "戻る",
-    // ===
     "status": "状態",
     "status-pending": "確認中",
     "status-pending-help": "確認中の銀行口座でも出金依頼は可能です。",
@@ -406,10 +402,16 @@ export default {
     "add-submit": "設定",
     "add-dismiss": "戻る",
     "add-success": "口座番号の設定に成功しました。",
+    // ===
+    "edit-action": "更新",
+    "edit-submit": "銀行口座を更新する",
+    "edit-dismiss": "出金へ戻る",
+    "edit-success": "更新に成功しました。出金へ戻れます。",
+    // ===
     "remove-confirm": "この銀行口座情報を削除してもよろしいですか？",
     "remove-action": "確認",
-    "detail-show": "詳細",
-    "detail-hide": "閉じる",
+    "detail-show": "Detail",
+    "detail-hide": "Hide",
   },
   "bank-error": {
     "acc-number-already-in-use-for-you": "口座番号は既に登録されています。",

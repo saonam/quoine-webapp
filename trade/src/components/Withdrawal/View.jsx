@@ -1,25 +1,33 @@
 import React from 'react';
 
-import Add from 'components/WdrBank/Add';
+import WdrBankForm from 'components/WdrBank/Form';
 
 import Standby from './Standby';
 
 import styles from './styles.css';
 
-const Withdrawal = ({ inputting }) => (
+const Withdrawal = ({ adding, editting }) => (
   <div className={styles.main}>
     <div
       // Hide `Standby` by `css` to keep Withdrawal Data
-      className={inputting ? styles.none : styles.body}
+      className={adding || editting ? styles.none : styles.body}
     >
       <Standby />
     </div>
-    {inputting ? <Add /> : null}
+    {adding ? <WdrBankForm action="add" /> : null}
+    {editting ? <WdrBankForm action="edit" /> : null}
   </div>
 );
 
 Withdrawal.propTypes = {
-  inputting: React.PropTypes.bool.isRequired,
+  adding: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.shape({}),
+  ]).isRequired,
+  editting: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.shape({}),
+  ]).isRequired,
 };
 
 export default Withdrawal;

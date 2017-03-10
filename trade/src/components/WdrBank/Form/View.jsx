@@ -8,14 +8,14 @@ import Button from '@quoine/components/Button';
 import Body from './Body';
 import styles from './styles.css';
 
-const WdrBankAddView = (props) => (
+const WdrBankFormView = (props) => (
   <form onSubmit={props.onSubmit} className={styles.main}>
     <div className={styles.body}>
       <Body form={props.form} onChange={props.onChange} />
     </div>
     {props.success ? (
       <div className={styles.success}>
-        {translate('bank:add-success')}
+        {translate(`bank:${props.action}-success`)}
       </div>
     ) : null}
     {props.error ? (
@@ -29,7 +29,7 @@ const WdrBankAddView = (props) => (
         type="submit"
         styleName="text accent-bg full large"
       >
-        {translate('bank:add-submit')}
+        {translate(`bank:${props.action}-submit`)}
       </ButtonWLoading>
     </div>
     <div className={styles.item}>
@@ -37,14 +37,15 @@ const WdrBankAddView = (props) => (
         styleName="text primary-3-bg full large"
         onClick={props.onDismiss}
       >
-        {translate('bank:add-dismiss')}
+        {translate(`bank:${props.action}-dismiss`)}
       </Button>
     </div>
   </form>
 );
 
-WdrBankAddView.propTypes = {
+WdrBankFormView.propTypes = {
   ...Body.PropTypes,
+  action: React.PropTypes.oneOf(['add', 'edit']).isRequired,
   busy: React.PropTypes.bool.isRequired,
   onSubmit: React.PropTypes.func.isRequired,
   onDismiss: React.PropTypes.func.isRequired,
@@ -58,4 +59,4 @@ WdrBankAddView.propTypes = {
   ]).isRequired,
 };
 
-export default WdrBankAddView;
+export default WdrBankFormView;

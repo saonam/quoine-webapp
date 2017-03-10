@@ -31,7 +31,7 @@ const jointFields = [
   { id: 'joint-document-id', Element: FileSelect },
 ];
 
-const WdrBankAddBody = ({ form, onChange }) => (
+const WdrBankFormBody = ({ form, onChange }) => (
   <div>
 
     {fields.map(({ id, Element }) => (
@@ -74,9 +74,9 @@ const WdrBankAddBody = ({ form, onChange }) => (
   </div>
 );
 
-WdrBankAddBody.propTypes = {
+WdrBankFormBody.propTypes = {
   form: React.PropTypes.shape({}).isRequired,
   onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
 };
 
-export default WdrBankAddBody;
+export default WdrBankFormBody;

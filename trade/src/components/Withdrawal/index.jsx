@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import View from './View';
 
 const mapStateToProps = (state) => ({
-  inputting: state.wdrBank.inputting,
+  adding: state.wdrBank.adding,
+  editting: state.wdrBank.editting,
 });
 
 export default connect(mapStateToProps)(View);

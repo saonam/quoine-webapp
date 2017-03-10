@@ -8,8 +8,10 @@ const initialState = {
   all: [],
   // ===
   removing: false,
+  // ===
   adding: false,
-  inputting: false,
+  editting: false,
+  submitting: false,
   // ===
   error: false,
   success: false,

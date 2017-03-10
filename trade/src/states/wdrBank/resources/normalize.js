@@ -17,7 +17,7 @@ export default (data) => {
     formData.append('bank_account[address]', data['bank-address']);
   }
   // document-bank
-  if (data.document.size) {
+  if (data.document && data.document.size) {
     formData.append('bank_account[bank_statement]', data.document);
   }
   // bank-branch
@@ -58,11 +58,11 @@ export default (data) => {
       formData.append('bank_account[joint_city]', data['joint-city']);
     }
     // document-id
-    if (data['joint-document-id'].size) {
+    if (data['joint-document-id'] && data['joint-document-id'].size) {
       formData.append('bank_account[id_document]', data['joint-document-id']);
     }
     // proof address
-    if (data['joint-document-address'].size) {
+    if (data['joint-document-address'] && data['joint-document-address'].size) {
       formData.append('bank_account[proof_address]', data['joint-document-address']);
     }
   }
