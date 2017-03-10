@@ -3,7 +3,9 @@ import React from 'react';
 import IconPadding from '@quoine/components/IconPadding';
 
 const OrderEditPadding = ({ order }) => (
-  order.status === 'live' && order.quantityFilled === 0 ? null : (
+  order.status === 'live' &&
+  order.quantityFilled === 0 &&
+  order.market !== 'futures' ? null : (
     <IconPadding />
   )
 );
