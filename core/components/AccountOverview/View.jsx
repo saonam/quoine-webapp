@@ -3,6 +3,7 @@ import React from 'react';
 import t from '@quoine/translate';
 
 import Info from '@quoine/components/InfoHighlight';
+import Hint from '@quoine/components/Hint';
 import { Margin, Pnl, Balance } from '@quoine/components/Account';
 
 import styles from './styles.css';
@@ -11,7 +12,11 @@ const AccountOverview = ({ account }) => (
   account ? (
     <div className={styles.main}>
       <div className={styles.currency}>
-        {account.currency}
+        {account.currency === 'XBT' ? (
+          <span>
+            BTC F<Hint style={{ width: 200, left: -50 }} label="(?)">{t('account:hint-futures')}</Hint>
+          </span>
+        ): account.currency}
       </div>
       <div className={styles.balance}>
         <Info label={t('account:balance')}>

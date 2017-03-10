@@ -10,7 +10,7 @@ const AccountSelectButton = ({ onSet, currency, current }) => (
     disabled={current === currency}
     onClick={onSet}
   >
-    {currency}
+    {currency === 'XBT' ? 'BTC (Futures)' : currency}
   </Button>
 );
 

@@ -31,6 +31,8 @@ export default {
     "pnl-unrealised": "Unrealised P&L",
     // ===
     "spine-title": "Account",
+    // ===
+    "hint-futures": "BTC account for futures trading",
   },
   "account-manage": {
     "title": "Manage Accounts",

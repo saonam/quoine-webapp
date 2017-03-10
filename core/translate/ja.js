@@ -31,6 +31,8 @@ export default {
     "pnl-unrealised": "評価損益",
     // ===
     "spine-title": "アカウント",
+    // ===
+    "hint-futures": "先物取引のBTC口座",
   },
   "account-manage": {
     "title": "アカウント管理",

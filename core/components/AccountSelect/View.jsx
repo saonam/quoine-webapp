@@ -5,7 +5,8 @@ import Select from '@quoine/components/Select';
 const AccountSelect = ({ accounts, value, onChange }) => (
   <Select
     options={accounts.map(account => ({
-      label: account, value: account,
+      label: account === 'XBT' ? 'BTC (Futures)' : account,
+      value: account,
     }))}
     value={value}
     onChange={onChange}
