@@ -8,8 +8,8 @@ export default () => createSelector(
 
     const quantity = raw.quantityClose + raw.quantityOpen;
     const pnl = raw.pnlClose + raw.pnlOpen;
-    const pnlWFeeTotal = pnl + raw.feeTotal;
-    const pnlWFeeClose = pnl + raw.feeClose;
+    const pnlWFeeTotal = pnl - raw.feeTotal;
+    const pnlWFeeClose = pnl - raw.feeClose;
 
     return { ...raw, pnl, quantity, pnlWFeeClose, pnlWFeeTotal };
   }
