@@ -11,6 +11,7 @@ const makeMapStateToProps = () => {
   const getPosition = makeGetPosition();
   return (state, props) => ({
     position: getPosition(state, props),
+    user: state.user,
   });
 };
 

@@ -22,7 +22,7 @@ import {
 
 import styles from './styles.css';
 
-const PositionItemHorizontalDefault = ({ position }) => (
+const PositionItemHorizontalDefault = ({ position, isQuoineJapan }) => (
   <div className={styles.main}>
     <div className={styles.item}>
       <Created position={position} />
@@ -82,9 +82,11 @@ const PositionItemHorizontalDefault = ({ position }) => (
     <div className={styles.id}>
       <Id position={position} />
     </div>
-    <div className={styles.button}>
-      <Claim position={position} layout="horizontal" />
-    </div>
+    {isQuoineJapan ? null : (
+      <div className={styles.button}>
+        <Claim position={position} layout="horizontal" />
+      </div>
+    )}
     <div className={styles.buttonWEdit}>
       <StatusClose position={position} layout="horizontal" />
     </div>
@@ -93,6 +95,7 @@ const PositionItemHorizontalDefault = ({ position }) => (
 
 PositionItemHorizontalDefault.propTypes = {
   position: React.PropTypes.shape({}).isRequired,
+  isQuoineJapan: React.PropTypes.bool.isRequired,
 };
 
 export default PositionItemHorizontalDefault;

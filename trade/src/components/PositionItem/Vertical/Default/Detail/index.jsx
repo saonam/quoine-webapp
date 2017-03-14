@@ -15,7 +15,7 @@ import {
 
 import styles from './styles.css';
 
-const PositionItemDetail = ({ position }) => (
+const PositionItemDetail = ({ position, isQuoineJapan }) => (
   <div className={styles.main}>
     <div className={styles.col}>
       <div>
@@ -60,15 +60,18 @@ const PositionItemDetail = ({ position }) => (
         <span>{translate('position:id')}: </span>
         <Id position={position} />
       </div>
-      <div>
-        <Claim position={position} layout="vertical" />
-      </div>
+      {isQuoineJapan ? null : (
+        <div>
+          <Claim position={position} layout="vertical" />
+        </div>
+      )}
     </div>
   </div>
 );
 
 PositionItemDetail.propTypes = {
   position: React.PropTypes.shape({}).isRequired,
+  isQuoineJapan: React.PropTypes.bool.isRequired,
 };
 
 export default PositionItemDetail;

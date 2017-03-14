@@ -4,12 +4,6 @@ import Item from './Item';
 
 import styles from './styles.css';
 
-const isJapanUser = (user) => (
-  user.vendorId &&
-  process.env.REACT_APP_QUOINEJP_ID &&
-  user.vendorId === process.env.REACT_APP_QUOINEJP_ID
-);
-
 const Notifications = ({ user, state }) => {
   // don't show notifications if not signed in
   if (!user.id) { return null; }
@@ -25,9 +19,9 @@ const Notifications = ({ user, state }) => {
         // special: don't show disable-trading notification when
         if (
           (
-            notification.id === 'disable-trading' && !isJapanUser(user)
+            notification.id === 'disable-trading' && !user.isQuoineJapan
           ) || (
-            notification.id === 'disable-trading' && isJapanUser(user) && user.status === 'approved'
+            notification.id === 'disable-trading' && user.isQuoineJapan && user.status === 'approved'
           )
         ) {
           return null;

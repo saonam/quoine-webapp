@@ -5,7 +5,7 @@ import IconPadding from '@quoine/components/IconPadding';
 
 import styles from '../styles.css';
 
-const PositionItemHorizontalLabels = () => (
+const PositionItemHorizontalLabels = ({ isQuoineJapan }) => (
   <div className={styles.labels}>
     <div className={styles.item}>
       &nbsp;
@@ -60,13 +60,21 @@ const PositionItemHorizontalLabels = () => (
     <div className={styles.id}>
       {translate('position:id')}
     </div>
-    <div className={styles.button}>
-      &nbsp;
-    </div>
+    {/* Claim */}
+    {isQuoineJapan ? null : (
+      <div className={styles.button}>
+        &nbsp;
+      </div>
+    )}
+    {/* Close */}
     <div className={styles.buttonWEdit}>
       &nbsp;
     </div>
   </div>
 );
+
+PositionItemHorizontalLabels.propTypes = {
+  isQuoineJapan: React.PropTypes.bool.isRequired,
+};
 
 export default PositionItemHorizontalLabels;

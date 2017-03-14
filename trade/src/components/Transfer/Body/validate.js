@@ -12,7 +12,7 @@ const isLimitInQuoine = ({ type, user }) => (
 
 const isDisable = ({ user, account }) => (
   (user.status !== 'approved' && account.fundType === 'fiat') ||
-  (user.status !== 'approved' && user.vendorId === process.env.REACT_APP_QUOINEJP_ID)
+  (user.status !== 'approved' && user.isQuoineJapan)
 );
 
 const validate = ({ user, account, type }) => {
