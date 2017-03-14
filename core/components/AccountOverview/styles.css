@@ -6,7 +6,7 @@
 .currency {
   composes: xxx-large light line-3 from "@quoine/styles/text.css";
   composes: accent from "@quoine/styles/color.css";
-  width: calc($base * 8);
+  width: calc($base * 12);
 }
 .balance, .pnl {
   width: calc($base * 10);
