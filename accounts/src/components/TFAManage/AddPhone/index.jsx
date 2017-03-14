@@ -4,7 +4,7 @@ import resources from './resources';
 
 import View from './View';
 
-class TFAManageChange extends React.Component {
+class TFAManageAddPhone extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: '', busy: false };
@@ -16,7 +16,7 @@ class TFAManageChange extends React.Component {
 
     this.setState({ busy: true });
     resources.submit(this.state.value).then(phone => {
-      this.props.onChangePhone(phone);
+      this.props.onUpdatePhone(phone);
       this.props.goStandby();
     });
   }
@@ -34,9 +34,9 @@ class TFAManageChange extends React.Component {
   }
 }
 
-TFAManageChange.propTypes = {
+TFAManageAddPhone.propTypes = {
   goStandby: View.propTypes.onCancel,
-  onChangePhone: React.PropTypes.func.isRequired,
+  onUpdatePhone: React.PropTypes.func.isRequired,
 };
 
-export default TFAManageChange;
+export default TFAManageAddPhone;

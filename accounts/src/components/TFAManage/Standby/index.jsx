@@ -7,10 +7,9 @@ import Button from '@quoine/components/Button';
 
 import styles from './styles.css';
 
-const getStatus = (props) => {
-  if (props.enabled) { return 'enabled'; }
-  return props.phone ? 'added' : 'none';
-};
+const getStatus = (props) => (
+  props.enabled ? 'enabled' : 'not-enabled'
+);
 
 const TFAManageStandby = (props) => {
   const status = getStatus(props);
@@ -44,21 +43,20 @@ const TFAManageStandby = (props) => {
             </Color>
             <span>{props.phone}</span>
           </span>
-        ) : null}
-
-        {!props.enabled ? (
+        ) : (
           <span className={styles.item}>
-            <Button onClick={props.goChange}>
-              {translate(`tfa-manage:change-title-${
-                props.phone ? 'change' : 'add'
-              }`)}
+            <Button onClick={props.goAddPhone}>
+              {translate('tfa-manage:add-phone-title')}
             </Button>
           </span>
-        ) : (
-          <Color styleName="primary-3">
-            &nbsp;({translate('tfa-manage:help-enabled')})
-          </Color>
         )}
+      </div>
+      <div>
+        {props.phone ? (
+          <Color styleName="primary-3">
+            &nbsp;({translate('tfa-manage:help-change-phone')})
+          </Color>
+        ) : null}
       </div>
 
     </div>
@@ -68,7 +66,7 @@ const TFAManageStandby = (props) => {
 TFAManageStandby.propTypes = {
   phone: React.PropTypes.string,
   enabled: React.PropTypes.bool.isRequired,
-  goChange: React.PropTypes.func.isRequired,
+  goAddPhone: React.PropTypes.func.isRequired,
   goToggle: React.PropTypes.func.isRequired,
 };
 

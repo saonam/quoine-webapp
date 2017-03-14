@@ -3,12 +3,12 @@ import React from 'react';
 import LoadingIconWrapper from '@quoine/components/LoadingIconWrapper';
 
 import Standby from './Standby';
-import Change from './Change';
+import AddPhone from './AddPhone';
 import Toggle from './Toggle';
 
 const Elements = {
   standby: Standby,
-  change: Change,
+  addPhone: AddPhone,
   toggle: Toggle,
 };
 

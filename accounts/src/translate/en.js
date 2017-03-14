@@ -190,18 +190,15 @@ export default {
   "tfa-manage": {
     "phone": "Phone",
     "title": "Two-Factor Authentication",
-    "status-none": "Not Enabled Yet",
-    "status-added": "Not Enabled Yet",
     "status-enabled": "Enabled",
+    "status-not-enabled": "Not Enabled Yet",
     // ===
-    "help-enabled": "To change your phone, please disable 2FA first.",
+    "help-change-phone": "To change your phone, please contact our support.",
     // ===
-    "change-title-change": "Change Phone",
-    "change-title-add": "Add Phone",
-    "change-action": "Change",
-    "change-label": "Phone",
-    "change-description": "Please enter the new phone number.",
-    "change-success": "Your phone number has been successfully updated.",
+    "add-phone-title": "Add Phone",
+    "add-phone-action": "Add",
+    "add-phone-label": "Phone",
+    "add-phone-description": "Please enter the new phone number",
     // ===
     "toggle-title-enable": "Enable",
     "toggle-title-disable": "Disable",

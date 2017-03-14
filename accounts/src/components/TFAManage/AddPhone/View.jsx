@@ -8,25 +8,25 @@ import TextBox from '@quoine/components/TextBox';
 
 import styles from './styles.css';
 
-const TFAManageChangeView = (props) => (
+const TFAManageAddPhoneView = (props) => (
   <FormInline
-    description={translate('tfa-manage:change-description')}
+    description={translate('tfa-manage:add-phone-description')}
     // ===
     onSubmit={props.onSubmit}
-    submitLabel={translate('tfa-manage:change-action')}
+    submitLabel={translate('tfa-manage:add-phone-action')}
     onCancel={props.onCancel}
     // ===
     busy={props.busy}
   >
     <div className={styles.input}>
-      <Input id="phone" label={translate('tfa-manage:change-label')}>
+      <Input id="phone" label={translate('tfa-manage:add-phone-label')}>
         <TextBox value={props.value} onChange={props.onChange} autoFocus />
       </Input>
     </div>
   </FormInline>
 );
 
-TFAManageChangeView.propTypes = {
+TFAManageAddPhoneView.propTypes = {
   value: React.PropTypes.string.isRequired,
   onChange: React.PropTypes.func.isRequired,
   onSubmit: React.PropTypes.func.isRequired,
@@ -34,4 +34,4 @@ TFAManageChangeView.propTypes = {
   busy: React.PropTypes.bool.isRequired,
 };
 
-export default TFAManageChangeView;
+export default TFAManageAddPhoneView;

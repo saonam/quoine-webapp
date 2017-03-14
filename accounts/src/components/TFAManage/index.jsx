@@ -11,9 +11,9 @@ class TFAManage extends React.Component {
       status: 'standby', phone: '', enabled: false, busy: true,
     };
     this.goStandby = this.onChangeStatus.bind(this, 'standby');
-    this.goChange = this.onChangeStatus.bind(this, 'change');
+    this.goAddPhone = this.onChangeStatus.bind(this, 'addPhone');
     this.goToggle = this.onChangeStatus.bind(this, 'toggle');
-    this.onChangePhone = this.onChangePhone.bind(this);
+    this.onUpdatePhone = this.onUpdatePhone.bind(this);
     this.onToggle = this.onToggle.bind(this);
   }
   componentDidMount() {
@@ -22,7 +22,7 @@ class TFAManage extends React.Component {
     });
   }
   onChangeStatus(status) { this.setState({ status }); }
-  onChangePhone(phone) { this.setState({ phone, enabled: false }); }
+  onUpdatePhone(phone) { this.setState({ phone }); }
   onToggle() { this.setState({ enabled: !this.state.enabled }); }
   render() {
     const { phone, enabled, status, busy } = this.state;
@@ -31,8 +31,8 @@ class TFAManage extends React.Component {
         goStandby={this.goStandby}
         status={status} busy={busy}
         // ===
-        goChange={this.goChange}
-        phone={phone} onChangePhone={this.onChangePhone}
+        goAddPhone={this.goAddPhone}
+        phone={phone} onUpdatePhone={this.onUpdatePhone}
         // ===
         goToggle={this.goToggle}
         enabled={enabled} onToggle={this.onToggle}

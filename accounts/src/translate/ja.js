@@ -190,18 +190,15 @@ export default {
   "tfa-manage": {
     "phone": "携帯番号",
     "title": "二段階認証",
-    "status-none": "未設定",
-    "status-added": "未認証",
     "status-enabled": "認証済み",
+    "status-not-enabled": "未設定",
     // ===
-    "help-enabled": "携帯番号を更新するためまず二段階認証を無効化してください。",
+    "help-change-phone": "To change your phone, please contact our support.",
     // ===
-    "change-title-change": "携帯番号を更新する",
-    "change-title-add": "携帯番号を設定する",
-    "change-action": "更新",
-    "change-label": "携帯番号",
-    "change-description": "新しい携帯番号をご入力ください。",
-    "change-success": "携帯番号更新に成功しました。",
+    "add-phone-title": "携帯番号を設定する",
+    "add-phone-action": "Add",
+    "add-phone-label": "携帯番号",
+    "add-phone-description": "新しい携帯番号をご入力ください。",
     // ===
     "toggle-title-enable": "有効化",
     "toggle-title-disable": "無効化",
