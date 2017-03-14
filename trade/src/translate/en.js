@@ -42,8 +42,8 @@ export default {
     // ===
     "distance": "Price Distance",
     "distance-type": "Distance Type",
-    "distance-type-percentage": "Percent",
     "distance-type-fiat": "Fiat",
+    "distance-type-percentage": "Percent",
     // ===
     "margin": "Estimated Margin",
     "fx-rate": "FX Rate ({{ first }}/{{ second }})",

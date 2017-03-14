@@ -25,8 +25,8 @@ export default {
     "verification-failed": "無効な認証コードです。",
   },
   "forgot-password": {
-    "action-resend": "パスワード再設定用メールを再送信",
-    "action-send": "パスワード再設定用メールを送信",
+    "action-resend": "メールが届かない場合はこちら（再送信）",
+    "action-send": "送信",
     "description": "アカウントのメールアドレスを入力してください。このメールアドレスにパスワード再設定のURLを送信します。",
     "title": "パスワードをお忘れですか？",
     "message-sent": "ご登録のメールアドレスにパスワード再設定用のリンクを送信しました。ご確認ください。",
