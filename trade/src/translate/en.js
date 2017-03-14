@@ -410,8 +410,8 @@ export default {
     // ===
     "remove-confirm": "Remove this bank account?",
     "remove-action": "Remove",
-    "detail-show": "Detail",
-    "detail-hide": "Hide",
+    "detail-show": "Show Detail",
+    "detail-hide": "Hide Detail",
   },
   "bank-error": {
     "acc-number-already-in-use-for-you": "This account number has been taken.",

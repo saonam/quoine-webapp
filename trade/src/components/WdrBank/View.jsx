@@ -12,7 +12,6 @@ import Select from './Select';
 import RemoveConfirmBox from './RemoveConfirmBox';
 import ErrBox from './ErrBox';
 import Remove from './Remove';
-import ButtonEdit from './ButtonEdit';
 
 import styles from './styles.css';
 
@@ -39,7 +38,6 @@ const WdrBank = ({ busy, current, all, open, onToggle, onAdd }) => {
         <Button styleName="accent text full" onClick={onToggle}>
           {translate(`bank:detail-${open ? 'hide' : 'show'}`)}
         </Button>
-        <ButtonEdit bank={bank} />
         <Remove bank={bank} />
       </div>
       <div className={styles.add}>
