@@ -1,26 +1,41 @@
 import React from 'react';
 
-import View from './View';
+import styles from './styles.css';
 
-class Radio extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
-  }
-  onChange(e) {
-    console.log(e);
-    const value = e.target.checked;
-    this.props.onChange({ target: { value } });
-  }
-  render() {
-    return (
-      <View {...this.props} onChange={this.onChange} />
-    );
-  }
-}
+// use children for label to allow complex label (eg: with link)
+const RadiosView = ({
+  name, value, children, option, onChange, ...others
+}) => (
+  <div className={styles.main} >
+    <div className={styles.box}>
+      {value === option ? (
+        <div className={styles.icon} />
+      ) : null}
+      <input
+        id={`${name}-${option}`}
+        name={name}
+        value={option}
+        type="radio"
+        className={styles.input}
+        onChange={onChange}
+        {...others}
+      />
+    </div>
+    <label
+      className={styles.label}
+      htmlFor={`${name}-${option}`}
+    >
+      {children}
+    </label>
+  </div>
+);
 
-Radio.propTypes = {
+RadiosView.propTypes = {
+  name: React.PropTypes.string.isRequired,
+  children: React.PropTypes.node.isRequired,
+  option: React.PropTypes.string.isRequired,
+  value: React.PropTypes.string.isRequired,
   onChange: React.PropTypes.func.isRequired,
 };
 
-export default Radio;
+export default RadiosView;

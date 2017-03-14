@@ -12,11 +12,8 @@ class CheckBox extends React.PureComponent {
     this.props.onChange({ target: { value } });
   }
   render() {
-    // get onChange to filter it from 'props';
-    // eslint-disable-next-line no-unused-vars
-    const { onChange, ...others } = this.props;
     return (
-      <View onChange={this.onChange} {...others} />
+      <View {...this.props} onChange={this.onChange} />
     );
   }
 }

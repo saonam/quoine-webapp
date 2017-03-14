@@ -1,35 +1,20 @@
-export default {
-  // step 1
-  type: 'individual',
+import jpTerm from './Form/4/Jp/initialForm';
 
-  // step 2
+export default {
   email: '',
   password: '',
-  firstName: '',
-  lastName: '',
-  businessName: '',
-  businessType: '',
+  referral: '',
+  term: false,
 
-  // step 3
+  type: '',
   country: '',
-  address: '',
-  // individual
-  nationality: '',
-  birthdate: 0,
-  income: '',
-  // - individual / income / employed
-  incomeJob: '',
-  // - individual / income / self employed
-  incomeBusinessName: '',
-  incomeBusinessType: '',
-  // - individual / income / other
-  incomeDetail: '',
-  // corporate
-  businessWebsite: '',
-  taxId: '',
-  vatId: '',
+  countrySure: false,
+  us: false,
 
-  // step 4
-  affiliateCode: '',
-  acceptTerms: false,
+  pteIndi: {},
+  pteCorp: {},
+  jpIndi: {},
+  jpCorp: {},
+
+  jpTerm,
 };

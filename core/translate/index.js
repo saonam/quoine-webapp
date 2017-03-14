@@ -10,6 +10,7 @@ export const init = (resources) => {
       en: { ...baseEn, ...resources.en },
       ja: { ...baseJa, ...resources.ja },
     },
+    debug: true,
   });
 };
 

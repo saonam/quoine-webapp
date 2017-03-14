@@ -13,7 +13,7 @@ const defaultOptions = {
 
 const main = (method, path, rawOptions) => {
   const options = { ...defaultOptions, ...rawOptions };
-  const { isForm, body: rawBody, errorPrefix } = options;
+  const { isForm, body: rawBody, errorPrefix, vendorId } = options;
   // Some REST Apis with method is 'get' but no need to cache
   // i.e: GET `/users/select_language?lang=${language}`
   // is used to change language, so we need to pass option { useCache: false }
@@ -31,7 +31,7 @@ const main = (method, path, rawOptions) => {
   const cache = useCache && loaderCache[cacheName];
   if (cache) { return cache; }
 
-  const loader = getHeaders({ path, isForm })
+  const loader = getHeaders({ path, isForm, vendorId })
   .then((headers) => {
     const url = host + path;
     const body = isForm ? rawBody : JSON.stringify(rawBody);

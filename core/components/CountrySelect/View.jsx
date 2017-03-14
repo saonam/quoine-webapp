@@ -2,8 +2,9 @@ import React from 'react';
 
 import Select from '@quoine/components/Select';
 
-const CountrySelectView = ({ countries, value, onChange }) => (
+const CountrySelectView = ({ countries, value, onChange, ...others }) => (
   <Select
+    {...others}
     options={countries.map(country => ({
       label: country.name, value: country.iso,
     }))}

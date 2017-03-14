@@ -9,19 +9,25 @@ import Row from 'components/SettingsRow';
 
 import styles from './styles.css';
 
-const ProfileForm = ({ error, form, onChange, busy, disabled, onSubmit }) => (
+const translateLabel = (user, key) => (
+  user.isQuoineJapan ? '' : translate(key)
+);
+
+const ProfileForm = ({
+  error, user, form, onChange, busy, disabled, onSubmit,
+}) => (
   <div>
-    <Row label={translate('user:document-id')}>
+    <Row label={translateLabel(user, 'user:document-id')}>
       <FileSelect
         id="document-id" value={form.id} onChange={onChange.id}
       />
     </Row>
-    <Row label={translate('user:document-address')}>
+    <Row label={translateLabel(user, 'user:document-address')}>
       <FileSelect
         id="document-address" value={form.address} onChange={onChange.address}
       />
     </Row>
-    <Row label={translate('user:document-bank')}>
+    <Row label={translateLabel(user, 'user:document-bank')}>
       <FileSelect
         id="document-bank" value={form.bank} onChange={onChange.bank}
       />
@@ -53,6 +59,7 @@ ProfileForm.propTypes = {
     React.PropTypes.func.isRequired,
   ).isRequired,
   form: React.PropTypes.shape({}).isRequired,
+  user: React.PropTypes.shape({}),
 };
 
 export default ProfileForm;

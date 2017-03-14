@@ -33,7 +33,7 @@ class FormWrapper extends React.Component {
     if (event) { event.preventDefault(); }
 
     this.setState({ busy: true });
-    this.props.onSubmit(this.state.form)
+    return this.props.onSubmit(this.state.form)
     .then((response) => {
       this.setState({ busy: false, success: response });
 
@@ -74,6 +74,7 @@ const FormWrapperPropTypes = {
   error: React.PropTypes.oneOfType([
     React.PropTypes.bool,
     React.PropTypes.string,
+    React.PropTypes.shape({}),
   ]).isRequired,
   busy: React.PropTypes.bool.isRequired,
   success: React.PropTypes.oneOfType([

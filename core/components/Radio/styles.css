@@ -4,6 +4,7 @@
   composes: flex ai-center from "@quoine/styles/flex.css";
 }
 .label {
+  composes: auto from "@quoine/styles/flex.css";
   composes: left-small from "@quoine/styles/margin.css";
   /* label tag has cursor by default so need to set again */
   composes: pointer from "@quoine/styles/cursor.css";
@@ -21,9 +22,16 @@
   composes: active-accent-2 from "@quoine/styles/bg-color.css";
   composes: focus-accent-1 from "@quoine/styles/bg-color.css";
 
+  border-radius: calc($base * 2);
   width: calc($base * 1.5); height: calc($base * 1.5);
 }
 .icon {
-  composes: absolute top left from "@quoine/styles/position.css";
+  composes: absolute top left right bottom from "@quoine/styles/position.css";
+  composes: auto from "@quoine/styles/margin.css";
   composes: none from "@quoine/styles/pointer-events.css";
+
+  composes: accent from "@quoine/styles/bg-color.css";
+
+  border-radius: calc($base * 2);
+  width: calc($base / 2); height: calc($base / 2);
 }

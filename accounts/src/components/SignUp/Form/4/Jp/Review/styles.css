@@ -1,0 +1,3 @@
+.main {
+  composes: x-large line-3 from "@quoine/styles/text.css";
+}

@@ -153,4 +153,12 @@ export default {
     "disable-trading": "Trading is disabled until your account is approved. Please go to Menu > Settings > Profile to verify your account.",
     "dismiss": "Dismiss",
   },
+  "name": {
+    "first": "First",
+    "last": "Last",
+  },
+  "input": {
+    "select-placeholder": "Select…",
+    "phone-title": "Numbers only",
+  },
 };

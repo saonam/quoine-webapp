@@ -5,6 +5,9 @@
   .border-bottom-accent {
     box-shadow: $accent 0px -1px 0px 0px inset;
   }
+  .border-bottom-accent-2 {
+    box-shadow: $accent-2 0px -1px 0px 0px inset;
+  }
   .border-left-accent-size-2 {
     box-shadow: $accent 2px 0px 0px 0px inset;
   }

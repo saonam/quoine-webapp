@@ -47,6 +47,7 @@ class ProfileForm extends React.Component {
       <View
         form={form} busy={busy} disabled={disabled} error={error}
         onSubmit={this.onSubmit} onChange={this.onChange}
+        user={this.props.user}
       />
     );
   }
@@ -54,6 +55,7 @@ class ProfileForm extends React.Component {
 
 ProfileForm.propTypes = {
   onChangeStatus: React.PropTypes.func.isRequired,
+  user: React.PropTypes.shape({}),
 };
 
 export default ProfileForm;

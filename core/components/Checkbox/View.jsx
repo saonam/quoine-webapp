@@ -5,7 +5,7 @@ import Icon from '../Icon';
 import styles from './styles.css';
 
 // use children for label to allow complex label (eg: with link)
-const CheckBoxView = ({ id, children, value, onChange }) => (
+const CheckBoxView = ({ id, children, value, onChange, ...others }) => (
   <div className={styles.main} >
     <div className={styles.box}>
       {value ? (
@@ -16,6 +16,7 @@ const CheckBoxView = ({ id, children, value, onChange }) => (
       <input
         className={styles.input} id={id} type="checkbox"
         onChange={onChange} checked={value}
+        {...others}
       />
     </div>
     <label className={styles.label} htmlFor={id}>{children}</label>

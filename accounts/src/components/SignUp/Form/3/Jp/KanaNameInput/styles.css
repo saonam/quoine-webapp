@@ -1,0 +1,10 @@
+.row {
+  composes: flex from "@quoine/styles/flex.css";
+  composes: border-bottom-accent-2 from "@quoine/styles/box-shadow.css";
+}
+.row:last-child {
+  box-shadow: none;
+}
+.input {
+  composes: auto from "@quoine/styles/flex.css";
+}

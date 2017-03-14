@@ -3,6 +3,7 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Color from '@quoine/components/Color';
+import Link from '@quoine/components/Link';
 
 import styles from './styles.css';
 
@@ -28,9 +29,20 @@ const ProfileVerification = ({ user }) => {
           {translate(`user:status-${status}`)}
         </Color>
       </div>
-      <p className={styles.help}>
-        {translate(`user:help-${status}`, { reason })}
-      </p>
+      {(status === 'pending' && user.isQuoineJapan) ? (
+        <div>
+          <p className={styles.help}>
+            {translate('user:help-pending-jp')}
+            <Link pathname="https://quoinex.com/jp/pep.html" target="_blank" styleName="accent text">
+              {translate('user:help-pending-jp-link')}
+            </Link>
+          </p>
+        </div>
+      ) : (
+        <p className={styles.help}>
+          {translate(`user:help-${status}`, { reason })}
+        </p>
+      )}
     </div>
   );
 };

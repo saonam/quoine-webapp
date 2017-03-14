@@ -4,11 +4,16 @@ import Label from '@quoine/components/Label';
 
 import styles from './styles.css';
 
-const Input = ({ id, label, children, large }) => (
-  <div className={styles[`main-${large ? 'large' : 'normal'}`]}>
-    <div className={styles.label}>
-      <Label id={id} label={label} />
-    </div>
+const Input = ({ id, label, children, large, noBorder }) => (
+  <div
+    className={styles[`main-${large ? 'large' : 'normal'}`]}
+    style={noBorder ? { boxShadow: 'none' } : null}
+  >
+    {label ? (
+      <div className={styles.label}>
+        <Label id={id} label={label} />
+      </div>
+    ) : null}
     <div className={styles.input}>
       {children}
     </div>
@@ -16,10 +21,11 @@ const Input = ({ id, label, children, large }) => (
 );
 
 Input.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.node.isRequired,
-  children: React.PropTypes.element.isRequired,
+  id: React.PropTypes.string,
+  label: React.PropTypes.node,
+  children: React.PropTypes.node.isRequired,
   large: React.PropTypes.bool,
+  noBorder: React.PropTypes.bool,
 };
 
 Input.defaultProps = {

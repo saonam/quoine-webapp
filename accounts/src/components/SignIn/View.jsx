@@ -6,8 +6,6 @@ import Modal from '@quoine/components/Modal';
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
 import Button from '@quoine/components/Button';
 
-import SignUpHeaderLink from 'components/SignUpHeaderLink';
-
 import styles from './styles.css';
 
 import Body1 from './Body1';
@@ -32,7 +30,6 @@ const SignIn = ({
       translate('sign-in:title')
     } ${step === 2 ? `– ${form.email}` : ''}`}
     leftButton={step === 2 ? <BackButton onBack={onBack} /> : null}
-    rightButton={step === 1 ? <SignUpHeaderLink /> : null}
   >
     <form onSubmit={onSubmit} className={styles.main}>
       <div className={styles.body}>

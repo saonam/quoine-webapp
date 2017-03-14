@@ -7,6 +7,11 @@
 .text {
   composes: text from "../Button/styles.css";
 }
+.modal {
+  composes: modal from "../Button/styles.css";
+  /* link doesn't have center by default */
+  composes: center from "@quoine/styles/text.css";
+}
 .accent {
   composes: accent from "../Button/styles.css";
 }

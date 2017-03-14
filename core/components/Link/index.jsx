@@ -21,7 +21,10 @@ const Link = ({
   const className = `${getStyle(styleName)} ${rawClassName}`;
 
   // external link
-  if (pathname.lastIndexOf('http', 0) === 0) {
+  if (
+    pathname.lastIndexOf('http', 0) === 0 ||
+    pathname.indexOf('.html') !== -1
+  ) {
     return (
       <a
         className={className}

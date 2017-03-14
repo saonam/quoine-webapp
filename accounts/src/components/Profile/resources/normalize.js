@@ -1,3 +1,8 @@
+const checkIsQuoineJapan = (vendorId) => (
+  process.env.REACT_APP_VENDOR === 'quoine' &&
+  vendorId === process.env.REACT_APP_QUOINEJP_ID
+);
+
 export default (raw) => ({
   id: raw.id,
   since: raw.created_at,
@@ -8,4 +13,6 @@ export default (raw) => ({
   // ===
   status: raw.status,
   statusDeclinedReason: raw.declined_reason,
+  // ===
+  isQuoineJapan: checkIsQuoineJapan(raw.app_vendor_id),
 });

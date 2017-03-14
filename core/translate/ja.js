@@ -153,4 +153,12 @@ export default {
     "disable-trading": "未認証のアカウントは取引不可能です。アカウント認証を行うためには「メインメニュー」＞「設定」＞「プロフィール」で本人確認書類をアップロードしてください。",
     "dismiss": "閉じる",
   },
+  "name": {
+    "first": "姓",
+    "last": "名",
+  },
+  "input": {
+    "select-placeholder": "選んでください…",
+    "phone-title": "数字のみ",
+  },
 };

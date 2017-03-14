@@ -33,7 +33,7 @@ const ProfileView = ({ user, onChangeStatus }) => (
           <Verification user={user} />
         </Row>
         {['declined', 'pending'].indexOf(user.status) !== -1 ? (
-          <Form onChangeStatus={onChangeStatus} />
+          <Form user={user} onChangeStatus={onChangeStatus} />
         ) : null}
       </div>
     </Body>

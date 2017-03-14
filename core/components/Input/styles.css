@@ -11,10 +11,10 @@
 
 /* fix input height for IE */
 /* TODO */
-.main-normal input {
+.main-normal input:not([type="checkbox"]):not([type="radio"]) {
   height: calc($base * 2.5);
 }
-.main-large input {
+.main-large input:not([type="checkbox"]):not([type="radio"]) {
   height: calc($base * 4);
 }
 

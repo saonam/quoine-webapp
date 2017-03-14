@@ -9,7 +9,7 @@ const Label = ({ id, label }) => (
 );
 
 Label.propTypes = {
-  id: React.PropTypes.string.isRequired,
+  id: React.PropTypes.string,
   label: React.PropTypes.node.isRequired,
 };
 

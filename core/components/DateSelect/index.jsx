@@ -2,21 +2,14 @@ import React from 'react';
 
 import View from './View';
 
-const parseValue = (value) => {
-  const obj = new Date(value * 1000);
-  return {
-    year: `${obj.getFullYear()}`,
-    month: `${obj.getMonth() + 1}`,
-    date: `${obj.getDate()}`,
-  };
-};
-
 class DateSelect extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.onYearChange = this.onBaseChange.bind(this, 'setFullYear');
-    this.onMonthChange = this.onBaseChange.bind(this, 'setMonth');
-    this.onDateChange = this.onBaseChange.bind(this, 'setDate');
+    this.onChange = {
+      year: this.onBaseChange.bind(this, 'setFullYear'),
+      month: this.onBaseChange.bind(this, 'setMonth'),
+      date: this.onBaseChange.bind(this, 'setDate'),
+    };
   }
   onBaseChange(onSetKey, event) {
     const dateObj = new Date(this.props.value * 1000);
@@ -26,13 +19,8 @@ class DateSelect extends React.PureComponent {
     this.props.onChange({ target: { value: nextValue } });
   }
   render() {
-    const { year, month, date } = parseValue(this.props.value);
     return (
-      <View
-        year={year} onYearChange={this.onYearChange}
-        month={month} onMonthChange={this.onMonthChange}
-        date={date} onDateChange={this.onDateChange}
-      />
+      <View {...this.props} onChange={this.onChange} />
     );
   }
 }

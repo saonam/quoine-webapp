@@ -5,39 +5,52 @@ import Select from '../Select';
 import styles from './styles.css';
 
 import { getYearOptions, getMonthOptions, getDateOptions } from './getOptions';
+import parseValue from './parseValue';
 
-const DateSelect = ({
-  year, month, date, onYearChange, onMonthChange, onDateChange,
-}) => (
-  <div className={styles.main}>
-    <div className={styles.input}>
-      <Select
-        value={year} onChange={onYearChange}
-        options={getYearOptions()} searchable
-      />
+const DateSelect = ({ value: raw, onChange, date, month, year }) => {
+  const value = parseValue(raw);
+  return (
+    <div className={styles.main}>
+      {year ? (
+        <div className={styles.input}>
+          <Select
+            value={value.year} onChange={onChange.year}
+            options={getYearOptions()} searchable
+          />
+        </div>
+      ) : null}
+      {month ? (
+        <div className={styles.month}>
+          <Select
+            value={value.month} onChange={onChange.month}
+            options={getMonthOptions()} searchable
+          />
+        </div>
+      ) : null}
+      {date ? (
+        <div className={styles.input}>
+          <Select
+            value={value.date} onChange={onChange.date}
+            options={getDateOptions()} searchable
+          />
+        </div>
+      ) : null}
     </div>
-    <div className={styles.month}>
-      <Select
-        value={month} onChange={onMonthChange}
-        options={getMonthOptions()} searchable
-      />
-    </div>
-    <div className={styles.input}>
-      <Select
-        value={date} onChange={onDateChange}
-        options={getDateOptions()} searchable
-      />
-    </div>
-  </div>
-);
+  );
+};
 
 DateSelect.propTypes = {
-  year: React.PropTypes.string.isRequired,
-  month: React.PropTypes.string.isRequired,
-  date: React.PropTypes.string.isRequired,
-  onYearChange: React.PropTypes.func.isRequired,
-  onMonthChange: React.PropTypes.func.isRequired,
-  onDateChange: React.PropTypes.func.isRequired,
+  value: React.PropTypes.number.isRequired,
+  onChange: React.PropTypes.shape({}).isRequired,
+  date: React.PropTypes.bool,
+  month: React.PropTypes.bool,
+  year: React.PropTypes.bool,
+};
+
+DateSelect.defaultProps = {
+  date: true,
+  month: true,
+  year: true,
 };
 
 export default DateSelect;
