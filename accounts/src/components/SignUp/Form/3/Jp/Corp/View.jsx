@@ -36,7 +36,10 @@ const SignUpForm3JpIndiView = ({ form, onChange, onSubmit }) => (
 
       <div className={styles.input}>
         <Input large label="法人名">
-          <TextBox value={form.name} onChange={onChange.name} autoFocus required />
+          <TextBox
+            value={form.name} onChange={onChange.name} autoFocus required
+            pattern="[一-龯]+" title="全角文字のみ入力してください。"
+          />
         </Input>
       </div>
 
@@ -57,7 +60,7 @@ const SignUpForm3JpIndiView = ({ form, onChange, onSubmit }) => (
 
       <div className={styles.input}>
         <Input large label="電話番号">
-          <PhoneInput value={form.phone} onChange={onChange.phone} />
+          <PhoneInput value={form.phone} onChange={onChange.phone} required />
         </Input>
       </div>
 

@@ -20,7 +20,7 @@ const Details = {
 
 const SignUpBody3 = ({ form, ...others }) => {
   const operator = isQUOINEJp(form) ? 'jp' : 'pte';
-  const Detail = Details[operator][form.type];
+  const Detail = Details[operator][form.type] || PteIndi;
   return <Detail form={form} {...others} />;
 };
 

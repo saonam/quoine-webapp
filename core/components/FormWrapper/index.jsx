@@ -80,7 +80,8 @@ const FormWrapperPropTypes = {
   success: React.PropTypes.oneOfType([
     React.PropTypes.bool,
     React.PropTypes.string,
-  ]).isRequired,
+    React.PropTypes.shape({}),
+  ]),
   onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
   onSubmit: React.PropTypes.func.isRequired,
   form: React.PropTypes.shape({}).isRequired,

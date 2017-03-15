@@ -12,7 +12,7 @@ import Review from './Review';
 const SignUpBody4Jp = ({ onSubmit, originalForm, form, onChange, busy }) => (
   <form onSubmit={onSubmit}>
 
-    <h1 className={styles.heading}>あなたのアプリケーションを見直す</h1>
+    <h1 className={styles.heading}>入力内容確認</h1>
 
     <div className={styles.body}>
       <Review form={originalForm} />

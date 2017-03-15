@@ -2,7 +2,6 @@ import React from 'react';
 
 import TextBox from '@quoine/components/TextBox';
 import Input from '@quoine/components/Input';
-import NameInput from '@quoine/components/NameInput';
 import Radios from '@quoine/components/Radios';
 import PhoneInput from '@quoine/components/PhoneInput';
 
@@ -11,6 +10,7 @@ import styles from 'components/SignUp/Form/styles.css';
 import GenderSelect from '../GenderSelect';
 import AddressSelect from '../AddressSelect';
 import KanaNameInput from '../KanaNameInput';
+import KanjiNameInput from '../KanjiNameInput';
 
 const JpTraderForm = ({ value, onChange }) => (
   <div className={styles.main}>
@@ -50,7 +50,7 @@ const JpTraderForm = ({ value, onChange }) => (
     {value.sameAsRep === 'no' ? (
       <div className={styles.input}>
         <Input large label="担当者氏名">
-          <NameInput value={value.nameKanji} onChange={onChange.nameKanji} required />
+          <KanjiNameInput value={value.nameKanji} onChange={onChange.nameKanji} required />
         </Input>
       </div>
     ) : null}
@@ -89,12 +89,6 @@ const JpTraderForm = ({ value, onChange }) => (
       </Input>
     </div>
 
-    <div className={styles.input}>
-      <Input large label="担当者メールアドレス（確認用）">
-        <TextBox type="email" value={value.email2} onChange={onChange.email2} required />
-      </Input>
-    </div>
-
   </div>
 );
 
@@ -102,5 +96,13 @@ JpTraderForm.propTypes = {
   value: React.PropTypes.shape({}).isRequired,
   onChange: React.PropTypes.shape({}).isRequired,
 };
+
+/*
+  <div className={styles.input}>
+    <Input large label="担当者メールアドレス（確認用）">
+      <TextBox type="email" value={value.email2} onChange={onChange.email2} required />
+    </Input>
+  </div>
+*/
 
 export default JpTraderForm;

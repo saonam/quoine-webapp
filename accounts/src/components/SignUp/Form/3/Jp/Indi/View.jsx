@@ -7,7 +7,6 @@ import translate from '@quoine/translate';
 import Input from '@quoine/components/Input';
 import Button from '@quoine/components/Button';
 import DateSelect from '@quoine/components/DateSelect';
-import NameInput from '@quoine/components/NameInput';
 import Checkbox from '@quoine/components/Checkbox';
 import PhoneInput from '@quoine/components/PhoneInput';
 import Link from '@quoine/components/Link';
@@ -25,6 +24,7 @@ import PurposeSelect from '../PurposeSelect';
 import GenderSelect from '../GenderSelect';
 import RelationSelect from '../RelationSelect';
 import KanaNameInput from '../KanaNameInput';
+import KanjiNameInput from '../KanjiNameInput';
 
 const SignUpForm3JpIndiView = ({ form, onChange, onSubmit }) => (
   <form onSubmit={onSubmit}>
@@ -39,7 +39,7 @@ const SignUpForm3JpIndiView = ({ form, onChange, onSubmit }) => (
 
       <div className={styles.input}>
         <Input large label="名前（漢字）">
-          <NameInput value={form.nameKanji} onChange={onChange.nameKanji} autoFocus required />
+          <KanjiNameInput value={form.nameKanji} onChange={onChange.nameKanji} autoFocus required />
         </Input>
       </div>
 
@@ -92,7 +92,7 @@ const SignUpForm3JpIndiView = ({ form, onChange, onSubmit }) => (
 
       <div className={styles.input}>
         <Input large label="電話番号">
-          <PhoneInput value={form.phone} onChange={onChange.phone} />
+          <PhoneInput value={form.phone} onChange={onChange.phone} required />
         </Input>
       </div>
 
@@ -126,7 +126,7 @@ const SignUpForm3JpIndiView = ({ form, onChange, onSubmit }) => (
       {['専業主婦（主夫）', '無職'].indexOf(form.occupation.job) === -1 ? (
         <div className={styles.input}>
           <Input large label="電話番号">
-            <PhoneInput value={form.workPhone} onChange={onChange.workPhone} />
+            <PhoneInput value={form.workPhone} onChange={onChange.workPhone} required />
           </Input>
         </div>
       ) : null}

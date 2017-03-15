@@ -25,7 +25,6 @@ const SignUpView = (props) => {
       ← {translate('sign-up:back')}
     </Button>
   ) : null;
-  const Form = Forms[props.step - 1];
 
   return (
     <Modal
@@ -40,18 +39,20 @@ const SignUpView = (props) => {
         </div>
       ) : null}
 
-      <Form
-        onSubmit={props.onSubmit}
-        form={props.form}
-        onChange={props.onChange}
-        busy={props.busy}
-      />
-
-      {props.error ? (
-        <p className={styles.error}>
-          {translate(props.error.message)}
-        </p>
-      ) : null}
+      {Forms.map((Form, index) => (
+        <div
+          key={index}
+          style={props.step - 1 !== index ? { display: 'none' } : {}}
+        >
+          <Form
+            onSubmit={props.onSubmit}
+            form={props.form}
+            onChange={props.onChange}
+            busy={props.busy}
+            error={props.error}
+          />
+        </div>
+      ))}
 
     </Modal>
   );
@@ -61,5 +62,11 @@ SignUpView.propTypes = {
   ...FormWrapperPropTypes,
   step: React.PropTypes.number.isRequired,
 };
+
+// {props.error ? (
+//   <p className={styles.error}>
+//     {translate(props.error.message)}
+//   </p>
+// ) : null}
 
 export default SignUpView;

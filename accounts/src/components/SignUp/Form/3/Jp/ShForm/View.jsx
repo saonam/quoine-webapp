@@ -4,7 +4,6 @@ import React from 'react';
 
 import Button from '@quoine/components/Button';
 import Input from '@quoine/components/Input';
-import NameInput from '@quoine/components/NameInput';
 import DateSelect from '@quoine/components/DateSelect';
 import Checkbox from '@quoine/components/Checkbox';
 import Link from '@quoine/components/Link';
@@ -13,6 +12,7 @@ import styles from 'components/SignUp/Form/styles.css';
 
 import AddressSelect from '../AddressSelect';
 import KanaNameInput from '../KanaNameInput';
+import KanjiNameInput from '../KanjiNameInput';
 import ShBusinessInput from '../ShBusinessInput';
 import ShTypeInput from '../ShTypeInput';
 
@@ -37,7 +37,7 @@ const ShFormItem = ({ index, value, onRemove, onChange }) => (
 
     <div className={styles.input}>
       <Input large label="名前（漢字）">
-        <NameInput value={value.nameKanji} onChange={onChange.nameKanji} required />
+        <KanjiNameInput value={value.nameKanji} onChange={onChange.nameKanji} required />
       </Input>
     </div>
 

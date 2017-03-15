@@ -4,7 +4,6 @@ import React from 'react';
 
 import TextBox from '@quoine/components/TextBox';
 import Input from '@quoine/components/Input';
-import NameInput from '@quoine/components/NameInput';
 import Checkbox from '@quoine/components/Checkbox';
 
 import Link from '@quoine/components/Link';
@@ -12,6 +11,7 @@ import Link from '@quoine/components/Link';
 import styles from 'components/SignUp/Form/styles.css';
 
 import KanaNameInput from '../KanaNameInput';
+import KanjiNameInput from '../KanjiNameInput';
 
 const JpRepForm = ({ value, onChange }) => (
   <div className={styles.main}>
@@ -24,7 +24,7 @@ const JpRepForm = ({ value, onChange }) => (
 
     <div className={styles.input}>
       <Input large label="代表者氏名">
-        <NameInput value={value.nameKanji} onChange={onChange.nameKanji} required />
+        <KanjiNameInput value={value.nameKanji} onChange={onChange.nameKanji} required />
       </Input>
     </div>
 
