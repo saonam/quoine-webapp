@@ -198,12 +198,12 @@ export default {
     "status-enabled": "Enabled",
     "status-not-enabled": "Not Enabled Yet",
     // ===
-    "help-change-phone": "To change your phone, please contact our support.",
+    "help-change-phone": "To change your phone numer, please contact our Support at support@quoine.com.",
     // ===
-    "add-phone-title": "Add Phone",
+    "add-phone-title": "Add Phone Number",
     "add-phone-action": "Add",
-    "add-phone-label": "Phone",
-    "add-phone-description": "Please enter the new phone number",
+    "add-phone-label": "Phone Number",
+    "add-phone-description": "Please enter the new phone number.",
     // ===
     "toggle-title-enable": "Enable",
     "toggle-title-disable": "Disable",

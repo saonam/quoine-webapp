@@ -192,10 +192,10 @@ export default {
     "status-enabled": "認証済み",
     "status-not-enabled": "未設定",
     // ===
-    "help-change-phone": "To change your phone, please contact our support.",
+    "help-change-phone": "電話番号を更新するには、support@quoine.comへご連絡ください。",
     // ===
     "add-phone-title": "携帯番号を設定する",
-    "add-phone-action": "Add",
+    "add-phone-action": "設定",
     "add-phone-label": "携帯番号",
     "add-phone-description": "新しい携帯番号をご入力ください。",
     // ===
