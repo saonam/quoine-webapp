@@ -16,6 +16,14 @@ const isDisable = ({ user, account }) => (
 );
 
 const validate = ({ user, account, type }) => {
+  if (isDisable({ user, account })) {
+    return {
+      key: user.status,
+      style: user.status === 'documents-submitted' ? 'positive' : 'negative',
+      goto: 'profile',
+    };
+  }
+
   if (isLimitInTraders(account)) {
     return {
       key: 'limit-accounts',
@@ -29,14 +37,6 @@ const validate = ({ user, account, type }) => {
       key: 'need-tfa',
       style: 'negative',
       goto: 'security',
-    };
-  }
-
-  if (isDisable({ user, account })) {
-    return {
-      key: user.status,
-      style: user.status === 'documents-submitted' ? 'positive' : 'negative',
-      goto: 'profile',
     };
   }
 
