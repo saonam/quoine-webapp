@@ -52,7 +52,6 @@ const WdrBankFormBody = ({ form, onChange }) => (
         id="joint-account"
         value={form['joint-account']}
         onChange={onChange['joint-account']}
-        required
       >
         {translate('bank:joint-account')}
       </Checkbox>
