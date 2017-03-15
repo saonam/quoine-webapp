@@ -52,7 +52,6 @@ const JpAddressBox = ({ value, onChange }) => (
           value={value.building}
           onChange={onChange.building}
           placeholder="マンション名"
-          required
         />
       </div>
     </div>

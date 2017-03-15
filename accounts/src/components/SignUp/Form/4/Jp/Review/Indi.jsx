@@ -58,6 +58,14 @@ const SignUpBody4JpReviewIndi = ({ form }) => (
       <Item label="投資可能資産">
         {form.investable}
       </Item>
+      {form.permission ? (
+        <Item>
+          投資可能資産は私自身の資産で間違えありません。
+        </Item>
+      ) : null}
+      <Item label="投資可能資産">
+        {form.investable}
+      </Item>
       <Item label="投資目的">
         <Purpose purpose={form.purpose} />
       </Item>

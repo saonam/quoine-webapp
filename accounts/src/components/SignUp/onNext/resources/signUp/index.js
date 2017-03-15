@@ -8,6 +8,7 @@ const signUp = form => {
   const options = {
     body: normalize(form),
     useCache: false,
+    errorPrefix: 'sign-up',
   };
   if (isQUOINEJp(form)) {
     options.vendorId = process.env.REACT_APP_QUOINEJP_ID;
