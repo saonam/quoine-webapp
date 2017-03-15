@@ -1,19 +1,15 @@
 import React from 'react';
 
-import Common from './Common';
-import Indi from './Indi';
-import Corp from './Corp';
+import UserInfo from 'components/UserInfo';
+
+import Group from './Group';
+import Item from './Item';
 
 import styles from './styles.css';
 
 const SignUpBody4JpReview = ({ form }) => (
   <div className={styles.main}>
-    <Common form={form} />
-    {form.type === 'individual' ? (
-      <Indi form={form.jpIndi} />
-    ) : (
-      <Corp form={form.jpCorp} />
-    )}
+    <UserInfo info={form} Group={Group} Item={Item} />
   </div>
 );
 

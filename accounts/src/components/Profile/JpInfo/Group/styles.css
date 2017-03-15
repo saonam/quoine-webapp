@@ -1,0 +1,13 @@
+.main {
+  composes: top size-2 color-primary-1 from "@quoine/styles/border.css";
+  composes: top-medium from "@quoine/styles/margin.css";
+  composes: top-medium from "@quoine/styles/padding.css";
+}
+.main:first-child {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.heading {
+  composes: medium from "@quoine/styles/text.css";
+}
