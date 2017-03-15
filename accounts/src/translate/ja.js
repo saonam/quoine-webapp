@@ -55,7 +55,7 @@ export default {
     "title": "新規登録",
     "action-next": "次",
     "action-done": "新規登録",
-    "action-sign-in": "Go to Sign in",
+    "action-sign-in": "ログインページへ進む",
     "back": "戻る",
     // ===
     "message-success": "ご登録頂きまして、誠にありがとうございます。あと少しで完了です。詳しい説明を記載したメールを送信いたしましたので、ご確認ください。",
@@ -66,14 +66,14 @@ export default {
     "step-4": "４. 確認",
     // ===
     "type-corporate-title": "法人",
-    "type-corporate-description": "法人の代表者としてアカウントを開設します。仮想通貨トレードのため、本アカウントは複数人で使われます。",
+    "type-corporate-description": "法人口座をお申込みの方はこちら",
     "type-individual-title": "個人",
-    "type-individual-description": "個人ユーザーとしてアカウントを開設します。仮想通貨トレードのため、本アカウントは本人のみに使われます。",
+    "type-individual-description": "個人口座をお申込みの方はこちら",
     // ===
     "email": "メールアドレス",
-    "email-help": "このメールはあなたのアカウントにサインインするために使用されます。",
+    "email-help": "メールアドレスはアカウントにサインインするために使用されます。",
     "password": "パスワード",
-    "password-help": "8文字以上、大文字・小文字・数字が必要",
+    "password-help": "8文字以上かつ、大文字・小文字・数字のすべてを含む必要があります。",
     "country": "居住地国",
     "referral": "プロモコード（任意）",
     "term-quoine": "下記の<a href=\"https://www.quoine.com/terms\" target=\"_blank\">利用規約</a>に同意します。",
@@ -107,11 +107,11 @@ export default {
     "password-too-weak": "パスワードは最低8文字で、かつ1文字以上の大文字、小文字、数字を含む必要があります。",
     "all-is-required": "全てのフィールドに入力する必要があります。",
     "terms": "利用規約に同意する必要があります。",
-    "reset-password-token-can-t-be-blank": "トークンを入力してください。ホームページに戻り、もう一度ご実行ください。",
-    "reset-password-token-is-invalid": "トークンは無効になりました。ホームページに戻り、もう一度ご実行ください。",
+    "reset-password-token-can-t-be-blank": "トークンを入力してください。ホームページに戻り、もう一度実行してください。",
+    "reset-password-token-is-invalid": "トークンは無効になりました。ホームページに戻り、もう一度実行してください。",
     "reset-password-token-expired": "トークンは無効になりました。ホームページに戻り、もう一度実行してください。",
     "password-update-failed": "パスワード更新に失敗しました。",
-    "your-password-is-incorrect": "パスワードが正しくありません。",
+    "your-password-is-incorrect": "パスワードが間違っています",
   },
   "demo": {
     "title": "デモアカウントを利用する",
@@ -119,13 +119,13 @@ export default {
     "action": "デモアカウントで進む",
     // ===
     "continue-title": "デモアカウントで続ける",
-    "continue-overview": "以前のデモアカウントで進むとデモ取引を続けられます。",
-    "continue-description": "利用したいデモアカウントのメールアドレスをご入力ください。",
-    "continue-found": "下記は以前のデモアカウントのメールアドレスです。",
+    "continue-overview": "以前使用されたデモアカウントで進むとデモ取引を続けられます。",
+    "continue-description": "ご利用のデモアカウントのメールアドレスを入力ください。",
+    "continue-found": "下記は以前使用したデモアカウントのメールアドレスです。",
     // ===
     "new-title": "新規デモアカウントで進む",
-    "new-overview": "デモアカウントでアプリの機能をテストできます。",
-    "new-description": "下記のメールアドレスで新規デモアカウントを作成します。将来にはこのデモアカウントを利用し続ける場合、このメールアドレスをメモしてください。",
+    "new-overview": "デモアカウントでトレード機能を無料体験できます。",
+    "new-description": "下記のメールアドレスで新規デモアカウントを作成します。本デモアカウントを利用し続ける場合、このメールアドレスをメモしてください。",
   },
   "sign-out": {
     "action": "ログアウト",
@@ -164,7 +164,7 @@ export default {
     "help-documents-submitted": "本人確認書類をご送付いただきありがとうございます。弊社スタッフにより審査を進めさせていただきます。",
     "help-approved": "このアカウントは審査完了済みです。入出金・トレードが可能です。",
     "help-declined": "アカウント認証に失敗しました。下記の書類の再送付をお願いいたします。",
-    "help-pending": "取引いただくには下記書類を送付お願いいたします。",
+    "help-pending": "お取引いただくには下記書類を送付が必要となります。",
     "help-pending-jp": "お取引いただくには本人確認書類をアップロードしてください。",
     "help-pending-jp-link": "本人確認書類",
     // ===
@@ -173,7 +173,7 @@ export default {
     "document-address": "住所証明書",
     "document-address-help": "住民票、公共料金領収書など（本人確認書類とは別の書類が必要です。）",
     "document-bank": "銀行口座照会の明細",
-    "document-bank-help": "口座取引明細、口座照会明細、ネットバンクのスクリーンショットなど",
+    "document-bank-help": "通帳の見開き、口座取引明細、口座照会明細、ネットバンクのスクリーンショットなど口座名・口座番号・支店情報がわかるもの",
     "document-action": "本人確認書類をアップロードする",
     // ===
     "id": "ユーザーID",
@@ -222,7 +222,7 @@ export default {
     // ===
     "remove-title": "トークンを削除する",
     "remove-action": "削除する",
-    "remove-description": "ただいまトークンを利用している全てのディバイスまたはアプリをすぐに無許可します。トークンを削除しますか。",
+    "remove-description": "ただいまトークンを利用している全てのデバイスまたはアプリをすぐに無許可します。トークンを削除しますか。",
     // ===
     "add-title": "APIトークンを新規作成する",
     "add-description": "APIトークンの許可をご選択ください。",
