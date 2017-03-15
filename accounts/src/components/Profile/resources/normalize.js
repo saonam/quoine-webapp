@@ -1,6 +1,6 @@
 const checkIsQuoineJapan = (vendorId) => (
   process.env.REACT_APP_VENDOR === 'quoine' &&
-  Number(vendorId) === process.env.REACT_APP_QUOINEJP_ID
+  Number(vendorId) === Number(process.env.REACT_APP_QUOINEJP_ID)
 );
 
 export default (raw) => ({
