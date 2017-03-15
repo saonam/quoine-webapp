@@ -9,7 +9,7 @@ const jpRep = (raw) => ({
 const jpSh = (raw) => ({
   business: raw.business_name,
   type: raw.business_type,
-  birth: raw.birthdate,
+  birth: toTimeStamp(raw.birthdate),
   address: raw.address,
   // ===
   ...getName(raw),
@@ -56,12 +56,15 @@ const jpCorpDetail = (raw) => {
   };
 
   const rep = findUserInfo(raw, 'representative');
-  const shs = findUserInfo(raw, 'shareholder');
   const trader = findUserInfo(raw, 'trader');
 
   result.rep = jpRep(rep);
-  result.shs = shs ? shs.map(jpSh) : [];
   result.trader = jpTrader(trader);
+
+  const shs = raw.corporation_user_infos.filter(
+    item => item.user_info_type === 'shareholder'
+  );
+  result.shs = shs.map(jpSh);
 
   return result;
 };

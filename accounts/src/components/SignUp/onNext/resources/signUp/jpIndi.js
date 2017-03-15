@@ -1,9 +1,9 @@
-import { getName } from './utils';
+import { getName, toDateString } from './utils';
 
 const jpIndiDetail = (form) => ({
   ...getName(form),
   gender: form.gender,
-  birthdate: new Date(form.birth * 1000).toISOString(),
+  birthdate: toDateString(form.birth),
   // ===
   address: form.address,
   phone: form.phone,
@@ -28,6 +28,7 @@ const jpIndi = (form) => ({
   email: form.email,
   password: form.password,
   country: form.country,
+  phone: form.jpIndi.phone,
   // ===
   individual_info_attributes: jpIndiDetail(form.jpIndi),
 });

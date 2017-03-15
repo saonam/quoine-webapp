@@ -10,3 +10,7 @@ export const getValid = (prev) => ({
   is_us_citizen: prev.us,
   is_pep: prev.pep,
 });
+
+export const toDateString = (date) => (
+  new Date(date * 1000).toISOString()
+);

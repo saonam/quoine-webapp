@@ -9,7 +9,6 @@ export const getName = (raw) => ({
   },
 });
 
-export const toTimeStamp = (iso) => {
-  const date = new Date(iso);
-  return date.getTime();
-};
+export const toTimeStamp = (date) => (
+  new Date(date).getTime()
+);

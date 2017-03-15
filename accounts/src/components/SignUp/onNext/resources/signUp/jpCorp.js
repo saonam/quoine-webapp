@@ -1,4 +1,4 @@
-import { getName, getValid } from './utils';
+import { getName, getValid, toDateString } from './utils';
 
 const jpRep = (form) => ({
   user_info_type: 'representative',
@@ -14,7 +14,7 @@ const jpSh = (form) => ({
   // ===
   business_name: form.business,
   business_type: form.type,
-  birthdate: form.birth,
+  birthdate: toDateString(form.birth),
   address: form.address,
   // ===
   ...getName(form),
@@ -44,8 +44,8 @@ const jpCorpDetail = (form) => ({
   // ===
   industry_type: form.industry,
   business: form.business,
-  established_date: new Date(form.established * 1000).toISOString(),
-  annual_report_date: new Date(form.report * 1000).toISOString(),
+  established_date: toDateString(form.established),
+  annual_report_date: toDateString(form.report),
   website: form.website,
   // ===
   income_gross: form.incomeGross,
@@ -65,6 +65,7 @@ const jpCorp = (form) => {
     email: form.email,
     password: form.password,
     country: form.country,
+    phone: form.jpCorp.phone,
     // ===
     corporation_info_attributes: jpCorpDetail(form.jpCorp),
   };
