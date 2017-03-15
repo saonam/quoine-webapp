@@ -5,9 +5,9 @@ import Button from './Button';
 
 import styles from './styles.css';
 
-const MarketSelect = ({ futures }) => {
+const MarketSelect = ({ futures, user }) => {
   let futuresNode = null;
-  if (process.env.REACT_APP_BITMEX_HOST) {
+  if (process.env.REACT_APP_BITMEX_HOST && user.id && !user.isQuoineJapan) {
     futuresNode = futures ? (
       <Button market="futures" />
     ) : (
@@ -25,6 +25,10 @@ const MarketSelect = ({ futures }) => {
 
 MarketSelect.propTypes = {
   futures: React.PropTypes.bool.isRequired,
+  user: React.PropTypes.shape({
+    id: React.PropTypes.number,
+    isQuoineJapan: React.PropTypes.bool,
+  }).isRequired,
 };
 
 export default MarketSelect;
