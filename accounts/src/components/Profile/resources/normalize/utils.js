@@ -10,5 +10,5 @@ export const getName = (raw) => ({
 });
 
 export const toTimeStamp = (date) => (
-  new Date(date).getTime()
+  new Date(date).getTime() / 1000
 );
