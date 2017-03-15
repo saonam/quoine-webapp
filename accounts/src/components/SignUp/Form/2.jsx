@@ -32,7 +32,10 @@ const SignUpBody2 = ({ onSubmit, form, onChange }) => (
       {/* Password */}
       <div className={styles.input}>
         <Input large id="password" label={translate('sign-up:password')}>
-          <TextBox type="password" value={form.password} onChange={onChange.password} required />
+          <TextBox
+            type="password" value={form.password} onChange={onChange.password} required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" title={translate('sign-up:password-help')}
+          />
         </Input>
         <p className={styles.help}>
           {translate('sign-up:password-help')}

@@ -33,7 +33,10 @@ const ProfileVerification = ({ user }) => {
         <div>
           <p className={styles.help}>
             {translate('user:help-pending-jp')}
-            <Link pathname="https://quoinex.com/jp/pep.html" target="_blank" styleName="accent text">
+            <Link
+              pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/document_details_20170316.pdf"
+              target="_blank" styleName="accent text"
+            >
               {translate('user:help-pending-jp-link')}
             </Link>
           </p>
