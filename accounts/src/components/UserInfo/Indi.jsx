@@ -61,9 +61,6 @@ const UserInfoIndi = ({ info, Group, Item }) => (
           投資可能資産は私自身の資産で間違えありません。
         </Item>
       ) : null}
-      <Item label="投資可能資産">
-        {info.investable}
-      </Item>
       <Item label="投資目的">
         <Purpose purpose={info.purpose} />
       </Item>
