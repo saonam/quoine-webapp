@@ -103,6 +103,10 @@ const SignUpForm3JpIndiView = ({ form, onChange, onSubmit }) => (
         </Input>
       </div>
 
+      <p className={styles.help}>
+        ホームページが無い場合は、「なし」と入力ください。
+      </p>
+
     </div>
 
     {/*
