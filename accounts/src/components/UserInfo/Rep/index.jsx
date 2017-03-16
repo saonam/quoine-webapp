@@ -13,6 +13,21 @@ const UserInfoRep = ({ rep, Item }) => (
     <Item label="代表者氏名(フリガナ)">
       <Name name={rep.nameKana} />
     </Item>
+    <Item>
+      <p style={{ lineHeight: '24px' }}>
+        ◯ 「米国籍」または「米国居住者（米国永住権をお持ちの方、米国での滞在日数が183日以上の方）」に該当するお客様は「あり」をご選択ください。
+      </p>
+    </Item>
+    <Item>
+      <p style={{ lineHeight: '24px' }}>
+        ◯ 私は、日本以外に居住地国が無いことを確約します。また、居住地国に変更があった場合は、変更があった日から3ヶ月を経過する日までに異動届出書により申告します。
+      </p>
+    </Item>
+    <Item>
+      <p style={{ lineHeight: '24px' }}>
+        ◯ 私は外国の重要な公人、もしくはその親族ではありません。
+      </p>
+    </Item>
   </div>
 );
 
