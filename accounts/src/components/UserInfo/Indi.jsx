@@ -23,6 +23,9 @@ const UserInfoIndi = ({ info, Group, Item }) => (
       <Item label="性別">
         {info.gender}
       </Item>
+      <Item>
+        私は外国の重要な公人、もしくはその親族ではありません。
+      </Item>
     </Group>
 
     <Group heading="連絡先">
