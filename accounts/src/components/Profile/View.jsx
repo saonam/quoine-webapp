@@ -12,8 +12,8 @@ import Form from './Form';
 import JpInfo from './JpInfo';
 import PteInfo from './PteInfo';
 
-const ProfileView = ({ user, onChangeStatus }) => (
-  user ? (
+const Profile = ({ user, onChangeStatus }) => (
+  user.id ? (
     <Body>
       <div>
         <Row label={translate('user:verification')}>
@@ -37,9 +37,9 @@ const ProfileView = ({ user, onChangeStatus }) => (
   ) : <LoadingIconWrapper />
 );
 
-ProfileView.propTypes = {
-  user: React.PropTypes.shape({}),
+Profile.propTypes = {
+  user: React.PropTypes.shape({}).isRequired,
   onChangeStatus: React.PropTypes.func.isRequired,
 };
 
-export default ProfileView;
+export default Profile;

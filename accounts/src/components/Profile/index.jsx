@@ -1,33 +1,17 @@
-import React from 'react';
-
-import resources from './resources';
+import { connect } from 'react-redux';
+import { TYPES } from '@quoine/states/user';
 
 import View from './View';
 
-class Profile extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { user: null };
-    this.onChangeStatus = this.onChangeStatus.bind(this);
-  }
-  componentDidMount() {
-    resources.load().then(user => {
-      this.setState({ user });
-    });
-  }
-  onChangeStatus(status) {
-    this.setState({
-      user: {
-        ...this.state.user,
-        status,
-      },
-    });
-  }
-  render() {
-    return (
-      <View user={this.state.user} onChangeStatus={this.onChangeStatus} />
-    );
-  }
-}
+const mapStateToProps = (state) => ({
+  user: state.user,
+});
 
-export default Profile;
+const mapDispatchToProps = (dispatch) => ({
+  onChangeStatus: (status) => dispatch({
+    type: TYPES.APPLY,
+    payload: { status },
+  }),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(View);
