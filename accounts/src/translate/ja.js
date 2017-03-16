@@ -153,16 +153,16 @@ export default {
     "label": "取引レポートを受信する。",
   },
   "user": {
-    "verification": "審査中",
+    "verification": "口座開設状況",
     // ===
     "status": "ステータス",
     "status-documents-submitted": "書類審査中",
-    "status-approved": "審査完了",
+    "status-approved": "開設済",
     "status-declined": "書類不備",
-    "status-pending": "審査中",
+    "status-pending": "開設中",
     // ===
     "help-documents-submitted": "本人確認書類をご送付いただきありがとうございます。弊社スタッフにより審査を進めさせていただきます。",
-    "help-approved": "このアカウントは審査完了済みです。入出金・トレードが可能です。",
+    "help-approved": "入出金及びお取引が可能です。",
     "help-declined": "アカウント認証に失敗しました。下記の書類の再送付をお願いいたします。",
     "help-pending": "お取引いただくには下記書類を送付が必要となります。",
     "help-pending-jp": "お取引いただくには本人確認書類をアップロードしてください。",
