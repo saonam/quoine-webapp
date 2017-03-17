@@ -37,6 +37,7 @@ const jpTrader = (form) => ({
 });
 
 const jpCorpDetail = (form) => ({
+  ...getValid(form),
   corporate_name: form.name,
   corporate_kana_name: form.nameKana,
   address: form.address,
