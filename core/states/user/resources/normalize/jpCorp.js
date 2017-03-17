@@ -40,7 +40,10 @@ const jpCorpDetail = (raw) => {
     address: raw.address,
     phone: raw.phone,
     // ===
-    industry: raw.industry_type,
+    industry: {
+      type: raw.industry_type,
+      detail: raw.industry_detail,
+    },
     business: raw.business,
     established: toTimeStamp(raw.established_date),
     report: toTimeStamp(raw.annual_report_date),

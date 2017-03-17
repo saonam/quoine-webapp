@@ -43,7 +43,8 @@ const jpCorpDetail = (form) => ({
   address: form.address,
   phone: form.phone,
   // ===
-  industry_type: form.industry,
+  industry_type: form.industry.type,
+  industry_detail: form.industry.detail,
   business: form.business,
   established_date: toDateString(form.established),
   annual_report_date: toDateString(form.report),
