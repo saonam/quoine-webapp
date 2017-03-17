@@ -1,0 +1,6 @@
+.input {
+  composes: border-bottom-accent-2 from "@quoine/styles/box-shadow.css";
+}
+.input:last-child {
+  box-shadow: none;
+}

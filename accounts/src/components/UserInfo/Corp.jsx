@@ -26,7 +26,8 @@ const UserInfoCorp = ({ info, Group, Item }) => (
 
     <Group heading="法人概要">
       <Item label="業種">
-        {info.industry}
+        {info.industry.type}
+        {info.industry.detail ? ` - ${info.industry.detail}` : ''}
       </Item>
       <Item label="業務内容">
         {info.business}
