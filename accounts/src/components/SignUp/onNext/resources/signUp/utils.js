@@ -5,10 +5,10 @@ export const getName = (prev) => ({
   last_kanji_name: prev.nameKanji.last,
 });
 
-export const getValid = (prev) => ({
-  is_living_in_jp: prev.jp,
-  is_us_citizen: prev.us,
-  is_pep: prev.pep,
+export const getValid = () => ({
+  is_living_in_jp: true,
+  is_us_citizen: false,
+  is_pep: false,
 });
 
 export const toDateString = (date) => (

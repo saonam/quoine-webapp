@@ -1,7 +1,8 @@
-import { getName, toDateString } from './utils';
+import { getName, getValid, toDateString } from './utils';
 
 const jpIndiDetail = (form) => ({
   ...getName(form),
+  ...getValid(form),
   gender: form.gender,
   birthdate: toDateString(form.birth),
   // ===
