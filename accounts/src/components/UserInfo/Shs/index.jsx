@@ -8,6 +8,7 @@ const UserInfoShs = ({ shs, Item }) => (
   <div>
     {shs.map((sh, index) => (
       <div key={index}>
+        <p>実質的支配者{index + 1}</p>
         <Item label="事業形態">
           {sh.business}
         </Item>
