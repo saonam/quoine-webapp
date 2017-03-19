@@ -87,11 +87,13 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
         </Input>
       </div>
 
-      <div className={styles.input}>
-        <Input large label="設立年月">
-          <DateSelect value={form.established} onChange={onChange.established} date={false} />
-        </Input>
-      </div>
+      {edit ? null : (
+        <div className={styles.input}>
+          <Input large label="設立年月">
+            <DateSelect value={form.established} onChange={onChange.established} date={false} />
+          </Input>
+        </div>
+      )}
 
       <div className={styles.input}>
         <Input large label="決算日">
@@ -185,17 +187,21 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
       RELATION
     */}
 
-    <h1 className={styles.heading}>申込の経緯</h1>
+    {edit ? null : (
+      <div>
+        <h1 className={styles.heading}>申込の経緯</h1>
 
-    <div className={styles.body}>
+        <div className={styles.body}>
 
-      <div className={styles.input}>
-        <Input large label="申込の経緯">
-          <RelationSelect value={form.relation} onChange={onChange.relation} />
-        </Input>
+          <div className={styles.input}>
+            <Input large label="申込の経緯">
+              <RelationSelect value={form.relation} onChange={onChange.relation} />
+            </Input>
+          </div>
+
+        </div>
       </div>
-
-    </div>
+    )}
 
     <div className={styles.input}>
       <Button type="submit" styleName="modal accent">

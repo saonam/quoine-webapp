@@ -49,17 +49,21 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
         </Input>
       </div>
 
-      <div className={styles.input}>
-        <Input large label="生年月日">
-          <DateSelect value={form.birth} onChange={onChange.birth} />
-        </Input>
-      </div>
+      {edit ? null : (
+        <div>
+          <div className={styles.input}>
+            <Input large label="生年月日">
+              <DateSelect value={form.birth} onChange={onChange.birth} />
+            </Input>
+          </div>
 
-      <div className={styles.input}>
-        <Input large label="性別" noBorder>
-          <GenderSelect value={form.gender} onChange={onChange.gender} />
-        </Input>
-      </div>
+          <div className={styles.input}>
+            <Input large label="性別" noBorder>
+              <GenderSelect value={form.gender} onChange={onChange.gender} />
+            </Input>
+          </div>
+        </div>
+      )}
 
       <div className={styles.input}>
         <Input large label="外国政府等の重要な公人" noBorder>
@@ -195,17 +199,21 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
       RELATION
     */}
 
-    <h1 className={styles.heading}>申込の経緯</h1>
+    {edit ? null : (
+      <div>
+        <h1 className={styles.heading}>申込の経緯</h1>
 
-    <div className={styles.body}>
+        <div className={styles.body}>
 
-      <div className={styles.input}>
-        <Input large label="申込の経緯">
-          <RelationSelect value={form.relation} onChange={onChange.relation} />
-        </Input>
+          <div className={styles.input}>
+            <Input large label="申込の経緯">
+              <RelationSelect value={form.relation} onChange={onChange.relation} />
+            </Input>
+          </div>
+
+        </div>
       </div>
-
-    </div>
+    )}
 
     <div className={styles.input}>
       <Button type="submit" styleName="modal accent">

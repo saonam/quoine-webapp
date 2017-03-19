@@ -187,10 +187,10 @@ export default {
     "invalid-types": "無効なファイルタイプです。PDF／XPS／JPG／JPEG／PNG／GIFのファイルをアップロードしてください。",
   },
   "edit-user": {
-    "title": "Update user profile",
-    "action": "Update user profile",
-    "action-submit": "Submit",
-    "action-cancel": "Cancel",
+    "title": "口座情報変更",
+    "action": "口座情報変更",
+    "action-submit": "変更",
+    "action-cancel": "取り消し",
   },
   "tfa-manage": {
     "phone": "携帯番号",

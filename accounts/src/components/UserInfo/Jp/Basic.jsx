@@ -13,8 +13,8 @@ const UserInfoBasic = ({ info, Item }) => (
       <Country iso={info.country} />
     </Item>
     <Item>
-      <p>私は、日本以外に居住地国が無いことを確約します。</p>
-      <p>私は、米国納税義務が無いことを確約します。</p>
+      <p>当社は、当社は国内法人であることを確約します。</p>
+      <p>当社は、米国納税義務がないことを確約します。</p>
     </Item>
   </div>
 );
