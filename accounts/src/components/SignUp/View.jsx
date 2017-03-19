@@ -8,7 +8,7 @@ import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
 import {
   Form1, Form2, Form3, Form4, Form5,
-} from 'components/SignUp/Form';
+} from 'components/UserForm';
 import Steps from 'components/SignUp/Steps';
 
 import styles from './styles.css';

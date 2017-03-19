@@ -1,10 +1,10 @@
 import React from 'react';
 
 import FromWrapper from '@quoine/components/FormWrapper';
+import initialForm from 'components/UserForm/initialForm';
 
 import View from './View';
 
-import initialForm from './initialForm';
 import onNext from './onNext';
 
 class SignUp extends React.Component {

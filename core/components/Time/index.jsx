@@ -5,7 +5,7 @@ import formats from './formats';
 
 const Time = ({ value, type }) => (
   <span className={styles.main}>
-    {formats[type](value * 1000)}
+    {value ? formats[type](value * 1000) : '--'}
   </span>
 );
 

@@ -30,7 +30,7 @@ class FormWrapper extends React.Component {
     });
   }
   onSubmit(event) {
-    if (event) { event.preventDefault(); }
+    if (event && event.preventDefault) { event.preventDefault(); }
 
     this.setState({ busy: true });
     return this.props.onSubmit(this.state.form)

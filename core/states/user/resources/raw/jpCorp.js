@@ -1,10 +1,10 @@
 {  
-  "id":9400,
-  "email":"huong.quoine+20@gmail.com",
+  "id":9438,
+  "email":"huong.quoine+jpcorp@gmail.com",
   "ext_id":null,
-  "first_name":"",
-  "last_name":"",
-  "name":"",
+  "first_name":"法人名",
+  "last_name":"法人名",
+  "name":"法人名 法人名",
   "avatar":null,
   "currency":"JPY",
   "status":"pending",
@@ -23,7 +23,7 @@
   "id_document_filename":null,
   "proof_address_filename":null,
   "bank_statement_filename":null,
-  "created_at":1489593435,
+  "created_at":1489748332,
   "settings":{  
 
   },
@@ -33,13 +33,13 @@
     "ETH",
     "BTC"
   ],
-  "affiliate_code":"fAFaRPui9400",
-  "pusher_channel":"user_9400",
+  "affiliate_code":"r8TRkVRs9438",
+  "pusher_channel":"user_9438",
   "signed_for_bonus_campaign":false,
   "custom_fees":{  
 
   },
-  "phone":"0839234982",
+  "phone":"082920393",
   "phone_verified":false,
   "is_fully_verified":false,
   "receive_report":false,
@@ -51,12 +51,12 @@
   "country_name":"Japan",
   "nationality_name":null,
   "user_setting":{  
-    "created_at":"2017-03-15T15:57:15Z",
-    "id":9109,
+    "created_at":"2017-03-17T10:58:52Z",
+    "id":9147,
     "receive_report":false,
-    "updated_at":"2017-03-15T15:57:15Z",
-    "user_id":9400,
-    "web_app_setting":null
+    "updated_at":"2017-03-17T11:09:45Z",
+    "user_id":9438,
+    "web_app_setting":"{\"current\":{},\"confirmation\":{},\"layout\":{},\"filters\":{},\"blottersVertical\":{},\"blottersHorizontal\":{},\"confirmations\":{\"skips\":[]},\"languages\":{\"current\":\"en\"},\"themes\":{\"current\":\"light\"},\"notifications\":{\"dismissed\":[]},\"tabs\":{},\"next\":{},\"orderEntry\":{},\"nextCharts\":{}}"
   },
   "user_type":"corporate",
   "address":null,
@@ -64,91 +64,97 @@
   "app_vendor_id":9373,
   "individual_info":null,
   "corporation_info":{  
-    "industry_type":"情報・通信",
-    "business":null,
-    "established_date":694224000,
-    "annual_report_date":5097600,
+    "industry_type":"その他",
+    "industry_detail":"業種",
+    "business":"業務内容",
+    "established_date":1138752000,
+    "annual_report_date":0,
     "corporate_name":"法人名",
     "corporate_kana_name":"フリガナ",
     "address":{  
-      "zip":"7000000",
+      "zip":"8000000",
       "street":"ご住所",
       "building":"ご住所",
       "prefecture":"ご住所",
       "municipality":"ご住所"
     },
-    "phone":"0839234982",
-    "website":"ご住所",
-    "income_gross":"30万円～100万円未満",
-    "income_net":"30万円～100万円未満",
-    "capital":"30万円～100万円未満",
+    "phone":"082920393",
+    "website":"ホームページアドレス",
+    "income_gross":"100万円～250万円未満",
+    "income_net":"100万円～250万円未満",
+    "capital":"100万円～250万円未満",
     "invest_purpose":{  
       "trade":"true",
-      "invest":"true",
+      "invest":"false",
       "exchange":"true",
       "diversify":"true"
     },
     "experience":{  
       "fx":"5年以上",
-      "margin":"4年未満",
-      "option":"5年未満",
-      "stocks":"5年未満",
-      "commodities":"5年未満"
+      "margin":"3年未満",
+      "option":"2年未満",
+      "stocks":"4年未満",
+      "commodities":"1年未満"
     },
     "relation":{  
-      "type":"当社ホームページ",
-      "detail":""
+      "type":"他サイト",
+      "detail":"担当者電話番号"
     },
+    "is_us_citizen":false,
+    "is_living_in_jp":true,
+    "is_pep":false,
     "corporation_user_infos":[  
       {  
         "user_info_type":"representative",
-        "title":"ご住所",
+        "title":"役職名",
         "gender":null,
-        "first_kanji_name":"代表者氏名",
-        "last_kanji_name":"代表者氏名",
+        "first_kanji_name":"役職名",
+        "last_kanji_name":"役職名",
         "first_kana_name":"フリガナ",
         "last_kana_name":"フリガナ",
-        "is_us_citizen":true,
+        "is_us_citizen":false,
         "is_living_in_jp":true,
-        "is_pep":true,
+        "is_pep":false,
+        "same_as_rep":"No",
         "business_type":null,
         "business_name":null,
         "position":null,
         "shareholder_type":null,
-        "birthdate":null,
         "department":null,
         "address":{  
 
         },
         "phone":null,
-        "email":null
+        "email":null,
+        "birthdate":null
       },
       {  
         "user_info_type":"trader",
         "title":null,
         "gender":"男性",
-        "first_kanji_name":"担当者役職名",
-        "last_kanji_name":"担当者役職名",
+        "first_kanji_name":"担当者氏名",
+        "last_kanji_name":"担当者氏名",
         "first_kana_name":"フリガナ",
         "last_kana_name":"フリガナ",
         "is_us_citizen":false,
         "is_living_in_jp":true,
         "is_pep":true,
+        "same_as_rep":"no",
         "business_type":null,
         "business_name":null,
         "position":"担当者役職名",
         "shareholder_type":null,
-        "birthdate":null,
-        "department":"担当者役職名",
+        "department":"担当者所属部署",
         "address":{  
           "zip":"8000000",
-          "street":"ご住所",
-          "building":"",
-          "prefecture":"ご住所",
-          "municipality":"ご住所"
+          "street":"フリガナ",
+          "building":"フリガナ",
+          "prefecture":"フリガナ",
+          "municipality":"フリガナ"
         },
-        "phone":"0820239322",
-        "email":"abc@quoine.add"
+        "phone":"0923924234",
+        "email":"abc@gmail.com",
+        "birthdate":null
       },
       {  
         "user_info_type":"shareholder",
@@ -158,51 +164,25 @@
         "last_kanji_name":"漢字",
         "first_kana_name":"カナ",
         "last_kana_name":"カナ",
-        "is_us_citizen":true,
+        "is_us_citizen":false,
         "is_living_in_jp":true,
-        "is_pep":true,
-        "business_type":"議決権が50％を超える個人",
+        "is_pep":false,
+        "same_as_rep":"No",
+        "business_type":"議決権が25％を超える個人",
         "business_name":"株式会社",
         "position":null,
         "shareholder_type":null,
-        "birthdate":"1970-01-01",
         "department":null,
         "address":{  
-          "zip":"8202002",
-          "street":"ご住所",
-          "building":"",
-          "prefecture":"ご住所",
-          "municipality":"ご住所"
+          "zip":"9000000",
+          "street":"カナ",
+          "building":"カナ",
+          "prefecture":"カナ",
+          "municipality":"カナ"
         },
         "phone":null,
-        "email":null
-      },
-      {  
-        "user_info_type":"shareholder",
-        "title":null,
-        "gender":null,
-        "first_kanji_name":"漢字",
-        "last_kanji_name":"漢字",
-        "first_kana_name":"カナ",
-        "last_kana_name":"カナ",
-        "is_us_citizen":true,
-        "is_living_in_jp":true,
-        "is_pep":true,
-        "business_type":"議決権が50％を超える個人",
-        "business_name":"株式会社",
-        "position":null,
-        "shareholder_type":null,
-        "birthdate":"1970-01-01",
-        "department":null,
-        "address":{  
-          "zip":"8000000",
-          "street":"ご住所",
-          "building":"ご住所",
-          "prefecture":"ご住所",
-          "municipality":"ご住所ご住所"
-        },
-        "phone":null,
-        "email":null
+        "email":null,
+        "birthdate":"1992-04-02"
       }
     ]
   }

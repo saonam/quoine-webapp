@@ -186,6 +186,12 @@ export default {
   "user-error": {
     "invalid-types": "無効なファイルタイプです。PDF／XPS／JPG／JPEG／PNG／GIFのファイルをアップロードしてください。",
   },
+  "edit-user": {
+    "title": "Update user profile",
+    "action": "Update user profile",
+    "action-submit": "Submit",
+    "action-cancel": "Cancel",
+  },
   "tfa-manage": {
     "phone": "携帯番号",
     "title": "二段階認証",

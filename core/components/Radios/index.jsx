@@ -14,6 +14,7 @@ const RadiosView = ({ id, value, options, onChange, ...others }) => (
           value={value}
           option={option.value}
           onChange={onChange}
+          checked={value === option.value}
           {...others}
         >
           {option.label}

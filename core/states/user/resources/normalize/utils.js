@@ -9,6 +9,19 @@ export const getName = (raw) => ({
   },
 });
 
-export const toTimeStamp = (date) => (
-  new Date(date).getTime() / 1000
+export const getValid = (raw) => ({
+  jp: true,
+  us: true,
+  pep: true,
+});
+
+const stringToBoolean = (str) => (
+  str === 'true' ? true : false
 );
+
+export const getPurpose = (raw) => ({
+  exchange: stringToBoolean(raw.exchange),
+  trade: stringToBoolean(raw.trade),
+  diversify: stringToBoolean(raw.diversify),
+  invest: stringToBoolean(raw.invest),
+});

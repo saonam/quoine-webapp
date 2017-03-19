@@ -192,6 +192,12 @@ export default {
   "user-error": {
     "invalid-types": "Please check your file types. Allowed types are: pdf, xps, jpg, jpeg, png, and gif.",
   },
+  "edit-user": {
+    "title": "Update user profile",
+    "action": "Update user profile",
+    "action-submit": "Submit",
+    "action-cancel": "Cancel",
+  },
   "tfa-manage": {
     "phone": "Phone",
     "title": "Two-Factor Authentication",

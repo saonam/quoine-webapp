@@ -1,12 +1,14 @@
-import { getName, toTimeStamp } from './utils';
+import { getName, getPurpose, toTimeStamp } from './utils';
 
 const jpIndiDetail = (raw) => ({
   ...getName(raw),
   gender: raw.gender,
-  birth: toTimeStamp(raw.birthdate),
+  birth: raw.birthdate || 0,
+  // ===
+  pep: true,
   // ===
   address: raw.address,
-  phone: raw.phone,
+  phone: raw.phone || '',
   // ===
   occupation: raw.occupation,
   workAddress: raw.work_address,
@@ -16,7 +18,7 @@ const jpIndiDetail = (raw) => ({
   income: raw.income_amount,
   permission: raw.invest_permission,
   investable: raw.investable_amount,
-  purpose: raw.invest_purpose,
+  purpose: getPurpose(raw.invest_purpose),
   experience: raw.experience,
   // ===
   relation: raw.relation,

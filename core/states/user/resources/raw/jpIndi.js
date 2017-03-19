@@ -1,10 +1,10 @@
 {  
-  "id":9387,
-  "email":"huong.quoine+11@gmail.com",
+  "id":9437,
+  "email":"huong.quoine+jpindi@gmail.com",
   "ext_id":null,
-  "first_name":"",
-  "last_name":"",
-  "name":"",
+  "first_name":"漢字",
+  "last_name":"漢字",
+  "name":"漢字 漢字",
   "avatar":null,
   "currency":"JPY",
   "status":"pending",
@@ -23,7 +23,7 @@
   "id_document_filename":null,
   "proof_address_filename":null,
   "bank_statement_filename":null,
-  "created_at":1489566789,
+  "created_at":1489747323,
   "settings":{  
 
   },
@@ -33,13 +33,13 @@
     "ETH",
     "BTC"
   ],
-  "affiliate_code":"a9XMAm0i9387",
-  "pusher_channel":"user_9387",
+  "affiliate_code":"ny9g6xY19437",
+  "pusher_channel":"user_9437",
   "signed_for_bonus_campaign":false,
   "custom_fees":{  
 
   },
-  "phone":"81-01666322395",
+  "phone":"0932789297",
   "phone_verified":false,
   "is_fully_verified":false,
   "receive_report":false,
@@ -51,12 +51,12 @@
   "country_name":"Japan",
   "nationality_name":null,
   "user_setting":{  
-    "created_at":"2017-03-15T08:33:09Z",
-    "id":9099,
+    "created_at":"2017-03-17T10:42:03Z",
+    "id":9146,
     "receive_report":false,
-    "updated_at":"2017-03-15T12:54:12Z",
-    "user_id":9387,
-    "web_app_setting":"{\"current\":{},\"confirmation\":{},\"layout\":{},\"filters\":{},\"blottersVertical\":{},\"blottersHorizontal\":{},\"confirmations\":{\"skips\":[]},\"languages\":{\"current\":\"en\"},\"themes\":{\"current\":\"light\"},\"notifications\":{\"dismissed\":[]},\"accounts\":{\"hiddens\":[]},\"mrgAccs\":{\"hiddens\":[]},\"trading\":{\"account\":\"USD\",\"product\":\"BTCUSD\",\"market\":\"margin\"},\"panels\":{\"prefs\":[{\"order\":0,\"grow\":0},{\"order\":1,\"grow\":0},{\"order\":2,\"grow\":1},{\"order\":3,\"grow\":0},{\"order\":4,\"grow\":-1},{\"order\":5,\"grow\":-1},{\"order\":6,\"grow\":-1},{\"order\":7,\"grow\":-1}]},\"tabs\":{},\"orderBlotter\":{\"filters\":{\"status\":\"all\",\"side\":\"all\"}},\"positionBlotter\":{\"filters\":{\"status\":\"all\",\"side\":\"all\"}},\"executionBlotter\":{\"filters\":{\"side\":\"all\"}},\"orderEntry\":{\"form\":{\"type\":\"market\",\"quantity\":\"1\",\"quantityDisclose\":\"1\",\"price\":\"1\",\"side\":\"buy\",\"leverage\":2,\"direction\":\"one-direction\",\"slippage\":false,\"slippageValue\":\"100\",\"distance\":\"50\",\"distanceType\":\"fiat\"}},\"nextCharts\":{}}"
+    "updated_at":"2017-03-17T10:47:29Z",
+    "user_id":9437,
+    "web_app_setting":"{\"current\":{},\"confirmation\":{},\"layout\":{},\"filters\":{},\"blottersVertical\":{},\"blottersHorizontal\":{},\"confirmations\":{\"skips\":[]},\"languages\":{\"current\":\"en\"},\"themes\":{\"current\":\"light\"},\"notifications\":{\"dismissed\":[]},\"tabs\":{},\"next\":{},\"orderEntry\":{},\"nextCharts\":{}}"
   },
   "user_type":"individual",
   "address":null,
@@ -68,48 +68,49 @@
     "first_kana_name":"カナ",
     "last_kana_name":"カナ",
     "gender":"女性",
-    "birthdate":"1970-01-01",
+    "birthdate":"1993-11-03",
     "is_us_resident":null,
     "is_jp_resident":null,
     "is_pep":false,
     "address":{  
-      "zip":"0000000",
-      "street":"カナ",
-      "building":"カナ",
-      "prefecture":"カナ",
-      "municipality":"カナ"
+      "zip":"8000000",
+      "street":"住所",
+      "building":"住所",
+      "prefecture":"住所",
+      "municipality":"住所"
     },
     "work_address":{  
-      "zip":"0000000",
-      "street":"カナ",
-      "building":"",
-      "prefecture":"カナ",
-      "municipality":"カナ"
+      "zip":"7000000",
+      "street":"住所",
+      "building":"住所",
+      "prefecture":"住所",
+      "municipality":"住所"
     },
     "occupation":{  
-      "job":"会社員",
+      "job":"会社役員",
+      "name":"住所",
       "detail":"",
       "industry":"林業"
     },
-    "work_phone":"1",
-    "income_source":"事業所得",
+    "work_phone":"0937777777",
+    "income_source":"給与所得",
     "income_amount":"30万円～100万円未満",
     "invest_permission":false,
-    "investable_amount":100.0,
-    "phone":null,
+    "investable_amount":"500万円～1000万円未満",
+    "phone":"0932789297",
     "work_place_name":null,
     "invest_purpose":{  
       "trade":"true",
-      "invest":"true",
+      "invest":"false",
       "exchange":"true",
-      "diversify":"true"
+      "diversify":"false"
     },
     "experience":{  
       "fx":"5年未満",
-      "margin":"4年未満",
-      "option":"5年未満",
-      "stocks":"5年未満",
-      "commodities":"5年未満"
+      "margin":"3年未満",
+      "option":"2年未満",
+      "stocks":"4年未満",
+      "commodities":"1年未満"
     },
     "relation":{  
       "type":"当社ホームページ",

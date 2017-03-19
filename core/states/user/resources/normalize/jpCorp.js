@@ -1,22 +1,24 @@
-import { getName, toTimeStamp } from './utils';
+import { getName, getValid, getPurpose } from './utils';
 
 const jpRep = (raw) => ({
   title: raw.title,
   // ===
   ...getName(raw),
+  ...getValid(raw),
 });
 
 const jpSh = (raw) => ({
   business: raw.business_name,
   type: raw.business_type,
-  birth: toTimeStamp(raw.birthdate),
+  birth: raw.birthdate || 0,
   address: raw.address,
   // ===
   ...getName(raw),
+  ...getValid(raw),
 });
 
 const jpTrader = (raw) => ({
-  sameAsRep: raw.same_as_rep,
+  sameAsRep: raw.same_as_rep || 'no',
   position: raw.position,
   department: raw.department,
   // ===
@@ -27,7 +29,6 @@ const jpTrader = (raw) => ({
   // ===
   ...getName(raw),
 });
-
 
 const findUserInfo = (raw, type) => (
   raw.corporation_user_infos.find(item => item.user_info_type === type)
@@ -42,17 +43,17 @@ const jpCorpDetail = (raw) => {
     // ===
     industry: {
       type: raw.industry_type,
-      detail: raw.industry_detail,
+      detail: raw.industry_detail || '',
     },
-    business: raw.business,
-    established: toTimeStamp(raw.established_date),
-    report: toTimeStamp(raw.annual_report_date),
+    business: raw.business || '',
+    established: raw.established_date || 0,
+    report: raw.annual_report_date || 0,
     website: raw.website,
     // ===
     incomeGross: raw.income_gross,
     incomeNet: raw.income_net,
     capital: raw.capital,
-    purpose: raw.invest_purpose,
+    purpose: getPurpose(raw.invest_purpose),
     experience: raw.experience,
     // ===
     relation: raw.relation,
