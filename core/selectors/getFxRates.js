@@ -6,7 +6,9 @@ export default createSelector(
   [getProducts],
   (products) => {
     const { keys, models } = products;
-    const fxRates = {};
+    const fxRates = {
+      BTC: 1,
+    };
 
     keys.forEach(key => {
       const { baseCurrency, quoteCurrency, bid } = models[key];

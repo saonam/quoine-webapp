@@ -28,7 +28,7 @@ const calculate = (form, orderBook, interestBook, fees, fxRates) => {
   // now margin
   // rate from quote to fund
   const { account: fund } = form;
-  const rate = getRate({ frm: quote, to: fund, fxRates, orderBook });
+  const rate = getRate({ frm: quote, to: fund, fxRates });
   const feeInFund = fee * rate;
   const costInFund = cost * rate;
   let margin = costInFund / form.leverage;
@@ -40,7 +40,7 @@ const calculate = (form, orderBook, interestBook, fees, fxRates) => {
   // interest is calculated in quote or base
   // and already converted to fund there
   const interestInFund = getInterestInFund({
-    cost, form, interestBook, fxRates, orderBook,
+    cost, form, interestBook, fxRates,
   });
 
   const result = [

@@ -16,7 +16,7 @@ const getInterest = ({ quantity, book }) => {
 };
 
 const getInterestInFund = ({
-  cost, form, interestBook, fxRates, orderBook,
+  cost, form, interestBook, fxRates,
 }) => {
   // ready
   const isSell = form.side === 'sell';
@@ -34,8 +34,6 @@ const getInterestInFund = ({
     frm: currency,
     to: fund,
     fxRates,
-    orderBook,
-    mid: form.quoteCurrency,
   });
   const interestInFund = interest * rate;
 
