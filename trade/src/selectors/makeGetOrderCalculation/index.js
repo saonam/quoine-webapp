@@ -1,4 +1,4 @@
-import getFxRates from '@quoine/selectors/getFxRates';
+import getFxRates from 'selectors/getFxRates';
 import getFees from 'selectors/getFees';
 
 import createSelector from './createSelector';

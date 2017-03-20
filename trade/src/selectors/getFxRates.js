@@ -15,6 +15,9 @@ export default createSelector(
       if (baseCurrency === 'BTC') {
         fxRates[quoteCurrency] = bid ? (1 / bid) : 0;
       }
+      if (quoteCurrency === 'BTC') {
+        fxRates[baseCurrency] = bid || 0;
+      }
     });
 
     return fxRates;
