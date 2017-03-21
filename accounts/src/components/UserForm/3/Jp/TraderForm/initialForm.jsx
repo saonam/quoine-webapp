@@ -10,6 +10,7 @@ export default {
   nameKanji: name,
   nameKana: name,
   // ===
+  birth: 0,
   gender: '',
   address,
   phone: '',

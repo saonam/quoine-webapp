@@ -2,6 +2,7 @@ import React from 'react';
 
 import Name from '../Name';
 import Address from '../Address';
+import Datee from '../Datee';
 
 const UserInfoTrader = ({ trader, Item }) => (
   <div>
@@ -24,6 +25,9 @@ const UserInfoTrader = ({ trader, Item }) => (
         <Name name={trader.nameKana} />
       </Item>
     ) : null}
+    <Item label="生年月日">
+      <Datee value={trader.birth} />
+    </Item>
     <Item label="性別">
       {trader.gender}
     </Item>

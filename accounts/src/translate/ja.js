@@ -191,6 +191,7 @@ export default {
     "action": "口座情報変更",
     "action-submit": "変更",
     "action-cancel": "取り消し",
+    "description": "If you need to change your US citizen status, please contact us via support@quoine.com or the help button at top right.",
   },
   "tfa-manage": {
     "phone": "携帯番号",

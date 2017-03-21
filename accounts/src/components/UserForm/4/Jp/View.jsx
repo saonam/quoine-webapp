@@ -3,13 +3,14 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Button from '@quoine/components/ButtonWLoading';
+import Err from 'components/UserForm/Err';
 
 import styles from 'components/UserForm/styles.css';
 
 import Term from './Term';
 import Review from './Review';
 
-const UserForm4Jp = ({ onSubmit, originalForm, edit, form, onChange, busy }) => (
+const UserForm4Jp = ({ onSubmit, originalForm, edit, form, onChange, busy, parentError }) => (
   <form onSubmit={onSubmit}>
 
     <h1 className={styles.heading}>入力内容確認</h1>
@@ -26,6 +27,8 @@ const UserForm4Jp = ({ onSubmit, originalForm, edit, form, onChange, busy }) => 
         </div>
       </div>
     )}
+
+    <Err error={parentError} />
 
     <div className={styles.input}>
       <Button busy={busy} type="submit" styleName="modal accent">
@@ -44,6 +47,7 @@ UserForm4Jp.propTypes = {
   onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
   onSubmit: React.PropTypes.func.isRequired,
   busy: React.PropTypes.bool.isRequired,
+  parentError: Err.propTypes.error,
 };
 
 export default UserForm4Jp;

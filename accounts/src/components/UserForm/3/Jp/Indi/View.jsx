@@ -28,6 +28,11 @@ import KanjiNameInput from '../KanjiNameInput';
 
 const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
   <form onSubmit={onSubmit}>
+    {edit ? (
+      <div className={styles.description}>
+        {translate('edit-user:description')}
+      </div>
+    ) : null}
 
     {/*
       BASIC

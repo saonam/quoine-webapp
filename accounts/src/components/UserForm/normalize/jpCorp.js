@@ -28,6 +28,7 @@ const jpTrader = (form) => ({
   position: form.position,
   department: form.department,
   // ===
+  birthdate: toDateString(form.birth),
   gender: form.gender,
   address: form.address,
   phone: form.phone,

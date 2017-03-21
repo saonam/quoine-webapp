@@ -29,6 +29,7 @@ class UserForm4Jp extends React.Component {
         // ===
         originalForm={this.props.form}
         edit={this.props.edit}
+        parentError={this.props.error}
       />
     );
   }
@@ -41,6 +42,7 @@ UserForm4Jp.propTypes = {
   // ===
   edit: React.PropTypes.bool,
   onClose: React.PropTypes.func,
+  ...View.propTypes.error,
 };
 
 export default UserForm4Jp;

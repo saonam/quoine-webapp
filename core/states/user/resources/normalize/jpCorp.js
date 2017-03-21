@@ -22,6 +22,7 @@ const jpTrader = (raw) => ({
   position: raw.position,
   department: raw.department,
   // ===
+  birth: raw.birthdate || 0,
   gender: raw.gender,
   address: raw.address,
   phone: raw.phone,

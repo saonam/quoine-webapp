@@ -27,6 +27,12 @@
   composes: large from "@quoine/styles/text.css";
 }
 
+.error {
+  composes: body;
+  composes: success;
+  composes: negative from "@quoine/styles/color.css";
+}
+
 .message {
   composes: x-large from "@quoine/styles/text.css";
   composes: input;
@@ -43,4 +49,9 @@
   composes: accent-1 from "@quoine/styles/bg-color.css";
   composes: accent from "@quoine/styles/color.css";
   composes: uppercase semi-bold center from "@quoine/styles/text.css";
+}
+
+.description {
+  composes: top-x-large hor-xx-large from "@quoine/styles/padding.css";
+  composes: x-large from "@quoine/styles/text.css";
 }

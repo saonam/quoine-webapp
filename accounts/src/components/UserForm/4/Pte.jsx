@@ -7,9 +7,11 @@ import TextBox from '@quoine/components/TextBox';
 import Checkbox from '@quoine/components/Checkbox';
 import Button from '@quoine/components/ButtonWLoading';
 
+import Err from 'components/UserForm/Err';
+
 import styles from 'components/UserForm/styles.css';
 
-const UserForm4 = ({ onSubmit, form, onChange, busy }) => (
+const UserForm4 = ({ onSubmit, form, onChange, busy, error }) => (
   <form onSubmit={onSubmit}>
 
     <div className={styles.body}>
@@ -36,6 +38,8 @@ const UserForm4 = ({ onSubmit, form, onChange, busy }) => (
 
     </div>
 
+    <Err error={error} />
+
     <div className={styles.input}>
       <Button busy={busy} type="submit" styleName="modal accent">
         {translate('sign-up:action-next')}
@@ -50,6 +54,7 @@ UserForm4.propTypes = {
   onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
   onSubmit: React.PropTypes.func.isRequired,
   busy: React.PropTypes.bool.isRequired,
+  ...Err.propTypes,
 };
 
 export default UserForm4;

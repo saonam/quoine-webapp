@@ -4,6 +4,7 @@ import TextBox from '@quoine/components/TextBox';
 import Input from '@quoine/components/Input';
 import Radios from '@quoine/components/Radios';
 import PhoneInput from '@quoine/components/PhoneInput';
+import DateSelect from '@quoine/components/DateSelect';
 
 import styles from 'components/UserForm/styles.css';
 
@@ -62,6 +63,12 @@ const JpTraderForm = ({ value, onChange }) => (
         </Input>
       </div>
     ) : null}
+
+    <div className={styles.input}>
+      <Input large label="生年月日">
+        <DateSelect value={value.birth} onChange={onChange.birth} />
+      </Input>
+    </div>
 
     <div className={styles.input}>
       <div className={styles.input}>
