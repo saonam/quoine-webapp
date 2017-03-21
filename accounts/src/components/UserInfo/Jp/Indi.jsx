@@ -10,6 +10,11 @@ import Datee from './Datee';
 
 const UserInfoIndi = ({ info, Group, Item }) => (
   <div>
+    <Item>
+      <p>私は、日本以外に居住地国が無いことを確約します。</p>
+      <p>私は、米国納税義務が無いことを確約します。</p>
+    </Item>
+
     <Group heading="個人情報">
       <Item label="名前（漢字）">
         <Name name={info.nameKanji} />

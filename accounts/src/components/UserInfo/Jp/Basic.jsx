@@ -12,10 +12,6 @@ const UserInfoBasic = ({ info, Item }) => (
     <Item label={translate('sign-up:country')}>
       <Country iso={info.country} />
     </Item>
-    <Item>
-      <p>当社は、国内法人であることを確約します。</p>
-      <p>当社は、米国納税義務がないことを確約します。</p>
-    </Item>
   </div>
 );
 

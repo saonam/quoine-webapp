@@ -11,6 +11,11 @@ import Datee from './Datee';
 
 const UserInfoCorp = ({ info, Group, Item }) => (
   <div>
+    <Item>
+      <p>当社は、国内法人であることを確約します。</p>
+      <p>当社は、米国納税義務がないことを確約します。</p>
+    </Item>
+
     <Item label="法人名">
       {info.name}
     </Item>
