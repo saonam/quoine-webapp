@@ -197,7 +197,7 @@ export default {
     "action": "Update user profile",
     "action-submit": "Submit",
     "action-cancel": "Cancel",
-    "description": "If you need to change your US citizen status, please contact us via support@quoine.com or the help button at top right.",
+    "description": "Please contact us at support@quoine.com when you become a US citizen, as KYC/AML regulations will apply differently.",
   },
   "tfa-manage": {
     "phone": "Phone",

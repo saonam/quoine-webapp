@@ -191,7 +191,7 @@ export default {
     "action": "口座情報変更",
     "action-submit": "変更",
     "action-cancel": "取り消し",
-    "description": "If you need to change your US citizen status, please contact us via support@quoine.com or the help button at top right.",
+    "description": "KYC/AMLの規制内容が異なるため、米国居住者となった場合はsupport@quoine.comまでご連絡ください。",
   },
   "tfa-manage": {
     "phone": "携帯番号",
