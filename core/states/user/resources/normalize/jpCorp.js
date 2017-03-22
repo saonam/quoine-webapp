@@ -78,7 +78,7 @@ const jpCorp = (raw) => ({
   type: raw.user_type,
   country: raw.country,
   // ===
-  jpCorp: jpCorpDetail(raw.corporation_info),
+  jpCorp: raw.corporation_info ? jpCorpDetail(raw.corporation_info) : {},
 });
 
 export default jpCorp;

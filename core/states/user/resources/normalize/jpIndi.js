@@ -28,7 +28,7 @@ const jpIndi = (raw) => ({
   type: raw.user_type,
   country: raw.country,
   // ===
-  jpIndi: jpIndiDetail(raw.individual_info),
+  jpIndi: raw.individual_info ? jpIndiDetail(raw.individual_info) : {},
 });
 
 export default jpIndi;
