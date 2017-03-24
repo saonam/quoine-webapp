@@ -35,6 +35,7 @@ export default {
     "target": "種別",
     "target-new": "新規",
     "target-settle": "決済",
+    "target-spot": "指値",
   },
   // ===
   "order": {
@@ -68,6 +69,7 @@ export default {
     // ===
     "target": "指値",
     "target-settle": "指値決済",
+    "target-spot": "指値",
     // ===
     "price-open": "注文レート",
     "price-average": "平均約定レート",
@@ -130,6 +132,7 @@ export default {
     "quantity-min-BTC": "最低発注量は0.01BTCです。",
     "quantity-min-ETH": "最低発注量は0.5ETHです。",
     "quantity-integer": "注文数量は整数を入力してください。",
+    "user-free-margin-below-tolerance-level": "証拠金維持率が110％以下になるため注文することができません",
   },
   // ===
   "position": {

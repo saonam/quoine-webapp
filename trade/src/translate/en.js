@@ -35,6 +35,7 @@ export default {
     "target": "Target",
     "target-new": "New",
     "target-settle": "Settle",
+    "target-spot": "Spot",
   },
   // ===
   "order": {
@@ -68,6 +69,7 @@ export default {
     // ===
     "target": "Target",
     "target-settle": "Settle",
+    "target-spot": "Spot",
     // ===
     "price-open": "Open Price",
     "price-average": "Average Price",
@@ -130,6 +132,7 @@ export default {
     "quantity-min-BTC": "Order quantity must be greater than 0.01 BTC.",
     "quantity-min-ETH": "Order quantity must be greater than 0.5 ETH.",
     "quantity-integer": "Order quantity must be an integer.",
+    "user-free-margin-below-tolerance-level": "Free margin is below tolerance level",
   },
   // ===
   "position": {
