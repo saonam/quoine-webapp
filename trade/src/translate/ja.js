@@ -332,6 +332,7 @@ export default {
     "address": "銀行住所（{{ currency }}）",
     "bank": "口座名義",
     "inr-transfer": "送金方法",
+    "inr-transfer-note": "この振込みの方法はインド銀行口座よりINR入金のみ対応いたします。",
     "code": "トークン",
     "fee": "出金手数料",
     "fee-help": "（銀行手数料は別）",

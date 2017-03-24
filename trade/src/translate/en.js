@@ -332,6 +332,7 @@ export default {
     "address": "{{ currency}} Address",
     "bank": "Bank Account",
     "inr-transfer": "INR Transfer Type",
+    "inr-transfer-note": "This deposit method is only for INR domestic transfers from local India bank accounts.",
     "code": "Authentication Code",
     "fee": "Our Fee",
     "fee-help": "(bank fee not included)",
