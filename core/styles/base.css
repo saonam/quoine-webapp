@@ -13,6 +13,7 @@ html, body, :global(#root) {
 }
 body {
   background: black;
+  min-width: 1024px;
 }
 * {
   box-sizing: border-box;
