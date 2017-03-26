@@ -16,7 +16,7 @@ const AccountOverview = ({ account }) => (
           <span>
             BTC F<Hint style={{ width: 200, left: -50 }} label="(?)">{t('account:hint-futures')}</Hint>
           </span>
-        ): account.currency}
+        ) : account.currency}
       </div>
       <div className={styles.balance}>
         <Field

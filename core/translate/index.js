@@ -1,8 +1,8 @@
 import i18next from 'i18next';
 import baseEn from './en';
 import baseJa from './ja';
-import baseZhCn from './zh-cn';
-import baseZhTw from './zh-tw';
+import baseZhcn from './zhcn';
+import baseZhtw from './zhtw';
 
 // TODO: list of languages should be dynamic
 export const init = (resources) => {
@@ -11,8 +11,8 @@ export const init = (resources) => {
     resources: {
       en: { ...baseEn, ...resources.en },
       ja: { ...baseJa, ...resources.ja },
-      'zh-cn': { ...baseZhCn, ...resources['zh-cn'] },
-      'zh-tw': { ...baseZhTw, ...resources['zh-tw'] },
+      zhcn: { ...baseZhcn, ...resources.zhcn },
+      zhtw: { ...baseZhtw, ...resources.zhtw },
     },
     // debug: true,
   });

@@ -2,7 +2,7 @@ import { init } from '@quoine/translate';
 
 import en from './en';
 import ja from './ja';
-import zhCn from './zh-cn';
-import zhTw from './zh-tw';
+import zhcn from './zhcn';
+import zhtw from './zhtw';
 
-init({ en, ja, 'zh-cn': zhCn, 'zh-tw': zhTw });
+init({ en, ja, zhcn, zhtw });
