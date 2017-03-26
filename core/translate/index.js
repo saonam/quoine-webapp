@@ -11,8 +11,8 @@ export const init = (resources) => {
     resources: {
       en: { ...baseEn, ...resources.en },
       ja: { ...baseJa, ...resources.ja },
-      'zh-cn': { ...baseZhCn, ...resources.zhCn },
-      'zh-tw': { ...baseZhTw, ...resources.zhTw },
+      'zh-cn': { ...baseZhCn, ...resources['zh-cn'] },
+      'zh-tw': { ...baseZhTw, ...resources['zh-tw'] },
     },
     // debug: true,
   });
