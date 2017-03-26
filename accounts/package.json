@@ -3,7 +3,7 @@
   "version": "3.0.6",
   "private": true,
   "dependencies": {
-    "@quoine/core": "^3.7.3",
+    "@quoine/core": "^3.7.4",
     "@quoine/react-scripts": "5.9.5",
     "haikunator": "^2.0.0",
     "react": "^15.4.2",
