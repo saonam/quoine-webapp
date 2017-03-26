@@ -1,4 +1,4 @@
-import { getName, getPurpose, toTimeStamp } from './utils';
+import { getName, getPurpose } from './utils';
 
 const jpIndiDetail = (raw) => ({
   ...getName(raw),

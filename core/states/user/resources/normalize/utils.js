@@ -9,15 +9,13 @@ export const getName = (raw) => ({
   },
 });
 
-export const getValid = (raw) => ({
+export const getValid = () => ({
   jp: true,
   us: true,
   pep: true,
 });
 
-const stringToBoolean = (str) => (
-  str === 'true' ? true : false
-);
+const stringToBoolean = (str) => (str === 'true');
 
 export const getPurpose = (raw) => ({
   exchange: stringToBoolean(raw.exchange),
