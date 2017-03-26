@@ -1,22 +1,20 @@
 import { createSelector } from 'reselect';
 
-const getProducts = state => state.products;
+const getAccounts = state => state.accounts;
 
+// fxRates by USD
 export default createSelector(
-  [getProducts],
-  (products) => {
-    const { keys, models } = products;
+  [getAccounts],
+  (accounts) => {
+    const { keys, models } = accounts;
     const fxRates = {
-      BTC: 1,
+      USD: 1,
     };
 
     keys.forEach(key => {
-      const { baseCurrency, quoteCurrency, bid } = models[key];
-      if (baseCurrency === 'BTC') {
-        fxRates[quoteCurrency] = bid ? (1 / bid) : 0;
-      }
-      if (quoteCurrency === 'BTC') {
-        fxRates[baseCurrency] = bid || 0;
+      const account = models[key];
+      if (account.fxRate) {
+        fxRates[key] = account.fxRate;
       }
     });
 

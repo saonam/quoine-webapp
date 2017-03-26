@@ -1,12 +1,17 @@
 import getCost from './getCost';
 import getFee from './getFee';
-import getInterestInFund from './getInterestInFund';
-import getRate from './getRate';
+import getInterest from './getInterest';
+import getFxRate from './getFxRate';
 
-const calculate = (form, orderBook, interestBook, fees, fxRates) => {
+const calculate = (form, orderBook, interestBook, vendorConfig, fees, fxRates, products) => {
   if (form.market === 'futures') {
     return [];
   }
+
+  // fxRate from quote to fund
+  const { quoteCurrency: quote } = form;
+  const { account: fund } = form;
+  const fxRate = getFxRate({ frm: quote, to: fund, fxRates, products });
 
   // spot & margin here
   // first get est quote cost
@@ -16,7 +21,6 @@ const calculate = (form, orderBook, interestBook, fees, fxRates) => {
   const fee = getFee({ form, costDetail, fees });
 
   // enough to return for spot
-  const { quoteCurrency: quote } = form;
   if (form.market === 'spot') {
     return [
       { name: 'price-average', value: avgPrice, currency: quote },
@@ -26,22 +30,19 @@ const calculate = (form, orderBook, interestBook, fees, fxRates) => {
   }
 
   // now margin
-  // rate from quote to fund
-  const { account: fund } = form;
-  const rate = getRate({ frm: quote, to: fund, fxRates });
-  const feeInFund = fee * rate;
-  const costInFund = cost * rate;
+  const feeInFund = fee * fxRate;
+  const costInFund = cost * fxRate;
   let margin = costInFund / form.leverage;
   // TODO
   // check is crypto account by selector
   if (form.account === 'BTC') {
     margin *= 2;
   }
-  // interest is calculated in quote or base
-  // and already converted to fund there
-  const interestInFund = getInterestInFund({
-    cost, form, interestBook, fxRates,
+  // interest is calculated in QUOTE
+  const interest = getInterest({
+    cost, form, interestBook, vendorConfig, fxRates, products,
   });
+  const interestInFund = interest * fxRate;
 
   const result = [
     { name: 'price-average', value: avgPrice, currency: quote },
@@ -50,15 +51,15 @@ const calculate = (form, orderBook, interestBook, fees, fxRates) => {
     { name: 'interest', value: interestInFund, currency: fund },
   ];
 
-  if (rate !== 1) {
-    const isRateLarge = rate >= 0.01;
+  if (fxRate !== 1) {
+    const isFxRateLarge = fxRate >= 0.01;
     result.push({
       name: 'fx-rate',
       info: {
-        first: isRateLarge ? quote : fund,
-        second: isRateLarge ? fund : quote,
+        first: isFxRateLarge ? quote : fund,
+        second: isFxRateLarge ? fund : quote,
       },
-      value: isRateLarge ? rate : (1 / rate),
+      value: isFxRateLarge ? fxRate : (1 / fxRate),
       currency: 'fxRate',
     });
   }
