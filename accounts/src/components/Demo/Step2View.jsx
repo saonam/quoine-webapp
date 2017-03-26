@@ -2,9 +2,10 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
+
+import LargeField from 'components/LargeField';
 
 import styles from './styles.css';
 
@@ -24,9 +25,9 @@ const Step2View = ({
         ) : null}
       </p>
       <div className={styles.email}>
-        <Input large id="email" label={translate('demo:email')}>
-          <TextBox type="email" value={email} onChange={onEmailChange} />
-        </Input>
+        <LargeField label={translate('demo:email')}>
+          <TextInput type="email" value={email} onChange={onEmailChange} />
+        </LargeField>
       </div>
       <p className={styles.error}>{translate(error)}</p>
     </div>

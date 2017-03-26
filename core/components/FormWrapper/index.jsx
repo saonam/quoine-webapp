@@ -20,11 +20,11 @@ class FormWrapper extends React.Component {
   onSuccessDismiss() {
     this.setState({ success: false });
   }
-  onChange(key, e) {
+  onChange(key, value) {
     this.setState({
       form: {
         ...this.state.form,
-        [key]: e.target.value,
+        [key]: value,
       },
       error: false,
     });

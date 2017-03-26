@@ -12,8 +12,7 @@ class UserForm4Jp extends React.Component {
   }
   onSubmit(form) {
     if (!this.props.edit) {
-      const e = { target: { value: form } };
-      this.props.onChange.jpTerm(e);
+      this.props.onChange.jpTerm(form);
       return this.props.onSubmit();
     }
 

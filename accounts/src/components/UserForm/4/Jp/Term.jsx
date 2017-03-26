@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Input from '@quoine/components/Input';
-import Checkbox from '@quoine/components/Checkbox';
+import CheckboxInput from '@quoine/components/CheckboxInput';
 import Link from '@quoine/components/Link';
+
+import LargeField from 'components/LargeField';
 
 import styles from 'components/UserForm/styles.css';
 
-const UserForm4JpTerm = ({ form, onChange }) => (
+const UserForm4JpTerm = ({ form, onChange, required }) => (
   <div>
     <p className={styles.message}>
       口座開設には、各種規定の承諾、本人確認書類の提出が必要です。
@@ -21,11 +22,14 @@ const UserForm4JpTerm = ({ form, onChange }) => (
     </p>
 
     <div className={styles.input}>
-      <Input large noBorder>
-        <Checkbox id="first" value={form.first} onChange={onChange.first} required>
+      <LargeField>
+        <CheckboxInput
+          id="first" value={form.first}
+          onChange={onChange.first} required={required}
+        >
           同意します
-        </Checkbox>
-      </Input>
+        </CheckboxInput>
+      </LargeField>
     </div>
 
     <ol className={styles.message}>
@@ -56,11 +60,14 @@ const UserForm4JpTerm = ({ form, onChange }) => (
     </ol>
 
     <div className={styles.input}>
-      <Input large noBorder>
-        <Checkbox id="second" value={form.second} onChange={onChange.second} required>
+      <LargeField>
+        <CheckboxInput
+          id="second" value={form.second}
+          onChange={onChange.second} required
+        >
           確認し、同意します。
-        </Checkbox>
-      </Input>
+        </CheckboxInput>
+      </LargeField>
     </div>
 
   </div>
@@ -69,6 +76,7 @@ const UserForm4JpTerm = ({ form, onChange }) => (
 UserForm4JpTerm.propTypes = {
   form: React.PropTypes.shape({}).isRequired,
   onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
+  required: React.PropTypes.bool,
 };
 
 export default UserForm4JpTerm;

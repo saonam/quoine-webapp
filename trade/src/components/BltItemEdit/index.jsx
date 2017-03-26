@@ -5,8 +5,8 @@ import FloatBox from '@quoine/components/FloatBox';
 
 import styles from './styles.css';
 
-const stop = (e) => {
-  e.stopPropagation();
+const stop = (event) => {
+  event.stopPropagation();
 };
 
 const BltItemEdit = (props) => {

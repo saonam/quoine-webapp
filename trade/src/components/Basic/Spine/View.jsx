@@ -2,7 +2,7 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Info from '@quoine/components/InfoInline';
+import Info from '@quoine/components/Field';
 import Spine from '@quoine/components/Spine';
 import { Margin, Pnl, Balance } from '@quoine/components/Account';
 

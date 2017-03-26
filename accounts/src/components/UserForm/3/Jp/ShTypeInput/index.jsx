@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Radio from '@quoine/components/Radio';
+import RadioInput from '@quoine/components/RadioInput';
 
 const keys1 = ['株式会社', '有限会社', '投資法人', '特定目的会社'];
 
@@ -17,22 +17,23 @@ const options2 = [
   '法人を代表し、その法人の業務を執行する個人',
 ].map(value => ({ label: value, value }));
 
-const JpShTypeInput = ({ business, value, onChange, id }) => {
+const JpShTypeInput = ({ business, value, onChange, id, required }) => {
   const options = keys1.indexOf(business) !== -1 ? options1 : options2;
   return (
     <div>
       {options.map(option => (
         <div key={option.value}>
-          <Radio
+          <RadioInput
             name={id}
             value={value}
             option={option.value}
             onChange={onChange}
+            required={required}
           >
             <p style={{ lineHeight: '24px' }}>
               {option.label}
             </p>
-          </Radio>
+          </RadioInput>
         </div>
       ))}
     </div>
@@ -44,6 +45,7 @@ JpShTypeInput.propTypes = {
   id: React.PropTypes.string.isRequired,
   value: React.PropTypes.string.isRequired,
   onChange: React.PropTypes.func.isRequired,
+  required: React.PropTypes.bool,
 };
 
 export default JpShTypeInput;

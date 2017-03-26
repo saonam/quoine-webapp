@@ -13,8 +13,8 @@ class AccountWrapper extends React.Component {
       this.setState({ account: nextProps.currency });
     }
   }
-  onChange(e) {
-    this.setState({ account: e.target.value });
+  onChange(account) {
+    this.setState({ account });
   }
   render() {
     return (

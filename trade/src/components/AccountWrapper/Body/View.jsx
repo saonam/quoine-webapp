@@ -2,7 +2,7 @@ import React from 'react';
 
 import LoadingIconWrapper from '@quoine/components/LoadingIconWrapper';
 
-import Select from '../Select';
+import Select from './Select';
 
 import styles from './styles.css';
 

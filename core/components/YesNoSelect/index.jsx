@@ -2,10 +2,10 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Radios from '@quoine/components/Radios';
+import RadiosInput from '@quoine/components/RadiosInput';
 
 const YesNoSelect = ({ id, value, onChange }) => (
-  <Radios
+  <RadiosInput
     id={id}
     value={value}
     onChange={onChange}

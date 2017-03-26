@@ -2,12 +2,12 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 import Link from '@quoine/components/Link';
 
-import DemoLink from '../DemoLink';
-import SignUpLink from '../SignUpLink';
+import LargeField from 'components/LargeField';
+import DemoLink from 'components/DemoLink';
+import SignUpLink from 'components/SignUpLink';
 
 import styles from './styles.css';
 
@@ -21,11 +21,12 @@ const SignInBody1 = ({ form, onChange, message }) => (
       </p>
     ) : null}
     <div className={styles.input}>
-      <Input large id="email" label={translate('sign-in:email')}>
-        <TextBox
-          type="email" value={form.email} onChange={onChange.email} autoFocus
+      <LargeField label={translate('sign-in:email')}>
+        <TextInput
+          type="email" value={form.email} onChange={onChange.email}
+          autoFocus border
         />
-      </Input>
+      </LargeField>
     </div>
     <div className={styles.subInput}>
       <span>{translate('sign-in:new-text')} </span>
@@ -38,11 +39,12 @@ const SignInBody1 = ({ form, onChange, message }) => (
       ) : null}
     </div>
     <div className={styles.input}>
-      <Input large id="password" label={translate('sign-in:password')}>
-        <TextBox
-          type="password" value={form.password} onChange={onChange.password}
+      <LargeField label={translate('sign-in:password')}>
+        <TextInput
+          type="password" value={form.password}
+          onChange={onChange.password} border
         />
-      </Input>
+      </LargeField>
     </div>
     <div className={styles.subInput}>
       <Link

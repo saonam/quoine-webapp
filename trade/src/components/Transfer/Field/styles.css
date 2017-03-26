@@ -1,0 +1,3 @@
+.children {
+  composes: line-2-5 large from "@quoine/styles/text.css";
+}

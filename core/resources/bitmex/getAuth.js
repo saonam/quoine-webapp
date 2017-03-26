@@ -7,7 +7,7 @@ export default () => (
     apiKey: raw.api_key,
     nonce: raw.nonce,
     signature: raw.signature,
-  })).catch((e) => {
+  })).catch(e => {
     if (e.status === 403) {
       return Promise.resolve({
         ok: false,

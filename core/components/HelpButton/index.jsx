@@ -2,8 +2,8 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Icon from '../Icon';
-import Button from '../Button';
+import Icon from '@quoine/components/Icon';
+import Button from '@quoine/components/Button';
 
 const activateZendesk = () => (
   window.zE.activate()

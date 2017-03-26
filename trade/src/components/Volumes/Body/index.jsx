@@ -14,8 +14,8 @@ class VolumesBody extends React.Component {
     this.onFrmChange = this.onChange.bind(this, 'frm');
     this.onToChange = this.onChange.bind(this, 'to');
   }
-  onChange(side, event) {
-    this.setState({ [side]: event.target.value });
+  onChange(side, value) {
+    this.setState({ [side]: value });
   }
   render() {
     return (

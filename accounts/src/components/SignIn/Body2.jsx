@@ -2,9 +2,10 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 import TFARequest from '@quoine/components/TFARequest';
+
+import LargeField from 'components/LargeField';
 
 import styles from './styles.css';
 
@@ -14,11 +15,12 @@ const SignInBody2 = ({ form, onChange }) => (
       {translate('sign-in:code-description')}
     </p>
     <div className={styles.tfaInput}>
-      <Input large id="code" label={translate('sign-in:code')}>
-        <TextBox
-          type="text" value={form.code} onChange={onChange.code} autoFocus
+      <LargeField label={translate('sign-in:code')}>
+        <TextInput
+          value={form.code} onChange={onChange.code}
+          autoFocus border
         />
-      </Input>
+      </LargeField>
     </div>
     <div className={styles.tfaRequest}>
       <TFARequest

@@ -11,8 +11,8 @@ class TFAManageAddPhone extends React.Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onSubmit(e) {
-    e.preventDefault();
+  onSubmit(event) {
+    event.preventDefault();
 
     this.setState({ busy: true });
     resources.submit(this.state.value).then(phone => {
@@ -20,8 +20,8 @@ class TFAManageAddPhone extends React.Component {
       this.props.goStandby();
     });
   }
-  onChange(e) {
-    this.setState({ value: e.target.value });
+  onChange(value) {
+    this.setState({ value });
   }
   render() {
     const { value, busy } = this.state;

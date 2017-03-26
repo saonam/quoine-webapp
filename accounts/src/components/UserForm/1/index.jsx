@@ -9,9 +9,7 @@ class UserForm1 extends React.Component {
     this.onCorporate = this.onSelect.bind(this, 'corporate');
   }
   onSelect(value) {
-    // fake event
-    const event = { target: { value } };
-    this.props.onChange.type(event);
+    this.props.onChange.type(value);
     this.props.onSubmit();
   }
   render() {

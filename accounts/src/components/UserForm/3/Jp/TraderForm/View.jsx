@@ -1,48 +1,57 @@
 import React from 'react';
 
-import TextBox from '@quoine/components/TextBox';
-import Input from '@quoine/components/Input';
-import Radios from '@quoine/components/Radios';
+import TextInput from '@quoine/components/TextInput';
+import RadiosInput from '@quoine/components/RadiosInput';
 import PhoneInput from '@quoine/components/PhoneInput';
-import DateSelect from '@quoine/components/DateSelect';
+import DateInput from '@quoine/components/DateInput';
 
+import LargeField from 'components/LargeField';
 import styles from 'components/UserForm/styles.css';
 
-import GenderSelect from '../GenderSelect';
-import AddressSelect from '../AddressSelect';
+import GenderInput from '../GenderInput';
+import AddressInput from '../AddressInput';
 import KanaNameInput from '../KanaNameInput';
 import KanjiNameInput from '../KanjiNameInput';
 
-const JpTraderForm = ({ value, onChange }) => (
+const options = [
+  { value: 'yes', label: 'はい' },
+  { value: 'no', label: 'いいえ' },
+];
+
+const JpTraderForm = ({ value, onChange, required, ...others }) => (
   <div className={styles.main}>
 
     <div className={styles.input}>
-      <Input large label="代表者と担当者は同一ですか" noBorder>
-        <Radios
+      <LargeField label="代表者と担当者は同一ですか">
+        <RadiosInput
           id="same-as-rep"
           value={value.sameAsRep}
           onChange={onChange.sameAsRep}
-          options={[
-            { value: 'yes', label: 'はい' },
-            { value: 'no', label: 'いいえ' },
-          ]}
+          options={options}
+          required={required}
         />
-      </Input>
+      </LargeField>
     </div>
 
     <div className={styles.input}>
-      <Input large label="担当者役職名">
-        <TextBox value={value.position} onChange={onChange.position} required />
-      </Input>
+      <LargeField label="担当者役職名">
+        <TextInput
+          value={value.position} onChange={onChange.position}
+          required={required} {...others}
+        />
+      </LargeField>
       <p className={styles.help}>
         ※役職がない場合、「なし」と入力してください。
       </p>
     </div>
 
     <div className={styles.input}>
-      <Input large label="担当者所属部署">
-        <TextBox value={value.department} onChange={onChange.department} required />
-      </Input>
+      <LargeField label="担当者所属部署">
+        <TextInput
+          value={value.department} onChange={onChange.department}
+          required={required} {...others}
+        />
+      </LargeField>
       <p className={styles.help}>
         ※所属部署がない場合、「なし」と入力してください。
       </p>
@@ -50,50 +59,71 @@ const JpTraderForm = ({ value, onChange }) => (
 
     {value.sameAsRep === 'no' ? (
       <div className={styles.input}>
-        <Input large label="担当者氏名">
-          <KanjiNameInput value={value.nameKanji} onChange={onChange.nameKanji} required />
-        </Input>
+        <LargeField label="担当者氏名">
+          <KanjiNameInput
+            value={value.nameKanji} onChange={onChange.nameKanji}
+            required={required} {...others}
+          />
+        </LargeField>
       </div>
     ) : null}
 
     {value.sameAsRep === 'no' ? (
       <div className={styles.input}>
-        <Input large label="担当者氏名(フリガナ)">
-          <KanaNameInput value={value.nameKana} onChange={onChange.nameKana} required />
-        </Input>
+        <LargeField label="担当者氏名(フリガナ)">
+          <KanaNameInput
+            value={value.nameKana} onChange={onChange.nameKana}
+            required={required} {...others}
+          />
+        </LargeField>
       </div>
     ) : null}
 
     <div className={styles.input}>
-      <Input large label="生年月日">
-        <DateSelect value={value.birth} onChange={onChange.birth} />
-      </Input>
+      <LargeField label="生年月日">
+        <DateInput
+          value={value.birth} onChange={onChange.birth}
+          required={required} {...others}
+        />
+      </LargeField>
     </div>
 
     <div className={styles.input}>
       <div className={styles.input}>
-        <Input large label="性別" noBorder>
-          <GenderSelect value={value.gender} onChange={onChange.gender} />
-        </Input>
+        <LargeField label="性別">
+          <GenderInput
+            value={value.gender} onChange={onChange.gender}
+            required={required} {...others}
+          />
+        </LargeField>
       </div>
     </div>
 
     <div className={styles.input}>
-      <Input large label="ご住所">
-        <AddressSelect value={value.address} onChange={onChange.address} required />
-      </Input>
+      <LargeField label="ご住所">
+        <AddressInput
+          value={value.address} onChange={onChange.address}
+          required={required} {...others}
+        />
+      </LargeField>
     </div>
 
     <div className={styles.input}>
-      <Input large label="担当者電話番号">
-        <PhoneInput value={value.phone} onChange={onChange.phone} required />
-      </Input>
+      <LargeField label="担当者電話番号">
+        <PhoneInput
+          value={value.phone} onChange={onChange.phone}
+          required={required} {...others}
+        />
+      </LargeField>
     </div>
 
     <div className={styles.input}>
-      <Input large label="担当者メールアドレス">
-        <TextBox type="email" value={value.email} onChange={onChange.email} required />
-      </Input>
+      <LargeField label="担当者メールアドレス">
+        <TextInput
+          type="email" value={value.email} onChange={onChange.email}
+          required={required} {...others}
+        />
+      </LargeField>
     </div>
 
   </div>
@@ -102,13 +132,14 @@ const JpTraderForm = ({ value, onChange }) => (
 JpTraderForm.propTypes = {
   value: React.PropTypes.shape({}).isRequired,
   onChange: React.PropTypes.shape({}).isRequired,
+  required: React.PropTypes.bool,
 };
 
 /*
   <div className={styles.input}>
-    <Input large label="担当者メールアドレス（確認用）">
-      <TextBox type="email" value={value.email2} onChange={onChange.email2} required />
-    </Input>
+    <LargeField label="担当者メールアドレス（確認用）">
+      <TextInput type="email" value={value.email2} onChange={onChange.email2} required={required} />
+    </LargeField>
   </div>
 */
 

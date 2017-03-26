@@ -2,14 +2,14 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 
 const PhoneInput = (props) => (
-  <TextBox
+  <TextInput
+    {...props}
     type="tel"
     pattern="[0-9]+"
     title={translate('input:phone-title')}
-    {...props}
   />
 );
 

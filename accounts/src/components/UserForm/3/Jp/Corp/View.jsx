@@ -4,26 +4,26 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 import PhoneInput from '@quoine/components/PhoneInput';
-import DateSelect from '@quoine/components/DateSelect';
+import DateInput from '@quoine/components/DateInput';
 import Button from '@quoine/components/Button';
 
 import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
+import LargeField from 'components/LargeField';
 import styles from 'components/UserForm/styles.css';
 
-import AddressSelect from '../AddressSelect';
-import IndustrySelect from '../IndustrySelect';
-import MoneySelect from '../MoneySelect';
-import PurposeSelect from '../PurposeSelect';
-import ExperienceSelect from '../ExperienceSelect';
-import RelationSelect from '../RelationSelect';
+import AddressInput from '../AddressInput';
+import IndustryInput from '../IndustryInput';
+import MoneyInput from '../MoneyInput';
+import PurposeInput from '../PurposeInput';
+import ExperienceInput from '../ExperienceInput';
+import RelationInput from '../RelationInput';
 
-import RepForm from '../RepForm';
+import RepInput from '../RepInput';
 import TraderForm from '../TraderForm';
-import ShsForm from '../ShsForm';
+import ShsInput from '../ShsInput';
 
 const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
   <form onSubmit={onSubmit}>
@@ -41,33 +41,41 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large label="法人名">
-          <TextBox
-            value={form.name} onChange={onChange.name} autoFocus required
+        <LargeField label="法人名">
+          <TextInput
+            value={form.name} onChange={onChange.name}
+            autoFocus border required
           />
-        </Input>
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="フリガナ">
-          <TextBox
-            value={form.nameKana} onChange={onChange.nameKana} required
+        <LargeField label="フリガナ">
+          <TextInput
+            value={form.nameKana} onChange={onChange.nameKana}
             pattern="[゠-ヿ]+" title="カタカナ文字のみ入力してください"
+            border required
           />
-        </Input>
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="ご住所">
-          <AddressSelect value={form.address} onChange={onChange.address} />
-        </Input>
+        <LargeField label="ご住所">
+          <AddressInput
+            value={form.address} onChange={onChange.address}
+            border required
+          />
+        </LargeField>
       </div>
 
       {edit ? null : (
         <div className={styles.input}>
-          <Input large label="電話番号">
-            <PhoneInput value={form.phone} onChange={onChange.phone} required />
-          </Input>
+          <LargeField label="電話番号">
+            <PhoneInput
+              value={form.phone} onChange={onChange.phone}
+              border required
+            />
+          </LargeField>
         </div>
       )}
 
@@ -82,35 +90,50 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large label="業種">
-          <IndustrySelect value={form.industry} onChange={onChange.industry} />
-        </Input>
+        <LargeField label="業種">
+          <IndustryInput
+            value={form.industry} onChange={onChange.industry}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="業務内容">
-          <TextBox value={form.business} onChange={onChange.business} required />
-        </Input>
+        <LargeField label="業務内容">
+          <TextInput
+            value={form.business} onChange={onChange.business}
+            border required
+          />
+        </LargeField>
       </div>
 
       {edit ? null : (
         <div className={styles.input}>
-          <Input large label="設立年月">
-            <DateSelect value={form.established} onChange={onChange.established} date={false} />
-          </Input>
+          <LargeField label="設立年月">
+            <DateInput
+              value={form.established} onChange={onChange.established}
+              date={false} border
+            />
+          </LargeField>
         </div>
       )}
 
       <div className={styles.input}>
-        <Input large label="決算日">
-          <DateSelect value={form.report} onChange={onChange.report} year={false} />
-        </Input>
+        <LargeField label="決算日">
+          <DateInput
+            value={form.report} onChange={onChange.report}
+            year={false} border
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="ホームページアドレス">
-          <TextBox value={form.website} onChange={onChange.website} required />
-        </Input>
+        <LargeField label="ホームページアドレス">
+          <TextInput
+            value={form.website} onChange={onChange.website}
+            border required
+          />
+        </LargeField>
       </div>
 
       <p className={styles.help}>
@@ -126,7 +149,10 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <h1 className={styles.heading}>代表者</h1>
 
     <div className={styles.body}>
-      <RepForm value={form.rep} onChange={onChange.rep} />
+      <RepInput
+        value={form.rep} onChange={onChange.rep}
+        border required
+      />
     </div>
 
     {/*
@@ -136,7 +162,10 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <h1 className={styles.heading}>実質的支配者</h1>
 
     <div className={styles.body}>
-      <ShsForm value={form.shs} onChange={onChange.shs} />
+      <ShsInput
+        value={form.shs} onChange={onChange.shs}
+        border required
+      />
     </div>
 
     {/*
@@ -146,7 +175,10 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <h1 className={styles.heading}>担当者（口座管理者）情報</h1>
 
     <div className={styles.body}>
-      <TraderForm value={form.trader} onChange={onChange.trader} />
+      <TraderForm
+        value={form.trader} onChange={onChange.trader}
+        border required
+      />
     </div>
 
     {/*
@@ -158,33 +190,42 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large label="事業体の年商">
-          <MoneySelect value={form.incomeGross} onChange={onChange.incomeGross} />
-        </Input>
+        <LargeField label="事業体の年商">
+          <MoneyInput
+            value={form.incomeGross} onChange={onChange.incomeGross}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="事業体の税抜き後年間所得">
-          <MoneySelect value={form.incomeNet} onChange={onChange.incomeNet} />
-        </Input>
+        <LargeField label="事業体の税抜き後年間所得">
+          <MoneyInput
+            value={form.incomeNet} onChange={onChange.incomeNet}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="事業体の自己資本">
-          <MoneySelect value={form.capital} onChange={onChange.capital} />
-        </Input>
+        <LargeField label="事業体の自己資本">
+          <MoneyInput
+            value={form.capital} onChange={onChange.capital}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="投資目的" noBorder>
-          <PurposeSelect value={form.purpose} onChange={onChange.purpose} />
-        </Input>
+        <LargeField label="投資目的">
+          <PurposeInput value={form.purpose} onChange={onChange.purpose} border />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="投資経験">
-          <ExperienceSelect value={form.experience} onChange={onChange.experience} />
-        </Input>
+        <LargeField label="投資経験">
+          <ExperienceInput value={form.experience} onChange={onChange.experience} required />
+        </LargeField>
       </div>
 
     </div>
@@ -200,9 +241,12 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
         <div className={styles.body}>
 
           <div className={styles.input}>
-            <Input large label="申込の経緯">
-              <RelationSelect value={form.relation} onChange={onChange.relation} />
-            </Input>
+            <LargeField label="申込の経緯">
+              <RelationInput
+                value={form.relation} onChange={onChange.relation}
+                border required
+              />
+            </LargeField>
           </div>
 
         </div>

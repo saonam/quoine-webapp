@@ -2,11 +2,11 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
-import Checkbox from '@quoine/components/Checkbox';
+import TextInput from '@quoine/components/TextInput';
+import CheckboxInput from '@quoine/components/CheckboxInput';
 import Button from '@quoine/components/ButtonWLoading';
 
+import LargeField from 'components/LargeField';
 import Err from 'components/UserForm/Err';
 
 import styles from 'components/UserForm/styles.css';
@@ -17,13 +17,16 @@ const UserForm4 = ({ onSubmit, form, onChange, busy, error }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large id="referral" label={translate('sign-up:referral')}>
-          <TextBox autoFocus type="text" value={form.referral} onChange={onChange.referral} />
-        </Input>
+        <LargeField label={translate('sign-up:referral')}>
+          <TextInput
+            value={form.referral} onChange={onChange.referral}
+            autoFocus border
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Checkbox id="term" value={form.term} onChange={onChange.term} required>
+        <CheckboxInput id="term" value={form.term} onChange={onChange.term} required>
           <span
             className={styles.term}
             // eslint-disable-next-line react/no-danger
@@ -33,7 +36,7 @@ const UserForm4 = ({ onSubmit, form, onChange, busy, error }) => (
               }`),
             }}
           />
-        </Checkbox>
+        </CheckboxInput>
       </div>
 
     </div>

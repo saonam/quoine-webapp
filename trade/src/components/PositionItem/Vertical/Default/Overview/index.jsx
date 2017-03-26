@@ -26,7 +26,7 @@ const Padding = ({ position }) => (
   ) : null
 );
 
-const stop = (e) => { e.stopPropagation(); };
+const stop = (event) => { event.stopPropagation(); };
 
 const PositionItemOverview = ({ position }) => (
   <div>

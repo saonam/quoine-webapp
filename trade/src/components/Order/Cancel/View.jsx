@@ -7,8 +7,8 @@ import Confirm from './Confirm';
 
 import styles from './styles.css';
 
-const stop = (e) => {
-  e.stopPropagation();
+const stop = (event) => {
+  event.stopPropagation();
 };
 
 const OrderCancelView = ({ activity, order, layout }) => {

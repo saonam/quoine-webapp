@@ -1,6 +1,6 @@
 import name from '@quoine/components/NameInput/initialForm';
 
-import address from '../AddressSelect/initialForm';
+import address from '../AddressInput/initialForm';
 
 export default {
   sameAsRep: 'no',

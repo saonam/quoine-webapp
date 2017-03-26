@@ -1,8 +1,6 @@
 import React from 'react';
 
-import translate from '@quoine/translate';
-
-import InfoInline from '@quoine/components/InfoInline';
+import Field from './Field';
 
 import Id from '../Id';
 import Time from '../Time';
@@ -14,32 +12,14 @@ import styles from './styles.css';
 
 const WdrItemDetail = ({ withdrawal }) => (
   <div className={styles.main}>
-    <div>
-      <InfoInline label={translate('withdrawal:id')}>
-        <Id withdrawal={withdrawal} />
-      </InfoInline>
-    </div>
-    <div>
-      <InfoInline label={translate('withdrawal:time')}>
-        <Time withdrawal={withdrawal} type="full" />
-      </InfoInline>
-    </div>
-    <div>
-      <InfoInline label={translate('withdrawal:quantity')}>
-        <Quantity withdrawal={withdrawal} />
-      </InfoInline>
-    </div>
-    <div>
-      {withdrawal.type === 'fiat' ? (
-        <InfoInline label={translate('withdrawal:bank')}>
-          <Bank withdrawal={withdrawal} />
-        </InfoInline>
-      ) : (
-        <InfoInline label={translate('withdrawal:address', { currency: withdrawal.account })}>
-          <Address withdrawal={withdrawal} />
-        </InfoInline>
-      )}
-    </div>
+    <Field id="id"><Id withdrawal={withdrawal} /></Field>
+    <Field id="time"><Time withdrawal={withdrawal} type="full" /></Field>
+    <Field id="quantity"><Quantity withdrawal={withdrawal} /></Field>
+    {withdrawal.type === 'fiat' ? (
+      <Field id="bank"><Bank withdrawal={withdrawal} /></Field>
+    ) : (
+      <Field id="address" currency={withdrawal.account}><Address withdrawal={withdrawal} /></Field>
+    )}
   </div>
 );
 

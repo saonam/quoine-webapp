@@ -16,9 +16,9 @@ class FuturesBalance extends React.Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onChange(e) {
+  onChange(quantity) {
     this.setState({
-      quantity: e.target.value, error: false, success: false,
+      quantity, error: false, success: false,
     });
   }
   onSubmit(event) {

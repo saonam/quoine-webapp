@@ -2,12 +2,13 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Info from '@quoine/components/InfoHorizontal';
 import ColorBySide from '@quoine/components/ColorBySide';
 import Hr from '@quoine/components/Hr';
 
 import Position from 'components/MrgAcc/Position';
 import Pnl from 'components/MrgAcc/Pnl';
+
+import Field from 'components/MrgAccDetail/Field';
 
 import styles from './styles.css';
 
@@ -19,28 +20,20 @@ const MrgAccDetailConfirmBody = ({ mrgAcc, side }) => (
     </p>
 
     <div className={styles.input}>
-      <Info label={translate('mrg-acc:account')}>
-        {mrgAcc.account}
-      </Info>
-      <Info label={translate('mrg-acc:product')}>
-        {mrgAcc.product}
-      </Info>
-      <Info label={translate('mrg-acc:side')}>
+      <Field id="account">{mrgAcc.account}</Field>
+      <Field id="product">{mrgAcc.product}</Field>
+      <Field id="side">
         <ColorBySide side={side}>
           {translate(`mrg-acc:side-${side}`)}
         </ColorBySide>
-      </Info>
+      </Field>
     </div>
 
     <Hr />
 
     <div>
-      <Info label={translate('mrg-acc:position-total')}>
-        <Position mrgAcc={mrgAcc} side={side} />
-      </Info>
-      <Info label={translate('mrg-acc:pnl-total')}>
-        <Pnl mrgAcc={mrgAcc} side={side} />
-      </Info>
+      <Field id="position-total"><Position mrgAcc={mrgAcc} side={side} /></Field>
+      <Field id="pnl-total"><Pnl mrgAcc={mrgAcc} side={side} /></Field>
     </div>
 
   </div>

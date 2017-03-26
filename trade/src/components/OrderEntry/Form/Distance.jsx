@@ -2,15 +2,13 @@ import { withBoth } from 'components/OrderEntry/utils';
 
 import React from 'react';
 
-import translate from '@quoine/translate';
-
-import TextBoxNumber from '@quoine/components/TextBoxNumber';
-import Input from '@quoine/components/Input';
+import NumberInput from '@quoine/components/NumberInput';
+import Field from './Field';
 
 const OrderEntryFormDistance = ({ form, onChange }) => (
-  <Input id="order-entry-distance" label={translate('order:distance')}>
-    <TextBoxNumber onChange={onChange} value={form.distance} />
-  </Input>
+  <Field id="distance">
+    <NumberInput onChange={onChange} value={form.distance} border />
+  </Field>
 );
 
 OrderEntryFormDistance.propTypes = {

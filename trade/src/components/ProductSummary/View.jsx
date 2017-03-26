@@ -2,7 +2,7 @@ import React from 'react';
 
 import t from '@quoine/translate';
 
-import Info from '@quoine/components/InfoHighlight';
+import Field from '@quoine/components/Field';
 
 import Price from 'components/Product/Price';
 import Change from 'components/Product/Change';
@@ -19,9 +19,9 @@ const ProductSummary = ({ product }) => (
         <Change product={product} />
       </div>
       <div className={styles.last}>
-        <Info label={t('product:last')}>
+        <Field label={t('product:last')} layout="reverse">
           <Price product={product} type="last" />
-        </Info>
+        </Field>
       </div>
     </div>
   ) : null

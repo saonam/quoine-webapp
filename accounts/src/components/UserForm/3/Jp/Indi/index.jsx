@@ -10,8 +10,7 @@ class UserForm3JpIndi extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit(form) {
-    const e = { target: { value: form } };
-    this.props.onChange.jpIndi(e);
+    this.props.onChange.jpIndi(form);
     return this.props.onSubmit();
   }
   render() {

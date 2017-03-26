@@ -4,25 +4,25 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
 import Button from '@quoine/components/Button';
-import DateSelect from '@quoine/components/DateSelect';
-import Checkbox from '@quoine/components/Checkbox';
+import DateInput from '@quoine/components/DateInput';
+import CheckboxInput from '@quoine/components/CheckboxInput';
 import PhoneInput from '@quoine/components/PhoneInput';
 import Link from '@quoine/components/Link';
 
 import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
+import LargeField from 'components/LargeField';
 import styles from 'components/UserForm/styles.css';
 
-import AddressSelect from '../AddressSelect';
-import OccupationSelect from '../OccupationSelect';
-import SourceSelect from '../SourceSelect';
-import MoneySelect from '../MoneySelect';
-import ExperienceSelect from '../ExperienceSelect';
-import PurposeSelect from '../PurposeSelect';
-import GenderSelect from '../GenderSelect';
-import RelationSelect from '../RelationSelect';
+import AddressInput from '../AddressInput';
+import OccupationInput from '../OccupationInput';
+import SourceInput from '../SourceInput';
+import MoneyInput from '../MoneyInput';
+import ExperienceInput from '../ExperienceInput';
+import PurposeInput from '../PurposeInput';
+import GenderInput from '../GenderInput';
+import RelationInput from '../RelationInput';
 import KanaNameInput from '../KanaNameInput';
 import KanjiNameInput from '../KanjiNameInput';
 
@@ -43,39 +43,51 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large label="名前（漢字）">
-          <KanjiNameInput value={form.nameKanji} onChange={onChange.nameKanji} autoFocus required />
-        </Input>
+        <LargeField label="名前（漢字）">
+          <KanjiNameInput
+            value={form.nameKanji} onChange={onChange.nameKanji}
+            autoFocus border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="名前（カナ）">
-          <KanaNameInput value={form.nameKana} onChange={onChange.nameKana} required />
-        </Input>
+        <LargeField label="名前（カナ）">
+          <KanaNameInput
+            value={form.nameKana} onChange={onChange.nameKana}
+            border required
+          />
+        </LargeField>
       </div>
 
       {edit ? null : (
-        <div>
-          <div className={styles.input}>
-            <Input large label="生年月日">
-              <DateSelect value={form.birth} onChange={onChange.birth} />
-            </Input>
-          </div>
+        <div className={styles.input}>
+          <LargeField label="生年月日">
+            <DateInput
+              value={form.birth} onChange={onChange.birth}
+              border required
+            />
+          </LargeField>
+        </div>
+      )}
 
-          <div className={styles.input}>
-            <Input large label="性別" noBorder>
-              <GenderSelect value={form.gender} onChange={onChange.gender} />
-            </Input>
-          </div>
+      {edit ? null : (
+        <div className={styles.input}>
+          <LargeField label="性別">
+            <GenderInput
+              value={form.gender} onChange={onChange.gender}
+              border required
+            />
+          </LargeField>
         </div>
       )}
 
       <div className={styles.input}>
-        <Input large label="外国政府等の重要な公人" noBorder>
-          <Checkbox id="pep" value={form.pep} onChange={onChange.pep} required>
+        <LargeField label="外国政府等の重要な公人">
+          <CheckboxInput id="pep" value={form.pep} onChange={onChange.pep} required>
             私は外国の重要な公人、もしくはその親族ではありません。
-          </Checkbox>
-        </Input>
+          </CheckboxInput>
+        </LargeField>
         <p className={styles.help}>
           <Link pathname="/jp/pep.html" target="_blank" styleName="accent text">
             外国PEPsについて
@@ -94,16 +106,22 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large label="住所">
-          <AddressSelect value={form.address} onChange={onChange.address} />
-        </Input>
+        <LargeField label="住所">
+          <AddressInput
+            value={form.address} onChange={onChange.address}
+            border required
+          />
+        </LargeField>
       </div>
 
       {edit ? null : (
         <div className={styles.input}>
-          <Input large label="電話番号">
-            <PhoneInput value={form.phone} onChange={onChange.phone} required />
-          </Input>
+          <LargeField label="電話番号">
+            <PhoneInput
+              value={form.phone} onChange={onChange.phone}
+              border required
+            />
+          </LargeField>
         </div>
       )}
 
@@ -118,9 +136,12 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large label="ご職業">
-          <OccupationSelect value={form.occupation} onChange={onChange.occupation} />
-        </Input>
+        <LargeField label="ご職業">
+          <OccupationInput
+            value={form.occupation} onChange={onChange.occupation}
+            border required
+          />
+        </LargeField>
         <p className={styles.help}>
           ※「学生」で収入源に「給与所得」「事業所得」がある場合、ご職業は「パート・アルバイト・派遣・契約」または「自営業」を選択してください。
         </p>
@@ -128,17 +149,23 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       {['専業主婦（主夫）', '無職'].indexOf(form.occupation.job) === -1 ? (
         <div className={styles.input}>
-          <Input large label="勤務先住所">
-            <AddressSelect value={form.workAddress} onChange={onChange.workAddress} />
-          </Input>
+          <LargeField label="勤務先住所">
+            <AddressInput
+              value={form.workAddress} onChange={onChange.workAddress}
+              border required
+            />
+          </LargeField>
         </div>
       ) : null}
 
       {['専業主婦（主夫）', '無職'].indexOf(form.occupation.job) === -1 ? (
         <div className={styles.input}>
-          <Input large label="電話番号">
-            <PhoneInput value={form.workPhone} onChange={onChange.workPhone} required />
-          </Input>
+          <LargeField label="電話番号">
+            <PhoneInput
+              value={form.workPhone} onChange={onChange.workPhone}
+              border required
+            />
+          </LargeField>
         </div>
       ) : null}
 
@@ -153,49 +180,58 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large label="主な収入源">
-          <SourceSelect value={form.source} onChange={onChange.source} />
-        </Input>
+        <LargeField label="主な収入源">
+          <SourceInput
+            value={form.source} onChange={onChange.source}
+            border required
+          />
+        </LargeField>
         <p className={styles.help}>
           ※ご本人様の収入となり、配偶者の収入、仕送り等は含まれません。
         </p>
       </div>
 
       <div className={styles.input}>
-        <Input large label="年収">
-          <MoneySelect value={form.income} onChange={onChange.income} />
-        </Input>
+        <LargeField label="年収">
+          <MoneyInput
+            value={form.income} onChange={onChange.income}
+            border required
+          />
+        </LargeField>
         <p className={styles.help}>
           ※ご本人様の収入となり、配偶者の収入、仕送り等は含まれません。
         </p>
       </div>
 
       <div className={styles.input}>
-        <Input large label="投資可能資産">
-          <MoneySelect value={form.investable} onChange={onChange.investable} />
-        </Input>
+        <LargeField label="投資可能資産">
+          <MoneyInput
+            value={form.investable} onChange={onChange.investable}
+            border required
+          />
+        </LargeField>
       </div>
 
       {['専業主婦（主夫）', '学生', '無職'].indexOf(form.occupation.job) !== -1 ? (
         <div className={styles.input}>
-          <Input large label="投資可能資産はご自身の資産でお間違えありませんか？" noBorder>
-            <Checkbox id="permission" value={form.permission} onChange={onChange.permission} required>
+          <LargeField label="投資可能資産はご自身の資産でお間違えありませんか？">
+            <CheckboxInput id="permission" value={form.permission} onChange={onChange.permission} required>
               はい
-            </Checkbox>
-          </Input>
+            </CheckboxInput>
+          </LargeField>
         </div>
       ) : null}
 
       <div className={styles.input}>
-        <Input large label="投資目的" noBorder>
-          <PurposeSelect value={form.purpose} onChange={onChange.purpose} />
-        </Input>
+        <LargeField label="投資目的">
+          <PurposeInput value={form.purpose} onChange={onChange.purpose} border />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large label="投資経験">
-          <ExperienceSelect value={form.experience} onChange={onChange.experience} />
-        </Input>
+        <LargeField label="投資経験">
+          <ExperienceInput value={form.experience} onChange={onChange.experience} required />
+        </LargeField>
       </div>
 
     </div>
@@ -211,9 +247,12 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
         <div className={styles.body}>
 
           <div className={styles.input}>
-            <Input large label="申込の経緯">
-              <RelationSelect value={form.relation} onChange={onChange.relation} />
-            </Input>
+            <LargeField label="申込の経緯">
+              <RelationInput
+                value={form.relation} onChange={onChange.relation}
+                border required
+              />
+            </LargeField>
           </div>
 
         </div>

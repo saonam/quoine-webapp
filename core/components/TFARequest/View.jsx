@@ -2,7 +2,7 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Button from '../ButtonWLoading';
+import Button from '@quoine/components/ButtonWLoading';
 
 import styles from './styles.css';
 

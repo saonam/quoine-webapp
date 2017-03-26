@@ -4,9 +4,8 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Select from '@quoine/components/Select';
-import Input from '@quoine/components/Input';
-import Hint from '@quoine/components/Hint';
+import SelectInput from '@quoine/components/SelectInput';
+import Field from './Field';
 
 const rawOptions = ['one-direction', 'two-direction', 'netout'];
 
@@ -17,27 +16,12 @@ const getOptions = () => (
 );
 
 const OrderEntryFormDirection = ({ form, onChange }) => (
-  <Input
-    id="order-entry-direction"
-    label={
-      <span>
-        {translate('order:direction')}
-        <span>&nbsp;</span>
-        <Hint style={{ width: 200, left: -100 }}>
-          <p
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: translate('order:direction-help'),
-            }}
-          />
-        </Hint>
-      </span>
-    }
-  >
-    <Select
-      onChange={onChange} value={form.direction} options={getOptions()}
+  <Field id="direction" hintStyle={{ width: 200, left: -130 }}>
+    <SelectInput
+      onChange={onChange} value={form.direction}
+      options={getOptions()} border
     />
-  </Input>
+  </Field>
 );
 
 OrderEntryFormDirection.propTypes = {

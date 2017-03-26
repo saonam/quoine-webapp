@@ -15,13 +15,13 @@ class SignOutContainer extends React.Component {
     this.onAllChange = this.onAllChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onAllChange(event) {
-    this.setState({ all: event.target.value });
+  onAllChange(all) {
+    this.setState({ all });
   }
-  onSubmit(e) {
-    // need e because we attach this to form's submit event
+  onSubmit(event) {
+    // need event because we attach this to form's submit event
     // not just a button
-    e.preventDefault();
+    event.preventDefault();
 
     if (this.state.busy) { return; }
     this.setState({ busy: true, error: '' });

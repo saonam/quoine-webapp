@@ -1,10 +1,10 @@
 import name from '@quoine/components/NameInput/initialForm';
 
-import address from '../AddressSelect/initialForm';
-import occupation from '../OccupationSelect/initialForm';
-import purpose from '../PurposeSelect/initialForm';
-import experience from '../ExperienceSelect/initialForm';
-import relation from '../RelationSelect/initialForm';
+import address from '../AddressInput/initialForm';
+import occupation from '../OccupationInput/initialForm';
+import purpose from '../PurposeInput/initialForm';
+import experience from '../ExperienceInput/initialForm';
+import relation from '../RelationInput/initialForm';
 
 export default {
   nameKanji: name,

@@ -3,8 +3,9 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import FormInline from '@quoine/components/FormInline';
-import Input from '@quoine/components/InputInline';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
+
+import LargeField from 'components/LargeField';
 
 import styles from './styles.css';
 
@@ -19,24 +20,21 @@ const ChangePasswordFormView = (props) => (
     error={props.error ? translate(props.error) : ''}
   >
     <div className={styles.input}>
-      <Input
-        id="current" label={translate('change-password:input-current')}
-      >
-        <TextBox
-          type="password" value={props.current} autoFocus
+      <LargeField label={translate('change-password:input-current')} layout="inline">
+        <TextInput
+          type="password" value={props.current}
           onChange={props.onCurrentChange}
+          autoFocus border
         />
-      </Input>
+      </LargeField>
     </div>
     <div className={styles.input}>
-      <Input
-        id="next" label={translate('change-password:input-next')}
-      >
-        <TextBox
+      <LargeField label={translate('change-password:input-next')} layout="inline">
+        <TextInput
           type="password" value={props.next}
-          onChange={props.onNextChange}
+          onChange={props.onNextChange} border
         />
-      </Input>
+      </LargeField>
     </div>
   </FormInline>
 );

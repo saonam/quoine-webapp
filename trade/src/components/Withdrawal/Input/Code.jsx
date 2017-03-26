@@ -1,20 +1,21 @@
 import React from 'react';
+
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 import TFARequest from '@quoine/components/TFARequest';
+import Field from 'components/Transfer/Field';
 
 const WdrInputCode = ({ form, onChange }) => (
   <div>
-    <Input id="withdrawal-code" label={translate('withdrawal:code')}>
-      <TextBox
+    <Field label={translate('withdrawal:code')}>
+      <TextInput
         value={form.code}
         onChange={onChange.code}
+        border
         required
-        type="text"
       />
-    </Input>
+    </Field>
     <TFARequest skipFirst useEmail />
   </div>
 );

@@ -2,22 +2,20 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import Select from '@quoine/components/Select';
+import SelectInput from '@quoine/components/SelectInput';
+import Field from 'components/Transfer/Field';
 
 const WdrBankSelect = ({ current, onChange, all }) => (
-  <Input
-    id="withdrawal-bank"
-    label={translate('withdrawal:bank')}
-  >
-    <Select
+  <Field label={translate('withdrawal:bank')}>
+    <SelectInput
       value={current}
       onChange={onChange}
       options={all.map(bank => ({
         label: bank['bank-name'], value: bank.id,
       }))}
+      border required
     />
-  </Input>
+  </Field>
 );
 
 WdrBankSelect.propTypes = {

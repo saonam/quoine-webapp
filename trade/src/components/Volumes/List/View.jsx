@@ -3,7 +3,7 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Loading from '@quoine/components/LoadingIconWrapper';
-import Info from '@quoine/components/InfoHorizontal';
+import Field from '@quoine/components/Field';
 import Money from '@quoine/components/Money';
 import ColorByAccount from '@quoine/components/ColorByAccount';
 
@@ -20,11 +20,11 @@ const VolumesList = ({ busy, volumes }) => (
         {volumes.map(({ account, value }) => (
           value ? (
             <div key={account} className={styles.item}>
-              <Info label={account}>
+              <Field label={account} layout="justify">
                 <ColorByAccount account={account}>
                   <Money value={value} currency={account} />
                 </ColorByAccount>
-              </Info>
+              </Field>
             </div>
           ) : null
         ))}

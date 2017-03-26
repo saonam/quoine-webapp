@@ -8,8 +8,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onChange: (event) => dispatch({
-    type: TYPES.SET_ACCOUNT, payload: event.target.value,
+  onChange: (value) => dispatch({
+    type: TYPES.SET_ACCOUNT, payload: value,
   }),
 });
 

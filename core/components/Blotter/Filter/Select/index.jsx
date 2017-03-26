@@ -7,8 +7,8 @@ class BlotterFilterSelect extends React.PureComponent {
     super(props);
     this.onChange = this.onChange.bind(this);
   }
-  onChange(e) {
-    this.props.onSet({ [this.props.name]: e.target.value });
+  onChange(value) {
+    this.props.onSet({ [this.props.name]: value });
   }
   render() {
     // eslint-disable-next-line no-unused-vars

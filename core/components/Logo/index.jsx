@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Image from '../Image';
+import Image from '@quoine/components/Image';
 
 import styles from './styles.css';
 

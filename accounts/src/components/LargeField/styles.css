@@ -1,0 +1,8 @@
+.children {
+  composes: x-large line-4 left from "@quoine/styles/text.css";
+}
+/* ugly fix */
+/* TODO */
+.children input {
+  text-align: left;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Button from '../Button';
-import LoadingIcon from '../LoadingIcon';
+import Button from '@quoine/components/Button';
+import LoadingIcon from '@quoine/components/LoadingIcon';
 
 import styles from './styles.css';
 

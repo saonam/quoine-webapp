@@ -2,7 +2,7 @@ import React from 'react';
 
 import t from '@quoine/translate';
 
-import Info from '@quoine/components/InfoHighlight';
+import Field from '@quoine/components/Field';
 
 import Price from 'components/Product/Price';
 import PriceLabel from 'components/Product/PriceLabel';
@@ -21,19 +21,28 @@ const ProductOverview = ({ product, fixed }) => (
         <Change product={product} />
       </div>
       <div className={styles.bid}>
-        <Info label={<PriceLabel product={product} type="bid" />}>
+        <Field
+          label={<PriceLabel product={product} type="bid" />}
+          layout="reverse"
+        >
           <Price product={product} type="bid" />
-        </Info>
+        </Field>
       </div>
       <div className={styles.ask}>
-        <Info label={<PriceLabel product={product} type="ask" />}>
+        <Field
+          label={<PriceLabel product={product} type="ask" />}
+          layout="reverse"
+        >
           <Price product={product} type="ask" />
-        </Info>
+        </Field>
       </div>
       <div className={styles.volume}>
-        <Info label={t('product:volume')}>
+        <Field
+          label={t('product:volume')}
+          layout="reverse"
+        >
           <Volume product={product} />
-        </Info>
+        </Field>
       </div>
     </div>
   ) : null

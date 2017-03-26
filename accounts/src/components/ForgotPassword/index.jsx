@@ -16,16 +16,16 @@ class ForgotPasswordContainer extends React.Component {
     this.onEmailChange = this.onEmailChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onEmailChange(event) {
+  onEmailChange(email) {
     this.setState({
-      email: event.target.value,
+      email,
       sent: false, // email is changed => haven't sent yet
     });
   }
-  onSubmit(e) {
-    // need e because we attach this to form's submit event
+  onSubmit(event) {
+    // need event because we attach this to form's submit event
     // not just a button
-    e.preventDefault();
+    event.preventDefault();
 
     if (this.state.busy) { return; }
     this.setState({ busy: true, error: '', sent: false });

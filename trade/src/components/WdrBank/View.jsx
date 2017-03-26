@@ -4,8 +4,8 @@ import translate from '@quoine/translate';
 
 import Loading from '@quoine/components/LoadingIconWrapper';
 import Button from '@quoine/components/Button';
-import Input from '@quoine/components/Input';
 
+import Field from 'components/Transfer/Field';
 import BankDetail from 'components/BankDetail';
 
 import Select from './Select';
@@ -20,13 +20,13 @@ const WdrBank = ({ busy, current, all, open, onToggle, onAdd }) => {
 
   if (all.length === 0) {
     return (
-      <Input id="withdrawal-bank" label={translate('withdrawal:bank')}>
+      <Field label={translate('withdrawal:bank')}>
         <div className={styles.aloneButton}>
           <Button styleName="accent text full" onClick={onAdd}>
             {translate('bank:add-action')}
           </Button>
         </div>
-      </Input>
+      </Field>
     );
   }
 

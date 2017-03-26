@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Select from '@quoine/components/Select';
+import SelectInput from '@quoine/components/SelectInput';
 import Loading from '@quoine/components/LoadingIcon';
 import Color from '@quoine/components/Color';
 
@@ -14,7 +14,7 @@ const PositionLeverageFuturesView = ({ busy, leverage, onChange }) => (
   busy ? (
     <Color styleName="accent"><Loading /></Color>
   ) : (
-    <Select value={leverage} options={options} onChange={onChange} />
+    <SelectInput value={leverage} options={options} onChange={onChange} />
   )
 );
 

@@ -37,8 +37,8 @@ class TokenAddForm extends React.Component {
       },
     });
   }
-  onSubmit(e) {
-    e.preventDefault();
+  onSubmit(event) {
+    event.preventDefault();
     this.props.onAdd(this.state.form);
     this.props.onCancel();
   }

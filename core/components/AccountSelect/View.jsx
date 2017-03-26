@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Select from '@quoine/components/Select';
+import SelectInput from '@quoine/components/SelectInput';
 
 const AccountSelect = ({ accounts, value, onChange }) => (
-  <Select
+  <SelectInput
     options={accounts.map(account => ({
       label: account === 'XBT' ? 'BTC (Futures)' : account,
       value: account,

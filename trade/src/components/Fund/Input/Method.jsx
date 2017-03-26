@@ -1,18 +1,20 @@
 import React from 'react';
+
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import Select from '@quoine/components/Select';
+import SelectInput from '@quoine/components/SelectInput';
+import Field from 'components/Transfer/Field';
 
 const FundInputMethod = ({ form, onChange }) => (
-  <Input id="fund-method" label={translate('fund:method')}>
-    <Select
+  <Field label={translate('fund:method')}>
+    <SelectInput
       value={form.method} onChange={onChange.method}
       options={['cash', 'bank'].map(value => ({
         value, label: translate(`fund:method-${value}`),
       }))}
+      border required
     />
-  </Input>
+  </Field>
 );
 
 FundInputMethod.propTypes = {

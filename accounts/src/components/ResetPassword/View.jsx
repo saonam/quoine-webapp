@@ -3,9 +3,10 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Modal from '@quoine/components/Modal';
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
+
+import LargeField from 'components/LargeField';
 
 import styles from './styles.css';
 
@@ -22,14 +23,12 @@ const ForgotPassword = ({
           {translate('reset-password:description')}
         </p>
         <div className={styles.password}>
-          <Input
-            large id="new-password"
-            label={translate('reset-password:new-password')}
-          >
-            <TextBox
-              type="password" value={password} onChange={onPasswordChange}
+          <LargeField label={translate('reset-password:new-password')}>
+            <TextInput
+              type="password" value={password}
+              onChange={onPasswordChange} border
             />
-          </Input>
+          </LargeField>
         </div>
         <p className={styles.error}>
           {translate(error)}

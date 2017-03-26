@@ -2,15 +2,13 @@ import { withBoth } from 'components/OrderEntry/utils';
 
 import React from 'react';
 
-import translate from '@quoine/translate';
-
-import TextBoxNumber from '@quoine/components/TextBoxNumber';
-import Input from '@quoine/components/Input';
+import NumberInput from '@quoine/components/NumberInput';
+import Field from './Field';
 
 const OrderEntryFormQuantity = ({ form, onChange }) => (
-  <Input id="order-entry-quantity" label={translate('order:quantity')}>
-    <TextBoxNumber onChange={onChange} value={form.quantity} />
-  </Input>
+  <Field id="quantity">
+    <NumberInput onChange={onChange} value={form.quantity} border />
+  </Field>
 );
 
 OrderEntryFormQuantity.propTypes = {

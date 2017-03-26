@@ -9,11 +9,11 @@ class FormNumberInPlace extends React.PureComponent {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onChange(e) {
-    this.setState({ value: e.target.value });
+  onChange(event) {
+    this.setState({ value: event.target.value });
   }
-  onSubmit(e) {
-    e.preventDefault();
+  onSubmit(event) {
+    event.preventDefault();
     this.props.onSubmit(this.state.value);
     this.props.onCancel();
   }

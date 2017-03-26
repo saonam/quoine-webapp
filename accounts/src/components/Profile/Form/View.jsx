@@ -3,7 +3,7 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Button from '@quoine/components/ButtonWLoading';
-import FileSelect from '@quoine/components/FileSelect';
+import FileInput from '@quoine/components/FileInput';
 
 import Row from 'components/SettingsRow';
 
@@ -18,17 +18,17 @@ const ProfileForm = ({
 }) => (
   <div>
     <Row label={translateLabel(user, 'user:document-id')}>
-      <FileSelect
+      <FileInput
         id="document-id" value={form.id} onChange={onChange.id}
       />
     </Row>
     <Row label={translateLabel(user, 'user:document-address')}>
-      <FileSelect
+      <FileInput
         id="document-address" value={form.address} onChange={onChange.address}
       />
     </Row>
     <Row label={translateLabel(user, 'user:document-bank')}>
-      <FileSelect
+      <FileInput
         id="document-bank" value={form.bank} onChange={onChange.bank}
       />
     </Row>

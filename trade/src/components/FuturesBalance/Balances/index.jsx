@@ -1,10 +1,9 @@
 import React from 'react';
 
-import translate from '@quoine/translate';
-
 import Money from '@quoine/components/Money';
-import Info from '@quoine/components/InfoVertical';
 import ColorFlashing from '@quoine/components/ColorFlashing';
+
+import Field from './Field';
 
 import styles from './styles.css';
 
@@ -12,23 +11,23 @@ const FuturesBalanceBalances = ({ btc, futures }) => (
   <div className={styles.main}>
 
     <div className={styles.item}>
-      <Info label={translate('futures-balance:balance-btc')}>
+      <Field id="balance-btc">
         <ColorFlashing value={btc.balance}>
           <Money value={btc.balance} currency={btc.currency} />
         </ColorFlashing>
-      </Info>
+      </Field>
     </div>
 
     <div className={styles.item}>
-      <Info><span>→</span></Info>
+      <Field><span>→</span></Field>
     </div>
 
     <div className={styles.item}>
-      <Info label={translate('futures-balance:balance-futures')}>
+      <Field id="balance-futures">
         <ColorFlashing value={futures.balance}>
           <Money value={futures.balance} currency={futures.currency} />
         </ColorFlashing>
-      </Info>
+      </Field>
     </div>
   </div>
 );

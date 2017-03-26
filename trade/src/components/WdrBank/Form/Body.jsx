@@ -2,74 +2,57 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
-import CountrySelect from '@quoine/components/CountrySelect';
-import FileSelect from '@quoine/components/FileSelect';
-import Checkbox from '@quoine/components/Checkbox';
+import CheckboxInput from '@quoine/components/CheckboxInput';
+import Item from './Item';
 
 import styles from './styles.css';
 
+/* eslint-disable quote-props */
+
 const fields = [
-  { id: 'bank-name', Element: TextBox },
-  { id: 'bank-branch', Element: TextBox },
-  { id: 'bank-address', Element: TextBox },
-  { id: 'bank-swift', Element: TextBox },
-  { id: 'account-name', Element: TextBox },
-  { id: 'account-number', Element: TextBox },
-  { id: 'country', Element: CountrySelect },
-  { id: 'document', Element: FileSelect },
-  { id: 'reason', Element: TextBox },
+  'bank-name',
+  'bank-branch',
+  'bank-address',
+  'bank-swift',
+  'account-name',
+  'account-number',
+  'country',
+  'document',
+  'reason',
 ];
 
 const jointFields = [
-  { id: 'joint-account-name', Element: TextBox },
-  { id: 'joint-address', Element: TextBox },
-  { id: 'joint-city', Element: TextBox },
-  { id: 'joint-country', Element: CountrySelect },
-  { id: 'joint-document-address', Element: FileSelect },
-  { id: 'joint-document-id', Element: FileSelect },
+  'joint-account-name',
+  'joint-address',
+  'joint-city',
+  'joint-country',
+  'joint-document-address',
+  'joint-document-id',
 ];
 
 const WdrBankFormBody = ({ form, onChange }) => (
   <div>
-
-    {fields.map(({ id, Element }) => (
+    {fields.map(id => (
       <div key={id} className={styles.item}>
-        <Input id={id} label={translate(`bank:${id}`)}>
-          <Element
-            id={id}
-            value={form[id]}
-            onChange={onChange[id]}
-            required
-          />
-        </Input>
+        <Item id={id} value={form[id]} onChange={onChange[id]} />
       </div>
     ))}
 
     <div className={styles.item}>
-      <Checkbox
+      <CheckboxInput
         id="joint-account"
         value={form['joint-account']}
         onChange={onChange['joint-account']}
       >
         {translate('bank:joint-account')}
-      </Checkbox>
+      </CheckboxInput>
     </div>
 
-    {form['joint-account'] ? jointFields.map(({ id, Element }) => (
+    {form['joint-account'] ? jointFields.map(id => (
       <div key={id} className={styles.item}>
-        <Input id={id} label={translate(`bank:${id}`)}>
-          <Element
-            id={id}
-            value={form[id]}
-            onChange={onChange[id]}
-            required
-          />
-        </Input>
+        <Item id={id} value={form[id]} onChange={onChange[id]} />
       </div>
     )) : null}
-
   </div>
 );
 

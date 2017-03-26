@@ -3,9 +3,9 @@ import { TYPES } from 'states/orderEntry';
 
 const withOrderEntryOnChange = (View, propName) => {
   const mapDispatchToProps = (dispatch) => ({
-    onChange: (e) => dispatch({
+    onChange: (value) => dispatch({
       type: TYPES.SET_FORM,
-      payload: { propName, value: e.target.value },
+      payload: { propName, value },
     }),
   });
   return connect(null, mapDispatchToProps)(View);

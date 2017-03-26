@@ -1,8 +1,0 @@
-.main {
-  composes: flex jc-space-between from "@quoine/styles/flex.css";
-}
-.value {
-}
-.label {
-  composes: primary-3 from "@quoine/styles/color.css";
-}

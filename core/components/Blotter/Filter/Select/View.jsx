@@ -2,7 +2,7 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Select from '@quoine/components/Select';
+import SelectInput from '@quoine/components/SelectInput';
 
 const BlotterFilterSelectView = ({
   values, current, onChange, namespace, name,
@@ -12,7 +12,7 @@ const BlotterFilterSelectView = ({
     value,
   }));
   return (
-    <Select options={options} value={current} onChange={onChange} autosize />
+    <SelectInput options={options} value={current} onChange={onChange} autosize />
   );
 };
 

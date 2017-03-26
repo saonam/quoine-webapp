@@ -3,7 +3,7 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Button from '@quoine/components/Button';
-import Checkbox from '@quoine/components/Checkbox';
+import CheckboxInput from '@quoine/components/CheckboxInput';
 
 import Row from 'components/SettingsRow';
 
@@ -19,12 +19,12 @@ const TokenAddFormView = ({ form, onChange, onSubmit, onCancel }) => (
         <div className={styles.name}>
           {Object.keys(form[name]).map(action => (
             <div className={styles.action} key={action}>
-              <Checkbox
+              <CheckboxInput
                 id={`${name}-${action}`}
                 value={form[name][action]} onChange={onChange[name][action]}
               >
                 {translate(`token:action-${action}`)}
-              </Checkbox>
+              </CheckboxInput>
             </div>
           ))}
         </div>

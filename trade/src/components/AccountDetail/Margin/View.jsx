@@ -1,32 +1,30 @@
 import React from 'react';
 
-import translate from '@quoine/translate';
-
-import Info from '@quoine/components/InfoHorizontal';
 import {
   Pnl, Balance, Equity, Margin, MarginCoverage,
 } from '@quoine/components/Account';
+import Field from 'components/AccountDetail/Field';
 
 const AccountDetailMargin = ({ account }) => (
   <div>
-    <Info label={translate('account:pnl')}>
+    <Field id="pnl">
       {account ? <Pnl account={account} /> : ''}
-    </Info>
-    <Info label={translate('account:balance')}>
+    </Field>
+    <Field id="balance">
       {account ? <Balance account={account} /> : ''}
-    </Info>
-    <Info label={translate('account:equity')}>
+    </Field>
+    <Field id="equity">
       {account ? <Equity account={account} /> : ''}
-    </Info>
-    <Info label={translate('account:margin-used')}>
+    </Field>
+    <Field id="margin-used">
       {account ? <Margin account={account} type="used" /> : ''}
-    </Info>
-    <Info label={translate('account:margin-available')}>
+    </Field>
+    <Field id="margin-available">
       {account ? <Margin account={account} type="available" /> : ''}
-    </Info>
-    <Info label={translate('account:margin-coverage')}>
+    </Field>
+    <Field id="margin-coverage">
       {account ? <MarginCoverage account={account} /> : ''}
-    </Info>
+    </Field>
   </div>
 );
 

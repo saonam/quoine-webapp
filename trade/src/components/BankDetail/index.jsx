@@ -2,10 +2,8 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Info from '@quoine/components/InfoVertical';
 import Hint from '@quoine/components/Hint';
-
-import Item from './Item';
+import Field from './Field';
 
 import styles from './styles.css';
 
@@ -28,29 +26,29 @@ const NAMES = [
 const BankDetail = ({ bank }) => (
   <div className={styles.main}>
     {NAMES.map(name => (
-      <Item key={name} bank={bank} name={name} />
+      bank[name] ? (
+        <Field key={name} id={name}>
+          {bank[name]}
+        </Field>
+      ) : null
     ))}
     {bank.document ? (
-      <div className={styles.item}>
-        <Info label={translate('bank:document')}>
-          {translate('bank:document-uploaded')}
-        </Info>
-      </div>
+      <Field id="document">
+        {translate('bank:document-uploaded')}
+      </Field>
     ) : null}
     {bank.status ? (
-      <div className={styles.item}>
-        <Info label={translate('bank:status')}>
-          {translate(`bank:status-${bank.status}`)}
-          {bank.status === 'pending' ? (
-            <span>
-              <span>&nbsp;</span>
-              <Hint style={{ width: 160, left: -10 }}>
-                {translate('bank:status-pending-help')}
-              </Hint>
-            </span>
-          ) : null}
-        </Info>
-      </div>
+      <Field id="status">
+        {translate(`bank:status-${bank.status}`)}
+        {bank.status === 'pending' ? (
+          <span>
+            <span>&nbsp;</span>
+            <Hint style={{ width: 160, left: -10 }}>
+              {translate('bank:status-pending-help')}
+            </Hint>
+          </span>
+        ) : null}
+      </Field>
     ) : null}
   </div>
 );

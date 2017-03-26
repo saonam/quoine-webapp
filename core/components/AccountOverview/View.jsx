@@ -2,7 +2,7 @@ import React from 'react';
 
 import t from '@quoine/translate';
 
-import Info from '@quoine/components/InfoHighlight';
+import Field from '@quoine/components/Field';
 import Hint from '@quoine/components/Hint';
 import { Margin, Pnl, Balance } from '@quoine/components/Account';
 
@@ -19,19 +19,28 @@ const AccountOverview = ({ account }) => (
         ): account.currency}
       </div>
       <div className={styles.balance}>
-        <Info label={t('account:balance')}>
+        <Field
+          label={t('account:balance')}
+          layout="reverse"
+        >
           <Balance account={account} />
-        </Info>
+        </Field>
       </div>
       <div className={styles.pnl}>
-        <Info label={t('account:pnl')}>
+        <Field
+          label={t('account:pnl')}
+          layout="reverse"
+        >
           <Pnl account={account} />
-        </Info>
+        </Field>
       </div>
       <div className={styles.margin}>
-        <Info label={t('account:margin-used')}>
+        <Field
+          label={t('account:margin-used')}
+          layout="reverse"
+        >
           <Margin type="used" account={account} />
-        </Info>
+        </Field>
       </div>
     </div>
   ) : null

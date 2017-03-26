@@ -1,8 +1,0 @@
-.value {
-  composes: left-small from "@quoine/styles/margin.css";
-  composes: break-word from "@quoine/styles/text.css";
-}
-.label {
-  composes: primary-3 from "@quoine/styles/color.css";
-  composes: nowrap from "@quoine/styles/text.css";
-}

@@ -4,8 +4,8 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Select from '@quoine/components/Select';
-import Input from '@quoine/components/Input';
+import SelectInput from '@quoine/components/SelectInput';
+import Field from './Field';
 
 const rawOptions = ['fiat', 'percentage'];
 
@@ -16,13 +16,12 @@ const getOptions = () => (
 );
 
 const OrderEntryFormDistanceType = ({ form, onChange }) => (
-  <Input
-    id="order-entry-distance-type" label={translate('order:distance-type')}
-  >
-    <Select
-      onChange={onChange} value={form.distanceType} options={getOptions()}
+  <Field id="distance-type">
+    <SelectInput
+      onChange={onChange} value={form.distanceType}
+      options={getOptions()} border
     />
-  </Input>
+  </Field>
 );
 
 OrderEntryFormDistanceType.propTypes = {

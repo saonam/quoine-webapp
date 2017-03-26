@@ -22,7 +22,7 @@ class WdrInputAddress extends React.Component {
     resources.load(this.props.form.account)
     .then(recents => {
       if (recents && recents[0]) {
-        this.props.onChange.address({ target: { value: recents[0] } });
+        this.props.onChange.address(recents[0]);
         this.setState({ recents });
       }
     });

@@ -1,8 +1,6 @@
 import React from 'react';
 
-import translate from '@quoine/translate';
-
-import InfoInline from '@quoine/components/InfoInline';
+import Field from './Field';
 
 import Time from '../Time';
 import Amount from '../Amount';
@@ -13,26 +11,10 @@ import styles from './styles.css';
 
 const FundItemDetailCash = ({ fund }) => (
   <div className={styles.main}>
-    <div>
-      <InfoInline label={translate('fund:time')}>
-        <Time fund={fund} type="full" />
-      </InfoInline>
-    </div>
-    <div>
-      <InfoInline label={translate('fund:amount')}>
-        <Amount fund={fund} />
-      </InfoInline>
-    </div>
-    <div>
-      <InfoInline label={translate('fund:guide')}>
-        <Guide fund={fund} />
-      </InfoInline>
-    </div>
-    <div>
-      <InfoInline label={translate('fund:deadline')}>
-        <Deadline fund={fund} />
-      </InfoInline>
-    </div>
+    <Field id="time"><Time fund={fund} type="full" /></Field>
+    <Field id="amount"><Amount fund={fund} /></Field>
+    <Field id="guide"><Guide fund={fund} /></Field>
+    <Field id="deadline"><Deadline fund={fund} /></Field>
   </div>
 );
 

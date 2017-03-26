@@ -5,9 +5,9 @@ import Message from './Message';
 
 import styles from './styles.css';
 
-// const disableOverlay = (e) => (
+// const disableOverlay = (event) => (
 //   // eslint-disable-next-line no-param-reassign
-//   e.target.style.pointerEvents = 'none'
+//   event.target.style.pointerEvents = 'none'
 // );
 
 const Charts = ({ error, double }) => {

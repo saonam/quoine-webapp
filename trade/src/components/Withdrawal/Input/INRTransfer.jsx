@@ -2,22 +2,20 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-
-import Select from 'components/INRTransferSelect';
+import Select from 'components/INRTransferInput';
+import Field from 'components/Transfer/Field';
 
 const WdrInputINRTransfer = ({ form, onChange }) => (
   <div>
-    <Input
-      id="withdrawal-inr-transfer"
-      label={translate('withdrawal:inr-transfer')}
-    >
+    <Field label={translate('withdrawal:inr-transfer')}>
       <Select
         type="withdrawal"
         value={form.INRTransfer}
         onChange={onChange.INRTransfer}
+        border
+        required
       />
-    </Input>
+    </Field>
     <p>
       {translate('withdrawal:inr-transfer-note')}
     </p>

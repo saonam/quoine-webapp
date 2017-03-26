@@ -4,7 +4,7 @@ import translate from '@quoine/translate';
 
 import ConfirmWrapper from '@quoine/components/ConfirmWrapper';
 import Money from '@quoine/components/Money';
-import Info from '@quoine/components/InfoInline';
+import Info from '@quoine/components/Field';
 
 import styles from './styles.css';
 

@@ -2,15 +2,13 @@ import { withBoth } from 'components/OrderEntry/utils';
 
 import React from 'react';
 
-import translate from '@quoine/translate';
-
-import TextBoxNumber from '@quoine/components/TextBoxNumber';
-import Input from '@quoine/components/Input';
+import NumberInput from '@quoine/components/NumberInput';
+import Field from './Field';
 
 const OrderEntryFormQuantityDisclose = ({ form, onChange }) => (
-  <Input id="order-entry-quantity" label={translate('order:qty-disc')}>
-    <TextBoxNumber onChange={onChange} value={form.quantityDisclose} />
-  </Input>
+  <Field id="qty-disc">
+    <NumberInput onChange={onChange} value={form.quantityDisclose} border />
+  </Field>
 );
 
 OrderEntryFormQuantityDisclose.propTypes = {

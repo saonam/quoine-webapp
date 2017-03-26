@@ -3,7 +3,7 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Modal from '@quoine/components/Modal';
-import Checkbox from '@quoine/components/Checkbox';
+import CheckboxInput from '@quoine/components/CheckboxInput';
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
 
 import styles from './styles.css';
@@ -25,9 +25,9 @@ const SignOutView = ({ onSubmit, all, onAllChange, error, busy }) => (
           }}
         />
         <div className={styles.input}>
-          <Checkbox id="all" value={all} onChange={onAllChange}>
+          <CheckboxInput id="all" value={all} onChange={onAllChange}>
             {translate('sign-out:all')}
-          </Checkbox>
+          </CheckboxInput>
         </div>
         <p className={styles.error}>
           {translate(error)}

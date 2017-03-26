@@ -2,16 +2,16 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Checkbox from '@quoine/components/Checkbox';
+import CheckboxInput from '@quoine/components/CheckboxInput';
 import LoadingIconWrapper from '@quoine/components/LoadingIconWrapper';
 
 const DailyReportView = ({ value, onToggle, busy }) => (
   busy ? (
     <LoadingIconWrapper type="height" />
   ) : (
-    <Checkbox id="daily-report" value={value} onChange={onToggle}>
+    <CheckboxInput id="daily-report" value={value} onChange={onToggle}>
       {translate('daily-report:label')}
-    </Checkbox>
+    </CheckboxInput>
   )
 );
 

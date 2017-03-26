@@ -21,19 +21,19 @@ class SignInContainer extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
     this.onBack = this.onBack.bind(this);
   }
-  onChangeBase(name, event) {
+  onChangeBase(key, value) {
     const form = Object.assign({}, this.state.form, {
-      [name]: event.target.value,
+      [key]: value,
     });
     this.setState({ form });
   }
   onBack() {
     this.setState({ step: 1, error: '' });
   }
-  onSubmit(e) {
-    // need e because we attach this to form's submit event
+  onSubmit(event) {
+    // need event because we attach this to form's submit event
     // not just a button
-    e.preventDefault();
+    event.preventDefault();
 
     if (this.state.busy) { return; }
     this.setState({ busy: true, error: '' });

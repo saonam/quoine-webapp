@@ -2,7 +2,7 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import DateSelect from '@quoine/components/DateSelect';
+import DateInput from '@quoine/components/DateInput';
 import Button from '@quoine/components/Button';
 
 import styles from './styles.css';
@@ -14,13 +14,13 @@ const VolumesFilterActive = ({
     <div className={styles.input}>
       <div className={styles.label}>{translate('volume:from')}</div>
       <div className={styles.select}>
-        <DateSelect value={frm} onChange={onFrmChange} minYear={2012} />
+        <DateInput value={frm} onChange={onFrmChange} minYear={2012} />
       </div>
     </div>
     <div className={styles.input}>
       <div className={styles.label}>{translate('volume:to')}</div>
       <div className={styles.select}>
-        <DateSelect value={to} onChange={onToChange} minYear={2012} />
+        <DateInput value={to} onChange={onToChange} minYear={2012} />
       </div>
     </div>
     <div className={styles.row}>

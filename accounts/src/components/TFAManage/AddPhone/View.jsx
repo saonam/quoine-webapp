@@ -3,8 +3,9 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import FormInline from '@quoine/components/FormInline';
-import Input from '@quoine/components/InputInline';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
+
+import LargeField from 'components/LargeField';
 
 import styles from './styles.css';
 
@@ -19,9 +20,12 @@ const TFAManageAddPhoneView = (props) => (
     busy={props.busy}
   >
     <div className={styles.input}>
-      <Input id="phone" label={translate('tfa-manage:add-phone-label')}>
-        <TextBox value={props.value} onChange={props.onChange} autoFocus />
-      </Input>
+      <LargeField label={translate('tfa-manage:add-phone-label')} layout="inline">
+        <TextInput
+          value={props.value} onChange={props.onChange}
+          autoFocus border
+        />
+      </LargeField>
     </div>
   </FormInline>
 );

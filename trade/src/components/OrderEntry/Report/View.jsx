@@ -1,9 +1,6 @@
 import React from 'react';
 
-import translate from '@quoine/translate';
-
 import ReportWrapper from '@quoine/components/ReportWrapper';
-import Info from '@quoine/components/InfoHorizontal';
 import Hr from '@quoine/components/Hr';
 import {
   Created,
@@ -18,23 +15,24 @@ import {
   Status,
   Type,
 } from 'components/Order';
+import Field from './Field';
 
 const OrderEntryReport = ({ order, onSet }) => (
   <ReportWrapper onSet={onSet} id="order-add" layout="hero">
-    <Info label={translate('order:id')}><Id order={order} /></Info>
-    <Info label={translate('order:created-at')}><Created order={order} /></Info>
+    <Field id="id"><Id order={order} /></Field>
+    <Field id="created-at"><Created order={order} /></Field>
     <Hr />
-    <Info label={translate('order:product')}><Product order={order} /></Info>
-    <Info label={translate('order:side')}><Side order={order} /></Info>
-    <Info label={translate('order:type')}><Type order={order} /></Info>
-    <Info label={translate('order:price')}><Price order={order} /></Info>
-    <Info label={translate('order:quantity')}><Quantity order={order} /></Info>
+    <Field id="product"><Product order={order} /></Field>
+    <Field id="side"><Side order={order} /></Field>
+    <Field id="type"><Type order={order} /></Field>
+    <Field id="price"><Price order={order} /></Field>
+    <Field id="quantity"><Quantity order={order} /></Field>
     <Hr />
-    <Info label={translate('order:leverage')}><Leverage order={order} /></Info>
-    <Info label={translate('order:margin')}><Margin order={order} /></Info>
-    <Info label={translate('order:interest')}><Interest order={order} /></Info>
+    <Field id="leverage"><Leverage order={order} /></Field>
+    <Field id="margin"><Margin order={order} /></Field>
+    <Field id="interest"><Interest order={order} /></Field>
     <Hr />
-    <Info label={translate('order:status')}><Status order={order} /></Info>
+    <Field id="status"><Status order={order} /></Field>
   </ReportWrapper>
 );
 

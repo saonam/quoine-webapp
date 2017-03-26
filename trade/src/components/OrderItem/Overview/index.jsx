@@ -15,7 +15,7 @@ import {
 
 import styles from './styles.css';
 
-const stop = (e) => { e.stopPropagation(); };
+const stop = (event) => { event.stopPropagation(); };
 
 const OrderItemOverview = ({ order }) => (
   <div>

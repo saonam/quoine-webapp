@@ -1,13 +1,17 @@
 import React from 'react';
+
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBoxNumber from '@quoine/components/TextBoxNumber';
+import NumberInput from '@quoine/components/NumberInput';
+import Field from 'components/Transfer/Field';
 
 const FundInputAmount = ({ form, onChange }) => (
-  <Input id="fund-amount" label={translate('fund:amount')}>
-    <TextBoxNumber value={form.amount} onChange={onChange.amount} required />
-  </Input>
+  <Field label={translate('fund:amount')}>
+    <NumberInput
+      value={form.amount} onChange={onChange.amount}
+      border required
+    />
+  </Field>
 );
 
 FundInputAmount.propTypes = {

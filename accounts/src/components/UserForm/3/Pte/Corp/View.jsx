@@ -4,9 +4,10 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 import Button from '@quoine/components/Button';
+
+import LargeField from 'components/LargeField';
 
 import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
@@ -17,39 +18,57 @@ const UserForm3PteCorpView = ({ form, onChange, onSubmit }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large id="name" label={translate('sign-up-pc:name')}>
-          <TextBox value={form.name} onChange={onChange.name} autoFocus required />
-        </Input>
+        <LargeField label={translate('sign-up-pc:name')}>
+          <TextInput
+            value={form.name} onChange={onChange.name}
+            autoFocus border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large id="type" label={translate('sign-up-pc:type')}>
-          <TextBox value={form.type} onChange={onChange.type} required />
-        </Input>
+        <LargeField label={translate('sign-up-pc:type')}>
+          <TextInput
+            value={form.type} onChange={onChange.type}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large id="address" label={translate('sign-up:address')}>
-          <TextBox type="text" value={form.address} onChange={onChange.address} required />
-        </Input>
+        <LargeField label={translate('sign-up:address')}>
+          <TextInput
+            value={form.address} onChange={onChange.address}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large id="website" label={translate('sign-up:website')}>
-          <TextBox type="text" value={form.website} onChange={onChange.website} required />
-        </Input>
+        <LargeField label={translate('sign-up:website')}>
+          <TextInput
+            value={form.website} onChange={onChange.website}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large id="tax" label={translate('sign-up:tax')}>
-          <TextBox type="text" value={form.tax} onChange={onChange.tax} required />
-        </Input>
+        <LargeField label={translate('sign-up:tax')}>
+          <TextInput
+            value={form.tax} onChange={onChange.tax}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large id="vat" label={translate('sign-up:vat')}>
-          <TextBox type="text" value={form.vat} onChange={onChange.vat} />
-        </Input>
+        <LargeField label={translate('sign-up:vat')}>
+          <TextInput
+            value={form.vat} onChange={onChange.vat}
+            border
+          />
+        </LargeField>
       </div>
 
     </div>

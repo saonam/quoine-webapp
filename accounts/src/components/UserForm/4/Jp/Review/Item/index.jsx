@@ -1,12 +1,11 @@
 import React from 'react';
 
-import styles from './styles.css';
+import Field from '@quoine/components/Field';
 
 const UserForm4JpReviewItem = ({ label, children }) => (
-  <div className={styles.main}>
-    <h1 className={styles.label}>{label || ' '}</h1>
-    <h1 className={styles.children}>{children}</h1>
-  </div>
+  <Field label={label || ''} layout="1:2">
+    {children}
+  </Field>
 );
 
 UserForm4JpReviewItem.propTypes = {

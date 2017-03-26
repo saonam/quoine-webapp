@@ -4,7 +4,6 @@ import translate from '@quoine/translate';
 
 import { withCondition } from 'components/OrderEntry/utils';
 
-import Info from '@quoine/components/InfoHorizontal';
 import Hr from '@quoine/components/Hr';
 import ColorBySide from '@quoine/components/ColorBySide';
 import {
@@ -17,69 +16,70 @@ import {
   Quantity,
 } from 'components/Order';
 import Calculation from 'components/OrderCalculation';
+import Field from './Field';
 
 const DirectionInfo = withCondition(
   ({ form }) => (
-    <Info label={translate('order:direction')}>
+    <Field id="direction">
       <Direction order={form} />
-    </Info>
+    </Field>
   ), 'direction',
 );
 
 const DistanceInfo = withCondition(
   ({ form }) => (
-    <Info label={translate('order:distance')}>
+    <Field id="distance">
       <Distance order={form} />
-    </Info>
+    </Field>
   ), 'distance',
 );
 
 const LeverageInfo = withCondition(
   ({ form }) => (
-    <Info label={translate('order:leverage')}>
+    <Field id="leverage">
       <Leverage order={form} />
-    </Info>
+    </Field>
   ), 'leverage',
 );
 
 const PriceInfo = withCondition(
   ({ form }) => (
-    <Info label={translate('order:price')}>
+    <Field id="price">
       <Price order={form} />
-    </Info>
+    </Field>
   ), 'price',
 );
 
 const QuantityInfo = withCondition(
   ({ form }) => (
-    <Info label={translate('order:quantity')}>
+    <Field id="quantity">
       <Quantity order={form} />
-    </Info>
+    </Field>
   ), 'quantity',
 );
 
 const QuantityDiscloseInfo = withCondition(
   ({ form }) => (
-    <Info label={translate('order:quantity-disclose')}>
+    <Field id="quantity-disclose">
       <Quantity order={form} type="disclose" />
-    </Info>
+    </Field>
   ), 'quantityDisclose',
 );
 
 const OrderEntryConfirmBody = ({ form, side }) => (
   <div>
 
-    <Info label={translate('order:product')}>
+    <Field id="product">
       <Product order={form} />
-    </Info>
-    <Info label={translate('order:side')}>
+    </Field>
+    <Field id="side">
       <ColorBySide side={side}>
         {translate(`order:side-${side}`)}
       </ColorBySide>
-    </Info>
-    <Info label={translate('order:type')}>
+    </Field>
+    <Field id="type">
       <Type order={form} />
-    </Info>
+    </Field>
 
     <Hr />
 

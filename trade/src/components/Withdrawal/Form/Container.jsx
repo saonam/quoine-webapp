@@ -19,8 +19,8 @@ class WdrForm extends React.Component {
       }), {});
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onChange(key, event) {
-    this.setState({ [key]: event.target.value });
+  onChange(key, value) {
+    this.setState({ [key]: value });
   }
   onSubmit(event) {
     event.preventDefault();

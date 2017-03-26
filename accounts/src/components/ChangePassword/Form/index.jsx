@@ -18,13 +18,14 @@ class ChangePasswordForm extends React.Component {
     this.onNextChange = this.onChange.bind(this, 'next');
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onChange(prop, e) {
+  onChange(key, value) {
     this.setState({
-      [prop]: e.target.value, error: '',
+      [key]: value,
+      error: '',
     });
   }
-  onSubmit(e) {
-    e.preventDefault();
+  onSubmit(event) {
+    event.preventDefault();
 
     this.setState({ busy: true });
 

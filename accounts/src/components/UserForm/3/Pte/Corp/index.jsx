@@ -10,8 +10,7 @@ class UserForm3PteCorp extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit(form) {
-    const e = { target: { value: form } };
-    this.props.onChange.pteCorp(e);
+    this.props.onChange.pteCorp(form);
     return this.props.onSubmit();
   }
   render() {

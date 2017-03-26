@@ -3,9 +3,10 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import FormInline from '@quoine/components/FormInline';
-import Input from '@quoine/components/InputInline';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 import TFARequest from '@quoine/components/TFARequest';
+
+import LargeField from 'components/LargeField';
 
 import styles from './styles.css';
 
@@ -24,9 +25,12 @@ const TFAManageToggleView = (props) => {
         error={props.error ? translate(props.error) : ''}
       >
         <div className={styles.input}>
-          <Input id="code" label={translate('tfa-manage:toggle-label')}>
-            <TextBox value={props.value} onChange={props.onChange} autoFocus />
-          </Input>
+          <LargeField label={translate('tfa-manage:toggle-label')} layout="inline">
+            <TextInput
+              value={props.value} onChange={props.onChange}
+              autoFocus border
+            />
+          </LargeField>
         </div>
       </FormInline>
       <TFARequest />

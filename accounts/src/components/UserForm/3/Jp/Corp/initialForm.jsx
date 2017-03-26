@@ -1,10 +1,10 @@
-import address from '../AddressSelect/initialForm';
-import purpose from '../PurposeSelect/initialForm';
-import experience from '../ExperienceSelect/initialForm';
-import relation from '../RelationSelect/initialForm';
-import industry from '../IndustrySelect/initialForm';
+import address from '../AddressInput/initialForm';
+import purpose from '../PurposeInput/initialForm';
+import experience from '../ExperienceInput/initialForm';
+import relation from '../RelationInput/initialForm';
+import industry from '../IndustryInput/initialForm';
 
-import rep from '../RepForm/initialForm';
+import rep from '../RepInput/initialForm';
 import trader from '../TraderForm/initialForm';
 
 export default {

@@ -3,10 +3,10 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Modal from '@quoine/components/Modal';
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 
-import SignInHeaderLink from '../SignInHeaderLink';
+import LargeField from 'components/LargeField';
+import SignInHeaderLink from 'components/SignInHeaderLink';
 
 import SubmitButton from './SubmitButton';
 import styles from './styles.css';
@@ -25,9 +25,12 @@ const ForgotPassword = ({
           {translate('forgot-password:description')}
         </p>
         <div className={styles.email}>
-          <Input large id="email" label={translate('forgot-password:email')}>
-            <TextBox type="email" value={email} onChange={onEmailChange} required />
-          </Input>
+          <LargeField label={translate('forgot-password:email')}>
+            <TextInput
+              type="email" value={email} onChange={onEmailChange}
+              required border
+            />
+          </LargeField>
         </div>
         <div className={styles.message}>
           {sent ? (

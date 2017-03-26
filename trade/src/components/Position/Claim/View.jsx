@@ -8,8 +8,8 @@ import Err from './Err';
 
 import styles from './styles.css';
 
-const stop = (e) => {
-  e.stopPropagation();
+const stop = (event) => {
+  event.stopPropagation();
 };
 
 const PositionClaimView = ({ activity, error, position, layout }) => {

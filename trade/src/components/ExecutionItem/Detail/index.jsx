@@ -1,5 +1,4 @@
 import React from 'react';
-import translate from '@quoine/translate';
 
 import {
   Created,
@@ -7,29 +6,20 @@ import {
   OrderId,
   Target,
 } from 'components/Execution';
+
+import Field from './Field';
+
 import styles from './styles.css';
 
 const ExecutionItemDetail = ({ execution }) => (
   <div className={styles.main}>
     <div className={styles.col}>
-      <div>
-        <span>{translate('execution:id')}: </span>
-        <Id execution={execution} />
-      </div>
-      <div>
-        <span>{translate('execution:order-id')}: </span>
-        <OrderId execution={execution} />
-      </div>
+      <Field id="id"><Id execution={execution} /></Field>
+      <Field id="order-id"><OrderId execution={execution} /></Field>
     </div>
     <div className={styles.col}>
-      <div>
-        <span>{translate('execution:target')}: </span>
-        <Target execution={execution} />
-      </div>
-      <div>
-        <span>{translate('execution:created-at')}: </span>
-        <Created execution={execution} />
-      </div>
+      <Field id="target"><Target execution={execution} /></Field>
+      <Field id="created-at"><Created execution={execution} /></Field>
     </div>
   </div>
 );

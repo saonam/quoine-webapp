@@ -4,13 +4,14 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
-import Button from '@quoine/components/Button';
-import Select from '@quoine/components/Select';
-import DateSelect from '@quoine/components/DateSelect';
+import TextInput from '@quoine/components/TextInput';
+import SelectInput from '@quoine/components/SelectInput';
+import DateInput from '@quoine/components/DateInput';
 import NameInput from '@quoine/components/NameInput';
-import CountrySelect from '@quoine/components/CountrySelect';
+import CountryInput from '@quoine/components/CountryInput';
+import Button from '@quoine/components/Button';
+
+import LargeField from 'components/LargeField';
 
 import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
@@ -21,48 +22,64 @@ const UserForm3PteIndiView = ({ form, onChange, onSubmit }) => (
     <div className={styles.body}>
 
       <div className={styles.input}>
-        <Input large id="name" label={translate('sign-up-pi:name')}>
-          <NameInput value={form.name} onChange={onChange.name} autoFocus required />
-        </Input>
+        <LargeField label={translate('sign-up-pi:name')}>
+          <NameInput
+            value={form.name} onChange={onChange.name}
+            autoFocus border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large id="birth" label={translate('sign-up-pi:birth')}>
-          <DateSelect value={form.birth} onChange={onChange.birth} />
-        </Input>
+        <LargeField label={translate('sign-up-pi:birth')}>
+          <DateInput
+            value={form.birth} onChange={onChange.birth}
+            border
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large id="nationality" label={translate('sign-up-pi:nationality')}>
-          <CountrySelect value={form.nationality} onChange={onChange.nationality} required />
-        </Input>
+        <LargeField label={translate('sign-up-pi:nationality')}>
+          <CountryInput
+            value={form.nationality} onChange={onChange.nationality}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large id="address" label={translate('sign-up-pi:address')}>
-          <TextBox type="text" value={form.address} onChange={onChange.address} required />
-        </Input>
+        <LargeField label={translate('sign-up-pi:address')}>
+          <TextInput
+            value={form.address} onChange={onChange.address}
+            border required
+          />
+        </LargeField>
       </div>
 
       <div className={styles.input}>
-        <Input large id="income" label={translate('sign-up-pi:income')}>
-          <Select
-            value={form.income} onChange={onChange.income} required
+        <LargeField label={translate('sign-up-pi:income')}>
+          <SelectInput
+            value={form.income} onChange={onChange.income}
             options={[
               'employed', 'self-employed', 'other', 'retired',
             ].map(key => ({
               label: translate(`sign-up-pi:income-${key}`),
               value: key,
             }))}
+            border required
           />
-        </Input>
+        </LargeField>
       </div>
 
       {form.income === 'employed' ? (
         <div className={styles.input}>
-          <Input large id="income-job" label={translate('sign-up-pi:income-job')}>
-            <TextBox type="text" value={form.incomeJob} onChange={onChange.incomeJob} required />
-          </Input>
+          <LargeField label={translate('sign-up-pi:income-job')}>
+            <TextInput
+              value={form.incomeJob} onChange={onChange.incomeJob}
+              border required
+            />
+          </LargeField>
         </div>
       ) : null}
 
@@ -70,15 +87,21 @@ const UserForm3PteIndiView = ({ form, onChange, onSubmit }) => (
         <div className={styles.input}>
 
           <div className={styles.input}>
-            <Input large id="income-business-name" label={translate('sign-up-pi:income-business-name')}>
-              <TextBox type="text" value={form.incomeBusinessName} onChange={onChange.incomeBusinessName} required />
-            </Input>
+            <LargeField label={translate('sign-up-pi:income-business-name')}>
+              <TextInput
+                value={form.incomeBusinessName} onChange={onChange.incomeBusinessName}
+                border required
+              />
+            </LargeField>
           </div>
 
           <div className={styles.input}>
-            <Input large id="income-business-type" label={translate('sign-up-pi:income-business-type')}>
-              <TextBox type="text" value={form.incomeBusinessType} onChange={onChange.incomeBusinessType} required />
-            </Input>
+            <LargeField label={translate('sign-up-pi:income-business-type')}>
+              <TextInput
+                value={form.incomeBusinessType} onChange={onChange.incomeBusinessType}
+                border required
+              />
+            </LargeField>
           </div>
 
         </div>
@@ -86,9 +109,12 @@ const UserForm3PteIndiView = ({ form, onChange, onSubmit }) => (
 
       {form.income === 'other' ? (
         <div className={styles.input}>
-          <Input large id="income-detail" label={translate('sign-up-pi:income-detail')}>
-            <TextBox type="text" value={form.incomeDetail} onChange={onChange.incomeDetail} required />
-          </Input>
+          <LargeField label={translate('sign-up-pi:income-detail')}>
+            <TextInput
+              value={form.incomeDetail} onChange={onChange.incomeDetail}
+              border required
+            />
+          </LargeField>
         </div>
       ) : null}
 

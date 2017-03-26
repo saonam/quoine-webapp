@@ -4,12 +4,12 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBox from '@quoine/components/TextBox';
-import CountrySelect from '@quoine/components/CountrySelect';
+import TextInput from '@quoine/components/TextInput';
+import CountryInput from '@quoine/components/CountryInput';
 import Button from '@quoine/components/Button';
-import Checkbox from '@quoine/components/Checkbox';
+import CheckboxInput from '@quoine/components/CheckboxInput';
 
+import LargeField from 'components/LargeField';
 import styles from 'components/UserForm/styles.css';
 
 const UserForm2View = ({ onSubmit, form, onChange }) => (
@@ -19,9 +19,12 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
 
       {/* Email */}
       <div className={styles.input}>
-        <Input large id="email" label={translate('sign-up:email')}>
-          <TextBox type="email" value={form.email} onChange={onChange.email} required />
-        </Input>
+        <LargeField label={translate('sign-up:email')}>
+          <TextInput
+            type="email" value={form.email} onChange={onChange.email}
+            border required
+          />
+        </LargeField>
         <p className={styles.help}>
           {translate('sign-up:email-help')}
         </p>
@@ -29,12 +32,13 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
 
       {/* Password */}
       <div className={styles.input}>
-        <Input large id="password" label={translate('sign-up:password')}>
-          <TextBox
-            type="password" value={form.password} onChange={onChange.password} required
+        <LargeField label={translate('sign-up:password')}>
+          <TextInput
+            type="password" value={form.password} onChange={onChange.password}
+            border required
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" title={translate('sign-up:password-help')}
           />
-        </Input>
+        </LargeField>
         <p className={styles.help}>
           {translate('sign-up:password-help')}
         </p>
@@ -42,22 +46,25 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
 
       {/* Country */}
       <div className={styles.input}>
-        <Input large id="country" label={translate('sign-up:country')}>
-          <CountrySelect value={form.country} onChange={onChange.country} autoFocus required />
-        </Input>
+        <LargeField label={translate('sign-up:country')}>
+          <CountryInput
+            value={form.country} onChange={onChange.country}
+            autoFocus border required
+          />
+        </LargeField>
       </div>
 
       {form.isQuoineJapan ? (
         <div>
-          <Input large noBorder>
-            <Checkbox id="country-sure" value={form.countrySure} onChange={onChange.countrySure} required>
+          <LargeField>
+            <CheckboxInput id="country-sure" value={form.countrySure} onChange={onChange.countrySure} required>
               {form.type === 'individual' ? (
                 '私は、日本以外に居住地国が無いことを確約します。'
               ) : (
                 '当社は国内法人であることを確約します。'
               )}
-            </Checkbox>
-          </Input>
+            </CheckboxInput>
+          </LargeField>
           <p className={styles.help}>
             {form.type === 'individual' ? (
               '※日本以外に居住地国をお持ちのお客様は個人口座の開設はできません。また、居住地国に変更があった場合は、変更があった日から3ヶ月を経過する日までに異動届出書により申告する必要となります。'
@@ -70,15 +77,15 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
 
       {form.isQuoineJapan ? (
         <div className={styles.input}>
-          <Input large label="米国納税義務" noBorder>
-            <Checkbox id="us" value={form.us} onChange={onChange.us} required>
+          <LargeField label="米国納税義務">
+            <CheckboxInput id="us" value={form.us} onChange={onChange.us} required>
               {form.type === 'individual' ? (
                 '私は、米国納税義務が無いことを確約します。'
               ) : (
                 '当社は、米国納税義務が無いことを確約します。'
               )}
-            </Checkbox>
-          </Input>
+            </CheckboxInput>
+          </LargeField>
           {form.type === 'individual' ? (
             <p className={styles.help}>
               「米国籍」または「米国居住者（米国永住権をお持ちの方、米国での滞在日数が183日以上の方）」に該当するお客様は「あり」をご選択ください。

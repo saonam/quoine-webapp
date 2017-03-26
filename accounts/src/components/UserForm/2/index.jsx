@@ -2,19 +2,13 @@ import React from 'react';
 
 import View from './View';
 
-let cacheCountry = '';
-
 class UserForm2 extends React.Component {
-  componentDidUpdate() {
-    const { form, onChange } = this.props;
-    if (
-      process.env.REACT_APP_VENDOR === 'quoine' &&
-      form.country !== cacheCountry
-    ) {
-      cacheCountry = form.country;
-      onChange.isQuoineJapan({
-        target: { value: form.country === 'JP' },
-      });
+  componentDidUpdate(prevProps) {
+    if (process.env.REACT_APP_VENDOR !== 'quoine') { return; }
+
+    if (this.props.form.country !== prevProps.form.country) {
+      const value = this.props.form.country === 'JP';
+      this.props.onChange.isQuoineJapan(value);
     }
   }
   render() {
@@ -26,7 +20,7 @@ class UserForm2 extends React.Component {
 
 UserForm2.propTypes = {
   form: React.PropTypes.shape({
-    isQuoineJapan: React.PropTypes.bool.isRequired,
+    country: React.PropTypes.string.isRequired,
   }).isRequired,
   onChange: React.PropTypes.shape({
     isQuoineJapan: React.PropTypes.func.isRequired,

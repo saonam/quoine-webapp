@@ -1,23 +1,22 @@
 import React from 'react';
+
 import translate from '@quoine/translate';
 
-import Input from '@quoine/components/Input';
-import TextBoxNumber from '@quoine/components/TextBoxNumber';
+import NumberInput from '@quoine/components/NumberInput';
+import Field from 'components/Transfer/Field';
 
 import Info from 'components/Withdrawal/Info';
 
 const WdrInputQuantity = ({ form, onChange }) => (
   <div>
-    <Input
-      id="withdrawal-quantity"
-      label={translate('withdrawal:quantity')}
-    >
-      <TextBoxNumber
+    <Field label={translate('withdrawal:quantity')}>
+      <NumberInput
         value={form.quantity}
         onChange={onChange.quantity}
+        border
         required
       />
-    </Input>
+    </Field>
     <Info form={form} />
   </div>
 );

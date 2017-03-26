@@ -23,7 +23,7 @@ class ProfileForm extends React.Component {
     this.setState({ busy: true });
     resources.submit(this.state.form)
     .then(this.props.onChangeStatus)
-    .catch((e) => {
+    .catch(e => {
       let message = e.message;
       if (message.indexOf('allowed types')) {
         message = 'user-error:invalid-types';
@@ -31,11 +31,11 @@ class ProfileForm extends React.Component {
       this.setState({ busy: false, error: message });
     });
   }
-  onChangeBase(prop, e) {
+  onChangeBase(key, value) {
     this.setState({
       form: {
         ...this.state.form,
-        [prop]: e.target.value,
+        [key]: value,
       },
       error: '',
     });

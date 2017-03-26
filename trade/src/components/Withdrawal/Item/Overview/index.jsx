@@ -9,7 +9,7 @@ import ErrBox from '../ErrBox';
 
 import styles from './styles.css';
 
-const stop = (e) => { e.stopPropagation(); };
+const stop = (event) => { event.stopPropagation(); };
 
 const WdrItemOverview = ({ withdrawal }) => (
   <div>

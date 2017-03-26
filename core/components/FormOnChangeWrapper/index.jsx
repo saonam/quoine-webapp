@@ -9,13 +9,12 @@ class FormOnChangeWrapper extends React.PureComponent {
         [key]: this.onChange.bind(this, key),
       }), {});
   }
-  onChange(key, event) {
-    const value = {
+  onChange(key, value) {
+    const form = {
       ...this.props.value,
-      [key]: event.target.value,
+      [key]: value,
     };
-    const fakeEvent = { target: { value } };
-    this.props.onChange(fakeEvent);
+    this.props.onChange(form);
   }
   render() {
     const { View, ...others } = this.props;

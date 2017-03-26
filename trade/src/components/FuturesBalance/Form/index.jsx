@@ -3,23 +3,22 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Button from '@quoine/components/ButtonWLoading';
-import Input from '@quoine/components/Input';
-import TextBoxNumber from '@quoine/components/TextBoxNumber';
+import NumberInput from '@quoine/components/NumberInput';
+
+import Field from 'components/Transfer/Field';
 
 import styles from './styles.css';
 
 const FuturesBalanceForm = (props) => (
   <form className={styles.main} onSubmit={props.onSubmit}>
     <div className={styles.item}>
-      <Input
-        id="futures-balance-quantity"
-        label={translate('futures-balance:quantity')}
-      >
-        <TextBoxNumber
+      <Field label={translate('futures-balance:quantity')}>
+        <NumberInput
           value={props.quantity}
           onChange={props.onChange}
+          border required
         />
-      </Input>
+      </Field>
     </div>
 
     {props.success ? (

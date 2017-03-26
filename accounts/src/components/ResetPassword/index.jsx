@@ -15,13 +15,13 @@ class ResetPasswordContainer extends React.Component {
     this.onPasswordChange = this.onPasswordChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onPasswordChange(event) {
-    this.setState({ password: event.target.value });
+  onPasswordChange(password) {
+    this.setState({ password });
   }
-  onSubmit(e) {
-    // need e because we attach this to form's submit event
+  onSubmit(event) {
+    // need event because we attach this to form's submit event
     // not just a button
-    e.preventDefault();
+    event.preventDefault();
 
     if (this.state.busy) { return; }
     this.setState({ busy: true, error: '' });

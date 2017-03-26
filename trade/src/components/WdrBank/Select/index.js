@@ -4,8 +4,8 @@ import { TYPES } from 'states/wdrBank';
 import View from './View';
 
 const mapDispatchToProps = (dispatch) => ({
-  onChange: (event) => dispatch({
-    type: TYPES.APPLY, payload: { current: event.target.value },
+  onChange: (current) => dispatch({
+    type: TYPES.APPLY, payload: { current },
   }),
 });
 

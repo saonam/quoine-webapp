@@ -3,7 +3,7 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Button from '@quoine/components/Button';
-import Checkbox from '@quoine/components/Checkbox';
+import CheckboxInput from '@quoine/components/CheckboxInput';
 import Hint from '@quoine/components/Hint';
 
 import styles from './styles.css';
@@ -18,11 +18,11 @@ const ReportWrapperView = (props) => (
     ) : null}
 
     <div className={styles.item}>
-      <Checkbox id={props.id} onChange={props.onToggleSkip} value={props.skip}>
+      <CheckboxInput id={props.id} onChange={props.onToggleSkip} value={props.skip}>
         {translate('confirmation:skip')}
         <span>&nbsp;</span>
         <Hint>{translate('confirmation:skip-hint')}</Hint>
-      </Checkbox>
+      </CheckboxInput>
     </div>
 
     <div className={styles.button}>

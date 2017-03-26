@@ -11,8 +11,8 @@ class TFAManageToggle extends React.Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onSubmit(e) {
-    e.preventDefault();
+  onSubmit(event) {
+    event.preventDefault();
 
     this.setState({ busy: true });
     resources[this.props.enabled ? 'disable' : 'enable'](this.state.value)
@@ -23,8 +23,8 @@ class TFAManageToggle extends React.Component {
       this.setState({ busy: false, error: error.message });
     });
   }
-  onChange(e) {
-    this.setState({ value: e.target.value, error: '' });
+  onChange(value) {
+    this.setState({ value, error: '' });
   }
   render() {
     const { value, busy, error } = this.state;

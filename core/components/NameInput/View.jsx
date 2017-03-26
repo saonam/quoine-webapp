@@ -2,7 +2,7 @@ import React from 'react';
 
 import translate from '@quoine/translate';
 
-import TextBox from '@quoine/components/TextBox';
+import TextInput from '@quoine/components/TextInput';
 
 import styles from './styles.css';
 
@@ -11,18 +11,18 @@ const NameInputView = ({
 }) => (
   <div className={styles.main}>
     <div className={styles.input}>
-      <TextBox
+      <TextInput
+        {...others}
         value={value.first} onChange={onChange.first}
         placeholder={firstLabel || translate('name:first')}
         autoFocus={autoFocus}
-        {...others}
       />
     </div>
     <div className={styles.input}>
-      <TextBox
+      <TextInput
+        {...others}
         value={value.last} onChange={onChange.last}
         placeholder={lastLabel || translate('name:last')}
-        {...others}
       />
     </div>
   </div>

@@ -22,13 +22,13 @@ class DemoStep2 extends React.Component {
       this.setState({ email, isFromPrev });
     });
   }
-  onEmailChange(event) {
-    this.setState({ email: event.target.value });
+  onEmailChange(email) {
+    this.setState({ email });
   }
-  onSubmit(e) {
-    // need e because we attach this to form's submit event
+  onSubmit(event) {
+    // need event because we attach this to form's submit event
     // not just a button
-    e.preventDefault();
+    event.preventDefault();
 
     if (this.state.busy) { return; }
     this.setState({ busy: true, error: '' });

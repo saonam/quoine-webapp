@@ -4,6 +4,7 @@
 }
 .item {
   composes: top-small from "@quoine/styles/margin.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
 }
 .item:first-child {
   margin: 0;
