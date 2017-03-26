@@ -9,7 +9,7 @@ const initialCurrent = (
 ).slice(0, 2);
 
 const initialState = {
-  all: ['ja', 'en'],
+  all: ['ja', 'en', 'zh-cn', 'zh-tw'],
   current: initialCurrent,
   busy: true,
 };
