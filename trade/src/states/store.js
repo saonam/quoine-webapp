@@ -6,6 +6,7 @@ import user from '@quoine/states/user';
 import accounts from '@quoine/states/accounts';
 import currencies from '@quoine/states/currencies';
 import interestBook from '@quoine/states/interestBook';
+import vendorConfig from '@quoine/states/vendorConfig';
 import tabs from '@quoine/states/tabs';
 import confirmations from '@quoine/states/confirmations';
 import notifications from '@quoine/states/notifications';
@@ -38,6 +39,7 @@ const states = {
   accounts,
   currencies,
   interestBook,
+  vendorConfig,
   tabs,
   confirmations,
   notifications,
