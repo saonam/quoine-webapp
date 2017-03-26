@@ -6,6 +6,7 @@ import Modal from '@quoine/components/Modal';
 import Button from '@quoine/components/Button';
 import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
+import SignInHeaderLink from 'components/SignInHeaderLink';
 import {
   Form1, Form2, Form3, Form4, Form5,
 } from 'components/UserForm';
@@ -15,16 +16,28 @@ import styles from './styles.css';
 
 const Forms = [Form1, Form2, Form3, Form4, Form5];
 
+/* eslint-disable react/prop-types */
+const getLeftButton = (props) => {
+  if (props.step === 1) {
+    return (<SignInHeaderLink />);
+  }
+  if (props.step < 5) {
+    return (
+      <Button
+        styleName="inverse-light inline"
+        onClick={props.onBack}
+      >
+        ← {translate('sign-up:back')}
+      </Button>
+    );
+  }
+  return null;
+};
+/* eslint-enable react/prop-types */
+
 const SignUpView = (props) => {
   const title = translate('sign-up:title');
-  const leftButton = props.step > 1 && props.step < 5 ? (
-    <Button
-      styleName="inverse-light inline"
-      onClick={props.onBack}
-    >
-      ← {translate('sign-up:back')}
-    </Button>
-  ) : null;
+  const leftButton = getLeftButton(props);
 
   return (
     <Modal
