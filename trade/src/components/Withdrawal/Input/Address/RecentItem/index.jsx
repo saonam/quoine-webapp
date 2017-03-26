@@ -8,7 +8,7 @@ class WdrRecentAddress extends React.Component {
     this.onClick = this.onClick.bind(this);
   }
   onClick() {
-    this.props.onClick({ target: { value: this.props.address } });
+    this.props.onClick(this.props.address);
   }
   render() {
     return (

@@ -16,13 +16,13 @@ class NumberInput extends React.PureComponent {
   onSetFocus(focus) {
     this.setState({ focus });
   }
-  onChange(event) {
-    this.props.onChange(event.target.value);
+  onChange(value) {
+    this.props.onChange(value);
   }
   onStep(direction) {
     const prevValue = Number(this.props.value);
     const value = prevValue + (direction * 1);
-    this.onChange({ target: { value: String(value) } });
+    this.onChange(String(value));
   }
   render() {
     return (
