@@ -12,7 +12,7 @@ const combineStyles = ({ layout, modifies, prefix }) => {
     });
   }
   return names.map(name => styles[name]).join(' ');
-}
+};
 
 const Field = ({ label, children, layout, labelStyle, childrenStyle }) => {
   const isRatioLayout = ratioRegex.test(layout);

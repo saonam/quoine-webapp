@@ -8,7 +8,7 @@
 }
 .input {
   composes: auto from "@quoine/styles/flex.css";
-  composes: border-bottom-accent from "@quoine/styles/box-shadow.css";
+  composes: border-bottom-accent-size-2 from "@quoine/styles/box-shadow.css";
   composes: right mono-number from "@quoine/styles/text.css";
   composes: width-full from "@quoine/styles/size.css";
   composes: block from "@quoine/styles/display.css";
