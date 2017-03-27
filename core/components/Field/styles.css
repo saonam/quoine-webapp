@@ -90,7 +90,7 @@
   line-height: 10px;
   order: 2;
 }
-.value-reverse {
+.children-reverse {
   composes: large from "@quoine/styles/text.css";
   line-height: 22px;
   order: 1;

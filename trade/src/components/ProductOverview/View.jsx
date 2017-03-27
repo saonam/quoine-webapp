@@ -21,26 +21,17 @@ const ProductOverview = ({ product, fixed }) => (
         <Change product={product} />
       </div>
       <div className={styles.bid}>
-        <Field
-          label={<PriceLabel product={product} type="bid" />}
-          layout="reverse"
-        >
+        <Field label={<PriceLabel product={product} type="bid" />} layout="reverse">
           <Price product={product} type="bid" />
         </Field>
       </div>
       <div className={styles.ask}>
-        <Field
-          label={<PriceLabel product={product} type="ask" />}
-          layout="reverse"
-        >
+        <Field label={<PriceLabel product={product} type="ask" />} layout="reverse">
           <Price product={product} type="ask" />
         </Field>
       </div>
       <div className={styles.volume}>
-        <Field
-          label={t('product:volume')}
-          layout="reverse"
-        >
+        <Field label={t('product:volume')} layout="reverse">
           <Volume product={product} />
         </Field>
       </div>

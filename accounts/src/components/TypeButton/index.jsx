@@ -8,11 +8,11 @@ const TypeButton = ({ onClick, title, description }) => (
   <button
     type="button" className={styles.main} onClick={onClick}
   >
-    <span className={styles.title}>{title}</span>
-    <span className={styles.description}>{description}</span>
-    <span className={styles.icon}>
+    <h1 className={styles.title}>{title}</h1>
+    <p className={styles.description}>{description}</p>
+    <div className={styles.icon}>
       <Icon glyph="chevron-right" />
-    </span>
+    </div>
   </button>
 );
 

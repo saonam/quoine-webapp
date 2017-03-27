@@ -19,26 +19,17 @@ const AccountOverview = ({ account }) => (
         ) : account.currency}
       </div>
       <div className={styles.balance}>
-        <Field
-          label={t('account:balance')}
-          layout="reverse"
-        >
+        <Field label={t('account:balance')} layout="reverse">
           <Balance account={account} />
         </Field>
       </div>
       <div className={styles.pnl}>
-        <Field
-          label={t('account:pnl')}
-          layout="reverse"
-        >
+        <Field label={t('account:pnl')} layout="reverse">
           <Pnl account={account} />
         </Field>
       </div>
       <div className={styles.margin}>
-        <Field
-          label={t('account:margin-used')}
-          layout="reverse"
-        >
+        <Field label={t('account:margin-used')} layout="reverse">
           <Margin type="used" account={account} />
         </Field>
       </div>
