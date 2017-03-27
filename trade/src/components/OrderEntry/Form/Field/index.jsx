@@ -7,12 +7,11 @@ import Hint from '@quoine/components/Hint';
 
 import styles from './styles.css';
 
-/* eslint-disable react/prop-types */
-const getLabel = ({ id, hintStyle }) => (
-  hintStyle ? (
-    <span>
-      {translate(`order:${id}`)}
-      <span>&nbsp;</span>
+const Label = ({ id, hintStyle }) => (
+  <h1 className={styles.label}>
+    {translate(`order:${id}`)}
+    {hintStyle ? <span>&nbsp;</span> : null}
+    {hintStyle ? (
       <Hint style={hintStyle}>
         <p
           // eslint-disable-next-line react/no-danger
@@ -21,28 +20,28 @@ const getLabel = ({ id, hintStyle }) => (
           }}
         />
       </Hint>
-    </span>
-  ) : (
-    translate(`order:${id}`)
-  )
+    ) : null}
+  </h1>
 );
-/* eslint-enable react/prop-types */
 
-const OrderEntryFormField = ({ id, hintStyle, children }) => (
-  <Field label={getLabel({ id, hintStyle })} labelStyle="uppercase semi-bold">
-    <div className={styles.children}
+Label.propTypes = {
+  id: React.PropTypes.string.isRequired,
+  hintStyle: React.PropTypes.shape({
+    width: React.PropTypes.number.isRequired,
+    left: React.PropTypes.number.isRequired,
+  }),
+};
+
+const OrderEntryFormField = ({ children, ...others }) => (
+  <Field label={<Label {...others} />}>
+    <div className={styles.children}>
       {children}
     </div>
   </Field>
 );
 
 OrderEntryFormField.propTypes = {
-  id: React.PropTypes.string.isRequired,
   children: React.PropTypes.node.isRequired,
-  hintStyle: React.PropTypes.shape({
-    width: React.PropTypes.number.isRequired,
-    left: React.PropTypes.number.isRequired,
-  }),
 };
 
 export default OrderEntryFormField;

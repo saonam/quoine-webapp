@@ -5,3 +5,7 @@
 .item {
   composes: even from "@quoine/styles/flex.css";
 }
+
+.label {
+  composes: small line-1 from "@quoine/styles/text.css";
+}

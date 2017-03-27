@@ -32,12 +32,11 @@ const Elements = {
 const WdrBankFormItem = ({ id, ...others }) => {
   const Element = Elements[id];
   return (
-    <Field label={translate(`bank:${id}`)} labelStyle="semi-bold uppercase">
+    <Field
+      label={<h1 className={styles.label}>{translate(`bank:${id}`)}</h1>}
+    >
       <div className={styles.children}>
-        <Element
-          id={id} {...others}
-          border required
-        />
+        <Element id={id} {...others} border required />
       </div>
     </Field>
   );

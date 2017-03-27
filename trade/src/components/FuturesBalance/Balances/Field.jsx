@@ -4,13 +4,19 @@ import translate from '@quoine/translate';
 
 import Field from '@quoine/components/Field';
 
+import styles from './styles.css';
+
 const FuturesBalanceBalancesField = ({ id, children }) => (
   <Field
-    label={id ? translate(`futures-balance:${id}`) : ''}
-    labelStyle="small line-1-5"
-    childrenStyle="line-1-5"
+    label={(
+      <h1 className={styles.label}>
+        {id ? translate(`futures-balance:${id}`) : ' '}
+      </h1>
+    )}
   >
-    {children}
+    <div className={styles.children}>
+      {children}
+    </div>
   </Field>
 );
 

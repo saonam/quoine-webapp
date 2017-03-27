@@ -6,7 +6,10 @@ import styles from './styles.css';
 
 const UserFormField = ({ label, children, layout }) => (
   label ? (
-    <Field label={label} labelStyle="uppercase semi-bold" layout={layout}>
+    <Field
+      label={<h1 className={styles.label}>{label}</h1>}
+      layout={layout}
+    >
       <div className={styles.children}>
         {children}
       </div>

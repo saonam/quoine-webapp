@@ -4,29 +4,22 @@ import styles from './styles.css';
 
 const ratioRegex = /\b\d:\d\b/;
 
-const combineStyles = ({ layout, modifies, prefix }) => {
+const combineStyles = ({ layout, prefix }) => {
   const names = [prefix, layout];
-  if (modifies) {
-    modifies.split(' ').forEach(item => {
-      names.push(`${prefix}-${item}`);
-    });
-  }
   return names.map(name => styles[name]).join(' ');
 };
 
-const Field = ({ label, children, layout, labelStyle, childrenStyle }) => {
+const Field = ({ label, children, layout }) => {
   const isRatioLayout = ratioRegex.test(layout);
   const ratios = isRatioLayout ? layout.split(':') : false;
 
   const mainStyles = styles[`main-${isRatioLayout ? 'ratio' : layout}`];
   const lbStyles = combineStyles({
     layout: isRatioLayout ? `ratio-${ratios[0]}` : `label-${layout}`,
-    modifies: labelStyle,
     prefix: 'label',
   });
   const cdStyles = combineStyles({
     layout: isRatioLayout ? `ratio-${ratios[1]}` : `children-${layout}`,
-    modifies: childrenStyle,
     prefix: 'children',
   });
 
@@ -52,8 +45,6 @@ Field.propTypes = {
     'justify',
     'reverse',
   ]).isRequired,
-  labelStyle: React.PropTypes.string,
-  childrenStyle: React.PropTypes.string,
 };
 
 Field.defaultProps = {

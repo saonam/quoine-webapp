@@ -1,32 +1,6 @@
 .label {
   composes: primary-3 from "@quoine/styles/color.css";
 }
-.label-uppercase {
-  composes: uppercase from "@quoine/styles/text.css";
-}
-.label-semi-bold {
-  composes: semi-bold from "@quoine/styles/text.css";
-}
-.label-small {
-  composes: small from "@quoine/styles/text.css";
-}
-.label-line-1-5 {
-  composes: line-1-5 from "@quoine/styles/text.css";
-}
-
-
-/* === */
-.children {}
-.children-line-1-5 {
-  composes: line-1-5 from "@quoine/styles/text.css";
-}
-.children-large {
-  composes: large from "@quoine/styles/text.css";
-}
-.children-overflow-hidden {
-  composes: hidden from "@quoine/styles/overflow.css";
-}
-
 
 /* === */
 

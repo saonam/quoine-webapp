@@ -1,3 +1,6 @@
+.label {
+  composes: uppercase semi-bold line-1 small from "@quoine/styles/text.css";
+}
 .children {
   composes: x-large line-4 left from "@quoine/styles/text.css";
 }

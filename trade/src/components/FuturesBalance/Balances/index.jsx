@@ -7,7 +7,7 @@ import Field from './Field';
 
 import styles from './styles.css';
 
-const FuturesBalanceBalances = ({ btc, futures }) => (
+const FuturesBalanceBalances = ({ btc, futures, type }) => (
   <div className={styles.main}>
 
     <div className={styles.item}>
@@ -19,7 +19,9 @@ const FuturesBalanceBalances = ({ btc, futures }) => (
     </div>
 
     <div className={styles.item}>
-      <Field><span>→</span></Field>
+      <Field>
+        {type === 'fund' ? '→' : '←'}
+      </Field>
     </div>
 
     <div className={styles.item}>
@@ -41,6 +43,7 @@ FuturesBalanceBalances.propTypes = {
     balance: React.PropTypes.number.isRequired,
     currency: React.PropTypes.string.isRequired,
   }).isRequired,
+  type: React.PropTypes.oneOf(['fund', 'withdrawal']),
 };
 
 export default FuturesBalanceBalances;
