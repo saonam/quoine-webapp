@@ -16,7 +16,7 @@ const AccountsWarningModal = ({ onClose }) => (
       {translate('accounts-warning:description')}
     </p>
     <div className={styles.submit}>
-      <Button onClick={onClose}>
+      <Button onClick={onClose} styleName="accent modal">
         {translate('accounts-warning:dismiss')}
       </Button>
     </div>
