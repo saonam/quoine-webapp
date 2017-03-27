@@ -1,5 +1,0 @@
-.main {
-  /* composes: height-full from "@quoine/styles/size.css"; */
-  /* composes: y-auto from "@quoine/styles/overflow.css";
-  width: calc($base * 20); */
-}

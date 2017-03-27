@@ -25,7 +25,7 @@ AccountMargin.propTypes = {
     marginAvailable: React.PropTypes.number.isRequired,
     marginUsed: React.PropTypes.number.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['available', 'used']),
+  type: React.PropTypes.oneOf(['available', 'used']).isRequired,
 };
 
 export default AccountMargin;

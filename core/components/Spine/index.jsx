@@ -3,14 +3,14 @@ import React from 'react';
 import styles from './styles.css';
 
 const Spine = ({ title, children }) => (
-  <span className={styles.main}>
-    <span className={styles.title}>
+  <div className={styles.main}>
+    <div className={styles.title}>
       {title}
-    </span>
-    <span className={styles.body}>
+    </div>
+    <div className={styles.body}>
       {children}
-    </span>
-  </span>
+    </div>
+  </div>
 );
 
 Spine.propTypes = {

@@ -1,3 +1,6 @@
+.main {
+  composes: flex from "@quoine/styles/flex.css";
+}
 .title {
   composes: primary-2 from "@quoine/styles/color.css";
   composes: uppercase semi-bold from "@quoine/styles/text.css";
