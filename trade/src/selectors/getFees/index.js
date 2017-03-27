@@ -11,8 +11,8 @@ export default createSelector(
       return {
         ...fees,
         [key]: (product && user) ? {
-          taker: user.fees[`taker:CASH:${key}`] || product.feeTaker,
-          maker: user.fees[`maker:CASH:${key}`] || product.feeMaker,
+          taker: (user.fees && user.fees[`taker:CASH:${key}`]) || product.feeTaker,
+          maker: (user.fees && user.fees[`maker:CASH:${key}`]) || product.feeMaker,
         } : { taker: 0, maker: 0 },
       };
     }, {})
