@@ -1,6 +1,0 @@
-.main {
-  composes: mono-number from "@quoine/styles/text.css";
-}
-.light {
-  composes: half from "@quoine/styles/opacity.css";
-}

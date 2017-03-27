@@ -1,4 +1,0 @@
-.main {
-  composes: ver-medium from "@quoine/styles/padding.css";
-  composes: xxx-large light line-4 from "@quoine/styles/text.css";
-}

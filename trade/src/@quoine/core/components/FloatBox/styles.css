@@ -1,8 +1,0 @@
-.main {
-  composes: primary-0 from "@quoine/styles/bg-color.css";
-  composes: left right size-2 from "@quoine/styles/border.css";
-}
-.children {
-  composes: primary-1 from "@quoine/styles/bg-color.css";
-  composes: ver-small hor-medium from "@quoine/styles/padding.css";
-}

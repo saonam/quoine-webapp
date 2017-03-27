@@ -1,6 +1,0 @@
-.item {
-  composes: bottom color-primary-1 from "@quoine/styles/border.css";
-}
-.item:last-child {
-  border: none;
-}
