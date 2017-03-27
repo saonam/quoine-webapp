@@ -8,8 +8,10 @@ const initialCurrent = (
   'en'
 ).slice(0, 2);
 
+const langs = process.env.REACT_APP_VENDOR === 'qryptos' ? ['ja', 'en', 'zhcn', 'zhtw'] : ['ja', 'en'];
+
 const initialState = {
-  all: ['ja', 'en', 'zhcn', 'zhtw'],
+  all: langs,
   current: initialCurrent,
   busy: true,
 };
