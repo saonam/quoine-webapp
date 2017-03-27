@@ -20,10 +20,7 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
       {/* Email */}
       <div className={styles.input}>
         <LargeField label={translate('sign-up:email')}>
-          <TextInput
-            type="email" value={form.email} onChange={onChange.email}
-            border required
-          />
+          <TextInput type="email" value={form.email} onChange={onChange.email} border required />
         </LargeField>
         <p className={styles.help}>
           {translate('sign-up:email-help')}
@@ -34,8 +31,7 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
       <div className={styles.input}>
         <LargeField label={translate('sign-up:password')}>
           <TextInput
-            type="password" value={form.password} onChange={onChange.password}
-            border required
+            type="password" value={form.password} onChange={onChange.password} border required
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" title={translate('sign-up:password-help')}
           />
         </LargeField>
@@ -47,10 +43,7 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
       {/* Country */}
       <div className={styles.input}>
         <LargeField label={translate('sign-up:country')}>
-          <CountryInput
-            value={form.country} onChange={onChange.country}
-            autoFocus border required
-          />
+          <CountryInput value={form.country} onChange={onChange.country} autoFocus border required />
         </LargeField>
       </div>
 

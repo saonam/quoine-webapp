@@ -7,8 +7,14 @@ import Icon from '@quoine/components/Icon';
 
 import styles from './styles.css';
 
+const getBorderClass = (border) => {
+  if (border === 2) { return styles.borderLarge; }
+  if (border) { return styles.border; }
+  return '';
+};
+
 const SelectInput = ({ searchable, placeholder, border, ...others }) => (
-  <div className={`${styles.main} ${border ? styles.border : ''}`}>
+  <div className={`${styles.main} ${getBorderClass(border)}`}>
     <ReactSelect
       className={styles.select}
       simpleValue
@@ -26,7 +32,10 @@ const SelectInput = ({ searchable, placeholder, border, ...others }) => (
 SelectInput.propTypes = {
   searchable: React.PropTypes.bool,
   placeholder: React.PropTypes.string,
-  border: React.PropTypes.bool,
+  border: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.number,
+  ]),
 };
 
 SelectInput.defaultProps = {
