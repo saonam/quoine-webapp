@@ -1,6 +1,6 @@
 import React from 'react';
 
-import t from '@quoine/translate';
+import translate from '@quoine/translate';
 
 import Modal from '@quoine/components/Modal';
 import ModalList from '@quoine/components/ModalList';
@@ -13,40 +13,43 @@ import Add from '../Add';
 const AccountManageModal = ({ all, addeds, hiddens, onClose }) => (
   <Modal
     isOpen contentLabel="account manage modal"
-    title={t('account-manage:title')}
+    title={translate('account-manage:title')}
     rightButton={(
       <Button styleName="inverse-light inline" onClick={onClose}>
-        {t('account-manage:action-done')}
+        {translate('account-manage:action-done')}
       </Button>
     )}
     // leftButton={(
     //   <Button styleName="inverse-light inline">
-    //     {t('account-manage:action-fund')}
+    //     {translate('account-manage:action-fund')}
     //   </Button>
     // )}
   >
+
     <ModalList
       // trading (actually it is more than just trading)
       // since it include accounts from other markets
       modelKeys={addeds.filter(currency => (
         hiddens.indexOf(currency) === -1
       ))}
-      title={t('account-manage:trading-title')}
-      description={t('account-manage:trading-description')}
+      title={translate('account-manage:trading-title')}
+      description={translate('account-manage:trading-description')}
       Element={Visible}
     />
+
     <ModalList
       modelKeys={hiddens}
-      title={t('account-manage:hidden-title')}
+      title={translate('account-manage:hidden-title')}
       Element={Hidden}
     />
+
     <ModalList
       // remains
       modelKeys={all.filter(currency => (
         addeds.indexOf(currency) === -1
       ))}
-      title={t('account-manage:add-title')}
-      description={t('account-manage:add-description')}
+      title={translate('account-manage:add-title')}
+      description={translate('account-manage:add-description')}
       Element={Add}
     />
   </Modal>

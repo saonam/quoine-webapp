@@ -22,17 +22,20 @@ const MrgAccManageModal = ({
       </Button>
     )}
   >
+
     <ModalList
       modelKeys={tradingMrgAccs}
       title={t('mrg-acc-manage:trading-title')}
       description={t('mrg-acc-manage:trading-description')}
       Element={Visible}
     />
+
     <ModalList
       modelKeys={hiddenMrgAccs}
       title={t('mrg-acc-manage:hidden-title')}
       Element={Hidden}
     />
+
     <ModalList
       // remains
       modelKeys={remainMarginProducts}
@@ -40,6 +43,7 @@ const MrgAccManageModal = ({
       description={t('mrg-acc-manage:add-description')}
       Element={Add}
     />
+
   </Modal>
 );
 

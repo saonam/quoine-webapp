@@ -9,7 +9,7 @@ const AccountManageList = ({
     <div>
       <h1 className={styles.heading}>{title}</h1>
       {description ? (
-        <h1 className={styles.description}>{description}</h1>
+        <p className={styles.description}>{description}</p>
       ) : null}
       {modelKeys.map(modelKey => (
         <div key={modelKey} className={styles.item}>

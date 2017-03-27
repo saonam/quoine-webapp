@@ -11,7 +11,7 @@ export default createSelector(
     const fxRates = {};
     keys.forEach(key => {
       const { currency, fxRate } = models[key];
-      if (!fxRates[currency]) {
+      if (!fxRates[currency] && fxRate) {
         fxRates[currency] = fxRate;
       }
     });
