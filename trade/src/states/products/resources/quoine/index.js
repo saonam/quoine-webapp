@@ -3,7 +3,7 @@ import { quoine } from '@quoine/resources';
 import * as normalize from './normalize';
 
 export const load = () => (
-  quoine.get('/products').then(normalize.all)
+  quoine.get('/products?with_rate=true').then(normalize.all)
 );
 
 export const subscribe = ({ symbol, id }, onUpdate) => (

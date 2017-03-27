@@ -20,6 +20,9 @@ export const one = raw => ({
   // ===
   feeTaker: Number(raw.taker_fee),
   feeMaker: Number(raw.maker_fee),
+  // ===
+  currency: raw.currency,
+  fxRate: Number(raw.exchange_rate),
 });
 
 export const all = raw => (raw.map(one));
