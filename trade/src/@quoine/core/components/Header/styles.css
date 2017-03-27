@@ -1,0 +1,45 @@
+.base {
+  composes: ver-small from "@quoine/styles/padding.css";
+}
+/* === */
+.center {
+  composes: center from "@quoine/styles/text.css";
+}
+.text {
+  composes: semi-bold uppercase from "@quoine/styles/text.css";
+}
+/* === */
+.hor-small {
+  composes: hor-small from "@quoine/styles/padding.css";
+}
+.hor-medium {
+  composes: hor-medium from "@quoine/styles/padding.css";
+}
+/* === */
+.primary-1 {
+  composes: primary-1 from "@quoine/styles/bg-color.css";
+}
+/* === */
+._highlight {
+  composes: primary-0 from "@quoine/styles/color.css";
+}
+.negative {
+  composes: _highlight;
+  composes: negative from "@quoine/styles/bg-color.css";
+}
+.positive {
+  composes: _highlight;
+  composes: positive from "@quoine/styles/bg-color.css";
+}
+.negative-1 {
+  composes: _highlight;
+  composes: negative-1 from "@quoine/styles/bg-color.css";
+}
+.positive-1 {
+  composes: _highlight;
+  composes: positive-1 from "@quoine/styles/bg-color.css";
+}
+.accent {
+  composes: _highlight;
+  composes: accent from "@quoine/styles/bg-color.css";
+}

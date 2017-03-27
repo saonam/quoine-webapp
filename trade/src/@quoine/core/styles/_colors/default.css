@@ -1,0 +1,26 @@
+$primary-0         : hsl(0, 0%, 100%);          /* panel background */
+$primary-0-0       : hsla(0, 0%, 100%, 0);      /* for animation */
+$primary-0-1       : hsla(0, 0%, 100%, 0.1);
+$primary-0-2       : hsla(0, 0%, 100%, 0.2);
+$primary-0-5       : hsla(0, 0%, 100%, 0.5);    /* inverse normal text */
+/* === */
+$primary-0-accent  : hsla(202, 46%, 93%, 1);        /* app background */
+$primary-0-overlay : hsla(202, 46%, 93%, 0.5);    /* modal background */
+/* === */
+$primary-1         : hsl(0, 0%, 95%);           /* header background, disabled control icon */
+$primary-2         : hsl(0, 0%, 85%);           /* disabled text, control icon */
+$primary-3         : hsl(0, 0%, 67%);           /* secondary text */
+$primary-4         : hsl(0, 0%, 20%);           /* primary text */
+/* === */
+$accent            : hsl(202, 85%, 57%);        /* accent color to highlight things */
+$accent-1          : hsla(202, 85%, 57%, 0.1);
+$accent-2          : hsla(202, 85%, 57%, 0.2);
+$accent-light      : hsl(202, 74%, 77%);
+/* === */
+$negative   : hsl(4, 90%, 58%);          /* sell, withdraw, close, cancel */
+$negative-1 : hsla(4, 90%, 58%, 0.1);
+$negative-2 : hsla(4, 90%, 58%, 0.2);
+/* === */
+$positive   : hsl(122, 57%, 48%);        /* buy, fund */
+$positive-1 : hsla(122, 57%, 48%, 0.1);
+$positive-2 : hsla(122, 57%, 48%, 0.2);

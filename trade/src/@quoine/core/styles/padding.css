@@ -1,0 +1,140 @@
+@import url('./_size.css');
+
+/* 1.5 */
+.hor-xx-small {
+  padding-left: calc($base / 8);
+  padding-right: calc($base / 8);
+}
+
+/* 3 */
+.x-small {
+  padding: calc($base / 4);
+}
+.ver-x-small {
+  padding-top: calc($base / 4);
+  padding-bottom: calc($base / 4);
+}
+.hor-x-small {
+  padding-left: calc($base / 4);
+  padding-right: calc($base / 4);
+}
+.bottom-x-small {
+  padding-bottom: calc($base / 4);
+}
+.top-x-small {
+  padding-top: calc($base / 4);
+}
+.left-x-small {
+  padding-left: calc($base / 4);
+}
+.right-x-small {
+  padding-right: calc($base / 4);
+}
+
+/* 6 */
+.small {
+  padding: calc($base / 2);
+}
+.left-small {
+  padding-left: calc($base / 2);
+}
+.right-small {
+  padding-right: calc($base / 2);
+}
+.hor-small {
+  padding-left: calc($base / 2);
+  padding-right: calc($base / 2);
+}
+.ver-small {
+  padding-top: calc($base / 2);
+  padding-bottom: calc($base / 2);
+}
+.bottom-small {
+  padding-bottom: calc($base / 2);
+}
+.top-small {
+  padding-top: calc($base / 2);
+}
+
+/* 12 */
+.medium {
+  padding: calc($base);
+}
+.left-medium {
+  padding-left: calc($base);
+}
+.right-medium {
+  padding-right: calc($base);
+}
+.hor-medium {
+  padding-left: calc($base);
+  padding-right: calc($base);
+}
+.ver-medium {
+  padding-top: calc($base);
+  padding-bottom: calc($base);
+}
+.bottom-medium {
+  padding-bottom: calc($base);
+}
+.top-medium {
+  padding-top: calc($base);
+}
+
+/* 18 */
+.ver-medium-large {
+  padding-top: calc($base * 1.5);
+  padding-bottom: calc($base * 1.5);
+}
+
+/* 24 */
+.large {
+  padding: calc($base * 2);
+}
+.hor-large {
+  padding-left: calc($base * 2);
+  padding-right: calc($base * 2);
+}
+.ver-large {
+  padding-top: calc($base * 2);
+  padding-bottom: calc($base * 2);
+}
+.left-large {
+  padding-left: calc($base * 2);
+}
+.right-large {
+  padding-right: calc($base * 2);
+}
+.bottom-large {
+  padding-bottom: calc($base * 2);
+}
+
+/* 36 */
+.left-x-large {
+  padding-left: calc($base * 3);
+}
+.top-x-large {
+  padding-top: calc($base * 3);
+}
+.bottom-x-large {
+  padding-bottom: calc($base * 3);
+}
+.hor-x-large {
+  padding-left: calc($base * 3);
+  padding-right: calc($base * 3);
+}
+.ver-x-large {
+  padding-top: calc($base * 3);
+  padding-bottom: calc($base * 3);
+}
+
+/* 48 */
+.hor-xx-large {
+  padding-left: calc($base * 4);
+  padding-right: calc($base * 4);
+}
+
+/* icon */
+.right-icon {
+  padding-right: $icon;
+}

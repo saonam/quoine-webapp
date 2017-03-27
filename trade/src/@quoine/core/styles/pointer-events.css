@@ -1,0 +1,7 @@
+.none,
+.disabled-none:disabled {
+  pointer-events: none;
+}
+.auto {
+  pointer-events: auto;
+}

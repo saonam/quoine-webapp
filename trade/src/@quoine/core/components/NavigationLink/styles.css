@@ -1,0 +1,32 @@
+@import url("@quoine/core/styles/_size.css");
+
+._main {
+  composes: block from "@quoine/styles/display.css";
+  composes: large semi-bold uppercase from "@quoine/styles/text.css";
+  composes: relative from "@quoine/styles/position.css";
+  composes: ver-small left-large from "@quoine/styles/padding.css";
+}
+._main:before {
+  content: "";
+
+  position: absolute; top: 0; left: 0; bottom: 0;
+  margin: auto;
+
+  width: calc($base); height: 2px;
+
+  background-color: currentColor;
+  opacity: 0.2;
+}
+.mainLink {
+  composes: _main;
+  composes: pointer from "@quoine/styles/cursor.css";
+  composes: active-accent from "@quoine/styles/color.css";
+  composes: active-accent-2 from "@quoine/styles/bg-color.css";
+}
+.mainRaw {
+  composes: _main;
+}
+.active {
+  composes: accent from "@quoine/styles/color.css";
+  pointer-events: none;
+}

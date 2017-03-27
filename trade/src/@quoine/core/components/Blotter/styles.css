@@ -1,0 +1,22 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: height-full from "@quoine/styles/size.css";
+  composes: x-scroll y-hidden from "@quoine/styles/overflow.css";
+}
+.header {
+  composes: bottom color-primary-1 size-2 from "@quoine/styles/border.css";
+  composes: inline-block from "@quoine/styles/display.css";
+  composes: relative from "@quoine/styles/position.css";
+  min-width: 100%;
+}
+.body {
+  height: calc(100% - calc($base * 3) - 2px);
+  composes: y-scroll x-hidden from "@quoine/styles/overflow.css";
+  composes: inline-block from "@quoine/styles/display.css";
+  min-width: 100%;
+}
+.filter-horizontal {
+  composes: absolute top left from "@quoine/styles/position.css";
+  width: calc($base * 24);
+}

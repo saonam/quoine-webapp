@@ -1,0 +1,3 @@
+.main {
+  composes: mono-number from "@quoine/styles/text.css";
+}

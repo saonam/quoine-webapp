@@ -1,0 +1,19 @@
+@import "@quoine/core/styles/_size.css";
+
+._main {
+  composes: flex jc-center ai-center from "@quoine/styles/flex.css";
+  composes: accent from "@quoine/styles/color.css";
+}
+.width {
+  composes: _main;
+  composes: width-full from "@quoine/styles/size.css";
+}
+.height {
+  composes: _main;
+  composes: height-full from "@quoine/styles/size.css";
+  width: calc($base * 2);
+}
+.full {
+  composes: _main;
+  composes: full from "@quoine/styles/size.css";
+}

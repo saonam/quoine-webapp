@@ -1,0 +1,38 @@
+.main {
+  composes: flex from "@quoine/styles/flex.css";
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}
+
+.labels {
+  composes: main;
+  composes: half from "@quoine/styles/opacity.css";
+}
+
+.item {
+  composes: auto from "@quoine/styles/flex.css";
+}
+
+.item-center {
+  composes: item;
+  composes: center from "@quoine/styles/text.css";
+}
+
+.item-num {
+  composes: item;
+  composes: right from "@quoine/styles/text.css";
+  flex-grow: 1.25;
+}
+
+.item-num-w-edit {
+  composes: item-num;
+  flex-grow: 1.5;
+}
+
+.button {
+  composes: item-center;
+}
+
+.button-w-edit {
+  composes: button;
+  flex-grow: 1.25;
+}

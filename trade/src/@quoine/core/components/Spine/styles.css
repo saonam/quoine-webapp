@@ -1,0 +1,7 @@
+.title {
+  composes: primary-2 from "@quoine/styles/color.css";
+  composes: uppercase semi-bold from "@quoine/styles/text.css";
+}
+.body {
+  composes: left-large from "@quoine/styles/margin.css";
+}

@@ -1,0 +1,15 @@
+.main {
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+._base {
+  composes: hidden from "@quoine/styles/overflow.css";
+  composes: ellipsis from "@quoine/styles/text.css";
+}
+.name {
+  composes: _base;
+  composes: semi-bold from "@quoine/styles/text.css";
+}
+.email {
+  composes: _base;
+  composes: primary-3 from "@quoine/styles/color.css";
+}

@@ -1,0 +1,26 @@
+.default {
+  composes: inline-block from "@quoine/styles/display.css";
+}
+.inline {
+  composes: inline from "@quoine/components/Button/styles.css";
+}
+.text {
+  composes: text from "@quoine/components/Button/styles.css";
+}
+.modal {
+  composes: modal from "../Button/styles.css";
+  /* link doesn't have center by default */
+  composes: center from "@quoine/styles/text.css";
+}
+.accent {
+  composes: accent from "@quoine/components/Button/styles.css";
+}
+.inverse-light {
+  composes: inverse-light from "@quoine/components/Button/styles.css";
+}
+.negative {
+  composes: negative from "@quoine/components/Button/styles.css";
+}
+.disabled {
+  composes: disabled from "@quoine/components/Button/styles.css";
+}

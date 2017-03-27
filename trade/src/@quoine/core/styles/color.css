@@ -1,0 +1,59 @@
+@import url('./_colors.css');
+
+@theme {
+  .primary-0-5 {
+    color: $primary-0-5;
+  }
+  .primary-0-accent {
+    color: $primary-0-accent;
+  }
+  .primary-1 {
+    color: $primary-1;
+  }
+  .primary-2 {
+    color: $primary-2;
+  }
+  .primary-3 {
+    color: $primary-3;
+  }
+  .primary-4 {
+    color: $primary-4;
+  }
+  .accent-light {
+    color: $accent-light;
+  }
+}
+
+@theme {
+  .primary-0,
+  .hover-primary-0:hover,
+  .focus-primary-0:focus,
+  .active-primary-0:active {
+    color: $primary-0;
+  }
+  .accent,
+  .hover-accent:hover,
+  .focus-accent:focus,
+  .active-accent:active {
+    color: $accent;
+  }
+  .negative,
+  .hover-negative:hover,
+  .focus-negative:focus,
+  .active-negative:active {
+    color: $negative;
+  }
+  .positive,
+  .hover-positive:hover,
+  .focus-positive:focus,
+  .active-positive:active {
+    color: $positive;
+  }
+}
+
+@theme {
+  .primary-2,
+  .disabled-primary-2:disabled {
+    color: $primary-2;
+  }
+}

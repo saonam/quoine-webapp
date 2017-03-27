@@ -1,0 +1,15 @@
+.label,
+.button {
+  composes: inline-block from "@quoine/styles/display.css";
+}
+.button {
+  composes: text accent inline from
+    "@quoine/components/Button/styles.css";
+  composes: pointer from "@quoine/styles/cursor.css";
+}
+.name {
+  composes: left-small from "@quoine/styles/margin.css";
+}
+.border {
+  composes: border-bottom-accent-size-2 from "@quoine/styles/box-shadow.css";
+}

@@ -1,0 +1,52 @@
+@import "@quoine/core/styles/_size.css";
+@import "@quoine/core/styles/_colors.css";
+
+.background {
+  composes: left from "@quoine/styles/text.css";
+  composes: medium line-2 from "@quoine/styles/text.css";
+  width: calc($base * 12);
+  height: calc($base * 9);
+}
+.heading {
+  composes: xx-large from "@quoine/styles/text.css";
+  composes: left-medium from "@quoine/styles/padding.css";
+  line-height: calc($base * 4);
+}
+.panel {
+  composes: hor-medium ver-small from "@quoine/styles/padding.css";
+}
+.row {
+  composes: flex from "@quoine/styles/flex.css";
+}
+.value, .label, .positive, .negative {
+  composes: auto from "@quoine/styles/flex.css";
+}
+
+/* === */
+
+@theme local {
+  .background {
+    background-color: $primary-0-accent;
+  }
+  .accent {
+    color: $accent;
+  }
+  .accent-light {
+    color: $accent-light;
+  }
+  .panel {
+    background-color: $primary-0;
+  }
+  .positive {
+    color: $positive;
+  }
+  .negative {
+    color: $negative;
+  }
+  .value {
+    color: $primary-4;
+  }
+  .label {
+    color: $primary-3;
+  }
+}

@@ -1,0 +1,26 @@
+$traders-light-primary-0         : hsla(240, 30%, 96%, 1);
+$traders-light-primary-0-0       : hsla(240, 30%, 96%, 0);
+$traders-light-primary-0-1       : hsla(240, 30%, 96%, 0.1);
+$traders-light-primary-0-2       : hsla(240, 30%, 96%, 0.2);
+$traders-light-primary-0-5       : hsla(240, 30%, 96%, 0.5);
+/* === */
+$traders-light-primary-0-accent  : hsla(0, 100%, 100%, 1);
+$traders-light-primary-0-overlay : hsla(0, 100%, 100%, 0.5);
+/* === */
+$traders-light-primary-1         : hsla(205, 100%, 36%, 0.05);
+$traders-light-primary-2         : hsla(205, 100%, 36%, 0.25);
+$traders-light-primary-3         : hsla(205, 100%, 36%, 0.5);
+$traders-light-primary-4         : hsla(205, 100%, 36%, 1);
+/* === */
+$traders-light-accent            : hsla(205, 100%, 36%, 1);
+$traders-light-accent-1          : hsla(205, 100%, 36%, 0.1);
+$traders-light-accent-2          : hsla(205, 100%, 36%, 0.2);
+$traders-light-accent-light      : hsla(205, 100%, 36%, 0.5);
+/* === */
+$traders-light-negative   : hsla(348, 100%, 45%, 1);
+$traders-light-negative-1 : hsla(348, 100%, 45%, 0.1);
+$traders-light-negative-2 : hsla(348, 100%, 45%, 0.2);
+/* === */
+$traders-light-positive   : hsla(151, 100%, 31%, 1);
+$traders-light-positive-1 : hsla(151, 100%, 31%, 0.1);
+$traders-light-positive-2 : hsla(151, 100%, 31%, 0.2);

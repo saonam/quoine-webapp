@@ -1,0 +1,6 @@
+.positive {
+  composes: positive from "@quoine/styles/color.css";
+}
+.negative {
+  composes: negative from "@quoine/styles/color.css";
+}

@@ -1,0 +1,3 @@
+.block {
+  composes: block from "@quoine/styles/display.css";
+}

@@ -1,0 +1,65 @@
+@import url('./_colors.css');
+
+/* default */
+@theme {
+  .top {
+    border-top: solid 1px $accent;
+  }
+  .bottom {
+    border-bottom: solid 1px $accent;
+  }
+  .left {
+    border-left: solid 1px $accent;
+  }
+  .right {
+    border-right: solid 1px $accent;
+  }
+  .all {
+    border: solid 1px $accent;
+  }
+}
+
+/* === */
+@theme {
+  .color-primary-0 {
+    border-color: $primary-0;
+  }
+  .color-primary-0-accent {
+    border-color: $primary-0-accent;
+  }
+  .color-primary-0-2 {
+    border-color: $primary-0-2;
+  }
+  .color-primary-1 {
+    border-color: $primary-1;
+  }
+  .color-primary-2 {
+    border-color: $primary-2;
+  }
+  .active-color-accent:active {
+    border-color: $accent;
+  }
+  .color-negative {
+    border-color: $negative;
+  }
+  .color-positive {
+    border-color: $positive;
+  }
+}
+/* === */
+
+/* override */
+@theme {
+  .current-color {
+    border-color: currentColor;
+  }
+  .size-2 {
+    border-width: 2px;
+  }
+  .size-3 {
+    border-width: 3px;
+  }
+  .size-4 {
+    border-width: 4px;
+  }
+}

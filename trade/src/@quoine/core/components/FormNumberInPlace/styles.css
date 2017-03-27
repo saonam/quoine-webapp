@@ -1,0 +1,15 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: flex from "@quoine/styles/flex.css";
+  composes: primary-0 from "@quoine/styles/bg-color.css";
+  composes: relative from "@quoine/styles/position.css";
+  z-index: 1;
+}
+.input {
+  composes: auto from "@quoine/styles/flex.css";
+  composes: border-bottom-accent-size-2 from "@quoine/styles/box-shadow.css";
+  composes: right mono-number from "@quoine/styles/text.css";
+  composes: width-full from "@quoine/styles/size.css";
+  composes: block from "@quoine/styles/display.css";
+}

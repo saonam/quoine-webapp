@@ -1,0 +1,61 @@
+@import url("@quoine/core/styles/_size.css");
+
+._overlay {
+  composes: fixed all from "@quoine/styles/position.css";
+}
+
+.overlay-no {
+  composes: _overlay;
+  composes: none from "@quoine/styles/pointer-events.css";
+  z-index: 2;
+}
+.overlay-default {
+  composes: _overlay;
+  composes: primary-0-overlay from "@quoine/styles/bg-color.css";
+  z-index: 4;
+}
+
+._modal {
+  composes: primary-0 from "@quoine/styles/bg-color.css";
+  composes: auto from "@quoine/styles/overflow.css";
+  composes: auto from "@quoine/styles/margin.css";
+
+  composes: auto from "@quoine/styles/pointer-events.css";
+
+  composes: width-full from "@quoine/styles/size.css";
+  max-height: 100%;
+}
+
+.modal-default {
+  composes: _modal;
+  max-width: calc($base * $base * 4);
+}
+
+.modal-large {
+  composes: _modal;
+  max-width: calc($base * $base * 5);
+}
+
+.header {
+  composes: primary-0 from "@quoine/styles/color.css";
+  composes: accent from "@quoine/styles/bg-color.css";
+  composes: line-3 uppercase bold from "@quoine/styles/text.css";
+  composes: x-small from "@quoine/styles/padding.css";
+
+  composes: relative from "@quoine/styles/position.css";
+}
+.title {
+  composes: center from "@quoine/styles/text.css";
+}
+._headerButton {
+  composes: absolute from "@quoine/styles/position.css";
+  top: calc($base / 4);
+}
+.leftButton {
+  composes: _headerButton;
+  left: calc($base / 4);
+}
+.rightButton {
+  composes: _headerButton;
+  right: calc($base / 4);
+}

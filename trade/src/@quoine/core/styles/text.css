@@ -1,0 +1,145 @@
+@import url('./_size.css');
+
+/**********/
+/* weight */
+/**********/
+
+.bold {
+  font-weight: 700;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.light {
+  font-weight: 300;
+}
+
+/********/
+/* size */
+/********/
+
+/* 11 */
+.small {
+  font-size: calc($base - 1);
+  line-height: calc($base);
+}
+
+/* 12 */
+.medium {
+  font-size: calc($base);
+}
+
+/* 14 */
+
+.large {
+  font-size: calc($base + 2);
+}
+
+/* 18 */
+.x-large {
+  font-size: calc($base * 1.5);
+}
+
+/* 24 */
+.xx-large {
+  font-size: calc($base * 2);
+  line-height: calc($base * 2);
+}
+
+/* 36 */
+.xxx-large {
+  font-size: calc($base * 3);
+  line-height: calc($base * 3);
+}
+
+/**********/
+/* others */
+/**********/
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.no-transform {
+  text-transform: none;
+}
+
+.mono-number {
+  font-feature-settings: "tnum";
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+/*  */
+
+.line-single {
+  line-height: 1;
+}
+
+.line-1 {
+  line-height: $base;
+}
+
+.line-1-5 {
+  line-height: calc($base * 1.5);
+}
+
+.line-2 {
+  line-height: calc($base * 2);
+}
+
+.line-2-5 {
+  line-height: calc($base * 2.5);
+}
+
+.line-3 {
+  line-height: calc($base * 3);
+}
+
+.line-4 {
+  line-height: calc($base * 4);
+}
+
+.line-5 {
+  line-height: calc($base * 5);
+}
+
+/*********/
+/* align */
+/*********/
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+}

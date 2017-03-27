@@ -1,0 +1,10 @@
+$base: 12px;
+
+$x-small : 3px;
+$small   : 6px;
+$medium  : 12px;
+$large   : 18px;
+$x-large : 24px;
+
+$line-height: $x-large;
+$icon: $x-large;

@@ -1,0 +1,19 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: flex from "@quoine/styles/flex.css";
+  /* main also need hidden overflow to prevent layout fail */
+  composes: hidden from "@quoine/styles/overflow.css";
+}
+.inner {
+  composes: x-scroll from "@quoine/styles/overflow.css";
+  composes: transform ease-out-cubic fast from "@quoine/styles/transition.css";
+}
+.outer {
+  composes: hidden from "@quoine/styles/overflow.css";
+}
+.padding {
+  /* fake button width */
+  /* width = icon + padding (inline) = 18 + 6 + 6 = 30 */
+  width: calc($base * 2.5);
+}
