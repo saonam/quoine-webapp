@@ -44,20 +44,20 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="名前（漢字）">
-          <KanjiNameInput value={form.nameKanji} onChange={onChange.nameKanji} autoFocus border required />
+          <KanjiNameInput value={form.nameKanji} onChange={onChange.nameKanji} autoFocus border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="名前（カナ）">
-          <KanaNameInput value={form.nameKana} onChange={onChange.nameKana} border required />
+          <KanaNameInput value={form.nameKana} onChange={onChange.nameKana} border={2} required />
         </LargeField>
       </div>
 
       {edit ? null : (
         <div className={styles.input}>
           <LargeField label="生年月日">
-            <DateInput value={form.birth} onChange={onChange.birth} border required />
+            <DateInput value={form.birth} onChange={onChange.birth} border={2} required />
           </LargeField>
         </div>
       )}
@@ -65,7 +65,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
       {edit ? null : (
         <div className={styles.input}>
           <LargeField label="性別">
-            <GenderInput value={form.gender} onChange={onChange.gender} border required />
+            <GenderInput value={form.gender} onChange={onChange.gender} border={2} required />
           </LargeField>
         </div>
       )}
@@ -95,14 +95,14 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="住所">
-          <AddressInput value={form.address} onChange={onChange.address} border required />
+          <AddressInput value={form.address} onChange={onChange.address} border={2} required />
         </LargeField>
       </div>
 
       {edit ? null : (
         <div className={styles.input}>
           <LargeField label="電話番号">
-            <PhoneInput value={form.phone} onChange={onChange.phone} border required />
+            <PhoneInput value={form.phone} onChange={onChange.phone} border={2} required />
           </LargeField>
         </div>
       )}
@@ -119,7 +119,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="ご職業">
-          <OccupationInput value={form.occupation} onChange={onChange.occupation} border required />
+          <OccupationInput value={form.occupation} onChange={onChange.occupation} border={2} required />
         </LargeField>
         <p className={styles.help}>
           ※「学生」で収入源に「給与所得」「事業所得」がある場合、ご職業は「パート・アルバイト・派遣・契約」または「自営業」を選択してください。
@@ -129,7 +129,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
       {['専業主婦（主夫）', '無職'].indexOf(form.occupation.job) === -1 ? (
         <div className={styles.input}>
           <LargeField label="勤務先住所">
-            <AddressInput value={form.workAddress} onChange={onChange.workAddress} border required />
+            <AddressInput value={form.workAddress} onChange={onChange.workAddress} border={2} required />
           </LargeField>
         </div>
       ) : null}
@@ -137,7 +137,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
       {['専業主婦（主夫）', '無職'].indexOf(form.occupation.job) === -1 ? (
         <div className={styles.input}>
           <LargeField label="電話番号">
-            <PhoneInput value={form.workPhone} onChange={onChange.workPhone} border required />
+            <PhoneInput value={form.workPhone} onChange={onChange.workPhone} border={2} required />
           </LargeField>
         </div>
       ) : null}
@@ -154,7 +154,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="主な収入源">
-          <SourceInput value={form.source} onChange={onChange.source} border required />
+          <SourceInput value={form.source} onChange={onChange.source} border={2} required />
         </LargeField>
         <p className={styles.help}>
           ※ご本人様の収入となり、配偶者の収入、仕送り等は含まれません。
@@ -163,7 +163,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="年収">
-          <MoneyInput value={form.income} onChange={onChange.income} border required />
+          <MoneyInput value={form.income} onChange={onChange.income} border={2} required />
         </LargeField>
         <p className={styles.help}>
           ※ご本人様の収入となり、配偶者の収入、仕送り等は含まれません。
@@ -172,7 +172,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="投資可能資産">
-          <MoneyInput value={form.investable} onChange={onChange.investable} border required />
+          <MoneyInput value={form.investable} onChange={onChange.investable} border={2} required />
         </LargeField>
       </div>
 
@@ -188,13 +188,13 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="投資目的">
-          <PurposeInput value={form.purpose} onChange={onChange.purpose} border />
+          <PurposeInput value={form.purpose} onChange={onChange.purpose} border={2} />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="投資経験">
-          <ExperienceInput value={form.experience} onChange={onChange.experience} border required />
+          <ExperienceInput value={form.experience} onChange={onChange.experience} border={2} required />
         </LargeField>
       </div>
 
@@ -211,7 +211,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
         <div className={styles.input}>
           <LargeField label="申込の経緯">
-            <RelationInput value={form.relation} onChange={onChange.relation} border required />
+            <RelationInput value={form.relation} onChange={onChange.relation} border={2} required />
           </LargeField>
         </div>
 

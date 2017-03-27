@@ -42,26 +42,26 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="法人名">
-          <TextInput value={form.name} onChange={onChange.name} autoFocus border required />
+          <TextInput value={form.name} onChange={onChange.name} autoFocus border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="フリガナ">
-          <TextInput value={form.nameKana} onChange={onChange.nameKana} pattern="[゠-ヿ]+" title="カタカナ文字のみ入力してください" border required />
+          <TextInput value={form.nameKana} onChange={onChange.nameKana} pattern="[゠-ヿ]+" title="カタカナ文字のみ入力してください" border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="ご住所">
-          <AddressInput value={form.address} onChange={onChange.address} border required />
+          <AddressInput value={form.address} onChange={onChange.address} border={2} required />
         </LargeField>
       </div>
 
       {edit ? null : (
         <div className={styles.input}>
           <LargeField label="電話番号">
-            <PhoneInput value={form.phone} onChange={onChange.phone} border required />
+            <PhoneInput value={form.phone} onChange={onChange.phone} border={2} required />
           </LargeField>
         </div>
       )}
@@ -78,33 +78,33 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="業種">
-          <IndustryInput value={form.industry} onChange={onChange.industry} border required />
+          <IndustryInput value={form.industry} onChange={onChange.industry} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="業務内容">
-          <TextInput value={form.business} onChange={onChange.business} border required />
+          <TextInput value={form.business} onChange={onChange.business} border={2} required />
         </LargeField>
       </div>
 
       {edit ? null : (
         <div className={styles.input}>
           <LargeField label="設立年月">
-            <DateInput value={form.established} onChange={onChange.established} date={false} border />
+            <DateInput value={form.established} onChange={onChange.established} date={false} border={2} />
           </LargeField>
         </div>
       )}
 
       <div className={styles.input}>
         <LargeField label="決算日">
-          <DateInput value={form.report} onChange={onChange.report} year={false} border />
+          <DateInput value={form.report} onChange={onChange.report} year={false} border={2} />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="ホームページアドレス">
-          <TextInput value={form.website} onChange={onChange.website} border required />
+          <TextInput value={form.website} onChange={onChange.website} border={2} required />
         </LargeField>
       </div>
 
@@ -121,7 +121,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <h1 className={styles.heading}>代表者</h1>
 
     <div className={styles.body}>
-      <RepInput value={form.rep} onChange={onChange.rep} border required />
+      <RepInput value={form.rep} onChange={onChange.rep} border={2} required />
     </div>
 
     {/*
@@ -131,7 +131,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <h1 className={styles.heading}>実質的支配者</h1>
 
     <div className={styles.body}>
-      <ShsInput value={form.shs} onChange={onChange.shs} border required />
+      <ShsInput value={form.shs} onChange={onChange.shs} border={2} required />
     </div>
 
     {/*
@@ -141,7 +141,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
     <h1 className={styles.heading}>担当者（口座管理者）情報</h1>
 
     <div className={styles.body}>
-      <TraderForm value={form.trader} onChange={onChange.trader} border required />
+      <TraderForm value={form.trader} onChange={onChange.trader} border={2} required />
     </div>
 
     {/*
@@ -154,31 +154,31 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="事業体の年商">
-          <MoneyInput value={form.incomeGross} onChange={onChange.incomeGross} border required />
+          <MoneyInput value={form.incomeGross} onChange={onChange.incomeGross} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="事業体の税抜き後年間所得">
-          <MoneyInput value={form.incomeNet} onChange={onChange.incomeNet} border required />
+          <MoneyInput value={form.incomeNet} onChange={onChange.incomeNet} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="事業体の自己資本">
-          <MoneyInput value={form.capital} onChange={onChange.capital} border required />
+          <MoneyInput value={form.capital} onChange={onChange.capital} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="投資目的">
-          <PurposeInput value={form.purpose} onChange={onChange.purpose} border />
+          <PurposeInput value={form.purpose} onChange={onChange.purpose} border={2} />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label="投資経験">
-          <ExperienceInput border value={form.experience} onChange={onChange.experience} required />
+          <ExperienceInput border={2} value={form.experience} onChange={onChange.experience} required />
         </LargeField>
       </div>
 
@@ -194,7 +194,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
       <div className={styles.body}>
         <div className={styles.input}>
           <LargeField label="申込の経緯">
-            <RelationInput value={form.relation} onChange={onChange.relation} border required />
+            <RelationInput value={form.relation} onChange={onChange.relation} border={2} required />
           </LargeField>
         </div>
       </div>

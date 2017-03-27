@@ -23,51 +23,38 @@ const UserForm3PteIndiView = ({ form, onChange, onSubmit }) => (
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up-pi:name')}>
-          <NameInput
-            value={form.name} onChange={onChange.name}
-            autoFocus border required
-          />
+          <NameInput value={form.name} onChange={onChange.name} autoFocus border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up-pi:birth')}>
-          <DateInput
-            value={form.birth} onChange={onChange.birth}
-            border
-          />
+          <DateInput value={form.birth} onChange={onChange.birth} border={2} />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up-pi:nationality')}>
-          <CountryInput
-            value={form.nationality} onChange={onChange.nationality}
-            border required
-          />
+          <CountryInput value={form.nationality} onChange={onChange.nationality} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up-pi:address')}>
-          <TextInput
-            value={form.address} onChange={onChange.address}
-            border required
-          />
+          <TextInput value={form.address} onChange={onChange.address} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up-pi:income')}>
           <SelectInput
-            value={form.income} onChange={onChange.income}
+            value={form.income} onChange={onChange.income} border={2} required
             options={[
               'employed', 'self-employed', 'other', 'retired',
             ].map(key => ({
               label: translate(`sign-up-pi:income-${key}`),
               value: key,
             }))}
-            border required
           />
         </LargeField>
       </div>
@@ -75,10 +62,7 @@ const UserForm3PteIndiView = ({ form, onChange, onSubmit }) => (
       {form.income === 'employed' ? (
         <div className={styles.input}>
           <LargeField label={translate('sign-up-pi:income-job')}>
-            <TextInput
-              value={form.incomeJob} onChange={onChange.incomeJob}
-              border required
-            />
+            <TextInput value={form.incomeJob} onChange={onChange.incomeJob} border={2} required />
           </LargeField>
         </div>
       ) : null}
@@ -88,19 +72,13 @@ const UserForm3PteIndiView = ({ form, onChange, onSubmit }) => (
 
           <div className={styles.input}>
             <LargeField label={translate('sign-up-pi:income-business-name')}>
-              <TextInput
-                value={form.incomeBusinessName} onChange={onChange.incomeBusinessName}
-                border required
-              />
+              <TextInput value={form.incomeBusinessName} onChange={onChange.incomeBusinessName} border={2} required />
             </LargeField>
           </div>
 
           <div className={styles.input}>
             <LargeField label={translate('sign-up-pi:income-business-type')}>
-              <TextInput
-                value={form.incomeBusinessType} onChange={onChange.incomeBusinessType}
-                border required
-              />
+              <TextInput value={form.incomeBusinessType} onChange={onChange.incomeBusinessType} border={2} required />
             </LargeField>
           </div>
 
@@ -110,10 +88,7 @@ const UserForm3PteIndiView = ({ form, onChange, onSubmit }) => (
       {form.income === 'other' ? (
         <div className={styles.input}>
           <LargeField label={translate('sign-up-pi:income-detail')}>
-            <TextInput
-              value={form.incomeDetail} onChange={onChange.incomeDetail}
-              border required
-            />
+            <TextInput value={form.incomeDetail} onChange={onChange.incomeDetail} border={2} required />
           </LargeField>
         </div>
       ) : null}

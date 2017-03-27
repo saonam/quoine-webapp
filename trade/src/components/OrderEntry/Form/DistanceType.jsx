@@ -18,8 +18,10 @@ const getOptions = () => (
 const OrderEntryFormDistanceType = ({ form, onChange }) => (
   <Field id="distance-type">
     <SelectInput
-      onChange={onChange} value={form.distanceType}
-      options={getOptions()} border
+      onChange={onChange}
+      value={form.distanceType}
+      options={getOptions()}
+      border
     />
   </Field>
 );

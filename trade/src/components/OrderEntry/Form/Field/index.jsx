@@ -5,6 +5,8 @@ import translate from '@quoine/translate';
 import Field from '@quoine/components/Field';
 import Hint from '@quoine/components/Hint';
 
+import styles from './styles.css';
+
 /* eslint-disable react/prop-types */
 const getLabel = ({ id, hintStyle }) => (
   hintStyle ? (
@@ -27,12 +29,10 @@ const getLabel = ({ id, hintStyle }) => (
 /* eslint-enable react/prop-types */
 
 const OrderEntryFormField = ({ id, hintStyle, children }) => (
-  <Field
-    label={getLabel({ id, hintStyle })}
-    labelStyle="uppercase semi-bold"
-    childrenStyle="large"
-  >
-    {children}
+  <Field label={getLabel({ id, hintStyle })} labelStyle="uppercase semi-bold">
+    <div className={styles.children}
+      {children}
+    </div>
   </Field>
 );
 

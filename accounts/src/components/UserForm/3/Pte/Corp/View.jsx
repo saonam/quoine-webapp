@@ -19,55 +19,37 @@ const UserForm3PteCorpView = ({ form, onChange, onSubmit }) => (
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up-pc:name')}>
-          <TextInput
-            value={form.name} onChange={onChange.name}
-            autoFocus border required
-          />
+          <TextInput value={form.name} onChange={onChange.name} autoFocus border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up-pc:type')}>
-          <TextInput
-            value={form.type} onChange={onChange.type}
-            border required
-          />
+          <TextInput value={form.type} onChange={onChange.type} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up:address')}>
-          <TextInput
-            value={form.address} onChange={onChange.address}
-            border required
-          />
+          <TextInput value={form.address} onChange={onChange.address} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up:website')}>
-          <TextInput
-            value={form.website} onChange={onChange.website}
-            border required
-          />
+          <TextInput value={form.website} onChange={onChange.website} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up:tax')}>
-          <TextInput
-            value={form.tax} onChange={onChange.tax}
-            border required
-          />
+          <TextInput value={form.tax} onChange={onChange.tax} border={2} required />
         </LargeField>
       </div>
 
       <div className={styles.input}>
         <LargeField label={translate('sign-up:vat')}>
-          <TextInput
-            value={form.vat} onChange={onChange.vat}
-            border
-          />
+          <TextInput value={form.vat} onChange={onChange.vat} border={2} />
         </LargeField>
       </div>
 
