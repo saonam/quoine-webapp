@@ -10,7 +10,7 @@ const AccountWrapperBodyView = ({ Body, account, onChange, ...others }) => (
   account ? (
     <div className={styles.main}>
       <div className={styles.input}>
-        <Select account={account} onChange={onChange} />
+        <Select account={account} onChange={onChange} {...others} />
       </div>
       <div className={styles.body}>
         <Body account={account} {...others} />

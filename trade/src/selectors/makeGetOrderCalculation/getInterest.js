@@ -1,4 +1,4 @@
-import getFxRate from './getFxRate';
+import exchange from './exchange';
 
 const calculateInterest = ({ loanAmount, book, vendorConfig }) => {
   const interestRate = vendorConfig.interestRate;
@@ -22,7 +22,7 @@ const calculateInterest = ({ loanAmount, book, vendorConfig }) => {
 
 // return interest in QUOTE
 const getInterest = ({
-  cost, form, interestBook, vendorConfig, fxRates, products,
+  cost, form, interestBook, vendorConfig, fxRates,
 }) => {
   // ready
   const isShort = form.side === 'sell';
@@ -34,10 +34,11 @@ const getInterest = ({
   // go
   const interest = calculateInterest({ vendorConfig, loanAmount, book });
 
-  // convert BASE -> QUOTE
+  // exchange BASE -> QUOTE
   if (isShort) {
-    const fxRate = getFxRate({ frm: form.baseCurrency, to: form.quoteCurrency, fxRates, products });
-    return interest * fxRate;
+    return exchange({
+      value: interest, frm: form.baseCurrency, to: form.quoteCurrency, fxRates,
+    });
   }
 
   return interest;

@@ -1,17 +1,16 @@
 import React from 'react';
 
-import translate from '@quoine/translate';
-
 import AccountSelect from '@quoine/components/AccountSelect';
 import Field from '@quoine/components/Field';
 
-const AccountWrapperSelect = ({ account, onChange }) => (
-  <Field label={translate('fund:account')} layout="inline">
+const AccountWrapperSelect = ({ label, account, onChange }) => (
+  <Field label={label} layout="inline">
     <AccountSelect value={account.currency} onChange={onChange} />
   </Field>
 );
 
 AccountWrapperSelect.propTypes = {
+  label: React.PropTypes.string.isRequired,
   account: React.PropTypes.shape({
     currency: React.PropTypes.string.isRequired,
   }).isRequired,

@@ -1,17 +1,18 @@
 import getCost from './getCost';
 import getFee from './getFee';
 import getInterest from './getInterest';
-import getFxRate from './getFxRate';
+import exchange from './exchange';
 
-const calculate = (form, orderBook, interestBook, vendorConfig, fees, fxRates, products) => {
+const calculate = (form, orderBook, interestBook, vendorConfig, fees, fxRates) => {
   if (form.market === 'futures') {
     return [];
   }
 
-  // fxRate from quote to fund
-  const { quoteCurrency: quote } = form;
-  const { account: fund } = form;
-  const fxRate = getFxRate({ frm: quote, to: fund, fxRates, products });
+  const quote = form.quoteCurrency;
+  const fund = form.account;
+  const toFund = (value) => (
+    exchange({ value, frm: quote, to: fund, fxRates })
+  );
 
   // spot & margin here
   // first get est quote cost
@@ -30,8 +31,8 @@ const calculate = (form, orderBook, interestBook, vendorConfig, fees, fxRates, p
   }
 
   // now margin
-  const feeInFund = fee * fxRate;
-  const costInFund = cost * fxRate;
+  const feeInFund = toFund(fee);
+  const costInFund = toFund(cost);
   let margin = costInFund / form.leverage;
   // TODO
   // check is crypto account by selector
@@ -40,9 +41,9 @@ const calculate = (form, orderBook, interestBook, vendorConfig, fees, fxRates, p
   }
   // interest is calculated in QUOTE
   const interest = getInterest({
-    cost, form, interestBook, vendorConfig, fxRates, products,
+    cost, form, interestBook, vendorConfig, fxRates,
   });
-  const interestInFund = interest * fxRate;
+  const interestInFund = toFund(interest);
 
   const result = [
     { name: 'price-average', value: avgPrice, currency: quote },
@@ -51,6 +52,7 @@ const calculate = (form, orderBook, interestBook, vendorConfig, fees, fxRates, p
     { name: 'interest', value: interestInFund, currency: fund },
   ];
 
+  const fxRate = fxRates[quote] && fxRates[quote][fund];
   if (fxRate !== 1) {
     const isFxRateLarge = fxRate >= 0.01;
     result.push({

@@ -1,11 +1,13 @@
 import React from 'react';
 
-import AccountWrapper from 'components/AccountWrapper';
+import translate from '@quoine/translate';
 
+import AccountWrapper from 'components/AccountWrapper';
 import Body from './Body';
 
 const Transfer = ({ type, Body: Element }) => (
   <AccountWrapper
+    label={translate('transfer:account')}
     Body={Body}
     // pass along
     type={type}

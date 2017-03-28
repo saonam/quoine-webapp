@@ -1,0 +1,13 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: height-full from "@quoine/styles/size.css";
+}
+.input {
+  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+}
+.body {
+  composes: top color-primary-1 size-2 from "@quoine/styles/border.css";
+  composes: y-scroll from "@quoine/styles/overflow.css";
+  height: calc(100% - $base * 3);
+}

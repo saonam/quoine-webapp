@@ -9,12 +9,20 @@ export default {
   },
   "transfer": {
     "spine-title": "Funds & Withdrawals",
+    "account": "Account",
   },
-  "volume-panel": {
-    "title-spine": "Volumes",
+  "volume-balance-panel": {
+    "title-spine": "Volumes & Balances",
   },
   "blotters": {
     "spine-title": "Orders, Positions & Executions",
+  },
+  "balance": {
+    "title": "Total Balance",
+    "currency": "Currency",
+    "total-fiat": "Total Fiat Balance",
+    "total-crypto": "Total Crypto Balance",
+    "total-balance": "Total Balance",
   },
   "execution": {
     "title": "Executions",
@@ -278,7 +286,6 @@ export default {
     "method-bank": "Bank",
     "method-cash": "Cash",
     // ===
-    "account": "Account",
     "amount": "Amount",
     "bank": "Bank Name",
     "time": "Created At",
@@ -330,7 +337,6 @@ export default {
     // ===
     "id": "ID",
     "time": "Created At",
-    "account": "Account",
     "quantity": "Amount",
     "address": "{{ currency}} Address",
     "bank": "Bank Account",

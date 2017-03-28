@@ -9,12 +9,20 @@ export default {
   },
   "transfer": {
     "spine-title": "入出金",
+    "account": "口座情報",
   },
-  "volume-panel": {
-    "title-spine": "取引高",
+  "volume-balance-panel": {
+    "title-spine": "取引高＆残高",
   },
   "blotters": {
     "spine-title": "注文、ポジション、約定",
+  },
+  "balance": {
+    "title": "合計残高",
+    "currency": "通貨",
+    "total-fiat": "合計現金残高",
+    "total-crypto": "合計仮想通貨残高",
+    "total-balance": "合計残高",
   },
   "execution": {
     "title": "約定",
@@ -278,7 +286,6 @@ export default {
     "method-bank": "銀行振込",
     "method-cash": "キャッシュ",
     // ===
-    "account": "通貨選択",
     "amount": "入金金額",
     "bank": "銀行名",
     "time": "入金依頼日時",
@@ -330,7 +337,6 @@ export default {
     // ===
     "id": "ID",
     "time": "出金依頼日時",
-    "account": "口座情報",
     "quantity": "出金金額",
     "address": "銀行住所（{{ currency }}）",
     "bank": "口座名義",
