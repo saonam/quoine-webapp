@@ -8,8 +8,14 @@ import styles from './styles.css';
 
 const BankDetailItemField = ({ id, children }) => (
   <div className={styles.item}>
-    <Field label={translate(`bank:${id}`)}>
-      {children}
+    <Field
+      label={(
+        <h1 className={styles.label}>{translate(`bank:${id}`)}</h1>
+      )}
+    >
+      <div className={styles.children}>
+        {children}
+      </div>
     </Field>
   </div>
 );

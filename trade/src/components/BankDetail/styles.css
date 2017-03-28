@@ -1,11 +1,18 @@
 .main {
   composes: primary-1 from "@quoine/styles/bg-color.css";
-  composes: ver-small hor-medium from "@quoine/styles/padding.css";
+  composes: medium from "@quoine/styles/padding.css";
 }
 .item {
   composes: top-small from "@quoine/styles/margin.css";
-  composes: line-1-5 from "@quoine/styles/text.css";
 }
 .item:first-child {
   margin: 0;
+}
+
+.label {
+  composes: small line-1 from "@quoine/styles/text.css";
+}
+.children {
+  composes: ver-x-small from "@quoine/styles/padding.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
 }
