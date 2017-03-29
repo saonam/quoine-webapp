@@ -30,6 +30,9 @@ const ForgotPassword = ({
               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" title={translate('sign-up:password-help')}
             />
           </LargeField>
+          <p className={styles.help}>
+            {translate('sign-up:password-help')}
+          </p>
         </div>
         <p className={styles.error}>
           {translate(error)}
