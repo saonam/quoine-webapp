@@ -26,9 +26,13 @@ const ForgotPassword = ({
           <LargeField label={translate('reset-password:new-password')}>
             <TextInput
               type="password" value={password}
-              onChange={onPasswordChange} border
+              onChange={onPasswordChange} border required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" title={translate('sign-up:password-help')}
             />
           </LargeField>
+          <p className={styles.help}>
+            {translate('sign-up:password-help')}
+          </p>
         </div>
         <p className={styles.error}>
           {translate(error)}
