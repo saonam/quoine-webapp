@@ -1,4 +1,6 @@
 import { createSelector } from 'reselect';
+import throttle from 'lodash.throttle';
+
 import getFiatFxRates from 'selectors/getFiatFxRates';
 
 const getCurrencies = state => state.currencies.keys;
@@ -90,7 +92,7 @@ const getCurrencyFxRates = ({ currency, currencies, products, fiatFxRates }) => 
   return result;
 };
 
-export default createSelector(
+const selector = createSelector(
   [getFiatFxRates, getCurrencies, getProducts],
   (fiatFxRates, currencies, products) => {
     const fxRates = {};
@@ -102,7 +104,8 @@ export default createSelector(
         fiatFxRates: fiatFxRates[currency] || {},
       });
     });
-    window.fxRates = fxRates;
     return fxRates;
   },
 );
+
+export default throttle(selector, 5000);
