@@ -77,7 +77,7 @@ export default {
     "country": "居住地国",
     "referral": "プロモコード（任意）",
     "term-quoine": "下記の<a href=\"https://www.quoine.com/terms\" target=\"_blank\">利用規約</a>に同意します。",
-    "term-traders": "下記の<a href=\"https://min-btc.com/terms\" target=\"_blank\">利用規約</a>に同意します。",
+    "term-traders": "下記の<a href=\"https://www.min-btc.com/document/terms.pdf\" target=\"_blank\">利用規約</a>に同意します。",
   },
   "sign-up-pi": {
     "name": "名前",
@@ -159,7 +159,7 @@ export default {
     "status-documents-submitted": "書類審査中",
     "status-approved": "開設済",
     "status-declined": "書類不備",
-    "status-pending": "開設中",
+    "status-pending": "書類提出前",
     // ===
     "help-documents-submitted": "本人確認書類をご送付いただきありがとうございます。弊社スタッフにより審査を進めさせていただきます。",
     "help-approved": "入出金及びお取引が可能です。",

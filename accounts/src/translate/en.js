@@ -83,7 +83,7 @@ export default {
     "us-help": "If you are a \"US citizen\" or \"resident of the United States (those with permanent residency in the US, those with a stay of more than 183 days in the US\"), please select \"yes\".",
     "referral": "Promotion Code (optional)",
     "term-quoine": "I agree with <a href=\"https://www.quoine.com/terms\" target=\"_blank\">Terms &amp Conditions</a>.",
-    "term-traders": "I agree with <a href=\"https://min-btc.com/terms\" target=\"_blank\">Terms &amp Conditions</a>.",
+    "term-traders": "I agree with <a href=\"https://www.min-btc.com/document/terms.pdf\" target=\"_blank\">Terms &amp Conditions</a>.",
   },
   "sign-up-pi": {
     "name": "Name",

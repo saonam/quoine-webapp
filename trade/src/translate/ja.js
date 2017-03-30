@@ -56,7 +56,7 @@ export default {
     // ===
     "margin": "証拠金",
     "fx-rate": "FXレート({{ first }}/{{ second }})",
-    "cost": "平均約定レート",
+    "cost": "約定代金（概算）",
     "fee": "取引手数料",
     "filled": "約定",
     "id": "注文ID",
