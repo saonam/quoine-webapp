@@ -37,6 +37,11 @@ const jpTrader = (form) => ({
   ...getName(form),
 });
 
+const jpIndustry = (form) => ({
+  industry_type: form.industry.type,
+  industry_detail: form.industry.type === 'その他' ? form.industry.detail : '',
+});
+
 const jpCorpDetail = (form) => ({
   ...getValid(form),
   corporate_name: form.name,
@@ -44,8 +49,7 @@ const jpCorpDetail = (form) => ({
   address: form.address,
   phone: form.phone,
   // ===
-  industry_type: form.industry.type,
-  industry_detail: form.industry.detail,
+  ...jpIndustry(form),
   business: form.business,
   established_date: toDateString(form.established),
   annual_report_date: toDateString(form.report),
