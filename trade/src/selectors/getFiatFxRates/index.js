@@ -7,9 +7,7 @@ const getUSDFxRates = ({ products, fiatCurrencies }) => {
   const result = {};
 
   fiatCurrencies.forEach(currency => {
-    const productKey = products.keys.find(key =>
-      products.models[key].currency === currency
-    );
+    const productKey = products.keys.filter(key => products.models[key].currency === currency)[0];
     const product = products.models[productKey];
     if (product && product.fxRate) {
       result[currency] = 1 / product.fxRate;
