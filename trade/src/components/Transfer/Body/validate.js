@@ -20,7 +20,7 @@ const validate = ({ user, account, type }) => {
     return {
       key: user.status,
       style: user.status === 'documents-submitted' ? 'positive' : 'negative',
-      goto: 'profile',
+      goto: user.status === 'documents-submitted' ? false : 'profile',
     };
   }
 

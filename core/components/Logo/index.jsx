@@ -4,24 +4,18 @@ import Image from '@quoine/components/Image';
 
 import styles from './styles.css';
 
-import quoineImage from './quoine.svg';
-import tradersImage from './traders.svg';
+import logo from './logo-process.env.REACT_APP_VENDOR.svg';
 
-let info;
-
+let width;
 switch (process.env.REACT_APP_VENDOR) {
-  case 'traders':
-    info = { src: tradersImage, width: 138 };
-    break;
-  case 'quoine':
-  default:
-    info = { src: quoineImage, width: 78 };
-    break;
+  case 'traders': { width = 138; break; }
+  case 'qryptos': { width = 103; break; }
+  case 'quoine': default: { width = 78; break; }
 }
 
 const Logo = () => (
   <Image
-    src={info.src} className={styles.main} width={info.width} height={24}
+    src={logo} className={styles.main} width={width} height={24}
   />
 );
 

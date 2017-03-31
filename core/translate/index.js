@@ -1,8 +1,8 @@
 import i18next from 'i18next';
-import baseEn from './en';
-import baseJa from './ja';
-import baseZhcn from './zhcn';
-import baseZhtw from './zhtw';
+import baseEn from './en-process.env.REACT_APP_VENDOR';
+import baseJa from './ja-process.env.REACT_APP_VENDOR';
+import baseZhcn from './zhcn-process.env.REACT_APP_VENDOR';
+import baseZhtw from './zhtw-process.env.REACT_APP_VENDOR';
 
 // TODO: list of languages should be dynamic
 export const init = (resources) => {

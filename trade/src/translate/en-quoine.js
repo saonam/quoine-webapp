@@ -1,4 +1,6 @@
-{
+/* eslint-disable quotes, quote-props, max-len */
+
+export default {
   "product-book": {
     "spine-title": "Order Book & Trade Feed",
   },
@@ -7,30 +9,109 @@
   },
   "transfer": {
     "spine-title": "Funds & Withdrawals",
+    "account": "Account",
   },
-  "volume-panel": {
-    "title-spine": "Volumes",
+  "volume-balance-panel": {
+    "title-spine": "Volumes & Balances",
   },
   "blotters": {
     "spine-title": "Orders, Positions & Executions",
   },
+  "balance": {
+    "title": "Total Balance",
+    "currency": "Currency",
+    "total-fiat": "Total Fiat Balance",
+    "total-crypto": "Total Crypto Balance",
+    "total-balance": "Total Balance",
+  },
   "execution": {
     "title": "Executions",
+    // ===
+    "side": "Side",
+    "side-all": "All",
+    "side-buy": "Buy",
+    "side-sell": "Sell",
+    // ===
+    "created-at": "Created At",
+    "id": "ID",
+    "order-id": "Order ID",
+    "price": "Price",
+    "product": "Product",
+    "quantity": "Quantity",
+    "time": "Time",
+    // ===
+    "target": "Target",
     "target-new": "New",
     "target-settle": "Settle",
+    "target-spot": "Spot",
   },
+  // ===
   "order": {
     "title": "Orders",
+    // ===
+    "distance": "Price Distance",
+    "distance-type": "Distance Type",
+    "distance-type-fiat": "Fiat",
     "distance-type-percentage": "Percent",
+    // ===
+    "margin": "Estimated Margin",
     "fx-rate": "FX Rate ({{ first }}/{{ second }})",
     "cost": "Estimated Cost",
+    "fee": "Fee",
+    "filled": "Filled",
+    "id": "ID",
+    "interest": "Daily Interest",
+    "leverage": "Leverage",
     "leverage-help": "With great leverage level come great risks. Please ensure that you fully understand the risk before trading at this level.",
+    "product": "Product",
+    "slippage": "Slippage",
+    "spot": "Spot",
+    "time": "Time",
+    "created-at": "Created At",
+    // ===
+    "quantity": "Quantity",
+    "quantity-disclose": "Disclosed Quantity",
+    "qty-filled": "Filled Qty",
+    "qty-disc": "Disc. Qty",
+    "qty-disclose": "Disclosed Qty",
+    // ===
+    "target": "Target",
+    "target-settle": "Settle",
+    "target-spot": "Spot",
+    // ===
+    "price-open": "Open Price",
+    "price-average": "Average Price",
+    "price-avg": "Avg. Price",
+    "price": "Price",
+    // ===
+    "side": "Side",
+    "side-all": "All",
+    "side-sell": "Sell",
+    "side-buy": "Buy",
+    // ===
+    "type": "Type",
+    "type-limit": "Limit",
+    "type-market": "Market",
+    "type-stop": "Stop",
+    "type-trailing-stop": "Trailing Stop",
+    // ===
+    "status": "Status",
+    "status-all": "All",
+    "status-rejected": "Rejected",
     "status-rejected-help": "Order has been rejected.",
+    "status-live": "Live",
     "status-live-help": "Order is currently live.",
     "status-cancelled": "Cancelled",
     "status-cancelled-help": "Order has been cancelled.",
+    "status-filled": "Filled",
     "status-filled-help": "Order has been filled.",
+    // ===
+    "direction": "Mode",
     "direction-help": "One-Direction: can only submit buy or sell orders.<br />Two-Direction: can submit both sides of orders.<br />Net-Out: opposite orders net out each other.",
+    "direction-two-direction": "Two-Direction",
+    "direction-net-out": "Net-Out",
+    "direction-netout": "Net-Out",
+    "direction-one-direction": "One-Direction",
   },
   "order-cancel": {
     "title": "Cancel",
@@ -59,12 +140,57 @@
     "quantity-min-BTC": "Order quantity must be greater than 0.01 BTC.",
     "quantity-min-ETH": "Order quantity must be greater than 0.5 ETH.",
     "quantity-integer": "Order quantity must be an integer.",
+    "user-free-margin-below-tolerance-level": "Free margin is below tolerance level",
   },
+  // ===
   "position": {
     "title": "Positions",
+    // ===
+    "status": "Status",
+    "status-all": "All",
+    "status-closed": "Closed",
+    "status-open": "Open",
+    // ===
+    "side": "Side",
+    "side-all": "All",
+    "side-long": "Long",
+    "side-short": "Short",
+    // ===
+    "pnl": "P&L",
+    "pnl-close": "Close P&L",
+    "pnl-open": "Open P&L",
+    "pnl-realised": "Realised P&L",
+    "pnl-total": "Total P&L",
+    "pnl-unrealised": "Unrealised P&L",
+    "pnl-w-fee": "P&L & Fee",
+    // ===
+    "price-close": "Close Price",
+    "price-liq": "Liq Price",
+    "price-mark": "Mark Price",
+    "price-open": "Open Price",
+    // ===
+    "qty-close": "Close Qty.",
+    "qty-open": "Open Qty.",
+    "quantity": "Quantity",
+    "quantity-close": "Close Quantity",
+    "quantity-open": "Open Quantity",
+    // ===
     "int-total": "Total Int.",
     "interest-total": "Total Interest",
+    // ===
+    "created-at": "Created At",
+    "fee": "Trade Fee",
+    "id": "ID",
+    "leverage": "Leverage",
+    "margin": "Margin",
+    "product": "Product",
     "sl": "SL",
+    "stop-loss": "Stop Loss",
+    "take-profit": "Take Profit",
+    "time": "Time",
+    "tp": "TP",
+    "updated-at": "Updated At",
+    "value": "Value",
   },
   "position-claim": {
     "title": "Claim",
@@ -86,14 +212,17 @@
     "take-profit-smaller-than-market-ask": "Position take profit must be smaller than market ask.",
     "claiming-this-position-will-result-in-a-margin-call-due-to-insufficient-free-margin-in-other-positions": "Claiming this position will result in a margin call due to insufficient free margin in other positions.",
   },
+  // ===
   "trans": {
     "title": "Transactions",
     "title-spine": "Transactions",
     "account": "Account",
+    // ===
     "direction": "Direction",
     "direction-all": "All",
     "direction-in": "Incoming",
     "direction-out": "Outcoming",
+    // ===
     "created-at": "Created At",
     "id": "ID",
     "notes": "Notes",
@@ -107,8 +236,10 @@
     "fee-exchange": "Exchange Fee",
     "fee-network": "Network Fee",
     "hash": "Hash",
+    // ===
     "state": "State",
     "state-pending": "Pending",
+    // ===
     "type": "Type",
     "type-all": "All",
     "type-bought": "Bought",
@@ -130,12 +261,31 @@
     "type-trade-fee": "Exchange Fee",
     "type-withdraw": "Withdrawal",
   },
+  // ===
+  "fund-withdrawal": {
+    "message-documents-submitted": "You have submitted documents for account verification. Your documents are being reviewed by our staff. Once your account is verified and approved, you will be able to fund/withdraw.",
+    // ===
+    "message-declined": "Your account verification request has been declined.",
+    "help-declined": "Please reupload documents in Menu > Settings > Profile according to email instructions.",
+    // ===
+    "message-pending": "Your account must be verified and approved before you can fund/withdraw.",
+    "help-pending": "Please upload ID documents for account verification in Menu > Settings > Profile.",
+    // ===
+    "message-limit-accounts": "Right now we only support JPY, BTC, and ETH deposits/withdrawals.",
+    // ===
+    "message-need-tfa": "For security reasons, withdrawals are not allowed without 2-factor authentication.",
+    "help-need-tfa": "Please enable 2-factor authentication for your account in Menu > Settings > Security.",
+    // ===
+    "goto-settings": "Go to Settings",
+  },
+  // ===
   "fund": {
     "title": "Fund",
+    // ===
     "method": "Funding Method",
     "method-bank": "Bank",
     "method-cash": "Cash",
-    "account": "Account",
+    // ===
     "amount": "Amount",
     "bank": "Bank Name",
     "time": "Created At",
@@ -147,6 +297,7 @@
     "inr-transfer-note": "This deposit method is only for INR domestic transfers from local India bank accounts.",
     "guide": "Payment Guide",
     "deadline": "Deadline",
+    // ===
     "pending-empty": "No Pending Funds",
     "pending-title": "Pending Funds",
   },
@@ -155,10 +306,13 @@
     "help-1-note": "Upon submitting the Funding Request, you will receive a \"Unique ID\" to include in your deposit.",
     "help-2": "Step 2. Make a deposit to one of our bank accounts:",
     "help-2-note": "Make sure to include the \"Unique ID\" you received in step 1 in your payment details.",
+    // ===
     "success": "Thank you! The \"Unique ID\" of this Funding Request is {{id}}. Please continue with Step 2.",
+    // ===
     "submit": "Submit",
     "open": "Create Fund Request",
     "dismiss": "Dismiss",
+    // ===
     "not-support": "We are not supporting deposits in this currency at the moment. Please contact us if you have any questions.",
   },
   "fund-cash": {
@@ -174,25 +328,30 @@
   "fund-error": {
     "you-are-not-approved": "Your account has to be approved before you can create a Funding Request.",
   },
+  // ===
   "withdrawal": {
     "title": "Withdrawal",
     "submit": "Submit Withdrawal",
+    // ===
     "not-support": "We are not supporting withdrawals in this currency at the moment. Please contact us if you have any questions.",
+    // ===
     "id": "ID",
     "time": "Created At",
-    "account": "Account",
     "quantity": "Amount",
     "address": "{{ currency}} Address",
     "bank": "Bank Account",
     "inr-transfer": "INR Transfer Type",
+    "inr-transfer-note": "This deposit method is only for INR domestic transfers from local India bank accounts.",
     "code": "Authentication Code",
     "fee": "Our Fee",
     "fee-help": "(bank fee not included)",
     "maximum": "Maximum (daily)",
     "minimum": "Minimum (per request)",
     "none": "None",
+    // ===
     "pending-title": "Pending Withdrawals",
     "pending-empty": "No Pending Withdrawals",
+    // ===
     "success": "Withdrawal request has been submitted.",
   },
   "withdrawal-cancel": {
@@ -208,6 +367,7 @@
     "token-is-invalid": "This token is invalid.",
     "verification-failed": "This authentication code is invalid.",
   },
+  // ===
   "futures-balance": {
     "help-fund": "To fund your Futures account, please transfer from your BTC account:",
     "help-withdrawal": "To withdraw from your Futures account, please transfer to your BTC account:",
@@ -222,18 +382,42 @@
     "transfer-failed": "Fund transfer has failed. Please try again.",
     "quantity-too-large": "Quantity must be less than balance.",
   },
+  // ===
   "bank": {
+    "account-name": "Account Name",
+    "account-number": "Account Number",
+    "account-type": "Account Type",
+    "bank-address": "Bank Address",
+    "bank-name": "Bank Name",
+    "bank-branch": "Bank Branch",
+    "bank-swift": "Bank SWIFT",
+    "country": "Country",
+    "joint-account": "Joint Account",
+    "joint-account-name": "Joint Account Holder Name",
+    "joint-address": "Joint Account Holder Address",
+    "joint-city": "Joint Account City",
+    "joint-country": "Joint Account Country",
+    "joint-document-id": "ID Document",
+    "joint-document-address": "Proof of Address",
     "document": "Bank Statement",
     "document-uploaded": "Document Uploaded",
+    "reason": "Reason",
+    "swift-check": "Check this if your bank account is located in Japan.",
+    // ===
+    "status": "Status",
+    "status-pending": "Pending",
     "status-pending-help": "You can still submit withdrawal requests with a pending bank account.",
+    // ===
     "add-action": "Add Bank Account",
     "add-submit": "Add Bank Account",
     "add-dismiss": "Back to Withdrawal",
     "add-success": "Add new bank successfully. You can now go back to Withdrawal.",
+    // ===
     "edit-action": "Edit",
     "edit-submit": "Edit Bank Account",
     "edit-dismiss": "Back to Withdrawal",
     "edit-success": "Bank account details have been edited successfully. You can now go back to Withdrawal.",
+    // ===
     "remove-confirm": "Remove this bank account?",
     "remove-action": "Remove",
     "detail-show": "Detail",
@@ -247,9 +431,12 @@
     "joint-country-can-t-be-blank": "Joint Country cannot be blank.",
     "en-bank-account-errors-withdrawal-exist-can-not-delete-this-bank-account": "This bank account cannot be deleted because there are pending withdrawal requests with it. Please cancel these requests first.",
   },
+  // ===
   "volume": {
     "title": "Transacted Volume",
     "action-close": "Close",
+    "from": "From",
+    "to": "To",
     "range": "Range",
     "report-action": "Email Report",
     "report-dismiss": "Dismiss",
@@ -259,6 +446,7 @@
   "volume-error": {
     "choose-range-first": "Please select \"From\" and \"To\" dates for the email report.",
   },
+  // ===
   "charts": {
     "not-ready": "This chart is not ready yet.",
     "spine-title": "Charts",
@@ -271,8 +459,13 @@
     "buys": "Buys",
   },
   "product": {
+    "high": "High",
+    "low": "Low",
     "last": "Last Price",
+    "volume": "24h Volume",
+    "volume-short": "24h Volume",
   },
+  // ===
   "mrg-acc": {
     "base-open-price": "Base Price",
     "pnl": "P&L",
@@ -281,10 +474,12 @@
     "position-total": "Total Positions",
     "account": "Account",
     "product": "Product",
+    // ===
     "side": "Side",
     "side-both": "Both",
     "side-short": "Shorts",
     "side-long": "Longs",
+    // ===
     "title-longs": "Longs",
     "title-shorts": "Shorts",
   },
@@ -303,28 +498,35 @@
   },
   "mrg-acc-manage": {
     "title": "Manage Products",
+    // ===
     "trading-title": "Trading Products",
     "trading-description": "These are all margin trading products associated with currently selected account. If you choose to hide a product, it will not be displayed on the dashboard header. Hiding a product does not affect your trading accounts or activities.",
+    // ===
     "hidden-title": "Hidden Products",
     "hidden-description": "",
+    // ===
     "add-title": "Add A Product",
     "add-description": "These are all margin trading products that can be added to currently selected account. If you add a new product, you will be able to trade margin with it using funds from currently selected account. Note that adding too many products to one account can increase loading time.",
+    // ===
     "action-manage": "Manage Products",
     "action-done": "Done",
     "action-hide": "Hide",
     "action-show": "Show",
   },
+  // ===
   "market": {
     "margin": "Margin",
     "futures": "Futures",
     "spot": "Spot",
   },
+  // ===
   "futures": {
     "activate-description": "You have not traded in Futures market yet. With your confirmation, a BTC trading account (called XBT) will be created for futures trading. The app will reload after the process.",
     "activate-cancel": "Cancel",
     "activate-title": "Create Futures Account",
     "activate-action": "Confirm",
   },
+  // ===
   "dashboard": {
     "basic": "account overview & order entry",
     "product": "order book & trade feed",
@@ -335,4 +537,4 @@
     "expand": "expand",
     "collapse": "collapse",
   },
-}
+};

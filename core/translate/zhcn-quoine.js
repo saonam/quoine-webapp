@@ -1,18 +1,51 @@
-{
+/* eslint-disable quotes, quote-props, max-len */
+
+export default {
   "account": {
+    "balance": "余额",
+    "balance-available": "可用余额",
+    "balance-wallet": "钱包余额",
+    // ===
+    "balance-base": "加密余额",
+    "balance-locked": "被锁定的余额",
+    "balance-quote": "批准余额",
     "balance-all": "Balance (All Accounts)",
+    "balance-total-crypto": "总加密余额",
+    "balance-total-fiat": "总批准余额",
+    // ===
+    "equity": "股本",
+    "loan-offers": "贷款优惠",
+    "loaned": "借出",
+    "loaned-interest": "已获利息",
+    // ===
+    "limit-orders": "限价订单",
+    // ===
+    "margin-available": "剩余可用的保证金",
+    "margin-coverage": "保证金的覆盖率",
+    "margin-used": "已使用的保证金",
     "margin": "Margin",
+    "margin-withdrawable": "可提取的保证金",
+    // ===
+    "pnl": "损益表",
+    "pnl-realised": "已实现的损益",
+    "pnl-unrealised": "未实现的损益",
+    // ===
     "spine-title": "Account",
+    // ===
     "hint-futures": "BTC account for futures trading",
   },
   "account-manage": {
     "title": "Manage Accounts",
+    // ===
     "trading-title": "Trading Accounts",
     "trading-description": "You can choose to hide an account. It will be hidden from the top menu without affect its balance or trading activities (if any). At the moment, only fiat accounts can be hidden.",
+    // ===
     "hidden-title": "Hidden Accounts",
     "hidden-description": "",
+    // ===
     "add-title": "Add An Account",
     "add-description": "Adding an account will allow you to fund, trade, and withdraw with its currency.",
+    // ===
     "action-manage": "Manage Accounts",
     "action-done": "Done",
     "action-fund": "Fund/Withdraw",
@@ -25,11 +58,23 @@
     "dismiss": "Dismiss",
   },
   "menu": {
+    "accounts": "账户",
+    "dashboard": "仪表盘",
     "lending": "Lending",
+    "settings": "设置",
+    // ===
+    "faq": "常见问题",
+    "fee": "费",
+    "support": "支持",
+    // ===
+    "language": "语言",
+    // ===
     "sign-out": "Sign Out",
   },
   "language": {
     "title": "Language",
+    "en": "英语",
+    "ja": "日本語",
   },
   "tfa": {
     "sent-sms": "Code has been sent via SMS.",
@@ -42,6 +87,10 @@
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "You have requested too many times in the last hour. Please wait a moment before trying again.",
     "en-authy-sms-token-was-not-sent": "The code was unable to reach your phone. Please try again.",
     "en-authy-token-is-invalid-token-was-used-recently": "This code is invalid because it has been used recently.",
+  },
+  "test": {
+    "basic": "英语",
+    "interpolation": "quoine-{{名称}}",
   },
   "month": {
     "1": "January",
@@ -66,6 +115,7 @@
     "loaded": "All loaded",
   },
   "confirmation": {
+    "skip": "不再显示此信息（您可以在设置中重新打开确认。）",
     "skip-hint": "You can turn confirmations back on in Settings.",
     "no": "No",
     "yes": "Yes",
@@ -110,6 +160,5 @@
   "input": {
     "select-placeholder": "Select…",
     "phone-title": "Numbers only",
-  }
-},
-}
+  },
+};

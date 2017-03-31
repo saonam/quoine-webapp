@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@quoine/core@^3.8.4":
-  version "3.8.4"
-  resolved "https://registry.yarnpkg.com/@quoine/core/-/core-3.8.4.tgz#3323fa64f0eb353276d4b4202123626623f0672a"
+"@quoine/core@^3.8.8":
+  version "3.8.8"
+  resolved "https://registry.yarnpkg.com/@quoine/core/-/core-3.8.8.tgz#922548775151833796f8a3f3b5ae421c68186724"
   dependencies:
     i18next "^4.1.1"
     pusher-js "^4.0.0"
@@ -14,9 +14,9 @@
     reduce-reducers "^0.1.2"
     redux "^3.6.0"
 
-"@quoine/react-scripts@5.9.5":
-  version "5.9.5"
-  resolved "https://registry.yarnpkg.com/@quoine/react-scripts/-/react-scripts-5.9.5.tgz#824e77627b79662bfbf688cbf113f2893693e79e"
+"@quoine/react-scripts@^5.9.7":
+  version "5.9.7"
+  resolved "https://registry.yarnpkg.com/@quoine/react-scripts/-/react-scripts-5.9.7.tgz#2c45057e489b4f5b8e0a2d909b000d50982fa705"
   dependencies:
     autoprefixer "6.7.2"
     babel-core "6.22.1"
