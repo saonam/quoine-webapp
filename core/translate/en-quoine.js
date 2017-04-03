@@ -1,5 +1,7 @@
 /* eslint-disable quotes, quote-props, max-len */
 
+// quoine
+
 export default {
   "account": {
     "balance": "Balance",

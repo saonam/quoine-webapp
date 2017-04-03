@@ -1,5 +1,7 @@
 /* eslint-disable quotes, quote-props, max-len */
 
+// quoine
+
 export default {
   "sign-in": {
     "title": "Sign In",
@@ -58,7 +60,7 @@ export default {
     "action-sign-in": "Go to Sign in",
     "back": "Back",
     // ===
-    "message-success": "Thank you for registering. Everything is almost done! Further instructions have been sent to your email address.",
+    "message-success": "Thank you for registering. The process is almost done! Further instructions have been sent to your email address.",
     // ===
     "step-1": "1. Account Type",
     "step-2": "2. Account Overview",

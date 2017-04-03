@@ -1,5 +1,7 @@
 /* eslint-disable quotes, quote-props, max-len */
 
+// traders
+
 export default {
   "sign-in": {
     "title": "ログイン",

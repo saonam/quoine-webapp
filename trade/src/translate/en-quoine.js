@@ -1,5 +1,7 @@
 /* eslint-disable quotes, quote-props, max-len */
 
+// quoine
+
 export default {
   "product-book": {
     "spine-title": "Order Book & Trade Feed",

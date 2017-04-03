@@ -1,5 +1,7 @@
 /* eslint-disable quotes, quote-props, max-len */
 
+// traders
+
 export default {
   "product-book": {
     "spine-title": "板情報＆約定フィード",
