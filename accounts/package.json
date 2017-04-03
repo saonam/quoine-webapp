@@ -1,9 +1,9 @@
 {
   "name": "@quoine/accounts",
-  "version": "3.0.6",
+  "version": "3.8.10",
   "private": true,
   "dependencies": {
-    "@quoine/core": "^3.8.10",
+    "@quoine/core": "3.8.10",
     "@quoine/react-scripts": "^5.9.7",
     "haikunator": "^2.0.0",
     "react": "^15.4.2",
