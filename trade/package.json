@@ -1,10 +1,10 @@
 {
   "name": "@quoine/trade",
-  "version": "3.8.10",
+  "version": "3.8.15",
   "private": true,
   "dependencies": {
-    "@quoine/core": "3.8.10",
-    "@quoine/react-scripts": "^5.9.7",
+    "@quoine/core": "3.8.15",
+    "@quoine/react-scripts": "5.9.11",
     "cryptowatch-embed": "^0.3.1",
     "lodash.throttle": "^4.1.1",
     "qrcode.react": "^0.6.1",

@@ -1,26 +1,26 @@
-$yellow-primary-0         : hsla(50, 67%, 7%, 1);
-$yellow-primary-0-0       : hsla(50, 67%, 7%, 0);
-$yellow-primary-0-1       : hsla(50, 67%, 7%, 0.1);
-$yellow-primary-0-2       : hsla(50, 67%, 7%, 0.2);
-$yellow-primary-0-5       : hsla(50, 67%, 7%, 0.3);
+$qryptos-dark-primary-0         : hsla(50, 67%, 7%, 1);
+$qryptos-dark-primary-0-0       : hsla(50, 67%, 7%, 0);
+$qryptos-dark-primary-0-1       : hsla(50, 67%, 7%, 0.1);
+$qryptos-dark-primary-0-2       : hsla(50, 67%, 7%, 0.2);
+$qryptos-dark-primary-0-5       : hsla(50, 67%, 7%, 0.3);
 /* === */
-$yellow-primary-0-accent  : hsla(50, 67%, 5%, 1);
-$yellow-primary-0-overlay : hsla(50, 67%, 5%, 0.5);
+$qryptos-dark-primary-0-accent  : hsla(50, 67%, 5%, 1);
+$qryptos-dark-primary-0-overlay : hsla(50, 67%, 5%, 0.5);
 /* === */
-$yellow-primary-1         : hsla(0, 100%, 100%, 0.05);
-$yellow-primary-2         : hsla(0, 100%, 100%, 0.25);
-$yellow-primary-3         : hsla(0, 100%, 100%, 0.5);
-$yellow-primary-4         : hsla(0, 100%, 100%, 1);
+$qryptos-dark-primary-1         : hsla(0, 100%, 100%, 0.05);
+$qryptos-dark-primary-2         : hsla(0, 100%, 100%, 0.25);
+$qryptos-dark-primary-3         : hsla(0, 100%, 100%, 0.5);
+$qryptos-dark-primary-4         : hsla(0, 100%, 100%, 1);
 /* === */
-$yellow-accent            : hsla(49, 71%, 49%, 1);
-$yellow-accent-1          : hsla(49, 71%, 49%, 0.1);
-$yellow-accent-2          : hsla(49, 71%, 49%, 0.2);
-$yellow-accent-light      : hsla(49, 71%, 49%, 0.8);
+$qryptos-dark-accent            : hsla(49, 71%, 49%, 1);
+$qryptos-dark-accent-1          : hsla(49, 71%, 49%, 0.1);
+$qryptos-dark-accent-2          : hsla(49, 71%, 49%, 0.2);
+$qryptos-dark-accent-light      : hsla(49, 71%, 49%, 0.8);
 /* === */
-$yellow-negative   : hsla(18, 70%, 50%, 1);
-$yellow-negative-1 : hsla(18, 70%, 50%, 0.2);
-$yellow-negative-2 : hsla(18, 70%, 50%, 0.4);
+$qryptos-dark-negative   : hsla(18, 70%, 50%, 1);
+$qryptos-dark-negative-1 : hsla(18, 70%, 50%, 0.2);
+$qryptos-dark-negative-2 : hsla(18, 70%, 50%, 0.4);
 /* === */
-$yellow-positive   : hsla(89, 70%, 50%, 1);
-$yellow-positive-1 : hsla(89, 70%, 50%, 0.2);
-$yellow-positive-2 : hsla(89, 70%, 50%, 0.4);
+$qryptos-dark-positive   : hsla(89, 70%, 50%, 1);
+$qryptos-dark-positive-1 : hsla(89, 70%, 50%, 0.2);
+$qryptos-dark-positive-2 : hsla(89, 70%, 50%, 0.4);

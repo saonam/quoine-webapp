@@ -4,7 +4,7 @@ import TYPES from './TYPES';
 
 const THEMES_BY_VENDOR = {
   quoine: ['light', 'dark-2', 'green', 'finance', 'dark'],
-  qryptos: ['yellow'],
+  qryptos: ['qryptos-light', 'qryptos-dark'],
   zabit: ['purple'],
   traders: ['traders-light', 'traders-dark', 'green'],
 };
