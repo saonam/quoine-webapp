@@ -5,3 +5,9 @@
   composes: y-auto from "@quoine/styles/overflow.css";
   width: calc($base * 20);
 }
+.balanceDetail {
+
+}
+.volume {
+  composes: top size-3 color-primary-0-accent from "@quoine/styles/border.css";
+}

@@ -10,8 +10,11 @@ export default {
   "transfer": {
     "spine-title": "Funds & Withdrawals",
   },
-  "volume-panel": {
-    "title-spine": "Volumes",
+  "volume-balance-panel": {
+    "title-spine": "Volumes & Balances",
+  },
+  "balance-detail": {
+    "title": "Detail Balance",
   },
   "blotters": {
     "spine-title": "Orders, Positions & Executions",
