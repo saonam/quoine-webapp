@@ -1,6 +1,6 @@
 {
   "name": "@quoine/trade",
-  "version": "3.0.6",
+  "version": "3.1.2",
   "private": true,
   "dependencies": {
     "@quoine/core": "3.1.2",
