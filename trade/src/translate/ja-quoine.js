@@ -19,12 +19,16 @@ export default {
   "blotters": {
     "spine-title": "注文、ポジション、約定",
   },
-  "balance": {
+  "balance-total": {
     "title": "合計残高",
     "currency": "通貨",
     "total-fiat": "合計現金残高",
     "total-crypto": "合計仮想通貨残高",
     "total-balance": "合計残高",
+  },
+  "balance-detail": {
+    "title": "残高の詳細",
+    "account": "口座情報",
   },
   "execution": {
     "title": "約定",

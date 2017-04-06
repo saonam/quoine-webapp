@@ -19,12 +19,16 @@ export default {
   "blotters": {
     "spine-title": "Orders, Positions & Executions",
   },
-  "balance": {
+  "balance-total": {
     "title": "Total Balance",
     "currency": "Currency",
     "total-fiat": "Total Fiat Balance",
     "total-crypto": "Total Crypto Balance",
     "total-balance": "Total Balance",
+  },
+  "balance-detail": {
+    "title": "Detail Balance",
+    "account": "Account",
   },
   "execution": {
     "title": "Executions",

@@ -5,9 +5,9 @@
   composes: y-auto from "@quoine/styles/overflow.css";
   width: calc($base * 20);
 }
-.balance {
-
-}
-.volume {
+.child {
   composes: top size-3 color-primary-0-accent from "@quoine/styles/border.css";
+}
+.child:first-child {
+  border: none;
 }

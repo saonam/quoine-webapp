@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Field from 'components/Balance/Field';
+import Field from 'components/BalanceTotal/Field';
 
 import styles from './styles.css';
 
 import exchange from './exchange';
 
-const BalanceDetail = ({ currency, accounts, fxRates }) => {
+const BalanceTotalContent = ({ currency, accounts, fxRates }) => {
   let totalFiat = 0;
   let totalCrypto = 0;
 
@@ -37,10 +37,10 @@ const BalanceDetail = ({ currency, accounts, fxRates }) => {
   );
 };
 
-BalanceDetail.propTypes = {
+BalanceTotalContent.propTypes = {
   currency: React.PropTypes.string.isRequired,
   accounts: React.PropTypes.shape({}).isRequired,
   fxRates: React.PropTypes.shape({}).isRequired,
 };
 
-export default BalanceDetail;
+export default BalanceTotalContent;

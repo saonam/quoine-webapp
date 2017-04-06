@@ -6,18 +6,18 @@ import ColorFlashing from '@quoine/components/ColorFlashing';
 import Money from '@quoine/components/Money';
 import Field from '@quoine/components/Field';
 
-const BalanceField = ({ id, value, currency }) => (
-  <Field label={translate(`balance:${id}`)} layout="justify">
+const BalanceTotalField = ({ id, value, currency }) => (
+  <Field label={translate(`balance-total:${id}`)} layout="justify">
     <ColorFlashing value={value}>
       <Money value={value} currency={currency} />
     </ColorFlashing>
   </Field>
 );
 
-BalanceField.propTypes = {
+BalanceTotalField.propTypes = {
   id: React.PropTypes.string.isRequired,
   value: React.PropTypes.number.isRequired,
   currency: React.PropTypes.string.isRequired,
 };
 
-export default BalanceField;
+export default BalanceTotalField;

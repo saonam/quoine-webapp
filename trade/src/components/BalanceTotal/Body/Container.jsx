@@ -2,7 +2,7 @@ import React from 'react';
 
 import View from './View';
 
-class BalanceBodyContainer extends React.Component {
+class BalanceTotalBodyContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { currency: 'BTC' };
@@ -26,8 +26,8 @@ class BalanceBodyContainer extends React.Component {
   }
 }
 
-BalanceBodyContainer.propTypes = {
+BalanceTotalBodyContainer.propTypes = {
   currency: React.PropTypes.string.isRequired,
 };
 
-export default BalanceBodyContainer;
+export default BalanceTotalBodyContainer;

@@ -4,10 +4,10 @@ import translate from '@quoine/translate';
 
 import Header from '@quoine/components/Header';
 
-const VolumesHeader = () => (
+const BalanceTotalHeader = () => (
   <Header styleName="text center primary-1">
-    {translate('balance:title')}
+    {translate('balance-total:title')}
   </Header>
 );
 
-export default VolumesHeader;
+export default BalanceTotalHeader;

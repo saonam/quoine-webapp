@@ -1,0 +1,8 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: full from "@quoine/styles/size.css";
+}
+.body {
+  height: calc(100% - $base * 3);
+}
