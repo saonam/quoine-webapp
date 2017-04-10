@@ -13,7 +13,7 @@ const pteIndi = (form) => ({
   // ===
   user_profile_attributes: {
     birthdate: new Date(form.pteIndi.birth * 1000).toISOString(),
-    primary_source_income: form.pteIndi.income,
+    primary_source_income: form.pteIndi.income === 'self-employed' ? 'self_employed' : form.pteIndi.income,
     job_title: form.pteIndi.incomeJob,
     other_source_income: form.pteIndi.incomeDetail,
     business_name: form.pteIndi.incomeBusinessName,
