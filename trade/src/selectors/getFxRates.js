@@ -58,16 +58,16 @@ const getFxRateInProduct = ({ frm, to, products }) => {
   if (frm === to) { return 1; }
 
   let isReverse = false;
-  let productKey = products.keys.filter(key => (
+  let productKey = products.keys.find(key => (
     products.models[key].baseCurrency === frm &&
     products.models[key].quoteCurrency === to
-  ))[0];
+  ));
   if (!productKey) {
     isReverse = true;
-    productKey = products.keys.filter(key => (
+    productKey = products.keys.find(key => (
       products.models[key].quoteCurrency === frm &&
       products.models[key].baseCurrency === to
-    ))[0];
+    ));
   }
 
   const product = products.models[productKey];

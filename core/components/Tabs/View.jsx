@@ -6,9 +6,9 @@ import styles from './styles.css';
 
 const Tabs = ({ panels, currentId, onSelect, ...others }) => {
   const all = panels.filter(item => !item.hidden);
-  const current = all.filter(
+  const current = all.find(
     item => item.id === currentId
-  )[0] || all[0];
+  ) || all[0];
   const { Element } = current;
   return (
     <div className={styles.main}>
