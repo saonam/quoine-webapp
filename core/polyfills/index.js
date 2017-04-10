@@ -1,1 +1,2 @@
+import './arrayFind';
 import './arrayFindIndex';
