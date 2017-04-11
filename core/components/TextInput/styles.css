@@ -1,3 +1,5 @@
+@import url("@quoine/core/styles/_size.css");
+
 .base {
   composes: block from "@quoine/styles/display.css";
   composes: width-full from "@quoine/styles/size.css";
@@ -8,6 +10,7 @@
 .main {
   composes: base;
   composes: center from "@quoine/styles/text.css";
+  min-height: calc($base * 2);
 }
 .left {
   composes: base;
