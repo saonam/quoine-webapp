@@ -2,6 +2,8 @@
 
 .children {
   composes: large line-2-5 from "@quoine/styles/text.css";
+}
+.children input {
   height: calc($base * 2.5);
 }
 .label {
