@@ -1,5 +1,5 @@
 const formatBook = (book) => (
-  book.slice(0, 10).map(level => ([
+  book.map(level => ([
     Number(level[0]),
     Number(level[1]),
   ]))

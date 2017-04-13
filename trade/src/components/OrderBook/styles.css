@@ -2,6 +2,7 @@
 
 .main {
   composes: height-full from "@quoine/styles/size.css";
+  composes: line-1-5 from "@quoine/styles/text.css";
 }
 .body {
   $header-height: calc(3 * $base + 2px);
@@ -19,11 +20,12 @@
 .listWrapper {
   height: calc(50% - calc($base * 3 / 2));
   composes: relative from "@quoine/styles/position.css";
-  composes: hidden from "@quoine/styles/overflow.css";
+  composes: y-scroll from "@quoine/styles/overflow.css";
+  composes: flex from "@quoine/styles/flex.css";
 }
 ._list {
   composes: width-full from "@quoine/styles/size.css";
-  composes: absolute from "@quoine/styles/position.css";
+  composes: relative from "@quoine/styles/position.css";
 }
 .list-sells {
   composes: _list;
@@ -33,9 +35,7 @@
   composes: _list;
   composes: top from "@quoine/styles/position.css";
 }
-.flex-header {
-  composes: flex from "@quoine/styles/flex.css";
-}
-.half-header {
-  composes: auto from "@quoine/styles/flex.css";
+.reverse-flex {
+  composes: listWrapper;
+  flex-direction: column-reverse;
 }

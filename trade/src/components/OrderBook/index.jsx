@@ -12,7 +12,7 @@ const OrderBook = () => (
       <Header side="sells" />
     </div>
     <div className={styles.body}>
-      <div className={styles.listWrapper}>
+      <div className={styles.reverseFlex}>
         <div className={styles.listSells}>
           <List side="sells" />
         </div>
