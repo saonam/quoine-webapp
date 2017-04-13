@@ -463,6 +463,9 @@ export default {
   "order-book": {
     "sells": "売",
     "buys": "買",
+    "mode": "モード",
+    "mode-normal": "普通",
+    "mode-depth-chart": "深さチャート",
   },
   "product": {
     "high": "高値",

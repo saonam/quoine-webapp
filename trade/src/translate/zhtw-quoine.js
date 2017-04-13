@@ -459,6 +459,9 @@ export default {
   "order-book": {
     "sells": "賣出",
     "buys": "買入",
+    "mode": "Mode",
+    "mode-normal": "Normal",
+    "mode-depth-chart": "Depth Chart",
   },
   "product": {
     "high": "高",

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import getCurrencies from 'selectors/getTradingBaseQuoteCurrencies';
-import makeGetBook from 'selectors/makeGetOrderBookWithSelf';
+import makeGetBook from 'selectors/makeGetOrderBookWithAllDetail';
 
 import View from './View';
 

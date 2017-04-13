@@ -1,16 +1,17 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import { TYPES } from 'states/orderEntry';
 
-import Connect from './Connect';
+import View from './View';
 
-class OrderBookItem extends React.Component {
-  shouldComponentUpdate() {
-    return false;
-  }
-  render() {
-    return (
-      <Connect {...this.props} />
-    );
-  }
-}
+const mapStateToProps = (state) => ({
+  mode: state.orderBook.mode,
+});
 
-export default OrderBookItem;
+const mapDispatchToProps = (dispatch, props) => ({
+  onClick: () => dispatch({
+    type: TYPES.SET_FORM,
+    payload: { propName: 'price', value: props.model.price },
+  }),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(View);

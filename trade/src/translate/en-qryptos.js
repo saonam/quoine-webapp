@@ -19,12 +19,16 @@ export default {
   "blotters": {
     "spine-title": "Orders, Positions & Executions",
   },
-  "balance": {
+  "balance-total": {
     "title": "Total Balance",
     "currency": "Currency",
     "total-fiat": "Total Fiat Balance",
     "total-crypto": "Total Crypto Balance",
     "total-balance": "Total Balance",
+  },
+  "balance-detail": {
+    "title": "Detail Balance",
+    "account": "Account",
   },
   "execution": {
     "title": "Executions",
@@ -459,6 +463,9 @@ export default {
   "order-book": {
     "sells": "Sells",
     "buys": "Buys",
+    "mode": "Mode",
+    "mode-normal": "Normal",
+    "mode-depth-chart": "Depth Chart",
   },
   "product": {
     "high": "High",
