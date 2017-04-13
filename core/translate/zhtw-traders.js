@@ -85,6 +85,9 @@ export default {
     "resend-sms": "通過短信重新發送",
     "send": "請求",
   },
+  "error": {
+    "network": "Sorry we cannot process your request at the moment.",
+  },
   "tfa-error": {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "您在前一小時內請求次數太多。請過一會兒再重試。",
     "en-authy-sms-token-was-not-sent": "安全碼無法被發送至您的手機。請重試。",

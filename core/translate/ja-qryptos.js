@@ -78,6 +78,9 @@ export default {
     "en": "English",
     "ja": "日本語",
   },
+  "error": {
+    "network": "インターナルエラーが発生しました。",
+  },
   "tfa": {
     "sent-sms": "SMSで確認コードを送信しました。",
     "sent-authy": "Authyで確認コードを送信しました。",

@@ -78,6 +78,9 @@ export default {
     "en": "English",
     "ja": "日本語",
   },
+  "error": {
+    "network": "Sorry we cannot process your request at the moment.",
+  },
   "tfa": {
     "sent-sms": "Code has been sent via SMS.",
     "sent-authy": "Code has been sent via Authy.",

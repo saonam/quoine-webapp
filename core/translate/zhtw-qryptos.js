@@ -78,6 +78,9 @@ export default {
     "en": "英語",
     "ja": "日本語",
   },
+  "error": {
+    "network": "Sorry we cannot process your request at the moment.",
+  },
   "tfa": {
     "sent-sms": "安全碼已通過短信發送。",
     "sent-authy": "安全碼已通過Authy發送。",
