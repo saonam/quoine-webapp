@@ -9,11 +9,10 @@ const validateFuncs = [
 ];
 
 const validate = (order, state) => {
-  const product = state.products.models[order.product];
   const mrgAcc = state.mrgAccs.models[`${order.account}${order.product}`];
 
   for (let i = validateFuncs.length - 1; i >= 0; i -= 1) {
-    const result = validateFuncs[i](order, product, mrgAcc);
+    const result = validateFuncs[i]({ order, mrgAcc });
     if (result) { return result; }
   }
 

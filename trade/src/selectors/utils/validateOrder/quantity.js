@@ -1,4 +1,5 @@
-const validateQuantity = ({ baseCurrency, quantity }) => {
+const validateQuantity = ({ order }) => {
+  const { baseCurrency, quantity } = order;
   switch (baseCurrency) {
     case 'ETH': {
       if (quantity < 0.5) {

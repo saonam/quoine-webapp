@@ -1,4 +1,4 @@
-const validateDirection = (order, product, mrgAcc) => {
+const validateDirection = ({ order, mrgAcc }) => {
   if (
     !mrgAcc ||
     order.market !== 'margin' ||
