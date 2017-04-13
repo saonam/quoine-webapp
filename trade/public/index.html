@@ -16,9 +16,7 @@
     <script type="text/javascript">
       'use strict';
       if (window.location.pathname.indexOf('reset-password') !== -1) {
-        var strings = window.location.pathname.split('/');
-        var token = strings[strings.length - 1];
-        var nextHref = '%REACT_APP_ACCOUNTS_HOST%' + '/reset-password' + '?token=' + token + '&continue=' + window.location.origin;
+        var nextHref = '%REACT_APP_ACCOUNTS_HOST%' + '/reset-password' + '?continue=' + window.location.origin;
         window.location.href = nextHref;
       }
     </script>

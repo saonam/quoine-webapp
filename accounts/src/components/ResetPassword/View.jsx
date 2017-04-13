@@ -10,7 +10,9 @@ import ButtonWLoading from '@quoine/components/ButtonWLoading';
 import styles from './styles.css';
 
 const ForgotPassword = ({
-  onSubmit, password, onPasswordChange, error, busy,
+  password, token,
+  onPasswordChange, onTokenChange,
+  onSubmit, error, busy,
 }) => (
   <Modal
     isOpen isNoOverlay contentLabel="reset password modal"
@@ -18,19 +20,29 @@ const ForgotPassword = ({
   >
     <form onSubmit={onSubmit} className={styles.main}>
       <div className={styles.body}>
-        <p className={styles.description}>
-          {translate('reset-password:description')}
-        </p>
-        <div className={styles.password}>
-          <Input
-            large id="new-password"
-            label={translate('reset-password:new-password')}
-          >
+
+        <div className={styles.input}>
+          <Input large label={translate('reset-password:new-password')}>
             <TextBox
               type="password" value={password} onChange={onPasswordChange}
             />
           </Input>
+          <p className={styles.help}>
+            {translate('reset-password:new-password-help')}
+          </p>
         </div>
+
+        <div className={styles.input}>
+          <Input large label={translate('reset-password:token')}>
+            <TextBox
+              type="text" value={token} onChange={onTokenChange}
+            />
+          </Input>
+          <p className={styles.help}>
+            {translate('reset-password:token-help')}
+          </p>
+        </div>
+
         <p className={styles.error}>
           {translate(error)}
         </p>
@@ -49,7 +61,9 @@ const ForgotPassword = ({
 ForgotPassword.propTypes = {
   onSubmit: React.PropTypes.func.isRequired,
   password: React.PropTypes.string.isRequired,
+  token: React.PropTypes.string.isRequired,
   onPasswordChange: React.PropTypes.func.isRequired,
+  onTokenChange: React.PropTypes.func.isRequired,
   error: React.PropTypes.string.isRequired,
   busy: React.PropTypes.bool.isRequired,
 };

@@ -9,14 +9,16 @@ class ResetPasswordContainer extends React.Component {
     super(props);
     this.state = {
       password: '',
+      token: '',
       busy: false,
       error: '',
     };
-    this.onPasswordChange = this.onPasswordChange.bind(this);
+    this.onPasswordChange = this.onChange.bind(this, 'password');
+    this.onTokenChange = this.onChange.bind(this, 'token');
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onPasswordChange(event) {
-    this.setState({ password: event.target.value });
+  onChange(key, event) {
+    this.setState({ [key]: event.target.value });
   }
   onSubmit(e) {
     // need e because we attach this to form's submit event
@@ -26,8 +28,7 @@ class ResetPasswordContainer extends React.Component {
     if (this.state.busy) { return; }
     this.setState({ busy: true, error: '' });
 
-    const { password } = this.state;
-    const { token } = this.props.location.query;
+    const { password, token } = this.state;
     resources.resetPassword({ password, token })
     .then(() => {
       this.props.router.push({
@@ -46,8 +47,10 @@ class ResetPasswordContainer extends React.Component {
     const { password, busy, error } = this.state;
     return (
       <View
-        busy={busy} error={error} password={password}
-        onPasswordChange={this.onPasswordChange} onSubmit={this.onSubmit}
+        busy={busy} error={error}
+        password={password} token={this.state.token}
+        onPasswordChange={this.onPasswordChange} onTokenChange={this.onTokenChange}
+        onSubmit={this.onSubmit}
       />
     );
   }
@@ -59,7 +62,6 @@ ResetPasswordContainer.propTypes = {
   }).isRequired,
   location: React.PropTypes.shape({
     query: React.PropTypes.shape({
-      token: React.PropTypes.string.isRequired,
       continue: React.PropTypes.string,
     }).isRequired,
   }).isRequired,
