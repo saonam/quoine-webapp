@@ -290,9 +290,13 @@ export default {
     "inr-transfer-note": "この振込みの方法はインド銀行口座よりINR入金のみ対応いたします。",
     "guide": "手順",
     "deadline": "締切",
+    "status": "締切",
     // ===
-    "pending-empty": "入金履歴はありません。",
-    "pending-title": "入金履歴",
+    "recent-empty": "入金履歴がありません。",
+    "recent-title": "入金履歴",
+    // ===
+    "status-pending": "未確認",
+    "status-approved": "確認済",
   },
   "fund-bank": {
     "help-1": "①入金情報を作成する",

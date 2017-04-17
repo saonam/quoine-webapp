@@ -9,6 +9,7 @@ import Time from '../Time';
 import Bank from '../Bank';
 import Amount from '../Amount';
 import Notes from '../Notes';
+import Status from '../Status';
 
 import styles from './styles.css';
 
@@ -32,6 +33,11 @@ const FundItemDetailBank = ({ fund }) => (
     <div>
       <InfoInline label={translate('fund:bank')}>
         <Bank fund={fund} />
+      </InfoInline>
+    </div>
+    <div>
+      <InfoInline label={translate('fund:status')}>
+        <Status fund={fund} />
       </InfoInline>
     </div>
     <div>

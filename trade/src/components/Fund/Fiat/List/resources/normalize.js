@@ -9,7 +9,7 @@ const one = (raw, form) => ({
   amount: Number(raw.amount),
   notes: raw.notes,
   // ===
-  method: raw.payment_url ? 'cash' : 'bank',
+  method: raw.ref_payment_id ? 'cash' : 'bank',
   guide: raw.payment_url,
   deadline: raw.payment_deadline,
 });
