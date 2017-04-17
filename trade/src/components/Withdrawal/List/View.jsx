@@ -10,7 +10,7 @@ import Body from './Body';
 const WdrListView = ({ busy, withdrawals }) => (
   <div>
     <Header styleName="center text primary-1">
-      {translate('withdrawal:recent-title')}
+      {translate('withdrawal:pending-title')}
     </Header>
     {busy ? (
       <Loading />
