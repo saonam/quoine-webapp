@@ -234,6 +234,7 @@ export default {
     "value-copy": "複製",
     "permissions": "權限",
     "none": "無",
+    "value-message": "This Token/Secret is displayed one time only.",
     // ===
     "remove-title": "刪除令牌",
     "remove-action": "刪除",

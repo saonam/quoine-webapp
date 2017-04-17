@@ -7,3 +7,7 @@
   composes: mono line-2 from "@quoine/styles/text.css";
   composes: width-full from "@quoine/styles/size.css";
 }
+.message {
+  composes: ver-small from "@quoine/styles/padding.css";
+  composes: line-2 from "@quoine/styles/text.css";
+}

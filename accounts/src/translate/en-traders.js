@@ -234,6 +234,7 @@ export default {
     "value-copy": "Copy",
     "permissions": "Permissions",
     "none": "None",
+    "value-message": "This Token/Secret is displayed one time only.",
     // ===
     "remove-title": "Delete Token",
     "remove-action": "Delete",

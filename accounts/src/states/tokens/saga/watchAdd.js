@@ -12,6 +12,7 @@ function* onAdd(action) {
   yield apply(TYPES, { adding: true });
 
   const token = yield call(resources.add, permisions);
+  token.new = true;
   yield* applyKeysModels(token);
 
   yield apply(TYPES, { adding: false });

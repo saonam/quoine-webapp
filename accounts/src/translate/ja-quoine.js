@@ -228,6 +228,7 @@ export default {
     "value-copy": "コピー",
     "permissions": "許可",
     "none": "なし",
+    "value-message": "このトークンは一度しか表示されません。",
     // ===
     "remove-title": "トークンを削除する",
     "remove-action": "削除する",

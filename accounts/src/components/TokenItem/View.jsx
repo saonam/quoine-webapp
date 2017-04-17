@@ -15,9 +15,11 @@ const TokenItem = ({ token }) => (
     <Row label={translate('token:permissions')}>
       <Permissions token={token} />
     </Row>
-    <Row label={translate('token:value')}>
-      <Value token={token} />
-    </Row>
+    { token.new ? (
+      <Row label={translate('token:value')}>
+        <Value token={token} />
+      </Row>
+    ) : null }
     <div className={styles.remove}>
       <Row>
         <Remove token={token} />
