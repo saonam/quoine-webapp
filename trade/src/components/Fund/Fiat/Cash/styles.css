@@ -12,3 +12,7 @@
   composes: help;
   composes: primary-3 from "@quoine/styles/color.css";
 }
+.error {
+  composes: help;
+  composes: negative from "@quoine/styles/color.css";
+}
