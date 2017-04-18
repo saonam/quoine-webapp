@@ -13,18 +13,22 @@ export default {
     "spine-title": "Funds & Withdrawals",
     "account": "Account",
   },
-  "volume-balance-panel": {
-    "title-spine": "Volumes & Balances",
-  },
   "blotters": {
     "spine-title": "Orders, Positions & Executions",
   },
-  "balance": {
+  "volume-balance-panel": {
+    "title-spine": "Volumes & Balances",
+  },
+  "balance-total": {
     "title": "Total Balance",
     "currency": "Currency",
     "total-fiat": "Total Fiat Balance",
     "total-crypto": "Total Crypto Balance",
     "total-balance": "Total Balance",
+  },
+  "balance-detail": {
+    "title": "Detail Balance",
+    "account": "Account",
   },
   "execution": {
     "title": "Executions",

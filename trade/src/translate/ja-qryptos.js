@@ -13,11 +13,11 @@ export default {
     "spine-title": "入出金",
     "account": "口座情報",
   },
-  "volume-balance-panel": {
-    "title-spine": "取引高＆残高",
-  },
   "blotters": {
     "spine-title": "注文、ポジション、約定",
+  },
+  "volume-balance-panel": {
+    "title-spine": "取引高＆残高",
   },
   "balance-total": {
     "title": "合計残高",

@@ -13,18 +13,22 @@ export default {
     "spine-title": "资金及提现",
     "account": "Account",
   },
-  "volume-balance-panel": {
-    "title-spine": "Volumes & Balances",
-  },
   "blotters": {
     "spine-title": "订单、持仓及交易",
   },
-  "balance": {
+  "volume-balance-panel": {
+    "title-spine": "Volumes & Balances",
+  },
+  "balance-total": {
     "title": "Total Balance",
     "currency": "Currency",
     "total-fiat": "Total Fiat Balance",
     "total-crypto": "Total Crypto Balance",
     "total-balance": "Total Balance",
+  },
+  "balance-detail": {
+    "title": "Detail Balance",
+    "account": "Account",
   },
   "execution": {
     "title": "交易",
