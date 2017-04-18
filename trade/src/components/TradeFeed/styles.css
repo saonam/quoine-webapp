@@ -7,5 +7,6 @@
 .body {
   /* 12 * 3 = 36 is header height */
   height: calc(100% - $base * 3);
-  composes: hidden from "@quoine/styles/overflow.css";
+  composes: y-scroll from "@quoine/styles/overflow.css";
+  composes: small line-1-75 from "@quoine/styles/text.css";
 }
