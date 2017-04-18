@@ -26,6 +26,7 @@
 ._list {
   composes: width-full from "@quoine/styles/size.css";
   composes: relative from "@quoine/styles/position.css";
+  composes: small line-1-75 from "@quoine/styles/text.css";
 }
 .list-sells {
   composes: _list;
