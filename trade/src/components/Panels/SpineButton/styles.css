@@ -1,3 +1,5 @@
+@import "@quoine/core/styles/_size.css";
+
 .main {
   composes: full from "@quoine/styles/size.css";
   composes: relative from "@quoine/styles/position.css";
@@ -8,4 +10,8 @@
   /* composes: half from "@quoine/styles/opacity.css"; */
   transform: rotate(90deg);
   transform-origin: left;
+}
+
+:global(.ie) .text {
+   left: $base;
 }
