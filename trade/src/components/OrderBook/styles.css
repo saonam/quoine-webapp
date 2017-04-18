@@ -2,7 +2,6 @@
 
 .main {
   composes: height-full from "@quoine/styles/size.css";
-  composes: line-1-5 from "@quoine/styles/text.css";
 }
 .body {
   $header-height: calc(3 * $base + 2px);

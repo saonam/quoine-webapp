@@ -22,7 +22,7 @@ export default function* applyKeysModels(payload) {
   } = getNextKeysModels({ state, payload, getKey });
   // only keeps 20 latest models (=> sort desc)
   // the following will mutate allKeys but that's ok here
-  const keys = allKeys.sort((a, b) => (b - a)).slice(0, 10);
+  const keys = allKeys.sort((a, b) => (b - a)).slice(0, 20);
   // create new models to allow allow Garbage Collector collect
   // the allModels
   const models = keys.reduce((map, key) => {
