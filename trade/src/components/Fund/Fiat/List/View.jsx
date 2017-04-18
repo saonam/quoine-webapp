@@ -9,15 +9,16 @@ import Body from './Body';
 // form.account === 'JPY' && form.method === 'cash' ? null : (
 //     <div>
 //       <Header styleName="center text primary-1">
-//         {translate('fund:pending-title')}
+//         {translate('fund:recent-title')}
 //       </Header>
 //       <Body busy={busy} funds={funds} />
 //     </div>
 //   )
+
 const FundFiatListView = ({ busy, funds }) => (
   <div>
     <Header styleName="center text primary-1">
-      {translate('fund:pending-title')}
+      {translate('fund:recent-title')}
     </Header>
     <Body busy={busy} funds={funds} />
   </div>

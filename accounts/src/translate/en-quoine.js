@@ -39,8 +39,10 @@ export default {
     "email-can-t-be-blank": "Email address is required.",
   },
   "reset-password": {
-    "description": "Please choose a new password.",
     "new-password": "New Password",
+    "new-password-help": "Please enter your new password.",
+    "token": "Reset Token",
+    "token-help": "Please enter the reset token that was sent to your email address.",
     "action": "Update Password",
     "title": "Reset Password",
   },

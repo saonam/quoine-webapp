@@ -1,7 +1,5 @@
 import React from 'react';
 
-import translate from '@quoine/translate';
-
 import AccountWrapper from 'components/AccountWrapper';
 
 import Header from './Header';
@@ -15,7 +13,7 @@ const BalanceDetail = () => (
       <Header />
     </div>
     <div className={styles.body}>
-      <AccountWrapper Body={Body} label={translate('balance-detail:account')} />
+      <AccountWrapper Body={Body} />
     </div>
   </div>
 );

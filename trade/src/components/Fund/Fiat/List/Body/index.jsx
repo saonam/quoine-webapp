@@ -14,7 +14,7 @@ const FundFiatListBody = ({ busy, funds }) => {
   if (funds.length === 0) {
     return (
       <p className={styles.empty}>
-        {translate('fund:pending-empty')}
+        {translate('fund:recent-empty')}
       </p>
     );
   }

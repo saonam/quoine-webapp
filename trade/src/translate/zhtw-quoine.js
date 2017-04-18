@@ -303,9 +303,13 @@ export default {
     "inr-transfer-note": "當前存款方式只適用於從本地印度賬戶的INR國內轉賬。",
     "guide": "支付流程",
     "deadline": "截止日期",
+    "status": "Status",
     // ===
-    "pending-empty": "沒有等待中的資金",
-    "pending-title": "等待中資金",
+    "recent-empty": "No Recent Funds",
+    "recent-title": "Recent Funds",
+    // ===
+    "status-pending": "Pending",
+    "status-approved": "Approved",
   },
   "fund-bank": {
     "help-1": "第一步",

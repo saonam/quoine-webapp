@@ -303,9 +303,13 @@ export default {
     "inr-transfer-note": "This deposit method is only for INR domestic transfers from local India bank accounts.",
     "guide": "Payment Guide",
     "deadline": "Deadline",
+    "status": "Status",
     // ===
-    "pending-empty": "No Pending Funds",
-    "pending-title": "Pending Funds",
+    "recent-empty": "No Recent Funds",
+    "recent-title": "Recent Funds",
+    // ===
+    "status-pending": "Pending",
+    "status-approved": "Approved",
   },
   "fund-bank": {
     "help-1": "Step 1.",

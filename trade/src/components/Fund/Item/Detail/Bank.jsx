@@ -7,6 +7,7 @@ import Time from '../Time';
 import Bank from '../Bank';
 import Amount from '../Amount';
 import Notes from '../Notes';
+import Status from '../Status';
 
 import styles from './styles.css';
 
@@ -16,6 +17,7 @@ const FundItemDetailBank = ({ fund }) => (
     <Field id="time"><Time fund={fund} type="full" /></Field>
     <Field id="amount"><Amount fund={fund} /></Field>
     <Field id="bank"><Bank fund={fund} /></Field>
+    <Field id="status"><Status fund={fund} /></Field>
     <Field id="notes"><Notes fund={fund} /></Field>
   </div>
 );

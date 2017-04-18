@@ -6,16 +6,22 @@
   composes: hor-xx-large from "@quoine/styles/padding.css";
 }
 
-.password {
-  composes: top-medium from "@quoine/styles/margin.css";
+.input {
+  composes: top-x-large from "@quoine/styles/margin.css";
 }
 
-.description {
-  composes: large from "@quoine/styles/text.css";
+.input:first-child {
+  margin-top: 0;
+}
+
+.help {
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+  composes: top-medium from "@quoine/styles/margin.css";
 }
 
 .error {
-  composes: top-medium from "@quoine/styles/margin.css";
+  composes: top-x-large from "@quoine/styles/margin.css";
   composes: line-1-5 from "@quoine/styles/text.css";
   composes: negative from "@quoine/styles/color.css";
 }

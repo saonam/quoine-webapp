@@ -39,8 +39,10 @@ export default {
     "email-can-t-be-blank": "電子郵件地址必填。",
   },
   "reset-password": {
-    "description": "請選擇一個新密碼。",
     "new-password": "新密碼",
+    "new-password-help": "請選擇一個新密碼。",
+    "token": "Reset Token",
+    "token-help": "Please enter the reset token that was sent to your email address.",
     "action": "更新密碼",
     "title": "重置密碼",
   },

@@ -39,8 +39,10 @@ export default {
     "email-can-t-be-blank": "电子邮件地址必填。",
   },
   "reset-password": {
-    "description": "请选择一个新密码。",
     "new-password": "新密码",
+    "new-password-help": "请选择一个新密码。",
+    "token": "Reset Token",
+    "token-help": "Please enter the reset token that was sent to your email address.",
     "action": "更新密码",
     "title": "重置密码",
   },

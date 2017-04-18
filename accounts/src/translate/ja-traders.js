@@ -39,8 +39,10 @@ export default {
     "email-can-t-be-blank": "メールアドレスが必要です",
   },
   "reset-password": {
-    "description": "新しいパスワードを入力してください。",
     "new-password": "パスワード",
+    "new-password-help": "新しいパスワードを入力してください。",
+    "token": "トークンをリセットする",
+    "token-help": "送信したリセットトークンをご入力ください。",
     "action": "パスワード再設定",
     "title": "パスワード再設定",
   },
