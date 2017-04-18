@@ -4,13 +4,13 @@ import Form from './Form';
 import Success from './Success';
 
 const FundFiatCash = ({
-  form, onChange, busy, onSubmit, success, onSuccessDismiss,
+  form, onChange, busy, onSubmit, success, onSuccessDismiss, error,
 }) => (
   <div>
     {success ? (
       <Success {...{ success, onSuccessDismiss }} />
     ) : (
-      <Form {...{ form, onChange, busy, onSubmit }} />
+      <Form {...{ form, onChange, busy, onSubmit, error }} />
     )}
   </div>
 );
