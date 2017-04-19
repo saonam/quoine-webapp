@@ -10,3 +10,7 @@
   text-align: left;
   height: 48px;
 }
+.children input[type=checkbox],
+.children input[type=radio] {
+  height: 18px;
+}
