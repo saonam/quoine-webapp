@@ -1,26 +1,3 @@
-.main {
-  composes: relative from "@quoine/styles/position.css";
-}
-.item {
-  composes: relative from "@quoine/styles/position.css";
-  z-index: 1;
-}
-._chart {
-  composes: absolute from "@quoine/styles/position.css";
-  composes: top from "@quoine/styles/position.css";
-  composes: left from "@quoine/styles/position.css";
-  composes: height-full from "@quoine/styles/size.css";
-  z-index: 0;
-}
-.chart-sells {
-  composes: _chart;
-  composes: negative-1 from "@quoine/styles/bg-color.css";
-}
-.chart-buys {
-  composes: _chart;
-  composes: positive-1 from "@quoine/styles/bg-color.css";
-}
-
 .dash {
   composes: half from "@quoine/styles/opacity.css";
 }

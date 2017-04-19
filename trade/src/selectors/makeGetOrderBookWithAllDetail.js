@@ -24,7 +24,7 @@ export default () => createSelector(
       const id = `${price}${quantity}${self}`;
 
       cumulativeValue += quantity;
-      const cumulativePercent = cumulativeValue / totalQty;
+      const cumulativePercent = (cumulativeValue / totalQty) * 100;
       return { id, price, quantity, self, cumulativeValue, cumulativePercent };
     });
 

@@ -9,29 +9,21 @@ const OrderBookItemView = ({ onClick, model, currencies, side, mode }) => {
   const { base, quote } = currencies;
   const { quantity, price, self, cumulativeValue, cumulativePercent } = model;
   const extraValue = mode === 'depth-chart' ? cumulativeValue : self;
+  const bg = mode === 'depth-chart' ? cumulativePercent : 0;
 
   return (
-    <div className={styles.main}>
-      <div className={styles.item}>
-        <BookItem
-          side={side}
-          left={<Money value={quantity} currency={base} noSymbol />}
-          center={<Money value={price} currency={quote} noSymbol />}
-          right={extraValue ? (
-            <Money value={extraValue} currency={base} noSymbol />
-          ) : (
-            <span className={styles.dash}>–</span>
-          )}
-          onClick={onClick}
-        />
-      </div>
-      {mode === 'depth-chart' ? (
-        <div
-          style={{ width: `${cumulativePercent * 100}%` }}
-          className={side === 'sells' ? styles.chartSells : styles.chartBuys}
-        />
-      ) : null}
-    </div>
+    <BookItem
+      side={side}
+      left={<Money value={quantity} currency={base} noSymbol />}
+      center={<Money value={price} currency={quote} noSymbol />}
+      right={extraValue ? (
+        <Money value={extraValue} currency={base} noSymbol />
+      ) : (
+        <span className={styles.dash}>–</span>
+      )}
+      onClick={onClick}
+      bg={bg}
+    />
   );
 };
 

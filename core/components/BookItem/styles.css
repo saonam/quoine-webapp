@@ -1,13 +1,14 @@
 @import "@quoine/core/styles/_colors.css";
 
 ._main {
-  composes: flex from "@quoine/styles/flex.css";
   composes: hor-medium from "@quoine/styles/padding.css";
   composes: pointer from "@quoine/styles/cursor.css";
   composes: delay-fast linear fast all-color from
     "@quoine/styles/transition.css";
   composes: hover-delay-immediate hover-immediate from
     "@quoine/styles/transition.css";
+
+  composes: relative from "@quoine/styles/position.css";
 }
 
 /* cannot use compose here as React Transition Group
@@ -38,21 +39,41 @@
   composes: active-positive-2 from "@quoine/styles/bg-color.css";
 }
 
+
 /* === */
 
-.child {
+.content {
+  composes: flex from "@quoine/styles/flex.css";
+}
+
+._child {
   composes: auto from "@quoine/styles/flex.css";
 }
 .left {
-  composes: child;
+  composes: _child;
   composes: left from "@quoine/styles/text.css";
 }
 .center {
-  composes: child;
+  composes: _child;
   composes: center from "@quoine/styles/text.css";
 }
 .right {
-  composes: child;
+  composes: _child;
   composes: right from "@quoine/styles/text.css";
 }
 
+/* === */
+
+._bg {
+  composes: absolute top left from "@quoine/styles/position.css";
+  composes: height-full from "@quoine/styles/size.css";
+  z-index: 1;
+}
+.bg-sell {
+  composes: _bg;
+  composes: negative-1 from "@quoine/styles/bg-color.css";
+}
+.bg-buy {
+  composes: _bg;
+  composes: positive-1 from "@quoine/styles/bg-color.css";
+}
