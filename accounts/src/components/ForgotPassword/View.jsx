@@ -28,7 +28,7 @@ const ForgotPassword = ({
           <LargeField label={translate('forgot-password:email')}>
             <TextInput
               type="email" value={email} onChange={onEmailChange}
-              required border
+              required border={2}
             />
           </LargeField>
         </div>

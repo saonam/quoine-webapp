@@ -40,7 +40,7 @@ export default {
   },
   "reset-password": {
     "new-password": "パスワード",
-    "new-password-help": "新しいパスワードをご入力ください。",
+    "new-password-help": "8文字以上かつ、大文字・小文字・数字のすべてを含む必要があります。",
     "token": "トークンをリセットする",
     "token-help": "送信したリセットトークンをご入力ください。",
     "action": "パスワード再設定",

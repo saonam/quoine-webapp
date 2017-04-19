@@ -40,7 +40,7 @@ export default {
   },
   "reset-password": {
     "new-password": "新密码",
-    "new-password-help": "请选择一个新密码。",
+    "new-password-help": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
     "token": "Reset Token",
     "token-help": "Please enter the reset token that was sent to your email address.",
     "action": "更新密码",

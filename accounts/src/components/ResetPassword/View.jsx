@@ -16,12 +16,13 @@ const ForgotPassword = (props) => (
     title={translate('reset-password:title')}
   >
     <form onSubmit={props.onSubmit} className={styles.main}>
+
       <div className={styles.body}>
 
         <div className={styles.input}>
           <LargeField label={translate('reset-password:new-password')}>
             <TextInput
-              type="password" border required
+              type="password" border={2} required
               value={props.password} onChange={props.onPasswordChange}
               // ===
               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
@@ -36,7 +37,7 @@ const ForgotPassword = (props) => (
         <div className={styles.input}>
           <LargeField label={translate('reset-password:token')}>
             <TextInput
-              type="text" border required
+              type="text" border={2} required
               value={props.token} onChange={props.onTokenChange}
             />
           </LargeField>
