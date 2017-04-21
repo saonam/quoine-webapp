@@ -11,6 +11,8 @@ import DailyReport from 'components/DailyReport';
 import Row from 'components/SettingsRow';
 import Body from 'components/SettingsBody';
 
+import { hidden } from '@quoine/styles/overflow.css';
+
 const Application = () => (
   <Body>
     <div>
@@ -20,9 +22,11 @@ const Application = () => (
     </div>
     <div>
       <Row label={translate('settings:theme-title')}>
-        <Carousel height={9.67}>
-          <ThemeSelect direction="row" />
-        </Carousel>
+        <div className={hidden}>
+          <Carousel height={9.67}>
+            <ThemeSelect direction="row" />
+          </Carousel>
+        </div>
       </Row>
     </div>
     {process.env.REACT_APP_VENDOR !== 'traders' ? (
