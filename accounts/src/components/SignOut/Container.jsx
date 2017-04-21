@@ -28,10 +28,7 @@ class SignOutContainer extends React.Component {
 
     resources.signOut(this.state.all)
     .then(() => {
-      this.props.router.push({
-        pathname: '/sign-in',
-        query: { message: 'signed-out' },
-      });
+      window.location.href = '/sign-in?message=signed-out';
     })
     .catch((error) => {
       this.setState({ busy: false, error: error.message });
