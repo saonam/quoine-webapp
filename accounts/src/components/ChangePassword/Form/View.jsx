@@ -5,7 +5,7 @@ import translate from '@quoine/translate';
 import FormInline from '@quoine/components/FormInline';
 import TextInput from '@quoine/components/TextInput';
 
-import LargeField from 'components/LargeField';
+import Field from '@quoine/components/Field';
 
 import styles from './styles.css';
 
@@ -20,21 +20,21 @@ const ChangePasswordFormView = (props) => (
     error={props.error ? translate(props.error) : ''}
   >
     <div className={styles.input}>
-      <LargeField label={translate('change-password:input-current')} layout="inline">
+      <Field label={translate('change-password:input-current')} layout="inline">
         <TextInput
           type="password" value={props.current}
           onChange={props.onCurrentChange}
           autoFocus border
         />
-      </LargeField>
+      </Field>
     </div>
     <div className={styles.input}>
-      <LargeField label={translate('change-password:input-next')} layout="inline">
+      <Field label={translate('change-password:input-next')} layout="inline">
         <TextInput
           type="password" value={props.next}
           onChange={props.onNextChange} border
         />
-      </LargeField>
+      </Field>
     </div>
   </FormInline>
 );

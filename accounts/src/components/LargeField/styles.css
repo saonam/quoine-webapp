@@ -4,7 +4,7 @@
 .children {
   composes: x-large line-4 left from "@quoine/styles/text.css";
 }
-/* ugly fix */
+/* ugly fix IE */
 /* TODO */
 .children input {
   text-align: left;
