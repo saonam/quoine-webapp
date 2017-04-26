@@ -195,7 +195,7 @@ export default {
     "action": "口座情報変更",
     "action-submit": "変更",
     "action-cancel": "取り消し",
-    "description": "KYC/AMLの規制内容が異なるため、米国居住者となった場合はsupport@quoine.comまでご連絡ください。",
+    "description": "以下の場合は、support@quoine.comまでご連絡ください。<br />１）転勤等で海外居住となる場合<br />２）外国PEPsに該当することとなった場合<br />３）米国納税義務が発生することとなった場合",
   },
   "tfa-manage": {
     "phone": "携帯番号",

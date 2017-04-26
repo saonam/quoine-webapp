@@ -29,11 +29,21 @@ import KanjiNameInput from '../KanjiNameInput';
 const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
   <form onSubmit={onSubmit}>
     {edit ? (
-      <div className={styles.description}>
-        {translate('edit-user:description')}
+      <div className={styles.body}>
+        <p
+          className={styles.description}
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: translate('edit-user:description'),
+          }}
+        />
+        <p className={styles.help}>
+          <Link pathname="/jp/pep.html" target="_blank" styleName="accent text">
+            外国PEPsについて
+          </Link>
+        </p>
       </div>
     ) : null}
-
     {/*
       BASIC
     */}
@@ -70,18 +80,20 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
         </div>
       )}
 
-      <div className={styles.input}>
-        <LargeField label="外国政府等の重要な公人">
-          <CheckboxInput id="pep" value={form.pep} onChange={onChange.pep} required>
-            私は外国の重要な公人、もしくはその親族ではありません。
-          </CheckboxInput>
-        </LargeField>
-        <p className={styles.help}>
-          <Link pathname="/jp/pep.html" target="_blank" styleName="accent text">
-            外国PEPsについて
-          </Link>
-        </p>
-      </div>
+      {edit ? null : (
+        <div className={styles.input}>
+          <LargeField label="外国政府等の重要な公人">
+            <CheckboxInput id="pep" value={form.pep} onChange={onChange.pep} required>
+              私は外国の重要な公人、もしくはその親族ではありません。
+            </CheckboxInput>
+          </LargeField>
+          <p className={styles.help}>
+            <Link pathname="/jp/pep.html" target="_blank" styleName="accent text">
+              外国PEPsについて
+            </Link>
+          </p>
+        </div>
+      )}
 
     </div>
 

@@ -52,6 +52,5 @@
 }
 
 .description {
-  composes: top-x-large hor-xx-large from "@quoine/styles/padding.css";
   composes: x-large from "@quoine/styles/text.css";
 }

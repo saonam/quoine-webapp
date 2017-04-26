@@ -201,7 +201,7 @@ export default {
     "action": "Update user profile",
     "action-submit": "Submit",
     "action-cancel": "Cancel",
-    "description": "Please contact us at support@quoine.com when you become a US citizen, as KYC/AML regulations will apply differently.",
+    "description": "Please contact us at support@quoine.com if you fall into one of the cases below:<br/>1. People residing outside of Japan (including  Japanese citizens)<br/>2. Family member of foreigner Politically Exposed Persons (PEPs)<br/>3. United States of America taxpayer",
   },
   "tfa-manage": {
     "phone": "Phone",

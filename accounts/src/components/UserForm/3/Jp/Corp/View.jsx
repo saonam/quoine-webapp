@@ -28,17 +28,21 @@ import ShsInput from '../ShsInput';
 const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
   <form onSubmit={onSubmit}>
 
-    {edit ? (
-      <div className={styles.description}>
-        {translate('edit-user:description')}
-      </div>
-    ) : null}
-
     {/*
       BASIC
     */}
 
     <div className={styles.body}>
+
+      {edit ? (
+        <p
+          className={styles.description}
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: translate('edit-user:description'),
+          }}
+        />
+      ) : null}
 
       <div className={styles.input}>
         <LargeField label="法人名">
