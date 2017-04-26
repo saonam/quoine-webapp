@@ -38,23 +38,27 @@ const UserForm4JpTerm = ({ form, onChange, required }) => (
         <Link pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/1)+privacy_policy_20170316.pdf" target="_blank" styleName="accent text">（PDF）</Link>
       </li>
       <li>
-        2.取引ルール
-        <Link pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/2)+trading_rules_20170316.pdf" target="_blank" styleName="accent text">（PDF）</Link>
+        2.当社サービス
+        <Link pathname="http://s3-ap-northeast-1.amazonaws.com/jfsa/2)%2Bquoine_service_20170424.pdf" target="_blank" styleName="accent text">（PDF）</Link>
       </li>
       <li>
-        3.利用規約
-        <Link pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/3)+T_and_C_20170316.pdf" target="_blank" styleName="accent text">（PDF）</Link>
+        3.取引ルール
+        <Link pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/3)%2Btrading_rules_20170424.pdf" target="_blank" styleName="accent text">（PDF）</Link>
       </li>
       <li>
-        4.リスク説明
-        <Link pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/4)+risks_20170316.pdf" target="_blank" styleName="accent text">（PDF）</Link>
+        4.利用規約
+        <Link pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/4)%2BT_and_C_20170424.pdf" target="_blank" styleName="accent text">（PDF）</Link>
       </li>
       <li>
-        5.特定商取引に関する法律に基づく表示
+        5.リスク説明
+        <Link pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/5)%2Brisks_20170424.pdf" target="_blank" styleName="accent text">（PDF）</Link>
+      </li>
+      <li>
+        6.特定商取引に関する法律に基づく表示
         <Link pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/5)+SCTA_20170316.pdf" target="_blank" styleName="accent text">（PDF）</Link>
       </li>
       <li>
-        6.反社会的勢力でないことの確約書
+        7.反社会的勢力でないことの確約書
         <Link pathname="https://s3-ap-northeast-1.amazonaws.com/jfsa/6)+antisocial_20170316.pdf" target="_blank" styleName="accent text">（PDF）</Link>
       </li>
     </ol>
