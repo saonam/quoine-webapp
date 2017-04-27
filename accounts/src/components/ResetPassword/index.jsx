@@ -17,8 +17,8 @@ class ResetPasswordContainer extends React.Component {
     this.onTokenChange = this.onChange.bind(this, 'token');
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onChange(key, event) {
-    this.setState({ [key]: event.target.value });
+  onChange(key, value) {
+    this.setState({ [key]: value });
   }
   onSubmit(event) {
     // need event because we attach this to form's submit event
