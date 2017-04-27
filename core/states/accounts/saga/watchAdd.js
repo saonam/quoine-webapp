@@ -8,7 +8,7 @@ import applyKeysModels from './applyKeysModels';
 import watchWebsocket from './watchWebsocket';
 
 function* onAdd(action) {
-  yield apply(TYPES, { adding: true });
+  yield apply(TYPES, { adding: action.payload });
 
   const account = yield call(resources.add, action.payload);
   yield* applyKeysModels(account);
@@ -24,7 +24,7 @@ function* onAdd(action) {
   };
   yield spawn(watchWebsocket, payload);
 
-  yield apply(TYPES, { adding: false });
+  yield apply(TYPES, { adding: '' });
 }
 
 export default function* watchAdd() {
