@@ -17,7 +17,7 @@ const details = {
 
 const normalize = (raw) => {
   const underJFSA = (
-    Number(vendorId) === Number(process.env.REACT_APP_VENDOR_JFSA_ID)
+    Number(raw.app_vendor_id) === Number(process.env.REACT_APP_VENDOR_JFSA_ID)
   );
   const basicInfo = basic(raw);
 
