@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import AccountSelect from '@quoine/components/AccountSelect';
@@ -10,11 +11,11 @@ const AccountWrapperSelect = ({ label, account, onChange }) => (
 );
 
 AccountWrapperSelect.propTypes = {
-  label: React.PropTypes.string.isRequired,
-  account: React.PropTypes.shape({
-    currency: React.PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  account: PropTypes.shape({
+    currency: PropTypes.string.isRequired,
   }).isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default AccountWrapperSelect;

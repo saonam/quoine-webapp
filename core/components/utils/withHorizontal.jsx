@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const withHorizontal = ({ Vertical, Horizontal }) => {
@@ -6,7 +7,7 @@ const withHorizontal = ({ Vertical, Horizontal }) => {
     return <Element {...others} />;
   };
   Container.propTypes = {
-    horizontal: React.PropTypes.bool,
+    horizontal: PropTypes.bool,
   };
   return Container;
 };

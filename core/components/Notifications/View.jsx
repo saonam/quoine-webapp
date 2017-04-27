@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Item from './Item';
@@ -39,12 +40,12 @@ const Notifications = ({ user, state }) => {
 };
 
 Notifications.propTypes = {
-  user: React.PropTypes.shape({
-    status: React.PropTypes.string,
+  user: PropTypes.shape({
+    status: PropTypes.string,
   }).isRequired,
-  state: React.PropTypes.shape({
-    dismissed: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    items: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  state: PropTypes.shape({
+    dismissed: PropTypes.arrayOf(PropTypes.string).isRequired,
+    items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   }).isRequired,
 };
 

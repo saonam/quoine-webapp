@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -63,15 +64,15 @@ const ProfileForm = ({
 );
 
 ProfileForm.propTypes = {
-  disabled: React.PropTypes.bool.isRequired,
-  error: React.PropTypes.string.isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  onChange: React.PropTypes.objectOf(
-    React.PropTypes.func.isRequired,
+  disabled: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
+  busy: PropTypes.bool.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.objectOf(
+    PropTypes.func.isRequired,
   ).isRequired,
-  form: React.PropTypes.shape({}).isRequired,
-  user: React.PropTypes.shape({}),
+  form: PropTypes.shape({}).isRequired,
+  user: PropTypes.shape({}),
 };
 
 export default ProfileForm;

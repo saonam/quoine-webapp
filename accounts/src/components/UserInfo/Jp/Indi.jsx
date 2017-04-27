@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Address from './Address';
@@ -87,9 +88,9 @@ const UserInfoIndi = ({ info, Group, Item }) => (
 );
 
 UserInfoIndi.propTypes = {
-  info: React.PropTypes.shape({}).isRequired,
-  Group: React.PropTypes.func.isRequired,
-  Item: React.PropTypes.func.isRequired,
+  info: PropTypes.shape({}).isRequired,
+  Group: PropTypes.func.isRequired,
+  Item: PropTypes.func.isRequired,
 };
 
 export default UserInfoIndi;

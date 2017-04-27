@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Spot from './Spot';
@@ -22,7 +23,7 @@ const AccountDetail = ({ market }) => (
 );
 
 AccountDetail.propTypes = {
-  market: React.PropTypes.string.isRequired,
+  market: PropTypes.string.isRequired,
 };
 
 export default AccountDetail;

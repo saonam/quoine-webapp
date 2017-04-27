@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -21,8 +22,8 @@ const FuturesBalanceBalancesField = ({ id, children }) => (
 );
 
 FuturesBalanceBalancesField.propTypes = {
-  id: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired,
+  id: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 export default FuturesBalanceBalancesField;

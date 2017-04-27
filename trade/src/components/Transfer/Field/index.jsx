@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Field from '@quoine/components/Field';
@@ -13,8 +14,8 @@ const TransferField = ({ label, children }) => (
 );
 
 TransferField.propTypes = {
-  label: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default TransferField;

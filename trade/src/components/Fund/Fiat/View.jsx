@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Method } from 'components/Fund/Input';
@@ -56,7 +57,7 @@ const FundFiatView = (props) => {
 FundFiatView.propTypes = {
   ...Bank.propTypes,
   ...List.propTypes,
-  account: React.PropTypes.string.isRequired,
+  account: PropTypes.string.isRequired,
 };
 
 export default FundFiatView;

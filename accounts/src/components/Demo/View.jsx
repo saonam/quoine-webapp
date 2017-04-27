@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -15,7 +16,7 @@ const BackButton = ({ onBack }) => (
 );
 
 BackButton.propTypes = {
-  onBack: React.PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
 };
 
 const getTitle = ({ mode, step }) => {
@@ -39,11 +40,11 @@ const DemoView = ({ step, mode, onBack, onContinue, onNew }) => (
 );
 
 DemoView.propTypes = {
-  mode: React.PropTypes.string.isRequired,
-  step: React.PropTypes.number.isRequired,
+  mode: PropTypes.string.isRequired,
+  step: PropTypes.number.isRequired,
   onBack: BackButton.propTypes.onBack,
-  onNew: React.PropTypes.func.isRequired,
-  onContinue: React.PropTypes.func.isRequired,
+  onNew: PropTypes.func.isRequired,
+  onContinue: PropTypes.func.isRequired,
 };
 
 export default DemoView;

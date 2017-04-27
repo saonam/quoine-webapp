@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -25,10 +26,10 @@ const Label = ({ id, hintStyle }) => (
 );
 
 Label.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  hintStyle: React.PropTypes.shape({
-    width: React.PropTypes.number.isRequired,
-    left: React.PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+  hintStyle: PropTypes.shape({
+    width: PropTypes.number.isRequired,
+    left: PropTypes.number.isRequired,
   }),
 };
 
@@ -41,7 +42,7 @@ const OrderEntryFormField = ({ children, ...others }) => (
 );
 
 OrderEntryFormField.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default OrderEntryFormField;

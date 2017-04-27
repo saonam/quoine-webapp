@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import UserInfo from 'components/UserInfo';
@@ -9,7 +10,7 @@ const ProfileJpInfo = ({ info }) => (
 );
 
 ProfileJpInfo.propTypes = {
-  info: React.PropTypes.shape({}).isRequired,
+  info: PropTypes.shape({}).isRequired,
 };
 
 export default ProfileJpInfo;

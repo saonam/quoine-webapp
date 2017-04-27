@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Icon from '@quoine/components/Icon';
@@ -29,14 +30,14 @@ const NumberInputView = (props) => {
 };
 
 NumberInputView.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  onFocus: React.PropTypes.func.isRequired,
-  onBlur: React.PropTypes.func.isRequired,
-  onMinus: React.PropTypes.func.isRequired,
-  onPlus: React.PropTypes.func.isRequired,
-  focus: React.PropTypes.bool,
-  border: React.PropTypes.bool,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onFocus: PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
+  onMinus: PropTypes.func.isRequired,
+  onPlus: PropTypes.func.isRequired,
+  focus: PropTypes.bool,
+  border: PropTypes.bool,
 };
 
 export default NumberInputView;

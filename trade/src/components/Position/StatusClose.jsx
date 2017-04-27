@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Color from '@quoine/components/Color';
@@ -15,8 +16,8 @@ const PositionStatusClose = ({ position, ...others }) => (
 );
 
 PositionStatusClose.propTypes = {
-  position: React.PropTypes.shape({
-    status: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    status: PropTypes.string.isRequired,
   }).isRequired,
 };
 

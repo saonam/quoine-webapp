@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -19,10 +20,10 @@ const FileInputView = ({ id, value, onChange, border }) => (
 );
 
 FileInputView.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  value: React.PropTypes.shape({}),
-  onChange: React.PropTypes.func.isRequired,
-  border: React.PropTypes.bool,
+  id: PropTypes.string.isRequired,
+  value: PropTypes.shape({}),
+  onChange: PropTypes.func.isRequired,
+  border: PropTypes.bool,
 };
 
 export default FileInputView;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Connector from './Connector';
@@ -9,8 +10,8 @@ const PositionClose = ({ position, ...others }) => (
 );
 
 PositionClose.propTypes = {
-  position: React.PropTypes.shape({
-    status: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    status: PropTypes.string.isRequired,
   }).isRequired,
 };
 

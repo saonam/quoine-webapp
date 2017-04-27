@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -45,17 +46,17 @@ const WdrBankFormView = (props) => (
 
 WdrBankFormView.propTypes = {
   ...Body.PropTypes,
-  action: React.PropTypes.oneOf(['add', 'edit']).isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  onDismiss: React.PropTypes.func.isRequired,
-  success: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({}),
+  action: PropTypes.oneOf(['add', 'edit']).isRequired,
+  busy: PropTypes.bool.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onDismiss: PropTypes.func.isRequired,
+  success: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({}),
   ]).isRequired,
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({}),
+  error: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({}),
   ]).isRequired,
 };
 

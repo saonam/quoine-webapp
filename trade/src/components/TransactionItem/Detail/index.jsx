@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -98,7 +99,7 @@ const TransactionItemDetail = ({ trans }) => (
 );
 
 TransactionItemDetail.propTypes = {
-  trans: React.PropTypes.shape({}).isRequired,
+  trans: PropTypes.shape({}).isRequired,
 };
 
 export default TransactionItemDetail;

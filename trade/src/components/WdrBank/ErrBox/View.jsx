@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ErrWrapper from '@quoine/components/ErrWrapper';
@@ -17,13 +18,13 @@ const WdrBankErrBox = ({ onDismiss, error, bank }) => (
 );
 
 WdrBankErrBox.propTypes = {
-  onDismiss: React.PropTypes.func.isRequired,
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onDismiss: PropTypes.func.isRequired,
+  error: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
-  bank: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  bank: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };
 

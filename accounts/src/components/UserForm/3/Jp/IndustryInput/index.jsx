@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Wrapper from '@quoine/components/FormOnChangeWrapper';
@@ -9,7 +10,7 @@ const JpIndustryInput = (props) => (
 );
 
 JpIndustryInput.propTypes = {
-  value: React.PropTypes.shape({}).isRequired,
+  value: PropTypes.shape({}).isRequired,
 };
 
 export default JpIndustryInput;

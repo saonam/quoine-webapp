@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Futures from 'components/FuturesActivate';
@@ -24,10 +25,10 @@ const MarketSelect = ({ futures, user }) => {
 };
 
 MarketSelect.propTypes = {
-  futures: React.PropTypes.bool.isRequired,
-  user: React.PropTypes.shape({
-    id: React.PropTypes.number,
-    underJFSA: React.PropTypes.bool,
+  futures: PropTypes.bool.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+    underJFSA: PropTypes.bool,
   }).isRequired,
 };
 

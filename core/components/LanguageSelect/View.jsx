@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from './Button';
@@ -11,7 +12,7 @@ const LanguageSelect = ({ all }) => (
 );
 
 LanguageSelect.propTypes = {
-  all: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  all: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default LanguageSelect;

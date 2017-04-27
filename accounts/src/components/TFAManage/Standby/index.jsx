@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -64,10 +65,10 @@ const TFAManageStandby = (props) => {
 };
 
 TFAManageStandby.propTypes = {
-  phone: React.PropTypes.string,
-  enabled: React.PropTypes.bool.isRequired,
-  goAddPhone: React.PropTypes.func.isRequired,
-  goToggle: React.PropTypes.func.isRequired,
+  phone: PropTypes.string,
+  enabled: PropTypes.bool.isRequired,
+  goAddPhone: PropTypes.func.isRequired,
+  goToggle: PropTypes.func.isRequired,
 };
 
 export default TFAManageStandby;

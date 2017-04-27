@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -48,18 +49,18 @@ const FuturesBalanceForm = (props) => (
 );
 
 FuturesBalanceForm.propTypes = {
-  type: React.PropTypes.oneOf(['fund', 'withdrawal']),
+  type: PropTypes.oneOf(['fund', 'withdrawal']),
   // ===
-  quantity: React.PropTypes.string.isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.string,
+  quantity: PropTypes.string.isRequired,
+  busy: PropTypes.bool.isRequired,
+  error: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string,
   ]).isRequired,
-  success: React.PropTypes.bool.isRequired,
+  success: PropTypes.bool.isRequired,
   // ===
-  onChange: React.PropTypes.func.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default FuturesBalanceForm;

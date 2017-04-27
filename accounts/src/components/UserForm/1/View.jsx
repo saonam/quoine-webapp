@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -29,8 +30,8 @@ const UserForm1View = ({ onIndividual, onCorporate }) => (
 );
 
 UserForm1View.propTypes = {
-  onIndividual: React.PropTypes.func.isRequired,
-  onCorporate: React.PropTypes.func.isRequired,
+  onIndividual: PropTypes.func.isRequired,
+  onCorporate: PropTypes.func.isRequired,
 };
 
 export default UserForm1View;

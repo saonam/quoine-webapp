@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import resources from './resources';
 
@@ -27,10 +28,10 @@ class PositionLeverageFutures extends React.Component {
 }
 
 PositionLeverageFutures.propTypes = {
-  position: React.PropTypes.shape({
-    product: React.PropTypes.string.isRequired,
-    cross: React.PropTypes.bool,
-    leverage: React.PropTypes.number,
+  position: PropTypes.shape({
+    product: PropTypes.string.isRequired,
+    cross: PropTypes.bool,
+    leverage: PropTypes.number,
   }).isRequired,
 };
 

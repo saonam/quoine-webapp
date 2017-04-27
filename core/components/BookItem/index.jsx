@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ColorBySide from '@quoine/components/ColorBySide';
@@ -24,14 +25,14 @@ const BookItem = ({ left, center, right, side: rawSide, onClick, bg }) => {
 };
 
 BookItem.propTypes = {
-  left: React.PropTypes.node.isRequired,
-  center: React.PropTypes.node.isRequired,
-  right: React.PropTypes.node.isRequired,
-  side: React.PropTypes.oneOf([
+  left: PropTypes.node.isRequired,
+  center: PropTypes.node.isRequired,
+  right: PropTypes.node.isRequired,
+  side: PropTypes.oneOf([
     'buy', 'sell', 'buys', 'sells',
   ]).isRequired,
-  onClick: React.PropTypes.func,
-  bg: React.PropTypes.number,
+  onClick: PropTypes.func,
+  bg: PropTypes.number,
 };
 
 export default BookItem;

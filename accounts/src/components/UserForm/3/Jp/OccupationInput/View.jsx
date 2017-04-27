@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import TextInput from '@quoine/components/TextInput';
@@ -77,8 +78,8 @@ const JpOccupationInputView = ({ value, onChange, ...others }) => (
 );
 
 JpOccupationInputView.propTypes = {
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.shape({}).isRequired,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.shape({}).isRequired,
 };
 
 export default JpOccupationInputView;

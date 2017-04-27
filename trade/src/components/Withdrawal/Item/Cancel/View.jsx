@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/ButtonWLoading';
@@ -15,17 +16,17 @@ const WdrItemCancel = ({ withdrawal, confirming, submitting, onCancel }) => (
 );
 
 WdrItemCancel.propTypes = {
-  withdrawal: React.PropTypes.shape({}).isRequired,
+  withdrawal: PropTypes.shape({}).isRequired,
   // ===
-  confirming: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  confirming: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]),
-  submitting: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  submitting: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
-  onCancel: React.PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
 };
 
 export default WdrItemCancel;

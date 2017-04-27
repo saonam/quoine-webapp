@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import FromWrapper from '@quoine/components/FormWrapper';
@@ -46,9 +47,9 @@ class UserEdit extends React.Component {
 }
 
 UserEdit.propTypes = {
-  user: React.PropTypes.shape({}).isRequired,
-  onUpdate: React.PropTypes.func.isRequired,
-  onClose: React.PropTypes.func.isRequired,
+  user: PropTypes.shape({}).isRequired,
+  onUpdate: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default UserEdit;

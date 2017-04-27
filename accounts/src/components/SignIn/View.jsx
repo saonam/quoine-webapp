@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -18,7 +19,7 @@ const BackButton = ({ onBack }) => (
 );
 
 BackButton.propTypes = {
-  onBack: React.PropTypes.func.isRequired,
+  onBack: PropTypes.func.isRequired,
 };
 
 const SignIn = ({
@@ -52,17 +53,17 @@ const SignIn = ({
 );
 
 SignIn.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  error: React.PropTypes.string.isRequired,
-  step: React.PropTypes.number.isRequired,
+  busy: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
+  step: PropTypes.number.isRequired,
   // ===
-  form: React.PropTypes.objectOf(React.PropTypes.string).isRequired,
-  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
+  form: PropTypes.objectOf(PropTypes.string).isRequired,
+  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
+  onSubmit: PropTypes.func.isRequired,
   // back to step 1
   onBack: BackButton.propTypes.onBack,
   // message from backend (like "account confirmed")
-  message: React.PropTypes.string,
+  message: PropTypes.string,
 };
 
 export default SignIn;

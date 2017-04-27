@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Body from './Body';
@@ -28,7 +29,7 @@ class AccountWrapper extends React.Component {
 }
 
 AccountWrapper.propTypes = {
-  currency: React.PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };
 
 export default AccountWrapper;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -14,8 +15,8 @@ const Spine = ({ title, children }) => (
 );
 
 Spine.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
 };
 
 export default Spine;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SelectInput from '@quoine/components/SelectInput';
@@ -40,8 +41,8 @@ const JpIndustryInputView = ({ value, onChange, ...others }) => (
 );
 
 JpIndustryInputView.propTypes = {
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.shape({}).isRequired,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.shape({}).isRequired,
 };
 
 export default JpIndustryInputView;

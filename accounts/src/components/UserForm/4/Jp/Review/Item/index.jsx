@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Field from '@quoine/components/Field';
@@ -9,8 +10,8 @@ const UserForm4JpReviewItem = ({ label, children }) => (
 );
 
 UserForm4JpReviewItem.propTypes = {
-  label: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired,
+  label: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 export default UserForm4JpReviewItem;

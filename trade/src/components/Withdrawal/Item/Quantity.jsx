@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -7,7 +8,7 @@ const WdrItemQuantity = ({ withdrawal }) => (
 );
 
 WdrItemQuantity.propTypes = {
-  withdrawal: React.PropTypes.shape({}).isRequired,
+  withdrawal: PropTypes.shape({}).isRequired,
 };
 
 export default WdrItemQuantity;

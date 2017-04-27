@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -12,13 +13,13 @@ const OrderDistance = ({ order }) => (
 );
 
 OrderDistance.propTypes = {
-  order: React.PropTypes.shape({
-    distance: React.PropTypes.oneOfType([
-      React.PropTypes.number,
-      React.PropTypes.string,
+  order: PropTypes.shape({
+    distance: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
     ]).isRequired,
-    distanceType: React.PropTypes.string.isRequired,
-    quoteCurrency: React.PropTypes.string.isRequired,
+    distanceType: PropTypes.string.isRequired,
+    quoteCurrency: PropTypes.string.isRequired,
   }).isRequired,
 };
 

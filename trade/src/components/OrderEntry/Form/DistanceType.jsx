@@ -1,5 +1,7 @@
 import { withBoth } from 'components/OrderEntry/utils';
 
+import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -27,11 +29,11 @@ const OrderEntryFormDistanceType = ({ form, onChange }) => (
 );
 
 OrderEntryFormDistanceType.propTypes = {
-  form: React.PropTypes.shape({
-    distanceType: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    distanceType: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
   }),
-  onChange: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default withBoth(OrderEntryFormDistanceType, 'distanceType');

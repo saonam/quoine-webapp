@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -65,16 +66,16 @@ const FundFiatBankForm = ({
 );
 
 FundFiatBankForm.propTypes = {
-  form: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
+  form: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
+  busy: PropTypes.bool.isRequired,
+  onSubmit: PropTypes.func.isRequired,
   // ===
-  onClose: React.PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
   // ===
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({}),
+  error: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({}),
   ]).isRequired,
 };
 

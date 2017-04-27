@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -40,14 +41,14 @@ const ReportWrapperView = (props) => (
 );
 
 ReportWrapperView.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  id: React.PropTypes.string.isRequired,
-  layout: React.PropTypes.oneOf(['inline', 'hero']).isRequired,
+  children: PropTypes.node.isRequired,
+  id: PropTypes.string.isRequired,
+  layout: PropTypes.oneOf(['inline', 'hero']).isRequired,
   // ===
-  onDismiss: React.PropTypes.func.isRequired,
+  onDismiss: PropTypes.func.isRequired,
   // ===
-  skip: React.PropTypes.bool.isRequired,
-  onToggleSkip: React.PropTypes.func.isRequired,
+  skip: PropTypes.bool.isRequired,
+  onToggleSkip: PropTypes.func.isRequired,
 };
 
 export default ReportWrapperView;

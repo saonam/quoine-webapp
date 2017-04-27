@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -49,7 +50,7 @@ class FundCrypto extends React.Component {
 }
 
 FundCrypto.propTypes = {
-  account: React.PropTypes.string.isRequired,
+  account: PropTypes.string.isRequired,
 };
 
 export default FundCrypto;

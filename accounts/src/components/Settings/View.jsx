@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Menu from 'components/Settings/Menu';
@@ -17,7 +18,7 @@ const SettingsView = ({ children }) => (
 );
 
 SettingsView.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default SettingsView;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Address from '../Address';
@@ -48,8 +49,8 @@ const UserInfoShs = ({ shs, Item }) => (
 );
 
 UserInfoShs.propTypes = {
-  shs: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
-  Item: React.PropTypes.func.isRequired,
+  shs: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  Item: PropTypes.func.isRequired,
 };
 
 export default UserInfoShs;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -15,11 +16,11 @@ const ProductPriceLabel = ({ product, type }) => (
 );
 
 ProductPriceLabel.propTypes = {
-  product: React.PropTypes.shape({
-    lowBid: React.PropTypes.number.isRequired,
-    highAsk: React.PropTypes.number.isRequired,
+  product: PropTypes.shape({
+    lowBid: PropTypes.number.isRequired,
+    highAsk: PropTypes.number.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['bid', 'ask']).isRequired,
+  type: PropTypes.oneOf(['bid', 'ask']).isRequired,
 };
 
 export default ProductPriceLabel;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -22,13 +23,13 @@ const WdrCancelConfirmBox = ({ onSet, confirming, withdrawal }) => (
 );
 
 WdrCancelConfirmBox.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
-  confirming: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onSet: PropTypes.func.isRequired,
+  confirming: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]),
-  withdrawal: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  withdrawal: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };
 

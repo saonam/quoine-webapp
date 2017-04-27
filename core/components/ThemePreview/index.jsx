@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -30,7 +31,7 @@ const ThemePreview = ({ theme }) => (
 );
 
 ThemePreview.propTypes = {
-  theme: React.PropTypes.string.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
 export default ThemePreview;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -38,10 +39,10 @@ const AccountOverview = ({ account }) => (
 );
 
 AccountOverview.propTypes = {
-  account: React.PropTypes.shape({
-    balance: React.PropTypes.number.isRequired,
-    pnl: React.PropTypes.number.isRequired,
-    marginCoverage: React.PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    balance: PropTypes.number.isRequired,
+    pnl: PropTypes.number.isRequired,
+    marginCoverage: PropTypes.number.isRequired,
   }),
 };
 

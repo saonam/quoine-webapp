@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -11,9 +12,9 @@ const WithdrawalItemDetailField = ({ id, currency, children }) => (
 );
 
 WithdrawalItemDetailField.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  currency: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired,
+  id: PropTypes.string.isRequired,
+  currency: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 export default WithdrawalItemDetailField;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import FromWrapper from '@quoine/components/FormWrapper';
@@ -27,13 +28,13 @@ class UserForm3JpCorp extends React.Component {
 }
 
 UserForm3JpCorp.propTypes = {
-  form: React.PropTypes.shape({
-    jpCorp: React.PropTypes.shape({}).isRequired,
+  form: PropTypes.shape({
+    jpCorp: PropTypes.shape({}).isRequired,
   }).isRequired,
-  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
+  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
+  onSubmit: PropTypes.func.isRequired,
   // ===
-  edit: React.PropTypes.bool,
+  edit: PropTypes.bool,
 };
 
 export default UserForm3JpCorp;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -40,8 +41,8 @@ const MrgAccDetailConfirmBody = ({ mrgAcc, side }) => (
 );
 
 MrgAccDetailConfirmBody.propTypes = {
-  mrgAcc: React.PropTypes.shape({}),
-  side: React.PropTypes.oneOf(['long', 'short', 'both']).isRequired,
+  mrgAcc: PropTypes.shape({}),
+  side: PropTypes.oneOf(['long', 'short', 'both']).isRequired,
 };
 
 export default MrgAccDetailConfirmBody;

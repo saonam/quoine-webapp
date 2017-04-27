@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -21,10 +22,10 @@ const FormNumberInPlaceView = ({ value, onChange, onSubmit, onCancel }) => (
 );
 
 FormNumberInPlaceView.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  onCancel: React.PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
 };
 
 export default FormNumberInPlaceView;

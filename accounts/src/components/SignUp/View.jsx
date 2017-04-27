@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -73,7 +74,7 @@ const SignUpView = (props) => {
 
 SignUpView.propTypes = {
   ...FormWrapperPropTypes,
-  step: React.PropTypes.number.isRequired,
+  step: PropTypes.number.isRequired,
 };
 
 // {props.error ? (

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -20,14 +21,14 @@ const WdrBankRemoveConfirmBox = ({ confirming, onSet, bank }) => (
 );
 
 WdrBankRemoveConfirmBox.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
-  bank: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  onSet: PropTypes.func.isRequired,
+  bank: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }),
-  confirming: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({
-      id: React.PropTypes.number.isRequired,
+  confirming: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
     }),
   ]),
 };

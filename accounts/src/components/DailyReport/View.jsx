@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -16,9 +17,9 @@ const DailyReportView = ({ value, onToggle, busy }) => (
 );
 
 DailyReportView.propTypes = {
-  onToggle: React.PropTypes.func.isRequired,
-  value: React.PropTypes.bool.isRequired,
-  busy: React.PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
+  value: PropTypes.bool.isRequired,
+  busy: PropTypes.bool.isRequired,
 };
 
 export default DailyReportView;

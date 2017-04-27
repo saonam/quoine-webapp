@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactSelect from 'react-select';
 
@@ -30,11 +31,11 @@ const SelectInput = ({ searchable, placeholder, border, ...others }) => (
 );
 
 SelectInput.propTypes = {
-  searchable: React.PropTypes.bool,
-  placeholder: React.PropTypes.string,
-  border: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.number,
+  searchable: PropTypes.bool,
+  placeholder: PropTypes.string,
+  border: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.number,
   ]),
 };
 

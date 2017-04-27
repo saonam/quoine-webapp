@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -39,12 +40,12 @@ class WdrInputAddress extends React.Component {
 }
 
 WdrInputAddress.propTypes = {
-  form: React.PropTypes.shape({
-    account: React.PropTypes.string.isRequired,
-    address: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    account: PropTypes.string.isRequired,
+    address: PropTypes.string.isRequired,
   }).isRequired,
-  onChange: React.PropTypes.shape({
-    address: React.PropTypes.func.isRequired,
+  onChange: PropTypes.shape({
+    address: PropTypes.func.isRequired,
   }).isRequired,
 };
 

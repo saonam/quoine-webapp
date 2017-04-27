@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -29,8 +30,8 @@ const TransferMessage = ({ message }) => (
 );
 
 TransferMessage.propTypes = {
-  message: React.PropTypes.shape({
-    key: React.PropTypes.oneOf([
+  message: PropTypes.shape({
+    key: PropTypes.oneOf([
       'pending',
       'declined',
       'documents-submitted',
@@ -38,10 +39,10 @@ TransferMessage.propTypes = {
       'limit-accounts',
       'need-tfa',
     ]).isRequired,
-    style: React.PropTypes.oneOf(['positive', 'negative']).isRequired,
-    goto: React.PropTypes.oneOfType([
-      React.PropTypes.string.isRequired,
-      React.PropTypes.bool.isRequired,
+    style: PropTypes.oneOf(['positive', 'negative']).isRequired,
+    goto: PropTypes.oneOfType([
+      PropTypes.string.isRequired,
+      PropTypes.bool.isRequired,
     ]).isRequired,
   }).isRequired,
 };

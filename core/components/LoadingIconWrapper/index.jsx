@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import LoadingIcon from '@quoine/components/LoadingIcon';
@@ -11,7 +12,7 @@ const LoadingIconWrapper = ({ type }) => (
 );
 
 LoadingIconWrapper.propTypes = {
-  type: React.PropTypes.oneOf(['width', 'height', 'full']),
+  type: PropTypes.oneOf(['width', 'height', 'full']),
 };
 
 LoadingIconWrapper.defaultProps = {

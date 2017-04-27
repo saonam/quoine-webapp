@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Pte from './Pte';
@@ -11,7 +12,7 @@ const UserInfo = ({ info, ...others }) => {
 };
 
 UserInfo.propTypes = {
-  info: React.PropTypes.shape({}).isRequired,
+  info: PropTypes.shape({}).isRequired,
 };
 
 export default UserInfo;

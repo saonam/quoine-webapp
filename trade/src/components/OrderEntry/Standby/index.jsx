@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Form from 'components/OrderEntry/Form';
@@ -28,7 +29,7 @@ const OrderEntryStandby = ({ form }) => (
 );
 
 OrderEntryStandby.propTypes = {
-  form: React.PropTypes.shape({}).isRequired,
+  form: PropTypes.shape({}).isRequired,
 };
 
 export default OrderEntryStandby;

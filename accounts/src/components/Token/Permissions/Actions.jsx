@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -18,7 +19,7 @@ const TokenPermissionsActions = ({ permission }) => (
 );
 
 TokenPermissionsActions.propTypes = {
-  permission: React.PropTypes.shape({}).isRequired,
+  permission: PropTypes.shape({}).isRequired,
 };
 
 export default TokenPermissionsActions;

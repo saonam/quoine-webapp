@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -32,10 +33,10 @@ const VolumeReportView = ({ busy, success, onSubmit, onSuccessDismiss }) => (
 );
 
 VolumeReportView.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  success: React.PropTypes.bool.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  onSuccessDismiss: React.PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
+  success: PropTypes.bool.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onSuccessDismiss: PropTypes.func.isRequired,
 };
 
 export default VolumeReportView;

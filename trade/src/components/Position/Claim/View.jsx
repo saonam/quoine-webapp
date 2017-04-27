@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import FloatBox from '@quoine/components/FloatBox';
@@ -38,15 +39,15 @@ const PositionClaimView = ({ activity, error, position, layout }) => {
 };
 
 PositionClaimView.propTypes = {
-  activity: React.PropTypes.shape({}),
-  position: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  activity: PropTypes.shape({}),
+  position: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }).isRequired,
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  error: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
-  layout: React.PropTypes.string.isRequired,
+  layout: PropTypes.string.isRequired,
 };
 
 export default PositionClaimView;

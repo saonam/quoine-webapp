@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -15,8 +16,8 @@ const ColorByValue = ({ value, children }) => (
 );
 
 ColorByValue.propTypes = {
-  value: React.PropTypes.number.isRequired,
-  children: React.PropTypes.node.isRequired,
+  value: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default ColorByValue;

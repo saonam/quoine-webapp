@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Form from './Form';
@@ -20,7 +21,7 @@ FundFiatCash.propTypes = {
   ...Success.propTypes,
   // remove onClose from form propTypes
   // eslint-disable-next-line react/forbid-prop-types
-  onClose: React.PropTypes.any,
+  onClose: PropTypes.any,
 };
 
 export default FundFiatCash;

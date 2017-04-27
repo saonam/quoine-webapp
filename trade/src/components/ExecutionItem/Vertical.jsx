@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Expander from '@quoine/components/Expander';
@@ -9,7 +10,7 @@ const ExecutionItem = ({ execution }) => (
 );
 
 ExecutionItem.propTypes = {
-  execution: React.PropTypes.shape({}).isRequired,
+  execution: PropTypes.shape({}).isRequired,
 };
 
 export default ExecutionItem;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -16,15 +17,15 @@ const PositionClaimButton = ({ confirming, position, claim, onClaim }) => (
 );
 
 PositionClaimButton.propTypes = {
-  onClaim: React.PropTypes.func.isRequired,
-  claim: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onClaim: PropTypes.func.isRequired,
+  claim: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
-  position: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }).isRequired,
-  confirming: React.PropTypes.bool.isRequired,
+  confirming: PropTypes.bool.isRequired,
 };
 
 export default PositionClaimButton;

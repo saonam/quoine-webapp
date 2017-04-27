@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Toggler from '@quoine/components/Toggler';
@@ -56,24 +57,24 @@ const BltItemEdit = (props) => {
 };
 
 BltItemEdit.propTypes = {
-  activity: React.PropTypes.shape({}),
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  activity: PropTypes.shape({}),
+  error: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
   // ===
-  modelName: React.PropTypes.string.isRequired,
-  target: React.PropTypes.string.isRequired,
-  layout: React.PropTypes.string.isRequired,
-  Element: React.PropTypes.func,
+  modelName: PropTypes.string.isRequired,
+  target: PropTypes.string.isRequired,
+  layout: PropTypes.string.isRequired,
+  Element: PropTypes.func,
   // ===
-  Standby: React.PropTypes.func.isRequired,
-  Confirm: React.PropTypes.func.isRequired,
-  Err: React.PropTypes.func.isRequired,
-  Form: React.PropTypes.func.isRequired,
+  Standby: PropTypes.func.isRequired,
+  Confirm: PropTypes.func.isRequired,
+  Err: PropTypes.func.isRequired,
+  Form: PropTypes.func.isRequired,
   // ===
-  color: React.PropTypes.string,
-  right: React.PropTypes.bool,
+  color: PropTypes.string,
+  right: PropTypes.bool,
 };
 
 export default BltItemEdit;

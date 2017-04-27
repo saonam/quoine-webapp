@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -14,8 +15,8 @@ const ProductSelectButton = ({ onSet, symbol }) => (
 );
 
 ProductSelectButton.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
-  symbol: React.PropTypes.string.isRequired,
+  onSet: PropTypes.func.isRequired,
+  symbol: PropTypes.string.isRequired,
 };
 
 export default ProductSelectButton;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -18,11 +19,11 @@ const PositionFee = ({ position, type }) => {
 };
 
 PositionFee.propTypes = {
-  position: React.PropTypes.shape({
-    feeClose: React.PropTypes.number.isRequired,
-    feeTotal: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    feeClose: PropTypes.number.isRequired,
+    feeTotal: PropTypes.number.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['total', 'close']).isRequired,
+  type: PropTypes.oneOf(['total', 'close']).isRequired,
 };
 
 export default PositionFee;

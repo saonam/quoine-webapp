@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -23,11 +24,11 @@ const PositionQuantity = ({ position, type }) => {
 };
 
 PositionQuantity.propTypes = {
-  position: React.PropTypes.shape({
-    quantity: React.PropTypes.number.isRequired,
-    baseCurrency: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    quantity: PropTypes.number.isRequired,
+    baseCurrency: PropTypes.string.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['open', 'close']),
+  type: PropTypes.oneOf(['open', 'close']),
 };
 
 export default PositionQuantity;

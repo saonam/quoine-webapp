@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Expander from '@quoine/components/Expander';
@@ -9,7 +10,7 @@ const OrderItem = ({ order }) => (
 );
 
 OrderItem.propTypes = {
-  order: React.PropTypes.shape({}).isRequired,
+  order: PropTypes.shape({}).isRequired,
 };
 
 export default OrderItem;

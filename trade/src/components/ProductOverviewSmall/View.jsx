@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -42,8 +43,8 @@ const ProductOverviewSmall = ({ product }) => (
 );
 
 ProductOverviewSmall.propTypes = {
-  product: React.PropTypes.shape({
-    symbol: React.PropTypes.string.isRequired,
+  product: PropTypes.shape({
+    symbol: PropTypes.string.isRequired,
   }),
 };
 

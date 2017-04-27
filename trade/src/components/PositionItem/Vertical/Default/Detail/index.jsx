@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -39,8 +40,8 @@ const PositionItemDetail = ({ position, underJFSA }) => (
 );
 
 PositionItemDetail.propTypes = {
-  position: React.PropTypes.shape({}).isRequired,
-  underJFSA: React.PropTypes.bool.isRequired,
+  position: PropTypes.shape({}).isRequired,
+  underJFSA: PropTypes.bool.isRequired,
 };
 
 export default PositionItemDetail;

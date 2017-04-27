@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -24,7 +25,7 @@ const AccountsWarningModal = ({ onClose }) => (
 );
 
 AccountsWarningModal.propTypes = {
-  onClose: React.PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default AccountsWarningModal;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Field from './Field';
@@ -24,7 +25,7 @@ const WdrItemDetail = ({ withdrawal }) => (
 );
 
 WdrItemDetail.propTypes = {
-  withdrawal: React.PropTypes.shape({}).isRequired,
+  withdrawal: PropTypes.shape({}).isRequired,
 };
 
 export default WdrItemDetail;

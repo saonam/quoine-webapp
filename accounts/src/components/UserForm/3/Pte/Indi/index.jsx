@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import FromWrapper from '@quoine/components/FormWrapper';
@@ -25,11 +26,11 @@ class UserForm3PteIndi extends React.Component {
 }
 
 UserForm3PteIndi.propTypes = {
-  form: React.PropTypes.shape({
-    pteIndi: React.PropTypes.shape({}).isRequired,
+  form: PropTypes.shape({
+    pteIndi: PropTypes.shape({}).isRequired,
   }).isRequired,
-  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
+  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default UserForm3PteIndi;

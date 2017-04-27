@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import LoadingIconWrapper from '@quoine/components/LoadingIconWrapper';
@@ -20,11 +21,11 @@ const AccountWrapperBodyView = ({ Body, account, onChange, ...others }) => (
 );
 
 AccountWrapperBodyView.propTypes = {
-  account: React.PropTypes.shape({
-    fundType: React.PropTypes.string.isRequired,
+  account: PropTypes.shape({
+    fundType: PropTypes.string.isRequired,
   }),
-  onChange: React.PropTypes.func.isRequired,
-  Body: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  Body: PropTypes.func.isRequired,
 };
 
 export default AccountWrapperBodyView;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -17,11 +18,11 @@ const BlotterFilterSelectView = ({
 };
 
 BlotterFilterSelectView.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  namespace: React.PropTypes.string.isRequired,
-  current: React.PropTypes.string.isRequired,
-  values: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  namespace: PropTypes.string.isRequired,
+  current: PropTypes.string.isRequired,
+  values: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default BlotterFilterSelectView;

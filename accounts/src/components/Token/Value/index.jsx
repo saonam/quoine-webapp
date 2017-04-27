@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -25,7 +26,7 @@ class TokenValue extends React.Component {
 }
 
 TokenValue.propTypes = {
-  token: React.PropTypes.shape({}).isRequired,
+  token: PropTypes.shape({}).isRequired,
 };
 
 export default TokenValue;

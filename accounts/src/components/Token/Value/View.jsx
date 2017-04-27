@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -20,9 +21,9 @@ const TokenValueView = ({ token, onRef, onCopy }) => (
 );
 
 TokenValueView.propTypes = {
-  onCopy: React.PropTypes.func.isRequired,
-  onRef: React.PropTypes.func.isRequired,
-  token: React.PropTypes.shape({}).isRequired,
+  onCopy: PropTypes.func.isRequired,
+  onRef: PropTypes.func.isRequired,
+  token: PropTypes.shape({}).isRequired,
 };
 
 export default TokenValueView;

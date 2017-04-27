@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -88,7 +89,7 @@ const NavigationSidebarBody = ({ onClose }) => (
 );
 
 NavigationSidebarBody.propTypes = {
-  onClose: React.PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default NavigationSidebarBody;

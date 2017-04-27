@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -14,9 +15,9 @@ const ConfirmWrapperCheckboxInput = (props) => (
 );
 
 ConfirmWrapperCheckboxInput.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  skip: React.PropTypes.bool.isRequired,
-  onToggleSkip: React.PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  skip: PropTypes.bool.isRequired,
+  onToggleSkip: PropTypes.func.isRequired,
 };
 
 export default ConfirmWrapperCheckboxInput;

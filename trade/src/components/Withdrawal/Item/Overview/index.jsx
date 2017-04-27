@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Id from '../Id';
@@ -39,7 +40,7 @@ const WdrItemOverview = ({ withdrawal }) => (
 );
 
 WdrItemOverview.propTypes = {
-  withdrawal: React.PropTypes.shape({}).isRequired,
+  withdrawal: PropTypes.shape({}).isRequired,
 };
 
 export default WdrItemOverview;

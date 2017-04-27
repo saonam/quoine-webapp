@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -39,13 +40,13 @@ const TFAManageToggleView = (props) => {
 };
 
 TFAManageToggleView.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  enabled: React.PropTypes.bool.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  onCancel: React.PropTypes.func.isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  error: React.PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  enabled: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
 };
 
 export default TFAManageToggleView;

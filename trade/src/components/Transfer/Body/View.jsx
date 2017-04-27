@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Loading from '@quoine/components/LoadingIconWrapper';
@@ -23,14 +24,14 @@ const TransferBody = ({ user, account, type, Element }) => {
 };
 
 TransferBody.propTypes = {
-  user: React.PropTypes.shape({}).isRequired,
-  account: React.PropTypes.shape({
-    currency: React.PropTypes.string.isRequired,
-    fundType: React.PropTypes.string.isRequired,
+  user: PropTypes.shape({}).isRequired,
+  account: PropTypes.shape({
+    currency: PropTypes.string.isRequired,
+    fundType: PropTypes.string.isRequired,
   }).isRequired,
   // ===
-  type: React.PropTypes.oneOf(['fund', 'withdrawal']).isRequired,
-  Element: React.PropTypes.func.isRequired,
+  type: PropTypes.oneOf(['fund', 'withdrawal']).isRequired,
+  Element: PropTypes.func.isRequired,
 };
 
 export default TransferBody;

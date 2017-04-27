@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from './Header';
@@ -33,8 +34,8 @@ const MrgAccDetail = ({ confirming, reporting }) => {
 };
 
 MrgAccDetail.propTypes = {
-  confirming: React.PropTypes.string,
-  reporting: React.PropTypes.string,
+  confirming: PropTypes.string,
+  reporting: PropTypes.string,
 };
 
 export default MrgAccDetail;

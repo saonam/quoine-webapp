@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -35,15 +36,15 @@ const FuturesBalanceBalances = ({ btc, futures, type }) => (
 );
 
 FuturesBalanceBalances.propTypes = {
-  futures: React.PropTypes.shape({
-    balance: React.PropTypes.number.isRequired,
-    currency: React.PropTypes.string.isRequired,
+  futures: PropTypes.shape({
+    balance: PropTypes.number.isRequired,
+    currency: PropTypes.string.isRequired,
   }).isRequired,
-  btc: React.PropTypes.shape({
-    balance: React.PropTypes.number.isRequired,
-    currency: React.PropTypes.string.isRequired,
+  btc: PropTypes.shape({
+    balance: PropTypes.number.isRequired,
+    currency: PropTypes.string.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['fund', 'withdrawal']),
+  type: PropTypes.oneOf(['fund', 'withdrawal']),
 };
 
 export default FuturesBalanceBalances;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -42,8 +43,8 @@ const VolumeList = ({ busy, volumes }) => (
 );
 
 VolumeList.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  volumes: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  busy: PropTypes.bool.isRequired,
+  volumes: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default VolumeList;

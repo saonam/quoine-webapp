@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -27,7 +28,7 @@ const BalanceDetailBody = ({ account }) => (
 );
 
 BalanceDetailBody.propTypes = {
-  account: React.PropTypes.shape({}).isRequired,
+  account: PropTypes.shape({}).isRequired,
 };
 
 export default BalanceDetailBody;

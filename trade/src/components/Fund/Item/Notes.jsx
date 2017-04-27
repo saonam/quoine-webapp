@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -13,7 +14,7 @@ const FundItemNotes = ({ fund }) => (
 );
 
 FundItemNotes.propTypes = {
-  fund: React.PropTypes.shape({}).isRequired,
+  fund: PropTypes.shape({}).isRequired,
 };
 
 export default FundItemNotes;

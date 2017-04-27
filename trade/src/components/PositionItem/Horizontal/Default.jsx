@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -94,8 +95,8 @@ const PositionItemHorizontalDefault = ({ position, underJFSA }) => (
 );
 
 PositionItemHorizontalDefault.propTypes = {
-  position: React.PropTypes.shape({}).isRequired,
-  underJFSA: React.PropTypes.bool.isRequired,
+  position: PropTypes.shape({}).isRequired,
+  underJFSA: PropTypes.bool.isRequired,
 };
 
 export default PositionItemHorizontalDefault;

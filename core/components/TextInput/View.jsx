@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -21,10 +22,10 @@ TextInputView.defaultProps = {
 };
 
 TextInputView.propTypes = {
-  type: React.PropTypes.string,
-  border: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.number,
+  type: PropTypes.string,
+  border: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.number,
   ]),
 };
 

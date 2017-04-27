@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -24,15 +25,15 @@ const OrderCancelConfirmBoxView = ({ onSet, confirming, order }) => (
 );
 
 OrderCancelConfirmBoxView.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
-  confirming: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onSet: PropTypes.func.isRequired,
+  confirming: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]),
-  order: React.PropTypes.shape({
-    id: React.PropTypes.oneOfType([
-      React.PropTypes.number.isRequired,
-      React.PropTypes.string.isRequired,
+  order: PropTypes.shape({
+    id: PropTypes.oneOfType([
+      PropTypes.number.isRequired,
+      PropTypes.string.isRequired,
     ]),
   }).isRequired,
 };

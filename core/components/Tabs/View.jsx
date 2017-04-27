@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from './Header';
@@ -23,14 +24,14 @@ const Tabs = ({ panels, currentId, onSelect, ...others }) => {
 };
 
 Tabs.propTypes = {
-  panels: React.PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.string.isRequired,
-    Element: React.PropTypes.func.isRequired,
-    hidden: React.PropTypes.bool,
+  panels: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    Element: PropTypes.func.isRequired,
+    hidden: PropTypes.bool,
   })).isRequired,
   // ===
-  currentId: React.PropTypes.string,
-  onSelect: React.PropTypes.func.isRequired,
+  currentId: PropTypes.string,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default Tabs;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -36,17 +37,17 @@ const ConfirmWrapperButton = (props) => {
 };
 
 ConfirmWrapperButton.propTypes = {
-  layout: React.PropTypes.oneOf(['inline', 'hero', 'box']).isRequired,
+  layout: PropTypes.oneOf(['inline', 'hero', 'box']).isRequired,
   // ===
-  yesStyleName: React.PropTypes.string,
-  yesLabel: React.PropTypes.string,
-  onYes: React.PropTypes.func.isRequired,
+  yesStyleName: PropTypes.string,
+  yesLabel: PropTypes.string,
+  onYes: PropTypes.func.isRequired,
   // ===
-  noStyleName: React.PropTypes.string,
-  noLabel: React.PropTypes.string,
-  onNo: React.PropTypes.func.isRequired,
+  noStyleName: PropTypes.string,
+  noLabel: PropTypes.string,
+  onNo: PropTypes.func.isRequired,
   // ===
-  side: React.PropTypes.oneOf(['yes', 'no']),
+  side: PropTypes.oneOf(['yes', 'no']),
 };
 
 export default ConfirmWrapperButton;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -52,7 +53,7 @@ const PositionItemHorizontalFutures = ({ position }) => (
 );
 
 PositionItemHorizontalFutures.propTypes = {
-  position: React.PropTypes.shape({}).isRequired,
+  position: PropTypes.shape({}).isRequired,
 };
 
 export default PositionItemHorizontalFutures;

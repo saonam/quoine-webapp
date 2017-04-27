@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Field from '@quoine/components/Field';
@@ -14,8 +15,8 @@ const OrderEntryReportField = ({ id, children }) => (
 );
 
 OrderEntryReportField.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
+  id: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default OrderEntryReportField;

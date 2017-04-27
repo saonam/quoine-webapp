@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Fiat from './Fiat';
@@ -12,9 +13,9 @@ const FundBody = ({ account }) => {
 };
 
 FundBody.propTypes = {
-  account: React.PropTypes.shape({
-    fundType: React.PropTypes.string.isRequired,
-    currency: React.PropTypes.string.isRequired,
+  account: PropTypes.shape({
+    fundType: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
   }).isRequired,
 };
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -30,8 +31,8 @@ const FundFiatListBody = ({ busy, funds }) => {
 };
 
 FundFiatListBody.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  funds: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  busy: PropTypes.bool.isRequired,
+  funds: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default FundFiatListBody;

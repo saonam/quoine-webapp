@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import TransitionGroup from '@quoine/components/TransitionGroup';
 
@@ -20,11 +21,11 @@ const OrderBookList = ({ models, currencies, side }) => {
 };
 
 OrderBookList.propTypes = {
-  models: React.PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.string,
+  models: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
   })).isRequired,
-  currencies: React.PropTypes.shape({}),
-  side: React.PropTypes.string.isRequired,
+  currencies: PropTypes.shape({}),
+  side: PropTypes.string.isRequired,
 };
 
 export default OrderBookList;

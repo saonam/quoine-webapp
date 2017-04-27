@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -53,14 +54,14 @@ const WdrFormView = ({ form, onChange, busy, onSubmit, error }) => (
 );
 
 WdrFormView.propTypes = {
-  form: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({
-      action: React.PropTypes.string,
+  form: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
+  busy: PropTypes.bool.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  error: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      action: PropTypes.string,
     }),
   ]).isRequired,
 };

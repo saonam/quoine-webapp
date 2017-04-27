@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link as RouterLink, withRouter } from 'react-router';
 
@@ -48,11 +49,11 @@ const Link = ({
 };
 
 Link.propTypes = {
-  styleName: React.PropTypes.string,
-  className: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired,
-  pathname: React.PropTypes.string.isRequired,
-  target: React.PropTypes.string,
+  styleName: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  pathname: PropTypes.string.isRequired,
+  target: PropTypes.string,
 };
 
 Link.defaultProps = {

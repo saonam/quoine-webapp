@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ErrWrapper from '@quoine/components/ErrWrapper';
@@ -17,15 +18,15 @@ const OrderEditErrBoxView = ({ onDismiss, error, order }) => (
 );
 
 OrderEditErrBoxView.propTypes = {
-  onDismiss: React.PropTypes.func.isRequired,
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onDismiss: PropTypes.func.isRequired,
+  error: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
-  order: React.PropTypes.shape({
-    id: React.PropTypes.oneOfType([
-      React.PropTypes.number.isRequired,
-      React.PropTypes.string.isRequired,
+  order: PropTypes.shape({
+    id: PropTypes.oneOfType([
+      PropTypes.number.isRequired,
+      PropTypes.string.isRequired,
     ]),
   }).isRequired,
 };

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ProductSelect from 'components/ProductSelect';
@@ -19,7 +20,7 @@ const DashboardHeader = ({ market }) => (
 );
 
 DashboardHeader.propTypes = {
-  market: React.PropTypes.string.isRequired,
+  market: PropTypes.string.isRequired,
 };
 
 export default DashboardHeader;

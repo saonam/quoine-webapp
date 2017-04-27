@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Pte from './Pte';
@@ -9,8 +10,8 @@ const UserForm4 = ({ form, ...others }) => {
 };
 
 UserForm4.propTypes = {
-  form: React.PropTypes.shape({
-    type: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    type: PropTypes.string.isRequired,
   }).isRequired,
 };
 

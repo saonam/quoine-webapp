@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -20,9 +21,9 @@ class UserForm1 extends React.Component {
 }
 
 UserForm1.propTypes = {
-  onSubmit: React.PropTypes.func.isRequired,
-  onChange: React.PropTypes.shape({
-    type: React.PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.shape({
+    type: PropTypes.func.isRequired,
   }).isRequired,
 };
 

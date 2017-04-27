@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const OrderId = ({ order }) => (
@@ -7,12 +8,12 @@ const OrderId = ({ order }) => (
 );
 
 OrderId.propTypes = {
-  order: React.PropTypes.shape({
-    id: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number,
+  order: PropTypes.shape({
+    id: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
     ]).isRequired,
-    market: React.PropTypes.string.isRequired,
+    market: PropTypes.string.isRequired,
   }).isRequired,
 };
 

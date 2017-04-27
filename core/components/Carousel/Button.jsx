@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -19,11 +20,11 @@ const CarouselButton = ({
 };
 
 CarouselButton.propTypes = {
-  usePadding: React.PropTypes.bool,
-  side: React.PropTypes.oneOf(['left', 'right']).isRequired,
-  onClick: React.PropTypes.func.isRequired,
-  overflow: React.PropTypes.bool.isRequired,
-  styleName: React.PropTypes.string,
+  usePadding: PropTypes.bool,
+  side: PropTypes.oneOf(['left', 'right']).isRequired,
+  onClick: PropTypes.func.isRequired,
+  overflow: PropTypes.bool.isRequired,
+  styleName: PropTypes.string,
 };
 
 CarouselButton.defaultProps = {

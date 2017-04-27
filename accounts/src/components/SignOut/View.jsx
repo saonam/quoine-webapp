@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -43,11 +44,11 @@ const SignOutView = ({ onSubmit, all, onAllChange, error, busy }) => (
 );
 
 SignOutView.propTypes = {
-  onSubmit: React.PropTypes.func.isRequired,
-  all: React.PropTypes.bool.isRequired,
-  onAllChange: React.PropTypes.func.isRequired,
-  error: React.PropTypes.string.isRequired,
-  busy: React.PropTypes.bool.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  all: PropTypes.bool.isRequired,
+  onAllChange: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired,
+  busy: PropTypes.bool.isRequired,
 };
 
 export default SignOutView;

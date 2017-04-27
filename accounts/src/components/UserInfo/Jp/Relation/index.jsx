@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const UserInfoRelation = ({ relation }) => (
@@ -8,7 +9,7 @@ const UserInfoRelation = ({ relation }) => (
 );
 
 UserInfoRelation.propTypes = {
-  relation: React.PropTypes.shape({}).isRequired,
+  relation: PropTypes.shape({}).isRequired,
 };
 
 export default UserInfoRelation;

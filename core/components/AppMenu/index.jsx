@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import NavigationSidebar from '@quoine/components/NavigationSidebar';
@@ -30,7 +31,7 @@ const AppMenu = ({ children }) => (
 );
 
 AppMenu.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default AppMenu;

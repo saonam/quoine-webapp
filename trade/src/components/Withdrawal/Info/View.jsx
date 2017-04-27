@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -47,14 +48,14 @@ const WdrInfoView = ({ form, infos }) => {
 };
 
 WdrInfoView.propTypes = {
-  form: React.PropTypes.shape({
-    account: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    account: PropTypes.string.isRequired,
   }).isRequired,
-  infos: React.PropTypes.objectOf(
-    React.PropTypes.shape({
-      fee: React.PropTypes.number,
-      minimum: React.PropTypes.number,
-      maximum: React.PropTypes.number,
+  infos: PropTypes.objectOf(
+    PropTypes.shape({
+      fee: PropTypes.number,
+      minimum: PropTypes.number,
+      maximum: PropTypes.number,
     }),
   ).isRequired,
 };

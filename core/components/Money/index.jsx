@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import format from './format';
@@ -27,13 +28,13 @@ class Money extends React.PureComponent {
 }
 
 Money.propTypes = {
-  value: React.PropTypes.oneOfType([
-    React.PropTypes.number,
-    React.PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
   ]).isRequired,
-  currency: React.PropTypes.string.isRequired,
-  noSymbol: React.PropTypes.bool,
-  noDecimal: React.PropTypes.bool,
+  currency: PropTypes.string.isRequired,
+  noSymbol: PropTypes.bool,
+  noDecimal: PropTypes.bool,
 };
 
 export default Money;

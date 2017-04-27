@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -48,10 +49,10 @@ const MrgAccManageModal = ({
 );
 
 MrgAccManageModal.propTypes = {
-  tradingMrgAccs: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  hiddenMrgAccs: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  remainMarginProducts: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  onClose: React.PropTypes.func.isRequired,
+  tradingMrgAccs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  hiddenMrgAccs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  remainMarginProducts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default MrgAccManageModal;

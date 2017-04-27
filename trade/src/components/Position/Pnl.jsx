@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -24,12 +25,12 @@ const PositionPnl = ({ position, type }) => {
 };
 
 PositionPnl.propTypes = {
-  position: React.PropTypes.shape({
-    pnl: React.PropTypes.number.isRequired,
-    pnlOpen: React.PropTypes.number.isRequired,
-    pnlClose: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    pnl: PropTypes.number.isRequired,
+    pnlOpen: PropTypes.number.isRequired,
+    pnlClose: PropTypes.number.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['close', 'open']),
+  type: PropTypes.oneOf(['close', 'open']),
 };
 
 export default PositionPnl;

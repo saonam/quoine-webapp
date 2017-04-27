@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import TransitionGroupRaw from 'react-addons-css-transition-group';
+import TransitionGroupRaw from 'react-transition-group/CSSTransitionGroup';
 
 const TransitionGroup = ({ children }) => (
   <TransitionGroupRaw
@@ -11,7 +12,7 @@ const TransitionGroup = ({ children }) => (
 );
 
 TransitionGroup.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default TransitionGroup;

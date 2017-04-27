@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -18,11 +19,11 @@ const PositionInterest = ({ position, type }) => {
 };
 
 PositionInterest.propTypes = {
-  position: React.PropTypes.shape({
-    interestDaily: React.PropTypes.number.isRequired,
-    interestTotal: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    interestDaily: PropTypes.number.isRequired,
+    interestTotal: PropTypes.number.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['total', 'daily']).isRequired,
+  type: PropTypes.oneOf(['total', 'daily']).isRequired,
 };
 
 export default PositionInterest;

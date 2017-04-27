@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -34,7 +35,7 @@ const ExecutionItemOverview = ({ execution }) => (
 );
 
 ExecutionItemOverview.propTypes = {
-  execution: React.PropTypes.shape({}).isRequired,
+  execution: PropTypes.shape({}).isRequired,
 };
 
 export default ExecutionItemOverview;

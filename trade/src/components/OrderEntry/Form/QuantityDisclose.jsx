@@ -1,5 +1,7 @@
 import { withBoth } from 'components/OrderEntry/utils';
 
+import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import NumberInput from '@quoine/components/NumberInput';
@@ -12,12 +14,12 @@ const OrderEntryFormQuantityDisclose = ({ form, onChange }) => (
 );
 
 OrderEntryFormQuantityDisclose.propTypes = {
-  form: React.PropTypes.shape({
-    quantityDisclose: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired,
-    market: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    quantityDisclose: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    market: PropTypes.string.isRequired,
   }),
-  onChange: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default withBoth(OrderEntryFormQuantityDisclose, 'quantityDisclose');

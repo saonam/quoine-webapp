@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SelectInput from '@quoine/components/SelectInput';
@@ -19,9 +20,9 @@ const PositionLeverageFuturesView = ({ busy, leverage, onChange }) => (
 );
 
 PositionLeverageFuturesView.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  leverage: React.PropTypes.number.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
+  leverage: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default PositionLeverageFuturesView;

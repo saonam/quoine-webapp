@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 // import translate from '@quoine/translate';
@@ -23,12 +24,12 @@ const TabsButtonView = ({ panel, current, onSelect }) => {
 };
 
 TabsButtonView.propTypes = {
-  panel: React.PropTypes.shape({
-    id: React.PropTypes.string.isRequired,
-    label: React.PropTypes.string.isRequired,
+  panel: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
   }).isRequired,
-  current: React.PropTypes.shape({}).isRequired,
-  onSelect: React.PropTypes.func.isRequired,
+  current: PropTypes.shape({}).isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default TabsButtonView;

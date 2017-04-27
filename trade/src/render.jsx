@@ -11,8 +11,6 @@ import store from 'states/store';
 
 window.store = store;
 
-// const Router = () => null;
-
 ReactDOM.render(
   <Provider store={store}>
     <Router />

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -10,8 +11,8 @@ const ProfileJpInfoGroup = ({ heading, children }) => (
 );
 
 ProfileJpInfoGroup.propTypes = {
-  heading: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
+  heading: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default ProfileJpInfoGroup;

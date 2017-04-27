@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class TogglerWrapper extends React.PureComponent {
@@ -22,7 +23,7 @@ class TogglerWrapper extends React.PureComponent {
 }
 
 TogglerWrapper.propTypes = {
-  Element: React.PropTypes.func.isRequired,
+  Element: PropTypes.func.isRequired,
 };
 
 export default TogglerWrapper;

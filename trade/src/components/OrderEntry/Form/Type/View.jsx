@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -22,11 +23,11 @@ const OrderEntryFormType = ({ form, onClick, value }) => {
 };
 
 OrderEntryFormType.propTypes = {
-  form: React.PropTypes.shape({
-    type: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    type: PropTypes.string.isRequired,
   }),
-  value: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default OrderEntryFormType;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -29,13 +30,13 @@ const AccountDetailMargin = ({ account }) => (
 );
 
 AccountDetailMargin.propTypes = {
-  account: React.PropTypes.shape({
-    balance: React.PropTypes.number.isRequired,
-    pnl: React.PropTypes.number.isRequired,
-    equity: React.PropTypes.number.isRequired,
-    marginUsed: React.PropTypes.number.isRequired,
-    marginAvailable: React.PropTypes.number.isRequired,
-    marginCoverage: React.PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    balance: PropTypes.number.isRequired,
+    pnl: PropTypes.number.isRequired,
+    equity: PropTypes.number.isRequired,
+    marginUsed: PropTypes.number.isRequired,
+    marginAvailable: PropTypes.number.isRequired,
+    marginCoverage: PropTypes.number.isRequired,
   }),
 };
 

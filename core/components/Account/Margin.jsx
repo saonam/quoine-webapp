@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -21,11 +22,11 @@ const AccountMargin = ({ account, type }) => {
 };
 
 AccountMargin.propTypes = {
-  account: React.PropTypes.shape({
-    marginAvailable: React.PropTypes.number.isRequired,
-    marginUsed: React.PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    marginAvailable: PropTypes.number.isRequired,
+    marginUsed: PropTypes.number.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['available', 'used']).isRequired,
+  type: PropTypes.oneOf(['available', 'used']).isRequired,
 };
 
 export default AccountMargin;

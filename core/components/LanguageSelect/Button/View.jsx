@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -17,9 +18,9 @@ const LanguageSelectButton = ({ onClick, language, current }) => (
 );
 
 LanguageSelectButton.propTypes = {
-  onClick: React.PropTypes.func.isRequired,
-  language: React.PropTypes.string.isRequired,
-  current: React.PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  language: PropTypes.string.isRequired,
+  current: PropTypes.string.isRequired,
 };
 
 export default LanguageSelectButton;

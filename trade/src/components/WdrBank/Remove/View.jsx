@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -16,23 +17,23 @@ const WdrBankRemove = ({ bank, removing, confirming, onRemove }) => (
 );
 
 WdrBankRemove.propTypes = {
-  bank: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  bank: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }),
   // ===
-  removing: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({
-      id: React.PropTypes.number.isRequired,
+  removing: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
     }),
   ]).isRequired,
-  confirming: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({
-      id: React.PropTypes.number.isRequired,
+  confirming: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
     }),
   ]),
-  onRemove: React.PropTypes.func.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 
 export default WdrBankRemove;

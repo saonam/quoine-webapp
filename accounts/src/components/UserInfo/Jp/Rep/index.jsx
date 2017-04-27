@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Name from '../Name';
@@ -32,8 +33,8 @@ const UserInfoRep = ({ rep, Item }) => (
 );
 
 UserInfoRep.propTypes = {
-  rep: React.PropTypes.shape({}).isRequired,
-  Item: React.PropTypes.func.isRequired,
+  rep: PropTypes.shape({}).isRequired,
+  Item: PropTypes.func.isRequired,
 };
 
 export default UserInfoRep;

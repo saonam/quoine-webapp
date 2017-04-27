@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -40,10 +41,10 @@ const ProductOverview = ({ product, fixed }) => (
 );
 
 ProductOverview.propTypes = {
-  product: React.PropTypes.shape({
-    symbol: React.PropTypes.string.isRequired,
+  product: PropTypes.shape({
+    symbol: PropTypes.string.isRequired,
   }),
-  fixed: React.PropTypes.bool,
+  fixed: PropTypes.bool,
 };
 
 export default ProductOverview;

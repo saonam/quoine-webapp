@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -43,7 +44,7 @@ const WdrBankFormItem = ({ id, ...others }) => {
 };
 
 WdrBankFormItem.propTypes = {
-  id: React.PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default WdrBankFormItem;

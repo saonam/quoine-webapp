@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -11,9 +12,9 @@ const MrgAccDetailRow = ({ left, label, right }) => (
 );
 
 MrgAccDetailRow.propTypes = {
-  left: React.PropTypes.node.isRequired,
-  label: React.PropTypes.node,
-  right: React.PropTypes.node.isRequired,
+  left: PropTypes.node.isRequired,
+  label: PropTypes.node,
+  right: PropTypes.node.isRequired,
 };
 
 export default MrgAccDetailRow;

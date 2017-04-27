@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -51,10 +52,10 @@ const ForgotPassword = ({
 );
 
 ForgotPassword.propTypes = {
-  onSubmit: React.PropTypes.func.isRequired,
-  email: React.PropTypes.string.isRequired,
-  onEmailChange: React.PropTypes.func.isRequired,
-  error: React.PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  email: PropTypes.string.isRequired,
+  onEmailChange: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired,
   sent: SubmitButton.propTypes.sent,
   busy: SubmitButton.propTypes.busy,
 };

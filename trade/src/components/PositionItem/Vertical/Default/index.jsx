@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Expander from '@quoine/components/Expander';
@@ -12,8 +13,8 @@ const PositionItemVerticalDefault = ({ position, underJFSA }) => (
 );
 
 PositionItemVerticalDefault.propTypes = {
-  position: React.PropTypes.shape({}).isRequired,
-  underJFSA: React.PropTypes.bool.isRequired,
+  position: PropTypes.shape({}).isRequired,
+  underJFSA: PropTypes.bool.isRequired,
 };
 
 export default PositionItemVerticalDefault;

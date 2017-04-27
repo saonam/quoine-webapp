@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -57,14 +58,14 @@ const WdrBank = ({ busy, current, all, open, onToggle, onAdd }) => {
 };
 
 WdrBank.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  current: React.PropTypes.number.isRequired,
-  all: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  busy: PropTypes.bool.isRequired,
+  current: PropTypes.number.isRequired,
+  all: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   // ===
-  open: React.PropTypes.bool.isRequired,
-  onToggle: React.PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
   // ===
-  onAdd: React.PropTypes.func.isRequired,
+  onAdd: PropTypes.func.isRequired,
 };
 
 export default WdrBank;

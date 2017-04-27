@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Name from '../Name';
@@ -44,8 +45,8 @@ const UserInfoTrader = ({ trader, Item }) => (
 );
 
 UserInfoTrader.propTypes = {
-  trader: React.PropTypes.shape({}).isRequired,
-  Item: React.PropTypes.func.isRequired,
+  trader: PropTypes.shape({}).isRequired,
+  Item: PropTypes.func.isRequired,
 };
 
 export default UserInfoTrader;

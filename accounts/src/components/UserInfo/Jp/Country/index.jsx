@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -25,7 +26,7 @@ class UserInfoCountry extends React.PureComponent {
 }
 
 UserInfoCountry.propTypes = {
-  iso: React.PropTypes.string,
+  iso: PropTypes.string,
 };
 
 export default UserInfoCountry;

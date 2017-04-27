@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Icon from '@quoine/components/Icon';
@@ -25,12 +26,12 @@ const LayoutMoveButton = ({ panel, side, onMove }) => {
 };
 
 LayoutMoveButton.propTypes = {
-  side: React.PropTypes.oneOf(['left', 'right']).isRequired,
-  onMove: React.PropTypes.func.isRequired,
-  panel: React.PropTypes.shape({
-    order: React.PropTypes.number.isRequired,
-    minOrder: React.PropTypes.number.isRequired,
-    maxOrder: React.PropTypes.number.isRequired,
+  side: PropTypes.oneOf(['left', 'right']).isRequired,
+  onMove: PropTypes.func.isRequired,
+  panel: PropTypes.shape({
+    order: PropTypes.number.isRequired,
+    minOrder: PropTypes.number.isRequired,
+    maxOrder: PropTypes.number.isRequired,
   }).isRequired,
 };
 

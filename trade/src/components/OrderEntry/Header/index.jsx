@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Carousel from '@quoine/components/Carousel';
@@ -36,11 +37,11 @@ const OrderEntryHeader = ({ form, status }) => {
 };
 
 OrderEntryHeader.propTypes = {
-  form: React.PropTypes.shape({
-    market: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    market: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
   }).isRequired,
-  status: React.PropTypes.oneOf(['standby', 'confirm', 'report']).isRequired,
+  status: PropTypes.oneOf(['standby', 'confirm', 'report']).isRequired,
 };
 
 export default OrderEntryHeader;

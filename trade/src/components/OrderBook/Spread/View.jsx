@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ColorByValue from '@quoine/components/ColorByValue';
@@ -35,11 +36,11 @@ const OrderBookSpread = ({ busy, spread, currencies }) => {
 };
 
 OrderBookSpread.propTypes = {
-  spread: React.PropTypes.number,
-  currencies: React.PropTypes.shape({
-    quote: React.PropTypes.string.isRequired,
+  spread: PropTypes.number,
+  currencies: PropTypes.shape({
+    quote: PropTypes.string.isRequired,
   }),
-  busy: React.PropTypes.bool.isRequired,
+  busy: PropTypes.bool.isRequired,
 };
 
 export default OrderBookSpread;

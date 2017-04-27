@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Dash from '@quoine/components/Dash';
@@ -13,9 +14,9 @@ const OrderLeverage = ({ order }) => {
 };
 
 OrderLeverage.propTypes = {
-  order: React.PropTypes.shape({
-    leverageUnwound: React.PropTypes.number,
-    leverage: React.PropTypes.number,
+  order: PropTypes.shape({
+    leverageUnwound: PropTypes.number,
+    leverage: PropTypes.number,
   }).isRequired,
 };
 

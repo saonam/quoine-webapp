@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -32,11 +33,11 @@ const VolumeFilterActive = ({
 );
 
 VolumeFilterActive.propTypes = {
-  onClose: React.PropTypes.func.isRequired,
-  frm: React.PropTypes.number.isRequired,
-  onFrmChange: React.PropTypes.func.isRequired,
-  to: React.PropTypes.number.isRequired,
-  onToChange: React.PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
+  frm: PropTypes.number.isRequired,
+  onFrmChange: PropTypes.func.isRequired,
+  to: PropTypes.number.isRequired,
+  onToChange: PropTypes.func.isRequired,
 };
 
 export default VolumeFilterActive;

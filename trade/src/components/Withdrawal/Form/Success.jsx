@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -24,11 +25,11 @@ const WdrFormSuccess = ({ success, onSuccessDismiss }) => (
 );
 
 WdrFormSuccess.propTypes = {
-  success: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({}),
+  success: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({}),
   ]).isRequired,
-  onSuccessDismiss: React.PropTypes.func.isRequired,
+  onSuccessDismiss: PropTypes.func.isRequired,
 };
 
 export default WdrFormSuccess;

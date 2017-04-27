@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Quantity from 'components/OrderEntry/Form/Quantity';
@@ -31,9 +32,9 @@ const OrderEntryForm = ({ form, user }) => (
 );
 
 OrderEntryForm.propTypes = {
-  form: React.PropTypes.shape({}).isRequired,
-  user: React.PropTypes.shape({
-    underJFSA: React.PropTypes.bool,
+  form: PropTypes.shape({}).isRequired,
+  user: PropTypes.shape({
+    underJFSA: PropTypes.bool,
   }).isRequired,
 };
 

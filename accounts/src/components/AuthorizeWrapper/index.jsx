@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class AuthorizeWrapper extends React.Component {
@@ -16,10 +17,10 @@ class AuthorizeWrapper extends React.Component {
 }
 
 AuthorizeWrapper.propTypes = {
-  router: React.PropTypes.shape({
-    push: React.PropTypes.func.isRequired,
+  router: PropTypes.shape({
+    push: PropTypes.func.isRequired,
   }).isRequired,
-  Element: React.PropTypes.func.isRequired,
+  Element: PropTypes.func.isRequired,
 };
 
 export default AuthorizeWrapper;

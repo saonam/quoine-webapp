@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class OpenWrapper extends React.PureComponent {
@@ -25,7 +26,7 @@ class OpenWrapper extends React.PureComponent {
 }
 
 OpenWrapper.propTypes = {
-  Element: React.PropTypes.func.isRequired,
+  Element: PropTypes.func.isRequired,
 };
 
 export default OpenWrapper;

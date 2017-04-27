@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ColorFlashing from '@quoine/components/ColorFlashing';
@@ -25,14 +26,14 @@ const OrderQuantity = ({ order, type }) => {
 };
 
 OrderQuantity.propTypes = {
-  order: React.PropTypes.shape({
-    quantity: React.PropTypes.oneOfType([
-      React.PropTypes.number,
-      React.PropTypes.string,
+  order: PropTypes.shape({
+    quantity: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
     ]).isRequired,
-    baseCurrency: React.PropTypes.string.isRequired,
+    baseCurrency: PropTypes.string.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['disclose', 'filled']),
+  type: PropTypes.oneOf(['disclose', 'filled']),
 };
 
 export default OrderQuantity;

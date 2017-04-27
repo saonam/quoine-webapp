@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -16,18 +17,18 @@ const OrderCancelButtonView = ({ confirming, order, cancel, onCancel }) => (
 );
 
 OrderCancelButtonView.propTypes = {
-  onCancel: React.PropTypes.func.isRequired,
-  cancel: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onCancel: PropTypes.func.isRequired,
+  cancel: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
-  order: React.PropTypes.shape({
-    id: React.PropTypes.oneOfType([
-      React.PropTypes.number.isRequired,
-      React.PropTypes.string.isRequired,
+  order: PropTypes.shape({
+    id: PropTypes.oneOfType([
+      PropTypes.number.isRequired,
+      PropTypes.string.isRequired,
     ]),
   }).isRequired,
-  confirming: React.PropTypes.bool.isRequired,
+  confirming: PropTypes.bool.isRequired,
 };
 
 export default OrderCancelButtonView;

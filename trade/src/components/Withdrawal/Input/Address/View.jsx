@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -25,9 +26,9 @@ const WdrInputAddressView = ({ value, recents, onChange }) => (
 );
 
 WdrInputAddressView.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  recents: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  recents: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default WdrInputAddressView;

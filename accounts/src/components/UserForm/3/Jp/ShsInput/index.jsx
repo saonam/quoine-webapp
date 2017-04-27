@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import initialForm from '../ShInput/initialForm';
@@ -44,8 +45,8 @@ class ShsInput extends React.Component {
 }
 
 ShsInput.propTypes = {
-  onChange: React.PropTypes.func.isRequired,
-  value: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default ShsInput;

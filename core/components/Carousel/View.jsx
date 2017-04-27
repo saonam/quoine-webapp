@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from './Button';
@@ -29,13 +30,13 @@ const CarouselView = (props) => (
 );
 
 CarouselView.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  height: React.PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired,
+  height: PropTypes.number.isRequired,
   usePadding: Button.propTypes.usePadding,
   // ===
-  onLeft: React.PropTypes.func.isRequired,
-  onRight: React.PropTypes.func.isRequired,
-  onRef: React.PropTypes.func.isRequired,
+  onLeft: PropTypes.func.isRequired,
+  onRight: PropTypes.func.isRequired,
+  onRef: PropTypes.func.isRequired,
   overflow: Button.propTypes.overflow,
   styleName: Button.propTypes.styleName,
 };

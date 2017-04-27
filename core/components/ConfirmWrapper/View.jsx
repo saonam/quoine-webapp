@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Checkbox from './Checkbox';
@@ -48,8 +49,8 @@ const ConfirmWrapperView = ({ children, layout, ...props }) => {
 };
 
 ConfirmWrapperView.propTypes = {
-  children: React.PropTypes.node,
-  layout: React.PropTypes.oneOf(['inline', 'hero', 'box']).isRequired,
+  children: PropTypes.node,
+  layout: PropTypes.oneOf(['inline', 'hero', 'box']).isRequired,
 };
 
 export default ConfirmWrapperView;

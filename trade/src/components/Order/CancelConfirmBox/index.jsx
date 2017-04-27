@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Connector from './Connector';
@@ -9,8 +10,8 @@ const OrderCancelConfirmBox = ({ order }) => (
 );
 
 OrderCancelConfirmBox.propTypes = {
-  order: React.PropTypes.shape({
-    status: React.PropTypes.string.isRequired,
+  order: PropTypes.shape({
+    status: PropTypes.string.isRequired,
   }).isRequired,
 };
 

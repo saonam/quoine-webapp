@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -27,7 +28,7 @@ const LayoutPreview = ({ name }) => (
 );
 
 LayoutPreview.propTypes = {
-  name: React.PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default LayoutPreview;

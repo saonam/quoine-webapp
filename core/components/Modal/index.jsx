@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactModal from 'react-modal';
 
@@ -35,12 +36,12 @@ const Modal = ({
 );
 
 Modal.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
-  isNoOverlay: React.PropTypes.bool,
-  isLarge: React.PropTypes.bool,
-  leftButton: React.PropTypes.node,
-  rightButton: React.PropTypes.node,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  isNoOverlay: PropTypes.bool,
+  isLarge: PropTypes.bool,
+  leftButton: PropTypes.node,
+  rightButton: PropTypes.node,
 };
 
 export default Modal;

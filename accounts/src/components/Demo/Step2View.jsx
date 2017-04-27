@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -40,13 +41,13 @@ const Step2View = ({
 );
 
 Step2View.propTypes = {
-  onSubmit: React.PropTypes.func.isRequired,
-  email: React.PropTypes.string.isRequired,
-  onEmailChange: React.PropTypes.func.isRequired,
-  error: React.PropTypes.string.isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  mode: React.PropTypes.string.isRequired,
-  isFromPrev: React.PropTypes.bool.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  email: PropTypes.string.isRequired,
+  onEmailChange: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired,
+  busy: PropTypes.bool.isRequired,
+  mode: PropTypes.string.isRequired,
+  isFromPrev: PropTypes.bool.isRequired,
 };
 
 export default Step2View;

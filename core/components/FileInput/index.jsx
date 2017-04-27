@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -21,7 +22,7 @@ class FileInput extends React.PureComponent {
 }
 
 FileInput.propTypes = {
-  onChange: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default FileInput;

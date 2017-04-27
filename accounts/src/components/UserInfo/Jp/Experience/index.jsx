@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const UserInfoExperience = ({ experience, Item }) => (
@@ -21,8 +22,8 @@ const UserInfoExperience = ({ experience, Item }) => (
 );
 
 UserInfoExperience.propTypes = {
-  experience: React.PropTypes.shape({}).isRequired,
-  Item: React.PropTypes.func.isRequired,
+  experience: PropTypes.shape({}).isRequired,
+  Item: PropTypes.func.isRequired,
 };
 
 export default UserInfoExperience;

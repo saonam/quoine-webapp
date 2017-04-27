@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -35,16 +36,16 @@ const MrgAccCloseButton = ({ mrgAcc, closingInfo, onClose, side }) => {
 };
 
 MrgAccCloseButton.propTypes = {
-  side: React.PropTypes.oneOf(['long', 'short', 'both']).isRequired,
-  onClose: React.PropTypes.func.isRequired,
-  closingInfo: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.bool,
+  side: PropTypes.oneOf(['long', 'short', 'both']).isRequired,
+  onClose: PropTypes.func.isRequired,
+  closingInfo: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
   ]).isRequired,
-  mrgAcc: React.PropTypes.shape({
-    position: React.PropTypes.number.isRequired,
-    positionLong: React.PropTypes.number.isRequired,
-    positionShort: React.PropTypes.number.isRequired,
+  mrgAcc: PropTypes.shape({
+    position: PropTypes.number.isRequired,
+    positionLong: PropTypes.number.isRequired,
+    positionShort: PropTypes.number.isRequired,
   }),
 };
 

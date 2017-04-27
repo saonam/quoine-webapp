@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -32,9 +33,9 @@ const OrderBookHeader = ({ side, mode, onChangeMode }) => (
 );
 
 OrderBookHeader.propTypes = {
-  side: React.PropTypes.oneOf(['sells', 'buys']).isRequired,
-  mode: React.PropTypes.oneOf(['normal', 'depth-chart']).isRequired,
-  onChangeMode: React.PropTypes.func.isRequired,
+  side: PropTypes.oneOf(['sells', 'buys']).isRequired,
+  mode: PropTypes.oneOf(['normal', 'depth-chart']).isRequired,
+  onChangeMode: PropTypes.func.isRequired,
 };
 
 export default OrderBookHeader;

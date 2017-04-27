@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import FormWrapper from '@quoine/components/FormWrapper';
@@ -43,19 +44,19 @@ const WdrBankForm = ({
 WdrBankForm.propTypes = {
   action: View.propTypes.action,
   // ===
-  editting: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({}),
+  editting: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({}),
   ]).isRequired,
-  submitting: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.string,
+  submitting: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string,
   ]).isRequired,
   success: View.propTypes.success,
   error: View.propTypes.error,
   // ===
   onSubmit: View.propTypes.onSubmit,
-  onDismiss: React.PropTypes.func.isRequired,
+  onDismiss: PropTypes.func.isRequired,
 };
 
 export default WdrBankForm;

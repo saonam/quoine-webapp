@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Expander from '@quoine/components/Expander';
@@ -9,7 +10,7 @@ const TransactionItem = ({ trans }) => (
 );
 
 TransactionItem.propTypes = {
-  trans: React.PropTypes.shape({}).isRequired,
+  trans: PropTypes.shape({}).isRequired,
 };
 
 export default TransactionItem;

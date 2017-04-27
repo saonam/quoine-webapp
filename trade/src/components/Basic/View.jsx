@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Account from 'components/AccountDetail';
@@ -23,7 +24,7 @@ const Basic = ({ market }) => (
 );
 
 Basic.propTypes = {
-  market: React.PropTypes.string.isRequired,
+  market: PropTypes.string.isRequired,
 };
 
 export default Basic;

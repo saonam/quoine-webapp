@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -9,8 +10,8 @@ const Label = ({ id, label }) => (
 );
 
 Label.propTypes = {
-  id: React.PropTypes.string,
-  label: React.PropTypes.node.isRequired,
+  id: PropTypes.string,
+  label: PropTypes.node.isRequired,
 };
 
 export default Label;

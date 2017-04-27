@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Time from '@quoine/components/Time';
@@ -7,7 +8,7 @@ const FundItemTime = ({ fund, type }) => (
 );
 
 FundItemTime.propTypes = {
-  fund: React.PropTypes.shape({}).isRequired,
+  fund: PropTypes.shape({}).isRequired,
   type: Time.propTypes.type,
 };
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import RadioInput from '@quoine/components/RadioInput';
@@ -25,13 +26,13 @@ const RadiosInput = ({ id, value, options, onChange, ...others }) => (
 );
 
 RadiosInput.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  options: React.PropTypes.arrayOf(React.PropTypes.shape({
-    label: React.PropTypes.string.isRequired,
-    value: React.PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
   })).isRequired,
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default RadiosInput;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -13,8 +14,8 @@ const AccountBalance = ({ account }) => {
 };
 
 AccountBalance.propTypes = {
-  account: React.PropTypes.shape({
-    balance: React.PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    balance: PropTypes.number.isRequired,
   }).isRequired,
 };
 

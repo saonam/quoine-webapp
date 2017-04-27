@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -33,10 +34,10 @@ const ShsInputView = ({ value, onAdd, onRemove, onChange, ...others }) => (
 );
 
 ShsInputView.propTypes = {
-  value: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
-  onAdd: React.PropTypes.func.isRequired,
-  onRemove: React.PropTypes.func.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  value: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  onAdd: PropTypes.func.isRequired,
+  onRemove: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default ShsInputView;

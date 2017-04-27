@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Icon from '@quoine/components/Icon';
@@ -17,9 +18,9 @@ const TypeButton = ({ onClick, title, description }) => (
 );
 
 TypeButton.propTypes = {
-  onClick: React.PropTypes.func.isRequired,
-  title: React.PropTypes.string.isRequired,
-  description: React.PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default TypeButton;

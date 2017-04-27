@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -30,9 +31,9 @@ const FuturesActivateModal = ({ activating, onActivate, onClose }) => (
 );
 
 FuturesActivateModal.propTypes = {
-  activating: React.PropTypes.bool.isRequired,
-  onActivate: React.PropTypes.func.isRequired,
-  onClose: React.PropTypes.func.isRequired,
+  activating: PropTypes.bool.isRequired,
+  onActivate: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default FuturesActivateModal;

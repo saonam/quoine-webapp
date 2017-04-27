@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Connector from './Connector';
@@ -9,10 +10,10 @@ const PositionClaim = ({ position, layout }) => (
 );
 
 PositionClaim.propTypes = {
-  position: React.PropTypes.shape({
-    status: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    status: PropTypes.string.isRequired,
   }).isRequired,
-  layout: React.PropTypes.string.isRequired,
+  layout: PropTypes.string.isRequired,
 };
 
 export default PositionClaim;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -20,13 +21,13 @@ const PositionClaimConfirmBoxView = ({ onSet, confirming, position }) => (
 );
 
 PositionClaimConfirmBoxView.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
-  confirming: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onSet: PropTypes.func.isRequired,
+  confirming: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]),
-  position: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };
 

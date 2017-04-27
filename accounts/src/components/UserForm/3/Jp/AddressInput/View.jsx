@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import TextInput from '@quoine/components/TextInput';
@@ -64,9 +65,9 @@ const JpAddressInputView = ({ value, onChange, required, border }) => (
 );
 
 JpAddressInputView.propTypes = {
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.shape({}).isRequired,
-  required: React.PropTypes.bool,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.shape({}).isRequired,
+  required: PropTypes.bool,
   border: React.PropTypes.oneOfType([
     React.PropTypes.bool,
     React.PropTypes.number,

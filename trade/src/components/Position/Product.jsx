@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ColorBySide from '@quoine/components/ColorBySide';
@@ -9,8 +10,8 @@ const PositionProduct = ({ position }) => (
 );
 
 PositionProduct.propTypes = {
-  position: React.PropTypes.shape({
-    product: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    product: PropTypes.string.isRequired,
   }).isRequired,
 };
 

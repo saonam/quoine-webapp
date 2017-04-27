@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from '@quoine/components/Header';
@@ -19,15 +20,15 @@ const TabsHeader = ({ all, current, onSelect }) => (
 );
 
 TabsHeader.propTypes = {
-  all: React.PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.string.isRequired,
+  all: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
   })).isRequired,
   // ===
-  current: React.PropTypes.shape({
-    id: React.PropTypes.string.isRequired,
-    color: React.PropTypes.string,
+  current: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    color: PropTypes.string,
   }).isRequired,
-  onSelect: React.PropTypes.func.isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default TabsHeader;

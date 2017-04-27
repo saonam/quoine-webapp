@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -29,14 +30,14 @@ const LayoutResizeButton = ({ panel, side, onResize, hover }) => {
 };
 
 LayoutResizeButton.propTypes = {
-  side: React.PropTypes.oneOf(['expand', 'collapse']).isRequired,
-  onResize: React.PropTypes.func.isRequired,
-  panel: React.PropTypes.shape({
-    grow: React.PropTypes.number.isRequired,
-    minGrow: React.PropTypes.number.isRequired,
-    maxGrow: React.PropTypes.number.isRequired,
+  side: PropTypes.oneOf(['expand', 'collapse']).isRequired,
+  onResize: PropTypes.func.isRequired,
+  panel: PropTypes.shape({
+    grow: PropTypes.number.isRequired,
+    minGrow: PropTypes.number.isRequired,
+    maxGrow: PropTypes.number.isRequired,
   }).isRequired,
-  hover: React.PropTypes.bool.isRequired,
+  hover: PropTypes.bool.isRequired,
 };
 
 export default LayoutResizeButton;

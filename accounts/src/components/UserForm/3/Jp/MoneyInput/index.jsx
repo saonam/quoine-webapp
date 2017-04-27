@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SelectInput from '@quoine/components/SelectInput';
@@ -19,8 +20,8 @@ const JpMoneyInput = ({ value, onChange, ...others }) => (
 );
 
 JpMoneyInput.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default JpMoneyInput;

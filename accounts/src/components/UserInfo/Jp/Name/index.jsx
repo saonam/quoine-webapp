@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const UserInfoName = ({ name }) => (
@@ -9,9 +10,9 @@ const UserInfoName = ({ name }) => (
 );
 
 UserInfoName.propTypes = {
-  name: React.PropTypes.shape({
-    first: React.PropTypes.string.isRequired,
-    last: React.PropTypes.string.isRequired,
+  name: PropTypes.shape({
+    first: PropTypes.string.isRequired,
+    last: PropTypes.string.isRequired,
   }).isRequired,
 };
 

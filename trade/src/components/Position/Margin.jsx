@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -7,9 +8,9 @@ const PositionMargin = ({ position }) => (
 );
 
 PositionMargin.propTypes = {
-  position: React.PropTypes.shape({
-    margin: React.PropTypes.number.isRequired,
-    account: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    margin: PropTypes.number.isRequired,
+    account: PropTypes.string.isRequired,
   }).isRequired,
 };
 

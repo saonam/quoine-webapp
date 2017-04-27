@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
@@ -15,12 +16,12 @@ const MrgAccManageAdd = ({ modelKey, onAdd, adding }) => (
 );
 
 MrgAccManageAdd.propTypes = {
-  adding: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.bool,
+  adding: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
   ]).isRequired,
-  modelKey: React.PropTypes.string.isRequired,
-  onAdd: React.PropTypes.func.isRequired,
+  modelKey: PropTypes.string.isRequired,
+  onAdd: PropTypes.func.isRequired,
 };
 
 export default MrgAccManageAdd;

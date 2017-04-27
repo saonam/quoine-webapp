@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -14,13 +15,13 @@ const TokenRemoveButton = ({ removing, token, onRemove }) => (
 );
 
 TokenRemoveButton.propTypes = {
-  removing: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.number,
+  removing: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.number,
   ]).isRequired,
-  onRemove: React.PropTypes.func.isRequired,
-  token: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  onRemove: PropTypes.func.isRequired,
+  token: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };
 

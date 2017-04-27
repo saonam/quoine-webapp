@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from '@quoine/styles/color.css';
@@ -13,8 +14,8 @@ const Color = ({ styleName, children }) => (
 );
 
 Color.propTypes = {
-  styleName: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
+  styleName: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Color;

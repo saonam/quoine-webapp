@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import borderStyles from '@quoine/styles/border.css';
@@ -17,8 +18,8 @@ const FloatBox = ({ children, color }) => (
 );
 
 FloatBox.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  color: React.PropTypes.string,
+  children: PropTypes.node.isRequired,
+  color: PropTypes.string,
 };
 
 export default FloatBox;

@@ -1,5 +1,7 @@
 import { withBoth } from 'components/OrderEntry/utils';
 
+import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import SelectInput from '@quoine/components/SelectInput';
@@ -19,11 +21,11 @@ const OrderEntryFormLeverage = ({ form, onChange }) => (
 );
 
 OrderEntryFormLeverage.propTypes = {
-  form: React.PropTypes.shape({
-    leverage: React.PropTypes.number.isRequired,
-    market: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    leverage: PropTypes.number.isRequired,
+    market: PropTypes.string.isRequired,
   }),
-  onChange: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default withBoth(OrderEntryFormLeverage, 'leverage');

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -29,7 +30,7 @@ const TokenItem = ({ token }) => (
 );
 
 TokenItem.propTypes = {
-  token: React.PropTypes.shape({}).isRequired,
+  token: PropTypes.shape({}).isRequired,
 };
 
 export default TokenItem;

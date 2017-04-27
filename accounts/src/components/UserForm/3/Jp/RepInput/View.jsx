@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 /* eslint-disable max-len */
 
 import React from 'react';
@@ -104,9 +105,9 @@ const JpRepInputView = ({ value, onChange, required, ...others }) => (
 );
 
 JpRepInputView.propTypes = {
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.shape({}).isRequired,
-  required: React.PropTypes.bool,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.shape({}).isRequired,
+  required: PropTypes.bool,
 };
 
 export default JpRepInputView;

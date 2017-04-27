@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -24,11 +25,11 @@ const PositionPnlWFee = ({ position, type }) => {
 };
 
 PositionPnlWFee.propTypes = {
-  position: React.PropTypes.shape({
-    pnlWFeeClose: React.PropTypes.number.isRequired,
-    pnlWFeeTotal: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    pnlWFeeClose: PropTypes.number.isRequired,
+    pnlWFeeTotal: PropTypes.number.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['total', 'close']).isRequired,
+  type: PropTypes.oneOf(['total', 'close']).isRequired,
 };
 
 export default PositionPnlWFee;

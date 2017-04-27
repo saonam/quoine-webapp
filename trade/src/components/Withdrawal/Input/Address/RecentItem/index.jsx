@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -18,8 +19,8 @@ class WdrRecentAddress extends React.Component {
 }
 
 WdrRecentAddress.propTypes = {
-  address: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func.isRequired,
+  address: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default WdrRecentAddress;

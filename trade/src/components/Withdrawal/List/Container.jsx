@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -34,14 +35,14 @@ class WdrList extends React.Component {
 }
 
 WdrList.propTypes = {
-  account: React.PropTypes.shape({
-    currency: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired,
+  account: PropTypes.shape({
+    currency: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
   }).isRequired,
   // ===
-  onLoad: React.PropTypes.func.isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  withdrawals: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  onLoad: PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
+  withdrawals: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default WdrList;

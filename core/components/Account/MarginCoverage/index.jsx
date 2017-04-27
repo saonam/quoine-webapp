@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Percentage from '@quoine/components/Percentage';
@@ -21,8 +22,8 @@ const AccountMarginCoverage = ({ account }) => {
 };
 
 AccountMarginCoverage.propTypes = {
-  account: React.PropTypes.shape({
-    marginCoverage: React.PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    marginCoverage: PropTypes.number.isRequired,
   }).isRequired,
 };
 

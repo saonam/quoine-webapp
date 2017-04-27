@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -21,8 +22,8 @@ const WdrListView = ({ busy, withdrawals }) => (
 );
 
 WdrListView.propTypes = {
-  busy: React.PropTypes.bool,
-  withdrawals: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  busy: PropTypes.bool,
+  withdrawals: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default WdrListView;

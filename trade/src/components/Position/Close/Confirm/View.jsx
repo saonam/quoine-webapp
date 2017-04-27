@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -16,7 +17,7 @@ const PositionCloseConfirm = ({ onSet }) => (
 );
 
 PositionCloseConfirm.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
+  onSet: PropTypes.func.isRequired,
 };
 
 export default PositionCloseConfirm;

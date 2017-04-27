@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Connector from './Connector';
@@ -9,10 +10,10 @@ const OrderCancel = ({ order, layout }) => (
 );
 
 OrderCancel.propTypes = {
-  order: React.PropTypes.shape({
-    status: React.PropTypes.string.isRequired,
+  order: PropTypes.shape({
+    status: PropTypes.string.isRequired,
   }).isRequired,
-  layout: React.PropTypes.string.isRequired,
+  layout: PropTypes.string.isRequired,
 };
 
 export default OrderCancel;

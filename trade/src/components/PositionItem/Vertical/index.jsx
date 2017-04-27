@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Default from './Default';
@@ -12,11 +13,11 @@ const PositionItemVertical = ({ position, user }) => (
 );
 
 PositionItemVertical.propTypes = {
-  position: React.PropTypes.shape({
-    market: React.PropTypes.string,
+  position: PropTypes.shape({
+    market: PropTypes.string,
   }).isRequired,
-  user: React.PropTypes.shape({
-    underJFSA: React.PropTypes.bool,
+  user: PropTypes.shape({
+    underJFSA: PropTypes.bool,
   }).isRequired,
 };
 

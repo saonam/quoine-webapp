@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -37,7 +38,7 @@ class ColorFlashing extends React.PureComponent {
 }
 
 ColorFlashing.propTypes = {
-  value: React.PropTypes.number,
+  value: PropTypes.number,
   children: View.propTypes.children,
   block: View.propTypes.block,
 };

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -11,9 +12,9 @@ const OrderType = ({ order }) => (
 );
 
 OrderType.propTypes = {
-  order: React.PropTypes.shape({
-    target: React.PropTypes.string,
-    type: React.PropTypes.string.isRequired,
+  order: PropTypes.shape({
+    target: PropTypes.string,
+    type: PropTypes.string.isRequired,
   }).isRequired,
 };
 

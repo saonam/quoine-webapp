@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Percentage from '@quoine/components/Percentage';
@@ -24,8 +25,8 @@ const ProductOverviewSmallChange = ({ product }) => {
 };
 
 ProductOverviewSmallChange.propTypes = {
-  product: React.PropTypes.shape({
-    priceChange: React.PropTypes.number.isRequired,
+  product: PropTypes.shape({
+    priceChange: PropTypes.number.isRequired,
   }).isRequired,
 };
 

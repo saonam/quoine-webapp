@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -55,8 +56,8 @@ const UserEditView = (props) => {
 
 UserEditView.propTypes = {
   ...FormWrapperPropTypes,
-  step: React.PropTypes.number.isRequired,
-  onClose: React.PropTypes.func.isRequired,
+  step: PropTypes.number.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default UserEditView;

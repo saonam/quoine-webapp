@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from './Button';
@@ -12,9 +13,9 @@ const TokenAdd = ({ open, onOpen, onClose }) => (
 );
 
 TokenAdd.propTypes = {
-  open: React.PropTypes.bool.isRequired,
-  onOpen: React.PropTypes.func.isRequired,
-  onClose: React.PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  onOpen: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default TokenAdd;

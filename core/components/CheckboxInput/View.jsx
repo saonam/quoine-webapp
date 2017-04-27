@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Icon from '@quoine/components/Icon';
@@ -24,10 +25,10 @@ const CheckboxInputView = ({ id, children, value, onChange, ...others }) => (
 );
 
 CheckboxInputView.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
-  value: React.PropTypes.bool.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  value: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default CheckboxInputView;

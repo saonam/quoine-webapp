@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -15,12 +16,12 @@ const MrgAccBaseOpenPrice = ({ mrgAcc, side }) => {
 };
 
 MrgAccBaseOpenPrice.propTypes = {
-  mrgAcc: React.PropTypes.shape({
-    baseOpenPriceShort: React.PropTypes.number.isRequired,
-    baseOpenPriceLong: React.PropTypes.number.isRequired,
-    quoteCurrency: React.PropTypes.string.isRequired,
+  mrgAcc: PropTypes.shape({
+    baseOpenPriceShort: PropTypes.number.isRequired,
+    baseOpenPriceLong: PropTypes.number.isRequired,
+    quoteCurrency: PropTypes.string.isRequired,
   }).isRequired,
-  side: React.PropTypes.oneOf(['long', 'short']).isRequired,
+  side: PropTypes.oneOf(['long', 'short']).isRequired,
 };
 
 export default MrgAccBaseOpenPrice;

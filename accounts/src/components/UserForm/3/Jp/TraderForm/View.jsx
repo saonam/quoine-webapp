@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import TextInput from '@quoine/components/TextInput';
@@ -130,9 +131,9 @@ const JpTraderForm = ({ value, onChange, required, ...others }) => (
 );
 
 JpTraderForm.propTypes = {
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.shape({}).isRequired,
-  required: React.PropTypes.bool,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.shape({}).isRequired,
+  required: PropTypes.bool,
 };
 
 /*

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Time from '@quoine/components/Time';
@@ -7,8 +8,8 @@ const PositionUpdated = ({ position }) => (
 );
 
 PositionUpdated.propTypes = {
-  position: React.PropTypes.shape({
-    updatedAt: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    updatedAt: PropTypes.number.isRequired,
   }).isRequired,
 };
 

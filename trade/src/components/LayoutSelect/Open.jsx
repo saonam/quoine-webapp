@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -10,7 +11,7 @@ const LayoutSelectOpen = ({ onOpen }) => (
 );
 
 LayoutSelectOpen.propTypes = {
-  onOpen: React.PropTypes.func.isRequired,
+  onOpen: PropTypes.func.isRequired,
 };
 
 export default LayoutSelectOpen;

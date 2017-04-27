@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Cryptowatch from 'cryptowatch-embed';
 
@@ -74,13 +75,13 @@ class Charts extends React.PureComponent {
 }
 
 Charts.propTypes = {
-  product: React.PropTypes.string.isRequired,
-  market: React.PropTypes.string.isRequired,
-  theme: React.PropTypes.string.isRequired,
-  language: React.PropTypes.string.isRequired,
-  double: React.PropTypes.bool.isRequired,
+  product: PropTypes.string.isRequired,
+  market: PropTypes.string.isRequired,
+  theme: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
+  double: PropTypes.bool.isRequired,
   // ===
-  grow: React.PropTypes.number.isRequired,
+  grow: PropTypes.number.isRequired,
 };
 
 export default Charts;

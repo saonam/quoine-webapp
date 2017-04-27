@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -16,8 +17,8 @@ const Transfer = ({ type, Body: Element }) => (
 );
 
 Transfer.propTypes = {
-  type: React.PropTypes.oneOf(['fund', 'withdrawal']).isRequired,
-  Body: React.PropTypes.func.isRequired,
+  type: PropTypes.oneOf(['fund', 'withdrawal']).isRequired,
+  Body: PropTypes.func.isRequired,
 };
 
 export default Transfer;

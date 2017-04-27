@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 /* eslint-disable max-len */
 
 import React from 'react';
@@ -131,11 +132,11 @@ const ShsInputItemView = ({ index, value, onRemove, onChange, required, ...other
 );
 
 ShsInputItemView.propTypes = {
-  index: React.PropTypes.number.isRequired,
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.shape({}).isRequired,
-  onRemove: React.PropTypes.func.isRequired,
-  required: React.PropTypes.bool,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.shape({}).isRequired,
+  onRemove: PropTypes.func.isRequired,
+  required: PropTypes.bool,
 };
 
 export default ShsInputItemView;

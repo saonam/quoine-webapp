@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -15,9 +16,9 @@ const BalanceTotalField = ({ id, value, currency }) => (
 );
 
 BalanceTotalField.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  value: React.PropTypes.number.isRequired,
-  currency: React.PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
 };
 
 export default BalanceTotalField;

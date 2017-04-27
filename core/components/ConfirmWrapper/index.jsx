@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -30,7 +31,7 @@ class ConfirmWrapper extends React.PureComponent {
 }
 
 ConfirmWrapper.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
+  onSet: PropTypes.func.isRequired,
 };
 
 export default ConfirmWrapper;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -19,9 +20,9 @@ const WdrBankSelect = ({ current, onChange, all }) => (
 );
 
 WdrBankSelect.propTypes = {
-  current: React.PropTypes.number.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  all: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  current: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+  all: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default WdrBankSelect;

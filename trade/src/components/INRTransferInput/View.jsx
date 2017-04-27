@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SelectInput from '@quoine/components/SelectInput';
@@ -14,10 +15,10 @@ const INRTransferInputView = ({ values, value, onChange, ...others }) => (
 );
 
 INRTransferInputView.propTypes = {
-  values: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  values: PropTypes.arrayOf(PropTypes.string).isRequired,
   // ===
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default INRTransferInputView;

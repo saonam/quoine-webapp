@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SelectInput from '@quoine/components/SelectInput';
@@ -43,11 +44,11 @@ const DateInput = ({ value: raw, onChange, date, month, year, ...others }) => {
 };
 
 DateInput.propTypes = {
-  value: React.PropTypes.number.isRequired,
-  onChange: React.PropTypes.shape({}).isRequired,
-  date: React.PropTypes.bool,
-  month: React.PropTypes.bool,
-  year: React.PropTypes.bool,
+  value: PropTypes.number.isRequired,
+  onChange: PropTypes.shape({}).isRequired,
+  date: PropTypes.bool,
+  month: PropTypes.bool,
+  year: PropTypes.bool,
 };
 
 DateInput.defaultProps = {

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Futures from 'components/FuturesBalance';
@@ -17,8 +18,8 @@ const WithdrawalStandbyBody = ({ account }) => (
 );
 
 WithdrawalStandbyBody.propTypes = {
-  account: React.PropTypes.shape({
-    isFutures: React.PropTypes.bool.isRequired,
+  account: PropTypes.shape({
+    isFutures: PropTypes.bool.isRequired,
   }).isRequired,
 };
 

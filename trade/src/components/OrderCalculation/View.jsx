@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -25,10 +26,10 @@ const OrderEntryCalculator = ({ calculation }) => (
 );
 
 OrderEntryCalculator.propTypes = {
-  calculation: React.PropTypes.arrayOf(React.PropTypes.shape({
-    currency: React.PropTypes.string,
-    value: React.PropTypes.number.isRequired,
-    name: React.PropTypes.string.isRequired,
+  calculation: PropTypes.arrayOf(PropTypes.shape({
+    currency: PropTypes.string,
+    value: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
   })).isRequired,
 };
 

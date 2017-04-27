@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -18,10 +19,10 @@ const PanelsSpineButton = ({ panel, onExpand }) => {
 };
 
 PanelsSpineButton.propTypes = {
-  panel: React.PropTypes.shape({
-    Spine: React.PropTypes.func.isRequired,
+  panel: PropTypes.shape({
+    Spine: PropTypes.func.isRequired,
   }).isRequired,
-  onExpand: React.PropTypes.func.isRequired,
+  onExpand: PropTypes.func.isRequired,
 };
 
 export default PanelsSpineButton;

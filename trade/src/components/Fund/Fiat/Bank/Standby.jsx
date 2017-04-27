@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -14,7 +15,7 @@ const FundFiatBankSandby = ({ onOpen }) => (
 );
 
 FundFiatBankSandby.propTypes = {
-  onOpen: React.PropTypes.func.isRequired,
+  onOpen: PropTypes.func.isRequired,
 };
 
 export default FundFiatBankSandby;

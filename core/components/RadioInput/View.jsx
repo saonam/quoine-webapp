@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -31,11 +32,11 @@ const RadioInputView = ({
 );
 
 RadioInputView.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
-  option: React.PropTypes.string.isRequired,
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  option: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default RadioInputView;

@@ -1,3 +1,6 @@
+/* eslint-disable max-len */
+
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -121,9 +124,9 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
 );
 
 UserForm2View.propTypes = {
-  onSubmit: React.PropTypes.func.isRequired,
-  form: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  form: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
 };
 
 export default UserForm2View;

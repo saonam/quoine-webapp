@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 
 import translate from '@quoine/translate';
@@ -36,10 +37,10 @@ const FundCryptoView = ({ busy, address, onCopy, onRef }) => (
 );
 
 FundCryptoView.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  address: React.PropTypes.string.isRequired,
-  onCopy: React.PropTypes.func.isRequired,
-  onRef: React.PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
+  address: PropTypes.string.isRequired,
+  onCopy: PropTypes.func.isRequired,
+  onRef: PropTypes.func.isRequired,
 };
 
 export default FundCryptoView;

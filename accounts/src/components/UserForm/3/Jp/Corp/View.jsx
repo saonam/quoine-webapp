@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 /* eslint-disable max-len */
 
 import React from 'react';
@@ -215,7 +216,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
 UserForm3JpIndiView.propTypes = {
   ...FormWrapperPropTypes,
-  edit: React.PropTypes.bool,
+  edit: PropTypes.bool,
 };
 
 export default UserForm3JpIndiView;

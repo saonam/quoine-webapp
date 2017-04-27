@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -11,7 +12,7 @@ const AccountManageButton = ({ onOpen }) => (
 );
 
 AccountManageButton.propTypes = {
-  onOpen: React.PropTypes.func.isRequired,
+  onOpen: PropTypes.func.isRequired,
 };
 
 export default AccountManageButton;

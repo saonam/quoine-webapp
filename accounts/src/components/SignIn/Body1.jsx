@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -49,15 +50,15 @@ const SignInBody1 = ({ form, onChange, message }) => (
 );
 
 SignInBody1.propTypes = {
-  form: React.PropTypes.shape({
-    email: React.PropTypes.string.isRequired,
-    password: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    email: PropTypes.string.isRequired,
+    password: PropTypes.string.isRequired,
   }),
-  onChange: React.PropTypes.shape({
-    email: React.PropTypes.func.isRequired,
-    password: React.PropTypes.func.isRequired,
+  onChange: PropTypes.shape({
+    email: PropTypes.func.isRequired,
+    password: PropTypes.func.isRequired,
   }),
-  message: React.PropTypes.string,
+  message: PropTypes.string,
 };
 
 export default SignInBody1;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -28,20 +29,20 @@ const OrderBookItemView = ({ onClick, model, currencies, side, mode }) => {
 };
 
 OrderBookItemView.propTypes = {
-  model: React.PropTypes.shape({
+  model: PropTypes.shape({
     quantity: Money.propTypes.value,
     price: Money.propTypes.value,
-    self: React.PropTypes.number,
-    cumulativeValue: React.PropTypes.number,
-    cumulativePercent: React.PropTypes.number,
+    self: PropTypes.number,
+    cumulativeValue: PropTypes.number,
+    cumulativePercent: PropTypes.number,
   }).isRequired,
-  currencies: React.PropTypes.shape({
-    quote: React.PropTypes.string.isRequired,
-    base: React.PropTypes.string.isRequired,
+  currencies: PropTypes.shape({
+    quote: PropTypes.string.isRequired,
+    base: PropTypes.string.isRequired,
   }).isRequired,
-  side: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func.isRequired,
-  mode: React.PropTypes.oneOf(['normal', 'depth-chart']).isRequired,
+  side: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  mode: PropTypes.oneOf(['normal', 'depth-chart']).isRequired,
 };
 
 export default OrderBookItemView;

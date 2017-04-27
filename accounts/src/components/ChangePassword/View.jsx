@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -17,9 +18,9 @@ const ChangePasswordView = ({ open, onOpen, onClose }) => (
 );
 
 ChangePasswordView.propTypes = {
-  onOpen: React.PropTypes.func.isRequired,
-  onClose: React.PropTypes.func.isRequired,
-  open: React.PropTypes.bool.isRequired,
+  onOpen: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
 };
 
 export default ChangePasswordView;

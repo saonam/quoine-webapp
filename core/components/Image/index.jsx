@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const Image = ({ src, className, width, height }) => (
@@ -7,10 +8,10 @@ const Image = ({ src, className, width, height }) => (
 );
 
 Image.propTypes = {
-  src: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string,
-  width: React.PropTypes.number.isRequired,
-  height: React.PropTypes.number.isRequired,
+  src: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
 };
 
 export default Image;

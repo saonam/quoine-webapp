@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Time from '@quoine/components/Time';
@@ -7,8 +8,8 @@ const OrderCreated = ({ order }) => (
 );
 
 OrderCreated.propTypes = {
-  order: React.PropTypes.shape({
-    createdAt: React.PropTypes.number.isRequired,
+  order: PropTypes.shape({
+    createdAt: PropTypes.number.isRequired,
   }).isRequired,
 };
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -27,7 +28,7 @@ class BalanceTotalBodyContainer extends React.Component {
 }
 
 BalanceTotalBodyContainer.propTypes = {
-  currency: React.PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };
 
 export default BalanceTotalBodyContainer;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Link from '@quoine/components/Link';
@@ -24,9 +25,9 @@ const NavigationLink = ({ pathname, children, presentational, ...props }) => (
 );
 
 NavigationLink.propTypes = {
-  pathname: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired,
-  presentational: React.PropTypes.bool,
+  pathname: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  presentational: PropTypes.bool,
 };
 
 export default NavigationLink;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -36,7 +37,7 @@ const MrgAccDetailReportBody = ({ result }) => (
 );
 
 MrgAccDetailReportBody.propTypes = {
-  result: React.PropTypes.shape({}),
+  result: PropTypes.shape({}),
 };
 
 export default MrgAccDetailReportBody;

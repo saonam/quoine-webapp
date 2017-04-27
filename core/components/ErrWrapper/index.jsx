@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -28,9 +29,9 @@ const ErrWrapper = ({ onDismiss, message, layout }) => (
 );
 
 ErrWrapper.propTypes = {
-  message: React.PropTypes.string.isRequired,
-  onDismiss: React.PropTypes.func.isRequired,
-  layout: React.PropTypes.oneOf(['inline', 'hero', 'box']).isRequired,
+  message: PropTypes.string.isRequired,
+  onDismiss: PropTypes.func.isRequired,
+  layout: PropTypes.oneOf(['inline', 'hero', 'box']).isRequired,
 };
 
 export default ErrWrapper;

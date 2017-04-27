@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import FormWrapper from '@quoine/components/FormWrapper';
@@ -59,7 +60,7 @@ class FundFiat extends React.Component {
 }
 
 FundFiat.propTypes = {
-  account: React.PropTypes.string.isRequired,
+  account: PropTypes.string.isRequired,
 };
 
 export default FundFiat;

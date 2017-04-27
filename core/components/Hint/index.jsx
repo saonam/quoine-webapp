@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -12,9 +13,9 @@ const Hint = ({ label, children, style }) => (
 );
 
 Hint.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  label: React.PropTypes.node,
-  style: React.PropTypes.shape({}),
+  children: PropTypes.node.isRequired,
+  label: PropTypes.node,
+  style: PropTypes.shape({}),
 };
 
 export default Hint;

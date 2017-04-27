@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -50,20 +51,20 @@ class WdrForm extends React.Component {
 }
 
 WdrForm.propTypes = {
-  bank: React.PropTypes.number.isRequired,
-  account: React.PropTypes.shape({
-    currency: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired,
+  bank: PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    currency: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
   }).isRequired,
   // ===
-  submitting: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({}),
+  submitting: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({}),
   ]).isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({}),
+  onSubmit: PropTypes.func.isRequired,
+  error: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({}),
   ]).isRequired,
 };
 

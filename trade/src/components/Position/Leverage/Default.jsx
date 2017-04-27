@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const PositionLeverageDefault = ({ position }) => (
@@ -5,8 +6,8 @@ const PositionLeverageDefault = ({ position }) => (
 );
 
 PositionLeverageDefault.propTypes = {
-  position: React.PropTypes.shape({
-    leverage: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    leverage: PropTypes.number.isRequired,
   }).isRequired,
 };
 

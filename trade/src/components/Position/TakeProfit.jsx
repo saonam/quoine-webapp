@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -18,9 +19,9 @@ const PositionTakeProfit = ({ position }) => {
 };
 
 PositionTakeProfit.propTypes = {
-  position: React.PropTypes.shape({
-    takeProfit: React.PropTypes.number.isRequired,
-    quoteCurrency: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    takeProfit: PropTypes.number.isRequired,
+    quoteCurrency: PropTypes.string.isRequired,
   }).isRequired,
 };
 

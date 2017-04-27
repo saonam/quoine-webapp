@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Field from 'components/BalanceTotal/Field';
@@ -38,9 +39,9 @@ const BalanceTotalContent = ({ currency, accounts, fxRates }) => {
 };
 
 BalanceTotalContent.propTypes = {
-  currency: React.PropTypes.string.isRequired,
-  accounts: React.PropTypes.shape({}).isRequired,
-  fxRates: React.PropTypes.shape({}).isRequired,
+  currency: PropTypes.string.isRequired,
+  accounts: PropTypes.shape({}).isRequired,
+  fxRates: PropTypes.shape({}).isRequired,
 };
 
 export default BalanceTotalContent;

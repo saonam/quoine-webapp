@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -28,7 +29,7 @@ const OrderItemDetail = ({ order }) => (
 );
 
 OrderItemDetail.propTypes = {
-  order: React.PropTypes.shape({}).isRequired,
+  order: PropTypes.shape({}).isRequired,
 };
 
 export default OrderItemDetail;

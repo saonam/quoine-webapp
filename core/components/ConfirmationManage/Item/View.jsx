@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -19,8 +20,8 @@ const ConfirmationManageItem = ({ task, onClick }) => (
 );
 
 ConfirmationManageItem.propTypes = {
-  task: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func.isRequired,
+  task: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ConfirmationManageItem;

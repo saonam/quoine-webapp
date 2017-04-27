@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -21,8 +22,8 @@ const SubmitButton = ({ sent, busy }) => (
 );
 
 SubmitButton.propTypes = {
-  sent: React.PropTypes.bool.isRequired,
-  busy: React.PropTypes.bool.isRequired,
+  sent: PropTypes.bool.isRequired,
+  busy: PropTypes.bool.isRequired,
 };
 
 export default SubmitButton;

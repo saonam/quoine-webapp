@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -19,11 +20,11 @@ class TabsButton extends React.PureComponent {
 }
 
 TabsButton.propTypes = {
-  panel: React.PropTypes.shape({
-    id: React.PropTypes.string.isRequired,
+  panel: PropTypes.shape({
+    id: PropTypes.string.isRequired,
   }).isRequired,
-  current: React.PropTypes.shape({}).isRequired,
-  onSelect: React.PropTypes.func.isRequired,
+  current: PropTypes.shape({}).isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default TabsButton;

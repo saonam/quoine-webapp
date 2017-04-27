@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -9,8 +10,8 @@ const ExecutionTarget = ({ execution }) => (
 );
 
 ExecutionTarget.propTypes = {
-  execution: React.PropTypes.shape({
-    target: React.PropTypes.string.isRequired,
+  execution: PropTypes.shape({
+    target: PropTypes.string.isRequired,
   }).isRequired,
 };
 

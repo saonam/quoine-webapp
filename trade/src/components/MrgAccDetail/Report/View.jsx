@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ReportWrapper from '@quoine/components/ReportWrapper';
@@ -11,7 +12,7 @@ const MrgAccDetailReport = ({ onSet, result }) => (
 );
 
 MrgAccDetailReport.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
+  onSet: PropTypes.func.isRequired,
   result: Body.propTypes.result,
 };
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -65,13 +66,13 @@ class DemoStep2 extends React.Component {
 }
 
 DemoStep2.propTypes = {
-  setToken: React.PropTypes.func.isRequired,
-  location: React.PropTypes.shape({
-    query: React.PropTypes.shape({
-      continue: React.PropTypes.string,
+  setToken: PropTypes.func.isRequired,
+  location: PropTypes.shape({
+    query: PropTypes.shape({
+      continue: PropTypes.string,
     }).isRequired,
   }).isRequired,
-  mode: React.PropTypes.string.isRequired,
+  mode: PropTypes.string.isRequired,
 };
 
 export default DemoStep2;

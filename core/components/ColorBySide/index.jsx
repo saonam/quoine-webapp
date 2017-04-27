@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -9,11 +10,11 @@ const ColorBySide = ({ side, children }) => (
 );
 
 ColorBySide.propTypes = {
-  side: React.PropTypes.oneOf([
+  side: PropTypes.oneOf([
     'buy', 'sell', 'long', 'short', 'both', 'negative', 'positive', 'light',
     'in', 'out',
   ]).isRequired,
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default ColorBySide;

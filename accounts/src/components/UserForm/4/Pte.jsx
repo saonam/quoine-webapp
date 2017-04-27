@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -53,10 +54,10 @@ const UserForm4 = ({ onSubmit, form, onChange, busy, error }) => (
 );
 
 UserForm4.propTypes = {
-  form: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  busy: React.PropTypes.bool.isRequired,
+  form: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
   ...Err.propTypes,
 };
 

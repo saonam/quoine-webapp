@@ -1,5 +1,7 @@
 import { withBoth } from 'components/OrderEntry/utils';
 
+import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -25,11 +27,11 @@ const OrderEntryFormDirection = ({ form, onChange }) => (
 );
 
 OrderEntryFormDirection.propTypes = {
-  form: React.PropTypes.shape({
-    direction: React.PropTypes.string.isRequired,
-    market: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    direction: PropTypes.string.isRequired,
+    market: PropTypes.string.isRequired,
   }),
-  onChange: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default withBoth(OrderEntryFormDirection, 'direction');

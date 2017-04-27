@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -46,10 +47,10 @@ class TFARequest extends React.PureComponent {
 }
 
 TFARequest.propTypes = {
-  payload: React.PropTypes.shape({}),
-  skipFirst: React.PropTypes.bool,
-  useEmail: React.PropTypes.bool,
-  userId: React.PropTypes.number,
+  payload: PropTypes.shape({}),
+  skipFirst: PropTypes.bool,
+  useEmail: PropTypes.bool,
+  userId: PropTypes.number,
 };
 
 export default TFARequest;

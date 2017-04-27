@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -25,9 +26,9 @@ const VolumeFilterStandby = ({ frm, to, onOpen }) => (
 );
 
 VolumeFilterStandby.propTypes = {
-  onOpen: React.PropTypes.func.isRequired,
-  frm: React.PropTypes.number.isRequired,
-  to: React.PropTypes.number.isRequired,
+  onOpen: PropTypes.func.isRequired,
+  frm: PropTypes.number.isRequired,
+  to: PropTypes.number.isRequired,
 };
 
 export default VolumeFilterStandby;

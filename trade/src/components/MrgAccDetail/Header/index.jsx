@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from '@quoine/components/Header';
@@ -26,7 +27,7 @@ const MrgAccDetailHeader = ({ status }) => {
 };
 
 MrgAccDetailHeader.propTypes = {
-  status: React.PropTypes.oneOf(['standby', 'confirm', 'report']).isRequired,
+  status: PropTypes.oneOf(['standby', 'confirm', 'report']).isRequired,
 };
 
 export default MrgAccDetailHeader;

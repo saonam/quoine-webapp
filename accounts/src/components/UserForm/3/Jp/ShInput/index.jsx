@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Wrapper from '@quoine/components/FormOnChangeWrapper';
@@ -37,10 +38,10 @@ class ShsInputItem extends React.Component {
 }
 
 ShsInputItem.propTypes = {
-  index: React.PropTypes.number.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  onRemove: React.PropTypes.func.isRequired,
-  value: React.PropTypes.shape({}).isRequired,
+  index: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onRemove: PropTypes.func.isRequired,
+  value: PropTypes.shape({}).isRequired,
 };
 
 export default ShsInputItem;

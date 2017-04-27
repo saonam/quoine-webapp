@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/ButtonWLoading';
@@ -16,13 +17,13 @@ const OrderEditStandby = ({ Element, order, onOpen, target, edit }) => (
 );
 
 OrderEditStandby.propTypes = {
-  onOpen: React.PropTypes.func.isRequired,
-  order: React.PropTypes.shape({}).isRequired,
-  Element: React.PropTypes.func.isRequired,
-  target: React.PropTypes.string.isRequired,
-  edit: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onOpen: PropTypes.func.isRequired,
+  order: PropTypes.shape({}).isRequired,
+  Element: PropTypes.func.isRequired,
+  target: PropTypes.string.isRequired,
+  edit: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
 };
 

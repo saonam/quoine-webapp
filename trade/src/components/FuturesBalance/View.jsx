@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -28,7 +29,7 @@ const FuturesBalanceView = (props) => (
 FuturesBalanceView.propTypes = {
   ...Balances.propTypes,
   ...Form.propTypes,
-  type: React.PropTypes.oneOf(['fund', 'withdrawal']),
+  type: PropTypes.oneOf(['fund', 'withdrawal']),
 };
 
 export default FuturesBalanceView;

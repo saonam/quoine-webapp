@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -27,12 +28,12 @@ const TFARequestView = ({ onRequest, sent, busy, error, message, layout }) => (
 );
 
 TFARequestView.propTypes = {
-  onRequest: React.PropTypes.func.isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  error: React.PropTypes.string.isRequired,
-  message: React.PropTypes.string.isRequired,
-  layout: React.PropTypes.oneOf(['vertical']),
-  sent: React.PropTypes.bool.isRequired,
+  onRequest: PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  layout: PropTypes.oneOf(['vertical']),
+  sent: PropTypes.bool.isRequired,
 };
 
 export default TFARequestView;

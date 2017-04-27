@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const validPriceTypes = ['limit', 'stop'];
@@ -24,8 +25,8 @@ const withCondition = (View, propName) => {
     ) : null
   );
   Container.propTypes = {
-    className: React.PropTypes.string,
-    form: React.PropTypes.shape({}).isRequired,
+    className: PropTypes.string,
+    form: PropTypes.shape({}).isRequired,
   };
   return Container;
 };

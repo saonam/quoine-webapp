@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const UserInfoDate = ({ value, year, month, date }) => {
@@ -18,10 +19,10 @@ const UserInfoDate = ({ value, year, month, date }) => {
 };
 
 UserInfoDate.propTypes = {
-  value: React.PropTypes.number.isRequired,
-  year: React.PropTypes.bool,
-  month: React.PropTypes.bool,
-  date: React.PropTypes.bool,
+  value: PropTypes.number.isRequired,
+  year: PropTypes.bool,
+  month: PropTypes.bool,
+  date: PropTypes.bool,
 };
 
 UserInfoDate.defaultProps = {

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import NameInput from '@quoine/components/NameInput';
@@ -12,8 +13,8 @@ const JpKanaNameInput = (props) => (
 );
 
 JpKanaNameInput.propTypes = {
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default JpKanaNameInput;

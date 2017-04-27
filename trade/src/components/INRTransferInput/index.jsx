@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -20,7 +21,7 @@ class INRTransferInput extends React.Component {
 }
 
 INRTransferInput.propTypes = {
-  type: React.PropTypes.oneOf(['fund', 'withdrawal']).isRequired,
+  type: PropTypes.oneOf(['fund', 'withdrawal']).isRequired,
 };
 
 export default INRTransferInput;

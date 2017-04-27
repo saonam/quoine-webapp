@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -14,7 +15,7 @@ const FundItemGuide = ({ fund }) => (
 );
 
 FundItemGuide.propTypes = {
-  fund: React.PropTypes.shape({}).isRequired,
+  fund: PropTypes.shape({}).isRequired,
 };
 
 export default FundItemGuide;

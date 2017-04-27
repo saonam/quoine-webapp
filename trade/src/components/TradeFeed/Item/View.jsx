@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -34,15 +35,15 @@ const TradeFeedItem = ({ execution, onClick }) => (
 );
 
 TradeFeedItem.propTypes = {
-  execution: React.PropTypes.shape({
-    quantity: React.PropTypes.number.isRequired,
-    price: React.PropTypes.number.isRequired,
-    createdAt: React.PropTypes.number.isRequired,
-    quoteCurrency: React.PropTypes.string.isRequired,
-    baseCurrency: React.PropTypes.string.isRequired,
-    takerSide: React.PropTypes.string.isRequired,
+  execution: PropTypes.shape({
+    quantity: PropTypes.number.isRequired,
+    price: PropTypes.number.isRequired,
+    createdAt: PropTypes.number.isRequired,
+    quoteCurrency: PropTypes.string.isRequired,
+    baseCurrency: PropTypes.string.isRequired,
+    takerSide: PropTypes.string.isRequired,
   }),
-  onClick: React.PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default TradeFeedItem;

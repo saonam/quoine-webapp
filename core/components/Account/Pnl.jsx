@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -23,11 +24,11 @@ const AccountPnl = ({ account, type }) => {
 };
 
 AccountPnl.propTypes = {
-  account: React.PropTypes.shape({
-    pnl: React.PropTypes.number.isRequired,
-    pnlRealised: React.PropTypes.number,
+  account: PropTypes.shape({
+    pnl: PropTypes.number.isRequired,
+    pnlRealised: PropTypes.number,
   }).isRequired,
-  type: React.PropTypes.oneOf(['realised']),
+  type: PropTypes.oneOf(['realised']),
 };
 
 export default AccountPnl;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -97,8 +98,8 @@ const OrderEntryConfirmBody = ({ form, side }) => (
 );
 
 OrderEntryConfirmBody.propTypes = {
-  form: React.PropTypes.shape({}),
-  side: React.PropTypes.oneOf(['buy', 'sell']).isRequired,
+  form: PropTypes.shape({}),
+  side: PropTypes.oneOf(['buy', 'sell']).isRequired,
 };
 
 export default OrderEntryConfirmBody;

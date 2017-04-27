@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -16,7 +17,7 @@ const SettingsBody = ({ children }) => (
 );
 
 SettingsBody.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default SettingsBody;

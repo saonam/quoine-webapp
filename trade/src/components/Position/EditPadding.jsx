@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import IconPadding from '@quoine/components/IconPadding';
@@ -7,8 +8,8 @@ const PositionEditPadding = ({ position }) => (
 );
 
 PositionEditPadding.propTypes = {
-  position: React.PropTypes.shape({
-    status: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    status: PropTypes.string.isRequired,
   }).isRequired,
 };
 

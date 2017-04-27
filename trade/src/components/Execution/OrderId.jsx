@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const ExecutionOrderId = ({ execution }) => (
@@ -5,8 +6,8 @@ const ExecutionOrderId = ({ execution }) => (
 );
 
 ExecutionOrderId.propTypes = {
-  execution: React.PropTypes.shape({
-    orderId: React.PropTypes.number.isRequired,
+  execution: PropTypes.shape({
+    orderId: PropTypes.number.isRequired,
   }).isRequired,
 };
 

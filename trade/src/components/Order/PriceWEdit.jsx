@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Price, Edit } from 'components/Order';
@@ -12,8 +13,8 @@ const OrderPriceWEdit = ({ order, layout }) => (
 );
 
 OrderPriceWEdit.propTypes = {
-  order: React.PropTypes.shape({}).isRequired,
-  layout: React.PropTypes.string.isRequired,
+  order: PropTypes.shape({}).isRequired,
+  layout: PropTypes.string.isRequired,
 };
 
 export default OrderPriceWEdit;

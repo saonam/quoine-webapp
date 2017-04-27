@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -25,9 +26,9 @@ const BalanceTotalSelect = ({ all, value, onChange }) => {
 };
 
 BalanceTotalSelect.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  all: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  all: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default BalanceTotalSelect;

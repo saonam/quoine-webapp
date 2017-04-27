@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Percentage from '@quoine/components/Percentage';
@@ -23,9 +24,9 @@ const OrderProgress = ({ order }) => {
 };
 
 OrderProgress.propTypes = {
-  order: React.PropTypes.shape({
-    quantity: React.PropTypes.number.isRequired,
-    quantityFilled: React.PropTypes.number.isRequired,
+  order: PropTypes.shape({
+    quantity: PropTypes.number.isRequired,
+    quantityFilled: PropTypes.number.isRequired,
   }).isRequired,
 };
 

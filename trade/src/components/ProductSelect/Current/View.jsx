@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Overview from 'components/ProductOverview';
@@ -7,7 +8,7 @@ const ProductSelectCurrent = ({ symbol }) => (
 );
 
 ProductSelectCurrent.propTypes = {
-  symbol: React.PropTypes.string.isRequired,
+  symbol: PropTypes.string.isRequired,
 };
 
 export default ProductSelectCurrent;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Expander from '@quoine/components/Expander';
@@ -13,7 +14,7 @@ const WdrItem = ({ withdrawal }) => (
 );
 
 WdrItem.propTypes = {
-  withdrawal: React.PropTypes.shape({}).isRequired,
+  withdrawal: PropTypes.shape({}).isRequired,
 };
 
 export default WdrItem;

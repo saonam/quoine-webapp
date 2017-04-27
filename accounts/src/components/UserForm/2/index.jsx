@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -22,11 +23,11 @@ class UserForm2 extends React.Component {
 }
 
 UserForm2.propTypes = {
-  form: React.PropTypes.shape({
-    country: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    country: PropTypes.string.isRequired,
   }).isRequired,
-  onChange: React.PropTypes.shape({
-    underJFSA: React.PropTypes.func.isRequired,
+  onChange: PropTypes.shape({
+    underJFSA: PropTypes.func.isRequired,
   }).isRequired,
 };
 

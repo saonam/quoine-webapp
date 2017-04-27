@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -13,8 +14,8 @@ const AccountLoaned = ({ account }) => {
 };
 
 AccountLoaned.propTypes = {
-  account: React.PropTypes.shape({
-    loaned: React.PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    loaned: PropTypes.number.isRequired,
   }).isRequired,
 };
 

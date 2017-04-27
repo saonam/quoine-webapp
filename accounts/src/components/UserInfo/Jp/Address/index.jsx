@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const UserInfoAddress = ({ address }) => (
@@ -9,7 +10,7 @@ const UserInfoAddress = ({ address }) => (
 );
 
 UserInfoAddress.propTypes = {
-  address: React.PropTypes.shape({}).isRequired,
+  address: PropTypes.shape({}).isRequired,
 };
 
 export default UserInfoAddress;

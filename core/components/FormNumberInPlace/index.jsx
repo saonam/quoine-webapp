@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -28,9 +29,9 @@ class FormNumberInPlace extends React.PureComponent {
 }
 
 FormNumberInPlace.propTypes = {
-  defaultValue: React.PropTypes.string.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  onCancel: React.PropTypes.func.isRequired,
+  defaultValue: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
 };
 
 export default FormNumberInPlace;

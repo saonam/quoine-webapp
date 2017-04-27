@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class FormWrapper extends React.Component {
@@ -64,27 +65,27 @@ class FormWrapper extends React.Component {
 }
 
 FormWrapper.propTypes = {
-  onSuccess: React.PropTypes.func,
-  onSubmit: React.PropTypes.func.isRequired,
-  initialForm: React.PropTypes.shape({}).isRequired,
-  Element: React.PropTypes.func.isRequired,
+  onSuccess: PropTypes.func,
+  onSubmit: PropTypes.func.isRequired,
+  initialForm: PropTypes.shape({}).isRequired,
+  Element: PropTypes.func.isRequired,
 };
 
 const FormWrapperPropTypes = {
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.string,
-    React.PropTypes.shape({}),
+  error: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string,
+    PropTypes.shape({}),
   ]).isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  success: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.string,
-    React.PropTypes.shape({}),
+  busy: PropTypes.bool.isRequired,
+  success: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string,
+    PropTypes.shape({}),
   ]),
-  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  form: React.PropTypes.shape({}).isRequired,
+  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  form: PropTypes.shape({}).isRequired,
 };
 
 export { FormWrapperPropTypes };

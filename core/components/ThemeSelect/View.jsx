@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from './Button';
@@ -15,8 +16,8 @@ const ThemeSelect = ({ all, direction }) => (
 );
 
 ThemeSelect.propTypes = {
-  all: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  direction: React.PropTypes.oneOf(['row', 'column']).isRequired,
+  all: PropTypes.arrayOf(PropTypes.string).isRequired,
+  direction: PropTypes.oneOf(['row', 'column']).isRequired,
 };
 
 export default ThemeSelect;

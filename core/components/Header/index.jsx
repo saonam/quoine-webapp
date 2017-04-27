@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -16,9 +17,9 @@ const Header = ({ children, styleName, className, ...other }) => (
 );
 
 Header.propTypes = {
-  styleName: React.PropTypes.string,
-  className: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired,
+  styleName: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 Header.defaultProps = {

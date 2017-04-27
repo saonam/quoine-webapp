@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -40,7 +41,7 @@ const MrgAccDetailStandbyVertical = ({ mrgAcc }) => (
 );
 
 MrgAccDetailStandbyVertical.propTypes = {
-  mrgAcc: React.PropTypes.shape({}),
+  mrgAcc: PropTypes.shape({}),
 };
 
 export default MrgAccDetailStandbyVertical;

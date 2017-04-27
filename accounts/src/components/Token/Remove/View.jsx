@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from './Button';
@@ -11,11 +12,11 @@ const TokenRemoveView = ({ confirming, token, ...others }) => {
 };
 
 TokenRemoveView.propTypes = {
-  confirming: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.number,
+  confirming: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.number,
   ]),
-  token: React.PropTypes.shape({}).isRequired,
+  token: PropTypes.shape({}).isRequired,
 };
 
 export default TokenRemoveView;

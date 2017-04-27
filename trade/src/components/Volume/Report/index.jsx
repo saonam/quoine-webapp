@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import resources from './resources';
 
@@ -30,8 +31,8 @@ class VolumeReport extends React.Component {
 }
 
 VolumeReport.propTypes = {
-  frm: React.PropTypes.number.isRequired,
-  to: React.PropTypes.number.isRequired,
+  frm: PropTypes.number.isRequired,
+  to: PropTypes.number.isRequired,
 };
 
 export default VolumeReport;

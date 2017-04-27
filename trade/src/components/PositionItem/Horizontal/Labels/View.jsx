@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Default from './Default';
@@ -12,9 +13,9 @@ const PositionItemHorizontal = ({ market, user }) => (
 );
 
 PositionItemHorizontal.propTypes = {
-  market: React.PropTypes.string.isRequired,
-  user: React.PropTypes.shape({
-    underJFSA: React.PropTypes.bool,
+  market: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    underJFSA: PropTypes.bool,
   }).isRequired,
 };
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import CheckboxInput from '@quoine/components/CheckboxInput';
@@ -78,9 +79,9 @@ const UserForm4JpTerm = ({ form, onChange, required }) => (
 );
 
 UserForm4JpTerm.propTypes = {
-  form: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.objectOf(React.PropTypes.func).isRequired,
-  required: React.PropTypes.bool,
+  form: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
+  required: PropTypes.bool,
 };
 
 export default UserForm4JpTerm;

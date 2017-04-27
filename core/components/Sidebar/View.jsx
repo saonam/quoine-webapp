@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -32,14 +33,14 @@ const SidebarView = ({
 );
 
 SidebarView.propTypes = {
-  Button: React.PropTypes.func.isRequired,
-  Body: React.PropTypes.func.isRequired,
-  overlayVisible: React.PropTypes.bool,
-  side: React.PropTypes.string.isRequired,
+  Button: PropTypes.func.isRequired,
+  Body: PropTypes.func.isRequired,
+  overlayVisible: PropTypes.bool,
+  side: PropTypes.string.isRequired,
   // ==
-  open: React.PropTypes.bool.isRequired,
-  onOpen: React.PropTypes.func.isRequired,
-  onClose: React.PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  onOpen: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 SidebarView.defaultProps = {

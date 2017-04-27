@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -40,7 +41,7 @@ class TFAManageToggle extends React.Component {
 
 TFAManageToggle.propTypes = {
   goStandby: View.propTypes.onCancel,
-  onToggle: React.PropTypes.func.isRequired,
+  onToggle: PropTypes.func.isRequired,
   enabled: View.propTypes.enabled,
 };
 

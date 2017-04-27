@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import LoadingIconWrapper from '@quoine/components/LoadingIconWrapper';
@@ -19,8 +20,8 @@ const TFAManageView = ({ status, busy, ...others }) => {
 };
 
 TFAManageView.propTypes = {
-  status: React.PropTypes.string.isRequired,
-  busy: React.PropTypes.bool.isRequired,
+  status: PropTypes.string.isRequired,
+  busy: PropTypes.bool.isRequired,
 };
 
 export default TFAManageView;

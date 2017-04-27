@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -10,9 +11,9 @@ const OrderMargin = ({ order }) => (
 );
 
 OrderMargin.propTypes = {
-  order: React.PropTypes.shape({
-    marginUsed: React.PropTypes.number.isRequired,
-    account: React.PropTypes.string.isRequired,
+  order: PropTypes.shape({
+    marginUsed: PropTypes.number.isRequired,
+    account: PropTypes.string.isRequired,
   }).isRequired,
 };
 

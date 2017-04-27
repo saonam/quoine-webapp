@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -11,7 +12,7 @@ const Progress = ({ value }) => (
 );
 
 Progress.propTypes = {
-  value: React.PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
 };
 
 export default Progress;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -16,7 +17,7 @@ const MrgAccManageButton = ({ onOpen }) => (
 );
 
 MrgAccManageButton.propTypes = {
-  onOpen: React.PropTypes.func.isRequired,
+  onOpen: PropTypes.func.isRequired,
 };
 
 export default MrgAccManageButton;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import glyphs from './glyphs';
@@ -13,11 +14,11 @@ const Icon = ({ glyph, className, width, height, block }) => (
 );
 
 Icon.propTypes = {
-  glyph: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string,
-  width: React.PropTypes.number,
-  height: React.PropTypes.number,
-  block: React.PropTypes.bool,
+  glyph: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  block: PropTypes.bool,
 };
 
 Icon.defaultProps = {

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import RadioInput from '@quoine/components/RadioInput';
@@ -41,11 +42,11 @@ const JpShTypeInput = ({ business, value, onChange, id, required }) => {
 };
 
 JpShTypeInput.propTypes = {
-  business: React.PropTypes.string.isRequired,
-  id: React.PropTypes.string.isRequired,
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  required: React.PropTypes.bool,
+  business: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  required: PropTypes.bool,
 };
 
 export default JpShTypeInput;

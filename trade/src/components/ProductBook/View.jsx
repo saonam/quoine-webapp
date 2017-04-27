@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import TradeFeed from 'components/TradeFeed';
@@ -23,7 +24,7 @@ const ProductBook = ({ market }) => (
 );
 
 ProductBook.propTypes = {
-  market: React.PropTypes.string.isRequired,
+  market: PropTypes.string.isRequired,
 };
 
 export default ProductBook;

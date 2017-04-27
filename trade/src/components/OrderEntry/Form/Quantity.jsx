@@ -1,5 +1,7 @@
 import { withBoth } from 'components/OrderEntry/utils';
 
+import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import NumberInput from '@quoine/components/NumberInput';
@@ -12,10 +14,10 @@ const OrderEntryFormQuantity = ({ form, onChange }) => (
 );
 
 OrderEntryFormQuantity.propTypes = {
-  form: React.PropTypes.shape({
-    quantity: React.PropTypes.string.isRequired,
+  form: PropTypes.shape({
+    quantity: PropTypes.string.isRequired,
   }),
-  onChange: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default withBoth(OrderEntryFormQuantity, 'quantity');

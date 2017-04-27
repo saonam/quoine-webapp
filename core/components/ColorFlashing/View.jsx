@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -14,9 +15,9 @@ const ColorFlashingView = ({ flash, children, block }) => {
 };
 
 ColorFlashingView.propTypes = {
-  flash: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
-  block: React.PropTypes.bool,
+  flash: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  block: PropTypes.bool,
 };
 
 export default ColorFlashingView;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const TogglerView = ({ open, onToggle, Active, Standby, ...others }) => (
@@ -9,10 +10,10 @@ const TogglerView = ({ open, onToggle, Active, Standby, ...others }) => (
 );
 
 TogglerView.propTypes = {
-  open: React.PropTypes.bool.isRequired,
-  onToggle: React.PropTypes.func.isRequired,
-  Active: React.PropTypes.func.isRequired,
-  Standby: React.PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
+  Active: PropTypes.func.isRequired,
+  Standby: PropTypes.func.isRequired,
 };
 
 export default TogglerView;

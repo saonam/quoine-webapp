@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Field from '@quoine/components/Field';
@@ -22,9 +23,9 @@ const UserFormField = ({ label, children, layout }) => (
 );
 
 UserFormField.propTypes = {
-  label: React.PropTypes.string,
-  layout: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired,
+  label: PropTypes.string,
+  layout: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 export default UserFormField;

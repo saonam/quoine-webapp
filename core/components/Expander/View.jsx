@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -13,11 +14,11 @@ const ExpanderView = ({ expand, onToggle, Overview, Detail, ...others }) => (
 );
 
 ExpanderView.propTypes = {
-  Overview: React.PropTypes.func.isRequired,
-  Detail: React.PropTypes.func.isRequired,
+  Overview: PropTypes.func.isRequired,
+  Detail: PropTypes.func.isRequired,
   // ==
-  expand: React.PropTypes.bool.isRequired,
-  onToggle: React.PropTypes.func.isRequired,
+  expand: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
 };
 
 export default ExpanderView;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -20,8 +21,8 @@ class BlotterFilterSelect extends React.PureComponent {
 }
 
 BlotterFilterSelect.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
-  name: React.PropTypes.string.isRequired,
+  onSet: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default BlotterFilterSelect;

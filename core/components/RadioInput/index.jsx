@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -19,7 +20,7 @@ class RadioInput extends React.PureComponent {
 }
 
 RadioInput.propTypes = {
-  onChange: React.PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default RadioInput;

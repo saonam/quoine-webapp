@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -16,13 +17,13 @@ const PositionCloseStandby = ({ confirming, position, onOpen, close }) => (
 );
 
 PositionCloseStandby.propTypes = {
-  onOpen: React.PropTypes.func.isRequired,
-  position: React.PropTypes.shape({}).isRequired,
-  close: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onOpen: PropTypes.func.isRequired,
+  position: PropTypes.shape({}).isRequired,
+  close: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
-  confirming: React.PropTypes.bool,
+  confirming: PropTypes.bool,
 };
 
 export default PositionCloseStandby;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const WdrItemAddress = ({ withdrawal }) => (
@@ -5,7 +6,7 @@ const WdrItemAddress = ({ withdrawal }) => (
 );
 
 WdrItemAddress.propTypes = {
-  withdrawal: React.PropTypes.shape({}).isRequired,
+  withdrawal: PropTypes.shape({}).isRequired,
 };
 
 export default WdrItemAddress;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Time from '@quoine/components/Time';
@@ -7,8 +8,8 @@ const PositionCreated = ({ position }) => (
 );
 
 PositionCreated.propTypes = {
-  position: React.PropTypes.shape({
-    createdAt: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    createdAt: PropTypes.number.isRequired,
   }).isRequired,
 };
 

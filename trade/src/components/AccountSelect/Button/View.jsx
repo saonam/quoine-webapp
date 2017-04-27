@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -15,9 +16,9 @@ const AccountSelectButton = ({ onSet, currency, current }) => (
 );
 
 AccountSelectButton.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
-  currency: React.PropTypes.string.isRequired,
-  current: React.PropTypes.string.isRequired,
+  onSet: PropTypes.func.isRequired,
+  currency: PropTypes.string.isRequired,
+  current: PropTypes.string.isRequired,
 };
 
 export default AccountSelectButton;

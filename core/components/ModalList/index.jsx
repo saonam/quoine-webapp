@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -21,10 +22,10 @@ const AccountManageList = ({
 );
 
 AccountManageList.propTypes = {
-  modelKeys: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  title: React.PropTypes.string.isRequired,
-  description: React.PropTypes.string,
-  Element: React.PropTypes.func.isRequired,
+  modelKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  Element: PropTypes.func.isRequired,
 };
 
 export default AccountManageList;

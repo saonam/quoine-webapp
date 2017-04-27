@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -60,13 +61,13 @@ const ForgotPassword = (props) => (
 );
 
 ForgotPassword.propTypes = {
-  onSubmit: React.PropTypes.func.isRequired,
-  password: React.PropTypes.string.isRequired,
-  token: React.PropTypes.string.isRequired,
-  onPasswordChange: React.PropTypes.func.isRequired,
-  onTokenChange: React.PropTypes.func.isRequired,
-  error: React.PropTypes.string.isRequired,
-  busy: React.PropTypes.bool.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  password: PropTypes.string.isRequired,
+  token: PropTypes.string.isRequired,
+  onPasswordChange: PropTypes.func.isRequired,
+  onTokenChange: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired,
+  busy: PropTypes.bool.isRequired,
 };
 
 export default ForgotPassword;

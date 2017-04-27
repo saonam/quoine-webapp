@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Modal from './Modal';
@@ -15,9 +16,9 @@ const MrgAccManageView = ({ open, onOpen, onClose }) => (
 );
 
 MrgAccManageView.propTypes = {
-  open: React.PropTypes.bool.isRequired,
-  onOpen: React.PropTypes.func.isRequired,
-  onClose: React.PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  onOpen: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default MrgAccManageView;

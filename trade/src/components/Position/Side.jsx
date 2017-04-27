@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -11,8 +12,8 @@ const PositionSide = ({ position }) => (
 );
 
 PositionSide.propTypes = {
-  position: React.PropTypes.shape({
-    side: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({
+    side: PropTypes.string.isRequired,
   }).isRequired,
 };
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 class FormOnChangeWrapper extends React.PureComponent {
@@ -26,10 +27,10 @@ class FormOnChangeWrapper extends React.PureComponent {
 }
 
 FormOnChangeWrapper.propTypes = {
-  View: React.PropTypes.func.isRequired,
-  initialForm: React.PropTypes.shape({}).isRequired,
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  View: PropTypes.func.isRequired,
+  initialForm: PropTypes.shape({}).isRequired,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default FormOnChangeWrapper;

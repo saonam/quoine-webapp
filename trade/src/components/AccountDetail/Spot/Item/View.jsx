@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -12,10 +13,10 @@ const AccountDetailSpotItem = ({ currency, account }) => (
 );
 
 AccountDetailSpotItem.propTypes = {
-  account: React.PropTypes.shape({
-    balance: React.PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    balance: PropTypes.number.isRequired,
   }),
-  currency: React.PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };
 
 export default AccountDetailSpotItem;

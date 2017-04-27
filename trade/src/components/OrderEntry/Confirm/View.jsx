@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -20,7 +21,7 @@ const OrderEntryConfirm = ({ onSet, form, side }) => (
 );
 
 OrderEntryConfirm.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
+  onSet: PropTypes.func.isRequired,
   form: Body.propTypes.form,
   side: Body.propTypes.side,
 };

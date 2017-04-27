@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import LayoutPreview from 'components/LayoutPreview';
@@ -14,8 +15,8 @@ const LayoutSelectButton = ({ name, onSet }) => (
 );
 
 LayoutSelectButton.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  onSet: React.PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  onSet: PropTypes.func.isRequired,
 };
 
 export default LayoutSelectButton;

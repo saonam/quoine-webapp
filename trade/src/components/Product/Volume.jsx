@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -13,11 +14,11 @@ const ProductVolume = ({ product }) => (
 );
 
 ProductVolume.propTypes = {
-  product: React.PropTypes.shape({
-    volume: React.PropTypes.number.isRequired,
-    baseCurrency: React.PropTypes.string.isRequired,
-    underlyingCurrency: React.PropTypes.string,
-    isFutures: React.PropTypes.bool,
+  product: PropTypes.shape({
+    volume: PropTypes.number.isRequired,
+    baseCurrency: PropTypes.string.isRequired,
+    underlyingCurrency: PropTypes.string,
+    isFutures: PropTypes.bool,
   }).isRequired,
 };
 

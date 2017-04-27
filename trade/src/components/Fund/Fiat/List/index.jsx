@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -44,9 +45,9 @@ class FundFiatList extends React.Component {
 }
 
 FundFiatList.propTypes = {
-  form: React.PropTypes.shape({}).isRequired,
-  funds: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
-  onFundsChange: React.PropTypes.func.isRequired,
+  form: PropTypes.shape({}).isRequired,
+  funds: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  onFundsChange: PropTypes.func.isRequired,
 };
 
 export default FundFiatList;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import IconPadding from '@quoine/components/IconPadding';
@@ -11,8 +12,8 @@ const OrderEditPadding = ({ order }) => (
 );
 
 OrderEditPadding.propTypes = {
-  order: React.PropTypes.shape({
-    status: React.PropTypes.string.isRequired,
+  order: PropTypes.shape({
+    status: PropTypes.string.isRequired,
   }).isRequired,
 };
 

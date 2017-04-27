@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Filter from '../Filter';
@@ -23,10 +24,10 @@ const VolumeBodyView = ({ frm, to, onFrmChange, onToChange }) => (
 );
 
 VolumeBodyView.propTypes = {
-  frm: React.PropTypes.number.isRequired,
-  onFrmChange: React.PropTypes.func.isRequired,
-  to: React.PropTypes.number.isRequired,
-  onToChange: React.PropTypes.func.isRequired,
+  frm: PropTypes.number.isRequired,
+  onFrmChange: PropTypes.func.isRequired,
+  to: PropTypes.number.isRequired,
+  onToChange: PropTypes.func.isRequired,
 };
 
 export default VolumeBodyView;

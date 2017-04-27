@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Base from './Base';
@@ -7,7 +8,7 @@ const MrgAccManageHidden = ({ modelKey }) => (
 );
 
 MrgAccManageHidden.propTypes = {
-  modelKey: React.PropTypes.string.isRequired,
+  modelKey: PropTypes.string.isRequired,
 };
 
 export default MrgAccManageHidden;

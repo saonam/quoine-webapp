@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -14,9 +15,9 @@ const MoneyView = ({ significant, zeros, raw }) => (
 );
 
 MoneyView.propTypes = {
-  raw: React.PropTypes.string.isRequired,
-  significant: React.PropTypes.string.isRequired,
-  zeros: React.PropTypes.string,
+  raw: PropTypes.string.isRequired,
+  significant: PropTypes.string.isRequired,
+  zeros: PropTypes.string,
 };
 
 export default MoneyView;

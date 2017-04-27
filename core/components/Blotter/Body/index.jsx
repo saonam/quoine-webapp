@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import TransitionGroup from '@quoine/components/TransitionGroup';
 
@@ -21,19 +22,19 @@ const BlotterBody = ({ collection, Item, horizontal }) => (
 );
 
 BlotterBody.propTypes = {
-  Item: React.PropTypes.func.isRequired,
-  collection: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      keys: React.PropTypes.arrayOf(
-        React.PropTypes.oneOfType([
-          React.PropTypes.number,
-          React.PropTypes.string,
+  Item: PropTypes.func.isRequired,
+  collection: PropTypes.arrayOf(
+    PropTypes.shape({
+      keys: PropTypes.arrayOf(
+        PropTypes.oneOfType([
+          PropTypes.number,
+          PropTypes.string,
         ])
       ).isRequired,
-      date: React.PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
     })
   ).isRequired,
-  horizontal: React.PropTypes.bool,
+  horizontal: PropTypes.bool,
 };
 
 export default BlotterBody;

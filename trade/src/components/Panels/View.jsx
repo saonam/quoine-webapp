@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import MoveButton from './MoveButton';
@@ -46,17 +47,17 @@ const PanelsView = ({ state, Elements, hover, onEnter, onLeave }) => (
 );
 
 PanelsView.propTypes = {
-  state: React.PropTypes.shape({
-    prefs: React.PropTypes.array.isRequired,
-    constraints: React.PropTypes.array.isRequired,
+  state: PropTypes.shape({
+    prefs: PropTypes.array.isRequired,
+    constraints: PropTypes.array.isRequired,
   }).isRequired,
-  Elements: React.PropTypes.arrayOf(React.PropTypes.shape({
-    Cover: React.PropTypes.func.isRequired,
-    Spine: React.PropTypes.func.isRequired,
+  Elements: PropTypes.arrayOf(PropTypes.shape({
+    Cover: PropTypes.func.isRequired,
+    Spine: PropTypes.func.isRequired,
   })).isRequired,
-  onEnter: React.PropTypes.func.isRequired,
-  onLeave: React.PropTypes.func.isRequired,
-  hover: React.PropTypes.bool.isRequired,
+  onEnter: PropTypes.func.isRequired,
+  onLeave: PropTypes.func.isRequired,
+  hover: PropTypes.bool.isRequired,
 };
 
 export default PanelsView;

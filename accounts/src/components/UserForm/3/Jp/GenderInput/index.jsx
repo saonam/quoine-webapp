@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import RadiosInput from '@quoine/components/RadiosInput';
@@ -18,9 +19,9 @@ const JpGenderInput = ({ value, onChange, required }) => (
 );
 
 JpGenderInput.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  required: React.PropTypes.bool,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  required: PropTypes.bool,
 };
 
 export default JpGenderInput;

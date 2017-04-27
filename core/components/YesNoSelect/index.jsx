@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -17,9 +18,9 @@ const YesNoSelect = ({ id, value, onChange }) => (
 );
 
 YesNoSelect.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default YesNoSelect;

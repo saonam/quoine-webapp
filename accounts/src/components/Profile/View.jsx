@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -51,12 +52,12 @@ const Profile = ({ user, onChangeStatus, open, onOpen, onClose }) => (
 );
 
 Profile.propTypes = {
-  user: React.PropTypes.shape({}).isRequired,
-  onChangeStatus: React.PropTypes.func.isRequired,
+  user: PropTypes.shape({}).isRequired,
+  onChangeStatus: PropTypes.func.isRequired,
   // ===
-  open: React.PropTypes.bool.isRequired,
-  onOpen: React.PropTypes.func.isRequired,
-  onClose: React.PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  onOpen: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default Profile;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import TransitionGroup from '@quoine/components/TransitionGroup';
@@ -32,8 +33,8 @@ const TokenManage = ({ busy, ids }) => (
 );
 
 TokenManage.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  ids: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+  busy: PropTypes.bool.isRequired,
+  ids: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 export default TokenManage;

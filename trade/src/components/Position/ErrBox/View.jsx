@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ErrWrapper from '@quoine/components/ErrWrapper';
@@ -13,13 +14,13 @@ const PositionErrBoxView = ({ onDismiss, error, position }) => (
 );
 
 PositionErrBoxView.propTypes = {
-  onDismiss: React.PropTypes.func.isRequired,
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  onDismiss: PropTypes.func.isRequired,
+  error: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
-  position: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -17,9 +18,9 @@ const MarketSelectButton = ({ onSet, market, current }) => (
 );
 
 MarketSelectButton.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
-  market: React.PropTypes.string.isRequired,
-  current: React.PropTypes.string.isRequired,
+  onSet: PropTypes.func.isRequired,
+  market: PropTypes.string.isRequired,
+  current: PropTypes.string.isRequired,
 };
 
 export default MarketSelectButton;

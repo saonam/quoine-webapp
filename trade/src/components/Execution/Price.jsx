@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -7,12 +8,12 @@ const ExecutionPrice = ({ execution }) => (
 );
 
 ExecutionPrice.propTypes = {
-  execution: React.PropTypes.shape({
-    price: React.PropTypes.oneOfType([
-      React.PropTypes.number,
-      React.PropTypes.string,
+  execution: PropTypes.shape({
+    price: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
     ]).isRequired,
-    quoteCurrency: React.PropTypes.string.isRequired,
+    quoteCurrency: PropTypes.string.isRequired,
   }).isRequired,
 };
 

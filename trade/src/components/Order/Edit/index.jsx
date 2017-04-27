@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Connector from './Connector';
@@ -13,11 +14,11 @@ const OrderEdit = ({ order, Element, ...others }) => (
 );
 
 OrderEdit.propTypes = {
-  order: React.PropTypes.shape({
-    status: React.PropTypes.string.isRequired,
-    quantityFilled: React.PropTypes.number.isRequired,
+  order: PropTypes.shape({
+    status: PropTypes.string.isRequired,
+    quantityFilled: PropTypes.number.isRequired,
   }).isRequired,
-  Element: React.PropTypes.func.isRequired,
+  Element: PropTypes.func.isRequired,
 };
 
 export default OrderEdit;

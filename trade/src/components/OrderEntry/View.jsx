@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from './Header';
@@ -33,14 +34,14 @@ const OrderEntry = ({ form, confirming, reporting }) => {
 };
 
 OrderEntry.propTypes = {
-  form: React.PropTypes.shape({}).isRequired,
-  confirming: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.string,
+  form: PropTypes.shape({}).isRequired,
+  confirming: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string,
   ]),
-  reporting: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.shape({}),
+  reporting: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({}),
   ]),
 };
 

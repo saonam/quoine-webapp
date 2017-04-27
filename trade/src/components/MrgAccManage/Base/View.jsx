@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -37,14 +38,14 @@ const MrgAccManageBase = ({ mrgAcc, onToggle, onClick, type }) => (
 );
 
 MrgAccManageBase.propTypes = {
-  mrgAcc: React.PropTypes.shape({
-    account: React.PropTypes.string.isRequired,
-    product: React.PropTypes.string.isRequired,
-    quoteCurrency: React.PropTypes.string.isRequired,
+  mrgAcc: PropTypes.shape({
+    account: PropTypes.string.isRequired,
+    product: PropTypes.string.isRequired,
+    quoteCurrency: PropTypes.string.isRequired,
   }).isRequired,
-  onToggle: React.PropTypes.func.isRequired,
-  onClick: React.PropTypes.func.isRequired,
-  type: React.PropTypes.oneOf(['visible', 'hidden']).isRequired,
+  onToggle: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
+  type: PropTypes.oneOf(['visible', 'hidden']).isRequired,
 };
 
 export default MrgAccManageBase;

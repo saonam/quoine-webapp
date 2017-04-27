@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Item from '../Item';
@@ -15,7 +16,7 @@ const WdrBankList = ({ banks }) => (
 );
 
 WdrBankList.propTypes = {
-  banks: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  banks: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default WdrBankList;

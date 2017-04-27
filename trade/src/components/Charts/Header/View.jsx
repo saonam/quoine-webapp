@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from '@quoine/components/Header';
@@ -24,8 +25,8 @@ const ChartsHeader = ({ double, onToggle }) => (
 );
 
 ChartsHeader.propTypes = {
-  double: React.PropTypes.bool.isRequired,
-  onToggle: React.PropTypes.func.isRequired,
+  double: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
 };
 
 export default ChartsHeader;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -56,10 +57,10 @@ const AccountManageModal = ({ all, addeds, hiddens, onClose }) => (
 );
 
 AccountManageModal.propTypes = {
-  all: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  addeds: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  hiddens: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  onClose: React.PropTypes.func.isRequired,
+  all: PropTypes.arrayOf(PropTypes.string).isRequired,
+  addeds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  hiddens: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default AccountManageModal;

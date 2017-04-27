@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from './Button';
@@ -11,7 +12,7 @@ const AccountSelect = ({ currencies }) => (
 );
 
 AccountSelect.propTypes = {
-  currencies: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  currencies: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default AccountSelect;

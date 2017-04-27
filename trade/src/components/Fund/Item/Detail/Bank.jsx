@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Field from './Field';
@@ -23,7 +24,7 @@ const FundItemDetailBank = ({ fund }) => (
 );
 
 FundItemDetailBank.propTypes = {
-  fund: React.PropTypes.shape({}).isRequired,
+  fund: PropTypes.shape({}).isRequired,
 };
 
 export default FundItemDetailBank;

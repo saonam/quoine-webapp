@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -11,9 +12,9 @@ const MrgAccDetailInfo = ({ mrgAcc, Element, side }) => (
 );
 
 MrgAccDetailInfo.propTypes = {
-  mrgAcc: React.PropTypes.shape({}),
-  Element: React.PropTypes.func.isRequired,
-  side: React.PropTypes.oneOf(['short', 'long']).isRequired,
+  mrgAcc: PropTypes.shape({}),
+  Element: PropTypes.func.isRequired,
+  side: PropTypes.oneOf(['short', 'long']).isRequired,
 };
 
 export default MrgAccDetailInfo;

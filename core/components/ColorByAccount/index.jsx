@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -9,8 +10,8 @@ const ColorByAccount = ({ account, children }) => (
 );
 
 ColorByAccount.propTypes = {
-  account: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
+  account: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default ColorByAccount;

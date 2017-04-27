@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -15,10 +16,10 @@ const Button = ({ children, type, styleName, className, ...other }) => (
 );
 
 Button.propTypes = {
-  type: React.PropTypes.string,
-  styleName: React.PropTypes.string,
-  className: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired,
+  type: PropTypes.string,
+  styleName: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 Button.defaultProps = {

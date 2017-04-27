@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -61,12 +62,12 @@ class ResetPasswordContainer extends React.Component {
 }
 
 ResetPasswordContainer.propTypes = {
-  router: React.PropTypes.shape({
-    push: React.PropTypes.func.isRequired,
+  router: PropTypes.shape({
+    push: PropTypes.func.isRequired,
   }).isRequired,
-  location: React.PropTypes.shape({
-    query: React.PropTypes.shape({
-      continue: React.PropTypes.string,
+  location: PropTypes.shape({
+    query: PropTypes.shape({
+      continue: PropTypes.string,
     }).isRequired,
   }).isRequired,
 };

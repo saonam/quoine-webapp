@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Connector from './Connector';
@@ -9,9 +10,9 @@ const OrderEditErrBox = ({ order }) => (
 );
 
 OrderEditErrBox.propTypes = {
-  order: React.PropTypes.shape({
-    status: React.PropTypes.string.isRequired,
-    quantityFilled: React.PropTypes.number.isRequired,
+  order: PropTypes.shape({
+    status: PropTypes.string.isRequired,
+    quantityFilled: PropTypes.number.isRequired,
   }).isRequired,
 };
 

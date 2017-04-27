@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Filter from './Filter';
@@ -33,7 +34,7 @@ BlotterView.propTypes = {
   filtersSelects: Filter.propTypes.selects,
   namespace: Filter.propTypes.namespace,
   // ===
-  Labels: React.PropTypes.func,
+  Labels: PropTypes.func,
   // ===
   collection: Body.propTypes.collection,
   Item: Body.propTypes.Item,
@@ -42,7 +43,7 @@ BlotterView.propTypes = {
   busy: LoadButton.propTypes.busy,
   page: LoadButton.propTypes.page,
   // ===
-  horizontal: React.PropTypes.bool,
+  horizontal: PropTypes.bool,
 };
 
 export default BlotterView;

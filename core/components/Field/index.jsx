@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -36,9 +37,9 @@ const Field = ({ label, children, layout }) => {
 };
 
 Field.propTypes = {
-  label: React.PropTypes.node,
-  children: React.PropTypes.node.isRequired,
-  layout: React.PropTypes.oneOf([
+  label: PropTypes.node,
+  children: PropTypes.node.isRequired,
+  layout: PropTypes.oneOf([
     'default',
     'inline',
     '1:1', '1:2', '1:3',

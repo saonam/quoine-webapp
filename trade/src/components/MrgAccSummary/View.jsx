@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Pnl from 'components/MrgAcc/Pnl';
@@ -21,9 +22,9 @@ const MrgAccSummary = ({ mrgAcc }) => (
 );
 
 MrgAccSummary.propTypes = {
-  mrgAcc: React.PropTypes.shape({
-    pnl: React.PropTypes.number.isRequired,
-    position: React.PropTypes.number.isRequired,
+  mrgAcc: PropTypes.shape({
+    pnl: PropTypes.number.isRequired,
+    position: PropTypes.number.isRequired,
   }),
 };
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -16,9 +17,9 @@ const LoadButton = ({ onLoad, busy, page }) => (
 );
 
 LoadButton.propTypes = {
-  onLoad: React.PropTypes.func.isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  page: React.PropTypes.number.isRequired,
+  onLoad: PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
+  page: PropTypes.number.isRequired,
 };
 
 export default LoadButton;

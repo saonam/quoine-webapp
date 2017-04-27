@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SelectInput from '@quoine/components/SelectInput';
@@ -15,9 +16,9 @@ const CountryInputView = ({ countries, value, onChange, ...others }) => (
 );
 
 CountryInputView.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  countries: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  countries: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default CountryInputView;

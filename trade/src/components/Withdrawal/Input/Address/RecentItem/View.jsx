@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -15,8 +16,8 @@ const WdrRecentAddressView = ({ address, onClick }) => (
 );
 
 WdrRecentAddressView.propTypes = {
-  address: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func.isRequired,
+  address: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default WdrRecentAddressView;

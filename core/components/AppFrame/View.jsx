@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Loading from '@quoine/components/LoadingIconWrapper';
@@ -26,11 +27,11 @@ const AppFrame = ({ busy, theme, menu, body }) => (
 );
 
 AppFrame.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  theme: React.PropTypes.string.isRequired,
+  busy: PropTypes.bool.isRequired,
+  theme: PropTypes.string.isRequired,
   // ===
-  body: React.PropTypes.element.isRequired,
-  menu: React.PropTypes.element,
+  body: PropTypes.element.isRequired,
+  menu: PropTypes.element,
 };
 
 export default AppFrame;

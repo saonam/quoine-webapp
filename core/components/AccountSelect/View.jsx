@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SelectInput from '@quoine/components/SelectInput';
@@ -14,9 +15,9 @@ const AccountSelect = ({ accounts, value, onChange }) => (
 );
 
 AccountSelect.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  accounts: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  accounts: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default AccountSelect;

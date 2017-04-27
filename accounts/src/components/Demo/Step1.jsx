@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -26,8 +27,8 @@ const Step1 = ({ onNew, onContinue }) => (
 );
 
 Step1.propTypes = {
-  onNew: React.PropTypes.func.isRequired,
-  onContinue: React.PropTypes.func.isRequired,
+  onNew: PropTypes.func.isRequired,
+  onContinue: PropTypes.func.isRequired,
 };
 
 export default Step1;

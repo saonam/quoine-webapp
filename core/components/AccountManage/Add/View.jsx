@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
@@ -14,9 +15,9 @@ const AccountManageAdd = ({ modelKey: currency, onAdd, adding }) => (
 );
 
 AccountManageAdd.propTypes = {
-  adding: React.PropTypes.string.isRequired,
-  modelKey: React.PropTypes.string.isRequired,
-  onAdd: React.PropTypes.func.isRequired,
+  adding: PropTypes.string.isRequired,
+  modelKey: PropTypes.string.isRequired,
+  onAdd: PropTypes.func.isRequired,
 };
 
 export default AccountManageAdd;

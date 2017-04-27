@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -47,18 +48,18 @@ const FormInline = (props) => {
 };
 
 FormInline.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  description: React.PropTypes.string,
+  children: PropTypes.node.isRequired,
+  description: PropTypes.string,
 
-  error: React.PropTypes.string,
-  busy: React.PropTypes.bool.isRequired,
-  success: React.PropTypes.string,
-  doneLabel: React.PropTypes.string,
+  error: PropTypes.string,
+  busy: PropTypes.bool.isRequired,
+  success: PropTypes.string,
+  doneLabel: PropTypes.string,
 
-  onSubmit: React.PropTypes.func.isRequired,
-  submitLabel: React.PropTypes.string,
-  onCancel: React.PropTypes.func.isRequired,
-  cancelLabel: React.PropTypes.string,
+  onSubmit: PropTypes.func.isRequired,
+  submitLabel: PropTypes.string,
+  onCancel: PropTypes.func.isRequired,
+  cancelLabel: PropTypes.string,
 };
 
 export default FormInline;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -29,11 +30,11 @@ const NameInputView = ({
 );
 
 NameInputView.propTypes = {
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.shape({}).isRequired,
-  autoFocus: React.PropTypes.bool,
-  firstLabel: React.PropTypes.string,
-  lastLabel: React.PropTypes.string,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.shape({}).isRequired,
+  autoFocus: PropTypes.bool,
+  firstLabel: PropTypes.string,
+  lastLabel: PropTypes.string,
 };
 
 export default NameInputView;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -25,11 +26,11 @@ const NotificationItem = ({ notification, onDismiss }) => (
 );
 
 NotificationItem.propTypes = {
-  notification: React.PropTypes.shape({
-    id: React.PropTypes.string.isRequired,
-    styleName: React.PropTypes.string.isRequired,
+  notification: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    styleName: PropTypes.string.isRequired,
   }).isRequired,
-  onDismiss: React.PropTypes.func.isRequired,
+  onDismiss: PropTypes.func.isRequired,
 };
 
 export default NotificationItem;

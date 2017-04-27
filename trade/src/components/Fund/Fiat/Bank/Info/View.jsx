@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import translate from '@quoine/translate';
 
@@ -36,9 +37,9 @@ const FundInfoView = ({ busy, banks }) => {
 };
 
 FundInfoView.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  banks: React.PropTypes.arrayOf(
-    React.PropTypes.shape({})
+  busy: PropTypes.bool.isRequired,
+  banks: PropTypes.arrayOf(
+    PropTypes.shape({})
   ).isRequired,
 };
 

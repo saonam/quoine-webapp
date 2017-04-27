@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -16,12 +17,12 @@ const ProductPrice = ({ product, type }) => {
 };
 
 ProductPrice.propTypes = {
-  product: React.PropTypes.shape({
-    bid: React.PropTypes.number.isRequired,
-    ask: React.PropTypes.number.isRequired,
-    indicator: React.PropTypes.number.isRequired,
+  product: PropTypes.shape({
+    bid: PropTypes.number.isRequired,
+    ask: PropTypes.number.isRequired,
+    indicator: PropTypes.number.isRequired,
   }).isRequired,
-  type: React.PropTypes.oneOf(['bid', 'ask', 'last']).isRequired,
+  type: PropTypes.oneOf(['bid', 'ask', 'last']).isRequired,
 };
 
 export default ProductPrice;

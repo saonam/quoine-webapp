@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { StopLoss, Edit } from 'components/Position';
@@ -12,8 +13,8 @@ const PositionStopLossWEdit = ({ position, layout }) => (
 );
 
 PositionStopLossWEdit.propTypes = {
-  position: React.PropTypes.shape({}).isRequired,
-  layout: React.PropTypes.string.isRequired,
+  position: PropTypes.shape({}).isRequired,
+  layout: PropTypes.string.isRequired,
 };
 
 export default PositionStopLossWEdit;

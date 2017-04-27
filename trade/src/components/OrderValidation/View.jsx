@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -15,12 +16,12 @@ const OrderValidation = ({ className, error, validation }) => {
 };
 
 OrderValidation.propTypes = {
-  error: React.PropTypes.oneOfType([
-    React.PropTypes.shape({}),
-    React.PropTypes.bool,
+  error: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.bool,
   ]).isRequired,
-  validation: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string.isRequired,
+  validation: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default OrderValidation;

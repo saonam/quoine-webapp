@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import View from './View';
@@ -53,8 +54,8 @@ class TokenAddForm extends React.Component {
 }
 
 TokenAddForm.propTypes = {
-  onCancel: React.PropTypes.func.isRequired,
-  onAdd: React.PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  onAdd: PropTypes.func.isRequired,
 };
 
 export default TokenAddForm;

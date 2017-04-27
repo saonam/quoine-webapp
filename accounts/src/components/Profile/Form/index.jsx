@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -54,8 +55,8 @@ class ProfileForm extends React.Component {
 }
 
 ProfileForm.propTypes = {
-  onChangeStatus: React.PropTypes.func.isRequired,
-  user: React.PropTypes.shape({}),
+  onChangeStatus: PropTypes.func.isRequired,
+  user: PropTypes.shape({}),
 };
 
 export default ProfileForm;

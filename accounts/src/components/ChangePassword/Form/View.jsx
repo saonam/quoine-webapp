@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -40,16 +41,16 @@ const ChangePasswordFormView = (props) => (
 );
 
 ChangePasswordFormView.propTypes = {
-  current: React.PropTypes.string.isRequired,
-  onCurrentChange: React.PropTypes.func.isRequired,
-  next: React.PropTypes.string.isRequired,
-  onNextChange: React.PropTypes.func.isRequired,
+  current: PropTypes.string.isRequired,
+  onCurrentChange: PropTypes.func.isRequired,
+  next: PropTypes.string.isRequired,
+  onNextChange: PropTypes.func.isRequired,
   // ===
-  onSubmit: React.PropTypes.func.isRequired,
-  onCancel: React.PropTypes.func.isRequired,
-  busy: React.PropTypes.bool.isRequired,
-  success: React.PropTypes.bool.isRequired,
-  error: React.PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
+  success: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
 };
 
 export default ChangePasswordFormView;

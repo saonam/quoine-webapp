@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -42,7 +43,7 @@ FundFiatBank.propTypes = {
   ...Success.propTypes,
   // remove onClose from form propTypes
   // eslint-disable-next-line react/forbid-prop-types
-  onClose: React.PropTypes.any,
+  onClose: PropTypes.any,
 };
 
 export default FundFiatBank;

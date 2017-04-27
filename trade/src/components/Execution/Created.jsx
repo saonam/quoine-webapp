@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Time from '@quoine/components/Time';
@@ -7,8 +8,8 @@ const ExecutionCreated = ({ execution }) => (
 );
 
 ExecutionCreated.propTypes = {
-  execution: React.PropTypes.shape({
-    createdAt: React.PropTypes.number.isRequired,
+  execution: PropTypes.shape({
+    createdAt: PropTypes.number.isRequired,
   }).isRequired,
 };
 

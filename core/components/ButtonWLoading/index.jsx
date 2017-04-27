@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -19,9 +20,9 @@ const ButtonWLoading = ({ children, busy, className, ...other }) => (
 );
 
 ButtonWLoading.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  children: React.PropTypes.node.isRequired,
-  className: React.PropTypes.string,
+  busy: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 ButtonWLoading.defaultProps = {

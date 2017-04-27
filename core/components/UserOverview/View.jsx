@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -12,9 +13,9 @@ const UserOverview = ({ user }) => (
 );
 
 UserOverview.propTypes = {
-  user: React.PropTypes.shape({
-    name: React.PropTypes.string,
-    email: React.PropTypes.string,
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
   }),
 };
 

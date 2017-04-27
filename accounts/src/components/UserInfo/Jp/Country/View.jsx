@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const UserInfoCountryView = ({ country }) => (
@@ -9,7 +10,7 @@ const UserInfoCountryView = ({ country }) => (
 );
 
 UserInfoCountryView.propTypes = {
-  country: React.PropTypes.shape({}),
+  country: PropTypes.shape({}),
 };
 
 export default UserInfoCountryView;

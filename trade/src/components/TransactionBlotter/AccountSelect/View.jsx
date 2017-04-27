@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -12,8 +13,8 @@ const TransactionBlotterAccountSelect = ({ account, onChange }) => (
 );
 
 TransactionBlotterAccountSelect.propTypes = {
-  account: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  account: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default TransactionBlotterAccountSelect;

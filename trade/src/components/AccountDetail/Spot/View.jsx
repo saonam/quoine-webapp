@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Item from './Item';
@@ -10,9 +11,9 @@ const AccountDetailSpot = ({ currencies }) => (
 );
 
 AccountDetailSpot.propTypes = {
-  currencies: React.PropTypes.shape({
-    quote: React.PropTypes.string.isRequired,
-    base: React.PropTypes.string.isRequired,
+  currencies: PropTypes.shape({
+    quote: PropTypes.string.isRequired,
+    base: PropTypes.string.isRequired,
   }),
 };
 

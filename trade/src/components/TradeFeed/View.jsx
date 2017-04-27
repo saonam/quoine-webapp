@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import TransitionGroup from '@quoine/components/TransitionGroup';
 
@@ -32,8 +33,8 @@ const TradeFeed = ({ keys, busy }) => {
 };
 
 TradeFeed.propTypes = {
-  keys: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-  busy: React.PropTypes.bool.isRequired,
+  keys: PropTypes.arrayOf(PropTypes.number).isRequired,
+  busy: PropTypes.bool.isRequired,
 };
 
 export default TradeFeed;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ErrWrapper from '@quoine/components/ErrWrapper';
@@ -11,8 +12,8 @@ const PositionCloseErr = ({ onDismiss, message }) => (
 );
 
 PositionCloseErr.propTypes = {
-  onDismiss: React.PropTypes.func.isRequired,
-  message: React.PropTypes.string.isRequired,
+  onDismiss: PropTypes.func.isRequired,
+  message: PropTypes.string.isRequired,
 };
 
 export default PositionCloseErr;

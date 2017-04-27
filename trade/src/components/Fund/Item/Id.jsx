@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const FundItemId = ({ fund }) => (
@@ -5,7 +6,7 @@ const FundItemId = ({ fund }) => (
 );
 
 FundItemId.propTypes = {
-  fund: React.PropTypes.shape({}).isRequired,
+  fund: PropTypes.shape({}).isRequired,
 };
 
 export default FundItemId;

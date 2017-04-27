@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from './Header';
@@ -31,8 +32,8 @@ const Charts = ({ error, double }) => {
 };
 
 Charts.propTypes = {
-  error: React.PropTypes.bool.isRequired,
-  double: React.PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
+  double: PropTypes.bool.isRequired,
 };
 
 export default Charts;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -25,7 +26,7 @@ const WdrListBody = ({ withdrawals }) => (
 );
 
 WdrListBody.propTypes = {
-  withdrawals: React.PropTypes.arrayOf(React.PropTypes.shape({})).isRequired,
+  withdrawals: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default WdrListBody;

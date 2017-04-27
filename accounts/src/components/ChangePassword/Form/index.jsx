@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -52,7 +53,7 @@ class ChangePasswordForm extends React.Component {
 }
 
 ChangePasswordForm.propTypes = {
-  onClose: React.PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default ChangePasswordForm;

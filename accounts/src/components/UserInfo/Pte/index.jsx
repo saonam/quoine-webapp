@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Basic from './Basic';
@@ -16,9 +17,9 @@ const UserInfoJp = ({ info, Group, Item }) => (
 );
 
 UserInfoJp.propTypes = {
-  info: React.PropTypes.shape({}).isRequired,
-  Group: React.PropTypes.func.isRequired,
-  Item: React.PropTypes.func.isRequired,
+  info: PropTypes.shape({}).isRequired,
+  Group: PropTypes.func.isRequired,
+  Item: PropTypes.func.isRequired,
 };
 
 export default UserInfoJp;

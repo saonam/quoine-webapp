@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import LoadingIconWrapper from '@quoine/components/LoadingIconWrapper';
@@ -23,8 +24,8 @@ const BalanceTotalBodyView = ({ currency, onChange }) => (
 );
 
 BalanceTotalBodyView.propTypes = {
-  currency: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  currency: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default BalanceTotalBodyView;

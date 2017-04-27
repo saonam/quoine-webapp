@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './styles.css';
@@ -14,9 +15,9 @@ const InputInline = ({ id, label, children }) => (
 );
 
 InputInline.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
-  children: React.PropTypes.element.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default InputInline;

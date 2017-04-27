@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import FloatBox from '@quoine/components/FloatBox';
@@ -27,14 +28,14 @@ const OrderCancelView = ({ activity, order, layout }) => {
 };
 
 OrderCancelView.propTypes = {
-  activity: React.PropTypes.shape({}),
-  order: React.PropTypes.shape({
-    id: React.PropTypes.oneOfType([
-      React.PropTypes.number.isRequired,
-      React.PropTypes.string.isRequired,
+  activity: PropTypes.shape({}),
+  order: PropTypes.shape({
+    id: PropTypes.oneOfType([
+      PropTypes.number.isRequired,
+      PropTypes.string.isRequired,
     ]),
   }).isRequired,
-  layout: React.PropTypes.string.isRequired,
+  layout: PropTypes.string.isRequired,
 };
 
 export default OrderCancelView;

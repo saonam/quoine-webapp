@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -14,8 +15,8 @@ const AccountDetailMargin = ({ id, children }) => (
 );
 
 AccountDetailMargin.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
+  id: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default AccountDetailMargin;

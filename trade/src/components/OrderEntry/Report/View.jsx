@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ReportWrapper from '@quoine/components/ReportWrapper';
@@ -37,8 +38,8 @@ const OrderEntryReport = ({ order, onSet }) => (
 );
 
 OrderEntryReport.propTypes = {
-  onSet: React.PropTypes.func.isRequired,
-  order: React.PropTypes.shape({}).isRequired,
+  onSet: PropTypes.func.isRequired,
+  order: PropTypes.shape({}).isRequired,
 };
 
 export default OrderEntryReport;

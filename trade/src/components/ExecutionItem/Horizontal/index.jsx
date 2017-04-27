@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -43,7 +44,7 @@ const ExecutionItemHorizontal = ({ execution }) => (
 );
 
 ExecutionItemHorizontal.propTypes = {
-  execution: React.PropTypes.shape({}).isRequired,
+  execution: PropTypes.shape({}).isRequired,
 };
 
 export default ExecutionItemHorizontal;

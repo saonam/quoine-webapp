@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -48,13 +49,13 @@ const TokenAddFormView = ({ form, onChange, onSubmit, onCancel }) => (
 );
 
 TokenAddFormView.propTypes = {
-  form: React.PropTypes.objectOf(
-    React.PropTypes.objectOf(React.PropTypes.bool),
+  form: PropTypes.objectOf(
+    PropTypes.objectOf(PropTypes.bool),
   ).isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
-  onCancel: React.PropTypes.func.isRequired,
-  onChange: React.PropTypes.objectOf(
-    React.PropTypes.objectOf(React.PropTypes.func),
+  onSubmit: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  onChange: PropTypes.objectOf(
+    PropTypes.objectOf(PropTypes.func),
   ).isRequired,
 };
 

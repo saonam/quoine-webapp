@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const UserInfoOccupation = ({ occupation }) => (
@@ -18,7 +19,7 @@ const UserInfoOccupation = ({ occupation }) => (
 );
 
 UserInfoOccupation.propTypes = {
-  occupation: React.PropTypes.shape({}).isRequired,
+  occupation: PropTypes.shape({}).isRequired,
 };
 
 export default UserInfoOccupation;

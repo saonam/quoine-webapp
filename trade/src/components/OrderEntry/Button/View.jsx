@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -20,11 +21,11 @@ const OrderEntryButton = ({
 );
 
 OrderEntryButton.propTypes = {
-  side: React.PropTypes.oneOf(['buy', 'sell']).isRequired,
-  submitting: React.PropTypes.string.isRequired,
-  validation: React.PropTypes.string.isRequired,
-  onSetForm: React.PropTypes.func.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
+  side: PropTypes.oneOf(['buy', 'sell']).isRequired,
+  submitting: PropTypes.string.isRequired,
+  validation: PropTypes.string.isRequired,
+  onSetForm: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default OrderEntryButton;

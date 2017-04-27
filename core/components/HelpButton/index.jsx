@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -20,7 +21,7 @@ const HelpButton = ({ isIcon }) => (
 );
 
 HelpButton.propTypes = {
-  isIcon: React.PropTypes.bool,
+  isIcon: PropTypes.bool,
 };
 
 export default HelpButton;

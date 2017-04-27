@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import CheckboxInput from '@quoine/components/CheckboxInput';
@@ -32,9 +33,9 @@ const JpPurposeInputView = ({ value, onChange, required }) => (
 );
 
 JpPurposeInputView.propTypes = {
-  value: React.PropTypes.shape({}).isRequired,
-  onChange: React.PropTypes.shape({}).isRequired,
-  required: React.PropTypes.bool,
+  value: PropTypes.shape({}).isRequired,
+  onChange: PropTypes.shape({}).isRequired,
+  required: PropTypes.bool,
 };
 
 export default JpPurposeInputView;

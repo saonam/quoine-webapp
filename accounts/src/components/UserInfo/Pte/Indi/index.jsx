@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -27,8 +28,8 @@ const UserInfoPteIndi = ({ info, Item }) => (
 );
 
 UserInfoPteIndi.propTypes = {
-  info: React.PropTypes.shape({}).isRequired,
-  Item: React.PropTypes.func.isRequired,
+  info: PropTypes.shape({}).isRequired,
+  Item: PropTypes.func.isRequired,
 };
 
 export default UserInfoPteIndi;

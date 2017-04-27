@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Carousel from '@quoine/components/Carousel';
@@ -26,8 +27,8 @@ const ProductSelectListView = ({ symbols, current }) => (
 );
 
 ProductSelectListView.propTypes = {
-  symbols: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  current: React.PropTypes.string.isRequired,
+  symbols: PropTypes.arrayOf(PropTypes.string).isRequired,
+  current: PropTypes.string.isRequired,
 };
 
 export default ProductSelectListView;

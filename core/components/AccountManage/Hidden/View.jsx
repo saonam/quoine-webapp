@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import t from '@quoine/translate';
@@ -17,8 +18,8 @@ const AccountManageVisible = ({ modelKey: currency, onShow }) => (
 );
 
 AccountManageVisible.propTypes = {
-  modelKey: React.PropTypes.string.isRequired,
-  onShow: React.PropTypes.func.isRequired,
+  modelKey: PropTypes.string.isRequired,
+  onShow: PropTypes.func.isRequired,
 };
 
 export default AccountManageVisible;

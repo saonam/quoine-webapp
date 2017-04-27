@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Preview from '@quoine/components/ThemePreview';
@@ -14,9 +15,9 @@ const ThemeButton = ({ theme, current, onClick }) => (
 );
 
 ThemeButton.propTypes = {
-  theme: React.PropTypes.string.isRequired,
-  current: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
+  current: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ThemeButton;

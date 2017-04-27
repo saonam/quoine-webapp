@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -27,9 +28,9 @@ const BlotterFilter = ({ currents, selects, onSet, namespace }) => (
 );
 
 BlotterFilter.propTypes = {
-  currents: React.PropTypes.shape({}).isRequired,
-  selects: React.PropTypes.shape({}).isRequired,
-  namespace: React.PropTypes.string.isRequired,
+  currents: PropTypes.shape({}).isRequired,
+  selects: PropTypes.shape({}).isRequired,
+  namespace: PropTypes.string.isRequired,
   onSet: Select.propTypes.onSet,
 };
 

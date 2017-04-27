@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -36,7 +37,7 @@ class TFAManageAddPhone extends React.Component {
 
 TFAManageAddPhone.propTypes = {
   goStandby: View.propTypes.onCancel,
-  onUpdatePhone: React.PropTypes.func.isRequired,
+  onUpdatePhone: PropTypes.func.isRequired,
 };
 
 export default TFAManageAddPhone;

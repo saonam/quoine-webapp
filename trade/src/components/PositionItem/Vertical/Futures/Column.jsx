@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -16,8 +17,8 @@ const PositionItemFuturesColumn = ({ label, children }) => (
 );
 
 PositionItemFuturesColumn.propTypes = {
-  label: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default PositionItemFuturesColumn;

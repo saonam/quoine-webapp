@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Default from './Default';
@@ -12,8 +13,8 @@ const PositionLeverage = ({ position }) => (
 );
 
 PositionLeverage.propTypes = {
-  position: React.PropTypes.shape({
-    market: React.PropTypes.string,
+  position: PropTypes.shape({
+    market: PropTypes.string,
   }).isRequired,
 };
 

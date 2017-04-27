@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Form from '@quoine/components/FormNumberInPlace';
@@ -11,10 +12,10 @@ const OrderEditFormView = ({ order, target, onClose, onEdit }) => (
 );
 
 OrderEditFormView.propTypes = {
-  onClose: React.PropTypes.func.isRequired,
-  onEdit: React.PropTypes.func.isRequired,
-  target: React.PropTypes.string.isRequired,
-  order: React.PropTypes.shape({}).isRequired,
+  onClose: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired,
+  target: PropTypes.string.isRequired,
+  order: PropTypes.shape({}).isRequired,
 };
 
 export default OrderEditFormView;

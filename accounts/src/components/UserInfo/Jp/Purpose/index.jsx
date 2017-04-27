@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const UserInfoPurpose = ({ purpose }) => (
@@ -18,7 +19,7 @@ const UserInfoPurpose = ({ purpose }) => (
 );
 
 UserInfoPurpose.propTypes = {
-  purpose: React.PropTypes.shape({}).isRequired,
+  purpose: PropTypes.shape({}).isRequired,
 };
 
 export default UserInfoPurpose;

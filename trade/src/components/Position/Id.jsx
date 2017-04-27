@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const PositionId = ({ position }) => (
@@ -5,8 +6,8 @@ const PositionId = ({ position }) => (
 );
 
 PositionId.propTypes = {
-  position: React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
+  position: PropTypes.shape({
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };
 

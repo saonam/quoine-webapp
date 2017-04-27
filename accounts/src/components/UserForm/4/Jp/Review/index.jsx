@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import UserInfo from 'components/UserInfo';
@@ -14,7 +15,7 @@ const UserForm4JpReview = ({ form }) => (
 );
 
 UserForm4JpReview.propTypes = {
-  form: React.PropTypes.shape({}).isRequired,
+  form: PropTypes.shape({}).isRequired,
 };
 
 export default UserForm4JpReview;

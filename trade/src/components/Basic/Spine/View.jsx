@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -17,8 +18,8 @@ const Item = ({ children, labelKey }) => (
 );
 
 Item.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  labelKey: React.PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  labelKey: PropTypes.string.isRequired,
 };
 
 const BasicSpine = ({ account }) => (
@@ -40,10 +41,10 @@ const BasicSpine = ({ account }) => (
 );
 
 BasicSpine.propTypes = {
-  account: React.PropTypes.shape({
-    balance: React.PropTypes.number.isRequired,
-    pnl: React.PropTypes.number.isRequired,
-    marginCoverage: React.PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    balance: PropTypes.number.isRequired,
+    pnl: PropTypes.number.isRequired,
+    marginCoverage: PropTypes.number.isRequired,
   }),
 };
 

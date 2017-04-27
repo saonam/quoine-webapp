@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Money from '@quoine/components/Money';
@@ -21,10 +22,10 @@ const MrgAccPosition = ({ mrgAcc, side }) => {
 };
 
 MrgAccPosition.propTypes = {
-  mrgAcc: React.PropTypes.shape({
-    position: React.PropTypes.number.isRequired,
+  mrgAcc: PropTypes.shape({
+    position: PropTypes.number.isRequired,
   }).isRequired,
-  side: React.PropTypes.oneOf(['long', 'short', 'both']),
+  side: PropTypes.oneOf(['long', 'short', 'both']),
 };
 
 export default MrgAccPosition;

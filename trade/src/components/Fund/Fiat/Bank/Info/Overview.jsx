@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@quoine/components/Button';
@@ -9,7 +10,7 @@ const FundInfoOverview = ({ bank }) => (
 );
 
 FundInfoOverview.propTypes = {
-  bank: React.PropTypes.shape({}).isRequired,
+  bank: PropTypes.shape({}).isRequired,
 };
 
 export default FundInfoOverview;

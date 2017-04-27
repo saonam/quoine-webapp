@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import translate from '@quoine/translate';
 
@@ -37,9 +38,9 @@ const WdrInfoItem = ({ label, value, account }) => (
 );
 
 WdrInfoItem.propTypes = {
-  label: React.PropTypes.string.isRequired,
-  value: React.PropTypes.number.isRequired,
-  account: React.PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  account: PropTypes.string.isRequired,
 };
 
 export default WdrInfoItem;

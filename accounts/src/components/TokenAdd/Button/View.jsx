@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -14,8 +15,8 @@ const TokenAddButtonView = ({ onOpen, busy }) => (
 );
 
 TokenAddButtonView.propTypes = {
-  busy: React.PropTypes.bool.isRequired,
-  onOpen: React.PropTypes.func.isRequired,
+  busy: PropTypes.bool.isRequired,
+  onOpen: PropTypes.func.isRequired,
 };
 
 export default TokenAddButtonView;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -53,7 +54,7 @@ const ProfileVerification = ({ user }) => {
 };
 
 ProfileVerification.propTypes = {
-  user: React.PropTypes.shape({}),
+  user: PropTypes.shape({}),
 };
 
 export default ProfileVerification;

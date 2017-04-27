@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Pnl, Balance, Margin } from '@quoine/components/Account';
@@ -21,11 +22,11 @@ const AccountDetailMargin = ({ account }) => (
 );
 
 AccountDetailMargin.propTypes = {
-  account: React.PropTypes.shape({
-    balance: React.PropTypes.number.isRequired,
-    pnl: React.PropTypes.number.isRequired,
-    pnlRealised: React.PropTypes.number.isRequired,
-    marginAvailable: React.PropTypes.number.isRequired,
+  account: PropTypes.shape({
+    balance: PropTypes.number.isRequired,
+    pnl: PropTypes.number.isRequired,
+    pnlRealised: PropTypes.number.isRequired,
+    marginAvailable: PropTypes.number.isRequired,
   }),
 };
 
