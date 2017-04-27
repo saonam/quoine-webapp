@@ -23,6 +23,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
 
-    "postinstall": "if [ -z ${DYNO+x} ]; then cd ../core && yarn install && yarn link && yarn link @quoine/core && cd ../trade && yarn link @quoine/core; fi"
+    "postinstall": "if [ -z ${DYNO+x} ]; then cd ../core && yarn install && yarn link && yarn link @quoine/core && cd ../accounts && yarn link @quoine/core; fi"
   }
 }
