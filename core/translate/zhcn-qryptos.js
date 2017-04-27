@@ -154,6 +154,10 @@ export default {
     "cancel": "取消",
     "done": "完成",
   },
+  "hint": {
+    "done": "Done",
+    "title": "Help",
+  },
   "notifications": {
     "disable-trading": "交易会被禁用直到您的账号通过。请去菜单 > 设定 > 个人信息验证您的账号。",
     "dismiss": "取消",

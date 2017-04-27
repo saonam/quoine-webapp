@@ -154,6 +154,10 @@ export default {
     "cancel": "Cancel",
     "done": "Done",
   },
+  "hint": {
+    "done": "Done",
+    "title": "Help",
+  },
   "notifications": {
     "disable-trading": "Trading is disabled until your account is approved. Please go to Menu > Settings > Profile to verify your account.",
     "dismiss": "Dismiss",

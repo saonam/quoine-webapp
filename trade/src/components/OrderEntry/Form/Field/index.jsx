@@ -8,12 +8,13 @@ import Hint from '@quoine/components/Hint';
 
 import styles from './styles.css';
 
-const Label = ({ id, hintStyle }) => (
+
+const Label = ({ id, hintStyle, ...others }) => (
   <h1 className={styles.label}>
     {translate(`order:${id}`)}
     {hintStyle ? <span>&nbsp;</span> : null}
     {hintStyle ? (
-      <Hint style={hintStyle}>
+      <Hint style={hintStyle} {...others}>
         <p
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
