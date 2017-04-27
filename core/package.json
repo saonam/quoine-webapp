@@ -1,6 +1,7 @@
 {
   "name": "@quoine/core",
   "version": "3.10.0-rc.6",
+  "license": "MIT",
   "dependencies": {
     "@quoine/core": "file:.",
     "@quoine/react-scripts": "5.9.13",
