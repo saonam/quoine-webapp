@@ -7,7 +7,7 @@ import styles from './styles.css';
 
 const MarketSelect = ({ futures, user }) => {
   let futuresNode = null;
-  if (process.env.REACT_APP_BITMEX_HOST && user.id && !user.isQuoineJapan) {
+  if (process.env.REACT_APP_BITMEX_HOST && user.id && !user.underJFSA) {
     futuresNode = futures ? (
       <Button market="futures" />
     ) : (
@@ -27,7 +27,7 @@ MarketSelect.propTypes = {
   futures: React.PropTypes.bool.isRequired,
   user: React.PropTypes.shape({
     id: React.PropTypes.number,
-    isQuoineJapan: React.PropTypes.bool,
+    underJFSA: React.PropTypes.bool,
   }).isRequired,
 };
 

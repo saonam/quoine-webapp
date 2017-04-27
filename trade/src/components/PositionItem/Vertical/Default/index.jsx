@@ -4,16 +4,16 @@ import Expander from '@quoine/components/Expander';
 import Overview from './Overview';
 import Detail from './Detail';
 
-const PositionItemVerticalDefault = ({ position, isQuoineJapan }) => (
+const PositionItemVerticalDefault = ({ position, underJFSA }) => (
   <Expander
     Overview={Overview} Detail={Detail}
-    position={position} isQuoineJapan={isQuoineJapan}
+    position={position} underJFSA={underJFSA}
   />
 );
 
 PositionItemVerticalDefault.propTypes = {
   position: React.PropTypes.shape({}).isRequired,
-  isQuoineJapan: React.PropTypes.bool.isRequired,
+  underJFSA: React.PropTypes.bool.isRequired,
 };
 
 export default PositionItemVerticalDefault;

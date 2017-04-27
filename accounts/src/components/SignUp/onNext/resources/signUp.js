@@ -8,8 +8,8 @@ const signUp = form => {
     useCache: false,
     errorPrefix: 'sign-up',
   };
-  if (form.isQuoineJapan) {
-    options.vendorId = process.env.REACT_APP_QUOINEJP_ID;
+  if (form.underJFSA) {
+    options.vendorId = process.env.REACT_APP_VENDOR_JFSA_ID;
   }
   return quoine.post('/users', options);
 };

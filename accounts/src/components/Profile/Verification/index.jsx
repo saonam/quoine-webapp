@@ -20,6 +20,7 @@ const ProfileVerification = ({ user }) => {
   const reason = user.statusDeclinedReason;
   return (
     <div>
+
       <div>
         <Color styleName="primary-3">
           {translate('user:status')}
@@ -29,7 +30,8 @@ const ProfileVerification = ({ user }) => {
           {translate(`user:status-${status}`)}
         </Color>
       </div>
-      {(status === 'pending' && user.isQuoineJapan) ? (
+
+      {(status === 'pending' && user.underJFSA) ? (
         <div>
           <p className={styles.help}>
             {translate('user:help-pending-jp')}

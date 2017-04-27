@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -20,7 +18,10 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
       {/* Email */}
       <div className={styles.input}>
         <LargeField label={translate('sign-up:email')}>
-          <TextInput type="email" value={form.email} onChange={onChange.email} border={2} required />
+          <TextInput
+            value={form.email} onChange={onChange.email}
+            type="email" border={2} required
+          />
         </LargeField>
         <p className={styles.help}>
           {translate('sign-up:email-help')}
@@ -31,8 +32,11 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
       <div className={styles.input}>
         <LargeField label={translate('sign-up:password')}>
           <TextInput
-            type="password" value={form.password} onChange={onChange.password} border={2} required
-            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" title={translate('sign-up:password-help')}
+            value={form.password} onChange={onChange.password}
+            type="password" border={2} required
+            // ===
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+            title={translate('sign-up:password-help')}
           />
         </LargeField>
         <p className={styles.help}>
@@ -43,14 +47,20 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
       {/* Country */}
       <div className={styles.input}>
         <LargeField label={translate('sign-up:country')}>
-          <CountryInput value={form.country} onChange={onChange.country} autoFocus border={2} required />
+          <CountryInput
+            value={form.country} onChange={onChange.country}
+            autoFocus border={2} required
+          />
         </LargeField>
       </div>
 
-      {form.isQuoineJapan ? (
+      {form.underJFSA ? (
         <div>
           <LargeField>
-            <CheckboxInput id="country-sure" value={form.countrySure} onChange={onChange.countrySure} required>
+            <CheckboxInput
+              value={form.countrySure} onChange={onChange.countrySure}
+              id="country-sure" required
+            >
               {form.type === 'individual' ? (
                 '私は、日本以外に居住地国が無いことを確約します。'
               ) : (
@@ -68,10 +78,13 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
         </div>
       ) : null}
 
-      {form.isQuoineJapan ? (
+      {form.underJFSA ? (
         <div className={styles.input}>
           <LargeField label="米国納税義務">
-            <CheckboxInput id="us" value={form.us} onChange={onChange.us} required>
+            <CheckboxInput
+              value={form.us} onChange={onChange.us}
+              id="us" required
+            >
               {form.type === 'individual' ? (
                 '私は、米国納税義務が無いことを確約します。'
               ) : (

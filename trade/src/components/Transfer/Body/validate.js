@@ -1,8 +1,8 @@
-const acceptableTradersAccs = ['BTC', 'ETH', 'JPY'];
-const isLimitInTraders = (account) => (
-  process.env.REACT_APP_VENDOR === 'traders' &&
-  acceptableTradersAccs.indexOf(account.currency) === -1
-);
+// const acceptableTradersAccs = ['BTC', 'ETH', 'JPY'];
+// const isLimitInTraders = (account) => (
+//   process.env.REACT_APP_VENDOR === 'traders' &&
+//   acceptableTradersAccs.indexOf(account.currency) === -1
+// );
 
 const isLimitInQuoine = ({ type, user }) => (
   process.env.REACT_APP_VENDOR === 'quoine' &&
@@ -12,7 +12,7 @@ const isLimitInQuoine = ({ type, user }) => (
 
 const isDisable = ({ user, account }) => (
   (user.status !== 'approved' && account.fundType === 'fiat') ||
-  (user.status !== 'approved' && user.isQuoineJapan)
+  (user.status !== 'approved' && user.underJFSA)
 );
 
 const validate = ({ user, account, type }) => {
@@ -24,13 +24,13 @@ const validate = ({ user, account, type }) => {
     };
   }
 
-  if (isLimitInTraders(account)) {
-    return {
-      key: 'limit-accounts',
-      style: 'negative',
-      goto: false,
-    };
-  }
+  // if (isLimitInTraders(account)) {
+  //   return {
+  //     key: 'limit-accounts',
+  //     style: 'negative',
+  //     goto: false,
+  //   };
+  // }
 
   if (isLimitInQuoine({ type, user })) {
     return {

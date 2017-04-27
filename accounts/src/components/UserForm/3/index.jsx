@@ -17,7 +17,7 @@ const Details = {
 };
 
 const UserForm3 = ({ form, ...others }) => {
-  const operator = form.isQuoineJapan ? 'jp' : 'pte';
+  const operator = form.underJFSA ? 'jp' : 'pte';
   const Detail = Details[operator][form.type] || PteIndi;
   return <Detail form={form} {...others} />;
 };

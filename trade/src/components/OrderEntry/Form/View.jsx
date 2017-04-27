@@ -21,7 +21,7 @@ const OrderEntryForm = ({ form, user }) => (
     {layout.map((row, i1) => (
       <div key={i1} className={styles.row}>
         {row.map((Element, i2) => (
-          user.isQuoineJapan && Element === QuantityDisclose ? null : (
+          user.underJFSA && Element === QuantityDisclose ? null : (
             <Element key={i2} className={styles.item} form={form} />
           )
         ))}
@@ -33,7 +33,7 @@ const OrderEntryForm = ({ form, user }) => (
 OrderEntryForm.propTypes = {
   form: React.PropTypes.shape({}).isRequired,
   user: React.PropTypes.shape({
-    isQuoineJapan: React.PropTypes.bool,
+    underJFSA: React.PropTypes.bool,
   }).isRequired,
 };
 

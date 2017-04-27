@@ -7,7 +7,7 @@ const PositionItemHorizontal = ({ position, user }) => (
   position.market === 'futures' ? (
     <Futures position={position} />
   ) : (
-    <Default position={position} isQuoineJapan={user.isQuoineJapan} />
+    <Default position={position} underJFSA={user.underJFSA} />
   )
 );
 
@@ -16,7 +16,7 @@ PositionItemHorizontal.propTypes = {
     market: React.PropTypes.string,
   }).isRequired,
   user: React.PropTypes.shape({
-    isQuoineJapan: React.PropTypes.bool,
+    underJFSA: React.PropTypes.bool,
   }).isRequired,
 };
 

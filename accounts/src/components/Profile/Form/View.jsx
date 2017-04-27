@@ -10,28 +10,38 @@ import Row from 'components/SettingsRow';
 import styles from './styles.css';
 
 const translateLabel = (user, key) => (
-  user.isQuoineJapan ? '' : translate(key)
+  user.underJFSA ? '' : translate(key)
 );
 
 const ProfileForm = ({
   error, user, form, onChange, busy, disabled, onSubmit,
 }) => (
   <div>
+
     <Row label={translateLabel(user, 'user:document-id')}>
       <FileInput
-        id="document-id" value={form.id} onChange={onChange.id}
+        value={form.id}
+        onChange={onChange.id}
+        id="document-id"
       />
     </Row>
+
     <Row label={translateLabel(user, 'user:document-address')}>
       <FileInput
-        id="document-address" value={form.address} onChange={onChange.address}
+        value={form.address}
+        onChange={onChange.address}
+        id="document-address"
       />
     </Row>
+
     <Row label={translateLabel(user, 'user:document-bank')}>
       <FileInput
-        id="document-bank" value={form.bank} onChange={onChange.bank}
+        value={form.bank}
+        onChange={onChange.bank}
+        id="document-bank"
       />
     </Row>
+
     {error ? (
       <Row>
         <p className={styles.error}>
@@ -39,6 +49,7 @@ const ProfileForm = ({
         </p>
       </Row>
     ) : null}
+
     <Row>
       <Button
         styleName="accent text inline disabled-primary-2"
@@ -47,6 +58,7 @@ const ProfileForm = ({
         {translate('user:document-action')}
       </Button>
     </Row>
+
   </div>
 );
 

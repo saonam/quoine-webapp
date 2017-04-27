@@ -16,6 +16,7 @@ import Info from './Info';
 const Profile = ({ user, onChangeStatus, open, onOpen, onClose }) => (
   user.id ? (
     <Body>
+
       <div>
         <Row label={translate('user:verification')}>
           <Verification user={user} />
@@ -24,22 +25,27 @@ const Profile = ({ user, onChangeStatus, open, onOpen, onClose }) => (
           <Form user={user} onChangeStatus={onChangeStatus} />
         ) : null}
       </div>
+
       <div>
         <Row label={translate('user:affiliate-code')}>
           {user.affiliateCode}
         </Row>
       </div>
+
       <Info info={user} />
-      {user.isQuoineJapan ? (
+
+      {user.underJFSA ? (
         <div>
           <Button styleName="accent text inline" onClick={onOpen}>
             {translate('edit-user:action')}
           </Button>
         </div>
       ) : null}
-      {user.isQuoineJapan && open ? (
+
+      {user.underJFSA && open ? (
         <UserEdit onClose={onClose} />
       ) : null}
+
     </Body>
   ) : <LoadingIconWrapper />
 );

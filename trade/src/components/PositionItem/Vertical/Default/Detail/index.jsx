@@ -16,7 +16,7 @@ import Field from './Field';
 
 import styles from './styles.css';
 
-const PositionItemDetail = ({ position, isQuoineJapan }) => (
+const PositionItemDetail = ({ position, underJFSA }) => (
   <div className={styles.main}>
     <div className={styles.col}>
       <Field id="qty-open"><Quantity position={position} type="open" /></Field>
@@ -31,7 +31,7 @@ const PositionItemDetail = ({ position, isQuoineJapan }) => (
       <Field id="pnl-w-fee"><PnlWFee position={position} type="total" /></Field>
       <Field id="margin"><Margin position={position} /></Field>
       <Field id="id"><Id position={position} /></Field>
-      {isQuoineJapan ? null : (
+      {underJFSA ? null : (
         <Claim position={position} layout="vertical" />
       )}
     </div>
@@ -40,7 +40,7 @@ const PositionItemDetail = ({ position, isQuoineJapan }) => (
 
 PositionItemDetail.propTypes = {
   position: React.PropTypes.shape({}).isRequired,
-  isQuoineJapan: React.PropTypes.bool.isRequired,
+  underJFSA: React.PropTypes.bool.isRequired,
 };
 
 export default PositionItemDetail;

@@ -1,6 +1,12 @@
 
-no need 居住地国
-2 buttons for US
+CHANGES
+1. JFSA user has the ability to edit their profile
+2. JFSA user does not have "Futures Trading" feature
+3. JFSA user does not have "Quantity Disclose" feature
+4. JFSA user does not have "Claim Position" feature
+5. JFSA user who is not approved yet has a more detailed instruction for verification (Settings > Profile)
+6. JFSA user who is not approved yet has a notification on top, about "Trading Restriction"
+7. JFSA user who is not approved yet is not allowed to fund or withdraw any currency (including crypto ones)
 
-trader
-if same as rep => copy info
+QUESTION
+1. Currently, traders's users who are not in Japan is not considered to be under JFSA, thus still using the old behaviour (old sign up, old restriction). Or in other words: they are considered the same way as QUOINE Pte's users. Is that ok?

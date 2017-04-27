@@ -2,13 +2,16 @@ import React from 'react';
 
 import View from './View';
 
+// check whether current vendor has JFSA or not
+const vendorHasJFSA = !!process.env.REACT_APP_VENDOR_JFSA_ID;
+
 class UserForm2 extends React.Component {
   componentDidUpdate(prevProps) {
-    if (process.env.REACT_APP_VENDOR !== 'quoine') { return; }
+    if (!vendorHasJFSA) { return; }
 
     if (this.props.form.country !== prevProps.form.country) {
       const value = this.props.form.country === 'JP';
-      this.props.onChange.isQuoineJapan(value);
+      this.props.onChange.underJFSA(value);
     }
   }
   render() {
@@ -23,7 +26,7 @@ UserForm2.propTypes = {
     country: React.PropTypes.string.isRequired,
   }).isRequired,
   onChange: React.PropTypes.shape({
-    isQuoineJapan: React.PropTypes.func.isRequired,
+    underJFSA: React.PropTypes.func.isRequired,
   }).isRequired,
 };
 

@@ -4,7 +4,7 @@ import Pte from './Pte';
 import Jp from './Jp';
 
 const UserForm4 = ({ form, ...others }) => {
-  const Detail = form.isQuoineJapan ? Jp : Pte;
+  const Detail = form.underJFSA ? Jp : Pte;
   return <Detail form={form} {...others} />;
 };
 

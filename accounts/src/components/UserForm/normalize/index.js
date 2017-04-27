@@ -15,7 +15,7 @@ const handlers = {
 };
 
 const normalize = (form) => {
-  const operator = form.isQuoineJapan ? 'jp' : 'pte';
+  const operator = form.underJFSA ? 'jp' : 'pte';
   const handler = handlers[operator][form.type];
   return handler(form);
 };

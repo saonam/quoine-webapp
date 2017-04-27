@@ -67,7 +67,10 @@ JpAddressInputView.propTypes = {
   value: React.PropTypes.shape({}).isRequired,
   onChange: React.PropTypes.shape({}).isRequired,
   required: React.PropTypes.bool,
-  border: React.PropTypes.bool,
+  border: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.number,
+  ]),
 };
 
 export default JpAddressInputView;

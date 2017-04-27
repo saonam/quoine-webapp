@@ -19,9 +19,9 @@ const Notifications = ({ user, state }) => {
         // special: don't show disable-trading notification when
         if (
           (
-            notification.id === 'disable-trading' && !user.isQuoineJapan
+            notification.id === 'disable-trading' && !user.underJFSA
           ) || (
-            notification.id === 'disable-trading' && user.isQuoineJapan && user.status === 'approved'
+            notification.id === 'disable-trading' && user.underJFSA && user.status === 'approved'
           )
         ) {
           return null;

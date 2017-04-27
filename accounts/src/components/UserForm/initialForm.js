@@ -16,7 +16,7 @@ export default {
   countrySure: false,
   us: false,
 
-  isQuoineJapan: false,
+  underJFSA: false,
 
   pteIndi,
   pteCorp,
