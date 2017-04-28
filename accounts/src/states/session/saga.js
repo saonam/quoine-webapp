@@ -2,13 +2,14 @@ import { takeLatest } from 'redux-saga/effects';
 
 import TYPES from './TYPES';
 
+import validateUrl from './validateUrl';
+
 function setToken(action) {
-  window.sessionStorage.setItem('tokenId', action.payload.tokenId);
-  window.sessionStorage.setItem('token', action.payload.token);
-  // ===
-  const continueURL = action.payload.continueURL ||
-    process.env.REACT_APP_TRADE_HOST;
-  window.location.href = continueURL;
+  const { token, tokenId, continueURL } = action.payload;
+
+  window.sessionStorage.setItem('tokenId', tokenId);
+  window.sessionStorage.setItem('token', token);
+  window.location.href = validateUrl(continueURL);
 }
 
 function* watchSetToken() {
