@@ -4,7 +4,9 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Button from '@quoine/components/ButtonWLoading';
-import Err from 'components/UserForm/Err';
+import ErrorMessage from '@quoine/components/ErrorMessage';
+
+import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
 import styles from 'components/UserForm/styles.css';
 
@@ -29,7 +31,7 @@ const UserForm4Jp = ({ onSubmit, originalForm, edit, form, onChange, busy, paren
       </div>
     )}
 
-    <Err error={parentError} />
+    <ErrorMessage className={styles.error} error={parentError} />
 
     <div className={styles.input}>
       <Button busy={busy} type="submit" styleName="modal accent">
@@ -43,12 +45,9 @@ const UserForm4Jp = ({ onSubmit, originalForm, edit, form, onChange, busy, paren
 UserForm4Jp.propTypes = {
   originalForm: PropTypes.shape({}).isRequired,
   edit: PropTypes.bool,
+  parentError: ErrorMessage.propTypes.error,
   // ===
-  form: PropTypes.shape({}).isRequired,
-  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
-  onSubmit: PropTypes.func.isRequired,
-  busy: PropTypes.bool.isRequired,
-  parentError: Err.propTypes.error,
+  ...FormWrapperPropTypes,
 };
 
 export default UserForm4Jp;

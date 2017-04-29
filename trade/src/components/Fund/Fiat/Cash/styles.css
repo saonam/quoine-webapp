@@ -14,5 +14,4 @@
 }
 .error {
   composes: help;
-  composes: negative from "@quoine/styles/color.css";
 }

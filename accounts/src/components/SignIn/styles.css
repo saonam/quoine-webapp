@@ -22,7 +22,6 @@
 }
 
 .error {
-  composes: negative from "@quoine/styles/color.css";
   composes: line-1-5 from "@quoine/styles/text.css";
 }
 

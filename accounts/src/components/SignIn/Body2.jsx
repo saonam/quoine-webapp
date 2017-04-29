@@ -19,7 +19,7 @@ const SignInBody2 = ({ form, onChange }) => (
       <LargeField label={translate('sign-in:code')}>
         <TextInput
           value={form.code} onChange={onChange.code}
-          autoFocus border
+          autoFocus border={2} required
         />
       </LargeField>
     </div>

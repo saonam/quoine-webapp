@@ -1,71 +1,50 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import FormWrapper from '@quoine/components/FormWrapper';
+import View from './View';
+
 import resources from './resources';
 
-import View from './View';
+const initialForm = {
+  email: '',
+  password: '',
+  code: '',
+};
 
 class SignInContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      step: 1,
-      form: { email: '', password: '', code: '' },
-      busy: false,
-      error: '',
-    };
-    this.onChange = Object.keys(this.state.form).reduce(
-      (handlers, key) => Object.assign(handlers, {
-        [key]: this.onChangeBase.bind(this, key),
-      })
-    , {});
-    this.onSubmit = this.onSubmit.bind(this);
+    this.state = { step: 1 };
     this.onBack = this.onBack.bind(this);
-  }
-  onChangeBase(key, value) {
-    const form = Object.assign({}, this.state.form, {
-      [key]: value,
-    });
-    this.setState({ form });
+    this.onSubmit = this.onSubmit.bind(this);
   }
   onBack() {
-    this.setState({ step: 1, error: '' });
+    this.setState({ step: 1 });
   }
-  onSubmit(event) {
-    // need event because we attach this to form's submit event
-    // not just a button
-    event.preventDefault();
-
-    if (this.state.busy) { return; }
-    this.setState({ busy: true, error: '' });
-
-    const { step, form } = this.state;
-    const { email, password } = form;
-    const code = step === 1 ? undefined : form.code;
-    resources.signIn({ email, password, code })
+  onSubmit(form) {
+    const { step } = this.state;
+    const { email, password, code } = form;
+    return resources.signIn({ email, password, code, step })
     .then((response) => {
       const { token, tokenId } = response;
       const continueURL = this.props.location.query.continue;
       if (token && tokenId) {
         this.props.setToken({ continueURL, token, tokenId });
       } else {
-        this.setState({ busy: false, step: 2 });
+        this.setState({ step: 2 });
       }
-    })
-    .catch((error) => {
-      this.setState({ busy: false, error: error.message });
     });
-    // we don't need to set busy back to false in case of success
-    // since it will redirect anyway
   }
   render() {
-    const { step, form, busy, error } = this.state;
     return (
-      <View
-        busy={busy} error={error} step={step} form={form}
-        onChange={this.onChange} onSubmit={this.onSubmit}
-        onBack={this.onBack}
+      <FormWrapper
+        initialForm={initialForm}
+        onSubmit={this.onSubmit}
+        Element={View}
         // ===
+        step={this.state.step}
+        onBack={this.onBack}
         message={this.props.location.query.message}
       />
     );

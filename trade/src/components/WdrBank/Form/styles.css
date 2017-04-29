@@ -14,9 +14,6 @@
   composes: item;
   composes: line-1-5 from "@quoine/styles/text.css";
 }
-.error {
-  composes: negative from "@quoine/styles/color.css";
-}
 .success {
   composes: accent from "@quoine/styles/color.css";
 }

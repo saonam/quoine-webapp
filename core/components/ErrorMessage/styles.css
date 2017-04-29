@@ -1,0 +1,3 @@
+.main {
+  composes: negative from "@quoine/styles/color.css";
+}

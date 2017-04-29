@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -6,9 +5,10 @@ import translate from '@quoine/translate';
 import TextInput from '@quoine/components/TextInput';
 import CheckboxInput from '@quoine/components/CheckboxInput';
 import Button from '@quoine/components/ButtonWLoading';
-
+import ErrorMessage from '@quoine/components/ErrorMessage';
 import LargeField from 'components/LargeField';
-import Err from 'components/UserForm/Err';
+
+import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
 import styles from 'components/UserForm/styles.css';
 
@@ -42,7 +42,7 @@ const UserForm4 = ({ onSubmit, form, onChange, busy, error }) => (
 
     </div>
 
-    <Err error={error} />
+    <ErrorMessage className={styles.error} error={error} />
 
     <div className={styles.input}>
       <Button busy={busy} type="submit" styleName="modal accent">
@@ -54,11 +54,7 @@ const UserForm4 = ({ onSubmit, form, onChange, busy, error }) => (
 );
 
 UserForm4.propTypes = {
-  form: PropTypes.shape({}).isRequired,
-  onChange: PropTypes.objectOf(PropTypes.func).isRequired,
-  onSubmit: PropTypes.func.isRequired,
-  busy: PropTypes.bool.isRequired,
-  ...Err.propTypes,
+  ...FormWrapperPropTypes,
 };
 
 export default UserForm4;

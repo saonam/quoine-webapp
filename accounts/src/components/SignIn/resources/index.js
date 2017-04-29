@@ -21,10 +21,10 @@ const signInWCode = ({ email, password, code }) => (
   })
 );
 
-const signIn = ({ email, password, code }) => (
-  code ?
-    signInWCode({ email, password, code }) :
-    signInWoCode({ email, password })
+const signIn = ({ email, password, code, step }) => (
+  step === 1 ?
+    signInWoCode({ email, password }) :
+    signInWCode({ email, password, code })
 ).then(normalize);
 
 export default { signIn };

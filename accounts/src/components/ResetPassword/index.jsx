@@ -1,36 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import FormWrapper from '@quoine/components/FormWrapper';
+import View from './View';
+
 import resources from './resources';
 
-import View from './View';
+const initialForm = {
+  password: '',
+  token: '',
+};
 
 class ResetPasswordContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      password: '',
-      token: '',
-      busy: false,
-      error: '',
-    };
-    this.onPasswordChange = this.onChange.bind(this, 'password');
-    this.onTokenChange = this.onChange.bind(this, 'token');
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onChange(key, value) {
-    this.setState({ [key]: value });
-  }
-  onSubmit(event) {
-    // need event because we attach this to form's submit event
-    // not just a button
-    event.preventDefault();
-
-    if (this.state.busy) { return; }
-    this.setState({ busy: true, error: '' });
-
-    const { password, token } = this.state;
-    resources.resetPassword({ password, token })
+  onSubmit(form) {
+    return resources.resetPassword(form)
     .then(() => {
       this.props.router.push({
         pathname: '/sign-in',
@@ -39,23 +26,14 @@ class ResetPasswordContainer extends React.Component {
           message: 'password-updated',
         },
       });
-    })
-    .catch((error) => {
-      this.setState({ busy: false, error: error.message });
     });
   }
   render() {
-    const { password, busy, error } = this.state;
     return (
-      <View
-        busy={busy}
-        error={error}
+      <FormWrapper
+        initialForm={initialForm}
         onSubmit={this.onSubmit}
-        // ===
-        password={password}
-        onPasswordChange={this.onPasswordChange}
-        token={this.state.token}
-        onTokenChange={this.onTokenChange}
+        Element={View}
       />
     );
   }

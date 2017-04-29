@@ -5,6 +5,7 @@ import translate from '@quoine/translate';
 
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
 import Button from '@quoine/components/Button';
+import ErrorMessage from '@quoine/components/ErrorMessage';
 
 import Body from './Body';
 import styles from './styles.css';
@@ -19,11 +20,9 @@ const WdrBankFormView = (props) => (
         {translate(`bank:${props.action}-success`)}
       </div>
     ) : null}
-    {props.error ? (
-      <div className={styles.error}>
-        {translate(props.error.message)}
-      </div>
-    ) : null}
+
+    <ErrorMessage className={styles.error} error={props.error} />
+
     <div className={styles.item}>
       <ButtonWLoading
         busy={props.busy}
@@ -46,15 +45,12 @@ const WdrBankFormView = (props) => (
 
 WdrBankFormView.propTypes = {
   ...Body.PropTypes,
+  ...ErrorMessage.PropTypes,
   action: PropTypes.oneOf(['add', 'edit']).isRequired,
   busy: PropTypes.bool.isRequired,
   onSubmit: PropTypes.func.isRequired,
   onDismiss: PropTypes.func.isRequired,
   success: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.shape({}),
-  ]).isRequired,
-  error: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.shape({}),
   ]).isRequired,

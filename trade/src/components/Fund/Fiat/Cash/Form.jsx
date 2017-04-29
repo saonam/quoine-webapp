@@ -4,6 +4,7 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
+import ErrorMessage from '@quoine/components/ErrorMessage';
 
 import { Amount } from 'components/Fund/Input';
 
@@ -14,11 +15,9 @@ const FundFiatCashForm = ({ form, onChange, busy, onSubmit, error }) => (
     <div className={styles.item}>
       <Amount form={form} onChange={onChange} />
     </div>
-    {error ? (
-      <p className={styles.error}>
-        {translate(error.message)}
-      </p>
-    ) : null}
+
+    <ErrorMessage className={styles.error} error={error} />
+
     <div className={styles.item}>
       <ButtonWLoading
         styleName="full text large accent-bg"
@@ -37,10 +36,7 @@ FundFiatCashForm.propTypes = {
   busy: PropTypes.bool.isRequired,
   onSubmit: PropTypes.func.isRequired,
   // ===
-  error: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.shape({}),
-  ]).isRequired,
+  ...ErrorMessage.propTypes,
 };
 
 export default FundFiatCashForm;

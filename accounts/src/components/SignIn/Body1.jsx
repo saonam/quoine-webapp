@@ -23,7 +23,10 @@ const SignInBody1 = ({ form, onChange, message }) => (
     ) : null}
     <div className={styles.input}>
       <LargeField label={translate('sign-in:email')}>
-        <TextInput type="email" value={form.email} onChange={onChange.email} autoFocus border={2} />
+        <TextInput
+          type="email" value={form.email} onChange={onChange.email}
+          autoFocus border={2} required
+        />
       </LargeField>
     </div>
     <div className={styles.subInput}>
@@ -38,7 +41,10 @@ const SignInBody1 = ({ form, onChange, message }) => (
     </div>
     <div className={styles.input}>
       <LargeField label={translate('sign-in:password')}>
-        <TextInput type="password" value={form.password} onChange={onChange.password} border={2} />
+        <TextInput
+          type="password" value={form.password} onChange={onChange.password}
+          border={2} required
+        />
       </LargeField>
     </div>
     <div className={styles.subInput}>

@@ -30,7 +30,6 @@
 .error {
   composes: body;
   composes: success;
-  composes: negative from "@quoine/styles/color.css";
 }
 
 .message {

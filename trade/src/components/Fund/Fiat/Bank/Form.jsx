@@ -5,6 +5,7 @@ import translate from '@quoine/translate';
 
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
 import Button from '@quoine/components/Button';
+import ErrorMessage from '@quoine/components/ErrorMessage';
 
 import { Amount, Bank, Notes, INRTransfer } from 'components/Fund/Input';
 
@@ -40,11 +41,7 @@ const FundFiatBankForm = ({
       <Notes form={form} onChange={onChange} />
     </div>
 
-    {error ? (
-      <p className={styles.error}>
-        {translate(error.message)}
-      </p>
-    ) : null}
+    <ErrorMessage className={styles.error} error={error} />
 
     <div className={styles.buttons}>
       <div className={styles.button}>
@@ -73,10 +70,7 @@ FundFiatBankForm.propTypes = {
   // ===
   onClose: PropTypes.func.isRequired,
   // ===
-  error: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.shape({}),
-  ]).isRequired,
+  ...ErrorMessage.propTypes,
 };
 
 export default FundFiatBankForm;
