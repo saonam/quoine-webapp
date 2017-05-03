@@ -17,7 +17,7 @@ const NumberInputView = (props) => {
         <Icon glyph="minus" />
       </Button>
       <TextInput
-        type="number" onFocus={props.onFocus} onBlur={props.onBlur}
+        type="number" step="any" onFocus={props.onFocus} onBlur={props.onBlur}
         value={props.value} onChange={props.onChange}
       />
       <Button
