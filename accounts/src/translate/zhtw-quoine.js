@@ -202,6 +202,7 @@ export default {
     "action-submit": "提交",
     "action-cancel": "取消",
     "description": "如果您成為美國公民，將適用不同的 KYC/AML 規定，因此請通過 support@quoine.com 聯繫我們。",
+    "message-no-changes": "Your information has not been changed.",
   },
   "tfa-manage": {
     "phone": "電話",

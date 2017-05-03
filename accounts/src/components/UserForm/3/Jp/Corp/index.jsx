@@ -11,7 +11,10 @@ class UserForm3JpCorp extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit(form) {
-    this.props.onChange.jpCorp(form);
+    // only update form when have changes
+    if (form !== this.props.form.jpCorp) {
+      this.props.onChange.jpCorp(form);
+    }
     return this.props.onSubmit();
   }
   render() {

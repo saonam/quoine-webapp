@@ -41,6 +41,7 @@ const UserEditView = (props) => {
           <Form
             onSubmit={props.onSubmit}
             form={props.form}
+            changed={props.changed}
             onChange={props.onChange}
             busy={props.busy}
             error={props.error}

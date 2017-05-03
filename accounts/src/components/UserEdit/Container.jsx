@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FromWrapper from '@quoine/components/FormWrapper';
+import FormWrapper from '@quoine/components/FormWrapper';
 import View from './View';
 
 import resources from './resources';
@@ -9,7 +9,10 @@ import resources from './resources';
 class UserEdit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { step: 1 };
+    this.state = {
+      step: 1,
+      changed: false,
+    };
     this.onBack = this.onBack.bind(this);
     this.onNext = this.onNext.bind(this);
   }
@@ -25,7 +28,10 @@ class UserEdit extends React.Component {
       });
     }
 
-    this.setState({ step: this.state.step + 1 });
+    this.setState({
+      step: this.state.step + 1,
+      changed: form !== this.props.user,
+    });
     return Promise.resolve();
   }
   onBack() {
@@ -33,11 +39,12 @@ class UserEdit extends React.Component {
   }
   render() {
     return (
-      <FromWrapper
+      <FormWrapper
         initialForm={this.props.user}
         onSubmit={this.onNext}
         Element={View}
         // ===
+        changed={this.state.changed}
         step={this.state.step}
         onBack={this.onBack}
         onClose={this.props.onClose}

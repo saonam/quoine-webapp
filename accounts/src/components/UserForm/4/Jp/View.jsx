@@ -13,8 +13,18 @@ import styles from 'components/UserForm/styles.css';
 import Term from './Term';
 import Review from './Review';
 
-const UserForm4Jp = ({ onSubmit, originalForm, edit, form, onChange, busy, parentError }) => (
+const UserForm4Jp = ({
+  onSubmit, originalForm, edit, form, changed,
+  onChange, busy, parentError,
+}) => (
   <form onSubmit={onSubmit}>
+    {changed ? null : (
+      <div className={styles.body}>
+        <p className={styles.description}>
+          {translate('edit-user:message-no-changes')}
+        </p>
+      </div>
+    )}
 
     <h1 className={styles.heading}>入力内容確認</h1>
 
@@ -34,7 +44,10 @@ const UserForm4Jp = ({ onSubmit, originalForm, edit, form, onChange, busy, paren
     <ErrorMessage className={styles.error} error={parentError} />
 
     <div className={styles.input}>
-      <Button busy={busy} type="submit" styleName="modal accent">
+      <Button
+        busy={busy} type="submit"
+        styleName={`modal accent ${changed ? '' : 'disabled'}`}
+      >
         {translate(`${edit ? 'edit-user:action-submit' : 'sign-up:action-next'}`)}
       </Button>
     </div>
@@ -46,6 +59,7 @@ UserForm4Jp.propTypes = {
   originalForm: PropTypes.shape({}).isRequired,
   edit: PropTypes.bool,
   parentError: ErrorMessage.propTypes.error,
+  changed: PropTypes.bool.isRequired,
   // ===
   ...FormWrapperPropTypes,
 };

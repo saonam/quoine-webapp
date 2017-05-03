@@ -196,6 +196,7 @@ export default {
     "action-submit": "変更",
     "action-cancel": "取り消し",
     "description": "以下の場合は、support@quoine.comまでご連絡ください。<br />１）転勤等で海外居住となる場合<br />２）外国PEPsに該当することとなった場合<br />３）米国納税義務が発生することとなった場合",
+    "message-no-changes": "登録情報が変更されていません。",
   },
   "tfa-manage": {
     "phone": "携帯番号",

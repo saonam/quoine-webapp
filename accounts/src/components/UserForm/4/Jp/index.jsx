@@ -24,6 +24,7 @@ class UserForm4Jp extends React.Component {
     return (
       <FromWrapper
         initialForm={initialForm}
+        changed={this.props.changed}
         onSubmit={this.onSubmit}
         Element={View}
         // ===
