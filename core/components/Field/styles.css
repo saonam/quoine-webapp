@@ -7,17 +7,21 @@
 .main-ratio {
   composes: flex from "@quoine/styles/flex.css";
 }
+._ratio-child {
+  /* prevent element from stretching to contain its children  */
+  min-width: 0;
+}
 .ratio-1 {
-  composes: auto from "@quoine/styles/flex.css";
-  flex: 1;
+  composes: _ratio-child;
+  flex: 1 1 0px;
 }
 .ratio-2 {
-  composes: auto from "@quoine/styles/flex.css";
-  flex: 2;
+  composes: _ratio-child;
+  flex: 2 1 0px;
 }
 .ratio-3 {
-  composes: auto from "@quoine/styles/flex.css";
-  flex: 3;
+  composes: _ratio-child;
+  flex: 3 1 0px;
 }
 
 /* === */
