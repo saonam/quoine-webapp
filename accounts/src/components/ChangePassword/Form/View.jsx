@@ -25,7 +25,7 @@ const ChangePasswordFormView = (props) => (
         <TextInput
           type="password" value={props.current}
           onChange={props.onCurrentChange}
-          autoFocus border
+          autoFocus border required
         />
       </Field>
     </div>
@@ -33,7 +33,7 @@ const ChangePasswordFormView = (props) => (
       <Field label={translate('change-password:input-next')} layout="inline">
         <TextInput
           type="password" value={props.next}
-          onChange={props.onNextChange} border
+          onChange={props.onNextChange} border required
         />
       </Field>
     </div>

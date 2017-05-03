@@ -46,6 +46,12 @@ export default {
     "action": "パスワード再設定",
     "title": "パスワード再設定",
   },
+  "reset-password-error": {
+    "reset-password-token-can-t-be-blank": "認証コードの入力が必要です。登録メールアドレスに送付されたメールをご確認ください。",
+    "reset-password-token-is-invalid": "認証コードが違います。 登録メールアドレスに送付されたメールを再度ご確認ください。",
+    "reset-password-token-expired": "トークンは無効になりました。ホームページに戻り、もう一度実行してください。",
+    "password-is-too-short-minimum-is-8-characters": "パスワードは最低8文字で、かつ1文字以上の大文字、小文字、数字を含む必要があります。",
+  },
   "change-password": {
     "title": "パスワード変更",
     "action-submit": "更新",
@@ -54,6 +60,10 @@ export default {
     "input-next": "新しいパスワード",
     "input-current": "現在のパスワード",
     "success": "パスワードの変更に成功しました。",
+  },
+  "change-password-error": {
+    "password-update-failed": "パスワード更新に失敗しました。",
+    "your-password-is-incorrect": "パスワードが間違っています",
   },
   "sign-up": {
     "title": "新規登録",
@@ -108,14 +118,9 @@ export default {
   },
   "sign-up-error": {
     "email-has-already-been-taken": "既に登録済みのメールアドレスです。",
-    "password-too-weak": "パスワードは最低8文字で、かつ1文字以上の大文字、小文字、数字を含む必要があります。",
     "all-is-required": "全てのフィールドに入力する必要があります。",
     "terms": "利用規約に同意する必要があります。",
-    "reset-password-token-can-t-be-blank": "トークンを入力してください。ホームページに戻り、もう一度実行してください。",
-    "reset-password-token-is-invalid": "トークンは無効になりました。ホームページに戻り、もう一度実行してください。",
-    "reset-password-token-expired": "トークンは無効になりました。ホームページに戻り、もう一度実行してください。",
-    "password-update-failed": "パスワード更新に失敗しました。",
-    "your-password-is-incorrect": "パスワードが間違っています",
+    "password-is-too-short-minimum-is-8-characters": "パスワードは最低8文字で、かつ1文字以上の大文字、小文字、数字を含む必要があります。",
   },
   "demo": {
     "title": "デモアカウントを利用する",

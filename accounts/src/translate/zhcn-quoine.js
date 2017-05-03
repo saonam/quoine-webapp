@@ -40,11 +40,17 @@ export default {
   },
   "reset-password": {
     "new-password": "新密码",
-    "new-password-help": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
+    "new-password-help": "密码必须至少包含 8 个字符并且包含至少 1 个小写字母、1 个大写字母和 1 个数字。",
     "token": "Reset Token",
     "token-help": "Please enter the reset token that was sent to your email address.",
     "action": "更新密码",
     "title": "重置密码",
+  },
+  "reset-password-error": {
+    "reset-password-token-can-t-be-blank": "Token is required. Please enter the reset token that was sent to your email address.",
+    "reset-password-token-is-invalid": "Token is invalid. Please enter the reset token that was sent to your email address.",
+    "reset-password-token-expired": "重置密码尝试已过期。请返回首页并重试。",
+    "password-is-too-short-minimum-is-8-characters": "密码必须至少包含 8 个字符并且包含至少 1 个小写字母、1 个大写字母和 1 个数字。",
   },
   "change-password": {
     "title": "更改密码",
@@ -54,6 +60,10 @@ export default {
     "input-next": "新密码",
     "input-current": "现有密码",
     "success": "您的密码已成功更新。",
+  },
+  "change-password-error": {
+    "password-update-failed": "密码更新失败。",
+    "your-password-is-incorrect": "您的密码不正确。",
   },
   "sign-up": {
     "title": "注册",
@@ -114,14 +124,9 @@ export default {
   },
   "sign-up-error": {
     "email-has-already-been-taken": "此电子邮件已被占用。",
-    "password-too-weak": "密码必须至少包含 8 个字符并且包含至少 1 个小写字母、1 个大写字母和 1 个数字。",
     "all-is-required": "所有字段都为必填项。",
     "terms": "请仔细阅读条款及条件并在接受它们后再继续。",
-    "reset-password-token-can-t-be-blank": "重置密码尝试已过期。请返回首页并重试。",
-    "reset-password-token-is-invalid": "重置密码尝试已过期。请返回首页并重试。",
-    "reset-password-token-expired": "重置密码尝试已过期。请返回首页并重试。",
-    "password-update-failed": "密码更新失败。",
-    "your-password-is-incorrect": "您的密码不正确。",
+    "password-is-too-short-minimum-is-8-characters": "密码必须至少包含 8 个字符并且包含至少 1 个小写字母、1 个大写字母和 1 个数字。",
   },
   "demo": {
     "title": "使用演示账户",

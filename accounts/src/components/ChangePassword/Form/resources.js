@@ -10,7 +10,7 @@ const submit = ({ current, next }) => (
         password: next,
         password_confirmation: next,
       },
-      errorPrefix: 'sign-up',
+      errorPrefix: 'change-password',
     })
   ))
 );

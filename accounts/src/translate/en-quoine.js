@@ -46,6 +46,12 @@ export default {
     "action": "Update Password",
     "title": "Reset Password",
   },
+  "reset-password-error": {
+    "reset-password-token-can-t-be-blank": "Token is required. Please enter the reset token that was sent to your email address.",
+    "reset-password-token-is-invalid": "Token is invalid. Please enter the reset token that was sent to your email address.",
+    "reset-password-token-expired": "Reset Password attempt has expired. Please return to Home Page and try again.",
+    "password-is-too-short-minimum-is-8-characters": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
+  },
   "change-password": {
     "title": "Change Password",
     "action-submit": "Change",
@@ -54,6 +60,10 @@ export default {
     "input-next": "New",
     "input-current": "Current",
     "success": "Your password has been successfully updated.",
+  },
+  "change-password-error": {
+    "password-update-failed": "Password update has failed.",
+    "your-password-is-incorrect": "Your password is incorrect.",
   },
   "sign-up": {
     "title": "Sign Up",
@@ -114,14 +124,9 @@ export default {
   },
   "sign-up-error": {
     "email-has-already-been-taken": "This email address has been taken.",
-    "password-too-weak": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
     "all-is-required": "All fields are required.",
     "terms": "Please go through Terms & Conditions thoroughly and accept them before proceeding.",
-    "reset-password-token-can-t-be-blank": "Reset Password attempt has expired. Please return to Home Page and try again.",
-    "reset-password-token-is-invalid": "Reset Password attempt has expired. Please return to Home Page and try again.",
-    "reset-password-token-expired": "Reset Password attempt has expired. Please return to Home Page and try again.",
-    "password-update-failed": "Password update has failed.",
-    "your-password-is-incorrect": "Your password is incorrect.",
+    "password-is-too-short-minimum-is-8-characters": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
   },
   "demo": {
     "title": "Use a demo account",

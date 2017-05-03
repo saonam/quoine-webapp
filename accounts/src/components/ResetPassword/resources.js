@@ -9,7 +9,7 @@ const resetPassword = ({ password, token }) => (
         reset_password_token: token,
       },
     },
-    errorPrefix: 'sign-up',
+    errorPrefix: 'reset-password',
   })
 );
 

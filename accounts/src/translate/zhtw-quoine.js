@@ -40,11 +40,17 @@ export default {
   },
   "reset-password": {
     "new-password": "新密碼",
-    "new-password-help": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
+    "new-password-help": "密碼必須至少包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字。",
     "token": "Reset Token",
     "token-help": "Please enter the reset token that was sent to your email address.",
     "action": "更新密碼",
     "title": "重置密碼",
+  },
+  "reset-password-error": {
+    "reset-password-token-can-t-be-blank": "Token is required. Please enter the reset token that was sent to your email address.",
+    "reset-password-token-is-invalid": "Token is invalid. Please enter the reset token that was sent to your email address.",
+    "reset-password-token-expired": "重置密碼嘗試已過期。請返回首頁並重試。",
+    "password-is-too-short-minimum-is-8-characters": "密碼必須至少包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字。",
   },
   "change-password": {
     "title": "更改密碼",
@@ -54,6 +60,10 @@ export default {
     "input-next": "新密碼",
     "input-current": "現有密碼",
     "success": "您的密碼已成功更新。",
+  },
+  "change-password-error": {
+    "password-update-failed": "密碼更新失敗。",
+    "your-password-is-incorrect": "您的密碼不正確。",
   },
   "sign-up": {
     "title": "註冊",
@@ -114,14 +124,9 @@ export default {
   },
   "sign-up-error": {
     "email-has-already-been-taken": "此電子郵件已被佔用。",
-    "password-too-weak": "密碼必須至少包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字。",
     "all-is-required": "所有字段都為必填項。",
     "terms": "請仔細閱讀條款及條件並在接受它們後再繼續。",
-    "reset-password-token-can-t-be-blank": "重置密碼嘗試已過期。請返回首頁並重試。",
-    "reset-password-token-is-invalid": "重置密碼嘗試已過期。請返回首頁並重試。",
-    "reset-password-token-expired": "重置密碼嘗試已過期。請返回首頁並重試。",
-    "password-update-failed": "密碼更新失敗。",
-    "your-password-is-incorrect": "您的密碼不正確。",
+    "password-is-too-short-minimum-is-8-characters": "密碼必須至少包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字。",
   },
   "demo": {
     "title": "使用演示賬戶",
