@@ -12,7 +12,8 @@ class UserForm3PteIndi extends React.Component {
   }
   onSubmit(form) {
     this.props.onChange.pteIndi(form);
-    return this.props.onSubmit();
+    this.props.onSubmit();
+    return Promise.resolve();
   }
   render() {
     return (

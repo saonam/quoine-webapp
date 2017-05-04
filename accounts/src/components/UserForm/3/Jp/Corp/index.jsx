@@ -15,7 +15,8 @@ class UserForm3JpCorp extends React.Component {
     if (form !== this.props.form.jpCorp) {
       this.props.onChange.jpCorp(form);
     }
-    return this.props.onSubmit();
+    this.props.onSubmit();
+    return Promise.resolve();
   }
   render() {
     return (
