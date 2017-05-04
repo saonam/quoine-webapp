@@ -15,9 +15,11 @@ const UserInfoPteIndi = ({ info, Item }) => (
     <Item label={translate('sign-up-pi:nationality')}>
       <Country iso={info.nationality} />
     </Item>
-    <Item label={translate('sign-up-pi:birth')}>
-      <Time value={info.birth} type="dateWithYear" />
-    </Item>
+    {info.birth ? (
+      <Item label={translate('sign-up-pi:birth')}>
+        <Time value={info.birth} type="dateWithYear" />
+      </Item>
+    ) : null}
     <Item label={translate('sign-up-pi:address')}>
       {info.address}
     </Item>
