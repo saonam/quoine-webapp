@@ -12,8 +12,7 @@ class UserForm3PteCorp extends React.Component {
   }
   onSubmit(form) {
     this.props.onChange.pteCorp(form);
-    this.props.onSubmit();
-    return Promise.resolve();
+    return this.props.onSubmit();
   }
   render() {
     return (

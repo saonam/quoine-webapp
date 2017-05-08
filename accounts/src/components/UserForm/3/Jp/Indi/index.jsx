@@ -15,8 +15,7 @@ class UserForm3JpIndi extends React.Component {
     if (form !== this.props.form.jpIndi) {
       this.props.onChange.jpIndi(form);
     }
-    this.props.onSubmit();
-    return Promise.resolve();
+    return this.props.onSubmit();
   }
   render() {
     return (

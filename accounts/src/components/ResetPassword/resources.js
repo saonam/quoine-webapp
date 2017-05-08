@@ -1,9 +1,8 @@
 import { quoine } from '@quoine/resources';
 
-const resetPassword = ({ password, token, captcha }) => (
+const resetPassword = ({ password, token }) => (
   quoine.put('/users/password', {
     body: {
-      recaptcha_response: captcha,
       user: {
         password,
         password_confirmation: password,

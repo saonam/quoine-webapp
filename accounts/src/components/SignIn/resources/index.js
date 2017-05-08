@@ -1,17 +1,30 @@
 import { quoine } from '@quoine/resources';
 import normalize from './normalize';
 
-const signIn = ({ email, password, code, captcha, step }) => {
-  const signInWCode = step === 2;
-  const url = signInWCode ? '/users/sign_in' : '/users/validate';
-  const user = { email, password };
-  if (signInWCode) { user.auth_code = code; }
-
-  return quoine.post(url, {
-    body: { recaptcha_response: captcha, user },
+const signInWoCode = ({ email, password }) => (
+  quoine.post('/users/validate', {
+    body: {
+      user: { email, password },
+    },
     useCache: false,
     errorPrefix: 'sign-in',
-  }).then(normalize);
-};
+  })
+);
+
+const signInWCode = ({ email, password, code }) => (
+  quoine.post('/users/sign_in', {
+    body: {
+      user: { email, password, auth_code: code },
+    },
+    useCache: false,
+    errorPrefix: 'sign-in',
+  })
+);
+
+const signIn = ({ email, password, code, step }) => (
+  step === 1 ?
+    signInWoCode({ email, password }) :
+    signInWCode({ email, password, code })
+).then(normalize);
 
 export default { signIn };

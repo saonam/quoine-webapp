@@ -16,8 +16,8 @@ class ResetPasswordContainer extends React.Component {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onSubmit(payload) {
-    return resources.resetPassword(payload)
+  onSubmit(form) {
+    return resources.resetPassword(form)
     .then(() => {
       this.props.router.push({
         pathname: '/sign-in',
@@ -34,7 +34,6 @@ class ResetPasswordContainer extends React.Component {
         initialForm={initialForm}
         onSubmit={this.onSubmit}
         Element={View}
-        captcha
       />
     );
   }

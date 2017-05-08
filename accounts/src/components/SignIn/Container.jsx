@@ -22,10 +22,10 @@ class SignInContainer extends React.Component {
   onBack() {
     this.setState({ step: 1 });
   }
-  onSubmit(payload) {
+  onSubmit(form) {
     const { step } = this.state;
-    const { email, password, code, captcha } = payload;
-    return resources.signIn({ email, password, code, captcha, step })
+    const { email, password, code } = form;
+    return resources.signIn({ email, password, code, step })
     .then((response) => {
       const { token, tokenId } = response;
       const continueURL = this.props.location.query.continue;
@@ -42,7 +42,6 @@ class SignInContainer extends React.Component {
         initialForm={initialForm}
         onSubmit={this.onSubmit}
         Element={View}
-        captcha
         // ===
         step={this.state.step}
         onBack={this.onBack}
