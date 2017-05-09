@@ -3,7 +3,6 @@ import React from 'react';
 
 import FromWrapper from '@quoine/components/FormWrapper';
 
-import initialForm from './initialForm';
 import View from './View';
 
 class UserForm4Jp extends React.Component {
@@ -23,14 +22,14 @@ class UserForm4Jp extends React.Component {
   render() {
     return (
       <FromWrapper
-        initialForm={initialForm}
-        changed={this.props.changed}
+        initialForm={this.props.form.jpTerm}
         onSubmit={this.onSubmit}
         Element={View}
         // ===
         originalForm={this.props.form}
         edit={this.props.edit}
         parentError={this.props.error}
+        changed={this.props.changed}
       />
     );
   }

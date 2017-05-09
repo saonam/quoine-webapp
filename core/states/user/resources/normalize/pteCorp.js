@@ -1,17 +1,13 @@
-const getDetail = (raw, key) => (
-  (
-    raw.user_profile && raw.user_profile[key]
-  ) ? raw.user_profile[key] : ''
-);
+import { getUserProfAttr } from './utils';
 
 const pteCorp = (raw) => ({
   pteCorp: {
-    name: getDetail(raw, 'business_name'),
-    type: getDetail(raw, 'business_type'),
+    name: getUserProfAttr(raw, 'business_name'),
+    type: getUserProfAttr(raw, 'business_type'),
     address: raw.address,
-    website: getDetail(raw, 'business_website'),
-    tax: getDetail(raw, 'tax_id'),
-    vat: getDetail(raw, 'vat_id'),
+    website: getUserProfAttr(raw, 'business_website'),
+    tax: getUserProfAttr(raw, 'tax_id'),
+    vat: getUserProfAttr(raw, 'vat_id'),
   },
 });
 

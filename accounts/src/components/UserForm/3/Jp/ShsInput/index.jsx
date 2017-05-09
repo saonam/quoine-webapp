@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import initialForm from '../ShInput/initialForm';
+import { sh as initialForm } from '@quoine/states/user/resources/initialForm';
 
 import View from './View';
 

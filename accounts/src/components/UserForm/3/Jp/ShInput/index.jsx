@@ -5,8 +5,6 @@ import Wrapper from '@quoine/components/FormOnChangeWrapper';
 
 import View from './View';
 
-import initialForm from './initialForm';
-
 class ShsInputItem extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +23,6 @@ class ShsInputItem extends React.Component {
         {...this.props}
         // ===
         View={View}
-        initialForm={initialForm}
         // ===
         value={this.props.value}
         onChange={this.onChange}

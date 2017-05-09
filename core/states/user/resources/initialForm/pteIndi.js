@@ -1,4 +1,4 @@
-import name from '@quoine/components/NameInput/initialForm';
+import { name } from './elements';
 
 export default {
   name,

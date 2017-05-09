@@ -6,7 +6,7 @@ import Wrapper from '@quoine/components/FormOnChangeWrapper';
 import View from './View';
 
 const JpIndustryInput = (props) => (
-  <Wrapper View={View} initialForm={props.value} {...props} />
+  <Wrapper View={View} {...props} />
 );
 
 JpIndustryInput.propTypes = {

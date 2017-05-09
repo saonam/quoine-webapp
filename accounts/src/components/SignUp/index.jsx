@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FromWrapper from '@quoine/components/FormWrapper';
-import initialForm from 'components/UserForm/initialForm';
+import initialForm from '@quoine/states/user/resources/initialForm';
 
 import View from './View';
 

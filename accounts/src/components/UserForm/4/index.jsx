@@ -11,7 +11,7 @@ const UserForm4 = ({ form, ...others }) => {
 
 UserForm4.propTypes = {
   form: PropTypes.shape({
-    type: PropTypes.string.isRequired,
+    underJFSA: PropTypes.bool.isRequired,
   }).isRequired,
 };
 

@@ -16,50 +16,53 @@ import Review from './Review';
 const UserForm4Jp = ({
   onSubmit, originalForm, edit, form, changed,
   onChange, busy, parentError,
-}) => (
-  <form onSubmit={onSubmit}>
-    {changed ? null : (
-      <div className={styles.body}>
-        <p className={styles.description}>
-          {translate('edit-user:message-no-changes')}
-        </p>
-      </div>
-    )}
-
-    <h1 className={styles.heading}>入力内容確認</h1>
-
-    <div className={styles.body}>
-      <Review form={originalForm} />
-    </div>
-
-    {edit ? null : (
-      <div>
-        <h1 className={styles.heading}>利用規約</h1>
+}) => {
+  const disableSubmit = edit && !changed;
+  return (
+    <form onSubmit={onSubmit}>
+      {changed ? null : (
         <div className={styles.body}>
-          <Term form={form} onChange={onChange} />
+          <p className={styles.description}>
+            {translate('edit-user:message-no-changes')}
+          </p>
         </div>
+      )}
+
+      <h1 className={styles.heading}>入力内容確認</h1>
+
+      <div className={styles.body}>
+        <Review form={originalForm} />
       </div>
-    )}
 
-    <ErrorMessage className={styles.error} error={parentError} />
+      {edit ? null : (
+        <div>
+          <h1 className={styles.heading}>利用規約</h1>
+          <div className={styles.body}>
+            <Term form={form} onChange={onChange} />
+          </div>
+        </div>
+      )}
 
-    <div className={styles.input}>
-      <Button
-        busy={busy} type="submit"
-        styleName={`modal accent ${changed ? '' : 'disabled'}`}
-      >
-        {translate(`${edit ? 'edit-user:action-submit' : 'sign-up:action-next'}`)}
-      </Button>
-    </div>
+      <ErrorMessage className={styles.error} error={parentError} />
 
-  </form>
-);
+      <div className={styles.input}>
+        <Button
+          busy={busy} type="submit"
+          styleName={`modal accent ${disableSubmit ? 'disabled' : ''}`}
+        >
+          {translate(`${edit ? 'edit-user:action-submit' : 'sign-up:action-next'}`)}
+        </Button>
+      </div>
+
+    </form>
+  );
+};
 
 UserForm4Jp.propTypes = {
   originalForm: PropTypes.shape({}).isRequired,
   edit: PropTypes.bool,
   parentError: ErrorMessage.propTypes.error,
-  changed: PropTypes.bool.isRequired,
+  changed: PropTypes.bool,
   // ===
   ...FormWrapperPropTypes,
 };

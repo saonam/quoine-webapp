@@ -3,8 +3,6 @@ import React from 'react';
 
 import SelectInput from '@quoine/components/SelectInput';
 
-import initialForm from './initialForm';
-
 import styles from './styles.css';
 
 const options = [
@@ -21,7 +19,7 @@ const labels = {
 
 const JpExperienceInputView = ({ value, onChange, ...others }) => (
   <div>
-    {Object.keys(initialForm).map((key) => (
+    {Object.keys(value).map((key) => (
       <div key={key} className={styles.row}>
         <h1 className={styles.label}>
           {labels[key]}

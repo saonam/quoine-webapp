@@ -1,4 +1,5 @@
 import { getName, getPurpose } from './utils';
+import initialForm from '../initialForm/jpIndi';
 
 const jpIndiDetail = (raw) => ({
   ...getName(raw),
@@ -28,7 +29,7 @@ const jpIndi = (raw) => ({
   type: raw.user_type,
   country: raw.country,
   // ===
-  jpIndi: raw.individual_info ? jpIndiDetail(raw.individual_info) : {},
+  jpIndi: raw.individual_info ? jpIndiDetail(raw.individual_info) : initialForm,
 });
 
 export default jpIndi;

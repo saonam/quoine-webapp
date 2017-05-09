@@ -1,5 +1,7 @@
 import { getName, getValid, getPurpose } from './utils';
 
+import initialForm from '../initialForm/jpCorp';
+
 const jpRep = (raw) => ({
   title: raw.title,
   // ===
@@ -78,7 +80,7 @@ const jpCorp = (raw) => ({
   type: raw.user_type,
   country: raw.country,
   // ===
-  jpCorp: raw.corporation_info ? jpCorpDetail(raw.corporation_info) : {},
+  jpCorp: raw.corporation_info ? jpCorpDetail(raw.corporation_info) : initialForm,
 });
 
 export default jpCorp;

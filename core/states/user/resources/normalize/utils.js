@@ -1,3 +1,9 @@
+import idx from 'idx';
+
+export const getUserProfAttr = (raw, key, fallback = '') => (
+  idx(raw, _ => _.raw_profile[key]) || fallback
+);
+
 export const getName = (raw) => ({
   nameKana: {
     first: raw.first_kana_name,

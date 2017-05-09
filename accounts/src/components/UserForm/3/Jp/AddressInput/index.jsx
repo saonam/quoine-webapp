@@ -4,10 +4,8 @@ import Wrapper from '@quoine/components/FormOnChangeWrapper';
 
 import View from './View';
 
-import initialForm from './initialForm';
-
 const JpAddressInput = (props) => (
-  <Wrapper View={View} initialForm={initialForm} {...props} />
+  <Wrapper View={View} {...props} />
 );
 
 export default JpAddressInput;

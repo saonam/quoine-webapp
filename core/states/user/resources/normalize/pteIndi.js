@@ -1,8 +1,4 @@
-const getDetail = (raw, key) => (
-  (
-    raw.user_profile && raw.user_profile[key]
-  ) ? raw.user_profile[key] : ''
-);
+import { getUserProfAttr } from './utils';
 
 const pteIndi = (raw) => ({
   pteIndi: {
@@ -11,12 +7,12 @@ const pteIndi = (raw) => ({
       last: raw.last_name,
     },
     nationality: raw.nationality,
-    birth: getDetail(raw, 'birthdate') || 0,
+    birth: getUserProfAttr(raw, 'birthdate', 0),
     address: raw.address || '',
-    income: getDetail(raw, 'other_source_income'),
-    incomeJob: getDetail(raw, 'job_title'),
-    incomeBusinessName: getDetail(raw, 'business_name'),
-    incomeBusinessType: getDetail(raw, 'business_type'),
+    income: getUserProfAttr(raw, 'other_source_income'),
+    incomeJob: getUserProfAttr(raw, 'job_title'),
+    incomeBusinessName: getUserProfAttr(raw, 'business_name'),
+    incomeBusinessType: getUserProfAttr(raw, 'business_type'),
   },
 });
 
