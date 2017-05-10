@@ -33,18 +33,21 @@ class WdrForm extends React.Component {
     });
   }
   render() {
-    const { account, submitting } = this.props;
+    const { account, submitting, error, success, onDismissSuccess } = this.props;
     const form = {
       ...this.state,
       account: account.currency,
       type: account.type,
     };
     const busy = submitting && submitting.action === 'submit';
+    const showMessage = account.type === 'crypto' && success;
+
     return (
       <View
         form={form} onChange={this.onChange}
         busy={busy} onSubmit={this.onSubmit}
-        error={this.props.error}
+        error={error}
+        showMessage={showMessage} onDismiss={onDismissSuccess}
       />
     );
   }
@@ -66,6 +69,9 @@ WdrForm.propTypes = {
     PropTypes.bool,
     PropTypes.shape({}),
   ]).isRequired,
+  // ===
+  success: PropTypes.bool.isRequired,
+  onDismissSuccess: PropTypes.func.isRequired,
 };
 
 export default WdrForm;

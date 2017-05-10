@@ -18,3 +18,11 @@
   composes: help;
   composes: negative from "@quoine/styles/color.css";
 }
+
+.message {
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+
+.confirm {
+  composes: top-small from "@quoine/styles/margin.css";
+}

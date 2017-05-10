@@ -6,10 +6,11 @@ import translate from '@quoine/translate';
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
 import Bank from 'components/WdrBank';
 import { Quantity, Address, Code, INRTransfer } from 'components/Withdrawal/Input';
+import Button from '@quoine/components/Button';
 
 import styles from './styles.css';
 
-const WdrFormView = ({ form, onChange, busy, onSubmit, error }) => (
+const WdrFormView = ({ form, onChange, busy, onSubmit, error, showMessage, onDismiss }) => (
   <form className={styles.main} onSubmit={onSubmit}>
 
     <div className={styles.item}>
@@ -40,15 +41,31 @@ const WdrFormView = ({ form, onChange, busy, onSubmit, error }) => (
       </div>
     ) : null}
 
-    <div className={styles.item}>
-      <ButtonWLoading
-        styleName="full text large negative-bg"
-        busy={busy}
-        type="submit"
-      >
-        {translate('withdrawal:submit')}
-      </ButtonWLoading>
-    </div>
+    {showMessage ? (
+      <div className={styles.item}>
+        <p className={styles.message}>
+          {translate('withdrawal:check-email-message')}
+        </p>
+        <Button
+          type="button"
+          styleName="full large text primary-3-bg"
+          onClick={onDismiss} autoFocus={false}
+          className={styles.confirm}
+        >
+          {translate('withdrawal:dismiss')}
+        </Button>
+      </div>
+    ) : (
+      <div className={styles.item}>
+        <ButtonWLoading
+          type="submit"
+          styleName="full text large negative-bg"
+          busy={busy}
+        >
+          {translate('withdrawal:submit')}
+        </ButtonWLoading>
+      </div>
+    )}
 
   </form>
 );
@@ -64,6 +81,9 @@ WdrFormView.propTypes = {
       action: PropTypes.string,
     }),
   ]).isRequired,
+  // ===
+  showMessage: PropTypes.bool.isRequired,
+  onDismiss: PropTypes.func.isRequired,
 };
 
 export default WdrFormView;

@@ -363,6 +363,10 @@ export default {
     "pending-empty": "无等待中的出金",
     // ===
     "success": "出金请求已提交",
+    // ===
+    "dismiss": "Dismiss",
+    "check-email-message": "A crypto withdrawal confirmation link has been sent to your email address. Please check and click this link within 30 minutes of this notification to confirm your withdrawal.",
+    // ===
     "status": "Status",
     "status-pending": "Pending",
     "status-processing": "Processing",

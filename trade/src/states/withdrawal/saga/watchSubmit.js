@@ -11,7 +11,7 @@ function* onSubmit(action) {
     const response = yield call(resources.submit, form);
     const prevAll = yield select(state => state.withdrawal.all);
     const all = [response].concat(prevAll);
-    yield apply(TYPES, { all, success: response, error: false });
+    yield apply(TYPES, { all, success: true, error: false });
   } catch (error) {
     yield apply(TYPES, { error: { ...error, action: 'submit' } });
   }

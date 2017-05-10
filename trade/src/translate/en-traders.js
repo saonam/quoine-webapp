@@ -363,6 +363,10 @@ export default {
     "pending-empty": "No Pending Withdrawals",
     // ===
     "success": "Withdrawal request has been submitted.",
+    // ===
+    "dismiss": "Dismiss",
+    "check-email-message": "A crypto withdrawal confirmation link has been sent to your email address. Please check and click this link within 30 minutes of this notification to confirm your withdrawal.",
+    // ===
     "status": "Status",
     "status-pending": "Pending",
     "status-processing": "Processing",

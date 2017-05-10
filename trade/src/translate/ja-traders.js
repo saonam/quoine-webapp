@@ -363,6 +363,10 @@ export default {
     "pending-empty": "出金履歴がありません。",
     // ===
     "success": "出金依頼を出しました。",
+    // ===
+    "dismiss": "閉じる",
+    "check-email-message": "仮想通貨出金リクエストの確認リンクをお客様のメールアドレスにお送りいたしました。このお知らせから30分以内にそのリンクをクリックして出金リクエストの詳細をご確認お願いいたします。",
+    // ===
     "status": "締切",
     "status-pending": "未処理",
     "status-processing": "処理中",

@@ -7,11 +7,15 @@ const mapStateToProps = (state) => ({
   bank: state.wdrBank.current,
   submitting: state.withdrawal.submitting,
   error: state.withdrawal.error,
+  success: state.withdrawal.success,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onSubmit: (withdrawal) => dispatch({
     type: TYPES.SUBMIT, payload: withdrawal,
+  }),
+  onDismissSuccess: () => dispatch({
+    type: TYPES.APPLY, payload: { success: false },
   }),
 });
 
