@@ -8,6 +8,7 @@ import Time from '../Time';
 import Bank from '../Bank';
 import Quantity from '../Quantity';
 import Address from '../Address';
+import Status from '../Status';
 
 import styles from './styles.css';
 
@@ -16,6 +17,7 @@ const WdrItemDetail = ({ withdrawal }) => (
     <Field id="id"><Id withdrawal={withdrawal} /></Field>
     <Field id="time"><Time withdrawal={withdrawal} type="full" /></Field>
     <Field id="quantity"><Quantity withdrawal={withdrawal} /></Field>
+    <Field id="status"><Status withdrawal={withdrawal} /></Field>
     {withdrawal.type === 'fiat' ? (
       <Field id="bank"><Bank withdrawal={withdrawal} /></Field>
     ) : (

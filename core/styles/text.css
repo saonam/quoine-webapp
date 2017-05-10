@@ -82,6 +82,10 @@
   word-wrap: break-word;
 }
 
+.break-all {
+  word-break: break-all;
+}
+
 .mono {
   font-family: monospace;
 }

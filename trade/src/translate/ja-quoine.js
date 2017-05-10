@@ -363,6 +363,10 @@ export default {
     "pending-empty": "出金履歴がありません。",
     // ===
     "success": "出金依頼を出しました。",
+    "status": "締切",
+    "status-pending": "未処理",
+    "status-processing": "処理中",
+    "status-awaiting-confirmation": "未確認",
   },
   "withdrawal-cancel": {
     "confirm": "出金依頼をキャンセルしますか？",

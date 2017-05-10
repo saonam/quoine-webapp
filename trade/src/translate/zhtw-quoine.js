@@ -363,6 +363,10 @@ export default {
     "pending-empty": "無等待中的出金",
     // ===
     "success": "出金請求已提交",
+    "status": "Status",
+    "status-pending": "Pending",
+    "status-processing": "Processing",
+    "status-awaiting-confirmation": "Unconfirmed",
   },
   "withdrawal-cancel": {
     "confirm": "取消出金？",

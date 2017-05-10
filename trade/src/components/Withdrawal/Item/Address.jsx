@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import styles from '../styles.css';
+
 const WdrItemAddress = ({ withdrawal }) => (
-  <span>{withdrawal.address}</span>
+  <span className={styles.address}>{withdrawal.address}</span>
 );
 
 WdrItemAddress.propTypes = {

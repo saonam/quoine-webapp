@@ -10,7 +10,7 @@ const response = (raw) => ({
   account: raw.currency,
   type: raw.type,
   amount: Number(raw.amount),
-  status: raw.state,
+  status: raw.state ? raw.state.split('_').join('-') : raw.state,
   createdAt: raw.created_at,
   bankAccount: bankAccount(raw),
   address: raw.address,

@@ -363,6 +363,10 @@ export default {
     "pending-empty": "No Pending Withdrawals",
     // ===
     "success": "Withdrawal request has been submitted.",
+    "status": "Status",
+    "status-pending": "Pending",
+    "status-processing": "Processing",
+    "status-awaiting-confirmation": "Unconfirmed",
   },
   "withdrawal-cancel": {
     "confirm": "Cancel this withdrawal?",
