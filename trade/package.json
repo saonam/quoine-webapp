@@ -1,10 +1,10 @@
 {
   "name": "@quoine/trade",
-  "version": "3.10.0-rc.7",
+  "version": "3.10.0-rc.2",
   "license": "MIT",
   "dependencies": {
-    "@quoine/core": "file:./../core",
-    "@quoine/react-scripts": "5.9.13",
+    "@quoine/core": "3.10.0-rc.2",
+    "@quoine/react-scripts": "5.9.11",
     "cryptowatch-embed": "^0.3.1",
     "idx": "^1.5.0",
     "lodash.throttle": "^4.1.1",
@@ -22,7 +22,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "postinstall": "if [ -z ${DYNO+x} ]; then cd ../core && yarn install && yarn link && yarn link @quoine/core && cd ../trade && yarn link @quoine/core; fi"
+    "eject": "react-scripts eject"
   }
 }
