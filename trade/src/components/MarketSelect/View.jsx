@@ -8,7 +8,7 @@ import styles from './styles.css';
 
 const MarketSelect = ({ futures, user }) => {
   let futuresNode = null;
-  if (process.env.REACT_APP_BITMEX_HOST && user.id && !user.underJFSA) {
+  if (process.env.REACT_APP_VENDOR === 'quoine' && user.id && !user.underJFSA) {
     futuresNode = futures ? (
       <Button market="futures" />
     ) : (
