@@ -8,7 +8,7 @@ import styles from './styles.css';
 const UserFormField = ({ label, children, layout }) => (
   label ? (
     <Field
-      label={<h1 className={styles.label}>{label}</h1>}
+      label={<span className={styles.label}>{label}</span>}
       layout={layout}
     >
       <div className={styles.children}>
