@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@quoine/core@3.10.0-rc.2":
-  version "3.10.0-rc.2"
-  resolved "https://registry.yarnpkg.com/@quoine/core/-/core-3.10.0-rc.2.tgz#8e05f2f103e79d7253fb1e1da1d606623e623faf"
+"@quoine/core@3.10.0-rc.2.1":
+  version "3.10.0-rc.2.1"
+  resolved "https://registry.yarnpkg.com/@quoine/core/-/core-3.10.0-rc.2.1.tgz#0828c4a3a2a5efe29080064b665f809b8ed2a120"
   dependencies:
     i18next "^4.1.1"
     idx "^1.5.0"
@@ -6028,13 +6028,9 @@ whatwg-encoding@^1.0.1:
   dependencies:
     iconv-lite "0.4.13"
 
-whatwg-fetch@2.0.2:
+whatwg-fetch@2.0.2, whatwg-fetch@>=0.10.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.2.tgz#fe294d1d89e36c5be8b3195057f2e4bc74fc980e"
-
-whatwg-fetch@>=0.10.0:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
 
 whatwg-url@^4.3.0:
   version "4.8.0"
