@@ -1,7 +1,7 @@
 import idx from 'idx';
 
 export const getUserProfAttr = (raw, key, fallback = '') => (
-  idx(raw, _ => _.raw_profile[key]) || fallback
+  idx(raw, _ => _.user_profile[key]) || fallback
 );
 
 export const getName = (raw) => ({
