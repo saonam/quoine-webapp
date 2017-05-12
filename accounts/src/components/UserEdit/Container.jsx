@@ -15,6 +15,7 @@ class UserEdit extends React.Component {
     };
     this.onBack = this.onBack.bind(this);
     this.onNext = this.onNext.bind(this);
+    this.onSetChanged = this.onSetChanged.bind(this);
   }
   onSetStep(step) {
     this.setState({ step });
@@ -28,14 +29,14 @@ class UserEdit extends React.Component {
       });
     }
 
-    this.setState({
-      step: this.state.step + 1,
-      changed: form !== this.props.user,
-    });
+    this.setState({ step: this.state.step + 1 });
     return Promise.resolve();
   }
   onBack() {
     this.setState({ step: this.state.step - 1 });
+  }
+  onSetChanged() {
+    this.setState({ changed: true });
   }
   render() {
     return (
@@ -44,10 +45,12 @@ class UserEdit extends React.Component {
         onSubmit={this.onNext}
         Element={View}
         // ===
-        changed={this.state.changed}
         step={this.state.step}
         onBack={this.onBack}
         onClose={this.props.onClose}
+        // ===
+        changed={this.state.changed}
+        onSetChanged={this.onSetChanged}
       />
     );
   }

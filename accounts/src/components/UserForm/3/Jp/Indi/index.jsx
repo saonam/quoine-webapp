@@ -10,10 +10,11 @@ class UserForm3JpIndi extends React.Component {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onSubmit(form) {
-    // only update form when have changes
-    if (form !== this.props.form.jpIndi) {
-      this.props.onChange.jpIndi(form);
+  onSubmit(jpIndi) {
+    const { form, onChange, onSetChanged } = this.props;
+    if (form.jpIndi !== jpIndi) {
+      onChange.jpIndi(jpIndi);
+      if (onSetChanged) { onSetChanged(); }
     }
     return this.props.onSubmit();
   }
@@ -38,6 +39,7 @@ UserForm3JpIndi.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   // ===
   edit: PropTypes.bool,
+  onSetChanged: PropTypes.func,
 };
 
 export default UserForm3JpIndi;

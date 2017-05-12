@@ -39,15 +39,17 @@ const UserEditView = (props) => {
           style={props.step - 1 !== index ? { display: 'none' } : {}}
         >
           <Form
+            edit
+            // ===
             onSubmit={props.onSubmit}
             form={props.form}
-            changed={props.changed}
             onChange={props.onChange}
             busy={props.busy}
             error={props.error}
             // ===
-            edit
             onClose={props.onClose}
+            changed={props.changed}
+            onSetChanged={props.onSetChanged}
           />
         </div>
       ))}
@@ -59,6 +61,8 @@ UserEditView.propTypes = {
   ...FormWrapperPropTypes,
   step: PropTypes.number.isRequired,
   onClose: PropTypes.func.isRequired,
+  changed: PropTypes.bool.isRequired,
+  onSetChanged: PropTypes.func.isRequired,
 };
 
 export default UserEditView;
