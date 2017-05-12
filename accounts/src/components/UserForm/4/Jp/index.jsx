@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import FromWrapper from '@quoine/components/FormWrapper';
+import { jpTerm } from '@quoine/states/user/resources/initialForm';
 
 import View from './View';
 
@@ -22,7 +23,7 @@ class UserForm4Jp extends React.Component {
   render() {
     return (
       <FromWrapper
-        initialForm={this.props.form.jpTerm}
+        initialForm={jpTerm}
         onSubmit={this.onSubmit}
         Element={View}
         // ===

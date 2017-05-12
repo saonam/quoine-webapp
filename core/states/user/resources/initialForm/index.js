@@ -3,9 +3,9 @@ import pteCorp from './pteCorp';
 import jpIndi from './jpIndi';
 import jpCorp from './jpCorp';
 
-import { sh } from './elements';
+import { sh, jpTerm } from './elements';
 
-export { sh };
+export { sh, jpTerm };
 
 export default {
   email: '',
@@ -25,8 +25,5 @@ export default {
   jpIndi,
   jpCorp,
 
-  jpTerm: {
-    first: false,
-    second: false,
-  },
+  jpTerm,
 };

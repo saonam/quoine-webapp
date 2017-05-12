@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@quoine/core@3.10.0-rc.2.1":
-  version "3.10.0-rc.2.1"
-  resolved "https://registry.yarnpkg.com/@quoine/core/-/core-3.10.0-rc.2.1.tgz#0828c4a3a2a5efe29080064b665f809b8ed2a120"
+"@quoine/core@3.10.0-rc.2.2":
+  version "3.10.0-rc.2.2"
+  resolved "https://registry.yarnpkg.com/@quoine/core/-/core-3.10.0-rc.2.2.tgz#72d1716a92c28107b92a1f5da0b7b739ace8c550"
   dependencies:
     i18next "^4.1.1"
     idx "^1.5.0"

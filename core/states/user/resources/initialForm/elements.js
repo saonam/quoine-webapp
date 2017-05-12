@@ -79,3 +79,8 @@ export const sh = {
   pep: false,
   address,
 };
+
+export const jpTerm = {
+  first: false,
+  second: false,
+};
