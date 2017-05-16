@@ -1,6 +1,6 @@
 {
   "name": "@quoine/core",
-  "version": "3.10.0-rc.2.2",
+  "version": "3.10.0",
   "license": "MIT",
   "dependencies": {
     "i18next": "^4.1.1",
