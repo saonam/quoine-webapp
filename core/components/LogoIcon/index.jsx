@@ -6,12 +6,18 @@ import styles from './styles.css';
 
 import quoineImage from './quoine.svg';
 import tradersImage from './traders.svg';
+import qryptosImage from './qryptos.svg';
 
-let src; let width; let height;
+let src;
+let width = 60;
+let height = 60;
 
 switch (process.env.REACT_APP_VENDOR) {
   case 'traders':
-    src = tradersImage; width = 60; height = 60;
+    src = tradersImage;
+    break;
+  case 'qryptos':
+    src = qryptosImage;
     break;
   case 'quoine':
   default:
