@@ -15,10 +15,11 @@ const MarketSelect = ({ futures, user }) => {
       <Futures />
     );
   }
+  const marginNode = process.env.REACT_APP_VENDOR !== 'qryptos' ? <Button market="margin" /> : '';
   return (
     <div className={styles.main}>
       <Button market="spot" />
-      <Button market="margin" />
+      {marginNode}
       {futuresNode}
     </div>
   );
