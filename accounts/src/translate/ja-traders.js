@@ -176,6 +176,7 @@ export default {
     "help-pending": "お取引いただくには下記書類を送付が必要となります。",
     "help-pending-jp": "お取引いただくには本人確認書類をアップロードしてください。",
     "help-pending-jp-link": "本人確認書類",
+    "help-edit-info": "登録情報を変更する場合は、support@quoine.comまでご連絡ください。",
     // ===
     "document-id": "本人確認書類（顔写真付）",
     "document-id-help": "運転免許書、パスポートなど",

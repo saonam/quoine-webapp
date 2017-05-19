@@ -182,6 +182,7 @@ export default {
     "help-pending": "您的账户尚未得到核准。请上传以下文件供账户核准使用：",
     "help-pending-jp": "您的账户尚未得到核准。请上传以下文件供账户核准使用：",
     "help-pending-jp-link": "文件说明",
+    "help-edit-info": "Please contact us at support@quoine.com if you would like to change any of your client information.",
     // ===
     "document-id": "身份文件",
     "document-id-help": "",

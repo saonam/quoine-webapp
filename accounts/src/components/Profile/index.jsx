@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { TYPES } from '@quoine/states/user';
 
-import Container from './Container';
+import View from './View';
 
 const mapStateToProps = (state) => ({
   user: state.user,
@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch) => ({
   }),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Container);
+export default connect(mapStateToProps, mapDispatchToProps)(View);
