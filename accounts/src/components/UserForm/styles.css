@@ -54,6 +54,6 @@
   composes: x-large from "@quoine/styles/text.css";
 }
 
-.hidden {
-  composes: hidden from "@quoine/styles/visibility.css";
+.hide {
+  composes: none from "@quoine/styles/display.css";
 }

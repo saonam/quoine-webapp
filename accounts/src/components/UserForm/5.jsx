@@ -15,13 +15,10 @@ const UserForm5 = ({ userId }) => (
       </p>
 
       {process.env.REACT_APP_VENDOR === 'traders' ? (
-        <div>
-          <img
-            alt=""
-            src={`https://admin.mtrf.net/ac/action.php?cid=AD000001&uid=${userId}&pid=1`}
-            className={styles.hidden}
-          />
-        </div>
+        <img
+          className={styles.hide} alt=""
+          src={`https://admin.mtrf.net/ac/action.php?cid=AD000001&uid=${userId}&pid=1`}
+        />
       ) : null}
     </div>
 
