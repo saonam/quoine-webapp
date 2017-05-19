@@ -11,7 +11,10 @@ const signUp = form => {
   if (form.underJFSA) {
     options.vendorId = process.env.REACT_APP_VENDOR_JFSA_ID;
   }
-  return quoine.post('/users', options);
+  return quoine.post('/users', options)
+    .then(raw => ({
+      id: raw.id,
+    }));
 };
 
 export default signUp;

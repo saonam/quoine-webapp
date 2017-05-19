@@ -64,6 +64,8 @@ const SignUpView = (props) => {
             onChange={props.onChange}
             busy={props.busy}
             error={props.error}
+            // ===
+            userId={props.userId}
           />
         </div>
       ))}
@@ -75,12 +77,7 @@ const SignUpView = (props) => {
 SignUpView.propTypes = {
   ...FormWrapperPropTypes,
   step: PropTypes.number.isRequired,
+  userId: PropTypes.number.isRequired,
 };
-
-// {props.error ? (
-//   <p className={styles.error}>
-//     {translate(props.error.message)}
-//   </p>
-// ) : null}
 
 export default SignUpView;

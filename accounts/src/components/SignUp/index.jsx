@@ -5,12 +5,12 @@ import initialForm from '@quoine/states/user/resources/initialForm';
 
 import View from './View';
 
-import onNext from './onNext';
+import resources from './resources';
 
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { step: 1 };
+    this.state = { step: 1, userId: 0 };
     this.onBack = this.onBack.bind(this);
     this.onNext = this.onNext.bind(this);
   }
@@ -18,11 +18,16 @@ class SignUp extends React.Component {
     this.setState({ step });
   }
   onNext(form) {
-    return onNext(this.state.step, form)
-    .then((response) => {
-      this.setState({ step: this.state.step + 1 });
-      return response;
-    });
+    const { step } = this.state;
+    if (step === 4) {
+      return resources.signUp(form)
+      .then(user => {
+        this.setState({ step: 5, userId: user.id });
+      });
+    }
+
+    this.setState({ step: step + 1 });
+    return Promise.resolve();
   }
   onBack() {
     this.setState({ step: this.state.step - 1 });
@@ -36,6 +41,7 @@ class SignUp extends React.Component {
         // ===
         step={this.state.step}
         onBack={this.onBack}
+        userId={this.state.userId}
       />
     );
   }

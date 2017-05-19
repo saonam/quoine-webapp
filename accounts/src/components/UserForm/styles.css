@@ -53,3 +53,7 @@
 .description {
   composes: x-large from "@quoine/styles/text.css";
 }
+
+.hidden {
+  composes: hidden from "@quoine/styles/visibility.css";
+}
