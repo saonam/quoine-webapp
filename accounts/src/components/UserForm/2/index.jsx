@@ -4,7 +4,10 @@ import React from 'react';
 import View from './View';
 
 // check whether current vendor has JFSA or not
-const vendorHasJFSA = !!process.env.REACT_APP_VENDOR_JFSA_ID;
+const vendorHasJFSA = (
+  process.env.REACT_APP_VENDOR !== 'qryptos' &&
+  !!process.env.REACT_APP_VENDOR_JFSA_ID
+);
 
 class UserForm2 extends React.Component {
   componentDidUpdate(prevProps) {
