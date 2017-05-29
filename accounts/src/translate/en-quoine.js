@@ -98,6 +98,7 @@ export default {
     "referral": "Promotion Code (optional)",
     "term-quoine": "I agree with <a href=\"https://www.quoine.com/terms\" target=\"_blank\">Terms &amp Conditions</a>.",
     "term-traders": "I agree with <a href=\"https://www.min-btc.com/document/terms.pdf\" target=\"_blank\">Terms &amp Conditions</a>.",
+    "term-qryptos": "I agree with <a href=\"https://s3-ap-northeast-1.amazonaws.com/jfsa-qryptos/Terms+and+Conditions+QUOINE+PTE+LTD_V1.0.pdf\" target=\"_blank\">Terms &amp Conditions</a>.",
   },
   "sign-up-pi": {
     "name": "Name",

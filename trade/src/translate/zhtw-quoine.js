@@ -333,7 +333,15 @@ export default {
   },
   "fund-crypto": {
     "help": "請將款項存入如下地址",
-    "copy": "複製地址",
+    "help-XMR": "請將款項匯入下方提示的地址，並且保留支付單號，以便查詢相關的匯款信息。",
+    "help-XRP": " Ripple Base Reserve機制，即基本準備金制度，是指交易總賬中的每個地址會要求存入一個指定最少數量的XRP作為基本準備金，目前被要求的基本準備金數量是20 XRP，在用戶第一次匯入款項時自動留存。此後的交易中用戶可以收到所有匯入的款項。",
+    // ===
+    "address": "地址",
+    "payment-id": "支付單號",
+    // ===
+    "copy": "複製",
+    "copy-address": "複製地址",
+    "copy-payment-id": "複製支付單號",
   },
   "fund-error": {
     "you-are-not-approved": "您的賬戶需要被審核通過，才能執行入金",

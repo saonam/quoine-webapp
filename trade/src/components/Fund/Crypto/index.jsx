@@ -8,10 +8,12 @@ import View from './View';
 class FundCrypto extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { busy: false, address: '' };
+    this.state = {
+      busy: false,
+      address: '',
+      paymentId: '',
+    };
     this.onLoad = this.onLoad.bind(this);
-    this.onRef = this.onRef.bind(this);
-    this.onCopy = this.onCopy.bind(this);
   }
   componentDidMount() {
     this.onLoad();
@@ -25,26 +27,14 @@ class FundCrypto extends React.Component {
 
     this.setState({ busy: true });
     resources.load(account)
-    .then((address) => {
-      this.setState({ address, busy: false });
+    .then(response => {
+      const { address, paymentId } = response;
+      this.setState({ busy: false, address, paymentId });
     });
   }
-  onRef(node) {
-    this.node = node;
-  }
-  onCopy() {
-    this.node.select();
-    document.execCommand('copy');
-  }
   render() {
-    const { busy, address } = this.state;
     return (
-      <View
-        busy={busy}
-        address={address}
-        onCopy={this.onCopy}
-        onRef={this.onRef}
-      />
+      <View {...this.state} account={this.props.account} />
     );
   }
 }

@@ -333,7 +333,15 @@ export default {
   },
   "fund-crypto": {
     "help": "请将款项存入如下地址",
-    "copy": "复制地址",
+    "help-XMR": "请将款项汇入下方提示的地址，并且保留支付单号，以便查询相关的汇款信息。",
+    "help-XRP": "Ripple Base Reserve机制，即基本准备金制度，是指交易总账中的每个地址会要求存入一个指定最少数量的XRP作为基本准备金，目前被要求的基本准备金数量是20 XRP，在用户第一次汇入款项时自动留存。此后的交易中用户可以收到所有汇入的款项。",
+    // ===
+    "address": "地址",
+    "payment-id": "支付单号",
+    // ===
+    "copy": "复制",
+    "copy-address": "复制地址",
+    "copy-payment-id": "复制支付单号",
   },
   "fund-error": {
     "you-are-not-approved": "您的账户需要被审核通过，才能执行入金",

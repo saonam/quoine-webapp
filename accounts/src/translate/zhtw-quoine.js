@@ -98,6 +98,7 @@ export default {
     "referral": "促銷碼（選填）",
     "term-quoine": "我同意<a href=\"https://www.quoine.com/terms\" target=\"_blank\">條款及條件</a>。",
     "term-traders": "我同意<a href=\"https://min-btc.com/terms\" target=\"_blank\">條款及條件</a>。",
+    "term-qryptos": "我同意<a href=\"https://s3-ap-northeast-1.amazonaws.com/jfsa-qryptos/Terms+and+Conditions+QUOINE+PTE+LTD_V1.0.pdf\" target=\"_blank\">條款及條件</a>。",
   },
   "sign-up-pi": {
     "name": "姓名",

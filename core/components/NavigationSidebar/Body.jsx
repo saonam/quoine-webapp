@@ -21,7 +21,7 @@ const links = ({
     faq: 'https://www.min-btc.com/support/faq',
   },
   qryptos: {
-    fee: 'https://www.quoine.com/fees',
+    fee: 'https://www.qryptos.com/#markets-fees',
     faq: 'https://quoine.zendesk.com/hc/en-us',
   },
   quoine: {

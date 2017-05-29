@@ -333,7 +333,15 @@ export default {
   },
   "fund-crypto": {
     "help": "下記のアドレスにご送金ください：",
-    "copy": "アドレスをコピーする",
+    "help-XMR": "Please deposit to the address below and remember to include the Payment ID in your deposit. Failure to do so may result in the loss of your deposit.",
+    "help-XRP": "Ripple Base Reserve is a minimum amount of XRP that is required for every address in the ledger. Currently this is 20 XRP, which will be held as reserve the first time you deposit. After that you will be able to receive your full deposit.",
+    // ===
+    "address": "Address",
+    "payment-id": "Payment ID",
+    // ===
+    "copy": "Copy",
+    "copy-address": "アドレスをコピーする",
+    "copy-payment-id": "Copy Payment ID",
   },
   "fund-error": {
     "you-are-not-approved": "このアカウントは承認中のため入金情報を作成できません。",

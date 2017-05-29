@@ -19,7 +19,8 @@ const Forms = [Form1, Form2, Form3, Form4, Form5];
 
 /* eslint-disable react/prop-types */
 const getLeftButton = (props) => {
-  if (props.step === 1) {
+  // Temporarily hide signin link for qryptos
+  if (props.step === 1 && process.env.REACT_APP_VENDOR !== 'qryptos') {
     return (<SignInHeaderLink />);
   }
   if (props.step < 5) {

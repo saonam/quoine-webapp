@@ -31,8 +31,12 @@ const BalanceTotalContent = ({ currency, accounts, fxRates }) => {
 
   return (
     <div className={styles.main}>
-      <Field id="total-fiat" value={totalFiat} currency={currency} />
-      <Field id="total-crypto" value={totalCrypto} currency={currency} />
+      {process.env.REACT_APP_VENDOR !== 'qryptos' ? (
+        <div>
+          <Field id="total-fiat" value={totalFiat} currency={currency} />
+          <Field id="total-crypto" value={totalCrypto} currency={currency} />
+        </div>
+      ) : null}
       <Field id="total-balance" value={totalFiat + totalCrypto} currency={currency} />
     </div>
   );
