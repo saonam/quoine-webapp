@@ -77,9 +77,8 @@ export default {
     "title": "语言",
     "en": "英语",
     "ja": "日本語",
-  },
-  "error": {
-    "network": "Sorry we cannot process your request at the moment.",
+    "zhcn": "ZHCN",
+    "zhtw": "ZHTW",
   },
   "tfa": {
     "sent-sms": "安全码已通过短信发送。",
@@ -87,6 +86,9 @@ export default {
     "sent-email": "安全码已通过邮件发送。",
     "resend-sms": "通过短信重新发送",
     "send": "请求",
+  },
+  "error": {
+    "network": "Sorry we cannot process your request at the moment.",
   },
   "tfa-error": {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "您在前一小时内请求次数太多。请过一会儿再重试。",

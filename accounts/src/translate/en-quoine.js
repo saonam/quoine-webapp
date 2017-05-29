@@ -25,6 +25,7 @@ export default {
     "token-is-invalid": "This code is invalid.",
     "invalid-email-or-password": "Email address or password is invalid.",
     "verification-failed": "Authentication code is not valid.",
+    "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "You are logging in from a new IP address that is not confirmed yet. A confirmation link has been sent to your email address. Please check and confirm to continue.",
   },
   "forgot-password": {
     "action-resend": "Resend password reset link",

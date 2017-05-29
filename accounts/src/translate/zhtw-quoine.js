@@ -25,6 +25,7 @@ export default {
     "token-is-invalid": "代碼無效。",
     "invalid-email-or-password": "電子郵件地址或密碼無效。",
     "verification-failed": "驗證碼無效。",
+    "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "You are logging in from a new IP address that is not confirmed yet. A confirmation link has been sent to your email address. Please check and confirm to continue.",
   },
   "forgot-password": {
     "action-resend": "重新發送密碼重置鏈接",

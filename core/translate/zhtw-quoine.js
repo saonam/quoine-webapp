@@ -77,6 +77,8 @@ export default {
     "title": "語言",
     "en": "英語",
     "ja": "日本語",
+    "zhcn": "ZHCN",
+    "zhtw": "ZHTW",
   },
   "tfa": {
     "sent-sms": "安全碼已通過短信發送。",

@@ -355,11 +355,11 @@ export default {
     // ===
     "id": "ID",
     "time": "Created At",
-    "account": "賬戶",
     "quantity": "金額",
     "address": "{{ currency}} Address",
     "bank": "銀行名稱",
     "inr-transfer": "INR轉賬類型",
+    "inr-transfer-note": "This deposit method is only for INR domestic transfers from local India bank accounts.",
     "code": "授權碼",
     "fee": "我們收取的費用",
     "fee-help": "(未包含銀行收取的費用)",
@@ -393,7 +393,7 @@ export default {
     "token-is-invalid": "此券無效",
     "verification-failed": "此授權碼無效",
   },
- // ===
+  // ===
   "futures-balance": {
     "help-fund": "請從您的BTC賬戶轉賬，以為您的期貨賬戶充值。",
     "help-withdrawal": "請向您的BTC賬戶轉賬，以從您的期貨賬戶取款。",
