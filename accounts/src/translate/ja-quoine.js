@@ -25,7 +25,7 @@ export default {
     "token-is-invalid": "無効な認証コードです。",
     "invalid-email-or-password": "メールアドレスまたはパスワードをもう一度確認してください。",
     "verification-failed": "無効な認証コードです。",
-    "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "未確認のIPアドレスからログインしています。登録メールをチェックして、このIPアドレスをご確認お願いいたします。",
+    "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "未登録のIPアドレスからのログインを確認しました。登録のメールアドレスに送信されたメールにある、確認用リンクをご確認ください。",
   },
   "forgot-password": {
     "action-resend": "メールが届かない場合はこちら（再送信）",
