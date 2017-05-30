@@ -80,15 +80,15 @@ export default {
     "zhcn": "ZHCN",
     "zhtw": "ZHTW",
   },
+  "error": {
+    "network": "Sorry we cannot process your request at the moment.",
+  },
   "tfa": {
     "sent-sms": "Code has been sent via SMS.",
     "sent-authy": "Code has been sent via Authy.",
     "sent-email": "Code has been sent via Email.",
     "resend-sms": "Resend via SMS",
     "send": "Request",
-  },
-  "error": {
-    "network": "Sorry we cannot process your request at the moment.",
   },
   "tfa-error": {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "You have requested too many times in the last hour. Please wait a moment before trying again.",

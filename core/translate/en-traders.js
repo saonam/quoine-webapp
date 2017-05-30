@@ -1,6 +1,6 @@
 /* eslint-disable quotes, quote-props, max-len */
 
-// quoine
+// traders
 
 export default {
   "account": {
@@ -77,6 +77,8 @@ export default {
     "title": "Language",
     "en": "English",
     "ja": "日本語",
+    "zhcn": "ZHCN",
+    "zhtw": "ZHTW",
   },
   "error": {
     "network": "Sorry we cannot process your request at the moment.",

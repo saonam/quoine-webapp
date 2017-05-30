@@ -77,6 +77,8 @@ export default {
     "title": "言語",
     "en": "English",
     "ja": "日本語",
+    "zhcn": "ZHCN",
+    "zhtw": "ZHTW",
   },
   "error": {
     "network": "インターナルエラーが発生しました。",
