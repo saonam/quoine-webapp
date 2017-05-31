@@ -1,6 +1,6 @@
 /* eslint-disable quotes, quote-props, max-len */
 
-// quoine
+// qryptos
 
 export default {
   "account": {
@@ -56,7 +56,7 @@ export default {
   },
   "accounts-warning": {
     "title": "Accounts page has moved.",
-    "description": "Accounts Page is now on the same page as the Dashboard, on the far right. Now you can see every detail of your QUOINE account (deposits/withdrawals, balance, volume, and transactions) without moving anywhere.",
+    "description": "Accounts Page is now on the same page as the Dashboard, on the far right. Now you can see every detail of your QRYPTOS account (deposits/withdrawals, balance, volume, and transactions) without moving anywhere.",
     "dismiss": "Dismiss",
   },
   "menu": {
@@ -77,6 +77,8 @@ export default {
     "title": "Language",
     "en": "English",
     "ja": "日本語",
+    "zhcn": "ZHCN",
+    "zhtw": "ZHTW",
   },
   "error": {
     "network": "Sorry we cannot process your request at the moment.",
