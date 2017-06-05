@@ -290,7 +290,7 @@ export default {
     // ===
     "method": "入金方法",
     "method-bank": "銀行振込",
-    "method-cash": "キャッシュ",
+    "method-cash": "クイック入金",
     // ===
     "amount": "入金金額",
     "bank": "銀行名",
