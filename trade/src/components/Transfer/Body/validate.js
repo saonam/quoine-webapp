@@ -4,8 +4,8 @@
 //   acceptableTradersAccs.indexOf(account.currency) === -1
 // );
 
-const isLimitInQuoine = ({ type, user }) => (
-  process.env.REACT_APP_VENDOR === 'quoine' &&
+const isNeedTfa = ({ type, user }) => (
+  (process.env.REACT_APP_VENDOR === 'quoine' || process.env.REACT_APP_VENDOR === 'qryptos') &&
   type === 'withdrawal' &&
   !user.tfa
 );
@@ -32,7 +32,7 @@ const validate = ({ user, account, type }) => {
   //   };
   // }
 
-  if (isLimitInQuoine({ type, user })) {
+  if (isNeedTfa({ type, user })) {
     return {
       key: 'need-tfa',
       style: 'negative',
