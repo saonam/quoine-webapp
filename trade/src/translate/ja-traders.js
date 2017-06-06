@@ -243,9 +243,6 @@ export default {
     "fee-network": "ネットワーク手数料",
     "hash": "ハッシュ",
     // ===
-    "state": "ステータス",
-    "state-pending": "保留中",
-    // ===
     "type": "タイプ",
     "type-all": "全",
     "type-bought": "購入",

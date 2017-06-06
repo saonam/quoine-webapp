@@ -243,9 +243,6 @@ export default {
     "fee-network": "Network Fee",
     "hash": "Hash",
     // ===
-    "state": "State",
-    "state-pending": "Pending",
-    // ===
     "type": "Type",
     "type-all": "All",
     "type-bought": "Bought",

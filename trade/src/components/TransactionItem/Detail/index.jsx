@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import translate from '@quoine/translate';
-
 import Time from '@quoine/components/Time';
 import Color from '@quoine/components/Color';
 import Money from '@quoine/components/Money';
@@ -76,12 +74,6 @@ const TransactionItemDetail = ({ trans }) => (
     {trans.feeNetwork ? (
       <Field id="fee-network">
         <Money value={trans.feeNetwork} currency={trans.account} />
-      </Field>
-    ) : null}
-
-    {trans.state ? (
-      <Field id="state">
-        {translate(`trans:state-${trans.state}`)}
       </Field>
     ) : null}
 

@@ -243,9 +243,6 @@ export default {
     "fee-network": "網絡費用",
     "hash": "Hash",
     // ===
-    "state": "狀態",
-    "state-pending": "待處理",
-    // ===
     "type": "類型",
     "type-all": "全部",
     "type-bought": "購得",
