@@ -13,3 +13,6 @@
   composes: width-full from "@quoine/styles/size.css";
   composes: block from "@quoine/styles/display.css";
 }
+:global(.ie) .input {
+  min-width: calc($base * 5);
+}
