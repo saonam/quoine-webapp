@@ -7,7 +7,12 @@ import Button from '@quoine/components/ButtonWLoading';
 
 import styles from './styles.css';
 
-const TFARequestView = ({ onRequest, sent, busy, error, message, layout }) => (
+const getLabel = (sent) => {
+  if (!sent) { return 'send'; }
+  return (sent === 'authy' ? 'resend-sms' : 'resend');
+};
+
+const TFARequestView = ({ onRequest, onResend, sent, busy, error, message, layout }) => (
   <div className={styles[layout || 'main']}>
     <div className={styles.form}>
       <p className={styles.message}>
@@ -15,9 +20,9 @@ const TFARequestView = ({ onRequest, sent, busy, error, message, layout }) => (
       </p>
       <div className={styles.button}>
         <Button
-          busy={busy} onClick={onRequest} styleName="inline text accent"
+          busy={busy} onClick={sent ? onResend : onRequest} styleName="inline text accent"
         >
-          {translate(`tfa:${sent ? 'resend-sms' : 'send'}`)}
+          {translate(`tfa:${getLabel(sent)}`)}
         </Button>
       </div>
     </div>
@@ -29,11 +34,12 @@ const TFARequestView = ({ onRequest, sent, busy, error, message, layout }) => (
 
 TFARequestView.propTypes = {
   onRequest: PropTypes.func.isRequired,
+  onResend: PropTypes.func.isRequired,
   busy: PropTypes.bool.isRequired,
   error: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   layout: PropTypes.oneOf(['vertical']),
-  sent: PropTypes.bool.isRequired,
+  sent: PropTypes.oneOf(['', 'authy', 'sms', 'email', 'ga']).isRequired,
 };
 
 export default TFARequestView;

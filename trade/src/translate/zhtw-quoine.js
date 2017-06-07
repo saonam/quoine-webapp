@@ -147,6 +147,7 @@ export default {
     "quantity-min-ETH": "訂單數量不可少於 0.5 ETH。",
     "quantity-integer": "訂單數必須為整數",
     "user-free-margin-below-tolerance-level": "保證金應高於保證金要求額",
+    "trailing-stop-value-must-be-positive": "只在訂單盈餘為正的情況下會觸發移動止損。",
   },
   // ===
   "position": {
@@ -277,7 +278,7 @@ export default {
     "message-banned": "您的賬戶已被禁用",
     "help-banned": "請您盡快聯繫我們 support@quoine.com",
     // ===
-    "message-limit-accounts": "目前我們僅支持 JPY、BTC 和 ETH 的存款/取款。",
+    "message-limit-accounts": "目前我們僅提供 JPY、BTC 和 ETH 的存款/取款業務",
     // ===
     "message-need-tfa": "從安全方面考慮，沒有二級驗證碼將不能進行取款操作",
     "help-need-tfa": "請到菜單 > 設置 > 安全中為賬戶開通二級認證。",
@@ -365,7 +366,7 @@ export default {
     "fee-help": "(未包含銀行收取的費用)",
     "maximum": "最高限額（每日）",
     "minimum": "最小限額（每筆）",
-    "none": "無",
+    "faq": "FAQ",
     // ===
     "pending-title": "等待中的取款",
     "pending-empty": "非等待中的取款",
@@ -378,7 +379,10 @@ export default {
     "status": "狀態",
     "status-pending": "等待中",
     "status-processing": "處理中",
-    "status-awaiting-confirmation": "未被確認",
+    "status-processed": "取款完成",
+    "status-declined": "已刪除",
+    "status-cancelled": "已取消",
+    "status-awaiting-confirmation": "未確認",
   },
   "withdrawal-cancel": {
     "confirm": "取消取款",
@@ -476,6 +480,9 @@ export default {
   "charts": {
     "not-ready": "圖表尚未準備好",
     "spine-title": "圖表",
+    "mode": "Mode",
+    "mode-crypto-watch": "Crypto Watch",
+    "mode-trading-view": "Trading View",
   },
   "trade-feed": {
     "title": "交易資訊",

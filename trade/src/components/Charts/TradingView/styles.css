@@ -1,0 +1,4 @@
+.main {
+  composes: full from "@quoine/styles/size.css";
+  border: none;
+}

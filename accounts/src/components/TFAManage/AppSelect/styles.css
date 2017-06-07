@@ -1,0 +1,16 @@
+.main {
+}
+.description {
+  composes: primary-3 from "@quoine/styles/color.css";
+}
+.items {
+  composes: flex from "@quoine/styles/flex.css";
+  composes: top-small from "@quoine/styles/margin.css";
+}
+/* === */
+.item {
+  composes: left-large from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin-left: 0;
+}

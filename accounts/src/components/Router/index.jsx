@@ -49,7 +49,7 @@ const Router = () => (
         <Route path="application" components={Application} />
         <Route path="profile" components={Profile} />
         <Route path="security" components={Security} />
-        {process.env.REACT_APP_VENDOR === 'quoine' ? (
+        {process.env.REACT_APP_VENDOR === 'quoine' || process.env.REACT_APP_VENDOR === 'qryptos' ? (
           <Route path="api" components={TokenManage} />
         ) : null}
       </Route>

@@ -1,0 +1,5 @@
+.main {
+  width: calc(100% + 2px);
+  height: calc(100% + 31px);
+  margin: -1px;
+}

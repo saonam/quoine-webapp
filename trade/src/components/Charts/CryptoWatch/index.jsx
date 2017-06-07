@@ -5,13 +5,13 @@ import Cryptowatch from 'cryptowatch-embed';
 import View from './View';
 import schemes from './schemes';
 
-const getChartName = (product) => {
-  switch (product) {
-    // Bitmex products
+const getChartName = (symbol) => {
+  switch (symbol) {
+    // Bitmex symbols
     case 'XBJH17': return '';
-    // QUOINE products
+    // QUOINE symbols
     // BTCUSD => btcusd
-    default: return product.toLowerCase();
+    default: return symbol.toLowerCase();
   }
 };
 const getLanguage = (language) => {
@@ -22,7 +22,7 @@ const getLanguage = (language) => {
   }
 };
 
-class Charts extends React.PureComponent {
+class ChartsCryptoWatch extends React.PureComponent {
   constructor(props) {
     super(props);
     this.mountChart = this.mountChart.bind(this);
@@ -35,14 +35,11 @@ class Charts extends React.PureComponent {
   }
   componentDidUpdate() { this.mountChart(); }
   mountChart() {
-    const { product, language, market, theme, double } = this.props;
-    // prepare element
-    const primaryNode = document.querySelector('#primary-chart');
-    const secondaryNode = document.querySelector('#secondary-chart');
+    const { id, product, market, theme, language } = this.props;
 
     // build
     const origin = market === 'futures' ? 'bitmex' : 'quoine';
-    const name = getChartName(product);
+    const name = getChartName(product.symbol);
     const options = {
       host: 'quoine.embed.cryptowat.ch',
       locale: getLanguage(language),
@@ -56,32 +53,28 @@ class Charts extends React.PureComponent {
     try {
       const chart = new Cryptowatch(origin, name, options);
       // mount
-      primaryNode.innerHTML = '';
-      chart.mount('#primary-chart');
-      if (double) {
-        secondaryNode.innerHTML = '';
-        chart.mount('#secondary-chart');
-      }
+      document.querySelector(`#${id}`).innerHTML = '';
+      chart.mount(`#${id}`);
     } catch (e) {
       this.error = true;
     }
   }
   render() {
-    const { double, grow } = this.props;
     return (
-      <View error={this.error} double={double} grow={grow} />
+      <View error={this.error} id={this.props.id} />
     );
   }
 }
 
-Charts.propTypes = {
-  product: PropTypes.string.isRequired,
+ChartsCryptoWatch.propTypes = {
+  id: PropTypes.string.isRequired,
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    symbol: PropTypes.string.isRequired,
+  }).isRequired,
   market: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
-  double: PropTypes.bool.isRequired,
-  // ===
-  grow: PropTypes.number.isRequired,
 };
 
-export default Charts;
+export default ChartsCryptoWatch;

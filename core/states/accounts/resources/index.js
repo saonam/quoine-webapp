@@ -1,12 +1,19 @@
 import * as quoine from './quoine';
 import * as bitmex from './bitmex';
 
+const tempFilter = (account) => {
+  if (process.env.REACT_APP_VENDOR !== 'qryptos') {
+    return account;
+  }
+  return account.currency !== 'REP';
+};
+
 export const loadAll = () => Promise.all([
   quoine.loadAll(),
   bitmex.loadAll(),
 ]).then((response) => {
   const [quoineAccounts, bitmexAccounts] = response;
-  return [...quoineAccounts, ...bitmexAccounts];
+  return [...quoineAccounts, ...bitmexAccounts].filter(tempFilter);
 });
 
 // payload: { currency, isFutures }

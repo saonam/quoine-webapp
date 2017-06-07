@@ -2,6 +2,9 @@
 
 /* default */
 @theme {
+  .border-accent {
+    box-shadow: $accent 0px 0px 0px 1px inset;
+  }
   .border-bottom-accent {
     box-shadow: $accent 0px -1px 0px 0px inset;
   }

@@ -1,6 +1,0 @@
-.item {
-  composes: left-small from "@quoine/styles/margin.css";
-}
-.item:first-child {
-  margin: 0;
-}

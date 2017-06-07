@@ -87,6 +87,9 @@ export default {
     "sent-sms": "Code has been sent via SMS.",
     "sent-authy": "Code has been sent via Authy.",
     "sent-email": "Code has been sent via Email.",
+    "sent-ga": "Code has been sent via Google Authenticator.",
+    // ===
+    "resend": "Resend",
     "resend-sms": "Resend via SMS",
     "send": "Request",
   },

@@ -9,11 +9,12 @@ import TextInput from '@quoine/components/TextInput';
 import CountryInput from '@quoine/components/CountryInput';
 import Button from '@quoine/components/Button';
 import CheckboxInput from '@quoine/components/CheckboxInput';
+import ErrorMessage from '@quoine/components/ErrorMessage';
 
 import LargeField from 'components/LargeField';
 import styles from 'components/UserForm/styles.css';
 
-const UserForm2View = ({ onSubmit, form, onChange }) => (
+const UserForm2View = ({ onSubmit, form, onChange, disabled }) => (
   <form onSubmit={onSubmit}>
 
     <div className={styles.body}>
@@ -114,8 +115,10 @@ const UserForm2View = ({ onSubmit, form, onChange }) => (
 
     </div>
 
+    <ErrorMessage className={styles.error} error={disabled} />
+
     <div className={styles.input}>
-      <Button type="submit" styleName="modal accent">
+      <Button type="submit" styleName={`modal accent ${disabled ? 'disabled' : ''}`}>
         {translate('sign-up:action-next')}
       </Button>
     </div>
@@ -127,6 +130,7 @@ UserForm2View.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   form: PropTypes.shape({}).isRequired,
   onChange: PropTypes.objectOf(PropTypes.func).isRequired,
+  disabled: ErrorMessage.propTypes.error,
 };
 
 export default UserForm2View;

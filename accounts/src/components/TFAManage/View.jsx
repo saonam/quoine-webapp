@@ -1,27 +1,49 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import LoadingIconWrapper from '@quoine/components/LoadingIconWrapper';
+import translate from '@quoine/translate';
 
-import Standby from './Standby';
-import AddPhone from './AddPhone';
-import Toggle from './Toggle';
+import Loading from '@quoine/components/LoadingIconWrapper';
+import Field from '@quoine/components/Field';
 
-const Elements = {
-  standby: Standby,
-  addPhone: AddPhone,
-  toggle: Toggle,
-};
+import Status from 'components/TFA/Status';
+import GA from 'components/TFA/GA';
+import Authy from 'components/TFA/Authy';
+import AppSelect from './AppSelect';
 
-const TFAManageView = ({ status, busy, ...others }) => {
-  if (busy) { return <LoadingIconWrapper type="height" />; }
-  const Element = Elements[status];
-  return <Element {...others} />;
+const TFAManageView = ({
+  busy, tfa, app, phone,
+  onSelectApp, onUpdatePhone, onToggleTfa,
+}) => {
+  if (busy) { return (<Loading />); }
+
+  const App = app === 'ga' ? GA : Authy;
+  return (
+    <div>
+      <Status tfa={tfa} />
+      {tfa ? (
+        <Field layout="inline" label={translate('tfa-manage:app')}>
+          {translate(`tfa-manage:app-${app}`)}
+        </Field>
+      ) : (
+        <AppSelect current={app} onSelect={onSelectApp} />
+      )}
+      {app ? (
+        <App {...{ tfa, onToggleTfa, phone, onUpdatePhone }} />
+      ) : null}
+    </div>
+  );
 };
 
 TFAManageView.propTypes = {
-  status: PropTypes.string.isRequired,
   busy: PropTypes.bool.isRequired,
+  tfa: PropTypes.bool.isRequired,
+  app: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  // ==
+  onSelectApp: PropTypes.func.isRequired,
+  onUpdatePhone: PropTypes.func.isRequired,
+  onToggleTfa: PropTypes.func.isRequired,
 };
 
 export default TFAManageView;

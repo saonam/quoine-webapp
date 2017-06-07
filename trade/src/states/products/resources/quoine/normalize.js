@@ -1,5 +1,12 @@
 import { addBaseQuote } from '@quoine/states/utils';
 
+const tempFilter = (product) => {
+  if (process.env.REACT_APP_VENDOR !== 'qryptos') {
+    return product;
+  }
+  return product.symbol !== 'REPBTC';
+};
+
 export const one = raw => ({
   ...addBaseQuote(raw),
   id: raw.id,
@@ -25,4 +32,4 @@ export const one = raw => ({
   fxRate: Number(raw.exchange_rate),
 });
 
-export const all = raw => (raw.map(one));
+export const all = raw => (raw.map(one)).filter(tempFilter);

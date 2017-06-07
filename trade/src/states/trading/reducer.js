@@ -12,7 +12,7 @@ const DEFAULTS_BY_VENDOR = {
   qryptos: {
     account: 'BTC',
     product: 'ETHBTC',
-    market: 'margin',
+    market: 'spot',
   },
 };
 

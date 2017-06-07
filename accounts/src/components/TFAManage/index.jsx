@@ -1,41 +1,47 @@
 import React from 'react';
 
-import resources from './resources';
-
 import View from './View';
+
+import resources from './resources';
 
 class TFAManage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      status: 'standby', phone: '', enabled: false, busy: true,
+      busy: true,
+      tfa: false,
+      app: '',
+      phone: '',
     };
-    this.goStandby = this.onChangeStatus.bind(this, 'standby');
-    this.goAddPhone = this.onChangeStatus.bind(this, 'addPhone');
-    this.goToggle = this.onChangeStatus.bind(this, 'toggle');
+    this.onSelectApp = this.onSelectApp.bind(this);
     this.onUpdatePhone = this.onUpdatePhone.bind(this);
-    this.onToggle = this.onToggle.bind(this);
+    this.onToggleTfa = this.onToggleTfa.bind(this);
   }
   componentDidMount() {
-    resources.load().then(({ phone, enabled }) => {
-      this.setState({ phone, enabled, busy: false });
+    resources.load().then(response => {
+      const { tfa, app, phone } = response;
+      this.setState({ busy: false, tfa, app, phone });
     });
   }
-  onChangeStatus(status) { this.setState({ status }); }
-  onUpdatePhone(phone) { this.setState({ phone }); }
-  onToggle() { this.setState({ enabled: !this.state.enabled }); }
+  onSelectApp(app) {
+    this.setState({ app });
+  }
+  onUpdatePhone(phone) {
+    this.setState({ phone });
+  }
+  onToggleTfa() {
+    const { tfa, app } = this.state;
+    const nextTfa = !tfa;
+    const nextApp = nextTfa ? app : '';
+    this.setState({ tfa: nextTfa, app: nextApp });
+  }
   render() {
-    const { phone, enabled, status, busy } = this.state;
     return (
       <View
-        goStandby={this.goStandby}
-        status={status} busy={busy}
-        // ===
-        goAddPhone={this.goAddPhone}
-        phone={phone} onUpdatePhone={this.onUpdatePhone}
-        // ===
-        goToggle={this.goToggle}
-        enabled={enabled} onToggle={this.onToggle}
+        {...this.state}
+        onSelectApp={this.onSelectApp}
+        onUpdatePhone={this.onUpdatePhone}
+        onToggleTfa={this.onToggleTfa}
       />
     );
   }

@@ -6,7 +6,7 @@ export default (raw) => ({
   // ===
   affiliateCode: raw.affiliate_code,
   fees: raw.custom_fees,
-  tfa: raw.phone_verified,
+  tfa: !!raw.two_fa_type,
   // ===
   status: raw.status.replace(/_/g, '-'),
   statusDeclinedReason: raw.declined_reason,

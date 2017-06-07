@@ -1,5 +1,6 @@
 const validateQuantity = ({ order }) => {
   const { baseCurrency, quantity } = order;
+
   switch (baseCurrency) {
     case 'ETH': {
       if (quantity < 0.5) {
@@ -16,7 +17,7 @@ const validateQuantity = ({ order }) => {
       }
       break;
     }
-    case 'BTC': default: {
+    case 'BTC': {
       if (quantity < 0.01) {
         return 'quantity-min-BTC';
       }
@@ -25,7 +26,12 @@ const validateQuantity = ({ order }) => {
       }
       break;
     }
+    default: {
+      // this case have no limit
+      return false;
+    }
   }
+
   return false;
 };
 

@@ -9,7 +9,7 @@ import styles from './styles.css';
 const FormNumberInPlaceView = ({ value, onChange, onSubmit, onCancel }) => (
   <form className={styles.main} onSubmit={onSubmit}>
     <input
-      className={styles.input} type="number" autoFocus
+      className={styles.input} type="number" step="any" min="0" autoFocus
       value={value} onChange={onChange}
     />
     <Button styleName="icon accent" type="submit">

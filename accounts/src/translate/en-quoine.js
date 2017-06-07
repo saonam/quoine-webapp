@@ -9,7 +9,7 @@ export default {
     "email": "Email Address",
     "password": "Password",
     "code": "Authentication Code",
-    "code-description": "An authentication code is required to sign in. This code has been sent via Authy or SMS to your mobile phone.",
+    "code-description": "An authentication code is required to sign in.",
     "back": "Back",
     "new-text": "Don't have an account?",
     "new-or": "or",
@@ -61,6 +61,7 @@ export default {
     "input-next": "New",
     "input-current": "Current",
     "success": "Your password has been successfully updated.",
+    "password-help": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
   },
   "change-password-error": {
     "password-update-failed": "Password update has failed.",
@@ -129,6 +130,7 @@ export default {
     "all-is-required": "All fields are required.",
     "terms": "Please go through Terms & Conditions thoroughly and accept them before proceeding.",
     "password-is-too-short-minimum-is-8-characters": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
+    "qryptos-not-available-for-japanese": "QRYPTOS is currently not available for Japanese users.",
   },
   "demo": {
     "title": "Use a demo account",
@@ -161,7 +163,7 @@ export default {
     // ===
     "security-title": "Security",
     "password-title": "Password",
-    "sign-in-title": "Sign In",
+    "tfa-title": "Two Factor Authentication",
     // ===
     "api-title": "API",
   },
@@ -214,31 +216,43 @@ export default {
     "message-no-changes": "Your information has not been changed.",
   },
   "tfa-manage": {
-    "phone": "Phone",
-    "title": "Two-Factor Authentication",
+    "status": "TFA Status",
     "status-enabled": "Enabled",
-    "status-not-enabled": "Not Enabled Yet",
+    "status-disabled": "Not Enabled Yet",
     // ===
+    "app-select-description": "To enabled 2FA, please select one of the apps below:",
+    // ===
+    "app": "TFA App",
+    "app-authy": "Authy",
+    "app-ga": "Google Authenticator",
+    // ===
+    "action-enable": "Enable",
+    "action-disable": "Disable",
+    // ===
+    "form-input": "Authentication Code",
+    "form-authy-description": "Please enter the code that was sent to your phone.",
+    "form-ga-description": "Please open your Google Authenticator app to get your auth code.",
+  },
+  "tfa-manage-error": {
+    "en-authy-verification-failed": "Token is invalid.",
+    "verification-failed": "Token is invalid.",
+    "en-authy-token-is-blank": "Authentication code is required.",
+    "token-is-invalid": "Token is invalid.",
+  },
+  "tfa-phone": {
+    "phone": "Phone",
     "help-change-phone": "To change your phone numer, please contact our Support at support@quoine.com.",
     // ===
     "add-phone-title": "Add Phone Number",
     "add-phone-action": "Add",
     "add-phone-label": "Phone Number",
     "add-phone-description": "Please enter the new phone number.",
-    // ===
-    "toggle-title-enable": "Enable",
-    "toggle-title-disable": "Disable",
-    "toggle-action-enable": "Enable",
-    "toggle-action-disable": "Disable",
-    "toggle-description": "Please enter the code that was sent to your phone.",
-    "toggle-label": "Authentication Code",
-    // ===
-    "action-cancel": "Cancel",
-    "action-done": "Done",
   },
-  "tfa-manage-error": {
-    "en-authy-token-is-blank": "Authentication code is required.",
-    "token-is-invalid": "Token is invalid.",
+  "tfa-ga": {
+    "scan-barcode": "Scan this QR code with Google Authenticator.",
+    "enter-code": "Enter the six-digit code provided by the app.",
+    "enter-code-description": "Once you have scanned the QR code, the app will provide a six-digit code which you can enter in the field below:",
+    "enter-key-description": "You can also choose Manual Entry and enter the key yourself instead of scanning the QR code.",
   },
   "token": {
     "id": "ID",

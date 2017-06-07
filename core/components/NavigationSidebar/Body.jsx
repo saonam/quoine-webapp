@@ -22,7 +22,7 @@ const links = ({
   },
   qryptos: {
     fee: 'https://www.qryptos.com/#markets-fees',
-    faq: 'https://quoine.zendesk.com/hc/en-us',
+    faq: 'https://qryptos.zendesk.com/hc/en-us',
   },
   quoine: {
     fee: 'https://www.quoine.com/fees',

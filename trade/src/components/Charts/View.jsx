@@ -1,30 +1,32 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Loading from '@quoine/components/LoadingIconWrapper';
+
 import Header from './Header';
-import Message from './Message';
+
+import CryptoWatch from './CryptoWatch';
+import TradingView from './TradingView';
 
 import styles from './styles.css';
 
-// const disableOverlay = (event) => (
-//   // eslint-disable-next-line no-param-reassign
-//   event.target.style.pointerEvents = 'none'
-// );
+const Charts = ({ product, double, mode, ...others }) => {
+  if (!product) {
+    return (<Loading />);
+  }
 
-const Charts = ({ error, double }) => {
-  if (error) { return <Message />; }
-  const className = `${styles.main} ${styles[double ? 'double' : 'single']}`;
+  const ChartType = mode === 'crypto-watch' ? CryptoWatch : TradingView;
   return (
-    <div className={className}>
+    <div className={`${styles.main} ${styles[double ? 'double' : 'single']}`}>
       <header className={styles.header}>
-        <Header double={double} />
+        <Header double={double} mode={mode} />
       </header>
       <div className={styles.primary}>
-        <div className={styles.node} id="primary-chart" />
+        <ChartType id="primary-chart" product={product} {...others} />
       </div>
       {double ? (
         <div className={styles.secondary}>
-          <div className={styles.node} id="secondary-chart" />
+          <ChartType id="secondary-chart" product={product} {...others} />
         </div>
       ) : null}
     </div>
@@ -32,8 +34,12 @@ const Charts = ({ error, double }) => {
 };
 
 Charts.propTypes = {
-  error: PropTypes.bool.isRequired,
-  double: PropTypes.bool.isRequired,
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    symbol: PropTypes.string.isRequired,
+  }),
+  ...Header.propTypes.double,
+  ...Header.propTypes.mode,
 };
 
 export default Charts;

@@ -1,3 +1,6 @@
 .main {
   composes: small line-1-5 from "@quoine/styles/text.css";
 }
+.link {
+  composes: accent from "@quoine/styles/color.css";
+}

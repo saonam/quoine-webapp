@@ -28,9 +28,9 @@ const FundFiatListView = ({ busy, funds }) => (
 FundFiatListView.propTypes = {
   busy: PropTypes.bool,
   funds: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  // form: React.PropTypes.shape({
-  //   account: React.PropTypes.string.isRequired,
-  //   method: React.PropTypes.string.isRequired,
+  // form: PropTypes.shape({
+  //   account: PropTypes.string.isRequired,
+  //   method: PropTypes.string.isRequired,
   // }).isRequired,
 };
 

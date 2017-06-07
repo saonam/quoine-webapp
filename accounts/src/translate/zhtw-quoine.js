@@ -61,6 +61,7 @@ export default {
     "input-next": "新密碼",
     "input-current": "原密碼",
     "success": "密碼已成功更新",
+    "password-help": "密碼必須至少包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字",
   },
   "change-password-error": {
     "password-update-failed": "密碼更新失敗",
@@ -129,6 +130,7 @@ export default {
     "all-is-required": "所有字段都為必填項",
     "terms": "請仔細閱讀條款聲明，然後繼續",
     "password-is-too-short-minimum-is-8-characters": "密碼必須至少包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字",
+    "qryptos-not-available-for-japanese": "QRYPTOS暫時不支援日語服務，敬請見諒。",
   },
   "demo": {
     "title": "模擬賬戶",
@@ -161,7 +163,7 @@ export default {
     // ===
     "security-title": "安全",
     "password-title": "密碼",
-    "sign-in-title": "登錄",
+    "tfa-title": "雙重驗證",
     // ===
     "api-title": "API接口",
   },
@@ -214,31 +216,43 @@ export default {
     "message-no-changes": "沒有完成更新資料過程",
   },
   "tfa-manage": {
-    "phone": "電話",
-    "title": "雙重驗證",
+    "status": "TFA Status",
     "status-enabled": "啟用",
     "status-not-enabled": "尚未啟用",
     // ===
+    "app-select-description": "To enabled 2FA, please select one of the apps below:",
+    // ===
+    "app": "TFA App",
+    "app-authy": "Authy",
+    "app-ga": "Google Authenticator",
+    // ===
+    "action-enable": "啟用",
+    "action-disable": "禁用",
+    // ===
+    "form-input": "驗證碼",
+    "form-authy-description": "請輸入發送至您電話的代碼。",
+    "form-ga-description": "Please open your Google Authenticator app to get your auth code.",
+  },
+  "tfa-manage-error": {
+    "en-authy-token-is-blank": "驗證碼不能為空",
+    "verification-failed": "Token is invalid.",
+    "en-authy-token-is-blank": "Authentication code is required.",
+    "token-is-invalid": "驗證碼無效",
+  },
+  "tfa-phone": {
+    "phone": "電話",
     "help-change-phone": "如需更改電話號碼，請通過 support@quoine.com 聯系我們",
     // ===
     "add-phone-title": "添加電話號碼",
     "add-phone-action": "添加",
     "add-phone-label": "電話號碼",
     "add-phone-description": "請輸入電話號碼",
-    // ===
-    "toggle-title-enable": "啟用",
-    "toggle-title-disable": "禁用",
-    "toggle-action-enable": "啟用",
-    "toggle-action-disable": "禁用",
-    "toggle-description": "請輸入發送至您電話的驗證碼",
-    "toggle-label": "驗證碼",
-    // ===
-    "action-cancel": "取消",
-    "action-done": "確認",
   },
-  "tfa-manage-error": {
-    "en-authy-token-is-blank": "驗證碼不能為空",
-    "token-is-invalid": "驗證碼無效",
+  "tfa-ga": {
+    "scan-barcode": "Scan this QR code with Google Authenticator.",
+    "enter-code": "Enter the six-digit code provided by the app.",
+    "enter-code-description": "Once you have scanned the QR code, the app will provide a six-digit code which you can enter in the field below:",
+    "enter-key-description": "You can also choose Manual Entry and enter the key yourself instead of scanning the QR code.",
   },
   "token": {
     "id": "編號",

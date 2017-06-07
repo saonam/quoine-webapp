@@ -9,7 +9,7 @@ export default {
     "email": "メールアドレス",
     "password": "パスワード",
     "code": "コード",
-    "code-description": "2段階認証が有効になっています。SMSから取得した認証コードを入力してください。",
+    "code-description": "2段階認証が有効になっています。",
     "back": "戻る",
     "new-text": "新規口座申込はこちら",
     "new-or": "または",
@@ -61,6 +61,7 @@ export default {
     "input-next": "新しいパスワード",
     "input-current": "現在のパスワード",
     "success": "パスワード変更に成功しました。",
+    "password-help": "8文字以上かつ、大文字・小文字・数字のすべてを含む必要があります。",
   },
   "change-password-error": {
     "password-update-failed": "パスワード更新に失敗しました。",
@@ -129,6 +130,7 @@ export default {
     "all-is-required": "全てのフィールドに入力する必要があります。",
     "terms": "利用規約に同意する必要があります。",
     "password-is-too-short-minimum-is-8-characters": "パスワードは最低8文字で、かつ1文字以上の大文字、小文字、数字を含む必要があります。",
+    "qryptos-not-available-for-japanese": "QRYPTOS is currently not available for Japanese users.",
   },
   "demo": {
     "title": "デモアカウントを利用する",
@@ -161,7 +163,7 @@ export default {
     // ===
     "security-title": "セキュリティ",
     "password-title": "パスワード",
-    "sign-in-title": "ログイン",
+    "tfa-title": "二段階認証",
     // ===
     "api-title": "API",
   },
@@ -214,31 +216,41 @@ export default {
     "message-no-changes": "登録情報が変更されていません。",
   },
   "tfa-manage": {
-    "phone": "携帯番号",
-    "title": "二段階認証",
+    "status": "2要素認証ステータス",
     "status-enabled": "認証済み",
     "status-not-enabled": "未設定",
     // ===
+    "app-select-description": "2要素認証機能を有効化する際は、下記アプリのいずれかをご選択ください。:",
+    // ===
+    "app": "2要素認証アプリ",
+    "app-authy": "Authy",
+    "app-ga": "Google Authenticator",
+    // ===
+    "action-enable": "有効化",
+    "action-disable": "無効化",
+    // ===
+    "form-input": "トークン",
+    "form-description": "トークンをご入力ください。",
+  },
+  "tfa-manage-error": {
+    "en-authy-verification-failed": "無効なトークンです。",
+    "en-authy-token-is-blank": "トークンの入力が必要です。",
+    "token-is-invalid": "無効なトークンです。",
+  },
+  "tfa-phone": {
+    "phone": "携帯番号",
     "help-change-phone": "電話番号を更新するには、support@quoine.comへご連絡ください。",
     // ===
     "add-phone-title": "携帯番号を設定する",
     "add-phone-action": "設定",
     "add-phone-label": "携帯番号",
     "add-phone-description": "新しい携帯番号をご入力ください。",
-    // ===
-    "toggle-title-enable": "有効化",
-    "toggle-title-disable": "無効化",
-    "toggle-action-enable": "有効化",
-    "toggle-action-disable": "無効化",
-    "toggle-description": "トークンをご入力ください。",
-    "toggle-label": "トークン",
-    // ===
-    "action-cancel": "キャンセル",
-    "action-done": "確認",
   },
-  "tfa-manage-error": {
-    "en-authy-token-is-blank": "トークンの入力が必要です。",
-    "token-is-invalid": "無効なトークンです",
+  "tfa-ga": {
+    "scan-barcode": "このQRコードをGoogle Authenticatorでスキャンしてください。",
+    "enter-code": "アプリに表示される6つの数字を入力してください。",
+    "enter-code-description": "QRコードをスキャンすると、アプリに下記の欄に入力するための6つの数字が表示されます。",
+    "enter-key-description": "QRコードでの読み込みではなく、キーの入力によっても2要素認証を設定できます。",
   },
   "token": {
     "id": "ID",

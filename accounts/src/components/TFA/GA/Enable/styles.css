@@ -1,0 +1,29 @@
+@import "@quoine/core/styles/_size.css";
+
+.main {
+  composes: top-large from "@quoine/styles/margin.css";
+  composes: line-2 from "@quoine/styles/text.css";
+}
+.title {
+  composes: large from "@quoine/styles/text.css";
+}
+.description {
+  composes: primary-3 from "@quoine/styles/color.css";
+}
+.image {
+  width: calc($base * 12);
+  composes: medium from "@quoine/styles/padding.css";
+}
+.form {
+  composes: top-large from "@quoine/styles/margin.css";
+}
+.key-label {
+  composes: top-large from "@quoine/styles/margin.css";
+  composes: top-medium from "@quoine/styles/padding.css";
+  composes: top color-primary-1 from "@quoine/styles/border.css";
+}
+.key-value {
+  composes: top-medium from "@quoine/styles/margin.css";
+  composes: primary-1 from "@quoine/styles/bg-color.css";
+  composes: mono line-2-5 center from "@quoine/styles/text.css";
+}

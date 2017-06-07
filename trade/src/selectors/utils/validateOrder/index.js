@@ -2,13 +2,19 @@ import validateQuantity from './quantity';
 import validatePrice from './price';
 import validateDirection from './direction';
 
-const validateFuncs = [
+const validateFull = [
   validateQuantity,
   validatePrice,
   validateDirection,
 ];
 
-const validate = (order, state) => {
+const validateCancel = [
+  validatePrice,
+  validateDirection,
+];
+
+const validate = (order, state, target) => {
+  const validateFuncs = target === 'cancel' ? validateCancel : validateFull;
   const mrgAcc = state.mrgAccs.models[`${order.account}${order.product}`];
 
   for (let i = validateFuncs.length - 1; i >= 0; i -= 1) {
@@ -19,8 +25,8 @@ const validate = (order, state) => {
   return '';
 };
 
-const validateWrapper = (order, state) => {
-  const result = validate(order, state);
+const validateWrapper = (order, state, target) => {
+  const result = validate(order, state, target);
   return result ? `order-error:${result}` : result;
 };
 

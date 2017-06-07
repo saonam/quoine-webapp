@@ -19,7 +19,7 @@ const createWatchUpdateWConfirm = (options) => {
     }));
 
     // validate
-    const validation = yield select(state => validate(model, state));
+    const validation = yield select(state => validate(model, state, payload.target));
     if (validation) {
       yield apply(TYPES, {
         error: { ...payload, message: validation },

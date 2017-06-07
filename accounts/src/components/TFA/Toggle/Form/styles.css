@@ -3,3 +3,9 @@
 .input {
   width: calc($base * $base * 1.6);
 }
+
+/* ugly fix IE */
+/* TODO */
+.input input {
+  height: calc($base * 3);
+}

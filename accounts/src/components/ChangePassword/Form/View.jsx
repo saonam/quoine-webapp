@@ -34,6 +34,8 @@ const ChangePasswordFormView = (props) => (
         <TextInput
           type="password" value={props.next}
           onChange={props.onNextChange} border required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+          title={translate('change-password:password-help')}
         />
       </Field>
     </div>

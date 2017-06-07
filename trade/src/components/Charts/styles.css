@@ -28,15 +28,3 @@ $header: calc($base * 3 + 2px);
   composes: hidden from "@quoine/styles/overflow.css";
 }
 
-/* === */
-
-.node {
-  width: calc(100% + 2px);
-  height: calc(100% + 31px);
-  margin: -1px;
-}
-
-/* .overlay {
-  composes: absolute top left right bottom from "@quoine/styles/position.css";
-}
- */

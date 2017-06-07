@@ -16,7 +16,7 @@ const SecurityView = () => (
     </div>
     {process.env.REACT_APP_VENDOR !== 'traders' ? (
       <div>
-        <Row label={translate('settings:sign-in-title')}>
+        <Row label={translate('settings:tfa-title')}>
           <TFAManage />
         </Row>
       </div>

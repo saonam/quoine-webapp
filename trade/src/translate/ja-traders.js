@@ -147,6 +147,7 @@ export default {
     "quantity-min-ETH": "最低発注量は0.5ETHです。",
     "quantity-integer": "注文数量は整数を入力してください。",
     "user-free-margin-below-tolerance-level": "証拠金維持率が110％以下になるため注文することができません",
+    "trailing-stop-value-must-be-positive": "トレール注文の設定値は0以上である必要があります。",
   },
   // ===
   "position": {
@@ -365,7 +366,7 @@ export default {
     "fee-help": "（銀行手数料は別）",
     "maximum": "1日の上限",
     "minimum": "最低出金金額",
-    "none": "無し",
+    "faq": "FAQ",
     // ===
     "pending-title": "出金履歴",
     "pending-empty": "出金履歴がありません。",
@@ -378,6 +379,9 @@ export default {
     "status": "締切",
     "status-pending": "未処理",
     "status-processing": "処理中",
+    "status-processed": "完了",
+    "status-declined": "不認可",
+    "status-cancelled": "キャンセル",
     "status-awaiting-confirmation": "未確認",
   },
   "withdrawal-cancel": {
@@ -476,6 +480,9 @@ export default {
   "charts": {
     "not-ready": "このチャートは準備中です。",
     "spine-title": "チャート",
+    "mode": "Mode",
+    "mode-crypto-watch": "Crypto Watch",
+    "mode-trading-view": "Trading View",
   },
   "trade-feed": {
     "title": "約定フィード",

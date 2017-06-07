@@ -3,24 +3,30 @@ import React from 'react';
 
 import View from './View';
 
-// check whether current vendor has JFSA or not
-const vendorHasJFSA = (
-  process.env.REACT_APP_VENDOR !== 'qryptos' &&
-  !!process.env.REACT_APP_VENDOR_JFSA_ID
-);
-
 class UserForm2 extends React.Component {
-  componentDidUpdate(prevProps) {
-    if (!vendorHasJFSA) { return; }
+  constructor(props) {
+    super(props);
+    this.state = {
+      disabled: false,
+    };
+  }
+  componentWillReceiveProps(nextProps) {
+    if (this.props.form.country === nextProps.form.country) {
+      return;
+    }
 
-    if (this.props.form.country !== prevProps.form.country) {
-      const value = this.props.form.country === 'JP';
-      this.props.onChange.underJFSA(value);
+    if (process.env.REACT_APP_VENDOR === 'qryptos') {
+      const disabled = nextProps.form.country === 'JP' ? ({
+        message: 'sign-up-error:qryptos-not-available-for-japanese',
+      }) : false;
+      this.setState({ disabled });
+    } else {
+      this.props.onChange.underJFSA(nextProps.form.country === 'JP');
     }
   }
   render() {
     return (
-      <View {...this.props} />
+      <View {...this.props} {...this.state} />
     );
   }
 }

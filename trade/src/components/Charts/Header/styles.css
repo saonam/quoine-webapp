@@ -1,0 +1,8 @@
+@import url("@quoine/core/styles/_size.css");
+
+.main {
+  composes: flex jc-space-between from "@quoine/styles/flex.css";
+}
+.mode {
+  width: calc($base * 12);
+}

@@ -17,7 +17,7 @@ const WdrInputCode = ({ form, onChange }) => (
         required
       />
     </Field>
-    <TFARequest skipFirst useEmail />
+    <TFARequest skipFirst />
   </div>
 );
 

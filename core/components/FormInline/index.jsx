@@ -34,11 +34,13 @@ const FormInline = (props) => {
             {props.submitLabel}
           </ButtonWLoading>
         </div>
-        <div className={styles.item}>
-          <Button styleName="primary-3 inline text" onClick={props.onCancel}>
-            {props.cancelLabel || translate('form:cancel')}
-          </Button>
-        </div>
+        {props.onCancel ? (
+          <div className={styles.item}>
+            <Button styleName="primary-3 inline text" onClick={props.onCancel}>
+              {props.cancelLabel || translate('form:cancel')}
+            </Button>
+          </div>
+        ) : null}
       </form>
       <p className={styles[props.error ? 'error' : 'description']}>
         {props.error || props.description}
@@ -58,7 +60,7 @@ FormInline.propTypes = {
 
   onSubmit: PropTypes.func.isRequired,
   submitLabel: PropTypes.string,
-  onCancel: PropTypes.func.isRequired,
+  onCancel: PropTypes.func,
   cancelLabel: PropTypes.string,
 };
 

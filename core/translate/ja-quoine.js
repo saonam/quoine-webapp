@@ -87,6 +87,9 @@ export default {
     "sent-sms": "SMSで確認コードを送信しました。",
     "sent-authy": "Authyで確認コードを送信しました。",
     "sent-email": "Eメールで確認コードを送信しました。",
+    "sent-ga": "Google認証システムで確認コードを送信しました。",
+    // ===
+    "resend": "再送",
     "resend-sms": "SMS経由でコードを再送",
     "send": "リクエスト",
   },

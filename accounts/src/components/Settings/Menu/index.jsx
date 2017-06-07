@@ -6,7 +6,7 @@ import translate from '@quoine/translate';
 import styles from './styles.css';
 
 const menu = ['application', 'profile', 'security'];
-if (process.env.REACT_APP_VENDOR === 'quoine') {
+if (process.env.REACT_APP_VENDOR === 'quoine' || process.env.REACT_APP_VENDOR === 'qryptos') {
   menu.push('api');
 }
 

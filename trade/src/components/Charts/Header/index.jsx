@@ -4,7 +4,8 @@ import { TYPES } from 'states/charts';
 import View from './View';
 
 const mapDispatchToProps = (dispatch) => ({
-  onToggle: () => dispatch({ type: TYPES.TOGGLE_DOUBLE }),
+  onToggleDouble: () => dispatch({ type: TYPES.TOGGLE_DOUBLE }),
+  onSelectMode: (value) => dispatch({ type: TYPES.APPLY, payload: { mode: value } }),
 });
 
 export default connect(null, mapDispatchToProps)(View);

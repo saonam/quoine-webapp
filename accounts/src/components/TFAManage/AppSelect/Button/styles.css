@@ -1,0 +1,7 @@
+.normal {
+}
+.active {
+  composes: normal;
+  composes: accent-2 from "@quoine/styles/bg-color.css";
+  composes: border-accent from "@quoine/styles/box-shadow.css";
+}

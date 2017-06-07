@@ -1,32 +1,28 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from '@quoine/components/Header';
-import Button from '@quoine/components/Button';
-import Icon from '@quoine/components/Icon';
 
-const ChartsHeader = ({ double, onToggle }) => (
-  <Header styleName="hor-small">
-    <Button
-      styleName={double ? 'primary-3' : 'accent'}
-      onClick={onToggle}
-      disabled={!double}
-    >
-      <Icon glyph="charts-single" />
-    </Button>
-    <Button
-      styleName={!double ? 'primary-3' : 'accent'}
-      onClick={onToggle}
-      disabled={double}
-    >
-      <Icon glyph="charts-double" />
-    </Button>
+import ToggleDouble from './ToggleDouble';
+import SelectMode from './SelectMode';
+
+import styles from './styles.css';
+
+const ChartsHeader = ({ double, onToggleDouble, mode, onSelectMode }) => (
+  <Header styleName="hor-small" className={styles.main}>
+    <div className={styles.double}>
+      <ToggleDouble {...{ double, onToggleDouble }} />
+    </div>
+    <div className={styles.mode}>
+      {process.env.REACT_APP_VENDOR === 'qryptos' ? null : (
+        <SelectMode {...{ mode, onSelectMode }} />
+      )}
+    </div>
   </Header>
 );
 
 ChartsHeader.propTypes = {
-  double: PropTypes.bool.isRequired,
-  onToggle: PropTypes.func.isRequired,
+  ...ToggleDouble.propTypes,
+  ...SelectMode.propTypes,
 };
 
 export default ChartsHeader;

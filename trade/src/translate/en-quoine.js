@@ -147,6 +147,7 @@ export default {
     "quantity-min-ETH": "Order quantity must be greater than 0.5 ETH.",
     "quantity-integer": "Order quantity must be an integer.",
     "user-free-margin-below-tolerance-level": "Free margin is below tolerance level",
+    "trailing-stop-value-must-be-positive": "Trailing stop value must be positive.",
   },
   // ===
   "position": {
@@ -365,7 +366,7 @@ export default {
     "fee-help": "(bank fee not included)",
     "maximum": "Maximum (daily)",
     "minimum": "Minimum (per request)",
-    "none": "None",
+    "faq": "FAQ",
     // ===
     "pending-title": "Pending Withdrawals",
     "pending-empty": "No Pending Withdrawals",
@@ -378,6 +379,9 @@ export default {
     "status": "Status",
     "status-pending": "Pending",
     "status-processing": "Processing",
+    "status-processed": "Processed",
+    "status-declined": "Declined",
+    "status-cancelled": "Cancelled",
     "status-awaiting-confirmation": "Unconfirmed",
   },
   "withdrawal-cancel": {
@@ -476,6 +480,9 @@ export default {
   "charts": {
     "not-ready": "This chart is not ready yet.",
     "spine-title": "Charts",
+    "mode": "Mode",
+    "mode-crypto-watch": "Crypto Watch",
+    "mode-trading-view": "Trading View",
   },
   "trade-feed": {
     "title": "Trade Feed",
