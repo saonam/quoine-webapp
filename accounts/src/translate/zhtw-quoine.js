@@ -234,9 +234,9 @@ export default {
     "form-ga-description": "Please open your Google Authenticator app to get your auth code.",
   },
   "tfa-manage-error": {
+    "en-authy-verification-failed": "驗證碼無效",
+    "verification-failed": "驗證碼無效",
     "en-authy-token-is-blank": "驗證碼不能為空",
-    "verification-failed": "Token is invalid.",
-    "en-authy-token-is-blank": "Authentication code is required.",
     "token-is-invalid": "驗證碼無效",
   },
   "tfa-phone": {
