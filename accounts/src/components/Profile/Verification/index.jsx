@@ -11,6 +11,7 @@ import styles from './styles.css';
 const colorMap = {
   approved: 'positive',
   pending: 'negative',
+  banned: 'negative',
   declined: 'negative',
   'documents-submitted': 'positive',
 };

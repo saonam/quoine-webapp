@@ -274,6 +274,9 @@ export default {
     "message-pending": "Your account must be verified and approved before you can fund/withdraw.",
     "help-pending": "Please upload ID documents for account verification in Menu > Settings > Profile.",
     // ===
+    "message-banned": "Your account has been banned.",
+    "help-banned": "Please contact support@quoine.com to re-open your account.",
+    // ===
     "message-limit-accounts": "Right now we only support JPY, BTC, and ETH deposits/withdrawals.",
     // ===
     "message-need-tfa": "For security reasons, withdrawals are not allowed without 2-factor authentication.",

@@ -34,6 +34,7 @@ TransferMessage.propTypes = {
     key: PropTypes.oneOf([
       'pending',
       'declined',
+      'banned',
       'documents-submitted',
       // ===
       'limit-accounts',

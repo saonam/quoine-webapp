@@ -177,6 +177,7 @@ export default {
     "status-approved": "Approved",
     "status-declined": "Declined",
     "status-pending": "Pending",
+    "status-banned": "Banned",
     // ===
     "help-documents-submitted": "Your documents have been uploaded. Our staff will be reviewing and approving your account shortly. Note that account verification process will take 1-2 working days to complete.",
     "help-approved": "Your account has been approved. No further action is required.",

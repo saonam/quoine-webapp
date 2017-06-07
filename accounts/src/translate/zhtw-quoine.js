@@ -177,6 +177,7 @@ export default {
     "status-approved": "已核准",
     "status-declined": "已拒絕",
     "status-pending": "待定",
+    "status-banned": "被禁止",
     // ===
     "help-documents-submitted": "您的文件已上傳，我們的員工將盡快審查並核準您的賬戶。賬戶核查過程需要 1-2 個工作日",
     "help-approved": "您的賬戶已被核准，無需進一步操作",

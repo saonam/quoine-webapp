@@ -274,7 +274,10 @@ export default {
     "message-pending": "执行存取款操作前请先进行账户认证",
     "help-pending": "请在 目录 > 设置 > 个人账户 中上传您的身份证件",
     // ===
-    "message-limit-accounts": "目前我们仅提供 JPY、BTC 和 ETH 的存款/取款业务",
+    "message-banned": "您的账户已被禁用",
+    "help-banned": "请您尽快联系我们 support@quoine.com",
+    // ===
+    "message-limit-accounts": "目前我们仅支持 JPY、BTC 和 ETH 的存款/取款。",
     // ===
     "message-need-tfa": "从安全方面考虑，没有二级验证码将不能进行取款操作",
     "help-need-tfa": "请到菜单 > 设置 > 安全中为账户开通二级认证。",

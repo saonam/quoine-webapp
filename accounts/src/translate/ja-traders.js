@@ -177,6 +177,7 @@ export default {
     "status-approved": "開設済",
     "status-declined": "書類不備",
     "status-pending": "書類提出前",
+    "status-banned": "アカウント停止",
     // ===
     "help-documents-submitted": "本人確認書類をご送付いただきありがとうございます。弊社スタッフにより審査を進めさせていただきます。",
     "help-approved": "入出金及びお取引が可能です。",

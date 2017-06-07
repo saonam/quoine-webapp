@@ -274,6 +274,9 @@ export default {
     "message-pending": "口座を認証するまで入出金はできません。",
     "help-pending": "口座を認証するためには本人確認書類のアップロードが必要となります。「設定」に移動してください。",
     // ===
+    "message-banned": "アカウントはただいま停止されています。",
+    "help-banned": "アカウント停止を解除する場合は support@quoine.com までご連絡ください。",
+    // ===
     "message-limit-accounts": "現在、入出金は日本円・BTC・ETHでのみ受け付けております。",
     // ===
     "message-need-tfa": "安全性のため、2段階認証がないと出金が不可能になります。",
