@@ -26,13 +26,9 @@ class ChartsCryptoWatch extends React.PureComponent {
   constructor(props) {
     super(props);
     this.mountChart = this.mountChart.bind(this);
-    this.name = '';
     this.error = false;
   }
   componentDidMount() { this.mountChart(); }
-  componentWillReceiveProps(nextProps) {
-    this.name = getChartName(nextProps.product);
-  }
   componentDidUpdate() { this.mountChart(); }
   mountChart() {
     const { id, product, market, theme, language } = this.props;
