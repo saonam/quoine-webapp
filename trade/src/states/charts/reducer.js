@@ -1,4 +1,4 @@
-import { createReducer } from '@quoine/states/utils';
+import { createReducer, registerSyncShape } from '@quoine/states/utils';
 
 import TYPES from './TYPES';
 
@@ -8,5 +8,7 @@ const initialState = {
   double: false,
   mode: process.env.REACT_APP_VENDOR === 'qryptos' ? 'trading-view' : 'crypto-watch',
 };
+
+registerSyncShape('charts', ['double']);
 
 export default createReducer(TYPES, initialState);
