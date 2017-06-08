@@ -8,31 +8,33 @@ import Color from '@quoine/components/Color';
 
 import styles from './styles.css';
 
-const links = {
-  quoine: {
-    en: 'https://quoine.zendesk.com/hc/en-us/articles/218199498-What-is-the-daily-withdrawal-limit-for-fiat-and-crypto-currencies-',
-    ja: 'https://quoine.zendesk.com/hc/ja/articles/218199498',
-  },
-  qryptos: {
-    en: 'https://qryptos.zendesk.com/hc/en-us/articles/115007862567-Withdrawal-limits',
-  },
-  traders: {
-    en: '',
-  },
-};
-const getLink = (language) => {
-  const vendorLinks = links[process.env.REACT_APP_VENDOR];
-  return vendorLinks[language] || vendorLinks.en;
-};
+import getFaqLink from './getFaqLink';
 
 const WdrInfoView = ({ form, infos, language }) => {
   const info = infos[form.account];
   if (!info) { return null; }
+
+  let maximum = (<span>{translate('withdrawal:none')}</span>);
+
   if (form.account === 'INR' && form.INRTransfer === 'International wire') {
-    info.maximum = 1000000;
+    maximum = (<Money currency={form.account} value={1000000} />);
   }
+
+  const faqLink = getFaqLink(language);
+  if (form.account !== 'INR' && faqLink) {
+    maximum = (
+      <a
+        className={styles.link} rel="noopener noreferrer"
+        href={faqLink} target="_blank"
+      >
+        {translate('withdrawal:faq')}
+      </a>
+    );
+  }
+
   return (
     <div className={styles.main}>
+
       <p>
         <Color styleName="primary-3">
           {translate('withdrawal:minimum')}
@@ -40,22 +42,15 @@ const WdrInfoView = ({ form, infos, language }) => {
         </Color>
         <Money currency={form.account} value={info.minimum} />
       </p>
+
       <p>
         <Color styleName="primary-3">
           {translate('withdrawal:maximum')}
           <span>:&nbsp;</span>
         </Color>
-        {info.maximum ? (
-          <Money currency={form.account} value={info.maximum} />
-        ) : (
-          <a
-            className={styles.link} rel="noopener noreferrer"
-            href={getLink(language)} target="_blank"
-          >
-            {translate('withdrawal:faq')}
-          </a>
-        )}
+        {maximum}
       </p>
+
       {process.env.REACT_APP_VENDOR !== 'qryptos' ? (
         <p>
           <Color styleName="primary-3">
@@ -69,6 +64,7 @@ const WdrInfoView = ({ form, infos, language }) => {
           </Color>
         </p>
       ) : null}
+
     </div>
   );
 };
@@ -81,7 +77,6 @@ WdrInfoView.propTypes = {
     PropTypes.shape({
       fee: PropTypes.number,
       minimum: PropTypes.number,
-      maximum: PropTypes.number,
     }),
   ).isRequired,
   language: PropTypes.string.isRequired,

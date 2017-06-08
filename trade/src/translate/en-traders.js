@@ -366,6 +366,7 @@ export default {
     "fee-help": "(bank fee not included)",
     "maximum": "Maximum (daily)",
     "minimum": "Minimum (per request)",
+    "none": "None",
     "faq": "FAQ",
     // ===
     "pending-title": "Pending Withdrawals",

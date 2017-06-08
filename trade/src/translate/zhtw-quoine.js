@@ -366,6 +366,7 @@ export default {
     "fee-help": "(未包含銀行收取的費用)",
     "maximum": "最高限額（每日）",
     "minimum": "最小限額（每筆）",
+    "none": "無",
     "faq": "FAQ",
     // ===
     "pending-title": "等待中的取款",

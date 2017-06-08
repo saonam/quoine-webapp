@@ -366,6 +366,7 @@ export default {
     "fee-help": "（銀行手数料は別）",
     "maximum": "1日の上限",
     "minimum": "最低出金金額",
+    "none": "無し",
     "faq": "FAQ",
     // ===
     "pending-title": "出金履歴",
