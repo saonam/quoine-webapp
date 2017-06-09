@@ -102,7 +102,7 @@ export default {
     "type-trailing-stop": "トレール",
     // ===
     "status": "ステータス",
-    "status-all": "ALL",
+    "status-all": "全",
     "status-rejected": "取消済",
     "status-rejected-help": "注文が約定されませんでした。",
     "status-live": "注文中",
@@ -125,8 +125,8 @@ export default {
   },
   "order-add": {
     "confirm-title": "注文確認",
-    "confirm-action": "Yes",
-    "confirm-dismiss": "No",
+    "confirm-action": "はい",
+    "confirm-dismiss": "いいえ",
     "report-title": "注文完了",
   },
   "order-edit": {
@@ -154,12 +154,12 @@ export default {
     "title": "ポジション",
     // ===
     "status": "ステータス",
-    "status-all": "ALL",
+    "status-all": "全",
     "status-closed": "クローズ",
     "status-open": "オープン",
     // ===
     "side": "売買",
-    "side-all": "ALL",
+    "side-all": "全",
     "side-long": "買",
     "side-short": "売",
     // ===
@@ -334,15 +334,15 @@ export default {
   },
   "fund-crypto": {
     "help": "下記のアドレスにご送金ください：",
-    "help-XMR": "Please deposit to the address below and remember to include the Payment ID in your deposit. Failure to do so may result in the loss of your deposit.",
-    "help-XRP": "Ripple Base Reserve is a minimum amount of XRP that is required for every address in the ledger. Currently this is 20 XRP, which will be held as reserve the first time you deposit. After that you will be able to receive your full deposit.",
+    "help-XMR": "以下のアドレスに入金してください。確認のため、入金IDを記載する必要があります。",
+    "help-XRP": "Ripple Base Reserveは、元帳におけるすべてのアドレスに必要なXRPの最小額です。 現在、これは20XRPです。これは最初に入金する際に予備として保有されます。 その後、あなたは全額の入金額を受け取ることができます。",
     // ===
-    "address": "Address",
-    "payment-id": "Payment ID",
+    "address": "アドレス",
+    "payment-id": "ペイメントID",
     // ===
-    "copy": "Copy",
+    "copy": "コピー",
     "copy-address": "アドレスをコピーする",
-    "copy-payment-id": "Copy Payment ID",
+    "copy-payment-id": "ペイメントIDをコピー",
   },
   "fund-error": {
     "you-are-not-approved": "このアカウントは承認中のため入金情報を作成できません。",
@@ -481,7 +481,7 @@ export default {
   "charts": {
     "not-ready": "このチャートは準備中です。",
     "spine-title": "チャート",
-    "mode": "Mode",
+    "mode": "モード",
     "mode-crypto-watch": "Crypto Watch",
     "mode-trading-view": "Trading View",
   },
@@ -513,7 +513,7 @@ export default {
     "product": "通貨ペア",
     // ===
     "side": "売買",
-    "side-both": "ALL",
+    "side-both": "全",
     "side-short": "売",
     "side-long": "買",
     // ===
@@ -568,7 +568,7 @@ export default {
     "basic": "口座照会＆注文入力",
     "product": "商品",
     "chart": "チャート",
-    "blotter": "blotters",
+    "blotter": "売買元帳",
   },
   "panels": {
     "expand": "拡大",

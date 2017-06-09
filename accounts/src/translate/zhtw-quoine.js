@@ -26,6 +26,7 @@ export default {
     "invalid-email-or-password": "郵箱地址或密碼無效",
     "verification-failed": "驗證碼無效",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "本次登陸的IP地址尚未被驗證，驗證鏈接已經發送到您的郵箱，請查收",
+    "country-restricted": "對不起，QRYPTOS在當前國家暫時沒有提供服務，請耐心等待。",
   },
   "forgot-password": {
     "action-resend": "重新發送密碼重置鏈接",
@@ -130,7 +131,7 @@ export default {
     "all-is-required": "所有字段都為必填項",
     "terms": "請仔細閱讀條款聲明，然後繼續",
     "password-is-too-short-minimum-is-8-characters": "密碼必須至少包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字",
-    "qryptos-not-available-for-japanese": "QRYPTOS暫時不支援日語服務，敬請見諒。",
+    "country-restricted": "對不起，QRYPTOS在當前國家暫時沒有提供服務，請耐心等待。",
   },
   "demo": {
     "title": "模擬賬戶",
@@ -220,7 +221,7 @@ export default {
     "status-enabled": "啟用",
     "status-not-enabled": "尚未啟用",
     // ===
-    "app-select-description": "To enabled 2FA, please select one of the apps below:",
+    "app-select-description": "请从下面的途径中选择双重认证应用:",
     // ===
     "app": "TFA App",
     "app-authy": "Authy",
@@ -231,7 +232,7 @@ export default {
     // ===
     "form-input": "驗證碼",
     "form-authy-description": "請輸入發送至您電話的代碼。",
-    "form-ga-description": "Please open your Google Authenticator app to get your auth code.",
+    "form-ga-description": "请使用Google Authenticator获得您的验证码.",
   },
   "tfa-manage-error": {
     "en-authy-verification-failed": "驗證碼無效",
@@ -249,10 +250,10 @@ export default {
     "add-phone-description": "請輸入電話號碼",
   },
   "tfa-ga": {
-    "scan-barcode": "Scan this QR code with Google Authenticator.",
-    "enter-code": "Enter the six-digit code provided by the app.",
-    "enter-code-description": "Once you have scanned the QR code, the app will provide a six-digit code which you can enter in the field below:",
-    "enter-key-description": "You can also choose Manual Entry and enter the key yourself instead of scanning the QR code.",
+    "scan-barcode": "请使用Google Authenticator扫描QR code.",
+    "enter-code": "请输入Google Authenticator提示的六位验证码.",
+    "enter-code-description": "当您扫描提示的QR code后，Google Authenticator将会提供您需要输入的六位的验证码:",
+    "enter-key-description": "您也可以选择手动输入来代替扫描QR code.",
   },
   "token": {
     "id": "編號",

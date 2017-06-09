@@ -26,6 +26,7 @@ export default {
     "invalid-email-or-password": "邮箱地址或密码无效",
     "verification-failed": "验证码无效",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "本次登陆的IP地址尚未被验证，验证链接已经发送到您的邮箱，请查收",
+    "country-restricted": "对不起，QRYPTOS在当前国家暂时没有提供服务，请耐心等待。",
   },
   "forgot-password": {
     "action-resend": "重新发送密码重置链接",
@@ -130,7 +131,7 @@ export default {
     "all-is-required": "所有字段都为必填项",
     "terms": "请仔细阅读条款声明，然后继续",
     "password-is-too-short-minimum-is-8-characters": "密码必须至少包含 8 个字符并且包含至少 1 个小写字母、1 个大写字母和 1 个数字",
-    "qryptos-not-available-for-japanese": "QRYPTOS暂时不支援日语服务，敬请见谅。",
+    "country-restricted": "对不起，QRYPTOS在当前国家暂时没有提供服务，请耐心等待。",
   },
   "demo": {
     "title": "模拟账户",
@@ -183,7 +184,7 @@ export default {
     // ===
     "help-documents-submitted": "您的文件已上传，我们的员工将尽快审查并核准您的账户。账户核查过程需要 1-2 个工作日",
     "help-approved": "您的账户已被核准，无需进一步操作",
-    "help-declined": "您的账户核准请求已被拒绝。请更新您的文件：{{ reason }}.",
+    "help-declined": "您的账户核准请求已被拒绝。请更新您的文件：{{ reason }}。",
     "help-pending": "您的账户尚未得到核准。请上传以下文件供账户核准使用：",
     "help-pending-jp": "您的账户尚未得到核准。请上传以下文件供账户核准使用：",
     "help-pending-jp-link": "文件说明",
@@ -220,7 +221,7 @@ export default {
     "status-enabled": "启用",
     "status-not-enabled": "尚未启用",
     // ===
-    "app-select-description": "To enabled 2FA, please select one of the apps below:",
+    "app-select-description": "请从下面的途径中选择双重认证应用:",
     // ===
     "app": "TFA App",
     "app-authy": "Authy",
@@ -231,7 +232,7 @@ export default {
     // ===
     "form-input": "验证码",
     "form-authy-description": "请输入发送至您电话的代码。",
-    "form-ga-description": "Please open your Google Authenticator app to get your auth code.",
+    "form-ga-description": "请使用Google Authenticator获得您的验证码。",
   },
   "tfa-manage-error": {
     "en-authy-verification-failed": "验证码不能为空",
@@ -249,10 +250,10 @@ export default {
     "add-phone-description": "请输入电话号码",
   },
   "tfa-ga": {
-    "scan-barcode": "Scan this QR code with Google Authenticator.",
-    "enter-code": "Enter the six-digit code provided by the app.",
-    "enter-code-description": "Once you have scanned the QR code, the app will provide a six-digit code which you can enter in the field below:",
-    "enter-key-description": "You can also choose Manual Entry and enter the key yourself instead of scanning the QR code.",
+    "scan-barcode": "请使用Google Authenticator扫描QR code。",
+    "enter-code": "请输入Google Authenticator提示的六位验证码。",
+    "enter-code-description": "当您扫描提示的QR code后，Google Authenticator将会提供您需要输入的六位的验证码:",
+    "enter-key-description": "您也可以选择手动输入来代替扫描QR code。",
   },
   "token": {
     "id": "编号",

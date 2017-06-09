@@ -26,6 +26,7 @@ export default {
     "invalid-email-or-password": "Email address or password is invalid.",
     "verification-failed": "Authentication code is not valid.",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "You are logging in from a new IP address that is not confirmed yet. A confirmation link has been sent to your email address. Please check and confirm to continue.",
+    "country-restricted": "QRYPTOS is currently not available for this country.",
   },
   "forgot-password": {
     "action-resend": "Resend password reset link",
@@ -130,7 +131,7 @@ export default {
     "all-is-required": "All fields are required.",
     "terms": "Please go through Terms & Conditions thoroughly and accept them before proceeding.",
     "password-is-too-short-minimum-is-8-characters": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
-    "qryptos-not-available-for-japanese": "QRYPTOS is currently not available for Japanese users.",
+    "country-restricted": "QRYPTOS is currently not available for this country.",
   },
   "demo": {
     "title": "Use a demo account",

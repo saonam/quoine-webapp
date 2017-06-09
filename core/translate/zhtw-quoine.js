@@ -84,7 +84,7 @@ export default {
     "sent-sms": "驗證碼已通過短信發送。",
     "sent-authy": "驗證碼已通過Authy發送。",
     "sent-email": "驗證碼已通過郵件發送。",
-    "sent-ga": "Code has been sent via Google Authenticator.",
+    "sent-ga": "验证码已经通过Google Authenticator发送。",
     // ===
     "resend": "Resend",
     "resend-sms": "通過短信重新發送",
@@ -97,7 +97,7 @@ export default {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "您在一小時內請求次數太多。請稍後重試。",
     "en-authy-sms-token-was-not-sent": "驗證碼無法發送至您的手機。請重試。",
     "en-authy-token-is-invalid-token-was-used-recently": "驗證碼已被使用",
-    "en-authy-monthly-sms-limit-reached": "Monthly SMS limit reached.",
+    "en-authy-monthly-sms-limit-reached": "验证码使用次数达到每月上限。",
   },
   "test": {
     "basic": "英語",
