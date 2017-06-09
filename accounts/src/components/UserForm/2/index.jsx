@@ -14,14 +14,13 @@ class UserForm2 extends React.Component {
     if (this.props.form.country === nextProps.form.country) {
       return;
     }
-
     if (process.env.REACT_APP_VENDOR === 'qryptos') {
-      const disabled = nextProps.form.country === 'JP' ? ({
-        message: 'sign-up-error:qryptos-not-available-for-japanese',
+      const disabled = nextProps.form.country === 'JP' || nextProps.form.country === 'US' ? ({
+        message: 'sign-up-error:country-restricted',
       }) : false;
       this.setState({ disabled });
     } else {
-      this.props.onChange.underJFSA(nextProps.form.country === 'JP');
+      this.props.onChange.underJFSA(nextProps.form.country === 'JP' || nextProps.form.country === 'US');
     }
   }
   render() {
