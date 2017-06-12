@@ -33,7 +33,7 @@ class SignUp extends React.Component {
       signUpCaptchaWidget = window.grecaptcha.render(
         this.widget,
         {
-          sitekey: '6LfOVR0UAAAAAA2kOGke4aWKQH7rdIIy2IGaqazJ',
+          sitekey: process.env.REACT_APP_CAPTCHA_KEY,
           callback: this.onCallback,
           'expired-callback': this.onReset,
         },
