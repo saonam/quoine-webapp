@@ -369,8 +369,8 @@ export default {
     "none": "无",
     "faq": "FAQ",
     // ===
-    "pending-title": "等待中的取款",
-    "pending-empty": "非等待中的取款",
+    "recent-title": "最近的取款",
+    "recent-empty": "以前的取款",
     // ===
     "success": "取款请求已提交",
     // ===

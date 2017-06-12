@@ -369,8 +369,8 @@ export default {
     "none": "None",
     "faq": "FAQ",
     // ===
-    "pending-title": "Pending Withdrawals",
-    "pending-empty": "No Pending Withdrawals",
+    "recent-title": "Recent Withdrawals",
+    "recent-empty": "No Recent Withdrawals",
     // ===
     "success": "Withdrawal request has been submitted.",
     // ===

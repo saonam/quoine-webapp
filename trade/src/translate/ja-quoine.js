@@ -369,8 +369,8 @@ export default {
     "none": "無し",
     "faq": "FAQ",
     // ===
-    "pending-title": "出金履歴",
-    "pending-empty": "出金履歴がありません。",
+    "recent-title": "出金履歴",
+    "recent-empty": "無し",
     // ===
     "success": "出金依頼を出しました。",
     // ===

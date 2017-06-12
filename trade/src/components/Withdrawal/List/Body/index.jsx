@@ -12,7 +12,7 @@ import styles from './styles.css';
 const WdrListBody = ({ withdrawals }) => (
   withdrawals.length === 0 ? (
     <p className={styles.empty}>
-      {translate('withdrawal:pending-empty')}
+      {translate('withdrawal:recent-empty')}
     </p>
   ) : (
     <TransitionGroup>
