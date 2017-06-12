@@ -16,8 +16,9 @@ import Review from './Review';
 const UserForm4Jp = ({
   onSubmit, originalForm, edit, form, changed,
   onChange, busy, parentError,
+  captcha, onRef,
 }) => {
-  const disableSubmit = edit && !changed;
+  const disableSubmit = (edit && !changed) || !captcha;
   return (
     <form onSubmit={onSubmit}>
       {changed ? null : (
@@ -43,11 +44,17 @@ const UserForm4Jp = ({
         </div>
       )}
 
+      <div className={styles.body}>
+        <div ref={onRef} />
+      </div>
+
       <ErrorMessage className={styles.error} error={parentError} />
 
       <div className={styles.input}>
         <Button
-          busy={busy} type="submit"
+          busy={busy}
+          type="submit"
+          disabled={disableSubmit}
           styleName={`modal accent ${disableSubmit ? 'disabled' : ''}`}
         >
           {translate(`${edit ? 'edit-user:action-submit' : 'sign-up:action-next'}`)}
@@ -63,6 +70,9 @@ UserForm4Jp.propTypes = {
   edit: PropTypes.bool,
   parentError: ErrorMessage.propTypes.error,
   changed: PropTypes.bool,
+  // ===
+  captcha: PropTypes.string.isRequired,
+  onRef: PropTypes.func.isRequired,
   // ===
   ...FormWrapperPropTypes,
 };

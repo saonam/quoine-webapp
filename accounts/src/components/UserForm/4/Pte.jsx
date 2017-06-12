@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
@@ -12,7 +13,7 @@ import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
 import styles from 'components/UserForm/styles.css';
 
-const UserForm4 = ({ onSubmit, form, onChange, busy, error }) => (
+const UserForm4 = ({ onSubmit, form, onChange, busy, error, captcha, onRef }) => (
   <form onSubmit={onSubmit}>
 
     <div className={styles.body}>
@@ -40,12 +41,21 @@ const UserForm4 = ({ onSubmit, form, onChange, busy, error }) => (
         </CheckboxInput>
       </div>
 
+      <div className={styles.input}>
+        <div ref={onRef} />
+      </div>
+
     </div>
 
     <ErrorMessage className={styles.error} error={error} />
 
     <div className={styles.input}>
-      <Button busy={busy} type="submit" styleName="modal accent">
+      <Button
+        busy={busy}
+        type="submit"
+        disabled={!captcha}
+        styleName={`modal accent ${!captcha ? 'disabled' : ''}`}
+      >
         {translate('sign-up:action-next')}
       </Button>
     </div>
@@ -55,6 +65,9 @@ const UserForm4 = ({ onSubmit, form, onChange, busy, error }) => (
 
 UserForm4.propTypes = {
   ...FormWrapperPropTypes,
+  // ===
+  captcha: PropTypes.string.isRequired,
+  onRef: PropTypes.func.isRequired,
 };
 
 export default UserForm4;

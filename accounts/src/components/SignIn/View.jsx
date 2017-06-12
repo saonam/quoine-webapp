@@ -27,14 +27,20 @@ const SignIn = (props) => (
       <div className={styles.main}>
         <div className={styles.body}>
           {props.step === 1 ? (
-            <Body1 form={props.form} onChange={props.onChange} message={props.message} />
+            <Body1
+              form={props.form} onChange={props.onChange}
+              message={props.message} onRef={props.onRef}
+            />
           ) : (
             <Body2 form={props.form} onChange={props.onChange} />
           )}
           <ErrorMessage className={styles.error} error={props.error} />
         </div>
         <div className={styles.submit}>
-          <SubmitButton busy={props.busy} />
+          <SubmitButton
+            disabled={props.step === 1 && !props.captcha}
+            busy={props.busy}
+          />
         </div>
       </div>
     </form>
@@ -49,6 +55,9 @@ SignIn.propTypes = {
   onBack: BackButton.propTypes.onBack,
   // message from backend (like "account confirmed")
   message: PropTypes.string,
+  // ===
+  captcha: PropTypes.string.isRequired,
+  onRef: PropTypes.func.isRequired,
 };
 
 export default SignIn;

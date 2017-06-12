@@ -1,10 +1,11 @@
 import { quoine } from '@quoine/resources';
 import normalize from './normalize';
 
-const signInWoCode = ({ email, password }) => (
+const signInWoCode = ({ email, password, captcha }) => (
   quoine.post('/users/validate', {
     body: {
       user: { email, password },
+      recaptcha_response: captcha,
     },
     useCache: false,
     errorPrefix: 'sign-in',
@@ -21,9 +22,9 @@ const signInWCode = ({ email, password, code }) => (
   })
 );
 
-const signIn = ({ email, password, code, step }) => (
+const signIn = ({ email, password, code, step, captcha }) => (
   step === 1 ?
-    signInWoCode({ email, password }) :
+    signInWoCode({ email, password, captcha }) :
     signInWCode({ email, password, code })
 ).then(normalize);
 

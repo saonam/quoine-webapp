@@ -67,6 +67,9 @@ const SignUpView = (props) => {
             error={props.error}
             // ===
             userId={props.userId}
+            // ===
+            captcha={props.captcha}
+            onRef={props.onRef}
           />
         </div>
       ))}
@@ -77,8 +80,12 @@ const SignUpView = (props) => {
 
 SignUpView.propTypes = {
   ...FormWrapperPropTypes,
+  // ===
   step: PropTypes.number.isRequired,
   userId: PropTypes.number.isRequired,
+  // ===
+  captcha: PropTypes.string.isRequired,
+  onRef: PropTypes.func.isRequired,
 };
 
 export default SignUpView;

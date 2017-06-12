@@ -5,9 +5,12 @@ import translate from '@quoine/translate';
 
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
 
-const SignInSubmitButton = ({ busy }) => (
+const SignInSubmitButton = ({ busy, disabled }) => (
   <ButtonWLoading
-    type="submit" busy={busy} styleName="modal accent"
+    type="submit"
+    busy={busy}
+    disabled={disabled}
+    styleName={`modal accent ${disabled ? 'disabled' : ''}`}
   >
     {translate('sign-in:action')}
   </ButtonWLoading>
@@ -15,6 +18,7 @@ const SignInSubmitButton = ({ busy }) => (
 
 SignInSubmitButton.propTypes = {
   busy: PropTypes.bool.isRequired,
+  disabled: PropTypes.bool.isRequired,
 };
 
 export default SignInSubmitButton;

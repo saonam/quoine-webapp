@@ -14,7 +14,7 @@ import styles from './styles.css';
 
 import getMessageKey from './getMessageKey';
 
-const SignInBody1 = ({ form, onChange, message }) => (
+const SignInBody1 = ({ form, onChange, message, onRef }) => (
   <div>
     {message ? (
       <p className={styles.message}>
@@ -47,6 +47,9 @@ const SignInBody1 = ({ form, onChange, message }) => (
         />
       </LargeField>
     </div>
+    <div className={styles.captcha}>
+      <div ref={onRef} />
+    </div>
     <div className={styles.subInput}>
       <Link styleName="accent text" pathname="/forgot-password" tabIndex="-1">
         {translate('forgot-password:title')}
@@ -65,6 +68,7 @@ SignInBody1.propTypes = {
     password: PropTypes.func.isRequired,
   }),
   message: PropTypes.string,
+  onRef: PropTypes.func.isRequired,
 };
 
 export default SignInBody1;

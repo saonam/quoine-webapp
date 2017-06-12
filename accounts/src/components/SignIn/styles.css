@@ -25,12 +25,16 @@
   composes: line-1-5 from "@quoine/styles/text.css";
 }
 
+.captcha {
+  composes: top-x-large from "@quoine/styles/margin.css";
+}
+
 .submit {
   composes: top-large from "@quoine/styles/margin.css";
 }
 
 .subInput {
-  composes: top-medium from "@quoine/styles/margin.css";
+  composes: top-x-large from "@quoine/styles/margin.css";
 }
 
 .message {
