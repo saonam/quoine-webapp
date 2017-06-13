@@ -20,7 +20,7 @@ class UserForm2 extends React.Component {
       }) : false;
       this.setState({ disabled });
     } else {
-      this.props.onChange.underJFSA(nextProps.form.country === 'JP' || nextProps.form.country === 'US');
+      this.props.onChange.underJFSA(nextProps.form.country === 'JP');
     }
   }
   render() {
