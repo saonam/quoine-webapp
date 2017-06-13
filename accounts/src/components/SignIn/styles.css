@@ -7,7 +7,7 @@
 }
 
 .input {
-  composes: top-x-large from "@quoine/styles/margin.css";
+  composes: top-large from "@quoine/styles/margin.css";
 }
 .input:first-child {
   margin-top: 0;
@@ -25,16 +25,11 @@
   composes: line-1-5 from "@quoine/styles/text.css";
 }
 
-.captcha {
-  composes: top-x-large from "@quoine/styles/margin.css";
-}
-
 .submit {
   composes: top-large from "@quoine/styles/margin.css";
 }
 
 .subInput {
-  composes: top-x-large from "@quoine/styles/margin.css";
 }
 
 .message {

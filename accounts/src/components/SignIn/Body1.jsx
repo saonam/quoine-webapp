@@ -47,13 +47,13 @@ const SignInBody1 = ({ form, onChange, message, onRef }) => (
         />
       </LargeField>
     </div>
-    <div className={styles.captcha}>
-      <div ref={onRef} />
-    </div>
     <div className={styles.subInput}>
       <Link styleName="accent text" pathname="/forgot-password" tabIndex="-1">
         {translate('forgot-password:title')}
       </Link>
+    </div>
+    <div className={styles.input}>
+      <div ref={onRef} />
     </div>
   </div>
 );
