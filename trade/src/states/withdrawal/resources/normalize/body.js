@@ -14,7 +14,7 @@ const fiatBody = ({ code, account, bank, quantity, INRTransfer }) => {
 const cryptoBody = ({ code, account, address, quantity }) => ({
   auth_code: code,
   crypto_withdrawal: {
-    address,
+    address: address.trim(),
     amount: quantity,
     currency: account,
   },
