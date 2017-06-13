@@ -22,7 +22,7 @@ function* onSubmit(action) {
   // go
   try {
     const response = yield call(resources.submit, form);
-    yield handleReport({ task, body: response });
+    yield handleReport({ task, body: response, error: false });
   } catch (error) {
     yield apply(TYPES, { error });
   }
