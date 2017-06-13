@@ -36,7 +36,7 @@ class FormWrapper extends React.Component {
     this.setState({ busy: true });
     return this.props.onSubmit(this.state.form)
     .then((response) => {
-      this.setState({ busy: false, success: response });
+      this.setState({ busy: false, error: false, success: response });
 
       const { onSuccess } = this.props;
       if (onSuccess) { onSuccess(response); }

@@ -1,0 +1,7 @@
+.description {
+  composes: large from "@quoine/styles/text.css";
+}
+.input,
+.button {
+  composes: top-medium from "@quoine/styles/margin.css";
+}

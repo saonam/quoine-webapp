@@ -1,0 +1,9 @@
+.message {
+  composes: large from "@quoine/styles/text.css";
+}
+.item {
+  composes: top-large from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin-top: 0;
+}

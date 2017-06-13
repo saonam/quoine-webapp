@@ -12,10 +12,10 @@ import styles from './styles.css';
 
 const SignInBody2 = ({ form, onChange }) => (
   <div>
-    <p className={styles.tfaText}>
+    <p className={styles.description}>
       {translate('sign-in:code-description')}
     </p>
-    <div className={styles.tfaInput}>
+    <div className={styles.input}>
       <LargeField label={translate('sign-in:code')}>
         <TextInput
           value={form.code} onChange={onChange.code}
@@ -23,7 +23,7 @@ const SignInBody2 = ({ form, onChange }) => (
         />
       </LargeField>
     </div>
-    <div className={styles.tfaRequest}>
+    <div className={styles.button}>
       <TFARequest
         payload={{ email: form.email, password: form.password }}
       />
