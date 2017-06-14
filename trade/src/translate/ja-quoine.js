@@ -125,8 +125,8 @@ export default {
   },
   "order-add": {
     "confirm-title": "注文を取消しますか？",
-    "confirm-action": "いいえ",
-    "confirm-dismiss": "はい",
+    "confirm-action": "はい",
+    "confirm-dismiss": "いいえ",
     "report-title": "注文を出しました。",
   },
   "order-edit": {
