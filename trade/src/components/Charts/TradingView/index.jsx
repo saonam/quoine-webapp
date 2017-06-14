@@ -3,24 +3,34 @@ import React from 'react';
 
 import styles from './styles.css';
 
-const ChartsTradingView = ({ id, product, theme, language }) => (
-  <iframe
-    className={styles.main} id={id}
-    src={`
-      https://tradingview.qryptos.com?theme=${
-        theme
-      }&language=${
-        language
-      }&symbol=${
-        product.symbol
-      }&productId=${
-        product.id
-      }&apiServer=${
-        process.env.REACT_APP_QUOINE_HOST
+import getPricescale from './getPricescale';
+
+const ChartsTradingView = ({ id, product, theme, language }) => {
+  const pricescale = getPricescale(product.lastPrice);
+  const domain = `${window.location.origin}/trading-view-chart/`;
+  return (
+    <iframe
+      className={styles.main} id={id}
+      src={
+        `${domain}?vendor=${
+          process.env.REACT_APP_VENDOR.toUpperCase()
+        }&apiServer=${
+          process.env.REACT_APP_QUOINE_HOST
+        }&symbol=${
+          product.symbol
+        }&productId=${
+          product.id
+        }&pricescale=${
+          pricescale
+        }&theme=${
+          theme
+        }&language=${
+          language
+        }`
       }
-    `}
-  />
-);
+    />
+  );
+};
 
 ChartsTradingView.propTypes = {
   id: PropTypes.string.isRequired,

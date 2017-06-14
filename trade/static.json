@@ -1,7 +1,8 @@
 {
   "root": "build/",
-  "clean_urls": false,
+  "clean_urls": true,
   "routes": {
+    "/trading-view-chart": "trading-view-chart",
     "/**": "index.html"
   },
   "headers": {

@@ -1,0 +1,105 @@
+/*
+$dark-primary-0         : hsl(207, 19%, 9%);       | panel background
+$dark-primary-0-0       : hsla(207, 19%, 9%, 0);   | for animation
+$dark-primary-0-1       : hsla(207, 19%, 9%, 0.2);
+$dark-primary-0-2       : hsla(207, 19%, 9%, 0.4);
+$dark-primary-0-5       : hsla(207, 19%, 9%, 0.8);
+
+$dark-primary-0-accent  : hsl(203, 64%, 10%);      | app background
+$dark-primary-0-overlay : hsla(207, 19%, 9%, 0.5); | modal background
+
+$dark-primary-1         : hsl(203, 64%, 10%);      | header background, disabled control icon
+$dark-primary-2         : hsl(203, 52%, 18%);      | disabled text, control icon
+$dark-primary-3         : hsl(202, 64%, 27%);      | secondary text
+$dark-primary-4         : hsl(202, 64%, 39%);      | primary text
+
+$dark-accent            : hsl(202, 85%, 57%);      | accent color to highlight things
+$dark-accent-1          : hsla(202, 85%, 57%, 0.2);
+$dark-accent-2          : hsla(202, 85%, 57%, 0.4);
+$dark-accent-light      : hsl(202, 64%, 27%);
+
+$dark-negative          : hsl(4, 90%, 58%);               | sell, short, withdraw, close, cancel
+$dark-negative-1        : hsla(4, 90%, 58%, 0.1);
+$dark-negative-2        : hsla(4, 90%, 58%, 0.2);
+
+$dark-positive          : hsl(122, 57%, 41%);             | buy, long, fund
+$dark-positive-1        : hsla(122, 57%, 41%, 0.1);
+$dark-positive-2        : hsla(122, 57%, 41%, 0.2);
+*/
+
+
+#library-container {
+  border: none !important;
+}
+
+.bottom-widgetbar-content.backtesting .button,
+.header-chart-panel .button,
+.hotlist-controls .button,
+.symbol-edit-widget .button,
+.favored-list-container span,
+
+.drawing-favorites-toolbar .tools-group .button.active,
+.feature-no-touch .drawing-favorites-toolbar .tools-group .button:active,
+.feature-no-touch .properties-toolbar .tools-group .button:active,
+.feature-no-touch .tv-side-toolbar .tools-group .button:active .side,
+.feature-no-touch .tv-side-toolbar .tools-group .button:not(.subgroup):active,
+.feature-touch .drawing-favorites-toolbar .tools-group .button:active,
+.feature-touch .properties-toolbar .tools-group .button:active,
+.feature-touch .tv-side-toolbar .tools-group .button:active .side,
+.feature-touch .tv-side-toolbar .tools-group .button:not(.subgroup):active,
+.properties-toolbar .tools-group .button.active,
+.tv-side-toolbar .tools-group .button.active .side,
+.tv-side-toolbar .tools-group .button.selected .main,
+.tv-side-toolbar .tools-group .button:not(.subgroup).active,
+.tv-side-toolbar .tools-group .button:not(.subgroup).selected,
+
+.drawing-favorites-toolbar .tools-group .button,
+.feature-no-touch .tv-side-toolbar .tools-group .button:active,
+.feature-no-touch .tv-side-toolbar .tools-group .button:hover,
+.feature-touch .tv-side-toolbar .tools-group .button:active,
+.properties-toolbar .tools-group .button,
+.tv-side-toolbar .tools-group .button.active,
+.tv-side-toolbar .tools-group .button.selected,
+
+#library-container .feature-no-touch .header-chart-panel .button.disabled:active,
+#library-container .feature-touch .header-chart-panel .button.disabled:active,
+#library-container .header-chart-panel .button.disabled,
+#library-container .header-chart-panel .button.disabled.active,
+
+.tv-close-panel,
+
+.chart-controls-bar {
+  color: hsl(202, 64%, 27%) !important; /* $primary-3 */
+  background-color: hsl(203, 64%, 10%) !important; /* $primary-0-accent */
+  border-color: hsla(207, 19%, 9%, 0.4) !important; /* $primary-0-2 */
+}
+
+.tv-side-toolbar .button.selected svg {
+  fill: hsl(202, 85%, 57%) !important; /* $accent */
+}
+
+.chart-controls-bar-buttons a {
+  color: hsl(202, 64%, 27%) !important; /* $primary-3 */
+  fill: hsl(202, 64%, 27%) !important; /* $primary-3 */
+  stroke: hsl(202, 64%, 27%) !important; /* $primary-3 */
+}
+
+.tv-side-toolbar,
+.chart-page .chart-container,
+.chart-controls-bar-buttons a:before {
+  border-color: hsla(207, 19%, 9%, 0.8) !important; /* $primary-0-8 */
+}
+
+.feature-no-touch .chart-controls-bar-buttons a:not(.disabled):hover {
+  background-color: hsl(203, 64%, 10%) !important; /* $primary-0-accent */
+}
+
+.chart-style-popup .item svg,
+.chart-style-widget svg,
+.tv-side-toolbar .button svg,
+.tv-side-toolbar .tools-group .button .main.text-as-icon,
+.button.fullscreen svg,
+.button.indicators svg {
+  fill: hsl(202, 64%, 27%) !important; /* $primary-3 */;
+  color: hsl(202, 64%, 27%) !important; /* $primary-3 */;
+}

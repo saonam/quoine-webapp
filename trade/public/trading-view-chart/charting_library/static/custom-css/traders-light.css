@@ -1,0 +1,105 @@
+/*
+$traders-light-primary-0         : hsla(240, 30%, 96%, 1);
+$traders-light-primary-0-0       : hsla(240, 30%, 96%, 0);
+$traders-light-primary-0-1       : hsla(240, 30%, 96%, 0.1);
+$traders-light-primary-0-2       : hsla(240, 30%, 96%, 0.2);
+$traders-light-primary-0-5       : hsla(240, 30%, 96%, 0.5);
+
+$traders-light-primary-0-accent  : hsla(0, 100%, 100%, 1);
+$traders-light-primary-0-overlay : hsla(0, 100%, 100%, 0.5);
+
+$traders-light-primary-1         : hsla(205, 100%, 36%, 0.05);
+$traders-light-primary-2         : hsla(205, 100%, 36%, 0.25);
+$traders-light-primary-3         : hsla(205, 100%, 36%, 0.5);
+$traders-light-primary-4         : hsla(205, 100%, 36%, 1);
+
+$traders-light-accent            : hsla(205, 100%, 36%, 1);
+$traders-light-accent-1          : hsla(205, 100%, 36%, 0.1);
+$traders-light-accent-2          : hsla(205, 100%, 36%, 0.2);
+$traders-light-accent-light      : hsla(205, 100%, 36%, 0.5);
+
+$traders-light-negative          : hsla(348, 100%, 45%, 1);
+$traders-light-negative-1        : hsla(348, 100%, 45%, 0.1);
+$traders-light-negative-2        : hsla(348, 100%, 45%, 0.2);
+
+$traders-light-positive          : hsla(151, 100%, 31%, 1);
+$traders-light-positive-1        : hsla(151, 100%, 31%, 0.1);
+$traders-light-positive-2        : hsla(151, 100%, 31%, 0.2);
+*/
+
+
+#library-container {
+  border: none !important;
+}
+
+.bottom-widgetbar-content.backtesting .button,
+.header-chart-panel .button,
+.hotlist-controls .button,
+.symbol-edit-widget .button,
+.favored-list-container span,
+
+.drawing-favorites-toolbar .tools-group .button.active,
+.feature-no-touch .drawing-favorites-toolbar .tools-group .button:active,
+.feature-no-touch .properties-toolbar .tools-group .button:active,
+.feature-no-touch .tv-side-toolbar .tools-group .button:active .side,
+.feature-no-touch .tv-side-toolbar .tools-group .button:not(.subgroup):active,
+.feature-touch .drawing-favorites-toolbar .tools-group .button:active,
+.feature-touch .properties-toolbar .tools-group .button:active,
+.feature-touch .tv-side-toolbar .tools-group .button:active .side,
+.feature-touch .tv-side-toolbar .tools-group .button:not(.subgroup):active,
+.properties-toolbar .tools-group .button.active,
+.tv-side-toolbar .tools-group .button.active .side,
+.tv-side-toolbar .tools-group .button.selected .main,
+.tv-side-toolbar .tools-group .button:not(.subgroup).active,
+.tv-side-toolbar .tools-group .button:not(.subgroup).selected,
+
+.drawing-favorites-toolbar .tools-group .button,
+.feature-no-touch .tv-side-toolbar .tools-group .button:active,
+.feature-no-touch .tv-side-toolbar .tools-group .button:hover,
+.feature-touch .tv-side-toolbar .tools-group .button:active,
+.properties-toolbar .tools-group .button,
+.tv-side-toolbar .tools-group .button.active,
+.tv-side-toolbar .tools-group .button.selected,
+
+#library-container .feature-no-touch .header-chart-panel .button.disabled:active,
+#library-container .feature-touch .header-chart-panel .button.disabled:active,
+#library-container .header-chart-panel .button.disabled,
+#library-container .header-chart-panel .button.disabled.active,
+
+.tv-close-panel,
+
+.chart-controls-bar {
+  color: hsla(205, 100%, 36%, 0.5) !important; /* $primary-3 */
+  background-color: hsla(0, 100%, 100%, 1) !important; /* $primary-0-accent */
+  border-color: hsla(240, 30%, 96%, 0.2) !important; /* $primary-0-2 */
+}
+
+.tv-side-toolbar .button.selected svg {
+  fill: hsla(205, 100%, 36%, 1) !important; /* $accent */
+}
+
+.chart-controls-bar-buttons a {
+  color: hsla(205, 100%, 36%, 0.5) !important; /* $primary-3 */
+  fill: hsla(205, 100%, 36%, 0.5) !important; /* $primary-3 */
+  stroke: hsla(205, 100%, 36%, 0.5) !important; /* $primary-3 */
+}
+
+.tv-side-toolbar,
+.chart-page .chart-container,
+.chart-controls-bar-buttons a:before {
+  border-color: hsla(240, 30%, 96%, 0.8) !important; /* $primary-0-8 */
+}
+
+.feature-no-touch .chart-controls-bar-buttons a:not(.disabled):hover {
+  background-color: hsla(0, 100%, 100%, 1) !important; /* $primary-0-accent */
+}
+
+.chart-style-popup .item svg,
+.chart-style-widget svg,
+.tv-side-toolbar .button svg,
+.tv-side-toolbar .tools-group .button .main.text-as-icon,
+.button.fullscreen svg,
+.button.indicators svg {
+  fill: hsla(205, 100%, 36%, 0.5) !important; /* $primary-3 */;
+  color: hsla(205, 100%, 36%, 0.5) !important; /* $primary-3 */;
+}

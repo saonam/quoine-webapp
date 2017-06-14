@@ -1,0 +1,105 @@
+/*
+$traders-dark-primary-0         : hsla(240, 100%, 7%, 1);
+$traders-dark-primary-0-0       : hsla(240, 100%, 7%, 0);
+$traders-dark-primary-0-1       : hsla(240, 100%, 7%, 0.1);
+$traders-dark-primary-0-2       : hsla(240, 100%, 7%, 0.2);
+$traders-dark-primary-0-5       : hsla(240, 100%, 7%, 0.5);
+
+$traders-dark-primary-0-accent  : hsla(205, 82%, 15%, 1);
+$traders-dark-primary-0-overlay : hsla(205, 82%, 15%, 0.5);
+
+$traders-dark-primary-1         : hsla(205, 33%, 48%, 0.05);
+$traders-dark-primary-2         : hsla(205, 33%, 48%, 0.25);
+$traders-dark-primary-3         : hsla(205, 33%, 48%, 0.5);
+$traders-dark-primary-4         : hsla(205, 33%, 48%, 1);
+
+$traders-dark-accent            : hsla(205, 100%, 25%, 1);
+$traders-dark-accent-1          : hsla(205, 100%, 25%, 0.1);
+$traders-dark-accent-2          : hsla(205, 100%, 25%, 0.2);
+$traders-dark-accent-light      : hsla(205, 100%, 25%, 0.5);
+
+$traders-dark-negative          : hsla(4, 48%, 45%, 1);
+$traders-dark-negative-1        : hsla(4, 48%, 45%, 0.1);
+$traders-dark-negative-2        : hsla(4, 48%, 45%, 0.2);
+
+$traders-dark-positive          : hsla(122, 39%, 38%, 1);
+$traders-dark-positive-1        : hsla(122, 39%, 38%, 0.1);
+$traders-dark-positive-2        : hsla(122, 39%, 38%, 0.2);
+*/
+
+
+#library-container {
+  border: none !important;
+}
+
+.bottom-widgetbar-content.backtesting .button,
+.header-chart-panel .button,
+.hotlist-controls .button,
+.symbol-edit-widget .button,
+.favored-list-container span,
+
+.drawing-favorites-toolbar .tools-group .button.active,
+.feature-no-touch .drawing-favorites-toolbar .tools-group .button:active,
+.feature-no-touch .properties-toolbar .tools-group .button:active,
+.feature-no-touch .tv-side-toolbar .tools-group .button:active .side,
+.feature-no-touch .tv-side-toolbar .tools-group .button:not(.subgroup):active,
+.feature-touch .drawing-favorites-toolbar .tools-group .button:active,
+.feature-touch .properties-toolbar .tools-group .button:active,
+.feature-touch .tv-side-toolbar .tools-group .button:active .side,
+.feature-touch .tv-side-toolbar .tools-group .button:not(.subgroup):active,
+.properties-toolbar .tools-group .button.active,
+.tv-side-toolbar .tools-group .button.active .side,
+.tv-side-toolbar .tools-group .button.selected .main,
+.tv-side-toolbar .tools-group .button:not(.subgroup).active,
+.tv-side-toolbar .tools-group .button:not(.subgroup).selected,
+
+.drawing-favorites-toolbar .tools-group .button,
+.feature-no-touch .tv-side-toolbar .tools-group .button:active,
+.feature-no-touch .tv-side-toolbar .tools-group .button:hover,
+.feature-touch .tv-side-toolbar .tools-group .button:active,
+.properties-toolbar .tools-group .button,
+.tv-side-toolbar .tools-group .button.active,
+.tv-side-toolbar .tools-group .button.selected,
+
+#library-container .feature-no-touch .header-chart-panel .button.disabled:active,
+#library-container .feature-touch .header-chart-panel .button.disabled:active,
+#library-container .header-chart-panel .button.disabled,
+#library-container .header-chart-panel .button.disabled.active,
+
+.tv-close-panel,
+
+.chart-controls-bar {
+  color: hsla(205, 33%, 48%, 0.5) !important; /* $primary-3 */
+  background-color: hsla(205, 82%, 15%, 1) !important; /* $primary-0-accent */
+  border-color: hsla(240, 100%, 7%, 0.2) !important; /* $primary-0-2 */
+}
+
+.tv-side-toolbar .button.selected svg {
+  fill: hsla(205, 100%, 25%, 1) !important; /* $accent */
+}
+
+.chart-controls-bar-buttons a {
+  color: hsla(205, 33%, 48%, 0.5) !important; /* $primary-3 */
+  fill: hsla(205, 33%, 48%, 0.5) !important; /* $primary-3 */
+  stroke: hsla(205, 33%, 48%, 0.5) !important; /* $primary-3 */
+}
+
+.tv-side-toolbar,
+.chart-page .chart-container,
+.chart-controls-bar-buttons a:before {
+  border-color: hsla(240, 100%, 7%, 0.8) !important; /* $primary-0-8 */
+}
+
+.feature-no-touch .chart-controls-bar-buttons a:not(.disabled):hover {
+  background-color: hsla(205, 82%, 15%, 1) !important; /* $primary-0-accent */
+}
+
+.chart-style-popup .item svg,
+.chart-style-widget svg,
+.tv-side-toolbar .button svg,
+.tv-side-toolbar .tools-group .button .main.text-as-icon,
+.button.fullscreen svg,
+.button.indicators svg {
+  fill: hsla(205, 33%, 48%, 0.5) !important; /* $primary-3 */;
+  color: hsla(205, 33%, 48%, 0.5) !important; /* $primary-3 */;
+}

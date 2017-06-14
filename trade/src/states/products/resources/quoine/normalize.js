@@ -30,6 +30,8 @@ export const one = raw => ({
   // ===
   currency: raw.currency,
   fxRate: Number(raw.exchange_rate),
+  // ===
+  lastPrice: Number(raw.last_traded_price),
 });
 
 export const all = raw => (raw.map(one)).filter(tempFilter);

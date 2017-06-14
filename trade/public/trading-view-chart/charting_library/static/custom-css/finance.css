@@ -1,0 +1,105 @@
+/*
+$finance-primary-0         : hsla(230, 100%, 12%, 1);
+$finance-primary-0-0       : hsla(230, 100%, 12%, 0);
+$finance-primary-0-1       : hsla(230, 100%, 12%, 0.1);
+$finance-primary-0-2       : hsla(230, 100%, 12%, 0.2);
+$finance-primary-0-5       : hsla(230, 100%, 12%, 0.3);
+
+$finance-primary-0-accent  : hsla(229, 100%, 7%, 1);
+$finance-primary-0-overlay : hsla(229, 100%, 7%, 0.5);
+
+$finance-primary-1         : hsla(218, 40%, 80%, 0.08);
+$finance-primary-2         : hsla(218, 40%, 80%, 0.25);
+$finance-primary-3         : hsla(218, 40%, 80%, 0.5);
+$finance-primary-4         : hsla(218, 40%, 80%, 1);
+
+$finance-accent            : hsla(216, 91%, 53%, 1);
+$finance-accent-1          : hsla(226, 91%, 53%, 0.1);
+$finance-accent-2          : hsla(226, 91%, 53%, 0.2);
+$finance-accent-light      : hsla(226, 91%, 53%, 0.8);
+
+$finance-negative          : hsla(17, 100%, 59%, 1);
+$finance-negative-1        : hsla(17, 100%, 59%, 0.2);
+$finance-negative-2        : hsla(17, 100%, 59%, 0.4);
+
+$finance-positive          : hsla(105, 98%, 40%, 1);
+$finance-positive-1        : hsla(105, 98%, 40%, 0.2);
+$finance-positive-2        : hsla(105, 98%, 40%, 0.4);
+*/
+
+
+#library-container {
+  border: none !important;
+}
+
+.bottom-widgetbar-content.backtesting .button,
+.header-chart-panel .button,
+.hotlist-controls .button,
+.symbol-edit-widget .button,
+.favored-list-container span,
+
+.drawing-favorites-toolbar .tools-group .button.active,
+.feature-no-touch .drawing-favorites-toolbar .tools-group .button:active,
+.feature-no-touch .properties-toolbar .tools-group .button:active,
+.feature-no-touch .tv-side-toolbar .tools-group .button:active .side,
+.feature-no-touch .tv-side-toolbar .tools-group .button:not(.subgroup):active,
+.feature-touch .drawing-favorites-toolbar .tools-group .button:active,
+.feature-touch .properties-toolbar .tools-group .button:active,
+.feature-touch .tv-side-toolbar .tools-group .button:active .side,
+.feature-touch .tv-side-toolbar .tools-group .button:not(.subgroup):active,
+.properties-toolbar .tools-group .button.active,
+.tv-side-toolbar .tools-group .button.active .side,
+.tv-side-toolbar .tools-group .button.selected .main,
+.tv-side-toolbar .tools-group .button:not(.subgroup).active,
+.tv-side-toolbar .tools-group .button:not(.subgroup).selected,
+
+.drawing-favorites-toolbar .tools-group .button,
+.feature-no-touch .tv-side-toolbar .tools-group .button:active,
+.feature-no-touch .tv-side-toolbar .tools-group .button:hover,
+.feature-touch .tv-side-toolbar .tools-group .button:active,
+.properties-toolbar .tools-group .button,
+.tv-side-toolbar .tools-group .button.active,
+.tv-side-toolbar .tools-group .button.selected,
+
+#library-container .feature-no-touch .header-chart-panel .button.disabled:active,
+#library-container .feature-touch .header-chart-panel .button.disabled:active,
+#library-container .header-chart-panel .button.disabled,
+#library-container .header-chart-panel .button.disabled.active,
+
+.tv-close-panel,
+
+.chart-controls-bar {
+  color: hsla(218, 40%, 80%, 0.5) !important; /* $primary-3 */
+  background-color: hsla(229, 100%, 7%, 1) !important; /* $primary-0-accent */
+  border-color: hsla(230, 100%, 12%, 0.2) !important; /* $primary-0-2 */
+}
+
+.tv-side-toolbar .button.selected svg {
+  fill: hsla(216, 91%, 53%, 1) !important; /* $accent */
+}
+
+.chart-controls-bar-buttons a {
+  color: hsla(218, 40%, 80%, 0.5) !important; /* $primary-3 */
+  fill: hsla(218, 40%, 80%, 0.5) !important; /* $primary-3 */
+  stroke: hsla(218, 40%, 80%, 0.5) !important; /* $primary-3 */
+}
+
+.tv-side-toolbar,
+.chart-page .chart-container,
+.chart-controls-bar-buttons a:before {
+  border-color: hsla(230, 100%, 12%, 0.8) !important; /* $primary-0-8 */
+}
+
+.feature-no-touch .chart-controls-bar-buttons a:not(.disabled):hover {
+  background-color: hsla(229, 100%, 7%, 1) !important; /* $primary-0-accent */
+}
+
+.chart-style-popup .item svg,
+.chart-style-widget svg,
+.tv-side-toolbar .button svg,
+.tv-side-toolbar .tools-group .button .main.text-as-icon,
+.button.fullscreen svg,
+.button.indicators svg {
+  fill: hsla(218, 40%, 80%, 0.5) !important; /* $primary-3 */;
+  color: hsla(218, 40%, 80%, 0.5) !important; /* $primary-3 */;
+}

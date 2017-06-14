@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    <title>Trading View Chart</title>
+
+    <!-- Fix for iOS Safari zooming bug -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!-- jQuery is not required to use Charting Library. It is used only for sample datafeed ajax requests. -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>')</script>
+    <script type="text/javascript" src="./charting_library/charting_library.min.js"></script>
+    <script type="text/javascript" src="./charting_library/datafeed/udf/datafeed.js"></script>
+
+    <script type="text/javascript">
+
+      function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                  results = regex.exec(location.search);
+          return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      // Chart info
+      var vendor = getParameterByName('vendor') || 'QUOINE';
+      var datafeedURL = getParameterByName('apiServer') || 'https://staging1.quoine.com';
+      var productId = getParameterByName('productId') || '1';
+      var historyUrl = '/products/' + productId + '/history';
+      var symbol = getParameterByName('symbol') || 'BTCUSD';
+      var pricescale = Number(getParameterByName('pricescale')) || 1;
+      var theme = getParameterByName('theme') || 'light';
+      var language = getParameterByName('language') || 'en';
+      var locales = {
+        en: 'en',
+        ja: 'ja',
+        zhcn: 'zh',
+        zhtw: 'zh_TW',
+      };
+
+      // Prepare
+      var colors = (function getColorByTheme() {
+        var schemes = {
+          light: {
+            bg: '#e5eff5',
+            grid: 'rgba(171, 171, 171, 0.1)',
+            text: '#333333',
+            textStrong: '#333333',
+            textWeak: '#ababab',
+            short: '#35acef',
+            shortFill: '#35acef',
+            long: '#35acef',
+            longFill: '#e5eff5',
+            cta: '#35acef',
+            ctaHighlight: '#35acef',
+            alert: '#35acef',
+          },
+          dark: {
+            bg: '#091d2a',
+            grid: 'rgba(25, 81, 113, 0.1)',
+            text: '#2474a3',
+            textStrong: '#2474a3',
+            textWeak: '#195171',
+            short: '#35acef',
+            shortFill: '#35acef',
+            long: '#35acef',
+            longFill: '#091d2a',
+            cta: '#35acef',
+            ctaHighlight: '#35acef',
+            alert: '#35acef',
+          },
+          'dark-2': {
+            bg: '#151c28',
+            grid: 'rgba(126, 143, 165, 0.1)',
+            text: '#D3DAE4',
+            textStrong: '#D3DAE4',
+            textWeak: '#7e8fa5',
+            short: '#2da1f8',
+            shortFill: '#2da1f8',
+            long: '#2da1f8',
+            longFill: '#151c28',
+            cta: '#2da1f8',
+            ctaHighlight: '#2da1f8',
+            alert: '#2da1f8',
+          },
+          finance: {
+            bg: '#000724',
+            grid: 'rgba(127, 138, 180, 0.1)',
+            text: '#b7c6e0',
+            textStrong: '#b7c6e0',
+            textWeak: '#7f8ab4',
+            short: '#ff692e',
+            shortFill: '#ff692e',
+            long: '#34ca02',
+            longFill: '#34ca02',
+            cta: '#003bff',
+            ctaHighlight: '#003bff',
+            alert: '#003bff',
+          },
+          green: {
+            bg: '#0f1f29',
+            grid: 'rgba(142, 157, 165, 0.1)',
+            text: '#FFFFFF',
+            textStrong: '#FFFFFF',
+            textWeak: '#8E9DA5',
+            short: '#FF6600',
+            shortFill: '#FF6600',
+            long: '#9DC227',
+            longFill: '#9DC227',
+            cta: '#FFBC00',
+            ctaHighlight: '#FFBC00',
+            alert: '#FFBC00',
+          },
+          'traders-light': {
+            bg: '#ffffff',
+            grid: 'rgba(87, 185, 255, 0.1)',
+            text: '#006bb8',
+            textStrong: '#006bb8',
+            textWeak: '#57b9ff',
+            short: '#e6002e',
+            shortFill: '#e6002e',
+            long: '#009e52',
+            longFill: '#009e52',
+            cta: '#006bb8',
+            ctaHighlight: '#006bb8',
+            alert: '#006bb8',
+          },
+          'traders-dark': {
+            bg: '#072b46',
+            grid: 'rgba(39, 62, 78, 0.1)',
+            text: '#5281a3',
+            textStrong: '#5281a3',
+            textWeak: '#273e4e',
+            short: '#aa433c',
+            shortFill: '#aa433c',
+            long: '#3b873e',
+            longFill: '#3b873e',
+            cta: '#004a80',
+            ctaHighlight: '#004a80',
+            alert: '#004a80',
+          },
+          'qryptos-dark': {
+            bg: '#151204',
+            grid: 'rgba(128, 128, 128, 0.1)',
+            text: '#ffffff',
+            textStrong: '#292821',
+            textWeak: '#808080',
+            short: '#d95c26',
+            shortFill: '#d95c26',
+            long: '#82d926',
+            longFill: '#82d926',
+            cta: '#d6b524',
+            ctaHighlight: '#d6b524',
+            alert: '#d6b524',
+          },
+          'qryptos-light': {
+            bg: '#f5f4f0',
+            grid: 'rgba(153, 152, 150, 0.1)',
+            text: '#3d3d3d',
+            textStrong: '#3d3d3d',
+            textWeak: '#999896',
+            short: '#e15647',
+            shortFill: '#e15647',
+            long: '#45b5a2',
+            longFill: '#45b5a2',
+            cta: '#f8be49',
+            ctaHighlight: '#f8be49',
+            alert: '#f8be49',
+          },
+        };
+        return schemes[theme];
+      })();
+
+      // Ready
+      var LINESTYLE_SOLID = 0;
+      var LINESTYLE_DOTTED = 1;
+      var LINESTYLE_DASHED = 2;
+      var LINESTYLE_LARGE_DASHED = 3;
+
+      // Caculate timeframe to show 500 tickers by default
+      function getTimeFrame(interval) {
+        var numInterval = Number(interval);
+
+        // interval is Minute
+        if (!isNaN(numInterval)) {
+          var minutes = numInterval;
+          if (minutes < 60) {
+            return '1D';
+          }
+          else {
+            return '5D';
+          }
+        }
+        // interval is Day
+        else if (interval.indexOf('D') !== -1) {
+          var days = interval.slice(0, length -1) || 1;
+          return '1M';
+        }
+        // interval is Week
+        else if (interval.indexOf('W') !== -1) {
+          var weeks = interval.slice(0, length -1) || 1;
+          return '10M';
+        }
+        // interval is Month
+        else if (interval.indexOf('M') !== -1) {
+          var months = interval.slice(0, length -1) || 1;
+          return '24M';
+        }
+        else {
+          return '1D';
+        }
+      };
+
+      var DEAULT_INTERVAL = 'D';
+      var DEFAULT_TIMEFRAME = getTimeFrame(DEAULT_INTERVAL);
+
+      TradingView.onready(function() {
+        var widget = window.tvWidget = new TradingView.widget({
+          fullscreen: true,
+          symbol: symbol,
+          interval: DEAULT_INTERVAL,
+          timeframe: DEFAULT_TIMEFRAME,
+          container_id: "tv_chart_container",
+          //  BEWARE: this constructor was be modified to receive data form iframe url
+
+          datafeed: new Datafeeds.UDFCompatibleDatafeed({
+            vendor: vendor,
+            datafeedURL: datafeedURL,
+            historyUrl: historyUrl,
+            updateFrequency: 60 * 60 * 1000, // 1 minute to milisecond
+            symbol: symbol,
+            pricescale: pricescale,
+          }),
+          library_path: "charting_library/",
+          locale: locales[language],
+          //  Regression Trend-related functionality is not implemented yet, so it's hidden for a while
+          drawings_access: { type: 'black', tools: [ { name: "Regression Trend" } ] },
+          enabled_features: ["study_templates"],
+          charts_storage_url: datafeedURL,
+          charts_storage_api_version: "1.1",
+          client_id: 'tradingview.com',
+          user_id: 'public_user_id',
+          // ===
+          disabled_features: ["header_symbol_search", "header_compare", "header_settings", "header_screenshot", "save_chart_properties_to_local_storage", "header_saveload"],
+          toolbar_bg: colors.bg,
+          custom_css_url: './custom-css/' + theme + '.css',
+          overrides: {
+            //  supported values": large, medium, small, tiny
+            "volumePaneSize": "medium",
+
+            // Grid
+            "paneProperties.background": colors.bg,
+            "paneProperties.vertGridProperties.color": colors.grid,
+            "paneProperties.vertGridProperties.style": LINESTYLE_SOLID,
+            "paneProperties.horzGridProperties.color": colors.grid,
+            "paneProperties.horzGridProperties.style": LINESTYLE_SOLID,
+            "paneProperties.crossHairProperties.color": colors.grid,
+
+            // leftAxisProperties & rightAxisProperties
+            "scalesProperties.lineColor": colors.textStrong,
+            "scalesProperties.textColor": colors.textStrong,
+
+            //  Series style. See the supported values below
+            //    bars = 0
+            //    candles = 1
+            //    line = 2
+            //    area = 3
+            //    heiken ashi = 8
+            //    hollow candles = 9
+            "mainSeriesProperties.style": 1,
+
+            // Make the watermark 100% opaque (invisible)
+            "symbolWatermarkProperties.color": "rgba(0, 0, 0, 0.00)",
+
+            //  Different chart types defaults
+            //  Candles styles
+            "mainSeriesProperties.candleStyle.upColor": colors.longFill,
+            "mainSeriesProperties.candleStyle.downColor": colors.shortFill,
+            "mainSeriesProperties.candleStyle.drawWick": true,
+            "mainSeriesProperties.candleStyle.drawBorder": true,
+            "mainSeriesProperties.candleStyle.borderColor": "#378658",
+            "mainSeriesProperties.candleStyle.borderUpColor": colors.long,
+            "mainSeriesProperties.candleStyle.borderDownColor": colors.short,
+            "mainSeriesProperties.candleStyle.wickUpColor": colors.long,
+            "mainSeriesProperties.candleStyle.wickDownColor": colors.short,
+            "mainSeriesProperties.candleStyle.barColorsOnPrevClose": false,
+
+            //  Hollow Candles styles
+            "mainSeriesProperties.hollowCandleStyle.upColor": colors.longFill,
+            "mainSeriesProperties.hollowCandleStyle.downColor": colors.shortFill,
+            "mainSeriesProperties.hollowCandleStyle.drawWick": true,
+            "mainSeriesProperties.hollowCandleStyle.drawBorder": true,
+            "mainSeriesProperties.hollowCandleStyle.borderColor": "#378658",
+            "mainSeriesProperties.hollowCandleStyle.borderUpColor": colors.long,
+            "mainSeriesProperties.hollowCandleStyle.borderDownColor": colors.short,
+            "mainSeriesProperties.hollowCandleStyle.wickColor": colors.long,
+
+            //  Heiken Ashi styles
+            "mainSeriesProperties.haStyle.upColor": colors.longFill,
+            "mainSeriesProperties.haStyle.downColor": colors.shortFill,
+            "mainSeriesProperties.haStyle.drawWick": true,
+            "mainSeriesProperties.haStyle.drawBorder": true,
+            "mainSeriesProperties.haStyle.borderColor": "#378658",
+            "mainSeriesProperties.haStyle.borderUpColor": colors.long,
+            "mainSeriesProperties.haStyle.borderDownColor": colors.short,
+            "mainSeriesProperties.haStyle.wickColor": colors.long,
+            "mainSeriesProperties.haStyle.barColorsOnPrevClose": false,
+
+            //  Bars styles
+            "mainSeriesProperties.barStyle.upColor": colors.longFill,
+            "mainSeriesProperties.barStyle.downColor": colors.shortFill,
+            "mainSeriesProperties.barStyle.barColorsOnPrevClose": false,
+            "mainSeriesProperties.barStyle.dontDrawOpen": false,
+
+            //  Line styles
+            "mainSeriesProperties.lineStyle.color": colors.cta,
+            "mainSeriesProperties.lineStyle.linestyle": LINESTYLE_SOLID,
+            "mainSeriesProperties.lineStyle.linewidth": 1,
+            "mainSeriesProperties.lineStyle.priceSource": "close",
+
+            //  Area styles
+            "mainSeriesProperties.areaStyle.color1": colors.textWeak,
+            "mainSeriesProperties.areaStyle.color2": colors.cta,
+            "mainSeriesProperties.areaStyle.linecolor": colors.ctaHighlight,
+            "mainSeriesProperties.areaStyle.linestyle": LINESTYLE_SOLID,
+            "mainSeriesProperties.areaStyle.linewidth": 1,
+            "mainSeriesProperties.areaStyle.priceSource": "close",
+          },
+          // Indicator overrides
+          studies_overrides: {
+            // Volume
+            "volume.volume.color.0": colors.shortFill,
+            "volume.volume.color.1": colors.longFill,
+            "volume.volume.transparency": 0,
+            "volume.volume ma.color": colors.textStrong,
+            "volume.volume ma.transparency": 0,
+            "volume.volume ma.linewidth": 2,
+            "volume.volume ma.plottype": "line",
+            "volume.show ma": true,
+          },
+          time_frames: [],
+        });
+        widget.onChartReady(function() {
+          widget.chart().onIntervalChanged().subscribe(null, function(interval, obj) {
+            obj.timeframe = getTimeFrame(interval);
+          })
+        });
+      });
+
+    </script>
+
+  </head>
+
+  <body style="margin:0px;">
+    <div id="tv_chart_container"></div>
+  </body>
+
+</html>
