@@ -66,6 +66,8 @@ const JpOccupationInputView = ({ value, onChange, ...others }) => (
             onChange={onChange.name}
             placeholder="勤務先名"
             {...others}
+            pattern="[^\s]"
+            title="勤務先を必ずご記入ください。"
           />
         </div>
         <p className={styles.help}>
