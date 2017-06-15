@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
   theme: state.themes.current,
   language: state.languages.current,
   double: state.charts.double,
-  mode: state.charts.mode,
+  provider: state.charts.provider,
 });
 
 export default connect(mapStateToProps)(View);

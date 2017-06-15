@@ -5,7 +5,7 @@ import View from './View';
 
 const mapDispatchToProps = (dispatch) => ({
   onToggleDouble: () => dispatch({ type: TYPES.TOGGLE_DOUBLE }),
-  onSelectMode: (value) => dispatch({ type: TYPES.APPLY, payload: { mode: value } }),
+  onSelectMode: (value) => dispatch({ type: TYPES.APPLY, payload: { provider: value } }),
 });
 
 export default connect(null, mapDispatchToProps)(View);

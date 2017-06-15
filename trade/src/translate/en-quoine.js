@@ -481,9 +481,9 @@ export default {
   "charts": {
     "not-ready": "This chart is not ready yet.",
     "spine-title": "Charts",
-    "mode": "Mode",
-    "mode-crypto-watch": "Crypto Watch",
-    "mode-trading-view": "Trading View",
+    "provider": "Chart Provider",
+    "provider-crypto-watch": "Crypto Watch",
+    "provider-trading-view": "Trading View",
   },
   "trade-feed": {
     "title": "Trade Feed",

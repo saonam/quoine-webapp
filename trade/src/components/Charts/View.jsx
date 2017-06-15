@@ -10,16 +10,16 @@ import TradingView from './TradingView';
 
 import styles from './styles.css';
 
-const Charts = ({ product, double, mode, ...others }) => {
+const Charts = ({ product, double, provider, ...others }) => {
   if (!product) {
     return (<Loading />);
   }
 
-  const ChartType = mode === 'crypto-watch' ? CryptoWatch : TradingView;
+  const ChartType = provider === 'crypto-watch' ? CryptoWatch : TradingView;
   return (
     <div className={`${styles.main} ${styles[double ? 'double' : 'single']}`}>
       <header className={styles.header}>
-        <Header double={double} mode={mode} />
+        <Header double={double} provider={provider} />
       </header>
       <div className={styles.primary}>
         <ChartType id="primary-chart" product={product} {...others} />
@@ -39,7 +39,7 @@ Charts.propTypes = {
     symbol: PropTypes.string.isRequired,
   }),
   ...Header.propTypes.double,
-  ...Header.propTypes.mode,
+  ...Header.propTypes.provider,
 };
 
 export default Charts;

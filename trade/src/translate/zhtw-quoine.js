@@ -481,9 +481,9 @@ export default {
   "charts": {
     "not-ready": "圖表尚未準備好",
     "spine-title": "圖表",
-    "mode": "Mode",
-    "mode-crypto-watch": "Crypto Watch",
-    "mode-trading-view": "Trading View",
+    "provider": "圖表來源",
+    "provider-crypto-watch": "Crypto Watch",
+    "provider-trading-view": "Trading View",
   },
   "trade-feed": {
     "title": "交易資訊",

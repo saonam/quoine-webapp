@@ -481,9 +481,9 @@ export default {
   "charts": {
     "not-ready": "このチャートは準備中です。",
     "spine-title": "チャート",
-    "mode": "コピー",
-    "mode-crypto-watch": "Crypto Watch",
-    "mode-trading-view": "Trading View",
+    "provider": "チャート",
+    "provider-crypto-watch": "Crypto Watch",
+    "provider-trading-view": "Trading View",
   },
   "trade-feed": {
     "title": "約定フィード",

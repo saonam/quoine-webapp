@@ -2,11 +2,11 @@ import { createReducer, registerSyncShape } from '@quoine/states/utils';
 
 import TYPES from './TYPES';
 
-// const modes = ['crypto-watch', 'trading-view'];
+// const providers = ['crypto-watch', 'trading-view'];
 
 const initialState = {
   double: false,
-  mode: process.env.REACT_APP_VENDOR === 'qryptos' ? 'trading-view' : 'crypto-watch',
+  provider: process.env.REACT_APP_VENDOR === 'qryptos' ? 'trading-view' : 'crypto-watch',
 };
 
 registerSyncShape('charts', ['double']);
