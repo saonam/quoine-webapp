@@ -29,30 +29,7 @@ export default {
     "country-restricted": "QRYPTOS is currently not available for this country.",
   },
   "forgot-password": {
-    "action-resend": "メールが届かない場合はこちら（再送信）",
-    "action-send": "送信",
-    "description": "アカウントのメールアドレスを入力してください。このメールアドレスにパスワード再設定のURLを送信します。",
-    "title": "パスワードをお忘れですか？",
-    "message-sent": "ご登録のメールアドレスにパスワード再設定用のリンクを送信しました。ご確認ください。",
-    "email": "メールアドレス",
-  },
-  "forgot-password-error": {
-    "email-not-found": "このメールアドレスはまだ登録されていません。",
-    "email-can-t-be-blank": "メールアドレスが必要です",
-  },
-  "reset-password": {
-    "new-password": "パスワード",
-    "new-password-help": "8文字以上かつ、大文字・小文字・数字のすべてを含む必要があります。",
-    "token": "トークンをリセットする",
-    "token-help": "送信したリセットトークンをご入力ください。",
-    "action": "パスワード再設定",
-    "title": "パスワード再設定",
-  },
-  "reset-password-error": {
-    "reset-password-token-can-t-be-blank": "認証コードの入力が必要です。登録メールアドレスに送付されたメールをご確認ください。",
-    "reset-password-token-is-invalid": "認証コードが違います。 登録メールアドレスに送付されたメールを再度ご確認ください。",
-    "reset-password-token-expired": "トークンは無効になりました。ホームページに戻り、もう一度実行してください。",
-    "password-is-too-short-minimum-is-8-characters": "パスワードは最低8文字で、かつ1文字以上の大文字、小文字、数字を含む必要があります。",
+    "help": "パスワードをリセットされる際は、<a href=\"mailto:support@quoine.com\">support@quoine.com</a>までご連絡ください。",
   },
   "change-password": {
     "title": "パスワード変更",

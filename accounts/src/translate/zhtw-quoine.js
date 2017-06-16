@@ -29,30 +29,7 @@ export default {
     "country-restricted": "對不起，QRYPTOS在當前國家暫時沒有提供服務，請耐心等待。",
   },
   "forgot-password": {
-    "action-resend": "重新發送密碼重置鏈接",
-    "action-send": "發送密碼重置鏈接",
-    "description": "請輸入您的郵箱地址收取密碼重置鏈接",
-    "title": "忘記密碼",
-    "message-sent": "密碼重置鏈接已發送，請在點擊鏈接後繼續操作。密碼重置鏈接十分鐘內有效",
-    "email": "郵箱地址",
-  },
-  "forgot-password-error": {
-    "email-not-found": "未找到郵箱地址",
-    "email-can-t-be-blank": "郵箱地址不能為空",
-  },
-  "reset-password": {
-    "new-password": "新密碼",
-    "new-password-help": "密碼至少包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字",
-    "token": "重置驗證碼",
-    "token-help": "請輸入已發送到您郵箱中的重置驗證碼",
-    "action": "更新密碼",
-    "title": "重置密碼",
-  },
-  "reset-password-error": {
-    "reset-password-token-can-t-be-blank": "驗證碼不能為空，請輸入發送到您郵箱的驗證碼",
-    "reset-password-token-is-invalid": "驗證碼無效，請輸入發送到您郵箱的驗證碼",
-    "reset-password-token-expired": "重置密碼嘗試已過期。請返回首頁並重試",
-    "password-is-too-short-minimum-is-8-characters": "密碼必須包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字",
+    "help": "如需要重置你的密碼，請聯繫<a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
   },
   "change-password": {
     "title": "更改密碼",

@@ -4,7 +4,6 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import TextInput from '@quoine/components/TextInput';
-import Link from '@quoine/components/Link';
 
 import LargeField from 'components/LargeField';
 import DemoLink from 'components/DemoLink';
@@ -13,6 +12,12 @@ import SignUpLink from 'components/SignUpLink';
 import styles from './styles.css';
 
 import getMessageKey from './getMessageKey';
+
+const getPasswordHelp = () => ({
+  __html: translate('forgot-password:help'),
+});
+
+/* eslint-disable react/no-danger */
 
 const SignInBody1 = ({ form, onChange, message, onRef }) => (
   <div>
@@ -48,10 +53,8 @@ const SignInBody1 = ({ form, onChange, message, onRef }) => (
           border={2} required
         />
       </LargeField>
-      <div>
-        <Link styleName="accent text" pathname="/forgot-password" tabIndex="-1">
-          {translate('forgot-password:title')}
-        </Link>
+      <div className={styles.help}>
+        <div dangerouslySetInnerHTML={getPasswordHelp()} />
       </div>
     </div>
 

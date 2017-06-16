@@ -29,30 +29,7 @@ export default {
     "country-restricted": "QRYPTOS is currently not available for this country.",
   },
   "forgot-password": {
-    "action-resend": "Resend password reset link",
-    "action-send": "Send password reset link",
-    "description": "Please enter your email address to receive password reset link.",
-    "title": "Forgot Password?",
-    "message-sent": "Password reset link has been sent. Please check your Inbox and/or Spam box for the link to proceed. If you don't see our email after 10 minutes, please click Resend.",
-    "email": "Email Address",
-  },
-  "forgot-password-error": {
-    "email-not-found": "Email address not found.",
-    "email-can-t-be-blank": "Email address is required.",
-  },
-  "reset-password": {
-    "new-password": "New Password",
-    "new-password-help": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
-    "token": "Reset Token",
-    "token-help": "Please enter the reset token that was sent to your email address.",
-    "action": "Update Password",
-    "title": "Reset Password",
-  },
-  "reset-password-error": {
-    "reset-password-token-can-t-be-blank": "Token is required. Please enter the reset token that was sent to your email address.",
-    "reset-password-token-is-invalid": "Token is invalid. Please enter the reset token that was sent to your email address.",
-    "reset-password-token-expired": "Reset Password attempt has expired. Please return to Home Page and try again.",
-    "password-is-too-short-minimum-is-8-characters": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
+    "help": "To reset your password, please contact <a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
   },
   "change-password": {
     "title": "Change Password",
