@@ -397,6 +397,7 @@ export default {
     "user-not-enough-fund": "Balance is not enough.",
     "token-is-invalid": "This token is invalid.",
     "verification-failed": "This authentication code is invalid.",
+    "address-not-present": "This address is invalid. Please check again.",
   },
   // ===
   "futures-balance": {

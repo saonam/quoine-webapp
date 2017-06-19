@@ -397,6 +397,7 @@ export default {
     "user-not-enough-fund": "余额不足",
     "token-is-invalid": "此验证码无效",
     "verification-failed": "此授权码无效",
+    "address-not-present": "此地址无效，请重新确认。",
   },
   // ===
   "futures-balance": {

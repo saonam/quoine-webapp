@@ -397,6 +397,7 @@ export default {
     "user-not-enough-fund": "出金可能金額を確認してください",
     "token-is-invalid": "無効なトークンです",
     "verification-failed": "認証に失敗しました。",
+    "address-not-present": "無効なアドレスです。",
   },
   // ===
   "futures-balance": {
