@@ -8,7 +8,7 @@ import LargeField from 'components/LargeField';
 
 import styles from 'components/UserForm/styles.css';
 
-const UserForm4JpTerm = ({ form, onChange, required }) => (
+const UserForm4JpTerm = ({ form, onChange }) => (
   <div>
     <p className={styles.message}>
       口座開設には、各種規定の承諾、本人確認書類の提出が必要です。
@@ -26,7 +26,7 @@ const UserForm4JpTerm = ({ form, onChange, required }) => (
       <LargeField>
         <CheckboxInput
           id="first" value={form.first}
-          onChange={onChange.first} required={required}
+          onChange={onChange.first} required
         >
           同意します
         </CheckboxInput>
@@ -81,7 +81,6 @@ const UserForm4JpTerm = ({ form, onChange, required }) => (
 UserForm4JpTerm.propTypes = {
   form: PropTypes.shape({}).isRequired,
   onChange: PropTypes.objectOf(PropTypes.func).isRequired,
-  required: PropTypes.bool,
 };
 
 export default UserForm4JpTerm;
