@@ -39,11 +39,12 @@ TransferMessage.propTypes = {
       // ===
       'limit-accounts',
       'need-tfa',
+      'disabled-in-demo-mode',
     ]).isRequired,
     style: PropTypes.oneOf(['positive', 'negative']).isRequired,
     goto: PropTypes.oneOfType([
-      PropTypes.string.isRequired,
-      PropTypes.bool.isRequired,
+      PropTypes.string,
+      PropTypes.bool,
     ]).isRequired,
   }).isRequired,
 };

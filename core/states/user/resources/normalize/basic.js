@@ -12,4 +12,6 @@ export default (raw) => ({
   statusDeclinedReason: raw.declined_reason,
   // ==
   type: raw.user_type,
+  // ==
+  demo: raw.email.indexOf('@sandbox.quoine.com') !== -1,
 });

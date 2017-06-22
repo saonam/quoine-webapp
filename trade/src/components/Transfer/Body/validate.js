@@ -16,6 +16,14 @@ const isDisable = ({ user, account }) => (
 );
 
 const validate = ({ user, account, type }) => {
+  if (user.demo) {
+    return {
+      key: 'disabled-in-demo-mode',
+      style: 'negative',
+      goto: false,
+    };
+  }
+
   if (isDisable({ user, account })) {
     return {
       key: user.status,

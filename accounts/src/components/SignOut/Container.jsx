@@ -46,10 +46,4 @@ class SignOutContainer extends React.Component {
   }
 }
 
-SignOutContainer.propTypes = {
-  router: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
-};
-
 export default SignOutContainer;
