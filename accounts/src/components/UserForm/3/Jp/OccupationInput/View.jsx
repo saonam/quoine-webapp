@@ -47,7 +47,7 @@ const JpOccupationInputView = ({ value, onChange, ...others }) => (
       </div>
     ) : null}
 
-    {value.industry === 'その他' ? (
+    {jobWithoutIndustry.indexOf(value.job) === -1 && value.industry === 'その他' ? (
       <div className={styles.input}>
         <TextInput
           value={value.detail}
