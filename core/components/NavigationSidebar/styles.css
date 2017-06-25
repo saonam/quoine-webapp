@@ -21,3 +21,8 @@
   composes: left-large from "@quoine/styles/padding.css";
   margin-left: calc(-$base / 2);
 }
+
+.sign-out {
+  composes: mainLink from "@quoine/components/NavigationLink/styles.css";
+  composes: negative from "@quoine/components/Link/styles.css";
+}

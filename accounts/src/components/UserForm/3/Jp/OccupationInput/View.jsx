@@ -47,7 +47,7 @@ const JpOccupationInputView = ({ value, onChange, ...others }) => (
       </div>
     ) : null}
 
-    {value.industry === 'その他' ? (
+    {jobWithoutIndustry.indexOf(value.job) === -1 && value.industry === 'その他' ? (
       <div className={styles.input}>
         <TextInput
           value={value.detail}
@@ -66,7 +66,7 @@ const JpOccupationInputView = ({ value, onChange, ...others }) => (
             onChange={onChange.name}
             placeholder="勤務先名"
             {...others}
-            pattern="[^\s]"
+            pattern=".*\S+.*"
             title="勤務先を必ずご記入ください。"
           />
         </div>

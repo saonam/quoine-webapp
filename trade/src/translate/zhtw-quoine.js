@@ -283,6 +283,8 @@ export default {
     "message-need-tfa": "從安全方面考慮，沒有二級驗證碼將不能進行取款操作",
     "help-need-tfa": "請到菜單 > 設置 > 安全中為賬戶開通二級認證。",
     // ===
+    "message-disabled-in-demo-mode": "在模擬模式下無法存取資金。",
+    // ===
     "goto-settings": "轉至設置",
   },
   // ===
@@ -397,6 +399,7 @@ export default {
     "user-not-enough-fund": "余額不足",
     "token-is-invalid": "此驗證碼無效",
     "verification-failed": "此授權碼無效",
+    "address-not-present": "此地址無效，請重新確認。",
   },
   // ===
   "futures-balance": {

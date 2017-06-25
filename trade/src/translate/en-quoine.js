@@ -283,6 +283,8 @@ export default {
     "message-need-tfa": "For security reasons, withdrawals are not allowed without 2-factor authentication.",
     "help-need-tfa": "Please enable 2-factor authentication for your account in Menu > Settings > Security.",
     // ===
+    "message-disabled-in-demo-mode": "Funds and withdrawals are disabled in Demo mode.",
+    // ===
     "goto-settings": "Go to Settings",
   },
   // ===
@@ -397,6 +399,7 @@ export default {
     "user-not-enough-fund": "Balance is not enough.",
     "token-is-invalid": "This token is invalid.",
     "verification-failed": "This authentication code is invalid.",
+    "address-not-present": "This address is invalid. Please check again.",
   },
   // ===
   "futures-balance": {

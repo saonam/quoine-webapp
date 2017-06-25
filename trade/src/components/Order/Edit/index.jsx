@@ -6,6 +6,7 @@ import Connector from './Connector';
 const OrderEdit = ({ order, Element, ...others }) => (
   order.status === 'live' &&
   order.quantityFilled === 0 &&
+  order.type !== 'trailing-stop' &&
   order.market !== 'futures' ? (
     <Connector order={order} Element={Element} {...others} />
   ) : (

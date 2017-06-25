@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import resources from './resources';
@@ -45,11 +44,5 @@ class SignOutContainer extends React.Component {
     );
   }
 }
-
-SignOutContainer.propTypes = {
-  router: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
-};
 
 export default SignOutContainer;

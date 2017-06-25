@@ -283,6 +283,8 @@ export default {
     "message-need-tfa": "安全性のため、2段階認証がないと出金が不可能になります。",
     "help-need-tfa": "「メインメニュー」＞「設定」＞「セキュリティ」で2段階認証を有効にしてください。",
     // ===
+    "message-disabled-in-demo-mode": "デモのモードでは入出金が不可能です。",
+    // ===
     "goto-settings": "「設定」に移動する",
   },
   // ===
@@ -397,6 +399,7 @@ export default {
     "user-not-enough-fund": "出金可能金額を確認してください",
     "token-is-invalid": "無効なトークンです",
     "verification-failed": "認証に失敗しました。",
+    "address-not-present": "無効なアドレスです。",
   },
   // ===
   "futures-balance": {

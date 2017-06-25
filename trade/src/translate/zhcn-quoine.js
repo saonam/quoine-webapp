@@ -283,6 +283,8 @@ export default {
     "message-need-tfa": "从安全方面考虑，没有二级验证码将不能进行取款操作",
     "help-need-tfa": "请到菜单 > 设置 > 安全中为账户开通二级认证。",
     // ===
+    "message-disabled-in-demo-mode": "在模拟模式下无法存取资金。",
+    // ===
     "goto-settings": "转至设置",
   },
   // ===
@@ -397,6 +399,7 @@ export default {
     "user-not-enough-fund": "余额不足",
     "token-is-invalid": "此验证码无效",
     "verification-failed": "此授权码无效",
+    "address-not-present": "此地址无效，请重新确认。",
   },
   // ===
   "futures-balance": {
