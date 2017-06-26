@@ -28,6 +28,10 @@ class SignOutContainer extends React.Component {
 
     resources.signOut(this.state.all)
     .then(() => {
+      if (this.state.all) {
+        // fire an event to signout of all sessions
+        window.localStorage.setItem('signoutAction', 'all');
+      }
       window.location.href = '/sign-in?message=signed-out';
     })
     .catch((error) => {

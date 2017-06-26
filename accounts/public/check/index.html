@@ -10,6 +10,7 @@
     // Note: don't redirect the host, only return values. Host should
     // decide what to do with the returned data then
     'use strict';
+    window.sourceEvent = null;
 
     function isValidOrigin(origin) {
       return origin === 'http://localhost:3000' ||
@@ -21,6 +22,7 @@
 
     function receiveMessage(event) {
       var origin = event.origin || event.originalEvent.origin;
+      window.sourceEvent = event;
 
       if (!isValidOrigin(origin)) {
         return;
@@ -35,7 +37,22 @@
       }, origin);
     }
 
+    function signoutAllSessions() {
+      var event = window.sourceEvent;
+      var origin = event.origin || event.originalEvent.origin;
+
+      window.sessionStorage.clear();
+      event.source.postMessage({}, origin);
+    }
+
     window.addEventListener('message', receiveMessage);
+    window.addEventListener('storage', function() {
+      var signoutAction = window.localStorage.getItem('signoutAction');
+
+      if (signoutAction === 'all') {
+        signoutAllSessions();
+      }
+    }, false);
   </script>
 </body>
 </html>

@@ -9,6 +9,7 @@ function setToken(action) {
 
   window.sessionStorage.setItem('tokenId', tokenId);
   window.sessionStorage.setItem('token', token);
+  window.localStorage.setItem('signoutAction', 'none');
   window.location.href = validateUrl(continueURL);
 }
 
