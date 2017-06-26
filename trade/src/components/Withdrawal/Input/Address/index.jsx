@@ -34,7 +34,9 @@ class WdrInputAddress extends React.Component {
     const { form, onChange } = this.props;
     return (
       <View
-        value={form.address} recents={this.state.recents}
+        account={form.account}
+        value={form.address}
+        recents={this.state.recents}
         onChange={onChange.address}
       />
     );

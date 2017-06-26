@@ -355,6 +355,7 @@ export default {
     "submit": "提交取款申请",
     // ===
     "not-support": "我们暂不支持此货币取款服务。如果您有任何问题请与我们联系",
+    "eth-description": "请在确保输入的不是合约地址（contract address）",
     // ===
     "id": "ID",
     "time": "创建于",

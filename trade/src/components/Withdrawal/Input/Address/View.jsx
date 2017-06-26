@@ -10,7 +10,7 @@ import RecentItem from './RecentItem';
 
 import styles from './styles.css';
 
-const WdrInputAddressView = ({ value, recents, onChange }) => (
+const WdrInputAddressView = ({ account, value, recents, onChange }) => (
   <div>
     <Field label={translate('withdrawal:address')}>
       <div className={styles.input}>
@@ -22,10 +22,16 @@ const WdrInputAddressView = ({ value, recents, onChange }) => (
         <RecentItem key={address} address={address} onClick={onChange} />
       ))}
     </div>
+    {account === 'ETH' ? (
+      <div className={styles.description}>
+        {translate('withdrawal:eth-description')}
+      </div>
+    ) : null}
   </div>
 );
 
 WdrInputAddressView.propTypes = {
+  account: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   recents: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChange: PropTypes.func.isRequired,

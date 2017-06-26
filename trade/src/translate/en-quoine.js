@@ -355,6 +355,7 @@ export default {
     "submit": "Submit Withdrawal",
     // ===
     "not-support": "We are not supporting withdrawals in this currency at the moment. Please contact us if you have any questions.",
+    "eth-description": "Please make sure this is not a Contract Address.",
     // ===
     "id": "ID",
     "time": "Created At",

@@ -2,3 +2,7 @@
 .recents {
   composes: mono from "@quoine/styles/text.css";
 }
+.description {
+  composes: small line-1-5 from "@quoine/styles/text.css";
+  composes: accent from "@quoine/styles/color.css";
+}
