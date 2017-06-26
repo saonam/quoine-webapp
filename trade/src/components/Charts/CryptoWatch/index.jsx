@@ -4,23 +4,7 @@ import Cryptowatch from 'cryptowatch-embed';
 
 import View from './View';
 import schemes from './schemes';
-
-const getChartName = (symbol) => {
-  switch (symbol) {
-    // Bitmex symbols
-    case 'XBJH17': return '';
-    // QUOINE symbols
-    // BTCUSD => btcusd
-    default: return symbol.toLowerCase();
-  }
-};
-const getLanguage = (language) => {
-  switch (language) {
-    case 'ja': return 'ja-JP';
-    case 'en':
-    default: return 'en';
-  }
-};
+import { getOrigin, getChartName, getLanguage } from './utils';
 
 class ChartsCryptoWatch extends React.PureComponent {
   constructor(props) {
@@ -34,8 +18,9 @@ class ChartsCryptoWatch extends React.PureComponent {
     const { id, product, market, theme, language } = this.props;
 
     // build
-    const origin = market === 'futures' ? 'bitmex' : 'quoine';
+    const origin = getOrigin(market);
     const name = getChartName(product.symbol);
+
     const options = {
       host: 'quoine.embed.cryptowat.ch',
       locale: getLanguage(language),

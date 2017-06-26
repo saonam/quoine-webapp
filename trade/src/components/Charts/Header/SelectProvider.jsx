@@ -8,18 +8,18 @@ import Select from '@quoine/components/SelectInput';
 
 const providers = ['crypto-watch', 'trading-view'];
 
-const ChartsHeader = ({ provider, onSelectMode }) => (
+const ChartsHeaderSelectProvider = ({ provider, onSelectProvider }) => (
   <Field label={translate('charts:provider')} layout="inline">
     <Select
-      value={provider} onChange={onSelectMode}
+      value={provider} onChange={onSelectProvider}
       options={providers.map(i => ({ label: translate(`charts:provider-${i}`), value: i }))}
     />
   </Field>
 );
 
-ChartsHeader.propTypes = {
+ChartsHeaderSelectProvider.propTypes = {
   provider: PropTypes.oneOf(['crypto-watch', 'trading-view']).isRequired,
-  onSelectMode: PropTypes.func.isRequired,
+  onSelectProvider: PropTypes.func.isRequired,
 };
 
-export default ChartsHeader;
+export default ChartsHeaderSelectProvider;

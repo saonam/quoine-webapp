@@ -1,32 +1,28 @@
-/* eslint-disable */
-// TODO
-// Should enable SELECT MODE when both of Charts are ready
 import React from 'react';
 
 import Header from '@quoine/components/Header';
 
 import ToggleDouble from './ToggleDouble';
-import SelectMode from './SelectMode';
+import SelectProvider from './SelectProvider';
 
 import styles from './styles.css';
 
-const ChartsHeader = ({ double, onToggleDouble, provider, onSelectMode }) => (
+const ChartsHeader = ({ double, onToggleDouble, provider, onSelectProvider }) => (
   <Header styleName="hor-small" className={styles.main}>
     <div className={styles.double}>
       <ToggleDouble {...{ double, onToggleDouble }} />
     </div>
+    {process.env.REACT_APP_VENDOR === 'qryptos' ? (
+      <div className={styles.provider}>
+        <SelectProvider {...{ provider, onSelectProvider }} />
+      </div>
+    ) : null}
   </Header>
 );
 
-// {process.env.REACT_APP_VENDOR === 'quoine' ? (
-//   <div className={styles.provider}>
-//     <SelectMode {...{ provider, onSelectMode }} />
-//   </div>
-// ) : null}
-
 ChartsHeader.propTypes = {
   ...ToggleDouble.propTypes,
-  ...SelectMode.propTypes,
+  ...SelectProvider.propTypes,
 };
 
 export default ChartsHeader;

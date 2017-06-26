@@ -6,7 +6,7 @@ import TYPES from './TYPES';
 
 const initialState = {
   double: false,
-  provider: process.env.REACT_APP_VENDOR === 'qryptos' ? 'trading-view' : 'crypto-watch',
+  provider: 'crypto-watch',
 };
 
 registerSyncShape('charts', ['double']);
