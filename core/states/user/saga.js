@@ -11,5 +11,10 @@ export default function* saga() {
   } catch (e) {
     // do nothing since user might failed in case of 401
     // (accounts page)
+
+    // system is under maintenance
+    if (e.status === 503) {
+      yield apply(TYPES, { networkStatus: 503 });
+    }
   }
 }

@@ -41,7 +41,19 @@ const main = (method, path, rawOptions) => {
     response.ok ? response : Promise.reject(response)
   ))
   .then(handleResponse)
-  .catch(error => handleError(error, errorPrefix));
+  .catch(error => {
+    // service unavailable, redirect to maintenance page
+    // it's difficult to check at this case, so I have to the way below
+    // https://github.com/github/fetch/issues/426
+    if (error.status === undefined && error.headers === undefined) {
+      const systemError = {
+        status: 503,
+        statusText: 'system under maintenance',
+      };
+      return handleError(systemError, 'system');
+    }
+    return handleError(error, errorPrefix);
+  });
 
   // check cache
   if (useCache) {
