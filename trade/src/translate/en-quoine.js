@@ -337,7 +337,7 @@ export default {
   "fund-crypto": {
     "help": "Please deposit to the address below:",
     "help-XMR": "Please deposit to the address below and remember to include the Payment ID in your deposit. Failure to do so may result in the loss of your deposit.",
-    "help-XRP": "Ripple Base Reserve is a minimum amount of XRP that is required for every address in the ledger. Currently this is 20 XRP, which will be held as reserve the first time you deposit. From the second deposit onwards you will be able to receive your full deposit.",
+    "help-XRP": "Ripple Base Reserve is a minimum amount of XRP that is required for every address in the ledger. Currently this is 20 XRP, which will be held as reserve the first time you deposit. Once the minimum amount is filled you will begin to receive the total amount transferred.",
     // ===
     "address": "Address",
     "payment-id": "Payment ID",

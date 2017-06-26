@@ -337,7 +337,7 @@ export default {
   "fund-crypto": {
     "help": "请将款项存入如下地址",
     "help-XMR": "请将款项汇入下方提示的地址，并且保留支付单号，以便查询相关的汇款信息。",
-    "help-XRP": "Ripple Base Reserve机制，即基本保证金制度，是指交易总账中的每个地址会要求存入一个指定数量的XRP作为基本保证金，目前被要求的基本保证金额度是20 XRP，在用户第一次汇入款项时自动留存。此后的交易中将不再产生。",
+    "help-XRP": "Ripple Base Reserve机制，即基本留存制度，是指Ripple交易账户中会被要求存留指定数量的XRP作为基本保证，现在的存留额度是20 XRP。",
     // ===
     "address": "地址",
     "payment-id": "支付单号",

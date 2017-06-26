@@ -337,7 +337,7 @@ export default {
   "fund-crypto": {
     "help": "請將款項存入如下地址",
     "help-XMR": "請將款項匯入下方提示的地址，並且保留支付單號，以便查詢相關的匯款信息。",
-    "help-XRP": "Ripple Base Reserve機制，即基本保證金制度，是指交易總賬中的每個地址會要求存入一個指定數量的XRP作為基本保證金，目前被要求的基本保證金額度是20 XRP，在用戶第一次匯入款項時自動留存。此後的交易中將不再產生。",
+    "help-XRP": "Ripple Base Reserve機制，即基本留存制度，是指Ripple交易賬戶中會被要求存留指定數量的XRP作為基本保證，現在的存留額度是20 XRP。",
     // ===
     "address": "地址",
     "payment-id": "支付單號",
