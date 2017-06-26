@@ -10,6 +10,11 @@ export const subscribe = ({ symbol, id }, onUpdate) => (
   quoine.subscribe(
     `product_cash_${symbol.toLowerCase()}_${id}`,
     'updated',
-    raw => onUpdate(normalize.one(raw)),
+    raw => {
+      const data = normalize.one(raw);
+      delete data.feeTaker;
+      delete data.feeMaker;
+      onUpdate(data);
+    },
   )
 );
