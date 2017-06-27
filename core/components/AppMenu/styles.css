@@ -1,4 +1,5 @@
 .main {
+  composes: height-full from "@quoine/styles/size.css";
   composes: flex wrap from "@quoine/styles/flex.css";
   composes: x-small from "@quoine/styles/padding.css";
   composes: primary-0 from "@quoine/styles/bg-color.css";
