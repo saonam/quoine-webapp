@@ -1,0 +1,49 @@
+html {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Open Sans",
+    "Segoe UI", "Helvetica Neue",
+    sans-serif;
+}
+body {
+  background: hsla(202, 46%, 93%, 1);
+}
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  padding: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 50%, 0.4);
+}
+::-webkit-scrollbar-corner {
+  background: hsla(0, 0%, 50%, 0.4);
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+.header {
+  height: 42px;
+  line-height: 42px;
+  font-weight: 700;
+  background: hsl(202, 85%, 57%);
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+.body {
+  background: white;
+  color: hsl(0, 0%, 20%);
+  padding: 42px 56px;
+}
+a {
+  color: hsl(202, 85%, 57%);
+  font-weight: 600;
+  text-decoration: none;
+}
