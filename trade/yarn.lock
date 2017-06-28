@@ -1475,9 +1475,9 @@ crypto-browserify@3.3.0:
     ripemd160 "0.2.0"
     sha.js "2.2.6"
 
-cryptowatch-embed@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/cryptowatch-embed/-/cryptowatch-embed-0.3.1.tgz#ba1b7f73958c1deca642dfe8aaa26fb22a869871"
+cryptowatch-embed@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/cryptowatch-embed/-/cryptowatch-embed-0.3.2.tgz#224f8c32e88d7412f4b4afd569b0e3c6ac942898"
   dependencies:
     urijs "^1.17.0"
 
