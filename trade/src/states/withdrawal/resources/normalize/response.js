@@ -14,6 +14,9 @@ const response = (raw) => ({
   createdAt: raw.created_at,
   bankAccount: bankAccount(raw),
   address: raw.address,
+  paymentId: raw.currency === 'XMR' ? raw.payment_id : '',
+  message: raw.currency === 'XEM' ? raw.payment_id : '',
+  destinationTag: raw.currency === 'XRP' ? raw.payment_id : '',
 });
 
 export default response;

@@ -7,6 +7,6 @@
 .none {
   composes: none from "@quoine/styles/display.css";
 }
-.address {
+.code {
   composes: break-all from "@quoine/styles/text.css";
 }
