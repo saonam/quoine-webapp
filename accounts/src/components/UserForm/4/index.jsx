@@ -4,10 +4,16 @@ import React from 'react';
 import Pte from './Pte';
 import Jp from './Jp';
 
-const UserForm4 = ({ form, ...others }) => {
-  const Detail = form.underJFSA ? Jp : Pte;
-  return <Detail form={form} {...others} />;
-};
+const UserForm4 = ({ form, ...others }) => (
+  <div>
+    <div style={form.underJFSA ? {} : { display: 'none' }}>
+      <Jp form={form} {...others} />
+    </div>
+    <div style={!form.underJFSA ? {} : { display: 'none' }}>
+      <Pte form={form} {...others} />
+    </div>
+  </div>
+);
 
 UserForm4.propTypes = {
   form: PropTypes.shape({
