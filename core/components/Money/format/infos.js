@@ -140,6 +140,11 @@ export default {
     symbol: 'ɱ',
     split: true,
   },
+  XEM: {
+    format: crypto,
+    symbol: 'ν',
+    split: true,
+  },
   FCT: {
     format: crypto,
     symbol: 'φ',
