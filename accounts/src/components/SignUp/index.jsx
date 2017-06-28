@@ -67,7 +67,7 @@ class SignUp extends React.Component {
     return Promise.resolve();
   }
   onBack() {
-    this.setState({ step: this.state.step - 1, captcha: '' });
+    this.setState({ step: this.state.step - 1 });
   }
   render() {
     return (
