@@ -5,7 +5,9 @@ import translate from '@quoine/translate';
 
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
 import Bank from 'components/WdrBank';
-import { Quantity, Address, Code, INRTransfer } from 'components/Withdrawal/Input';
+import {
+  Quantity, Address, Code, INRTransfer, PaymentId, Message, DestinationTag,
+} from 'components/Withdrawal/Input';
 import Button from '@quoine/components/Button';
 
 import styles from './styles.css';
@@ -20,6 +22,24 @@ const WdrFormView = ({ form, onChange, busy, onSubmit, error, showMessage, onDis
         <Address form={form} onChange={onChange} />
       )}
     </div>
+
+    {form.account === 'XMR' ? (
+      <div className={styles.item}>
+        <PaymentId form={form} onChange={onChange} />
+      </div>
+    ) : null}
+
+    {form.account === 'XEM' ? (
+      <div className={styles.item}>
+        <Message form={form} onChange={onChange} />
+      </div>
+    ) : null}
+
+    {form.account === 'XRP' ? (
+      <div className={styles.item}>
+        <DestinationTag form={form} onChange={onChange} />
+      </div>
+    ) : null}
 
     <div className={styles.item}>
       <Quantity form={form} onChange={onChange} />

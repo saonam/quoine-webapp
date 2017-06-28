@@ -8,8 +8,10 @@ class WdrForm extends React.Component {
     super(props);
     this.state = {
       address: '',
-      // INR only
-      INRTransfer: '',
+      destinationTag: '', // XRP only
+      paymentId: '', // XMR only
+      message: '', // XEM only
+      INRTransfer: '', // INR only
       quantity: '100',
       code: '',
     };
