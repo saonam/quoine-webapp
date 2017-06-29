@@ -48,7 +48,7 @@ const main = (method, path, rawOptions) => {
     if (error.status === undefined && error.headers === undefined) {
       const systemError = {
         status: 503,
-        statusText: 'system under maintenance',
+        statusText: 'network',
       };
       return handleError(systemError, 'system');
     }
