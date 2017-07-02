@@ -165,6 +165,7 @@ export default {
     "help-pending": "您的賬戶尚未得到核準。請上傳以下文件供賬戶核準使用：",
     "help-pending-jp": "您的賬戶尚未得到核準。請上傳以下文件供賬戶核準使用：",
     "help-pending-jp-link": "文件說明",
+    "help-banned": "請您盡快聯繫我們 support@quoine.com",
     "help-edit-info": "如果更改用戶信息請聯系我們（support@quoine.com）",
     // ===
     "document-id": "身份文件",

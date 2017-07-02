@@ -165,6 +165,7 @@ export default {
     "help-pending": "Your account is not verified yet. Please upload the following documents for account verification:",
     "help-pending-jp": "Your account is not verified yet. Please upload the following documents for account verification:",
     "help-pending-jp-link": "Documents Explanation",
+    "help-banned": "Please contact support@quoine.com to re-open your account.",
     "help-edit-info": "Please contact us at support@quoine.com if you would like to change any of your client information.",
     // ===
     "document-id": "ID Document",
