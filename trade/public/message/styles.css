@@ -27,6 +27,7 @@ body {
 .container {
   width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
 .header {
   height: 42px;
@@ -35,7 +36,6 @@ body {
   background: hsl(202, 85%, 57%);
   color: white;
   text-transform: uppercase;
-  text-align: center;
 }
 .body {
   background: white;

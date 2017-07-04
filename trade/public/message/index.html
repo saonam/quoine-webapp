@@ -7,10 +7,20 @@
       var origin = window.location.origin;
       var vendor = (function getVendor() {
         switch (origin) {
-          case "https://trade.quoinex.com": return "quoine";
-          case "https://trade.qryptos.com": return "qryptos";
-          case "https://bttrader.min-btc.com": return "traders";
-          default: return "quoine";
+
+          case "https://bttrader.min-btc.com":
+          case "https://traders-wa-sandbox.quoine.com":
+            return "traders";
+
+          case "https://trade.qryptos.com":
+          case "https://trade-sandbox.qryptos.com":
+            return "qryptos";
+
+          case "https://trade.quoinex.com":
+          case "https://trade-sandbox.quoine.com":
+          case "https://trade-stag.quoine.com":
+          default:
+            return "quoine";
         }
       })();
       
@@ -32,6 +42,7 @@
       <main class="body" id="body">
       </main>
     </div>
+    <script type="text/javascript" src="polyfills.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
   </body>
 </html>
