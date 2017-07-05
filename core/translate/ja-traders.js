@@ -118,7 +118,7 @@ export default {
   },
   "file": {
     "choose": "ファイルを選択",
-    "none": "ファイルが選択されていません",
+    "change": "ファイルを選択",
   },
   "blotter": {
     "load": "読み込み",

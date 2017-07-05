@@ -8,14 +8,12 @@ import styles from './styles.css';
 const FileInputView = ({ id, value, onChange, border }) => (
   <div className={border ? styles.border : ''}>
     <input id={id} hidden type="file" onChange={onChange} />
-    <label htmlFor={id}>
-      <span className={styles.button}>
-        {translate('file:choose')}
-      </span>
-      <span className={styles.name}>
-        {value ? value.name : translate('file:none')}
-      </span>
+    <label htmlFor={id} className={styles.button}>
+      {translate(`file:${value ? 'change' : 'choose'}`)}
     </label>
+    <span className={styles.name}>
+      {value ? value.name : ''}
+    </span>
   </div>
 );
 

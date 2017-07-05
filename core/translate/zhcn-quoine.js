@@ -119,7 +119,7 @@ export default {
   },
   "file": {
     "choose": "选择文件",
-    "none": "未选择文件",
+    "change": "上传文件",
   },
   "blotter": {
     "load": "加载更多",

@@ -119,7 +119,7 @@ export default {
   },
   "file": {
     "choose": "Choose File",
-    "none": "No File Choosen",
+    "change": "Change File",
   },
   "blotter": {
     "load": "Load more",
