@@ -1,8 +1,18 @@
+// if stop order => reverse side before calculating
+const getSide = (form) => {
+  if (form.type !== 'stop') { return form.side; }
+  return form.side === 'buy' ? 'sell' : 'buy';
+};
+
 const sellCompare = (price, offerPrice) => (price <= offerPrice);
 
 const buyCompare = (price, offerPrice) => (price >= offerPrice);
 
-const getCostByOrderBook = ({ form, orderBook }) => {
+const getCostByOrderBook = ({ form: orgForm, orderBook }) => {
+  // create form for calculation
+  const form = { ...orgForm };
+  form.side = getSide(form);
+
   // ready ===
   const isBuy = form.side === 'buy';
 
