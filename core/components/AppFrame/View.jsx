@@ -11,9 +11,9 @@ import styles from './styles.css';
 
 const AppFrame = ({ busy, theme, user, menu, body }) => {
   let maintenance = false;
-  if (user && user.networkStatus && user.networkStatus === 503) {
-    maintenance = true;
-  }
+  // if (user && user.networkStatus && user.networkStatus === 503) {
+  //   maintenance = true;
+  // }
 
   return (
     <div className={`${styles.wrapper} ${theme}`}>
