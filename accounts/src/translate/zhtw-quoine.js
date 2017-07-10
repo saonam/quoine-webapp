@@ -284,6 +284,7 @@ export default {
   },
   "ip-error": {
     "verification-failed": "驗證碼無效",
+    "token-is-invalid": "驗證碼無效",
     "ip-has-been-existed": "此IP地址已被註冊",
     "ip-existing-ip": "此IP地址已被註冊",
     "ip-wrong-format": "此IP地址無效",

@@ -282,6 +282,7 @@ export default {
   },
   "ip-error": {
     "verification-failed": "無効な認証コードです。",
+    "token-is-invalid": "無効な認証コードです。",
     "ip-has-been-existed": "このIPアドレスはすでに登録済みです。",
     "ip-existing-ip": "このIPアドレスはすでに登録済みです。",
     "ip-wrong-format": "無効なIPアドレスです。",

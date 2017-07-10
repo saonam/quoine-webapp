@@ -284,6 +284,7 @@ export default {
   },
   "ip-error": {
     "verification-failed": "Authentication code invalid.",
+    "token-is-invalid": "Authentication code invalid.",
     "ip-has-been-existed": "This IP address has been registered previously.",
     "ip-existing-ip": "This IP address has been registered previously.",
     "ip-wrong-format": "This IP address is invalid.",
