@@ -35,13 +35,18 @@ class SignInContainer extends React.Component {
     this.onRender();
   }
   onRender() {
+    const { mode } = this.props.location.query;
+    const sitekey = mode === 'test' ? (
+      '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+    ) : process.env.REACT_APP_CAPTCHA_KEY;
+
     try {
       window.grecaptcha.getResponse(signInCaptchaWidget);
     } catch (error) {
       signInCaptchaWidget = window.grecaptcha.render(
         this.widget,
         {
-          sitekey: process.env.REACT_APP_CAPTCHA_KEY,
+          sitekey,
           callback: this.onCallback,
           'expired-callback': this.onReset,
         },
@@ -100,6 +105,7 @@ SignInContainer.propTypes = {
     query: PropTypes.shape({
       continue: PropTypes.string,
       message: PropTypes.string,
+      mode: PropTypes.string,
     }).isRequired,
   }).isRequired,
 };
