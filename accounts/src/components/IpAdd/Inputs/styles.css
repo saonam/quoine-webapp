@@ -1,0 +1,21 @@
+@import "@quoine/core/styles/_size.css";
+
+.row {
+  composes: flex ai-center from "@quoine/styles/flex.css";
+  composes: top-small  from "@quoine/styles/margin.css";
+}
+.label {
+  width: calc($base * 14);
+}
+.input {
+  width: calc($base * 14);
+}
+.button {
+  composes: left-medium  from "@quoine/styles/margin.css";
+}
+
+/* ugly fix IE */
+/* TODO */
+.input input {
+  height: calc($base * 3);
+}

@@ -155,6 +155,7 @@ export default {
     "task-wdr-bank-remove-report": "After Delete Bank Account",
     "task-withdrawal-cancel-confirm": "Before Cancel Withdrawal",
     "task-withdrawal-cancel-report": "After Cancel Withdrawal",
+    "task-ips-remove-confirm": "Before Delete IP Address",
   },
   "form": {
     "cancel": "Cancel",

@@ -1,0 +1,3 @@
+.container {
+  composes: top-small from "@quoine/styles/margin.css";
+}

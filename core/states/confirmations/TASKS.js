@@ -12,6 +12,8 @@ const TASKS = {
   // ===
   TOKEN_REMOVE: 'tokens-remove',
   // ===
+  IP_REMOVE: 'ips-remove',
+  // ===
   WDR_BANK_REMOVE: 'wdr-bank-remove',
   // ===
   WITHDRAWAL_CANCEL: 'withdrawal-cancel',

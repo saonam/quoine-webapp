@@ -144,6 +144,8 @@ export default {
     "tfa-title": "二段階認証",
     // ===
     "api-title": "API",
+    // ===
+    "ip-title": "IP",
   },
   "daily-report": {
     "title": "取引レポート",
@@ -256,5 +258,33 @@ export default {
     "name-orders": "注文",
     "name-trades": "ポジション",
     "name-trading-accounts": "取引口座",
+  },
+  "ip": {
+    "add-title": "新しいIPを追加",
+    "add-main-description1": "ホワイトリストが空のデフォルト状態の場合は、IPでの制限はありません。",
+    "add-main-description2": "新しくIPをホワイトリストに追加すると、そのIPからのリクエストだけが許可されます。 これはすべての既存のAPIキーに適用されるので、何かを追加するときにはすべてのサーバーIPをホワイトリストに含めるようにしてください。",
+    "add-description": "登録のIPアドレスと認証コードを以下に入力ください。",
+    "add-action-submit": "追加",
+    "add-action-cancel": "キャンセル",
+    // ===
+    "input-ip": "IPアドレス:",
+    "input-code": "認証コード:",
+    "id": "ID",
+    "ip": "IP",
+    "status": "ステータス",
+    "remove-button": "IPを削除",
+    "dismiss-button": "閉じる",
+    "remove-action-yes": "削除",
+    "status-awaiting-confirmation": "未確認",
+    "status-confirmed": "確認済",
+    "remove-description": "このIPアドレス情報を削除してもよろしいですか？すべてのアプリおよびデバイスが、直ちにこのIPからアクセスできなくなります。",
+    "checkmail-notification": "IPアドレスの確認のため、メールをご確認ください。",
+  },
+  "ip-error": {
+    "verification-failed": "無効な認証コードです。",
+    "ip-has-been-existed": "このIPアドレスはすでに登録済みです。",
+    "ip-existing-ip": "このIPアドレスはすでに登録済みです。",
+    "ip-wrong-format": "無効なIPアドレスです。",
+    "cannot-remove-all-ips": "最新のIPアドレスは削除できません。",
   },
 };

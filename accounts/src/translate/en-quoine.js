@@ -144,6 +144,8 @@ export default {
     "tfa-title": "Two Factor Authentication",
     // ===
     "api-title": "API",
+    // ===
+    "ip-title": "IP",
   },
   "daily-report": {
     "title": "Report",
@@ -258,5 +260,33 @@ export default {
     "name-orders": "Orders",
     "name-trades": "Positions",
     "name-trading-accounts": "Trading Accounts",
+  },
+  "ip": {
+    "add-title": "Add new IP",
+    "add-main-description1": "By default we do not block any IPs when the whitelist is empty.",
+    "add-main-description2": "When you start adding new IPs to the whitelist, only requests from those IPs are allowed to go through. This applies to all your existing API Keys so make sure you include all your server IPs in the whitelist when you add anything there.",
+    "add-description": "Please enter your IP address and authentication code below:",
+    "add-action-submit": "Add",
+    "add-action-cancel": "Cancel",
+    // ===
+    "input-ip": "IP Address",
+    "input-code": "Authentication Code",
+    "id": "ID",
+    "ip": "IP",
+    "status": "Status",
+    "remove-button": "Delete Ip",
+    "dismiss-button": "Dismiss",
+    "remove-action-yes": "Delete",
+    "status-awaiting-confirmation": "Unconfirmed",
+    "status-confirmed": "Confirmed",
+    "remove-description": "Are you sure you want to remove this IP address? All apps and devices using this IP address will be unauthorized immediately.",
+    "checkmail-notification": "Please check your email to confirm this IP address.",
+  },
+  "ip-error": {
+    "verification-failed": "Authentication code invalid.",
+    "ip-has-been-existed": "This IP address has been registered previously.",
+    "ip-existing-ip": "This IP address has been registered previously.",
+    "ip-wrong-format": "This IP address is invalid.",
+    "cannot-remove-all-ips": "Most recent IP address cannot be removed.",
   },
 };

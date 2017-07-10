@@ -1,0 +1,14 @@
+.list {
+  composes: top color-primary-1 size-2 from "@quoine/styles/border.css";
+}
+.loading {
+  composes: ver-medium hor-large from "@quoine/styles/padding.css";
+}
+.item {
+  composes: ver-medium hor-large from "@quoine/styles/padding.css";
+  composes: top color-primary-1 size-2 from "@quoine/styles/border.css";
+  composes: enter-accent from "@quoine/styles/transition.css";
+}
+.item:first-child {
+  border: none;
+}

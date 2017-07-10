@@ -144,6 +144,8 @@ export default {
     "tfa-title": "雙重驗證",
     // ===
     "api-title": "API接口",
+    // ===
+    "ip-title": "白名單",
   },
   "daily-report": {
     "title": "日報",
@@ -258,5 +260,33 @@ export default {
     "name-orders": "訂單",
     "name-trades": "倉位",
     "name-trading-accounts": "交易賬戶",
+  },
+  "ip": {
+    "add-title": "添加新IP地址",
+    "add-main-description1": "當白名單為空時，默認通過所有IP地址。",
+    "add-main-description2": "如若添加IP地址到白名單，系統將默認只允許白名單內的IP地址訪問，一切不包括在白名單內的IP地址將被阻止，請慎重使用。",
+    "add-description": "請輸入您的IP地址和驗證碼",
+    "add-action-submit": "添加",
+    "add-action-cancel": "取消",
+    // ===
+    "input-ip": "IP地址",
+    "input-code": "驗證碼",
+    "id": "ID",
+    "ip": "IP",
+    "status": "狀態",
+    "remove-button": "刪除",
+    "dismiss-button": "撤銷",
+    "remove-action-yes": "刪除",
+    "status-awaiting-confirmation": "未確認",
+    "status-confirmed": "已確認",
+    "remove-description": "您確認要移除這個IP地址嗎？使用此IP地址的應用和設備將立即被阻止訪問。",
+    "checkmail-notification": "請查收確認郵件",
+  },
+  "ip-error": {
+    "verification-failed": "驗證碼無效",
+    "ip-has-been-existed": "此IP地址已被註冊",
+    "ip-existing-ip": "此IP地址已被註冊",
+    "ip-wrong-format": "此IP地址無效",
+    "cannot-remove-all-ips": "最新登陸的IP地址無法被移除",
   },
 };

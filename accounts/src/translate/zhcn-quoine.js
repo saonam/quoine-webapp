@@ -144,6 +144,8 @@ export default {
     "tfa-title": "双重验证",
     // ===
     "api-title": "API接口",
+    // ===
+    "ip-title": "白名单",
   },
   "daily-report": {
     "title": "日报",
@@ -258,5 +260,33 @@ export default {
     "name-orders": "订单",
     "name-trades": "仓位",
     "name-trading-accounts": "交易账户",
+  },
+  "ip": {
+    "add-title": "添加新IP地址",
+    "add-main-description1": "当白名单为空时，默认允许所有IP地址访问。",
+    "add-main-description2": "如若添加IP地址到白名单，系统将默认只允许白名单内的IP地址访问，一切不包括在白名单内的IP地址将被阻止访问，请慎重使用。",
+    "add-description": "请输入您的IP地址和验证码",
+    "add-action-submit": "添加",
+    "add-action-cancel": "取消",
+    // ===
+    "input-ip": "IP地址",
+    "input-code": "验证码",
+    "id": "ID",
+    "ip": "IP",
+    "status": "状态",
+    "remove-button": "删除",
+    "dismiss-button": "撤销",
+    "remove-action-yes": "删除",
+    "status-awaiting-confirmation": "未确认",
+    "status-confirmed": "已确认",
+    "remove-description": "您确认要移除这个IP地址吗？使用此IP地址的应用和设备将立即被阻止访问。",
+    "checkmail-notification": "请查收确认邮件",
+  },
+  "ip-error": {
+    "verification-failed": "验证码无效",
+    "ip-has-been-existed": "此IP地址已被注册",
+    "ip-existing-ip": "此IP地址已被注册",
+    "ip-wrong-format": "此IP地址无效",
+    "cannot-remove-all-ips": "最新登陆的IP地址无法被移除",
   },
 };

@@ -9,6 +9,9 @@ const menu = ['application', 'profile', 'security'];
 if (process.env.REACT_APP_VENDOR === 'quoine' || process.env.REACT_APP_VENDOR === 'qryptos') {
   menu.push('api');
 }
+if (process.env.REACT_APP_VENDOR === 'quoine') {
+  menu.push('ip');
+}
 
 const SettingsMenu = () => (
   <ul className={styles.main}>
