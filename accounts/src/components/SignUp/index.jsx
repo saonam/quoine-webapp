@@ -65,7 +65,9 @@ class SignUp extends React.Component {
       .then(user => {
         this.setState({ step: 5 });
         // handle onSuccess for marketing purpose
-        onSuccess(user.id);
+        if (user.id) {
+          onSuccess(user.id);
+        }
       })
       .catch(error => {
         this.onReset();
