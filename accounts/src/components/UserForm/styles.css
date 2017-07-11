@@ -53,7 +53,3 @@
 .description {
   composes: x-large from "@quoine/styles/text.css";
 }
-
-.hide {
-  composes: none from "@quoine/styles/display.css";
-}

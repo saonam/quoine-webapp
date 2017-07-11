@@ -8,12 +8,14 @@ import View from './View';
 
 import resources from './resources';
 
+import onSuccess from './onSuccess';
+
 let signUpCaptchaWidget;
 
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { step: 1, userId: 0, captcha: '' };
+    this.state = { step: 1, captcha: '' };
     this.onBack = this.onBack.bind(this);
     this.onNext = this.onNext.bind(this);
     // ===
@@ -61,7 +63,9 @@ class SignUp extends React.Component {
     if (step === 4) {
       return resources.signUp({ form, captcha })
       .then(user => {
-        this.setState({ step: 5, userId: user.id });
+        this.setState({ step: 5 });
+        // handle onSuccess for marketing purpose
+        onSuccess(user.id);
       })
       .catch(error => {
         this.onReset();
