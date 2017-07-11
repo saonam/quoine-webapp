@@ -43,7 +43,7 @@ const onSuccess = (userId) => {
 
     // tag for JAnat
     const JAnat = new Image(1, 1);
-    JAnat.src = `https://action.j-a-net.jp/${userId}/405926`;
+    JAnat.src = `https://action.j-a-net.jp///${userId}/405926`;
     JAnat.style.display = 'none';
     document.body.appendChild(JAnat);
 
