@@ -18,7 +18,7 @@ const HintModal = ({ open, onOpen, onClose, label, children, style, modalContent
   <span>
     <span className={styles.main} >
       <span className={styles.hint} style={style}>{children}</span>
-      <button className={styles.label} onClick={onOpen} role="button">
+      <button className={styles.label} onClick={onOpen} type="button" role="button">
         {label || <span className={styles.default}>(?)</span>}
       </button>
     </span>
