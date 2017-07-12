@@ -10,7 +10,7 @@ const SignInSubmitButton = ({ busy, disabled }) => (
     type="submit"
     busy={busy}
     disabled={disabled}
-    styleName={`modal accent ${disabled ? 'disabled' : ''}`}
+    styleName="modal accent disabled-primary-2"
   >
     {translate('sign-in:action')}
   </ButtonWLoading>

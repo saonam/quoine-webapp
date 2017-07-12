@@ -55,7 +55,7 @@ const UserForm4Jp = ({
           busy={busy}
           type="submit"
           disabled={disableSubmit}
-          styleName={`modal accent ${disableSubmit ? 'disabled' : ''}`}
+          styleName="modal accent disabled-primary-2"
         >
           {translate(`${edit ? 'edit-user:action-submit' : 'sign-up:action-next'}`)}
         </Button>
