@@ -1,9 +1,9 @@
 {
   "name": "@quoine/trade",
-  "version": "3.15.0-alpha.3",
+  "version": "3.15.0-alpha.4",
   "license": "MIT",
   "dependencies": {
-    "@quoine/core": "3.15.0-alpha.3",
+    "@quoine/core": "3.15.0-alpha.4",
     "@quoine/react-scripts": "5.9.11",
     "cryptowatch-embed": "^0.3.2",
     "idx": "^1.5.0",
