@@ -53,6 +53,7 @@ const full = (new Intl.NumberFormat('en', {
 })).format;
 
 export default {
+  // === fiat
   AUD: {
     format: fiat,
     symbol: '$',
@@ -103,20 +104,10 @@ export default {
     symbol: '₱',
     split: false,
   },
-  // ===
+  // === crypto
   BTC: {
     format: crypto,
     symbol: '฿',
-    split: true,
-  },
-  XBT: {
-    format: crypto,
-    symbol: '฿',
-    split: true,
-  },
-  ETH: {
-    format: crypto,
-    symbol: 'Ξ',
     split: true,
   },
   ETC: {
@@ -124,13 +115,27 @@ export default {
     symbol: 'Ξ',
     split: true,
   },
-  // ===
+  ETH: {
+    format: crypto,
+    symbol: 'Ξ',
+    split: true,
+  },
   LTC: {
     format: crypto,
     symbol: 'Ł',
     split: true,
   },
-  XRP: {
+  XBT: {
+    format: crypto,
+    symbol: '฿',
+    split: true,
+  },
+  XEM: {
+    format: crypto,
+    symbol: 'ν',
+    split: true,
+  },
+  XLM: {
     format: crypto,
     symbol: 'ρ',
     split: true,
@@ -140,9 +145,9 @@ export default {
     symbol: 'ɱ',
     split: true,
   },
-  XEM: {
+  XRP: {
     format: crypto,
-    symbol: 'ν',
+    symbol: 'ρ',
     split: true,
   },
   FCT: {
@@ -160,13 +165,13 @@ export default {
     symbol: 'ζ',
     split: true,
   },
-  // ===
+  // === contract
   XBJ: {
     format: contract,
     symbol: '',
     split: false,
   },
-  // ===
+  // === percent
   percent: {
     format: percent,
     symbol: '',
@@ -177,13 +182,13 @@ export default {
     symbol: '',
     split: false,
   },
-  // ===
+  // === rate
   fxRate: {
     format: fxRate,
     symbol: '',
     split: false,
   },
-  // ===
+  // === default
   full: {
     format: full,
     symbol: '',
