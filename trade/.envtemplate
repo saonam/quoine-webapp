@@ -35,3 +35,5 @@ REACT_APP_VENDOR           = quoine
 REACT_APP_VENDOR_ID        = 3
 REACT_APP_VENDOR_NAME      = QUOINE
 REACT_APP_VENDOR_ZENDESK   = quoine
+
+
