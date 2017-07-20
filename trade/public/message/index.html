@@ -9,16 +9,15 @@
         switch (origin) {
 
           case "https://bttrader.min-btc.com":
-          case "https://traders-wa-sandbox.quoine.com":
+          case "https://traders-trade-stag.quoine.io":
+          case "https://traders-trade-stag2.quoine.io":
             return "traders";
 
           case "https://trade.qryptos.com":
           case "https://trade-sandbox.qryptos.com":
+          case "https://qryptos-trade-stag.quoine.io":
             return "qryptos";
 
-          case "https://trade.quoinex.com":
-          case "https://trade-sandbox.quoine.com":
-          case "https://trade-stag.quoine.com":
           default:
             return "quoine";
         }
