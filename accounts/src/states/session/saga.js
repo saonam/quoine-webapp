@@ -2,15 +2,12 @@ import { takeLatest } from 'redux-saga/effects';
 
 import TYPES from './TYPES';
 
-import validateUrl from './validateUrl';
-
 function setToken(action) {
-  const { token, tokenId, continueURL } = action.payload;
+  const { token, tokenId } = action.payload;
 
   window.sessionStorage.setItem('tokenId', tokenId);
   window.sessionStorage.setItem('token', token);
   window.localStorage.setItem('signoutAction', 'none');
-  window.location.href = validateUrl(continueURL);
 }
 
 function* watchSetToken() {

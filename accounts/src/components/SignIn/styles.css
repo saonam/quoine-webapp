@@ -10,3 +10,15 @@
 .submit {
   composes: top-large from "@quoine/styles/margin.css";
 }
+
+/* === */
+
+.message {
+  composes: hor-xx-large ver-x-large from "@quoine/styles/padding.css";
+  composes: large from "@quoine/styles/text.css";
+}
+.link {
+  composes: block from "@quoine/styles/display.css";
+  composes: center from "@quoine/styles/text.css";
+  composes: modal accent from "@quoine/core/components/Button/styles.css";
+}

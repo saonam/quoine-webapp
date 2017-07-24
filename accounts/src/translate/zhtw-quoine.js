@@ -13,6 +13,10 @@ export default {
     "back": "返回",
     "new-text": "沒有賬戶",
     "new-or": "或者",
+    // ===
+    "change-password-title": "請更換您的密碼",
+    "change-password-message": "暫時性密碼只限於您登陸賬戶，請在登錄後及時更改密碼",
+    "change-password-button": "更改密碼",
     // message
     "message-account-confirmed": "賬戶已確認，您現在可以登錄",
     "message-password-updated": "密碼已更新，請使用新密碼登錄",

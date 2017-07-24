@@ -13,6 +13,10 @@ export default {
     "back": "返回",
     "new-text": "没有账户",
     "new-or": "或者",
+    // ===
+    "change-password-title": "请更换您的密码",
+    "change-password-message": "暂时性密码只限于您登陆账户，请在登录后及时更改密码",
+    "change-password-button": "更改密码",
     // message
     "message-account-confirmed": "账户已确认，您现在可以登录",
     "message-password-updated": "密码已更新，请使用新密码登录",

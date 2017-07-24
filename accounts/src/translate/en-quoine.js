@@ -13,6 +13,10 @@ export default {
     "back": "Back",
     "new-text": "Don't have an account?",
     "new-or": "or",
+    // ===
+    "change-password-title": "Password Update Required",
+    "change-password-message": "You just used a temporary password to sign in. Please update the password to continue.",
+    "change-password-button": "Update Password",
     // message
     "message-account-confirmed": "Your account has been confirmed. You can now sign in.",
     "message-password-updated": "Your password has been updated. You can now sign in with the new password.",

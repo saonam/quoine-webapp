@@ -13,6 +13,10 @@ export default {
     "back": "戻る",
     "new-text": "新規口座申込はこちら",
     "new-or": "または",
+    // ===
+    "change-password-title": "パスワード変更は必要です",
+    "change-password-message": "現在、仮パスワードでログインされています。安全のためパスワード変更をお願い致します。",
+    "change-password-button": "パスワード変更",
     // message
     "message-account-confirmed": "アカウント承認に成功しました。",
     "message-password-updated": "パスワード再設定に成功しました。新しいパスワードでログインしてください。",
