@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import validateUrl from 'utils/validateUrl';
+
 import resources from './resources';
 
 import View from './Step2View';
@@ -44,7 +46,9 @@ class DemoStep2 extends React.Component {
         rawContinueURL.indexOf('sandbox') !== -1 ? rawContinueURL : null
       );
       window.localStorage.setItem('account-demo', this.state.email);
-      this.props.setToken({ continueURL, token, tokenId });
+
+      this.props.setToken({ token, tokenId });
+      window.location.href = validateUrl(continueURL);
     })
     .catch((error) => {
       this.setState({ error: error.message });

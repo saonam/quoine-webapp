@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import validateUrl from 'utils/validateUrl';
+
 import FormWrapper from '@quoine/components/FormWrapper';
 import View from './View';
 
 import resources from './resources';
-import validateUrl from './validateUrl';
 
 const initialForm = {
   email: '',
