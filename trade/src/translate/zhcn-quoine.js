@@ -148,6 +148,7 @@ export default {
     "quantity-integer": "订单数必须为整数",
     "user-free-margin-below-tolerance-level": "保证金应高于保证金要求额",
     "trailing-stop-value-must-be-positive": "只在订单盈余为正的情况下会触发移动止损。",
+    "price-distance-must-be-less-than-50-of-market-price": "移动止损价格不能小于当前市价的50%",
   },
   // ===
   "position": {

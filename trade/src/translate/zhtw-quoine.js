@@ -148,6 +148,7 @@ export default {
     "quantity-integer": "訂單數必須為整數",
     "user-free-margin-below-tolerance-level": "保證金應高於保證金要求額",
     "trailing-stop-value-must-be-positive": "只在訂單盈餘為正的情況下會觸發移動止損。",
+    "price-distance-must-be-less-than-50-of-market-price": "移動止損價格不能小於當前市價的50%",
   },
   // ===
   "position": {

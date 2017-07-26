@@ -148,6 +148,7 @@ export default {
     "quantity-integer": "注文数量は整数を入力してください。",
     "user-free-margin-below-tolerance-level": "証拠金維持率が110％以下になるため注文することができません",
     "trailing-stop-value-must-be-positive": "トレール注文の設定値は0以上である必要があります。",
+    "price-distance-must-be-less-than-50-of-market-price": "トレール幅はマーケット価格の50%以下の必要があります。",
   },
   // ===
   "position": {
