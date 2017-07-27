@@ -16,6 +16,17 @@ const load = ({ currency, type }) => {
 };
 
 const submit = (form) => {
+  // validate crypto addresss
+  if (process.env.REACT_APP_VENDOR === 'quoine') {
+    if (form.type === 'crypto' && !form.address.value) {
+      return Promise.reject({ message: 'withdrawal-error:address-is-requried' });
+    }
+    if (form.type === 'crypto' && form.address.status !== 'confirmed') {
+      return Promise.reject({ message: 'withdrawal-error:address-need-to-be-verified' });
+    }
+  }
+
+  // submit form
   const url = getUrl(form.type);
   const options = { body: normalize.body(form), errorPrefix: 'withdrawal' };
   return quoine.post(url, options)

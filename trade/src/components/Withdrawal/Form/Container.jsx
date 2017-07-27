@@ -32,6 +32,7 @@ class WdrForm extends React.Component {
       bank: this.props.bank,
       account: this.props.account.currency,
       type: this.props.account.type,
+      address: process.env.REACT_APP_VENDOR === 'quoine' ? this.props.addressWhiteList : this.state.address,
     });
   }
   render() {
@@ -47,8 +48,7 @@ class WdrForm extends React.Component {
     return (
       <View
         form={form} onChange={this.onChange}
-        busy={busy} onSubmit={this.onSubmit}
-        error={error}
+        busy={busy} error={error} onSubmit={this.onSubmit}
         showMessage={showMessage} onDismiss={onDismissSuccess}
       />
     );
@@ -56,11 +56,15 @@ class WdrForm extends React.Component {
 }
 
 WdrForm.propTypes = {
-  bank: PropTypes.number.isRequired,
   account: PropTypes.shape({
     currency: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
   }).isRequired,
+  bank: PropTypes.number.isRequired,
+  addressWhiteList: PropTypes.shape({
+    value: PropTypes.string,
+    status: PropTypes.string,
+  }),
   // ===
   submitting: PropTypes.oneOfType([
     PropTypes.bool,

@@ -17,8 +17,9 @@ const cryptoBody = (payload) => {
   const {
     code, account, address, quantity, paymentId, message, destinationTag,
   } = payload;
+
   const withdrawal = {
-    address: address.trim(),
+    address: process.env.REACT_APP_VENDOR === 'quoine' ? address.value.trim() : address.trim(),
     amount: quantity,
     currency: account,
   };
