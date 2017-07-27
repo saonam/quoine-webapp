@@ -166,6 +166,8 @@ export default {
   },
   "notifications": {
     "disable-trading": "你的賬戶尚未被驗證。請在菜單 > 設定 > 個人信息驗證 選項裏驗證您的賬戶",
+    "need-enable-tfa": "為確保您的賬戶安全，請設置雙因子驗證",
+    "need-change-tfa-type-to-ga": "通過SMS和Authy發送驗證碼的服務將在近期停運，請在設置>安全選項中將您的雙因子驗證更新至Google Authenticator應用",
     "dismiss": "取消",
   },
   "name": {

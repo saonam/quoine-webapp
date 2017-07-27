@@ -8,7 +8,7 @@ import Toggle from 'components/TFA/Toggle';
 
 import styles from './styles.css';
 
-const TFAGAEnableView = ({ busy, gaKey, qrCode, onToggleTfa }) => (
+const TFAGAEnableView = ({ busy, gaKey, qrCode, onUpdateTfa, onCancel }) => (
   <div className={styles.main}>
     <h2 className={styles.title}>
       1. {translate('tfa-ga:scan-barcode')}
@@ -18,6 +18,13 @@ const TFAGAEnableView = ({ busy, gaKey, qrCode, onToggleTfa }) => (
     ) : (
       <img className={styles.image} alt="QR code" src={qrCode} />
     )}
+    <h2 className={styles.keyLabel}>
+      {translate('tfa-ga:enter-key-description')}
+    </h2>
+    <textarea rows={1} className={styles.keyValue} value={gaKey} />
+
+    <hr className={styles.hr} />
+
     <h2 className={styles.title}>
       2. {translate('tfa-ga:enter-code')}
     </h2>
@@ -27,13 +34,10 @@ const TFAGAEnableView = ({ busy, gaKey, qrCode, onToggleTfa }) => (
     <div className={styles.form}>
       <Toggle
         app="ga" action="enable"
-        onToggleTfa={onToggleTfa}
+        onUpdateTfa={onUpdateTfa}
+        onCancel={onCancel}
       />
     </div>
-    <h2 className={styles.keyLabel}>
-      {translate('tfa-ga:enter-key-description')}
-    </h2>
-    <textarea rows={1} className={styles.keyValue} value={gaKey} />
   </div>
 );
 
@@ -41,7 +45,8 @@ TFAGAEnableView.propTypes = {
   busy: PropTypes.bool.isRequired,
   gaKey: PropTypes.string.isRequired,
   qrCode: PropTypes.string.isRequired,
-  onToggleTfa: PropTypes.func.isRequired,
+  onUpdateTfa: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
 };
 
 export default TFAGAEnableView;

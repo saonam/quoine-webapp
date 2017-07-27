@@ -166,6 +166,8 @@ export default {
   },
   "notifications": {
     "disable-trading": "你的账户尚未被验证。请在菜单 > 设定 > 个人信息验证 选项里验证您的账户",
+    "need-enable-tfa": "为确保您的账户安全，请设置双因子验证",
+    "need-change-tfa-type-to-ga": "通过短信和Authy发送验证码的服务将在近期停运，请在设置>安全选项中将您的双因子验证更新至Google Authenticator应用",
     "dismiss": "取消",
   },
   "name": {

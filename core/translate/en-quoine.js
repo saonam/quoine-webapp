@@ -167,6 +167,8 @@ export default {
   },
   "notifications": {
     "disable-trading": "Trading is disabled until your account is approved. Please go to Menu > Settings > Profile to verify your account.",
+    "need-enable-tfa": "Please enable 2-factor authentication to complete the security setting for your account.",
+    "need-change-tfa-type-to-ga": "Tokens provided via SMS and Authy will no longer be supported in the near future. Please update your 2FA setting to Google Authenticator in Settings > Security.",
     "dismiss": "Dismiss",
   },
   "name": {

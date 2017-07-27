@@ -14,8 +14,8 @@ class TFAToggleForm extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit({ code }) {
-    const { app, action, onToggleTfa } = this.props;
-    return resources[action]({ app, code }).then(onToggleTfa);
+    const { app, action, onUpdateTfa } = this.props;
+    return resources[action]({ app, code }).then(onUpdateTfa);
   }
   render() {
     return (
@@ -33,7 +33,7 @@ class TFAToggleForm extends React.Component {
 TFAToggleForm.propTypes = {
   app: PropTypes.oneOf(['authy', 'ga']).isRequired,
   action: PropTypes.oneOf(['enable', 'disable']).isRequired,
-  onToggleTfa: PropTypes.func.isRequired,
+  onUpdateTfa: PropTypes.func.isRequired,
 };
 
 export default TFAToggleForm;

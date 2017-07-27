@@ -205,7 +205,8 @@ export default {
     "status-enabled": "認証済み",
     "status-not-enabled": "未設定",
     // ===
-    "app-select-description": "2要素認証機能を有効化する際は、下記アプリのいずれかをご選択ください。:",
+    "disable-description": "2要素認証の設定自体を無効化したい場合は、<a href=\"mailto:support@quoine.com\">support@quoine.com</a>までご連絡ください。",
+    "authy-warning": "Authyは今後ご使用になれません。Google認証アプリの設定を行うには、まずAuthyでの2要素認証の設定を一度無効化する必要があります その後、Google認証アプリを用いて、2要素認証を再設定ください。",
     // ===
     "app": "2要素認証アプリ",
     "app-authy": "Authy",
@@ -213,6 +214,7 @@ export default {
     // ===
     "action-enable": "有効化",
     "action-disable": "無効化",
+    "action-cancel": "キャンセル",
     // ===
     "form-input": "トークン",
     "form-description": "トークンをご入力ください。",

@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 
-import View from './View';
+import Container from './Container';
 
 const mapStateToProps = (state) => ({
   user: state.user,
-  state: state.notifications,
+  dismissed: state.notifications.dismissed,
 });
 
-export default connect(mapStateToProps)(View);
+export default connect(mapStateToProps)(Container);

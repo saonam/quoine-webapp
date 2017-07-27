@@ -1,0 +1,7 @@
+@import "@quoine/core/styles/_colors.css";
+
+@theme {
+  .main a {
+    color: $accent;
+  }
+}

@@ -4,16 +4,17 @@ import React from 'react';
 import Enable from './Enable';
 import Disable from './Disable';
 
-const TFAGA = ({ tfa, onToggleTfa }) => {
+const TFAGA = ({ tfa, onUpdateTfa, onToggleForm }) => {
   const Body = tfa ? Disable : Enable;
   return (
-    <Body onToggleTfa={onToggleTfa} />
+    <Body onUpdateTfa={onUpdateTfa} onCancel={onToggleForm} />
   );
 };
 
 TFAGA.propTypes = {
   tfa: PropTypes.bool.isRequired,
-  onToggleTfa: PropTypes.func.isRequired,
+  onUpdateTfa: PropTypes.func.isRequired,
+  onToggleForm: PropTypes.func.isRequired,
 };
 
 export default TFAGA;

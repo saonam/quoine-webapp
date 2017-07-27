@@ -1,17 +1,16 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-import Toggle from 'components/TFA/Toggle';
+import translate from '@quoine/translate';
 
-const TFAGADisable = ({ onToggleTfa }) => (
-  <Toggle
-    app="ga" action="disable"
-    onToggleTfa={onToggleTfa}
-  />
+import styles from './styles.css';
+
+const createMarkup = () => ({
+  __html: translate('tfa-manage:disable-description'),
+});
+
+const TFAGADisable = () => (
+  // eslint-disable-next-line react/no-danger
+  <div className={styles.main} dangerouslySetInnerHTML={createMarkup()} />
 );
-
-TFAGADisable.propTypes = {
-  onToggleTfa: PropTypes.func.isRequired,
-};
 
 export default TFAGADisable;

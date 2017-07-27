@@ -205,7 +205,8 @@ export default {
     "status-enabled": "启用",
     "status-not-enabled": "尚未启用",
     // ===
-    "app-select-description": "请从下面的途径中选择双重认证应用:",
+    "disable-description": "双因素验证(2FA)相关问题，请联系我们<a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
+    "authy-warning": "通過Authy發送驗證碼的服務將在近期停運。更新啟用Google Authenticator驗證之前，請確保Authy驗證功能已被取消，否則Google Authenticator將無法使用。",
     // ===
     "app": "TFA App",
     "app-authy": "Authy",
@@ -213,6 +214,7 @@ export default {
     // ===
     "action-enable": "启用",
     "action-disable": "禁用",
+    "action-cancel": "取消",
     // ===
     "form-input": "验证码",
     "form-authy-description": "请输入发送至您电话的代码。",

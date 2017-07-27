@@ -205,7 +205,8 @@ export default {
     "status-enabled": "Enabled",
     "status-disabled": "Not Enabled Yet",
     // ===
-    "app-select-description": "To enabled 2FA, please select one of the apps below:",
+    "disable-description": "To disable 2FA, please contact our Support at <a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
+    "authy-warning": "Authy will no longer be supported in the near future. To switch to Google Authenticator, you will need to disable the 2FA setting with Authy first, then enable it again using Google Authenticator.",
     // ===
     "app": "TFA App",
     "app-authy": "Authy",
@@ -213,6 +214,7 @@ export default {
     // ===
     "action-enable": "Enable",
     "action-disable": "Disable",
+    "action-cancel": "Cancel",
     // ===
     "form-input": "Authentication Code",
     "form-authy-description": "Please enter the code that was sent to your phone.",
