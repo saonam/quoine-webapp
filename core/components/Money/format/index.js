@@ -1,4 +1,4 @@
-import infos from './infos';
+import getInfo from './getInfo';
 
 const trailingZeroRegex = /0+$/;
 const split = (value) => {
@@ -15,7 +15,7 @@ const split = (value) => {
 
 export default (value, currency, noSymbol) => {
   if (!isFinite(value)) { return ['']; }
-  const info = infos[currency];
+  const info = getInfo(currency);
   const formatted = info.format(value);
   const withSymbol = noSymbol ? formatted : `${info.symbol}${formatted}`;
   // always return array

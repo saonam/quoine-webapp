@@ -52,7 +52,7 @@ const full = (new Intl.NumberFormat('en', {
   useGrouping: false,
 })).format;
 
-export default {
+const infos = {
   // === fiat
   AUD: {
     format: fiat,
@@ -195,3 +195,17 @@ export default {
     split: false,
   },
 };
+
+const getInfo = (currency) => {
+  const info = infos[currency];
+  if (!info) {
+    return ({
+      format: crypto,
+      symbol: currency,
+      split: true,
+    });
+  }
+  return info;
+};
+
+export default getInfo;
