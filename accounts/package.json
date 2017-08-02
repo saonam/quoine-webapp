@@ -1,9 +1,9 @@
 {
   "name": "@quoine/accounts",
-  "version": "3.15.0-alpha.15",
+  "version": "3.15.0-alpha.16",
   "license": "MIT",
   "dependencies": {
-    "@quoine/core": "3.15.0-alpha.15",
+    "@quoine/core": "3.15.0-alpha.16",
     "@quoine/react-scripts": "5.9.11",
     "haikunator": "^2.0.0",
     "idx": "^1.5.0",
