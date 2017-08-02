@@ -148,6 +148,7 @@ export default {
     "quantity-integer": "注文数量は整数を入力してください。",
     "user-free-margin-below-tolerance-level": "証拠金維持率が110％以下になるため注文することができません",
     "trailing-stop-value-must-be-positive": "トレール注文の設定値は0以上である必要があります。",
+    "order-product-disabled": "本通貨ペアでは現在お取引はできません。別の通貨ペアをご選択ください。",
   },
   // ===
   "position": {
