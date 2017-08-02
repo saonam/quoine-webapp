@@ -110,6 +110,11 @@ const infos = {
     symbol: '฿',
     split: true,
   },
+  BCH: {
+    format: crypto,
+    symbol: '฿',
+    split: true,
+  },
   ETC: {
     format: crypto,
     symbol: 'Ξ',
