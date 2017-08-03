@@ -31,6 +31,8 @@ export default {
     "verification-failed": "Authentication code is not valid.",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "You are logging in from a new IP address that is not confirmed yet. A confirmation link has been sent to your email address. Please check and confirm to continue.",
     "country-restricted": "QRYPTOS is currently not available for this country.",
+    "failed-attempt-limit-reached": "Failed attempt limit reached.",
+    "en-authy-your-account-is-suspended": "Your Authy account has been suspended.",
   },
   "forgot-password": {
     "help": "To reset your password, please contact <a href=\"mailto:support@quoine.com\">support@quoine.com</a>",

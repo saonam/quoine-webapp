@@ -57,7 +57,7 @@ export default {
     // ===
     "distance": "价差",
     "distance-type": "价差类型",
-    "distance-type-fiat": "fiat",
+    "distance-type-fiat": "价格",
     "distance-type-percentage": "百分比",
     // ===
     "margin": "保证金",
@@ -184,7 +184,7 @@ export default {
     "quantity-close": "开盘数量",
     "quantity-open": "收盘数量",
     // ===
-    "int-total": "Total Int.",
+    "int-total": "总盈利",
     "interest-total": "总盈利",
     // ===
     "created-at": "已创建于",
@@ -251,7 +251,7 @@ export default {
     "type-bought": "购得",
     "type-credit": "信用",
     "type-credit-new-register": "新用户信用",
-    "type-credit-referrer": "Referral Credit",
+    "type-credit-referrer": "推荐奖励",
     "type-cross-ccy-trade": "货币交易",
     "type-debit": "借方",
     "type-direct-trade": "交易",
@@ -382,7 +382,7 @@ export default {
     // ===
     "success": "取款请求已提交",
     // ===
-    "dismiss": "Dismiss",
+    "dismiss": "取消",
     "check-email-message": "虚拟货币取款确认连接已发送到您的邮箱，请查收。本条链接有效期间为30分钟",
     // ===
     "status": "状态",

@@ -62,7 +62,7 @@ export default {
   "menu": {
     "accounts": "账户",
     "dashboard": "交易图表",
-    "lending": "Lending",
+    "lending": "借出",
     "settings": "设置",
     // ===
     "faq": "常见问题",
@@ -86,7 +86,7 @@ export default {
     "sent-email": "验证码已通过邮件发送。",
     "sent-ga": "验证码已经通过Google Authenticator发送。",
     // ===
-    "resend": "Resend",
+    "resend": "重新发送",
     "resend-sms": "通过短信重新发送",
     "send": "请求",
   },
@@ -161,8 +161,8 @@ export default {
     "done": "完成",
   },
   "hint": {
-    "done": "Done",
-    "title": "Help",
+    "done": "完成",
+    "title": "帮助",
   },
   "notifications": {
     "disable-trading": "你的账户尚未被验证。请在菜单 > 设定 > 个人信息验证 选项里验证您的账户",

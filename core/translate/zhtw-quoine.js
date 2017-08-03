@@ -62,7 +62,7 @@ export default {
   "menu": {
     "accounts": "賬戶",
     "dashboard": "交易圖表",
-    "lending": "Lending",
+    "lending": "借出",
     "settings": "設置",
     // ===
     "faq": "常見問題",
@@ -86,7 +86,7 @@ export default {
     "sent-email": "驗證碼已通過郵件發送。",
     "sent-ga": "验证码已经通过Google Authenticator发送。",
     // ===
-    "resend": "Resend",
+    "resend": "重新發送",
     "resend-sms": "通過短信重新發送",
     "send": "請求",
   },
@@ -161,8 +161,8 @@ export default {
     "done": "完成",
   },
   "hint": {
-    "done": "Done",
-    "title": "Help",
+    "done": "完成",
+    "title": "幫助",
   },
   "notifications": {
     "disable-trading": "你的賬戶尚未被驗證。請在菜單 > 設定 > 個人信息驗證 選項裏驗證您的賬戶",

@@ -57,7 +57,7 @@ export default {
     // ===
     "distance": "價差",
     "distance-type": "價差類型",
-    "distance-type-fiat": "fiat",
+    "distance-type-fiat": "價格",
     "distance-type-percentage": "百分比",
     // ===
     "margin": "保證金",
@@ -184,7 +184,7 @@ export default {
     "quantity-close": "開盤數量",
     "quantity-open": "收盤數量",
     // ===
-    "int-total": "Total Int.",
+    "int-total": "總盈利",
     "interest-total": "總盈利",
     // ===
     "created-at": "已創建於",
@@ -251,7 +251,7 @@ export default {
     "type-bought": "購得",
     "type-credit": "信用",
     "type-credit-new-register": "新用戶信用",
-    "type-credit-referrer": "Referral Credit",
+    "type-credit-referrer": "推薦獎勵",
     "type-cross-ccy-trade": "貨幣交易",
     "type-debit": "借方",
     "type-direct-trade": "交易",
@@ -382,7 +382,7 @@ export default {
     // ===
     "success": "取款請求已提交",
     // ===
-    "dismiss": "Dismiss",
+    "dismiss": "取消",
     "check-email-message": "虛擬貨幣取款確認連接已發送到您的郵箱，請查收。本條鏈接有效期間為30分鐘",
     // ===
     "status": "狀態",

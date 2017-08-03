@@ -31,6 +31,8 @@ export default {
     "verification-failed": "验证码无效",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "本次登陆的IP地址尚未被验证，验证链接已经发送到您的邮箱，请查收",
     "country-restricted": "对不起，QRYPTOS在当前国家暂时没有提供服务，请耐心等待。",
+    "failed-attempt-limit-reached": "尝试次数达到上限。",
+    "en-authy-your-account-is-suspended": "您的Authy账户已被停用。",
   },
   "forgot-password": {
     "help": "如需要重置您的密码，请联系<a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
@@ -201,7 +203,7 @@ export default {
     "message-no-changes": "没有完成更新资料过程",
   },
   "tfa-manage": {
-    "status": "TFA Status",
+    "status": "双重认证状态",
     "status-enabled": "启用",
     "status-not-enabled": "尚未启用",
     // ===

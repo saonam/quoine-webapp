@@ -31,6 +31,8 @@ export default {
     "verification-failed": "無効な認証コードです。",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "未登録のIPアドレスからのログインを確認しました。登録のメールアドレスに送信されたメールにある、確認用リンクをご確認ください。",
     "country-restricted": "QRYPTOS is currently not available for this country.",
+    "failed-attempt-limit-reached": "ログインを複数回失敗されたため、アカウントが一時的にロックされました。登録のメールアドレスにアカウントロック解除のためのメールを送信しましたのでご確認ください",
+    "en-authy-your-account-is-suspended": "あなたのAuthyアカウントは停止されています。",
   },
   "forgot-password": {
     "help": "パスワードをお忘れの方は、<a target=\"_blank\" href=\"https://www.min-btc.com/support/inquiry\">こちら</a>よりご連絡ください。",
