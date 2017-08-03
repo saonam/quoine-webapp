@@ -149,6 +149,7 @@ export default {
     "user-free-margin-below-tolerance-level": "Free margin is below tolerance level",
     "trailing-stop-value-must-be-positive": "Trailing stop value must be positive.",
     "price-distance-must-be-less-than-50-of-market-price": "Price distance must be less than 50% of market price.",
+    "order-product-disabled": "This product is currently not available for trading. Please select another one to continue.",
   },
   // ===
   "position": {

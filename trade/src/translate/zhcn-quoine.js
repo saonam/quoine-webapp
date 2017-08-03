@@ -149,6 +149,7 @@ export default {
     "user-free-margin-below-tolerance-level": "保证金应高于保证金要求额",
     "trailing-stop-value-must-be-positive": "只在订单盈余为正的情况下会触发移动止损。",
     "price-distance-must-be-less-than-50-of-market-price": "移动止损价格不能小于当前市价的50%",
+    "order-product-disabled": "此货币对目前无法交易，请选择其他货币对进行交易。",
   },
   // ===
   "position": {
