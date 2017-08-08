@@ -244,12 +244,12 @@ export default {
     "enter-key-description": "您也可以选择手动输入来代替扫描QR code。",
   },
   "token": {
-    "id": "编号",
-    "value": "密钥",
+    "id": "验证码ID",
+    "value": "验证密钥",
     "value-copy": "复制",
     "permissions": "权限",
     "none": "无",
-    "value-message": "本验证码只提示一次",
+    "value-message": "此验证密钥只显示一次",
     // ===
     "remove-title": "删除密钥",
     "remove-action": "删除",

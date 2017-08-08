@@ -242,12 +242,12 @@ export default {
     "enter-key-description": "QRコードでの読み込みではなく、キーの入力によっても2要素認証を設定できます。",
   },
   "token": {
-    "id": "ID",
-    "value": "値",
+    "id": "トークンID",
+    "value": "トークンシークレット",
     "value-copy": "コピー",
     "permissions": "許可",
     "none": "なし",
-    "value-message": "このトークンは一度しか表示されません。",
+    "value-message": "このトークンシークレットは一度しか表示されません。",
     // ===
     "remove-title": "トークンを削除する",
     "remove-action": "削除する",

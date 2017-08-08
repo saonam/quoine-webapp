@@ -244,12 +244,12 @@ export default {
     "enter-key-description": "You can also choose Manual Entry and enter the key yourself instead of scanning the QR code.",
   },
   "token": {
-    "id": "ID",
-    "value": "Token/Secret",
+    "id": "Token ID",
+    "value": "Token Secret",
     "value-copy": "Copy",
     "permissions": "Permissions",
     "none": "None",
-    "value-message": "This Token/Secret is displayed one time only.",
+    "value-message": "This Token Secret is displayed one time only.",
     // ===
     "remove-title": "Delete Token",
     "remove-action": "Delete",
