@@ -97,7 +97,6 @@ export default {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "您在一小时内请求次数太多。请稍后重试。",
     "en-authy-sms-token-was-not-sent": "验证码无法发送至您的手机。请重试。",
     "en-authy-token-is-invalid-token-was-used-recently": "验证码已被使用",
-    "en-authy-monthly-sms-limit-reached": "验证码使用次数达到每月上限。",
   },
   "test": {
     "basic": "英语",
@@ -155,6 +154,7 @@ export default {
     "task-wdr-bank-remove-report": "删除银行账户之后",
     "task-withdrawal-cancel-confirm": "取消取款之前",
     "task-withdrawal-cancel-report": "取消取款之后",
+    "task-ips-remove-confirm": "Before Delete IP Address",
   },
   "form": {
     "cancel": "取消",

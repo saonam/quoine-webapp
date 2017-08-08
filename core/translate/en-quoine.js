@@ -97,7 +97,6 @@ export default {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "You have requested too many times in the last hour. Please wait a moment before trying again.",
     "en-authy-sms-token-was-not-sent": "The code was unable to reach your phone. Please try again.",
     "en-authy-token-is-invalid-token-was-used-recently": "This code is invalid because it has been used recently.",
-    "en-authy-monthly-sms-limit-reached": "Monthly SMS limit reached.",
   },
   "test": {
     "basic": "english",

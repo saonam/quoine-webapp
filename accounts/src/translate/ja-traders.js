@@ -219,10 +219,12 @@ export default {
     "action-cancel": "キャンセル",
     // ===
     "form-input": "トークン",
-    "form-description": "トークンをご入力ください。",
+    "form-authy-description": "トークンをご入力ください。",
+    "form-ga-description": "確認コードの所得のため、Google認証システムを起動してください。",
   },
   "tfa-manage-error": {
     "en-authy-verification-failed": "無効なトークンです。",
+    "verification-failed": "無効なトークンです。",
     "en-authy-token-is-blank": "トークンの入力が必要です。",
     "token-is-invalid": "無効なトークンです。",
   },
