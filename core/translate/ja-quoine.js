@@ -154,7 +154,7 @@ export default {
     "task-wdr-bank-remove-report": "銀行口座情報取り消し後",
     "task-withdrawal-cancel-confirm": "出金申請取り消し前",
     "task-withdrawal-cancel-report": "出金申請取り消し後",
-    "task-ips-remove-confirm": "Before Delete IP Address",
+    "task-ips-remove-confirm": "IPアドレス情報の削除前",
   },
   "form": {
     "cancel": "取り消し",

@@ -154,7 +154,7 @@ export default {
     "task-wdr-bank-remove-report": "刪除銀行賬戶之後",
     "task-withdrawal-cancel-confirm": "取消取款之前",
     "task-withdrawal-cancel-report": "取消取款之後",
-    "task-ips-remove-confirm": "Before Delete IP Address",
+    "task-ips-remove-confirm": "刪除IP Address前確認",
   },
   "form": {
     "cancel": "取消",
