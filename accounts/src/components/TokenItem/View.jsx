@@ -6,7 +6,6 @@ import translate from '@quoine/translate';
 import Row from 'components/SettingsRow';
 import { Permissions, Value, Remove } from 'components/Token';
 
-import styles from './styles.css';
 
 const TokenItem = ({ token }) => (
   <div>
@@ -16,16 +15,15 @@ const TokenItem = ({ token }) => (
     <Row label={translate('token:permissions')}>
       <Permissions token={token} />
     </Row>
-    { token.new ? (
+
+    {token.new ? (
       <Row label={translate('token:value')}>
         <Value token={token} />
       </Row>
-    ) : null }
-    <div className={styles.remove}>
-      <Row>
-        <Remove token={token} />
-      </Row>
-    </div>
+    ) : null}
+    <Row>
+      <Remove token={token} />
+    </Row>
   </div>
 );
 

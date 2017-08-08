@@ -1,8 +1,5 @@
 @import url('@quoine/core/styles/_size.css');
 
-.remove {
-  composes: top-medium from "@quoine/styles/margin.css";
-}
 .notification {
   composes: large line-2 from "@quoine/styles/text.css";
 }

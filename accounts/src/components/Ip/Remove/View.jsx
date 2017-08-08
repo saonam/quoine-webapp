@@ -4,17 +4,13 @@ import React from 'react';
 import Button from './Button';
 import Confirm from './Confirm';
 
-import styles from './styles.css';
-
 
 const IpRemoveView = ({ confirming, ip, ...others }) => {
   if (confirming === ip.id) {
     return <Confirm />;
   }
   return (
-    <div className={styles.container}>
-      <Button ip={ip} {...others} />
-    </div>
+    <Button ip={ip} {...others} />
   );
 };
 

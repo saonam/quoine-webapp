@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
-
 import ButtonWLoading from '@quoine/components/ButtonWLoading';
+
 
 const IpRemoveButton = ({ removing, ip, onRemove }) => (
   <ButtonWLoading

@@ -148,10 +148,10 @@ export default {
     "security-title": "安全",
     "password-title": "密碼",
     "tfa-title": "雙重驗證",
-    // ===
-    "api-title": "API接口",
-    // ===
-    "ip-title": "白名單",
+
+    "api-access-title": "API接口",
+    "api-title": "驗證碼",
+    "ip-title": "IP白名單",
   },
   "daily-report": {
     "title": "日報",
@@ -253,6 +253,8 @@ export default {
     // ===
     "remove-title": "刪除密鑰",
     "remove-action": "刪除",
+    "remove-action-yes": "刪除",
+    "remove-action-no": "取消",
     "remove-description": "您確定要刪除此密鑰嗎？使用該密鑰的所有設備和應用程序都將立即失去授權",
     // ===
     "add-title": "創建新的密鑰",
@@ -285,9 +287,10 @@ export default {
     "remove-button": "刪除",
     "dismiss-button": "撤銷",
     "remove-action-yes": "刪除",
+    "remove-action-no": "取消",
     "status-awaiting-confirmation": "未確認",
     "status-confirmed": "已確認",
-    "remove-description": "您確認要移除這個IP地址嗎？使用此IP地址的應用和設備將立即被阻止訪問。",
+    "remove-description": "刪除此IP地址也將導致所有與其連接的API接口被移除。",
     "checkmail-notification": "請查收確認郵件",
   },
   "ip-error": {

@@ -149,9 +149,9 @@ export default {
     "password-title": "Password",
     "tfa-title": "Two Factor Authentication",
     // ===
-    "api-title": "API",
-    // ===
-    "ip-title": "IP",
+    "api-access-title": "API Access",
+    "api-title": "Tokens",
+    "ip-title": "IP Whitelist",
   },
   "daily-report": {
     "title": "Report",
@@ -253,6 +253,8 @@ export default {
     // ===
     "remove-title": "Delete Token",
     "remove-action": "Delete",
+    "remove-action-yes": "Delete",
+    "remove-action-no": "Cancel",
     "remove-description": "Are you sure want to delete this token? All devices and apps using this token will be unauthorized immediately.",
     // ===
     "add-title": "Create New API Token",
@@ -285,9 +287,10 @@ export default {
     "remove-button": "Delete Ip",
     "dismiss-button": "Dismiss",
     "remove-action-yes": "Delete",
+    "remove-action-no": "Cancel",
     "status-awaiting-confirmation": "Unconfirmed",
     "status-confirmed": "Confirmed",
-    "remove-description": "Are you sure you want to remove this IP address? All apps and devices using this IP address will be unauthorized immediately.",
+    "remove-description": "Deleting this IP address will also remove access of all API keys that are using it to connect to the system.",
     "checkmail-notification": "Please check your email to confirm this IP address.",
   },
   "ip-error": {

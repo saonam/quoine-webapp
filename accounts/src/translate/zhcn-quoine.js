@@ -148,10 +148,10 @@ export default {
     "security-title": "安全",
     "password-title": "密码",
     "tfa-title": "双重验证",
-    // ===
-    "api-title": "API接口",
-    // ===
-    "ip-title": "白名单",
+
+    "api-access-title": "API接口",
+    "api-title": "验证码",
+    "ip-title": "IP白名单",
   },
   "daily-report": {
     "title": "日报",
@@ -253,6 +253,8 @@ export default {
     // ===
     "remove-title": "删除密钥",
     "remove-action": "删除",
+    "remove-action-yes": "删除",
+    "remove-action-no": "取消",
     "remove-description": "您确定要删除此密钥吗？使用该密钥的所有设备和应用程序都将立即失去授权",
     // ===
     "add-title": "创建新的密钥",
@@ -285,9 +287,10 @@ export default {
     "remove-button": "删除",
     "dismiss-button": "撤销",
     "remove-action-yes": "删除",
+    "remove-action-no": "取消",
     "status-awaiting-confirmation": "未确认",
     "status-confirmed": "已确认",
-    "remove-description": "您确认要移除这个IP地址吗？使用此IP地址的应用和设备将立即被阻止访问。",
+    "remove-description": "删除此IP地址也将导致所有与其连接的API接口被移除。",
     "checkmail-notification": "请查收确认邮件",
   },
   "ip-error": {

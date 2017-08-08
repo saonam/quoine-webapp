@@ -148,10 +148,10 @@ export default {
     "security-title": "セキュリティ",
     "password-title": "パスワード",
     "tfa-title": "二段階認証",
-    // ===
-    "api-title": "API",
-    // ===
-    "ip-title": "IP",
+
+    "api-access-title": "APIアクセス",
+    "api-title": "トークン",
+    "ip-title": "IPホワイトリスト",
   },
   "daily-report": {
     "title": "取引レポート",
@@ -251,6 +251,8 @@ export default {
     // ===
     "remove-title": "トークンを削除する",
     "remove-action": "削除する",
+    "remove-action-yes": "削除する",
+    "remove-action-no": "キャンセル",
     "remove-description": "ただいまトークンを利用している全てのデバイスまたはアプリをすぐに無許可します。トークンを削除しますか。",
     // ===
     "add-title": "APIトークンを新規作成する",
@@ -283,9 +285,10 @@ export default {
     "remove-button": "IPを削除",
     "dismiss-button": "閉じる",
     "remove-action-yes": "削除",
+    "remove-action-no": "キャンセル",
     "status-awaiting-confirmation": "未確認",
     "status-confirmed": "確認済",
-    "remove-description": "このIPアドレス情報を削除してもよろしいですか？すべてのアプリおよびデバイスが、直ちにこのIPからアクセスできなくなります。",
+    "remove-description": "このIPアドレスを削除すると、現在システムとの接続に使用されている全てのAPIキーでのアクセスが不可になります。",
     "checkmail-notification": "IPアドレスの確認のため、メールをご確認ください。",
   },
   "ip-error": {
