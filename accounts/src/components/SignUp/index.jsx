@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import FromWrapper from '@quoine/components/FormWrapper';
@@ -30,18 +29,13 @@ class SignUp extends React.Component {
     this.onRender();
   }
   onRender() {
-    const { mode } = this.props.location.query;
-    const sitekey = mode === 'test' ? (
-      '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
-    ) : process.env.REACT_APP_CAPTCHA_KEY;
-
     try {
       window.grecaptcha.getResponse(signUpCaptchaWidget);
     } catch (error) {
       signUpCaptchaWidget = window.grecaptcha.render(
         this.widget,
         {
-          sitekey,
+          sitekey: process.env.REACT_APP_CAPTCHA_KEY,
           callback: this.onCallback,
           'expired-callback': this.onReset,
         },
@@ -98,13 +92,5 @@ class SignUp extends React.Component {
     );
   }
 }
-
-SignUp.propTypes = {
-  location: PropTypes.shape({
-    query: PropTypes.shape({
-      mode: PropTypes.string,
-    }),
-  }).isRequired,
-};
 
 export default SignUp;
