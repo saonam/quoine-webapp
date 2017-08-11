@@ -39,7 +39,7 @@ const one = (raw, account) => {
   });
 };
 
-const normalize = (raw, account) => {
+const all = (raw, account) => {
   const { models, current_page: current, total_pages: total } = raw;
   return {
     models: models.map(tran => one(tran, account)),
@@ -47,4 +47,4 @@ const normalize = (raw, account) => {
   };
 };
 
-export default normalize;
+export default { one, all };
