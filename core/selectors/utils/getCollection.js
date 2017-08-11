@@ -20,12 +20,14 @@ const getCollection = ({ keys, models, filters }) => {
     // filter
     if (!test(filters, model)) { return; }
     // group
-    const date = getDate(model);
-    const index = dateToIndex[date];
-    if (typeof index === 'undefined') {
-      dateToIndex[date] = collection.push({ date, keys: [key] }) - 1;
-    } else {
-      collection[index].keys.push(key);
+    if (model.createdAt) {
+      const date = getDate(model);
+      const index = dateToIndex[date];
+      if (typeof index === 'undefined') {
+        dateToIndex[date] = collection.push({ date, keys: [key] }) - 1;
+      } else {
+        collection[index].keys.push(key);
+      }
     }
   });
   return collection;
