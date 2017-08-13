@@ -1,0 +1,73 @@
+@import "@quoine/core/styles/_size.css";
+@import "@quoine/core/styles/_colors.css";
+
+.body-full {
+  composes: ver-x-large hor-xx-large from "@quoine/styles/padding.css";
+}
+
+.body {
+  composes: top-x-large hor-xx-large from "@quoine/styles/padding.css";
+}
+
+.input {
+  composes: top-x-large from "@quoine/styles/margin.css";
+}
+
+.input:first-child {
+  margin-top: 0;
+}
+
+@theme {
+  .term a {
+    color: $accent;
+  }
+}
+
+.success {
+  composes: large from "@quoine/styles/text.css";
+}
+
+.error {
+  composes: body;
+  composes: success;
+}
+
+.message {
+  composes: x-large from "@quoine/styles/text.css";
+  composes: input;
+}
+
+.help {
+  composes: line-1-5 from "@quoine/styles/text.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+
+.heading {
+  composes: input;
+  composes: accent-1 from "@quoine/styles/bg-color.css";
+  composes: accent from "@quoine/styles/color.css";
+  composes: uppercase semi-bold center from "@quoine/styles/text.css";
+}
+
+.description {
+  composes: x-large from "@quoine/styles/text.css";
+}
+
+.hide {
+  composes: none from "@quoine/styles/display.css";
+}
+
+.input {
+  composes: x-large line-4 left from "@quoine/styles/text.css";
+}
+/* ugly fix IE */
+/* TODO */
+.input input {
+  text-align: left;
+  height: 48px;
+}
+.input input[type=checkbox],
+.input input[type=radio] {
+  height: 18px;
+}

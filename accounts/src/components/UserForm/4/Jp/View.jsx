@@ -10,7 +10,7 @@ import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
 import styles from 'components/UserForm/styles.css';
 
-import Term from './Term';
+import TermList from '@quoine/components/Term/List';
 import Review from './Review';
 
 const UserForm4Jp = ({
@@ -39,7 +39,7 @@ const UserForm4Jp = ({
         <div>
           <h1 className={styles.heading}>利用規約</h1>
           <div className={styles.body}>
-            <Term form={form} onChange={onChange} />
+            <TermList form={form} onChange={onChange} />
           </div>
         </div>
       )}

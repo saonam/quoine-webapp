@@ -1,31 +1,9 @@
-import React from 'react';
+import { connect } from 'react-redux';
 
-import AccountManage from '@quoine/components/AccountManage';
-import AccountSelect from 'components/AccountSelect';
-import MarketSelect from 'components/MarketSelect';
-import LayoutSelect from 'components/LayoutSelect';
+import View from './View';
 
-import styles from './styles.css';
+const mapStateToProps = state => ({
+  user: state.user,
+});
 
-const DashboardMenu = () => (
-  <div className={styles.main}>
-    <div className={styles.accounts}>
-      <div>
-        <AccountSelect />
-      </div>
-      <div className={styles.manage}>
-        <AccountManage />
-      </div>
-    </div>
-    <div>
-      <MarketSelect />
-    </div>
-    {process.env.REACT_APP_VENDOR === 'quoine' ? (
-      <div>
-        <LayoutSelect />
-      </div>
-    ) : null}
-  </div>
-);
-
-export default DashboardMenu;
+export default connect(mapStateToProps)(View);

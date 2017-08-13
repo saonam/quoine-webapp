@@ -1,0 +1,7 @@
+.body {
+  composes: top-x-large hor-xx-large from "@quoine/styles/padding.css";
+}
+.error {
+  composes: ver-large from "@quoine/styles/padding.css";
+  composes: large from "@quoine/styles/text.css";
+}
