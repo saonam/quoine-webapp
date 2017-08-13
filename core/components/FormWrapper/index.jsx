@@ -15,6 +15,7 @@ class FormWrapper extends React.Component {
         ...prev,
         [key]: this.onChange.bind(this, key),
       }), {});
+
     this.onSubmit = this.onSubmit.bind(this);
     this.onSuccessDismiss = this.onSuccessDismiss.bind(this);
   }

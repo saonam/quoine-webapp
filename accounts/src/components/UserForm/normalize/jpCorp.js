@@ -6,7 +6,6 @@ const jpRep = (form) => ({
   title: form.title,
   // ===
   ...getName(form),
-  ...getValid(form),
 });
 
 const jpSh = (form) => ({
@@ -35,6 +34,7 @@ const jpTrader = (form) => ({
   email: form.email,
   // ===
   ...getName(form),
+  ...getValid(form),
 });
 
 const jpIndustry = (form) => ({

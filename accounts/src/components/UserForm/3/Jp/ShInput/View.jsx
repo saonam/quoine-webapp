@@ -17,6 +17,7 @@ import KanjiNameInput from '../KanjiNameInput';
 import ShBusinessInput from '../ShBusinessInput';
 import ShTypeInput from '../ShTypeInput';
 
+
 const ShsInputItemView = ({ index, value, onRemove, onChange, required, ...others }) => (
   <div>
 
@@ -27,10 +28,16 @@ const ShsInputItemView = ({ index, value, onRemove, onChange, required, ...other
     <div className={styles.input}>
       <LargeField label="事業形態">
         <ShBusinessInput
-          value={value.business} onChange={onChange.business}
-          required={required}
+          required value={value.business} onChange={onChange.business}
           {...others}
         />
+
+        {/* validation */}
+        {!value.business && (
+          <div className={styles.hidden}>
+            <input type="text" required />
+          </div>
+        )}
       </LargeField>
     </div>
 
@@ -101,7 +108,7 @@ const ShsInputItemView = ({ index, value, onRemove, onChange, required, ...other
     <div className={styles.input}>
       <LargeField label="外国PEPs">
         <CheckboxInput id={`${index}-sh-pep`} value={value.pep} onChange={onChange.pep} required={required}>
-          私は外国の重要な公人、もしくはその親族ではありません。
+          <p style={{ lineHeight: '24px' }}>私は外国の重要な公人、もしくはその親族ではありません。</p>
         </CheckboxInput>
       </LargeField>
       <p className={styles.help}>

@@ -6,7 +6,12 @@ const submit = (form) => (
     body: normalize(form),
     isForm: true,
     errorPrefix: 'user',
-  }).then(raw => raw.status)
+  }).then(raw => {
+    if (raw.status) {
+      return raw.status.replace(/_/g, '-');
+    }
+    return raw.status;
+  })
 );
 
 export default { submit };

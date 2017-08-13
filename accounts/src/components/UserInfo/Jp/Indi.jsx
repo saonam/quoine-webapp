@@ -38,7 +38,7 @@ const UserInfoIndi = ({ info, Group, Item }) => (
       <Item label="住所">
         <Address address={info.address} />
       </Item>
-      <Item label="電話番号">
+      <Item label="携帯番号">
         {info.phone}
       </Item>
     </Group>

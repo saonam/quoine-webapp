@@ -53,3 +53,25 @@
 .description {
   composes: x-large from "@quoine/styles/text.css";
 }
+
+.hide {
+  composes: none from "@quoine/styles/display.css";
+}
+
+.hidden {
+  height: 1px;
+  margin-left: 1px;
+  position: relative;
+}
+
+.hidden input {
+  position: absolute;
+  height: 1px;
+  margin-left: -1px;
+  width: 100%;
+  z-index: -1;
+}
+
+.hidden input[type="text"] {
+  width: 1px;
+}
