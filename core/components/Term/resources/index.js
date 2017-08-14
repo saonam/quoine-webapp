@@ -28,9 +28,9 @@ const loadFull = () => (
     }))
 );
 
-const load = (newOnly) => {
+const load = (newOnly) => (
   newOnly ? loadNewOnly() : loadFull()
-};
+);
 
 const update = () => (
   quoine.post('/users/set_latest_term_version', {
