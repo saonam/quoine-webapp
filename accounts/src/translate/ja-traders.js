@@ -30,7 +30,7 @@ export default {
     "invalid-email-or-password": "メールアドレスまたはパスワードをもう一度確認してください。",
     "verification-failed": "無効な認証コードです。",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "未登録のIPアドレスからのログインを確認しました。登録のメールアドレスに送信されたメールにある、確認用リンクをご確認ください。",
-    "country-restricted": "QRYPTOS is currently not available for this country.",
+    "country-restricted": "日本在住、日本国籍の方は本サービスをご利用になれません。",
     "failed-attempt-limit-reached": "ログインを複数回失敗されたため、アカウントが一時的にロックされました。登録のメールアドレスにアカウントロック解除のためのメールを送信しましたのでご確認ください",
     "en-authy-your-account-is-suspended": "あなたのAuthyアカウントは停止されています。",
   },
@@ -114,7 +114,7 @@ export default {
     "all-is-required": "全てのフィールドに入力する必要があります。",
     "terms": "利用規約に同意する必要があります。",
     "password-is-too-short-minimum-is-8-characters": "パスワードは最低8文字で、かつ1文字以上の大文字、小文字、数字を含む必要があります。",
-    "country-restricted": "QRYPTOS is currently not available for this country.",
+    "country-restricted": "日本在住、日本国籍の方は本サービスをご利用になれません。",
   },
   "demo": {
     "title": "デモアカウントを利用する",

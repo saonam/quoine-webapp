@@ -30,7 +30,7 @@ export default {
     "invalid-email-or-password": "郵箱地址或密碼無效",
     "verification-failed": "驗證碼無效",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "本次登陸的IP地址尚未被驗證，驗證鏈接已經發送到您的郵箱，請查收",
-    "country-restricted": "對不起，QRYPTOS在當前國家暫時沒有提供服務，請耐心等待。",
+    "country-restricted": "此國家區域暫不支持本服務。",
     "failed-attempt-limit-reached": "嘗試次數達到上限。",
     "en-authy-your-account-is-suspended": "您的Authy账户已被停用。",
   },
@@ -114,7 +114,7 @@ export default {
     "all-is-required": "所有字段都為必填項",
     "terms": "請仔細閱讀條款聲明，然後繼續",
     "password-is-too-short-minimum-is-8-characters": "密碼必須至少包含 8 個字符並且包含至少 1 個小寫字母、1 個大寫字母和 1 個數字",
-    "country-restricted": "對不起，QRYPTOS在當前國家暫時沒有提供服務，請耐心等待。",
+    "country-restricted": "此國家區域暫不支持本服務。",
   },
   "demo": {
     "title": "模擬賬戶",

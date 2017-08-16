@@ -30,7 +30,7 @@ export default {
     "invalid-email-or-password": "邮箱地址或密码无效",
     "verification-failed": "验证码无效",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "本次登陆的IP地址尚未被验证，验证链接已经发送到您的邮箱，请查收",
-    "country-restricted": "对不起，QRYPTOS在当前国家暂时没有提供服务，请耐心等待。",
+    "country-restricted": "此国家区域暂不支持本服务。",
     "failed-attempt-limit-reached": "尝试次数达到上限。",
     "en-authy-your-account-is-suspended": "您的Authy账户已被停用。",
   },
@@ -114,7 +114,7 @@ export default {
     "all-is-required": "所有字段都为必填项",
     "terms": "请仔细阅读条款声明，然后继续",
     "password-is-too-short-minimum-is-8-characters": "密码必须至少包含 8 个字符并且包含至少 1 个小写字母、1 个大写字母和 1 个数字",
-    "country-restricted": "对不起，QRYPTOS在当前国家暂时没有提供服务，请耐心等待。",
+    "country-restricted": "此国家区域暂不支持本服务。",
   },
   "demo": {
     "title": "模拟账户",

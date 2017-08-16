@@ -30,7 +30,7 @@ export default {
     "invalid-email-or-password": "Email address or password is invalid.",
     "verification-failed": "Authentication code is not valid.",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "You are logging in from a new IP address that is not confirmed yet. A confirmation link has been sent to your email address. Please check and confirm to continue.",
-    "country-restricted": "QRYPTOS is currently not available for this country.",
+    "country-restricted": "Service is currently unavailable in this country.",
     "failed-attempt-limit-reached": "Failed attempt limit reached.",
     "en-authy-your-account-is-suspended": "Your Authy account has been suspended.",
   },
@@ -114,7 +114,7 @@ export default {
     "all-is-required": "All fields are required.",
     "terms": "Please go through Terms & Conditions thoroughly and accept them before proceeding.",
     "password-is-too-short-minimum-is-8-characters": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
-    "country-restricted": "QRYPTOS is currently not available for this country.",
+    "country-restricted": "Service is currently unavailable in this country.",
   },
   "demo": {
     "title": "Use a demo account",
