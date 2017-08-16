@@ -16,14 +16,26 @@ var translations = (function getTranslations() {
     "ip-confirmed": {
       "en": "Your IP address has been confirmed. Please <a href=\"" + signInUrl + "\">Sign In</a>.",
       "ja": "IPアドレスが確認されました。ログインは<a href=\"" + signInUrl + "\">こちら</a>から",
-      "zhcn": "您的IP地址已经被确认，请<a href=\"" + signInUrl + "\">登录</a>.",
-      "zhtw": "您的IP地址已經被確認，請<a href=\"" + signInUrl + "\">登錄</a>.",
+      "zhcn": "您的IP地址已经被确认，请<a href=\"" + signInUrl + "\">登录</a>。",
+      "zhtw": "您的IP地址已經被確認，請<a href=\"" + signInUrl + "\">登錄</a>。",
     },
     "user-banned": {
       "en": "Your account has been frozen. All trading and withdrawal activities are now suspended. <br /><br />To unfreeze your account, please contact <a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
       "ja": "お客様のアカウントは停止されました。<br /><br />アカウントを復旧するには、 <a href=\"mailto:support@quoine.com\">support@quoine.com</a> へご連絡ください。",
       "zhcn": "您的账户已经被冻结，所有交易和存取款活动现已被暂停。<br /><br />解冻您的账户请联系<a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
       "zhtw": "您的賬戶已經被凍結，所有交易和存取款活動現已被暫停。<br /><br />解凍您的賬戶請聯系<a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
+    },
+    "user-confirmed": {
+      "en": "Your account has been successfully confirmed. Please <a href=\"" + signInUrl + "\">Sign In</a>.",
+      "ja": "アカウントは確認済みです。ログインは<a href=\"" + signInUrl + "\">こちら</a>から",
+      "zhcn": "您的账户已被确认，请<a href=\"" + signInUrl + "\">登录</a>。",
+      "zhtw": "您的賬戶已被確認，請<a href=\"" + signInUrl + "\">登錄</a>。",
+    },
+    "cryptowithdrawal-confirmed": {
+      "en": "Your crypto withdrawal request has been confirmed.",
+      "ja": "仮想通貨出金依頼については確認済みです。",
+      "zhcn": "您的提现请求已被确认。",
+      "zhtw": "您的提現請求已被確認。",
     },
   };
 
