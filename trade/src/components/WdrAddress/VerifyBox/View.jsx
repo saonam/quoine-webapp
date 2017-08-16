@@ -19,7 +19,7 @@ const WdrAddressVerifyView = (props) => (
       </div>
       <div className={styles.item}>
         <Button
-          styleName="text primary-3-bg full large"
+          styleName="text primary-4-bg full large"
           onClick={props.onDismiss}
         >
           {translate('wdr-address:add-dismiss')}
@@ -57,7 +57,7 @@ const WdrAddressVerifyView = (props) => (
 
       <div className={styles.item}>
         <Button
-          styleName="text primary-3-bg full large"
+          styleName="text primary-4-bg full large"
           onClick={props.onDismiss}
         >
           {translate('wdr-address:confirm-dismiss')}
