@@ -80,7 +80,7 @@ const WdrFormView = ({
           </p>
           <Button
             type="button"
-            styleName="full large text primary-3-bg"
+            styleName="full large text primary-4-bg"
             onClick={onDismiss} autoFocus={false}
             className={styles.confirm}
           >
