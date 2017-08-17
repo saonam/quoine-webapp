@@ -26,7 +26,7 @@ const getBody = ({ account, info }) => {
       return (
         <div>
           <div className={styles.item}>
-            <Item label="address" code={info.address} rows={4} />
+            <Item label="address" code={info.address} rows={5} />
           </div>
           <div className={styles.item}>
             <Item label="payment-id" code={info.paymentId} rows={3} />
@@ -38,7 +38,7 @@ const getBody = ({ account, info }) => {
       return (
         <div>
           <div className={styles.item}>
-            <Item label="address" code={info.address} rows={4} />
+            <Item label="address" code={info.address} rows={3} />
           </div>
           <div className={styles.item}>
             <Item label="message" code={info.message} rows={3} />
