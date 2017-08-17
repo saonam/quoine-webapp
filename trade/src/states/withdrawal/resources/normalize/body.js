@@ -24,16 +24,16 @@ const cryptoBody = (payload) => {
     amount: quantity,
     currency: account,
   };
+  if (account === 'XRP') {
+    // payment_id for 'XRP' use label in UI is 'Destination Tag'
+    withdrawal.payment_id = destinationTag;
+  }
   if (account === 'XMR') {
     withdrawal.payment_id = paymentId;
   }
   if (account === 'XEM') {
     // payment_id for 'XEM' use label in UI is 'Message'
     withdrawal.payment_id = message;
-  }
-  if (account === 'XRP') {
-    // payment_id for 'XRP' use label in UI is 'Destination Tag'
-    withdrawal.payment_id = destinationTag;
   }
   if (account === 'XLM') {
     // memo_type and memo_value for 'XLM'

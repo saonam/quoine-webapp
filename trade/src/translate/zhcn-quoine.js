@@ -338,12 +338,14 @@ export default {
   },
   "fund-crypto": {
     "help": "请将款项存入如下地址",
-    "help-XMR": "请将款项汇入下方提示的地址，并且保留支付单号，以便查询相关的汇款信息。",
     "help-XRP": "Ripple Base Reserve机制，即基本留存制度，是指Ripple交易账户中会被要求存留指定数量的XRP作为基本保证，现在的存留额度是20 XRP。",
+    "help-XMR": "请将款项汇入下方提示的地址，并且保留支付单号，以便查询相关的汇款信息。",
+    "help-XEM": "请保存下方的地址和信息，否则可能导致您的存款出现损失",
     "help-XLM": "请选择一个MEMO类型(在下方选择，包括`memo_text`, `memo_id`, `memo_hash`)，它将于XLM充值地址一起组成充值记录，不包含MEMO类型的充值可能导致无法完成，甚至造成损失。",
     // ===
     "address": "地址",
     "payment-id": "支付单号",
+    "message": "信息",
     "memo-text": "Memo Text",
     "memo-id": "Memo ID",
     "memo-hash": "Memo Hash",
@@ -351,6 +353,7 @@ export default {
     "copy": "复制",
     "copy-address": "复制地址",
     "copy-payment-id": "复制支付单号",
+    "copy-message": "复制信息",
     "copy-memo-text": "复制Memo Text",
     "copy-memo-id": "复制Memo ID",
     "copy-memo-hash": "复制Memo Hash",

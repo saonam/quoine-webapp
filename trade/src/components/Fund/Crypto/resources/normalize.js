@@ -9,6 +9,11 @@ export default (raw, account) => {
     return ({ address, paymentId });
   }
 
+  if (account === 'XEM') {
+    const [address, message] = info.split(',');
+    return ({ address, message });
+  }
+
   if (account === 'XLM') {
     const [address, ...memos] = info.split(',');
     const memoText = memos[0].substring('memo_text:'.length);

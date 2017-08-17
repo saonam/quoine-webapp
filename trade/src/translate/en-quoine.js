@@ -338,12 +338,14 @@ export default {
   },
   "fund-crypto": {
     "help": "Please deposit to the address below:",
-    "help-XMR": "Please deposit to the address below and remember to include the Payment ID in your deposit. Failure to do so may result in the loss of your deposit.",
     "help-XRP": "Ripple Base Reserve is a minimum amount of XRP that is required for every address in the ledger. Currently this is 20 XRP, which will be held as reserve the first time you deposit. Once the minimum amount is filled you will begin to receive the total amount transferred.",
+    "help-XMR": "Please deposit to the Address below and remember to include the Payment ID in your deposit. Failure to do so may result in the loss of your deposit.",
+    "help-XEM": "Please deposit to the Address below and remember to include the Message in your deposit. Failure to do so may result in the loss of your deposit.",
     "help-XLM": "Remember to take a Memo Type (selectable below) and include it in your XLM deposit. Failure to do so may result in the loss of your deposit.",
     // ===
     "address": "Address",
     "payment-id": "Payment ID",
+    "message": "Message",
     "memo-text": "Memo Text",
     "memo-id": "Memo ID",
     "memo-hash": "Memo Hash",
@@ -351,6 +353,7 @@ export default {
     "copy": "Copy",
     "copy-address": "Copy Address",
     "copy-payment-id": "Copy Payment ID",
+    "copy-message": "Copy Message",
     "copy-memo-text": "Copy Memo Text",
     "copy-memo-id": "Copy Memo ID",
     "copy-memo-hash": "Copy Memo Hash",

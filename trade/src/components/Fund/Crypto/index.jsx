@@ -31,7 +31,7 @@ class FundCrypto extends React.Component {
   }
   render() {
     return (
-      <View {...this.state} account={this.props.account} />
+      <View account={this.props.account} {...this.state} />
     );
   }
 }
