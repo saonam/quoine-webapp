@@ -5,3 +5,7 @@ export { default as INRTransfer } from './INRTransfer';
 export { default as PaymentId } from './PaymentId';
 export { default as Message } from './Message';
 export { default as DestinationTag } from './DestinationTag';
+export { default as MemoType } from './MemoType';
+export { default as MemoText } from './MemoText';
+export { default as MemoId } from './MemoId';
+export { default as MemoHash } from './MemoHash';

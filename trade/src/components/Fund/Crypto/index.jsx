@@ -9,27 +9,24 @@ class FundCrypto extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      busy: false,
-      address: '',
-      paymentId: '',
+      busy: true,
+      info: {},
     };
     this.onLoad = this.onLoad.bind(this);
   }
   componentDidMount() {
-    this.onLoad();
+    this.onLoad(this.props.account);
   }
-  componentDidUpdate(prevProps) {
-    this.onLoad(prevProps.account);
+  componentWillReceiveProps(nextProps) {
+    if (this.props.account !== nextProps.account) {
+      this.onLoad(nextProps.account);
+    }
   }
-  onLoad(prevAccount) {
-    const { account } = this.props;
-    if (account === prevAccount) { return; }
-
+  onLoad(account) {
     this.setState({ busy: true });
     resources.load(account)
-    .then(response => {
-      const { address, paymentId } = response;
-      this.setState({ busy: false, address, paymentId });
+    .then(info => {
+      this.setState({ busy: false, info });
     });
   }
   render() {

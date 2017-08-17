@@ -5,6 +5,7 @@ import translate from '@quoine/translate';
 
 import Loading from '@quoine/components/LoadingIconWrapper';
 import Item from './Item';
+import XLMBody from './XLMBody';
 
 import styles from './styles.css';
 
@@ -12,11 +13,39 @@ const getHelpKey = (account) => {
   switch (account) {
     case 'XMR': return 'help-XMR';
     case 'XRP': return 'help-XRP';
+    case 'XLM': return 'help-XLM';
     default: return 'help';
   }
 };
 
-const FundCryptoView = ({ busy, address, paymentId, account }) => {
+/* eslint-disable react/prop-types */
+const getBody = ({ account, info }) => {
+  switch (account) {
+    case 'XMR': {
+      return (
+        <div>
+          <div className={styles.item}>
+            <Item label="address" code={info.address} rows={4} />
+          </div>
+          <div className={styles.item}>
+            <Item label="payment-id" code={info.paymentId} rows={3} />
+          </div>
+        </div>
+      );
+    }
+    case 'XLM': {
+      return (
+        <XLMBody info={info} />
+      );
+    }
+    default: {
+      return (<Item code={info.address} showQRCode />);
+    }
+  }
+};
+/* eslint-enable react/prop-types */
+
+const FundCryptoView = ({ busy, info, account }) => {
   if (busy) { return (<Loading />); }
 
   return (
@@ -25,18 +54,7 @@ const FundCryptoView = ({ busy, address, paymentId, account }) => {
         {translate(`fund-crypto:${getHelpKey(account)}`)}
       </p>
       <div className={styles.body}>
-        {account === 'XMR' ? (
-          <div>
-            <div className={styles.item}>
-              <Item label="address" code={address} rows={4} />
-            </div>
-            <div className={styles.item}>
-              <Item label="payment-id" code={paymentId} rows={3} />
-            </div>
-          </div>
-        ) : (
-          <Item code={address} showQRCode />
-        )}
+        {getBody({ account, info })}
       </div>
     </div>
   );
@@ -44,8 +62,13 @@ const FundCryptoView = ({ busy, address, paymentId, account }) => {
 
 FundCryptoView.propTypes = {
   busy: PropTypes.bool.isRequired,
-  address: PropTypes.string.isRequired,
-  paymentId: PropTypes.string.isRequired,
+  info: PropTypes.shape({
+    address: PropTypes.string,
+    paymentId: PropTypes.string,
+    memoText: PropTypes.string,
+    memoId: PropTypes.string,
+    memoHash: PropTypes.string,
+  }).isRequired,
   account: PropTypes.string.isRequired,
 };
 

@@ -11,6 +11,12 @@ class WdrForm extends React.Component {
       destinationTag: '', // XRP only
       paymentId: '', // XMR only
       message: '', // XEM only
+      // XLM only
+      memoType: 'memo_text',
+      memoText: '',
+      memoId: '',
+      memoHash: '',
+      // ===
       INRTransfer: '', // INR only
       quantity: '100',
       code: '',

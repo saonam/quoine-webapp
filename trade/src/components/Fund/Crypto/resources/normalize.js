@@ -2,18 +2,26 @@ export default (raw, account) => {
   const cryptoAcc = raw.crypto_accounts.find(
     item => item.currency === account
   );
-  const address = cryptoAcc.address;
+  const info = cryptoAcc.address;
 
   if (account === 'XMR') {
-    const [addressId, paymentId] = address.split(',');
+    const [address, paymentId] = info.split(',');
+    return ({ address, paymentId });
+  }
+
+  if (account === 'XLM') {
+    const [address, ...memos] = info.split(',');
+    const memoText = memos[0].substring('memo_text:'.length);
+    const memoId = memos[1].substring('memo_id:'.length);
+    const memoHash = memos[2].substring('memo_hash:'.length);
     return ({
-      address: addressId,
-      paymentId,
+      address,
+      memoText,
+      memoId,
+      memoHash,
     });
   }
 
-  return ({
-    address,
-    paymentId: '',
-  });
+  // other crypto currencies
+  return { address: info };
 };

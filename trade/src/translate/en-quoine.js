@@ -340,13 +340,20 @@ export default {
     "help": "Please deposit to the address below:",
     "help-XMR": "Please deposit to the address below and remember to include the Payment ID in your deposit. Failure to do so may result in the loss of your deposit.",
     "help-XRP": "Ripple Base Reserve is a minimum amount of XRP that is required for every address in the ledger. Currently this is 20 XRP, which will be held as reserve the first time you deposit. Once the minimum amount is filled you will begin to receive the total amount transferred.",
+    "help-XLM": "Remember to take a Memo Type (selectable below) and include it in your XLM deposit. Failure to do so may result in the loss of your deposit.",
     // ===
     "address": "Address",
     "payment-id": "Payment ID",
+    "memo-text": "Memo Text",
+    "memo-id": "Memo ID",
+    "memo-hash": "Memo Hash",
     // ===
     "copy": "Copy",
     "copy-address": "Copy Address",
     "copy-payment-id": "Copy Payment ID",
+    "copy-memo-text": "Copy Memo Text",
+    "copy-memo-id": "Copy Memo ID",
+    "copy-memo-hash": "Copy Memo Hash",
   },
   "fund-error": {
     "you-are-not-approved": "Your account has to be approved before you can create a Funding Request.",
@@ -366,6 +373,12 @@ export default {
     "payment-id": "{{ currency}} Payment ID",
     "message": "{{ currency}} Message",
     "destination-tag": "{{ currency}} Destination Tag",
+    // ===
+    "memo-type": "{{ currency}} Memo Type",
+    "memo-text": "{{ currency}} Memo Text",
+    "memo-id": "{{ currency}} Memo ID",
+    "memo-hash": "{{ currency}} Memo Hash",
+    // ===
     "bank": "Bank Account",
     "inr-transfer": "INR Transfer Type",
     "inr-transfer-note": "This deposit method is only for INR domestic transfers from local India bank accounts.",

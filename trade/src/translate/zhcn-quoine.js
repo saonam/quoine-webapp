@@ -340,13 +340,20 @@ export default {
     "help": "请将款项存入如下地址",
     "help-XMR": "请将款项汇入下方提示的地址，并且保留支付单号，以便查询相关的汇款信息。",
     "help-XRP": "Ripple Base Reserve机制，即基本留存制度，是指Ripple交易账户中会被要求存留指定数量的XRP作为基本保证，现在的存留额度是20 XRP。",
+    "help-XLM": "请选择一个MEMO类型(在下方选择，包括`memo_text`, `memo_id`, `memo_hash`)，它将于XLM充值地址一起组成充值记录，不包含MEMO类型的充值可能导致无法完成，甚至造成损失。",
     // ===
     "address": "地址",
     "payment-id": "支付单号",
+    "memo-text": "Memo Text",
+    "memo-id": "Memo ID",
+    "memo-hash": "Memo Hash",
     // ===
     "copy": "复制",
     "copy-address": "复制地址",
     "copy-payment-id": "复制支付单号",
+    "copy-memo-text": "复制Memo Text",
+    "copy-memo-id": "复制Memo ID",
+    "copy-memo-hash": "复制Memo Hash",
   },
   "fund-error": {
     "you-are-not-approved": "您的账户需要被审核通过，才能执行存款操作",
@@ -366,6 +373,12 @@ export default {
     "payment-id": "{{ currency}} 支付单号",
     "message": "{{ currency}} 信息",
     "destination-tag": "{{ currency}} 目的标签",
+    // ===
+    "memo-type": "{{ currency}} MEMO类型",
+    "memo-text": "{{ currency}} Memo Text",
+    "memo-id": "{{ currency}} Memo ID",
+    "memo-hash": "{{ currency}} Memo Hash",
+    // ===
     "bank": "银行名称",
     "inr-transfer": "INR转账类型",
     "inr-transfer-note": "当前存款方式只适用于从本地印度账户向印度国内转账",

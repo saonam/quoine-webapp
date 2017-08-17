@@ -9,7 +9,17 @@ import Button from '@quoine/components/Button';
 import Bank from 'components/WdrBank';
 import AddressWhiteList from 'components/WdrAddress';
 import {
-  Quantity, Address as AddressTextInput, Code, INRTransfer, PaymentId, Message, DestinationTag,
+  Quantity,
+  Address as AddressTextInput,
+  Code,
+  INRTransfer,
+  PaymentId,
+  Message,
+  DestinationTag,
+  MemoType,
+  MemoText,
+  MemoId,
+  MemoHash,
 } from 'components/Withdrawal/Input';
 
 import styles from './styles.css';
@@ -50,6 +60,30 @@ const WdrFormView = ({
       {form.account === 'XRP' ? (
         <div className={styles.item}>
           <DestinationTag form={form} onChange={onChange} />
+        </div>
+      ) : null}
+
+      {form.account === 'XLM' ? (
+        <div className={styles.item}>
+          <MemoType form={form} onChange={onChange} />
+        </div>
+      ) : null}
+
+      {form.account === 'XLM' && form.memoType === 'memo_text' ? (
+        <div className={styles.item}>
+          <MemoText form={form} onChange={onChange} />
+        </div>
+      ) : null}
+
+      {form.account === 'XLM' && form.memoType === 'memo_id' ? (
+        <div className={styles.item}>
+          <MemoId form={form} onChange={onChange} />
+        </div>
+      ) : null}
+
+      {form.account === 'XLM' && form.memoType === 'memo_hash' ? (
+        <div className={styles.item}>
+          <MemoHash form={form} onChange={onChange} />
         </div>
       ) : null}
 

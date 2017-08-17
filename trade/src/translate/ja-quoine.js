@@ -340,13 +340,20 @@ export default {
     "help": "下記のアドレスにご送金ください：",
     "help-XMR": "以下のアドレスに入金してください。確認のため、入金IDを記載する必要があります。",
     "help-XRP": "Ripple Base Reserveは、元帳のすべてのアドレスに必要なXRPの最小額です。現在、20 XRPです。これは最初に入金する際にリザーブとして保有されます。 1度この最小額が満たされた場合、次回からは全額をお受け取りいただけます。",
+    "help-XLM": "Remember to take a Memo Type (selectable below) and include it in your XLM deposit. Failure to do so may result in the loss of your deposit.",
     // ===
     "address": "アドレス",
     "payment-id": "ペイメントID",
+    "memo-text": "Memo Text",
+    "memo-id": "Memo ID",
+    "memo-hash": "Memo Hash",
     // ===
     "copy": "コピー",
     "copy-address": "アドレスをコピーする",
     "copy-payment-id": "ペイメントIDをコピー",
+    "copy-memo-text": "Copy Memo Text",
+    "copy-memo-id": "Copy Memo ID",
+    "copy-memo-hash": "Copy Memo Hash",
   },
   "fund-error": {
     "you-are-not-approved": "このアカウントは承認中のため入金情報を作成できません。",
@@ -366,6 +373,12 @@ export default {
     "payment-id": "{{ currency}} Payment ID",
     "message": "{{ currency}} Message",
     "destination-tag": "{{ currency}} Destination Tag",
+    // ===
+    "memo-type": "{{ currency}} Memo Type",
+    "memo-text": "{{ currency}} Memo Text",
+    "memo-id": "{{ currency}} Memo ID",
+    "memo-hash": "{{ currency}} Memo Hash",
+    // ===
     "bank": "口座名義",
     "inr-transfer": "送金方法",
     "inr-transfer-note": "この振込みの方法はインド銀行口座よりINR入金のみ対応いたします。",

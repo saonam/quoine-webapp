@@ -16,6 +16,7 @@ const fiatBody = ({ code, account, bank, quantity, INRTransfer }) => {
 const cryptoBody = (payload) => {
   const {
     code, account, address, quantity, paymentId, message, destinationTag,
+    memoType, memoText, memoId, memoHash,
   } = payload;
 
   const withdrawal = {
@@ -33,6 +34,13 @@ const cryptoBody = (payload) => {
   if (account === 'XRP') {
     // payment_id for 'XRP' use label in UI is 'Destination Tag'
     withdrawal.payment_id = destinationTag;
+  }
+  if (account === 'XLM') {
+    // memo_type and memo_value for 'XLM'
+    withdrawal.memo_type = memoType;
+    if (memoType === 'memo_text') { withdrawal.memo_value = memoText; }
+    if (memoType === 'memo_id') { withdrawal.memo_value = memoId; }
+    if (memoType === 'memo_hash') { withdrawal.memo_value = memoHash; }
   }
 
   return ({
