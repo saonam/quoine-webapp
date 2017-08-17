@@ -513,7 +513,6 @@ export default {
     "address-not-in-whitelist": "アドレスはホワイトリストに含まれていません",
     "address-not-unique": "既に登録のアドレスです",
     "address-invalid": "無効なアドレスです",
-    "already-confirmed": "Aアドレスが確認されました",
     "verification-failed": "認証に失敗しました。",
     "confirmation-token-is-invalid": "確認トークンが無効です。",
     "confirmation-period-is-expired": "確認トークンは有効期限切れです。",
