@@ -36,8 +36,13 @@ const getBody = ({ account, info }) => {
     }
     case 'XEM': {
       return (
-        <div className={styles.item}>
-          <Item label="message" code={info.message} rows={3} />
+        <div>
+          <div className={styles.item}>
+            <Item label="address" code={info.address} rows={4} />
+          </div>
+          <div className={styles.item}>
+            <Item label="message" code={info.message} rows={3} />
+          </div>
         </div>
       );
     }
