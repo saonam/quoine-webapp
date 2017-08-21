@@ -1,13 +1,34 @@
 .main {
-  composes: top-small from "@quoine/styles/padding.css";
+  margin-top: 10px;
 }
 .link {
-  composes: ver-small right-large from "@quoine/styles/padding.css";
+  composes: right-large from "@quoine/styles/padding.css";
   composes: uppercase semi-bold right from "@quoine/styles/text.css";
   composes: block from "@quoine/styles/display.css";
-  composes: primary-3 from "@quoine/styles/color.css";
+  composes: primary from "@quoine/styles/color.css";
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 .active {
   composes: link;
   composes: accent from "@quoine/styles/color.css";
+}
+
+.wrapper {
+  text-align: right;
+  padding-right: 24px;
+}
+.divider {
+  composes: bottom color-primary-2 from "@quoine/styles/border.css";
+  composes: primary-3 from "@quoine/styles/color.css";
+  margin-top: 24px;
+  margin-bottom: 6px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  line-height: 18px;
+}
+.wrapper .divider {
+  border-bottom-style: dashed;
 }

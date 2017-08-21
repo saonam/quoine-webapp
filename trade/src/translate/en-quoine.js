@@ -148,6 +148,8 @@ export default {
     "quantity-integer": "Order quantity must be an integer.",
     "user-free-margin-below-tolerance-level": "Free margin is below tolerance level",
     "trailing-stop-value-must-be-positive": "Trailing stop value must be positive.",
+    "price-distance-must-be-less-than-50-of-market-price": "Price distance must be less than 50% of market price.",
+    "order-product-disabled": "This product is currently not available for trading. Please select another one to continue.",
   },
   // ===
   "position": {
@@ -336,15 +338,25 @@ export default {
   },
   "fund-crypto": {
     "help": "Please deposit to the address below:",
-    "help-XMR": "Please deposit to the address below and remember to include the Payment ID in your deposit. Failure to do so may result in the loss of your deposit.",
     "help-XRP": "Ripple Base Reserve is a minimum amount of XRP that is required for every address in the ledger. Currently this is 20 XRP, which will be held as reserve the first time you deposit. Once the minimum amount is filled you will begin to receive the total amount transferred.",
+    "help-XMR": "Please deposit to the Address below and remember to include the Payment ID in your deposit. Failure to do so may result in the loss of your deposit.",
+    "help-XEM": "Please deposit to the Address below and remember to include the Message in your deposit. Failure to do so may result in the loss of your deposit.",
+    "help-XLM": "Remember to take a Memo Type (selectable below) and include it in your XLM deposit. Failure to do so may result in the loss of your deposit.",
     // ===
     "address": "Address",
     "payment-id": "Payment ID",
+    "message": "Message",
+    "memo-text": "Memo Text",
+    "memo-id": "Memo ID",
+    "memo-hash": "Memo Hash",
     // ===
     "copy": "Copy",
     "copy-address": "Copy Address",
     "copy-payment-id": "Copy Payment ID",
+    "copy-message": "Copy Message",
+    "copy-memo-text": "Copy Memo Text",
+    "copy-memo-id": "Copy Memo ID",
+    "copy-memo-hash": "Copy Memo Hash",
   },
   "fund-error": {
     "you-are-not-approved": "Your account has to be approved before you can create a Funding Request.",
@@ -361,6 +373,15 @@ export default {
     "time": "Created At",
     "quantity": "Amount",
     "address": "{{ currency}} Address",
+    "payment-id": "{{ currency}} Payment ID",
+    "message": "{{ currency}} Message",
+    "destination-tag": "{{ currency}} Destination Tag",
+    // ===
+    "memo-type": "{{ currency}} Memo Type",
+    "memo-text": "{{ currency}} Memo Text",
+    "memo-id": "{{ currency}} Memo ID",
+    "memo-hash": "{{ currency}} Memo Hash",
+    // ===
     "bank": "Bank Account",
     "inr-transfer": "INR Transfer Type",
     "inr-transfer-note": "This deposit method is only for INR domestic transfers from local India bank accounts.",
@@ -401,6 +422,8 @@ export default {
     "token-is-invalid": "This token is invalid.",
     "verification-failed": "This authentication code is invalid.",
     "address-not-present": "This address is invalid. Please check again.",
+    "address-is-requried": "Please select a withdrawal address. If you don't have any, add a new one by clicking Add New Address.",
+    "address-need-to-be-verified": "Please verify this address before using it for withdrawals.",
   },
   // ===
   "futures-balance": {
@@ -465,6 +488,35 @@ export default {
     "country-can-t-be-blank": "Country cannot be blank.",
     "joint-country-can-t-be-blank": "Joint Country cannot be blank.",
     "en-bank-account-errors-withdrawal-exist-can-not-delete-this-bank-account": "This bank account cannot be deleted because there are pending withdrawal requests with it. Please cancel these requests first.",
+  },
+  "wdr-address": {
+    "edit-action": "Edit",
+    "remove-action": "Remove",
+    "add-action": "Add New Address",
+    "edit-success": "Your address has been edited successfully.",
+    "add-success": "Your address has been added successfully. Please check you email for confirmation token. You can now go back to Withdrawal.",
+    "confirmation-token-input": "Confirmation Token",
+    "confirmation-token-description": "Please check your email for the confirmation token and enter it here to continue. The token expires in 30 minutes. Unconfirmed addresses will be removed automatically.",
+    "address": "Address",
+    "remove-confirm": "Remove",
+    "confirm-action": "Verify",
+    "auth-code": "Authentication Code",
+    "add-submit": "Submit",
+    "add-dismiss": "Back to Withdrawal",
+    "edit-submit": "Submit",
+    "edit-dismiss": "Cancel",
+    "confirm-submit": "Verify",
+    "confirm-dismiss": "Dismiss",
+    "confirm-success": "Verified successfully.",
+  },
+  "wdr-address-error": {
+    "address-not-in-whitelist": "Address is not whitelisted yet.",
+    "address-not-unique": "Address is not unique.",
+    "address-invalid": "Address is invalid.",
+    "verification-failed": "Authentication code is invalid.",
+    "confirmation-token-is-invalid": "Confirmation token is invalid.",
+    "confirmation-period-is-expired": "Confirmation period has expired.",
+    "token-is-invalid": "Token is invalid.",
   },
   // ===
   "volume": {

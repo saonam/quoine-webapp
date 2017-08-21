@@ -4,6 +4,8 @@
   composes: x-small from "@quoine/styles/padding.css";
   composes: semi-bold center from "@quoine/styles/text.css";
   composes: relative from "@quoine/styles/position.css";
+
+  padding: 0 calc($base * 7);
 }
 .button {
   composes: absolute top bottom from "@quoine/styles/position.css";

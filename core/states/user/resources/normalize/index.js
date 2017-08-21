@@ -1,3 +1,5 @@
+import { currentTermVersion } from '@quoine/components/Term/resources';
+
 import basic from './basic';
 import pteIndi from './pteIndi';
 import pteCorp from './pteCorp';
@@ -25,10 +27,16 @@ const normalize = (raw) => {
   const detail = details[operator][raw.user_type] || pteIndi;
   const detailInfo = detail(raw);
 
+  const currentTermVersion = raw.current_term_version ? Number(raw.current_term_version) : 1;
+  const latestTermVersion = raw.latest_term_version ? Number(raw.latest_term_version) : 1;
+
+  const needConfirmNewTerm = underJFSA && (currentTermVersion !== latestTermVersion);
+
   return ({
     ...basicInfo,
     ...detailInfo,
     underJFSA,
+    needConfirmNewTerm,
   });
 };
 

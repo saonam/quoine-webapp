@@ -118,7 +118,11 @@ const UserForm2View = ({ onSubmit, form, onChange, disabled }) => (
     <ErrorMessage className={styles.error} error={disabled} />
 
     <div className={styles.input}>
-      <Button type="submit" styleName={`modal accent ${disabled ? 'disabled' : ''}`}>
+      <Button
+        type="submit"
+        disabled={disabled}
+        styleName="modal accent disabled-primary-2"
+      >
         {translate('sign-up:action-next')}
       </Button>
     </div>

@@ -10,7 +10,9 @@ const ConfirmWrapperCheckboxInput = (props) => (
   <CheckboxInput id={props.id} onChange={props.onToggleSkip} value={props.skip}>
     {translate('confirmation:skip')}
     <span>&nbsp;</span>
-    <Hint>{translate('confirmation:skip-hint')}</Hint>
+    <Hint style={{ width: 200, left: '50%', transform: 'translateX(-50%)' }}>
+      {translate('confirmation:skip-hint')}
+    </Hint>
   </CheckboxInput>
 );
 

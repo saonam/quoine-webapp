@@ -13,6 +13,10 @@ export default {
     "back": "Back",
     "new-text": "Don't have an account?",
     "new-or": "or",
+    // ===
+    "change-password-title": "Password Update Required",
+    "change-password-message": "You just used a temporary password to sign in. Please update the password to continue.",
+    "change-password-button": "Update Password",
     // message
     "message-account-confirmed": "Your account has been confirmed. You can now sign in.",
     "message-password-updated": "Your password has been updated. You can now sign in with the new password.",
@@ -26,7 +30,9 @@ export default {
     "invalid-email-or-password": "Email address or password is invalid.",
     "verification-failed": "Authentication code is not valid.",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "You are logging in from a new IP address that is not confirmed yet. A confirmation link has been sent to your email address. Please check and confirm to continue.",
-    "country-restricted": "QRYPTOS is currently not available for this country.",
+    "country-restricted": "Service is currently unavailable in this country.",
+    "failed-attempt-limit-reached": "Failed attempt limit reached.",
+    "en-authy-your-account-is-suspended": "Your Authy account has been suspended.",
   },
   "forgot-password": {
     "help": "To reset your password, please contact <a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
@@ -108,7 +114,7 @@ export default {
     "all-is-required": "All fields are required.",
     "terms": "Please go through Terms & Conditions thoroughly and accept them before proceeding.",
     "password-is-too-short-minimum-is-8-characters": "Password must have at least 8 characters and contain at least 1 lowercase letter, 1 uppercase letter, and 1 number.",
-    "country-restricted": "QRYPTOS is currently not available for this country.",
+    "country-restricted": "Service is currently unavailable in this country.",
   },
   "demo": {
     "title": "Use a demo account",
@@ -143,7 +149,9 @@ export default {
     "password-title": "Password",
     "tfa-title": "Two Factor Authentication",
     // ===
-    "api-title": "API",
+    "api-access-title": "API Access",
+    "api-title": "Tokens",
+    "ip-title": "IP Whitelist",
   },
   "daily-report": {
     "title": "Report",
@@ -165,6 +173,7 @@ export default {
     "help-pending": "Your account is not verified yet. Please upload the following documents for account verification:",
     "help-pending-jp": "Your account is not verified yet. Please upload the following documents for account verification:",
     "help-pending-jp-link": "Documents Explanation",
+    "help-banned": "Please contact support@quoine.com to re-open your account.",
     "help-edit-info": "Please contact us at support@quoine.com if you would like to change any of your client information.",
     // ===
     "document-id": "ID Document",
@@ -191,14 +200,14 @@ export default {
     "action-submit": "Submit",
     "action-cancel": "Cancel",
     "description": "Please contact us at support@quoine.com if you fall into one of the cases below:<br/>1. People residing outside of Japan (including  Japanese citizens)<br/>2. Family member of foreigner Politically Exposed Persons (PEPs)<br/>3. United States of America taxpayer",
-    "message-no-changes": "Your information has not been changed.",
   },
   "tfa-manage": {
     "status": "TFA Status",
     "status-enabled": "Enabled",
     "status-disabled": "Not Enabled Yet",
     // ===
-    "app-select-description": "To enabled 2FA, please select one of the apps below:",
+    "disable-description": "To disable 2FA, please contact our Support at <a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
+    "authy-warning": "Authy will no longer be supported in the near future. To switch to Google Authenticator, you will need to disable the 2FA setting with Authy first, then enable it again using Google Authenticator.",
     // ===
     "app": "TFA App",
     "app-authy": "Authy",
@@ -206,6 +215,7 @@ export default {
     // ===
     "action-enable": "Enable",
     "action-disable": "Disable",
+    "action-cancel": "Cancel",
     // ===
     "form-input": "Authentication Code",
     "form-authy-description": "Please enter the code that was sent to your phone.",
@@ -233,15 +243,17 @@ export default {
     "enter-key-description": "You can also choose Manual Entry and enter the key yourself instead of scanning the QR code.",
   },
   "token": {
-    "id": "ID",
-    "value": "Token/Secret",
+    "id": "Token ID",
+    "value": "Token Secret",
     "value-copy": "Copy",
     "permissions": "Permissions",
     "none": "None",
-    "value-message": "This Token/Secret is displayed one time only.",
+    "value-message": "This Token Secret is displayed one time only.",
     // ===
     "remove-title": "Delete Token",
     "remove-action": "Delete",
+    "remove-action-yes": "Delete",
+    "remove-action-no": "Cancel",
     "remove-description": "Are you sure want to delete this token? All devices and apps using this token will be unauthorized immediately.",
     // ===
     "add-title": "Create New API Token",
@@ -257,5 +269,35 @@ export default {
     "name-orders": "Orders",
     "name-trades": "Positions",
     "name-trading-accounts": "Trading Accounts",
+  },
+  "ip": {
+    "add-title": "Add new IP",
+    "add-main-description1": "By default we do not block any IPs when the whitelist is empty.",
+    "add-main-description2": "When you start adding new IPs to the whitelist, only requests from those IPs are allowed to go through. This applies to all your existing API Keys so make sure you include all your server IPs in the whitelist when you add anything there.",
+    "add-description": "Please enter your IP address and authentication code below:",
+    "add-action-submit": "Add",
+    "add-action-cancel": "Cancel",
+    // ===
+    "input-ip": "IP Address",
+    "input-code": "Authentication Code",
+    "id": "ID",
+    "ip": "IP",
+    "status": "Status",
+    "remove-button": "Delete Ip",
+    "dismiss-button": "Dismiss",
+    "remove-action-yes": "Delete",
+    "remove-action-no": "Cancel",
+    "status-awaiting-confirmation": "Unconfirmed",
+    "status-confirmed": "Confirmed",
+    "remove-description": "Deleting this IP address will also remove access of all API keys that are using it to connect to the system.",
+    "checkmail-notification": "Please check your email to confirm this IP address.",
+  },
+  "ip-error": {
+    "verification-failed": "Authentication code invalid.",
+    "token-is-invalid": "Authentication code invalid.",
+    "ip-has-been-existed": "This IP address has been registered previously.",
+    "ip-existing-ip": "This IP address has been registered previously.",
+    "ip-wrong-format": "This IP address is invalid.",
+    "cannot-remove-all-ips": "Most recent IP address cannot be removed.",
   },
 };

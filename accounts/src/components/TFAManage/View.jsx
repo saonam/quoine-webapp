@@ -4,32 +4,34 @@ import React from 'react';
 import translate from '@quoine/translate';
 
 import Loading from '@quoine/components/LoadingIconWrapper';
-import Field from '@quoine/components/Field';
+import Button from '@quoine/components/Button';
 
-import Status from 'components/TFA/Status';
+import Info from 'components/TFA/Info';
 import GA from 'components/TFA/GA';
 import Authy from 'components/TFA/Authy';
-import AppSelect from './AppSelect';
 
 const TFAManageView = ({
   busy, tfa, app, phone,
-  onSelectApp, onUpdatePhone, onToggleTfa,
+  onToggleForm, onUpdatePhone, onUpdateTfa,
 }) => {
   if (busy) { return (<Loading />); }
 
   const App = app === 'ga' ? GA : Authy;
   return (
     <div>
-      <Status tfa={tfa} />
-      {tfa ? (
-        <Field layout="inline" label={translate('tfa-manage:app')}>
-          {translate(`tfa-manage:app-${app}`)}
-        </Field>
-      ) : (
-        <AppSelect current={app} onSelect={onSelectApp} />
-      )}
+      <Info tfa={tfa} app={app} />
+
+      {!tfa && !app ? (
+        <Button
+          styleName="text accent inline"
+          onClick={onToggleForm}
+        >
+          {translate(`tfa-manage:action-${app ? 'cancel' : 'enable'}`)}
+        </Button>
+      ) : null}
+
       {app ? (
-        <App {...{ tfa, onToggleTfa, phone, onUpdatePhone }} />
+        <App {...{ tfa, onUpdateTfa, phone, onUpdatePhone, onToggleForm }} />
       ) : null}
     </div>
   );
@@ -41,9 +43,9 @@ TFAManageView.propTypes = {
   app: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
   // ==
-  onSelectApp: PropTypes.func.isRequired,
+  onToggleForm: PropTypes.func.isRequired,
   onUpdatePhone: PropTypes.func.isRequired,
-  onToggleTfa: PropTypes.func.isRequired,
+  onUpdateTfa: PropTypes.func.isRequired,
 };
 
 export default TFAManageView;

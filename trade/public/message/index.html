@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+      var origin = window.location.origin;
+      var vendor = (function getVendor() {
+        switch (origin) {
+
+          case "https://bttrader.min-btc.com":
+          case "https://traders-trade-stag.quoine.io":
+          case "https://traders-trade-stag2.quoine.io":
+            return "traders";
+
+          case "https://trade.qryptos.com":
+          case "https://trade-sandbox.qryptos.com":
+          case "https://qryptos-trade-stag.quoine.io":
+            return "qryptos";
+
+          default:
+            return "quoine";
+        }
+      })();
+      
+      // favicon
+      var faviconUrl = "../favicon-" + vendor + ".ico";
+      document.write("<link rel=\"shortcut icon\" href=\"" + faviconUrl + "\">");
+
+      // title
+      var title = vendor.toUpperCase();
+      document.write("<title>" + title + "</title>");
+    </script>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header" id="header">
+      </header>
+      <main class="body" id="body">
+      </main>
+    </div>
+    <script type="text/javascript" src="polyfills.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+  </body>
+</html>

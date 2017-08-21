@@ -22,6 +22,7 @@ import orderEntry from 'states/orderEntry';
 import charts from 'states/charts';
 
 import wdrBank from 'states/wdrBank';
+import wdrAddress from 'states/wdrAddress';
 import withdrawal from 'states/withdrawal';
 
 import orderBlotter from 'states/orderBlotter';
@@ -55,6 +56,7 @@ const states = {
   charts,
 
   wdrBank,
+  wdrAddress,
   withdrawal,
 
   orderBlotter,

@@ -5,9 +5,10 @@ import NameInput from '@quoine/components/NameInput';
 
 const JpKanaNameInput = (props) => (
   <NameInput
-    firstLabel="セイ" lastLabel="メイ"
+    firstLabel="メイ" lastLabel="セイ"
     pattern="[゠-ヿ]+"
     title="カタカナ文字のみ入力してください"
+    reverse
     {...props}
   />
 );

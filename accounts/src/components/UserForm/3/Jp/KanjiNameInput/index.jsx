@@ -4,7 +4,7 @@ import React from 'react';
 import NameInput from '@quoine/components/NameInput';
 
 const JpKanjiNameInput = (props) => (
-  <NameInput firstLabel="姓" lastLabel="名" {...props} />
+  <NameInput firstLabel="名" lastLabel="姓" reverse {...props} />
 );
 
 JpKanjiNameInput.propTypes = {

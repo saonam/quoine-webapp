@@ -10,7 +10,7 @@ import normalize from './normalize';
 //   ]).then(response => normalize(account, response))
 // );
 
-const load = (currency, page) => (
+const load = ({ currency }, page) => (
   Promise.all([
     // this will be cache
     // we need to use this instead of selector so
@@ -22,17 +22,28 @@ const load = (currency, page) => (
     }),
   ]).then(response => {
     const [account, raw] = response;
-    return normalize(raw, account);
+    return normalize.all(raw, account);
   }).catch(() => ({
     models: [],
     page: Infinity,
   }))
 );
 
-// fake subscribe to satisfy sagas utils specs
-const subscribe = () => {};
+const subscribe = ({ currency, userId }, onUpdate) => {
+  quoine.get(`/accounts/${currency}`).then(account => {
+    quoine.subscribe(
+      `user_${userId}_account_${currency.toLowerCase()}_transactions`,
+      'updated',
+      (raw) => onUpdate(normalize.one(raw, account))
+    );
+  });
+};
 
-// fake unsubscribe to satisfy sagas utils specs
-const unsubscribe = () => {};
+const unsubscribe = ({ currency, userId }) => {
+  quoine.unsubscribe(
+    `user_${userId}_account_${currency.toLowerCase()}_transactions`,
+    'updated'
+  );
+};
 
 export default { load, subscribe, unsubscribe };

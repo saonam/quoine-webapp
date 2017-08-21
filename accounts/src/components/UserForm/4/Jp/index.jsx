@@ -30,7 +30,6 @@ class UserForm4Jp extends React.Component {
         originalForm={this.props.form}
         edit={this.props.edit}
         parentError={this.props.error}
-        changed={this.props.changed}
         // ===
         captcha={this.props.captcha}
         onRef={this.props.onRef}

@@ -4,7 +4,7 @@ import React from 'react';
 import styles from '../styles.css';
 
 const WdrItemAddress = ({ withdrawal }) => (
-  <span className={styles.address}>{withdrawal.address}</span>
+  <span className={styles.code}>{withdrawal.address}</span>
 );
 
 WdrItemAddress.propTypes = {

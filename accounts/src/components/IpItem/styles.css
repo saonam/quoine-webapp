@@ -1,0 +1,8 @@
+@import url('@quoine/core/styles/_size.css');
+
+.notification {
+  composes: large line-2 from "@quoine/styles/text.css";
+}
+.status {
+  margin-right: calc($base / 3);
+}

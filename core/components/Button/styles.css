@@ -50,6 +50,10 @@
   composes: primary-4 from "@quoine/styles/color.css";
   composes: _accent-interactive;
 }
+.primary-4-bg {
+  composes: primary-4;
+  composes: primary-1 from "@quoine/styles/bg-color.css";
+}
 .light,
 .primary-3 {
   composes: primary-3 from "@quoine/styles/color.css";

@@ -22,6 +22,7 @@
 
       function isValidOrigin(origin) {
         return origin === 'http://localhost:3000' ||
+          origin.slice(-9) === 'quoine.io' ||
           origin.slice(-10) === 'quoine.com' ||
           origin.slice(-11) === 'quoinex.com' ||
           origin.slice(-11) === 'min-btc.com' ||

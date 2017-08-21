@@ -57,7 +57,7 @@ export default {
     // ===
     "distance": "价差",
     "distance-type": "价差类型",
-    "distance-type-fiat": "fiat",
+    "distance-type-fiat": "价格",
     "distance-type-percentage": "百分比",
     // ===
     "margin": "保证金",
@@ -148,6 +148,8 @@ export default {
     "quantity-integer": "订单数必须为整数",
     "user-free-margin-below-tolerance-level": "保证金应高于保证金要求额",
     "trailing-stop-value-must-be-positive": "只在订单盈余为正的情况下会触发移动止损。",
+    "price-distance-must-be-less-than-50-of-market-price": "移动止损价格不能小于当前市价的50%",
+    "order-product-disabled": "此货币对目前无法交易，请选择其他货币对进行交易。",
   },
   // ===
   "position": {
@@ -182,7 +184,7 @@ export default {
     "quantity-close": "开盘数量",
     "quantity-open": "收盘数量",
     // ===
-    "int-total": "Total Int.",
+    "int-total": "总盈利",
     "interest-total": "总盈利",
     // ===
     "created-at": "已创建于",
@@ -249,7 +251,7 @@ export default {
     "type-bought": "购得",
     "type-credit": "信用",
     "type-credit-new-register": "新用户信用",
-    "type-credit-referrer": "Referral Credit",
+    "type-credit-referrer": "推荐奖励",
     "type-cross-ccy-trade": "货币交易",
     "type-debit": "借方",
     "type-direct-trade": "交易",
@@ -336,15 +338,25 @@ export default {
   },
   "fund-crypto": {
     "help": "请将款项存入如下地址",
-    "help-XMR": "请将款项汇入下方提示的地址，并且保留支付单号，以便查询相关的汇款信息。",
     "help-XRP": "Ripple Base Reserve机制，即基本留存制度，是指Ripple交易账户中会被要求存留指定数量的XRP作为基本保证，现在的存留额度是20 XRP。",
+    "help-XMR": "请将款项汇入下方提示的地址，并且保留支付单号，以便查询相关的汇款信息。",
+    "help-XEM": "请保存下方的地址和信息，否则可能导致您的存款出现损失",
+    "help-XLM": "请选择一个MEMO类型(在下方选择，包括`memo_text`, `memo_id`, `memo_hash`)，它将于XLM充值地址一起组成充值记录，不包含MEMO类型的充值可能导致无法完成，甚至造成损失。",
     // ===
     "address": "地址",
     "payment-id": "支付单号",
+    "message": "信息",
+    "memo-text": "Memo Text",
+    "memo-id": "Memo ID",
+    "memo-hash": "Memo Hash",
     // ===
     "copy": "复制",
     "copy-address": "复制地址",
     "copy-payment-id": "复制支付单号",
+    "copy-message": "复制信息",
+    "copy-memo-text": "复制Memo Text",
+    "copy-memo-id": "复制Memo ID",
+    "copy-memo-hash": "复制Memo Hash",
   },
   "fund-error": {
     "you-are-not-approved": "您的账户需要被审核通过，才能执行存款操作",
@@ -361,6 +373,15 @@ export default {
     "time": "创建于",
     "quantity": "金额",
     "address": "{{ currency}} 地址",
+    "payment-id": "{{ currency}} 支付单号",
+    "message": "{{ currency}} 信息",
+    "destination-tag": "{{ currency}} 目的标签",
+    // ===
+    "memo-type": "{{ currency}} MEMO类型",
+    "memo-text": "{{ currency}} Memo Text",
+    "memo-id": "{{ currency}} Memo ID",
+    "memo-hash": "{{ currency}} Memo Hash",
+    // ===
     "bank": "银行名称",
     "inr-transfer": "INR转账类型",
     "inr-transfer-note": "当前存款方式只适用于从本地印度账户向印度国内转账",
@@ -377,7 +398,7 @@ export default {
     // ===
     "success": "取款请求已提交",
     // ===
-    "dismiss": "Dismiss",
+    "dismiss": "取消",
     "check-email-message": "虚拟货币取款确认连接已发送到您的邮箱，请查收。本条链接有效期间为30分钟",
     // ===
     "status": "状态",
@@ -401,6 +422,8 @@ export default {
     "token-is-invalid": "此验证码无效",
     "verification-failed": "此授权码无效",
     "address-not-present": "此地址无效，请重新确认。",
+    "address-is-requried": "请选择提币地址。如果您之前没有添加，请点击新地址按钮进行添加。",
+    "address-need-to-be-verified": "提币前请确认使用的地址是否无误。",
   },
   // ===
   "futures-balance": {
@@ -465,6 +488,35 @@ export default {
     "country-can-t-be-blank": "国家不能为空",
     "joint-country-can-t-be-blank": "国家不能为空",
     "en-bank-account-errors-withdrawal-exist-can-not-delete-this-bank-account": "有取款业务正在使用此账户，如若移除此账户请先取消等待中的取款业务",
+  },
+  "wdr-address": {
+    "edit-action": "编辑",
+    "remove-action": "移除",
+    "add-action": "添加新地址",
+    "edit-success": "编辑成功",
+    "add-success": "您已成功添加地址。请查收确认码邮件，并返回提现界面。",
+    "confirmation-token-input": "确认码",
+    "confirmation-token-description": "请查收您的确认码邮件，并在此处输入您的确认码。确认码的有效期为30分钟。若地址未被确认，将会被自动移除。",
+    "address": "地址",
+    "remove-confirm": "移除",
+    "confirm-action": "确认",
+    "auth-code": "验证码",
+    "add-submit": "提交",
+    "add-dismiss": "返回提现",
+    "edit-submit": "提交",
+    "edit-dismiss": "取消",
+    "confirm-submit": "确认",
+    "confirm-dismiss": "取消",
+    "confirm-success": "确认成功",
+  },
+  "wdr-address-error": {
+    "address-not-in-whitelist": "地址不在白名单内",
+    "address-not-unique": "并非唯一地址",
+    "address-invalid": "地址无效",
+    "verification-failed": "验证码无效",
+    "confirmation-token-is-invalid": "确认码无效",
+    "confirmation-period-is-expired": "确认码已过期",
+    "token-is-invalid": "Token无效",
   },
   // ===
   "volume": {

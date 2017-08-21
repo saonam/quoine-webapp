@@ -1,0 +1,28 @@
+.main {
+  composes: height-full from "@quoine/styles/size.css";
+  composes: y-auto from "@quoine/styles/overflow.css";
+  composes: medium from "@quoine/styles/padding.css";
+}
+
+.description {
+  composes: accent from "@quoine/styles/color.css";
+}
+
+.body {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+
+.item {
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.item:first-child {
+  margin: 0;
+}
+.success,
+.error {
+  composes: item;
+  composes: line-1-5 from "@quoine/styles/text.css";
+}
+.success {
+  composes: accent from "@quoine/styles/color.css";
+}

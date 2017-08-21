@@ -23,7 +23,7 @@ const OrderEntryForm = ({ form, user }) => (
       <div key={i1} className={styles.row}>
         {row.map((Element, i2) => (
           user.underJFSA && Element === QuantityDisclose ? null : (
-            <Element key={i2} className={styles.item} form={form} />
+            <Element key={i2} className={styles.item} form={form} user={user} />
           )
         ))}
       </div>

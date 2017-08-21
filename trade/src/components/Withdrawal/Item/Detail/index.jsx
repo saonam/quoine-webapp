@@ -8,6 +8,9 @@ import Time from '../Time';
 import Bank from '../Bank';
 import Quantity from '../Quantity';
 import Address from '../Address';
+import PaymentId from '../PaymentId';
+import DestinationTag from '../DestinationTag';
+import Message from '../Message';
 import Status from '../Status';
 
 import styles from './styles.css';
@@ -22,6 +25,21 @@ const WdrItemDetail = ({ withdrawal }) => (
       <Field id="bank"><Bank withdrawal={withdrawal} /></Field>
     ) : (
       <Field id="address" currency={withdrawal.account}><Address withdrawal={withdrawal} /></Field>
+    )}
+    {withdrawal.paymentId && (
+      <Field id="payment-id" currency={withdrawal.account}>
+        <PaymentId withdrawal={withdrawal} />
+      </Field>
+    )}
+    {withdrawal.message && (
+      <Field id="message" currency={withdrawal.account}>
+        <Message withdrawal={withdrawal} />
+      </Field>
+    )}
+    {withdrawal.destinationTag && (
+      <Field id="destination-tag" currency={withdrawal.account}>
+        <DestinationTag withdrawal={withdrawal} />
+      </Field>
     )}
   </div>
 );

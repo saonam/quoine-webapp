@@ -2,12 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import translate from '@quoine/translate';
-
 import Button from '@quoine/components/ButtonWLoading';
 import FileInput from '@quoine/components/FileInput';
 
 import Row from 'components/SettingsRow';
-
 import styles from './styles.css';
 
 const translateLabel = (user, key) => (
@@ -42,6 +40,17 @@ const ProfileForm = ({
         id="document-bank"
       />
     </Row>
+
+    {/* Only show this field for CORP user */}
+    {(user.type === 'corporate') && (
+      <Row>
+        <FileInput
+          value={form.corporation}
+          onChange={onChange.corporation}
+          id="document-corporation"
+        />
+      </Row>
+    )}
 
     {error ? (
       <Row>

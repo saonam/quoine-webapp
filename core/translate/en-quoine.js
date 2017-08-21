@@ -97,7 +97,6 @@ export default {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "You have requested too many times in the last hour. Please wait a moment before trying again.",
     "en-authy-sms-token-was-not-sent": "The code was unable to reach your phone. Please try again.",
     "en-authy-token-is-invalid-token-was-used-recently": "This code is invalid because it has been used recently.",
-    "en-authy-monthly-sms-limit-reached": "Monthly SMS limit reached.",
   },
   "test": {
     "basic": "english",
@@ -119,7 +118,7 @@ export default {
   },
   "file": {
     "choose": "Choose File",
-    "none": "No File Choosen",
+    "change": "Change File",
   },
   "blotter": {
     "load": "Load more",
@@ -155,6 +154,7 @@ export default {
     "task-wdr-bank-remove-report": "After Delete Bank Account",
     "task-withdrawal-cancel-confirm": "Before Cancel Withdrawal",
     "task-withdrawal-cancel-report": "After Cancel Withdrawal",
+    "task-ips-remove-confirm": "Before Delete IP Address",
   },
   "form": {
     "cancel": "Cancel",
@@ -166,6 +166,8 @@ export default {
   },
   "notifications": {
     "disable-trading": "Trading is disabled until your account is approved. Please go to Menu > Settings > Profile to verify your account.",
+    "need-enable-tfa": "Please enable 2-factor authentication to complete the security setting for your account.",
+    "need-change-tfa-type-to-ga": "Tokens provided via SMS and Authy will no longer be supported in the near future. Please update your 2FA setting to Google Authenticator in Settings > Security.",
     "dismiss": "Dismiss",
   },
   "name": {

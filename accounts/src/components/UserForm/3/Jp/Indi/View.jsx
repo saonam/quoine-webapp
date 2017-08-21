@@ -85,7 +85,9 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
         <div className={styles.input}>
           <LargeField label="外国政府等の重要な公人">
             <CheckboxInput id="pep" value={form.pep} onChange={onChange.pep} required>
-              私は外国の重要な公人、もしくはその親族ではありません。
+              <p style={{ lineHeight: '24px' }}>
+                私は外国の重要な公人、もしくはその親族ではありません。
+              </p>
             </CheckboxInput>
           </LargeField>
           <p className={styles.help}>
@@ -114,7 +116,7 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       {edit ? null : (
         <div className={styles.input}>
-          <LargeField label="電話番号">
+          <LargeField label="携帯番号">
             <PhoneInput value={form.phone} onChange={onChange.phone} border={2} required />
           </LargeField>
         </div>
@@ -167,7 +169,10 @@ const UserForm3JpIndiView = ({ form, onChange, onSubmit, edit }) => (
 
       <div className={styles.input}>
         <LargeField label="主な収入源">
-          <SourceInput value={form.source} onChange={onChange.source} border={2} required />
+          <SourceInput
+            occupation={form.occupation}
+            value={form.source} onChange={onChange.source} border={2} required
+          />
         </LargeField>
         <p className={styles.help}>
           ※ご本人様の収入となり、配偶者の収入、仕送り等は含まれません。

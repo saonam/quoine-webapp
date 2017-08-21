@@ -5,7 +5,8 @@ export const getName = (prev) => ({
   last_kanji_name: prev.nameKanji.last,
 });
 
-export const getValid = () => ({
+// currently these values are not change even users clicked on checkbox.
+export const getValid = (/* form */) => ({
   is_living_in_jp: true,
   is_us_citizen: false,
   is_pep: false,

@@ -9,6 +9,7 @@ import notifications from '@quoine/states/notifications';
 
 import session from 'states/session';
 import tokens from 'states/tokens';
+import ips from 'states/ips';
 
 const states = {
   languages,
@@ -20,6 +21,7 @@ const states = {
 
   session,
   tokens,
+  ips,
 };
 
 export default createStore(states);

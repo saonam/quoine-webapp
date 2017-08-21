@@ -66,6 +66,9 @@ export const trader = {
   phone: '',
   email: '',
   email2: '',
+  us: false,
+  jp: false,
+  pep: false,
 };
 
 export const sh = {

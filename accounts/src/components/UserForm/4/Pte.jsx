@@ -54,7 +54,7 @@ const UserForm4 = ({ onSubmit, form, onChange, busy, error, captcha, onRef }) =>
         busy={busy}
         type="submit"
         disabled={!captcha}
-        styleName={`modal accent ${!captcha ? 'disabled' : ''}`}
+        styleName="modal accent disabled-primary-2"
       >
         {translate('sign-up:action-next')}
       </Button>

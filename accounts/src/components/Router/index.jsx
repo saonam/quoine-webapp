@@ -19,6 +19,7 @@ import Application from 'components/Application';
 import Profile from 'components/Profile';
 import Security from 'components/Security';
 import TokenManage from 'components/TokenManage';
+import IpManage from 'components/IpManage';
 
 const SignIn = { body: SignInBody, menu: Menu };
 const SignUp = { body: SignUpBody, menu: Menu };
@@ -44,6 +45,9 @@ const Router = () => (
         <Route path="security" components={Security} />
         {process.env.REACT_APP_VENDOR === 'quoine' || process.env.REACT_APP_VENDOR === 'qryptos' ? (
           <Route path="api" components={TokenManage} />
+        ) : null}
+        {process.env.REACT_APP_VENDOR === 'quoine' ? (
+          <Route path="ip" components={IpManage} />
         ) : null}
       </Route>
 

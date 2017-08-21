@@ -13,9 +13,9 @@ class TFAManage extends React.Component {
       app: '',
       phone: '',
     };
-    this.onSelectApp = this.onSelectApp.bind(this);
+    this.onToggleForm = this.onToggleForm.bind(this);
     this.onUpdatePhone = this.onUpdatePhone.bind(this);
-    this.onToggleTfa = this.onToggleTfa.bind(this);
+    this.onUpdateTfa = this.onUpdateTfa.bind(this);
   }
   componentDidMount() {
     resources.load().then(response => {
@@ -23,13 +23,14 @@ class TFAManage extends React.Component {
       this.setState({ busy: false, tfa, app, phone });
     });
   }
-  onSelectApp(app) {
-    this.setState({ app });
+  onToggleForm() {
+    const nextApp = this.state.app ? '' : 'ga';
+    this.setState({ app: nextApp });
   }
   onUpdatePhone(phone) {
     this.setState({ phone });
   }
-  onToggleTfa() {
+  onUpdateTfa() {
     const { tfa, app } = this.state;
     const nextTfa = !tfa;
     const nextApp = nextTfa ? app : '';
@@ -39,9 +40,9 @@ class TFAManage extends React.Component {
     return (
       <View
         {...this.state}
-        onSelectApp={this.onSelectApp}
+        onToggleForm={this.onToggleForm}
         onUpdatePhone={this.onUpdatePhone}
-        onToggleTfa={this.onToggleTfa}
+        onUpdateTfa={this.onUpdateTfa}
       />
     );
   }

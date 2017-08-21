@@ -57,7 +57,7 @@ export default {
     // ===
     "distance": "價差",
     "distance-type": "價差類型",
-    "distance-type-fiat": "fiat",
+    "distance-type-fiat": "價格",
     "distance-type-percentage": "百分比",
     // ===
     "margin": "保證金",
@@ -148,6 +148,8 @@ export default {
     "quantity-integer": "訂單數必須為整數",
     "user-free-margin-below-tolerance-level": "保證金應高於保證金要求額",
     "trailing-stop-value-must-be-positive": "只在訂單盈餘為正的情況下會觸發移動止損。",
+    "price-distance-must-be-less-than-50-of-market-price": "移動止損價格不能小於當前市價的50%",
+    "order-product-disabled": "此貨幣對目前無法交易，請選擇其他貨幣對進行交易。",
   },
   // ===
   "position": {
@@ -182,7 +184,7 @@ export default {
     "quantity-close": "開盤數量",
     "quantity-open": "收盤數量",
     // ===
-    "int-total": "Total Int.",
+    "int-total": "總盈利",
     "interest-total": "總盈利",
     // ===
     "created-at": "已創建於",
@@ -249,7 +251,7 @@ export default {
     "type-bought": "購得",
     "type-credit": "信用",
     "type-credit-new-register": "新用戶信用",
-    "type-credit-referrer": "Referral Credit",
+    "type-credit-referrer": "推薦獎勵",
     "type-cross-ccy-trade": "貨幣交易",
     "type-debit": "借方",
     "type-direct-trade": "交易",
@@ -336,15 +338,25 @@ export default {
   },
   "fund-crypto": {
     "help": "請將款項存入如下地址",
-    "help-XMR": "請將款項匯入下方提示的地址，並且保留支付單號，以便查詢相關的匯款信息。",
     "help-XRP": "Ripple Base Reserve機制，即基本留存制度，是指Ripple交易賬戶中會被要求存留指定數量的XRP作為基本保證，現在的存留額度是20 XRP。",
+    "help-XMR": "請將款項匯入下方提示的地址，並且保留支付單號，以便查詢相關的匯款信息。",
+    "help-XEM": "請保存下方的地址和信息，否則可能導致您的存款出現損失",
+    "help-XLM": "請選擇一個MEMO類型（在下方選擇，包括`memo_text`, `memo_id`, `memo_hash`），它將於XLM充值地址一起組成充值記錄，不包含MEMO類型的充值可能導致無法完成，甚至造成損失。",
     // ===
     "address": "地址",
     "payment-id": "支付單號",
+    "message": "信息",
+    "memo-text": "Memo Text",
+    "memo-id": "Memo ID",
+    "memo-hash": "Memo Hash",
     // ===
     "copy": "復制",
     "copy-address": "復制地址",
     "copy-payment-id": "復制支付單號",
+    "copy-message": "複製信息",
+    "copy-memo-text": "復制Memo Text",
+    "copy-memo-id": "復制Memo ID",
+    "copy-memo-hash": "復制Memo Hash",
   },
   "fund-error": {
     "you-are-not-approved": "您的賬戶需要被審核通過，才能執行存款操作",
@@ -361,6 +373,15 @@ export default {
     "time": "創建於",
     "quantity": "金額",
     "address": "{{ currency}} 地址",
+    "payment-id": "{{ currency}} 支付單號",
+    "message": "{{ currency}} 信息",
+    "destination-tag": "{{ currency}} 目的標籤",
+    // ===
+    "memo-type": "{{ currency}} MEMO類型",
+    "memo-text": "{{ currency}} Memo Text",
+    "memo-id": "{{ currency}} Memo ID",
+    "memo-hash": "{{ currency}} Memo Hash",
+    // ===
     "bank": "銀行名稱",
     "inr-transfer": "INR轉賬類型",
     "inr-transfer-note": "當前存款方式只適用於從本地印度賬戶向印度國內轉賬",
@@ -377,7 +398,7 @@ export default {
     // ===
     "success": "取款請求已提交",
     // ===
-    "dismiss": "Dismiss",
+    "dismiss": "取消",
     "check-email-message": "虛擬貨幣取款確認連接已發送到您的郵箱，請查收。本條鏈接有效期間為30分鐘",
     // ===
     "status": "狀態",
@@ -401,6 +422,8 @@ export default {
     "token-is-invalid": "此驗證碼無效",
     "verification-failed": "此授權碼無效",
     "address-not-present": "此地址無效，請重新確認。",
+    "address-is-requried": "請選擇提幣地址。如果您之前沒有添加，請點擊新地址按鈕進行添加。",
+    "address-need-to-be-verified": "提幣前請確認使用的地址是否無誤。",
   },
   // ===
   "futures-balance": {
@@ -465,6 +488,35 @@ export default {
     "country-can-t-be-blank": "國家不能為空",
     "joint-country-can-t-be-blank": "國家不能為空",
     "en-bank-account-errors-withdrawal-exist-can-not-delete-this-bank-account": "有取款業務正在使用此賬戶，如若移除此賬戶請先取消等待中的取款業務",
+  },
+  "wdr-address": {
+    "edit-action": "編輯",
+    "remove-action": "移除",
+    "add-action": "添加新地址",
+    "edit-success": "編輯成功",
+    "add-success": "您已成功添加地址。請查收確認碼郵件，並返回提現界面。",
+    "confirmation-token-input": "確認碼",
+    "confirmation-token-description": "請查收您的確認碼郵件，並在此處輸入您的確認碼。確認碼的有效期為30分鐘。若地址未被確認，將會被自動移除。",
+    "address": "地址",
+    "remove-confirm": "移除",
+    "confirm-action": "確認",
+    "auth-code": "驗證碼",
+    "add-submit": "提交",
+    "add-dismiss": "返回提現",
+    "edit-submit": "提交",
+    "edit-dismiss": "取消",
+    "confirm-submit": "確認",
+    "confirm-dismiss": "取消",
+    "confirm-success": "確認成功",
+  },
+  "wdr-address-error": {
+    "address-not-in-whitelist": "地址不在白名單內",
+    "address-not-unique": "並非唯一地址",
+    "address-invalid": "地址無效",
+    "verification-failed": "驗證碼無效",
+    "confirmation-token-is-invalid": "確認碼無效",
+    "confirmation-period-is-expired": "確認碼已過期",
+    "token-is-invalid": "Token無效",
   },
   // ===
   "volume": {

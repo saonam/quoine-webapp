@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import validateUrl from 'utils/validateUrl';
+
 import FormWrapper from '@quoine/components/FormWrapper';
 import View from './View';
 
@@ -23,6 +25,7 @@ class SignInContainer extends React.Component {
     };
     this.onBack = this.onBack.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.onSuccess = this.onSuccess.bind(this);
     // ===
     this.widget = null;
     this.onRef = this.onRef.bind(this);
@@ -62,19 +65,25 @@ class SignInContainer extends React.Component {
     const { step, captcha } = this.state;
     const { email, password, code } = form;
     return resources.signIn({ email, password, code, step, captcha })
-    .then((response) => {
-      const { token, tokenId } = response;
-      const continueURL = this.props.location.query.continue;
-      if (token && tokenId) {
-        this.props.setToken({ continueURL, token, tokenId });
-      } else {
-        this.setState({ step: 2 });
-      }
-    })
+    .then(this.onSuccess)
     .catch(error => {
       this.onReset();
       return Promise.reject(error);
     });
+  }
+  onSuccess(response) {
+    const { tokenRequired, token, tokenId, needChangePassword } = response;
+    if (tokenRequired) {
+      this.setState({ step: 2 });
+    } else {
+      this.props.setToken({ token, tokenId });
+      if (needChangePassword) {
+        this.setState({ step: 3 });
+      } else {
+        const continueURL = this.props.location.query.continue;
+        window.location.href = validateUrl(continueURL);
+      }
+    }
   }
   render() {
     return (

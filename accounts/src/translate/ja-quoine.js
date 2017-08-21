@@ -13,6 +13,10 @@ export default {
     "back": "戻る",
     "new-text": "新規口座申込はこちら",
     "new-or": "または",
+    // ===
+    "change-password-title": "パスワード変更は必要です",
+    "change-password-message": "現在、仮パスワードでログインされています。安全のためパスワード変更をお願い致します。",
+    "change-password-button": "パスワード変更",
     // message
     "message-account-confirmed": "アカウント承認に成功しました。",
     "message-password-updated": "パスワード再設定に成功しました。新しいパスワードでログインしてください。",
@@ -26,7 +30,9 @@ export default {
     "invalid-email-or-password": "メールアドレスまたはパスワードをもう一度確認してください。",
     "verification-failed": "無効な認証コードです。",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "未登録のIPアドレスからのログインを確認しました。登録のメールアドレスに送信されたメールにある、確認用リンクをご確認ください。",
-    "country-restricted": "QRYPTOS is currently not available for this country.",
+    "country-restricted": "日本在住、日本国籍の方は本サービスをご利用になれません。",
+    "failed-attempt-limit-reached": "ログインを複数回失敗されたため、アカウントが一時的にロックされました。登録のメールアドレスにアカウントロック解除のためのメールを送信しましたのでご確認ください",
+    "en-authy-your-account-is-suspended": "あなたのAuthyアカウントは停止されています。",
   },
   "forgot-password": {
     "help": "パスワードをリセットされる際は、<a href=\"mailto:support@quoine.com\">support@quoine.com</a>までご連絡ください。",
@@ -108,7 +114,7 @@ export default {
     "all-is-required": "全てのフィールドに入力する必要があります。",
     "terms": "利用規約に同意する必要があります。",
     "password-is-too-short-minimum-is-8-characters": "パスワードは最低8文字で、かつ1文字以上の大文字、小文字、数字を含む必要があります。",
-    "country-restricted": "QRYPTOS is currently not available for this country.",
+    "country-restricted": "日本在住、日本国籍の方は本サービスをご利用になれません。",
   },
   "demo": {
     "title": "デモアカウントを利用する",
@@ -142,8 +148,10 @@ export default {
     "security-title": "セキュリティ",
     "password-title": "パスワード",
     "tfa-title": "二段階認証",
-    // ===
-    "api-title": "API",
+
+    "api-access-title": "APIアクセス",
+    "api-title": "トークン",
+    "ip-title": "IPホワイトリスト",
   },
   "daily-report": {
     "title": "取引レポート",
@@ -165,6 +173,7 @@ export default {
     "help-pending": "お取引いただくには下記書類を送付が必要となります。",
     "help-pending-jp": "お取引いただくには本人確認書類をアップロードしてください。",
     "help-pending-jp-link": "本人確認書類",
+    "help-banned": "アカウント停止を解除する場合は support@quoine.com までご連絡ください。",
     "help-edit-info": "登録情報を変更する場合は、support@quoine.comまでご連絡ください。",
     // ===
     "document-id": "本人確認書類（顔写真付）",
@@ -191,14 +200,14 @@ export default {
     "action-submit": "変更",
     "action-cancel": "取り消し",
     "description": "以下の場合は、support@quoine.comまでご連絡ください。<br />１）転勤等で海外居住となる場合<br />２）外国PEPsに該当することとなった場合<br />３）米国納税義務が発生することとなった場合",
-    "message-no-changes": "登録情報が変更されていません。",
   },
   "tfa-manage": {
     "status": "2要素認証ステータス",
     "status-enabled": "認証済み",
     "status-not-enabled": "未設定",
     // ===
-    "app-select-description": "2要素認証機能を有効化する際は、下記アプリのいずれかをご選択ください。:",
+    "disable-description": "2要素認証の設定自体を無効化したい場合は、<a href=\"mailto:support@quoine.com\">support@quoine.com</a>までご連絡ください。",
+    "authy-warning": "Authyは今後ご使用になれません。Google認証アプリの設定を行うには、まずAuthyでの2要素認証の設定を一度無効化する必要があります その後、Google認証アプリを用いて、2要素認証を再設定ください。",
     // ===
     "app": "2要素認証アプリ",
     "app-authy": "Authy",
@@ -206,12 +215,15 @@ export default {
     // ===
     "action-enable": "有効化",
     "action-disable": "無効化",
+    "action-cancel": "キャンセル",
     // ===
     "form-input": "トークン",
-    "form-description": "トークンをご入力ください。",
+    "form-authy-description": "トークンをご入力ください。",
+    "form-ga-description": "確認コードの所得のため、Google認証システムを起動してください。",
   },
   "tfa-manage-error": {
     "en-authy-verification-failed": "無効なトークンです。",
+    "verification-failed": "無効なトークンです。",
     "en-authy-token-is-blank": "トークンの入力が必要です。",
     "token-is-invalid": "無効なトークンです。",
   },
@@ -231,15 +243,17 @@ export default {
     "enter-key-description": "QRコードでの読み込みではなく、キーの入力によっても2要素認証を設定できます。",
   },
   "token": {
-    "id": "ID",
-    "value": "値",
+    "id": "トークンID",
+    "value": "トークンシークレット",
     "value-copy": "コピー",
     "permissions": "許可",
     "none": "なし",
-    "value-message": "このトークンは一度しか表示されません。",
+    "value-message": "このトークンシークレットは一度しか表示されません。",
     // ===
     "remove-title": "トークンを削除する",
     "remove-action": "削除する",
+    "remove-action-yes": "削除する",
+    "remove-action-no": "キャンセル",
     "remove-description": "ただいまトークンを利用している全てのデバイスまたはアプリをすぐに無許可します。トークンを削除しますか。",
     // ===
     "add-title": "APIトークンを新規作成する",
@@ -255,5 +269,35 @@ export default {
     "name-orders": "注文",
     "name-trades": "ポジション",
     "name-trading-accounts": "取引口座",
+  },
+  "ip": {
+    "add-title": "新しいIPを追加",
+    "add-main-description1": "ホワイトリストが空のデフォルト状態の場合は、IPでの制限はありません。",
+    "add-main-description2": "新しくIPをホワイトリストに追加すると、そのIPからのリクエストだけが許可されます。 これはすべての既存のAPIキーに適用されるので、何かを追加するときにはすべてのサーバーIPをホワイトリストに含めるようにしてください。",
+    "add-description": "登録のIPアドレスと認証コードを以下に入力ください。",
+    "add-action-submit": "追加",
+    "add-action-cancel": "キャンセル",
+    // ===
+    "input-ip": "IPアドレス:",
+    "input-code": "認証コード:",
+    "id": "ID",
+    "ip": "IP",
+    "status": "ステータス",
+    "remove-button": "IPを削除",
+    "dismiss-button": "閉じる",
+    "remove-action-yes": "削除",
+    "remove-action-no": "キャンセル",
+    "status-awaiting-confirmation": "未確認",
+    "status-confirmed": "確認済",
+    "remove-description": "このIPアドレスを削除すると、現在システムとの接続に使用されている全てのAPIキーでのアクセスが不可になります。",
+    "checkmail-notification": "IPアドレスの確認のため、メールをご確認ください。",
+  },
+  "ip-error": {
+    "verification-failed": "無効な認証コードです。",
+    "token-is-invalid": "無効な認証コードです。",
+    "ip-has-been-existed": "このIPアドレスはすでに登録済みです。",
+    "ip-existing-ip": "このIPアドレスはすでに登録済みです。",
+    "ip-wrong-format": "無効なIPアドレスです。",
+    "cannot-remove-all-ips": "最新のIPアドレスは削除できません。",
   },
 };

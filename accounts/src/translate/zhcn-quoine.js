@@ -13,6 +13,10 @@ export default {
     "back": "返回",
     "new-text": "没有账户",
     "new-or": "或者",
+    // ===
+    "change-password-title": "请更换您的密码",
+    "change-password-message": "暂时性密码只限于您登陆账户，请在登录后及时更改密码",
+    "change-password-button": "更改密码",
     // message
     "message-account-confirmed": "账户已确认，您现在可以登录",
     "message-password-updated": "密码已更新，请使用新密码登录",
@@ -26,7 +30,9 @@ export default {
     "invalid-email-or-password": "邮箱地址或密码无效",
     "verification-failed": "验证码无效",
     "you-are-logging-in-from-a-new-ip-address-that-is-not-confirmed-yet-a-confirmation-link-has-been-sent-to-your-email-address-please-check-and-confirm-to-continue": "本次登陆的IP地址尚未被验证，验证链接已经发送到您的邮箱，请查收",
-    "country-restricted": "对不起，QRYPTOS在当前国家暂时没有提供服务，请耐心等待。",
+    "country-restricted": "此国家区域暂不支持本服务。",
+    "failed-attempt-limit-reached": "尝试次数达到上限。",
+    "en-authy-your-account-is-suspended": "您的Authy账户已被停用。",
   },
   "forgot-password": {
     "help": "如需要重置您的密码，请联系<a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
@@ -108,7 +114,7 @@ export default {
     "all-is-required": "所有字段都为必填项",
     "terms": "请仔细阅读条款声明，然后继续",
     "password-is-too-short-minimum-is-8-characters": "密码必须至少包含 8 个字符并且包含至少 1 个小写字母、1 个大写字母和 1 个数字",
-    "country-restricted": "对不起，QRYPTOS在当前国家暂时没有提供服务，请耐心等待。",
+    "country-restricted": "此国家区域暂不支持本服务。",
   },
   "demo": {
     "title": "模拟账户",
@@ -142,8 +148,10 @@ export default {
     "security-title": "安全",
     "password-title": "密码",
     "tfa-title": "双重验证",
-    // ===
-    "api-title": "API接口",
+
+    "api-access-title": "API接口",
+    "api-title": "验证码",
+    "ip-title": "IP白名单",
   },
   "daily-report": {
     "title": "日报",
@@ -165,6 +173,7 @@ export default {
     "help-pending": "您的账户尚未得到核准。请上传以下文件供账户核准使用：",
     "help-pending-jp": "您的账户尚未得到核准。请上传以下文件供账户核准使用：",
     "help-pending-jp-link": "文件说明",
+    "help-banned": "请您尽快联系我们 support@quoine.com",
     "help-edit-info": "如果更改用户信息请联系我们（support@quoine.com）",
     // ===
     "document-id": "身份文件",
@@ -191,14 +200,14 @@ export default {
     "action-submit": "提交",
     "action-cancel": "取消",
     "description": "如果您成为美国公民，将适用不同的 KYC/AML 规定，请通过 support@quoine.com 联系我们",
-    "message-no-changes": "没有完成更新资料过程",
   },
   "tfa-manage": {
-    "status": "TFA Status",
+    "status": "双重认证状态",
     "status-enabled": "启用",
     "status-not-enabled": "尚未启用",
     // ===
-    "app-select-description": "请从下面的途径中选择双重认证应用:",
+    "disable-description": "双因素验证(2FA)相关问题，请联系我们<a href=\"mailto:support@quoine.com\">support@quoine.com</a>",
+    "authy-warning": "通過Authy發送驗證碼的服務將在近期停運。更新啟用Google Authenticator驗證之前，請確保Authy驗證功能已被取消，否則Google Authenticator將無法使用。",
     // ===
     "app": "TFA App",
     "app-authy": "Authy",
@@ -206,6 +215,7 @@ export default {
     // ===
     "action-enable": "启用",
     "action-disable": "禁用",
+    "action-cancel": "取消",
     // ===
     "form-input": "验证码",
     "form-authy-description": "请输入发送至您电话的代码。",
@@ -233,15 +243,17 @@ export default {
     "enter-key-description": "您也可以选择手动输入来代替扫描QR code。",
   },
   "token": {
-    "id": "编号",
-    "value": "密钥",
+    "id": "验证码ID",
+    "value": "验证密钥",
     "value-copy": "复制",
     "permissions": "权限",
     "none": "无",
-    "value-message": "本验证码只提示一次",
+    "value-message": "此验证密钥只显示一次",
     // ===
     "remove-title": "删除密钥",
     "remove-action": "删除",
+    "remove-action-yes": "删除",
+    "remove-action-no": "取消",
     "remove-description": "您确定要删除此密钥吗？使用该密钥的所有设备和应用程序都将立即失去授权",
     // ===
     "add-title": "创建新的密钥",
@@ -257,5 +269,35 @@ export default {
     "name-orders": "订单",
     "name-trades": "仓位",
     "name-trading-accounts": "交易账户",
+  },
+  "ip": {
+    "add-title": "添加新IP地址",
+    "add-main-description1": "当白名单为空时，默认允许所有IP地址访问。",
+    "add-main-description2": "如若添加IP地址到白名单，系统将默认只允许白名单内的IP地址访问，一切不包括在白名单内的IP地址将被阻止访问，请慎重使用。",
+    "add-description": "请输入您的IP地址和验证码",
+    "add-action-submit": "添加",
+    "add-action-cancel": "取消",
+    // ===
+    "input-ip": "IP地址",
+    "input-code": "验证码",
+    "id": "ID",
+    "ip": "IP",
+    "status": "状态",
+    "remove-button": "删除",
+    "dismiss-button": "撤销",
+    "remove-action-yes": "删除",
+    "remove-action-no": "取消",
+    "status-awaiting-confirmation": "未确认",
+    "status-confirmed": "已确认",
+    "remove-description": "删除此IP地址也将导致所有与其连接的API接口被移除。",
+    "checkmail-notification": "请查收确认邮件",
+  },
+  "ip-error": {
+    "verification-failed": "验证码无效",
+    "token-is-invalid": "验证码无效",
+    "ip-has-been-existed": "此IP地址已被注册",
+    "ip-existing-ip": "此IP地址已被注册",
+    "ip-wrong-format": "此IP地址无效",
+    "cannot-remove-all-ips": "最新登陆的IP地址无法被移除",
   },
 };

@@ -62,7 +62,7 @@ export default {
   "menu": {
     "accounts": "賬戶",
     "dashboard": "交易圖表",
-    "lending": "Lending",
+    "lending": "借出",
     "settings": "設置",
     // ===
     "faq": "常見問題",
@@ -86,7 +86,7 @@ export default {
     "sent-email": "驗證碼已通過郵件發送。",
     "sent-ga": "验证码已经通过Google Authenticator发送。",
     // ===
-    "resend": "Resend",
+    "resend": "重新發送",
     "resend-sms": "通過短信重新發送",
     "send": "請求",
   },
@@ -97,7 +97,6 @@ export default {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "您在一小時內請求次數太多。請稍後重試。",
     "en-authy-sms-token-was-not-sent": "驗證碼無法發送至您的手機。請重試。",
     "en-authy-token-is-invalid-token-was-used-recently": "驗證碼已被使用",
-    "en-authy-monthly-sms-limit-reached": "验证码使用次数达到每月上限。",
   },
   "test": {
     "basic": "英語",
@@ -119,7 +118,7 @@ export default {
   },
   "file": {
     "choose": "選擇文件",
-    "none": "未選擇文件",
+    "change": "傳送文件",
   },
   "blotter": {
     "load": "加載更多",
@@ -155,17 +154,20 @@ export default {
     "task-wdr-bank-remove-report": "刪除銀行賬戶之後",
     "task-withdrawal-cancel-confirm": "取消取款之前",
     "task-withdrawal-cancel-report": "取消取款之後",
+    "task-ips-remove-confirm": "刪除IP Address前確認",
   },
   "form": {
     "cancel": "取消",
     "done": "完成",
   },
   "hint": {
-    "done": "Done",
-    "title": "Help",
+    "done": "完成",
+    "title": "幫助",
   },
   "notifications": {
     "disable-trading": "你的賬戶尚未被驗證。請在菜單 > 設定 > 個人信息驗證 選項裏驗證您的賬戶",
+    "need-enable-tfa": "為確保您的賬戶安全，請設置雙因子驗證",
+    "need-change-tfa-type-to-ga": "通過SMS和Authy發送驗證碼的服務將在近期停運，請在設置>安全選項中將您的雙因子驗證更新至Google Authenticator應用",
     "dismiss": "取消",
   },
   "name": {

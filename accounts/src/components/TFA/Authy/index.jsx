@@ -8,7 +8,7 @@ import Request from './Request';
 
 import styles from './styles.css';
 
-const TFAAuthy = ({ tfa, onToggleTfa, phone, onUpdatePhone }) => (
+const TFAAuthy = ({ tfa, onUpdateTfa, phone, onUpdatePhone }) => (
   phone ? (
     <div>
       <div className={styles.phone}>
@@ -17,7 +17,7 @@ const TFAAuthy = ({ tfa, onToggleTfa, phone, onUpdatePhone }) => (
       <div className={styles.form}>
         <Toggle
           app="authy" action={tfa ? 'disable' : 'enable'}
-          onToggleTfa={onToggleTfa}
+          onUpdateTfa={onUpdateTfa}
           Request={Request}
         />
       </div>
@@ -31,7 +31,7 @@ const TFAAuthy = ({ tfa, onToggleTfa, phone, onUpdatePhone }) => (
 
 TFAAuthy.propTypes = {
   tfa: PropTypes.bool.isRequired,
-  onToggleTfa: PropTypes.func.isRequired,
+  onUpdateTfa: PropTypes.func.isRequired,
   // ===
   phone: PropTypes.string.isRequired,
   onUpdatePhone: PropTypes.func.isRequired,

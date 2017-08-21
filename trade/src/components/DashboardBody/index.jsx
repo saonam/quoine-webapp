@@ -1,19 +1,9 @@
-import React from 'react';
+import { connect } from 'react-redux';
 
-import Header from 'components/DashboardHeader';
-import Main from 'components/DashboardMain';
+import View from './View';
 
-import styles from './styles.css';
+const mapStateToProps = state => ({
+  user: state.user,
+});
 
-const DashboardBody = () => (
-  <div className={styles.wrapper}>
-    <header className={styles.header}>
-      <Header />
-    </header>
-    <main className={styles.main}>
-      <Main />
-    </main>
-  </div>
-);
-
-export default DashboardBody;
+export default connect(mapStateToProps)(View);

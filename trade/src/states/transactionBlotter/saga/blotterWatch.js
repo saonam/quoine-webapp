@@ -1,5 +1,6 @@
 import { select } from 'redux-saga/effects';
 import {
+  ensureUserId,
   createBlotterWatch,
   createApplyKeysModels,
   createApplyPattern,
@@ -9,8 +10,9 @@ import resources from './resources';
 import TYPES from '../TYPES';
 
 function* getPayload() {
-  const account = yield select(state => state.transactionBlotter.account);
-  return account;
+  const currency = yield select(state => state.transactionBlotter.account);
+  const userId = yield ensureUserId();
+  return { currency, userId };
 }
 
 const applyKeysModels = createApplyKeysModels({

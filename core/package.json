@@ -1,6 +1,10 @@
 {
   "name": "@quoine/core",
+<<<<<<< HEAD
   "version": "3.13.2-alpha.6",
+=======
+  "version": "3.16.0-alpha.9",
+>>>>>>> f576c02109e61acf6527079adcf31170453ed921
   "license": "MIT",
   "dependencies": {
     "i18next": "^4.1.1",

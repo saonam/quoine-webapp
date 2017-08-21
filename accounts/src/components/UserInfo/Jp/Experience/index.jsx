@@ -3,19 +3,19 @@ import React from 'react';
 
 const UserInfoExperience = ({ experience, Item }) => (
   <div>
-    <Item label="FX・CFD取引">
+    <Item label="FX・CFD取引" layout="1:1">
       {experience.fx}
     </Item>
-    <Item label="現物株式">
+    <Item label="現物株式" layout="1:1">
       {experience.stocks}
     </Item>
-    <Item label="信用株式">
+    <Item label="信用株式" layout="1:1">
       {experience.margin}
     </Item>
-    <Item label="先物オプション">
+    <Item label="先物オプション" layout="1:1">
       {experience.option}
     </Item>
-    <Item label="商品先物">
+    <Item label="商品先物" layout="1:1">
       {experience.commodities}
     </Item>
   </div>

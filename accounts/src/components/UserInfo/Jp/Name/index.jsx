@@ -3,9 +3,9 @@ import React from 'react';
 
 const UserInfoName = ({ name }) => (
   <div>
-    {name.first}
-    &nbsp;
     {name.last}
+    &nbsp;
+    {name.first}
   </div>
 );
 

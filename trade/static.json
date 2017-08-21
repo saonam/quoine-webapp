@@ -3,6 +3,7 @@
   "clean_urls": true,
   "routes": {
     "/trading-view-chart": "trading-view-chart",
+    "/message": "message",
     "/**": "index.html"
   },
   "headers": {

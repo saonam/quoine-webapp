@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 /* eslint-disable max-len */
 
 import React from 'react';
-
 import TextInput from '@quoine/components/TextInput';
 import CheckboxInput from '@quoine/components/CheckboxInput';
 import Link from '@quoine/components/Link';
@@ -13,9 +12,9 @@ import styles from 'components/UserForm/styles.css';
 import KanaNameInput from '../KanaNameInput';
 import KanjiNameInput from '../KanjiNameInput';
 
+
 const JpRepInputView = ({ value, onChange, required, ...others }) => (
   <div className={styles.main}>
-
     <div className={styles.input}>
       <LargeField label="代表者(役職名)">
         <TextInput
@@ -91,7 +90,9 @@ const JpRepInputView = ({ value, onChange, required, ...others }) => (
           onChange={onChange.pep}
           required={required}
         >
-          私は外国の重要な公人、もしくはその親族ではありません。
+          <p style={{ lineHeight: '24px' }}>
+            私は外国の重要な公人、もしくはその親族ではありません。
+          </p>
         </CheckboxInput>
       </LargeField>
       <p className={styles.help}>

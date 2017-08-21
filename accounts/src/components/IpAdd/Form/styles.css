@@ -1,0 +1,26 @@
+.main {
+  composes: large from "@quoine/styles/padding.css";
+}
+.buttons {
+  composes: top-medium from "@quoine/styles/padding.css";
+}
+.button {
+  composes: left-small from "@quoine/styles/margin.css";
+}
+.button:first-child {
+  margin: 0;
+}
+.confirmation {
+  composes: top-small from "@quoine/styles/margin.css";
+}
+.message {
+  composes: line-1-75 from "@quoine/styles/text.css";
+  composes: top-medium from "@quoine/styles/margin.css";
+}
+.message:first-child {
+  margin-top: 0;
+}
+.strong {
+  composes: semi-bold from "@quoine/styles/text.css";
+  composes: accent from "@quoine/styles/color.css";
+}

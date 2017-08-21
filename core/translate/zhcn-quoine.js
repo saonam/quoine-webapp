@@ -62,7 +62,7 @@ export default {
   "menu": {
     "accounts": "账户",
     "dashboard": "交易图表",
-    "lending": "Lending",
+    "lending": "借出",
     "settings": "设置",
     // ===
     "faq": "常见问题",
@@ -86,7 +86,7 @@ export default {
     "sent-email": "验证码已通过邮件发送。",
     "sent-ga": "验证码已经通过Google Authenticator发送。",
     // ===
-    "resend": "Resend",
+    "resend": "重新发送",
     "resend-sms": "通过短信重新发送",
     "send": "请求",
   },
@@ -97,7 +97,6 @@ export default {
     "en-authy-dos-protection-user-has-requested-too-many-tokens-in-the-last-hour": "您在一小时内请求次数太多。请稍后重试。",
     "en-authy-sms-token-was-not-sent": "验证码无法发送至您的手机。请重试。",
     "en-authy-token-is-invalid-token-was-used-recently": "验证码已被使用",
-    "en-authy-monthly-sms-limit-reached": "验证码使用次数达到每月上限。",
   },
   "test": {
     "basic": "英语",
@@ -119,7 +118,7 @@ export default {
   },
   "file": {
     "choose": "选择文件",
-    "none": "未选择文件",
+    "change": "上传文件",
   },
   "blotter": {
     "load": "加载更多",
@@ -155,17 +154,20 @@ export default {
     "task-wdr-bank-remove-report": "删除银行账户之后",
     "task-withdrawal-cancel-confirm": "取消取款之前",
     "task-withdrawal-cancel-report": "取消取款之后",
+    "task-ips-remove-confirm": "删除IP Address前确认",
   },
   "form": {
     "cancel": "取消",
     "done": "完成",
   },
   "hint": {
-    "done": "Done",
-    "title": "Help",
+    "done": "完成",
+    "title": "帮助",
   },
   "notifications": {
     "disable-trading": "你的账户尚未被验证。请在菜单 > 设定 > 个人信息验证 选项里验证您的账户",
+    "need-enable-tfa": "为确保您的账户安全，请设置双因子验证",
+    "need-change-tfa-type-to-ga": "通过短信和Authy发送验证码的服务将在近期停运，请在设置>安全选项中将您的双因子验证更新至Google Authenticator应用",
     "dismiss": "取消",
   },
   "name": {

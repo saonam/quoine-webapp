@@ -10,27 +10,19 @@ import { FormWrapperPropTypes } from '@quoine/components/FormWrapper';
 
 import styles from 'components/UserForm/styles.css';
 
-import Term from './Term';
+import TermList from '@quoine/components/Term/List';
 import Review from './Review';
 
 const UserForm4Jp = ({
-  onSubmit, originalForm, edit, form, changed,
+  onSubmit, originalForm, edit, form,
   onChange, busy, parentError,
   captcha, onRef,
 }) => {
-  const disableSubmit = (edit && !changed) || !captcha;
+  const disableSubmit = !form.first || !form.second || !captcha;
+
   return (
     <form onSubmit={onSubmit}>
-      {changed ? null : (
-        <div className={styles.body}>
-          <p className={styles.description}>
-            {translate('edit-user:message-no-changes')}
-          </p>
-        </div>
-      )}
-
       <h1 className={styles.heading}>入力内容確認</h1>
-
       <div className={styles.body}>
         <Review form={originalForm} />
       </div>
@@ -39,7 +31,7 @@ const UserForm4Jp = ({
         <div>
           <h1 className={styles.heading}>利用規約</h1>
           <div className={styles.body}>
-            <Term form={form} onChange={onChange} />
+            <TermList form={form} onChange={onChange} />
           </div>
         </div>
       )}
@@ -55,7 +47,7 @@ const UserForm4Jp = ({
           busy={busy}
           type="submit"
           disabled={disableSubmit}
-          styleName={`modal accent ${disableSubmit ? 'disabled' : ''}`}
+          styleName="modal accent disabled-primary-2"
         >
           {translate(`${edit ? 'edit-user:action-submit' : 'sign-up:action-next'}`)}
         </Button>
@@ -69,7 +61,6 @@ UserForm4Jp.propTypes = {
   originalForm: PropTypes.shape({}).isRequired,
   edit: PropTypes.bool,
   parentError: ErrorMessage.propTypes.error,
-  changed: PropTypes.bool,
   // ===
   captcha: PropTypes.string.isRequired,
   onRef: PropTypes.func.isRequired,

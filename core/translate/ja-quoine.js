@@ -118,7 +118,7 @@ export default {
   },
   "file": {
     "choose": "ファイルを選択",
-    "none": "ファイルが選択されていません",
+    "change": "ファイルを選択",
   },
   "blotter": {
     "load": "読み込み",
@@ -154,6 +154,7 @@ export default {
     "task-wdr-bank-remove-report": "銀行口座情報取り消し後",
     "task-withdrawal-cancel-confirm": "出金申請取り消し前",
     "task-withdrawal-cancel-report": "出金申請取り消し後",
+    "task-ips-remove-confirm": "IPアドレス情報の削除前",
   },
   "form": {
     "cancel": "取り消し",
@@ -165,6 +166,8 @@ export default {
   },
   "notifications": {
     "disable-trading": "アカウントが認証されるまではお取引できません。「メインメニュー」＞「設定」＞「プロフィール」より本人確認書類をアップロードし、アカウント認証を行ってください。",
+    "need-enable-tfa": "セキュリティのため、アカウントの2要素認証設定を有効化してください。",
+    "need-change-tfa-type-to-ga": "SMSおよびAuthyでの認証コードのお受取は今後ご使用できなくなります。Google認証アプリでの2要素認証に切り替えをお願いします。メニューの\"設定\">\"セキュリティ\"をご参照ください。",
     "dismiss": "閉じる",
   },
   "name": {
